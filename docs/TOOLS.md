@@ -71,6 +71,24 @@ Use `palettes/vanilla/adeline.json` with a fresh output to generate unchanged
 copies. Building from those copies emits no replacement PNGs. Leave vanilla
 uninstalled. To return an already modded game to vanilla, uninstall its replacement.
 
+For the experimental in-game toggle, use this command instead of `package`:
+
+```sh
+target/release/mistria-palette package-toggle \
+  --original extracted/adeline \
+  --modified generated/adeline-stylized \
+  --output generated/momi-adeline-toggle \
+  > generated/momi-toggle-report.json
+```
+
+Install that generated folder as `mods/lns_palette` through MOMI v0.15.10. Remove
+the earlier replacement study first so the base portrait is vanilla. This package
+adds a separate animation and an F6 hotkey: press F6 again to restore vanilla.
+The choice lasts for the running game session, covers only Adeline's spring
+neutral portrait, and is not saved. Rebuild and reinstall after changing its
+palette. See [the developer procedure](development/portrait-toggle.md) for isolated
+installation and verification.
+
 Palettes require an `rgba_map` object. Keys and values are `#RRGGBB` or
 `#RRGGBBAA`; omitted alpha means `FF`. Replacements happen simultaneously against
 decoded RGBA8 pixels. Duplicate source colors, alpha changes, and edits to fully

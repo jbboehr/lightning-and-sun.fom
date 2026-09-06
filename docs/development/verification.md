@@ -1,7 +1,8 @@
 # Verification record
 
 2026-09-06. Rust port reliability verdict: **PASS_WITH_RESIDUAL_RISK** for the
-offline proof of concept. In-game rendering and finished art remain unverified.
+offline proof of concept. The later [portrait toggle verification](portrait-toggle.md)
+adds in-game evidence. Finished art remains outside the experiment.
 
 ## Repeatable automated checks
 
@@ -109,7 +110,7 @@ copy. The log identified `/lab`, named the portrait replacement, and reported on
 installed mod. The opt-in Rust check passed:
 
 ```sh
-nix-shell --pure --run 'cargo test --locked --test momi_install -- --ignored --nocapture'
+nix-shell --pure --run 'cargo test --locked --test momi_install installed_adeline_frames_and_metadata_match -- --ignored --nocapture'
 ```
 
 Both 296×180 frames reconstructed exactly from the installed atlas, including their
@@ -124,7 +125,9 @@ SHA-256 matched the original for the source archive, restored lab archive, and
 
 ## Remaining uncertainty
 
-The game was not launched and no save was loaded. Dialogue rendering, controller
+During the original port verification, the game was not launched and no save was
+loaded. The later toggle slice exercises a real textbox in a disposable session;
+see its linked record above. At the end of the original port, dialogue rendering, controller
 behavior, Steam update/reinstallation, other platforms, and mod conflicts have not
 been exercised. Some robe trim shares the mapped colors. The blue study is a
 pipeline test, not a finished complexion preset. Use manual region masks and art
@@ -132,4 +135,4 @@ review before expanding coverage.
 
 Only source code, synthetic tests, configuration, and documentation are candidates
 for version control. Game copies, extracted assets, packages, and previews remain
-ignored. Nothing was staged or committed.
+ignored. No game-derived material was staged or committed.

@@ -3,7 +3,8 @@
 Investigated 2026-09-06. The supplied build supports a small asset replacement
 through MOMI's current PNG replacement path. Both frames of the test portrait were
 installed into an isolated archive copy and recovered pixel-for-pixel from its
-atlas. In-game rendering remains unverified.
+atlas. The subsequent [portrait toggle](development/portrait-toggle.md) adds a
+separate variant and switches it with F6 in-game; vanilla remains the session default.
 
 Follow-up [runtime integration research](development/runtime-capabilities.md)
 examines calling a Rust helper from GML, loading generated images during play,
@@ -19,8 +20,9 @@ entries, including 38,941 PNGs and 77,801 TOML files. Its SHA-256 is:
 b4d4b47afa1459d0d4aa4b6cacffe7b2f30f11a3f6a35e471e58bb2dafc636f5
 ```
 
-The archive fingerprint identifies the tested build. A semantic game version has
-not been confirmed from these files. Do not infer it from their modification time.
+The archive fingerprint identifies the tested build. The later isolated game run
+displayed `v1.0.4 (modified)` on the title screen. This version was observed in the
+running game, not inferred from file timestamps.
 
 The handoff's GameMaker and pre-1.0 assumptions are historical. NPC Studio describes
 the migration to its internal engine in its [engine beta announcement](https://www.fieldsofmistria.com/post/new-engine-beta-branch).

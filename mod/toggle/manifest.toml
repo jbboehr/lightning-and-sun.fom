@@ -1,0 +1,6 @@
+name = "Adeline Palette Toggle Study"
+author = "Lightning and Sun"
+version = "0.1.0"
+minInstallerVersion = "0.15.10"
+manifestVersion = "2"
+requires_hooks = ["ui.menu_opened"]

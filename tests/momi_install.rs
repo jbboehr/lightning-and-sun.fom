@@ -25,7 +25,7 @@ fn document(archive: &ArchiveHandle<'_, fs::File>, name: &str) -> Result<toml::V
     )?)?)?)
 }
 
-fn other_placements(document: &toml::Value) -> Vec<toml::Value> {
+fn other_placements(document: &toml::Value, uid: &str) -> Vec<toml::Value> {
     document["asset_properties"]["animations"]
         .as_array()
         .unwrap()
@@ -33,37 +33,25 @@ fn other_placements(document: &toml::Value) -> Vec<toml::Value> {
         .filter_map(|row| {
             let mut row = row.clone();
             let ids = row.get_mut("texture_ids").unwrap().as_array_mut().unwrap();
-            ids.retain(|id| !id.as_str().unwrap().starts_with(&format!("{UID}::")));
+            ids.retain(|id| !id.as_str().unwrap().starts_with(&format!("{uid}::")));
             if ids.is_empty() { None } else { Some(row) }
         })
         .collect()
 }
 
-#[test]
-#[ignore = "requires local game archive, generated Rust package, and installed isolated MOMI lab"]
-fn installed_adeline_frames_and_metadata_match() -> Result<()> {
-    let original_file = fs::File::open("tmp/fields-of-mistria/assets.zip")?;
-    let installed_file = fs::File::open("tmp/momi-lab/assets.zip")?;
-    let original = original_file.read_zip()?;
-    let installed = installed_file.read_zip()?;
-    let old = document(&original, ATLAS_META)?;
-    let new = document(&installed, ATLAS_META)?;
-    let atlas = image::load_from_memory_with_format(
-        &bytes(&installed, ATLAS_PNG)?,
-        image::ImageFormat::Png,
-    )?
-    .to_rgba8();
-    let expected = image::open(
-        "generated/momi-adeline-stylized/images/replace/spr_portrait_adeline_spring_neutral.png",
-    )?
-    .to_rgba8();
+fn check_frames(
+    atlas: &RgbaImage,
+    metadata: &toml::Value,
+    uid: &str,
+    expected: &RgbaImage,
+) -> Result<()> {
     ensure!(
         expected.dimensions() == (592, 180),
         "Unexpected replacement canvas"
     );
     for frame in 0..2 {
-        let id = toml::Value::String(format!("{UID}::{frame}"));
-        let matches: Vec<_> = new["asset_properties"]["animations"]
+        let id = toml::Value::String(format!("{uid}::{frame}"));
+        let matches: Vec<_> = metadata["asset_properties"]["animations"]
             .as_array()
             .unwrap()
             .iter()
@@ -106,8 +94,30 @@ fn installed_adeline_frames_and_metadata_match() -> Result<()> {
             "Frame {frame} differs"
         );
     }
+    Ok(())
+}
+
+#[test]
+#[ignore = "requires local game archive, generated Rust package, and installed isolated MOMI lab"]
+fn installed_adeline_frames_and_metadata_match() -> Result<()> {
+    let original_file = fs::File::open("tmp/fields-of-mistria/assets.zip")?;
+    let installed_file = fs::File::open("tmp/momi-lab/assets.zip")?;
+    let original = original_file.read_zip()?;
+    let installed = installed_file.read_zip()?;
+    let old = document(&original, ATLAS_META)?;
+    let new = document(&installed, ATLAS_META)?;
+    let atlas = image::load_from_memory_with_format(
+        &bytes(&installed, ATLAS_PNG)?,
+        image::ImageFormat::Png,
+    )?
+    .to_rgba8();
+    let expected = image::open(
+        "generated/momi-adeline-stylized/images/replace/spr_portrait_adeline_spring_neutral.png",
+    )?
+    .to_rgba8();
+    check_frames(&atlas, &new, UID, &expected)?;
     ensure!(
-        other_placements(&old) == other_placements(&new),
+        other_placements(&old, UID) == other_placements(&new, UID),
         "Other atlas placements changed"
     );
     let animation_meta = format!("{STEM}.meta.toml");
@@ -155,5 +165,70 @@ fn installed_adeline_frames_and_metadata_match() -> Result<()> {
     let report = format!("{}\n", serde_json::to_string_pretty(&report)?);
     fs::write("tmp/momi-verification.json", &report)?;
     print!("{report}");
+    Ok(())
+}
+
+#[test]
+#[ignore = "requires a locally generated toggle package installed in tmp/toggle-lab"]
+fn installed_toggle_preserves_vanilla_and_adds_both_blue_frames() -> Result<()> {
+    let original_file = fs::File::open("tmp/fields-of-mistria/assets.zip")?;
+    let installed_file = fs::File::open("tmp/toggle-lab/assets.zip")?;
+    let original = original_file.read_zip()?;
+    let installed = installed_file.read_zip()?;
+    let original_meta = document(&original, &format!("{STEM}.meta.toml"))?;
+    ensure!(
+        original_meta == document(&installed, &format!("{STEM}.meta.toml"))?,
+        "Vanilla animation metadata changed"
+    );
+    ensure!(
+        bytes(&original, &format!("{STEM}.png"))? == bytes(&installed, &format!("{STEM}.png"))?,
+        "Vanilla PNG changed"
+    );
+    let variant = "animations/LightningAndSun/spr_lns_adeline_spring_neutral_blue";
+    let variant_meta = document(&installed, &format!("assets/{variant}.meta.toml"))?;
+    let uid = variant_meta["meta_properties"]["id"]
+        .as_str()
+        .context("Missing new sprite ID")?;
+    ensure!(uid != UID, "Variant reused the vanilla ID");
+    ensure!(
+        variant_meta["asset_properties"] == original_meta["asset_properties"],
+        "Variant lost animation metadata"
+    );
+    let atlas_meta = document(&installed, ATLAS_META)?;
+    let atlas = image::load_from_memory_with_format(
+        &bytes(&installed, ATLAS_PNG)?,
+        image::ImageFormat::Png,
+    )?
+    .to_rgba8();
+    let before = image::load_from_memory_with_format(
+        &bytes(&original, &format!("{STEM}.png"))?,
+        image::ImageFormat::Png,
+    )?
+    .to_rgba8();
+    let blue = image::open(format!("generated/momi-adeline-toggle/{variant}.png"))?.to_rgba8();
+    check_frames(&atlas, &atlas_meta, UID, &before)?;
+    check_frames(&atlas, &atlas_meta, uid, &blue)?;
+    ensure!(
+        other_placements(&document(&original, ATLAS_META)?, uid)
+            == other_placements(&atlas_meta, uid),
+        "Existing portrait atlas placements changed"
+    );
+    let source = fs::read("mod/toggle/gml/palette_toggle.gml")?;
+    ensure!(
+        installed
+            .entries()
+            .filter(|e| e.name.ends_with("/palette_toggle.gml"))
+            .count()
+            == 1,
+        "Missing or duplicate toggle script"
+    );
+    let entry = installed
+        .entries()
+        .find(|e| e.name.ends_with("/palette_toggle.gml"))
+        .unwrap();
+    ensure!(entry.bytes()? == source, "Installed toggle script differs");
+    println!(
+        "Both vanilla frames and both blue frames match exactly; metadata and existing placements are preserved."
+    );
     Ok(())
 }

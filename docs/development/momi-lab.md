@@ -69,7 +69,7 @@ other spring atlas placements are unchanged. It also verifies that no unexpected
 archive member was introduced. All paths here are local ignored files.
 
 ```sh
-nix-shell --pure --run 'cargo test --locked --test momi_install -- --ignored --nocapture'
+nix-shell --pure --run 'cargo test --locked --test momi_install installed_adeline_frames_and_metadata_match -- --ignored --nocapture'
 ```
 
 ## Uninstall and verify restoration

@@ -1,7 +1,8 @@
 # Runtime integration investigation
 
-Investigated 2026-09-06 against the supplied Linux build. The game was not run.
-This is source inspection and one offline pixel experiment, not an in-game proof.
+Investigated 2026-09-06 against the supplied Linux build. The initial findings below
+come from source inspection and one offline pixel experiment. The subsequent
+[portrait toggle](portrait-toggle.md) runs in-game using installed animations.
 
 | Capability | Finding | Consequence |
 | --- | --- | --- |
@@ -104,15 +105,18 @@ still require local preparation and installation of game-derived images, but
 would not require distributing them. It is an alternative to investigate, not
 an implemented change to the current exact-color pipeline.
 
-## Next experiment
+## Chosen next slice
 
-Prioritize a small runtime-image experiment in an isolated game copy: recreate
-and display an image through the existing date-photo path, then determine
-whether a synthetic image produced independently can use that same format.
-Check alpha, dimensions, repeated replacement, and cleanup before applying it
-to the one-portrait study. A process-launch or native-extension route still
-needs separate evidence before choosing an architecture that starts Rust from
-inside the mod.
+Generate the alternate portrait locally with Rust during installation, install it
+alongside vanilla through MOMI, and use GML to switch the displayed animation.
+The [one-portrait prototype](portrait-toggle.md) implements this route. It does not
+require a process launcher or an image decoder during play, and its source package
+contains no game-derived images.
+
+Defer the date-photo decoder experiment. If revisited, first establish its format
+with a synthetic image, alpha, dimensions, repeated replacement, and cleanup.
+A process-launch or native-extension route still needs separate evidence before
+choosing an architecture that starts Rust from inside the mod.
 
 MOMI's [GML compile checker](https://github.com/Garethp/Mods-of-Mistria-Installer/blob/dcda6dac4746dfb271d7ffb6cb75b73d8aaf19b4/ModsOfMistriaInstallerLib/Tools/GmlCompileGate.cs)
 does not reject unresolved identifiers. Passing a script with a guessed API name

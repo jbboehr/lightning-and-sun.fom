@@ -16,9 +16,13 @@ The resulting binary runs without Python, Pillow, or a virtual environment.
 `nix develop` provides the same Fenix environment in a tracked checkout.
 
 Follow [TOOLS.md](docs/TOOLS.md) to export the portrait, generate a preview, and build a
-local MOMI package. See [INVESTIGATION.md](docs/INVESTIGATION.md) for compatibility and
-the limits of the experiment. There is no in-game preset selector yet.
+local MOMI package. The experimental `package-toggle` mode keeps vanilla installed
+and adds the blue variant. Press **F6** during play to switch Adeline's spring
+neutral portrait; each game launch starts with vanilla. Other expressions and
+characters are unchanged. There is no preset menu or graphical installer yet.
+See [INVESTIGATION.md](docs/INVESTIGATION.md) for compatibility and experiment limits.
 
 Game files, extracted PNGs, generated mods, and contact sheets stay local and are
 excluded from Git. Keep an untouched game copy and back up saves before installing
-any mod. Returning to vanilla means removing the replacement through MOMI.
+any mod. F6 returns the toggle study to vanilla; removing the mod entirely still
+requires MOMI. The older replacement package must be removed through MOMI too.

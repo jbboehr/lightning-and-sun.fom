@@ -2,6 +2,7 @@ mod assets;
 mod commands;
 mod contact_sheet;
 mod palette;
+mod toggle;
 
 use anyhow::Result;
 use clap::{Parser, Subcommand};
@@ -67,6 +68,15 @@ enum Command {
         #[arg(long)]
         output: PathBuf,
     },
+    /// Build the one-portrait F6 toggle study using a locally generated variant.
+    PackageToggle {
+        #[arg(long)]
+        original: PathBuf,
+        #[arg(long)]
+        modified: PathBuf,
+        #[arg(long)]
+        output: PathBuf,
+    },
 }
 
 fn run() -> Result<()> {
@@ -94,6 +104,11 @@ fn run() -> Result<()> {
             manifest,
             output,
         } => commands::package(&original, &modified, manifest.as_deref(), &output)?,
+        Command::PackageToggle {
+            original,
+            modified,
+            output,
+        } => toggle::package(&original, &modified, &output)?,
     };
     use std::io::Write;
     std::io::stdout()

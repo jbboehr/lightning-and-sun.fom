@@ -1,6 +1,7 @@
 # Preset scaffold
 
-This directory contains a MOMI manifest template and a draft selection model.
+This directory contains MOMI manifest templates, the portrait toggle script, and a
+draft selection model.
 Build an installable directory with the [package command](../docs/TOOLS.md#export-recolor-and-compare).
 Do not install this source directory into the game.
 
@@ -10,6 +11,9 @@ vanilla default, the optional stylized proof, and future unimplemented palettes.
 The current commands take explicit input directories and palette files. Editing
 `selected_preset` alone does not change generated output or the running game.
 
-Future selection should resolve vanilla to no replacement and emit one chosen
-palette per character, after export and QA. Keep source asset fingerprints with
-each build. Do not ship game images or generated packages from this repository.
+`toggle/` is embedded by `package-toggle`. Rust generates a second portrait locally;
+MOMI installs it alongside vanilla, and the GML script selects the displayed sprite
+with F6. See the [toggle development notes](../docs/development/portrait-toggle.md).
+The broader per-character selector is still unimplemented. Keep source asset
+fingerprints with each build. Do not ship game images or generated packages from
+this repository.
