@@ -5,6 +5,8 @@ through MOMI's current PNG replacement path. Both frames of the test portrait we
 installed into an isolated archive copy and recovered pixel-for-pixel from its
 atlas. The subsequent [portrait toggle](development/portrait-toggle.md) adds a
 separate variant and switches it with F6 in-game; vanilla remains the session default.
+The [CLI installer](development/cli-installer.md) now generates and installs that
+study from local assets, with checked snapshot restoration for removal.
 
 Follow-up [runtime integration research](development/runtime-capabilities.md)
 examines calling a Rust helper from GML, loading generated images during play,
@@ -125,6 +127,7 @@ frame. AI output is reference material. No AI-generated game assets were used he
 - Distribute original source code and palette definitions. Exported images, modified
   portraits, atlases, game binaries, and local MOMI packages are excluded from Git.
   This project does not grant rights to redistribute NPC Studio's artwork.
-- A visual in-game check on a disposable save remains open. Multi-character
+- The one-portrait toggle has a visual in-game check on a disposable session.
+  Naturally encountered dialogue and wider coverage remain open. Multi-character
   selection, complete seasonal coverage, overworld recoloring, and final art are
   outside this proof of concept.

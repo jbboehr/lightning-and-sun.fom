@@ -1,6 +1,8 @@
 mod assets;
 mod commands;
 mod contact_sheet;
+mod installed;
+mod installer;
 mod palette;
 mod toggle;
 
@@ -20,6 +22,25 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
+    /// Generate and install the Adeline toggle into an explicit, closed game copy.
+    Install {
+        #[arg(long)]
+        game_dir: PathBuf,
+        /// MOMI CLI executable; defaults to the release provided by the Nix shell.
+        #[arg(long)]
+        momi: Option<PathBuf>,
+        /// Exact-color palette; defaults to the embedded blue study.
+        #[arg(long)]
+        palette: Option<PathBuf>,
+        /// Current MOMI config/mods/manifest.json; required for a MOMI-modified archive.
+        #[arg(long)]
+        installed_mods: Option<PathBuf>,
+    },
+    /// Restore the exact archive saved before this tool installed the toggle.
+    Uninstall {
+        #[arg(long)]
+        game_dir: PathBuf,
+    },
     /// Copy one or two explicit PNG assets and their metadata from assets.zip.
     Export {
         #[arg(long)]
@@ -81,6 +102,18 @@ enum Command {
 
 fn run() -> Result<()> {
     let report = match Cli::parse().command {
+        Command::Install {
+            game_dir,
+            momi,
+            palette,
+            installed_mods,
+        } => installer::install(
+            &game_dir,
+            momi.as_deref(),
+            palette.as_deref(),
+            installed_mods.as_deref(),
+        )?,
+        Command::Uninstall { game_dir } => installer::uninstall(&game_dir)?,
         Command::Export {
             archive,
             asset,

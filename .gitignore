@@ -3,6 +3,7 @@
 # Local game material and all derived images/packages.
 extracted/
 generated/
+.mistria-palette*
 backups/
 *.win
 *.unx

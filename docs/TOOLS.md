@@ -24,6 +24,66 @@ by Git. `nix-shell` also works before staging. Avoid a path flake over the whole
 working directory: it includes ignored game files. Both Linux shell definitions
 were evaluated; execution was tested on x86_64 Linux only.
 
+## CLI installation
+
+After building in the Nix shell, close the game and other mod installers:
+
+```sh
+target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria'
+target/release/mistria-palette uninstall --game-dir '/path/to/Fields of Mistria'
+```
+
+The first command exports the Adeline spring neutral portrait, applies the embedded
+blue palette, builds the toggle package, runs MOMI in isolation, and verifies the
+actual atlas frames before publishing. F6 selects vanilla/blue during play.
+This currently supports x86_64 Linux with Nix. No game images are downloaded.
+Nix pins the MOMI binary, bubblewrap, dynamic loader, and runtime libraries.
+
+Use `--palette path/to/palette.json` on `install` to use another exact-color recipe.
+Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
+Remove the installed study before rebuilding it with a changed recipe. The
+`MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;
+normal use needs no runner configuration.
+
+Removal restores the exact pre-install archive, including previously installed
+mods. Their source folders are never edited. Keep all existing mod sources in the
+game's `mods/` or `Mods/` directory: MOMI rebuilds that selected set. ZIP/RAR mods,
+symlinked mods, nested manifests, and duplicate mod names are unsupported by this
+prototype. A skipped selected mod prevents publication.
+If MOMI rebuilds existing mods in a different load order, publication also stops.
+The pinned CLI chooses its own alphabetical order; use a MOMI workflow that
+preserves your custom order if the palette installation reports this mismatch.
+
+For an already MOMI-modified archive, also supply its current installed-mod list:
+
+```sh
+target/release/mistria-palette install \
+  --game-dir '/path/to/Fields of Mistria' \
+  --installed-mods '/path/to/FieldsOfMistria/config-or-branch/mods/manifest.json'
+```
+
+This JSON is MOMI's list in the game's config/save directory, not an individual
+mod's manifest or the empty marker inside `assets.zip`. Its location depends on
+the MOMI configuration and game branch. The mod names and versions in source manifests
+must match the list before the palette is added. Use the list from the last MOMI
+installation of this archive: the file has no archive checksum, so the CLI cannot
+detect a stale or unrelated list. If that list is unavailable, restore a known
+game/mod setup through MOMI first. Do not invent a replacement list from whichever
+source folders remain.
+Keep its entries in their original order: they also record mod precedence.
+
+The palette package is built temporarily, not placed in the live `mods/` folder.
+Use this CLI's `uninstall` before managing mods separately through MOMI. The wrapper
+does not update the game's config-side Mods-tab list. Its saved `.mistria-palette/`
+directory contains the previous archive and a receipt; keep both until removal.
+If the game archive has since changed, the CLI refuses to restore the old one.
+Keep the recovery directory and reconcile that change through your mod workflow;
+do not force-copy an old backup over a game update.
+
+Allow roughly 3 GB of temporary free space for this build; the retained previous
+archive uses roughly 600 MB. A failed build leaves the live archive unchanged.
+See [installer internals and verification](development/cli-installer.md).
+
 ## Export, recolor, and compare
 
 Only one portrait animation (two frames) is selected. The exporter reads exact
