@@ -40,6 +40,8 @@ This currently supports x86_64 Linux with Nix. No game images are downloaded.
 Nix pins the MOMI binary, bubblewrap, dynamic loader, and runtime libraries.
 
 Use `--palette path/to/palette.json` on `install` to use another exact-color recipe.
+Use `--presets palettes/sets/adeline-trial.json` for the five-choice spring trial
+described below. `--palette` and `--presets` are mutually exclusive.
 When that recipe has regions, their exact asset paths select which spring portraits
 to install. A recipe without regions keeps the neutral-only selection. Use
 `--palette palettes/stylized/adeline-spring.json` for all 25 supported spring
@@ -197,6 +199,87 @@ The tools do not preserve arbitrary PNG text/EXIF chunks after recoloring.
 Contact sheets use 4x or 8x nearest-neighbor scaling over a checkerboard. Labels
 outside the embedded font's basic character set display as `?`; the JSON report
 retains exact UTF-8 paths.
+
+## Palette catalog and preset sets
+
+Inventory the palettes and portrait colors from your own game archive:
+
+```sh
+target/release/mistria-palette catalog \
+  --archive tmp/fields-of-mistria/assets.zip \
+  --output generated/palette-catalog
+```
+
+`catalog.json` records the archive hash, player lookup-table provenance, and each
+portrait's original hash, dimensions, and opaque-color counts. `player-palettes.png`
+shows the four skin colors of each creator option. The supplied build has 36
+distinct creator ramps and 2,303 NPC/cameo portrait strips. Portrait histograms
+are marked `unreviewed_colors`: they include hair, clothing, animals, and other
+colors, and do not identify NPC skin ramps automatically. The numeric creator
+catalog is also recorded in `palettes/catalog/player.json`.
+
+`palettes/profiles/adeline-spring.json` holds the source colors and reviewed regions
+for all 25 spring expressions. A single-color recipe can reference this profile
+with `"profile": "../profiles/adeline-spring.json"` alongside its `rgba_map`.
+The path is relative to the recipe file. Its source keys must exactly match the
+profile's source colors. A recipe cannot specify both a profile and inline regions.
+An omitted profile is supported; an explicit `null` profile is rejected.
+
+A preset set references one profile and supplies target colors in the same order
+as its `source_colors`:
+
+```json
+{
+  "profile": "../profiles/adeline-spring.json",
+  "presets": [
+    {
+      "id": "blue",
+      "label": "Debug Blue",
+      "colors": ["#9DB9D4", "#7F9FBD", "#6687AD", "#445F83"]
+    }
+  ]
+}
+```
+
+Use `palettes/sets/adeline-trial.json` as the editable starting point. It includes
+Debug Blue plus Player 01, 18, and 33. Copy other ramps from the numeric catalog;
+keep the four-color order. IDs must be unique lowercase ASCII letters, digits,
+or underscores, at most 32 characters. Labels must be nonblank, contain no control
+characters, and fit in 64 UTF-8 bytes. A set accepts one through eight variants;
+Vanilla is implicit and cannot be used as a variant ID. This limit keeps the
+prebuilt portrait count bounded while the prototype is evaluated.
+
+Close the game and remove any previous study, then install the set:
+
+```sh
+target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
+  --presets palettes/sets/adeline-trial.json
+```
+
+F6 cycles Vanilla, then each listed preset in order, and wraps. A HUD notification
+names the selection when available. The choice lasts for the session. Other
+installation, existing-mod, and removal requirements above still apply.
+
+To generate a previewable tree and MOMI package without installing, first export
+the profile's exact PNG set, then run:
+
+```sh
+target/release/mistria-palette build-presets \
+  --original extracted/adeline-spring-study \
+  --presets palettes/sets/adeline-trial.json \
+  --output generated/adeline-presets-trial
+```
+
+The result contains `variants/<id>/` image trees, `package/`, and
+`presets-report.json`. Pass an individual variant tree to `contact-sheet` as its
+`--modified` directory. Install only `package/` through MOMI, never the bundle
+root or reports. The package's generated `palette_assets.gml` defines both the
+sprite table and preset labels; retain it alongside `palette_toggle.gml`.
+
+These creator ramps are adaptations to Adeline's portrait shading. Lips, blush,
+and outlines need further art review, especially at the extremes. Images remain
+local. See [the catalog and preset study](development/palette-presets.md) for
+provenance, atlas costs, and verification evidence.
 
 ## MOMI installation and removal
 

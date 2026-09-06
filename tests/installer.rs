@@ -25,7 +25,7 @@ fn asset_script(expressions: &[&str]) -> Vec<u8> {
             ]
         })
         .collect();
-    format!("// Generated from the portraits included in this local package.\nfunction lns_palette_assets() {{ return {}; }}\n",serde_json::to_string(&pairs).unwrap()).into_bytes()
+    format!("// Generated from the portraits included in this local package.\nfunction lns_palette_assets() {{ return {}; }}\nfunction lns_palette_names() {{ return [\"Vanilla\",\"Debug Blue\"]; }}\n",serde_json::to_string(&pairs).unwrap()).into_bytes()
 }
 
 fn png(image: RgbaImage) -> Vec<u8> {
@@ -828,6 +828,25 @@ fn corrupted_pixels_metadata_or_script_prevent_publication() {
 }
 
 #[test]
+fn corrupted_variant_asset_kind_prevents_publication() {
+    let lab = Lab::new();
+    let entry = "assets/animations/LightningAndSun/spr_lns_adeline_spring_neutral_blue.meta.toml";
+    let metadata = META
+        .replace("0000000000000001", "0000000000000002")
+        .replace("asset_kind = 'Animation'", "asset_kind = 'Script'");
+    let result = replace_zip_entry(&fs::read(&lab.result).unwrap(), entry, metadata.as_bytes());
+    fs::write(&lab.result, result).unwrap();
+
+    let installed = lab.run("install");
+    assert!(
+        !installed.status.success(),
+        "published archive with a corrupted variant asset kind"
+    );
+    assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+    assert!(!lab.game.join(".mistria-palette").exists());
+}
+
+#[test]
 fn removal_refuses_to_overwrite_a_game_update() {
     let lab = Lab::new();
     lab.install();
@@ -859,4 +878,88 @@ fn a_silently_skipped_existing_mod_prevents_publication() {
     );
     assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
     assert!(!lab.game.join(".mistria-palette").exists());
+}
+
+#[test]
+fn preset_install_verifies_the_last_variant_and_restores_the_prior_archive() {
+    for corrupt in [false, true] {
+        let lab = Lab::new();
+        let old: serde_json::Value =
+            serde_json::from_slice(&fs::read(lab.result.with_extension("palette.json")).unwrap())
+                .unwrap();
+        let profile = lab.result.with_extension("profile.json");
+        fs::write(
+            &profile,
+            serde_json::to_vec(
+                &serde_json::json!({"source_colors":["#E3A17B"],"regions":old["regions"]}),
+            )
+            .unwrap(),
+        )
+        .unwrap();
+        let presets = lab.result.with_extension("presets.json");
+        fs::write(&presets,serde_json::to_vec(&serde_json::json!({"profile":profile,"presets":[{"id":"blue","label":"Debug Blue","colors":["#9DB9D4"]},{"id":"warm","label":"Warm trial","colors":["#806040"]}]})).unwrap()).unwrap();
+        let mut result = with_zip_entry(
+            &fs::read(&lab.result).unwrap(),
+            &format!("{}.meta.toml", VARIANT.replace("_blue", "_warm")),
+            META.replace("0000000000000001", "0000000000000003")
+                .as_bytes(),
+        );
+        let mut atlas = RgbaImage::from_fn(4, 3, |_, y| {
+            Rgba(match y {
+                0 => [227, 161, 123, 255],
+                1 => [157, 185, 212, 255],
+                _ => [128, 96, 64, 255],
+            })
+        });
+        if corrupt {
+            atlas.put_pixel(3, 2, Rgba([0, 0, 0, 255]));
+        }
+        result = replace_zip_entry(
+            &result,
+            "assets/atlases/PortraitsSpringAtlas.png",
+            &png(atlas),
+        );
+        let mut placements = String::from("[asset_properties]\nanimations=[\n");
+        for row in 0..3 {
+            for frame in 0..2 {
+                placements.push_str(&format!(
+                    "{{texture_ids=['{:016}::{frame}'],placement=[{},{row},2,1,2,1,0,0]}},\n",
+                    row + 1,
+                    frame * 2
+                ));
+            }
+        }
+        placements.push_str("]\n");
+        result = replace_zip_entry(
+            &result,
+            "assets/atlases/PortraitsSpringAtlas.meta.toml",
+            placements.as_bytes(),
+        );
+        result=replace_zip_entry(&result,&format!("{PALETTE_SCRIPTS}/palette_assets.gml"),b"// Generated from the portraits included in this local package.\nfunction lns_palette_assets() { return [[\"spr_portrait_adeline_spring_neutral\",\"spr_lns_adeline_spring_neutral_blue\",\"spr_lns_adeline_spring_neutral_warm\"]]; }\nfunction lns_palette_names() { return [\"Vanilla\",\"Debug Blue\",\"Warm trial\"]; }\n");
+        fs::write(&lab.result, result).unwrap();
+        let installed = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
+            .arg("install")
+            .arg("--game-dir")
+            .arg(&lab.game)
+            .arg("--momi")
+            .arg(&lab.result)
+            .arg("--presets")
+            .arg(&presets)
+            .env("MISTRIA_MOMI_RUNNER", &lab.runner)
+            .output()
+            .unwrap();
+        if corrupt {
+            assert!(!installed.status.success());
+            assert!(String::from_utf8_lossy(&installed.stderr).contains("Installed pixels differ"));
+            assert!(!lab.game.join(".mistria-palette").exists());
+        } else {
+            assert!(
+                installed.status.success(),
+                "{}",
+                String::from_utf8_lossy(&installed.stderr)
+            );
+            assert!(lab.run("uninstall").status.success());
+        }
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+    }
 }

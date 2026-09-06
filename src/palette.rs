@@ -5,7 +5,11 @@ use serde::{
     Deserialize, Deserializer,
     de::{self, MapAccess, Visitor},
 };
-use std::{collections::BTreeMap, fmt, fs, path::Path};
+use std::{
+    collections::BTreeMap,
+    fmt, fs,
+    path::{Path, PathBuf},
+};
 
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -16,6 +20,15 @@ struct Recipe {
     rgba_map: BTreeMap<String, String>,
     #[serde(default, deserialize_with = "regions")]
     regions: Option<Vec<Region>>,
+    #[serde(default, deserialize_with = "profile")]
+    profile: Option<PathBuf>,
+}
+
+#[derive(Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Profile {
+    pub source_colors: Vec<String>,
+    pub regions: Vec<serde_json::Value>,
 }
 
 #[derive(Deserialize)]
@@ -30,6 +43,10 @@ struct Region {
 // Missing means unrestricted; an explicit null must not silently disable masks.
 fn regions<'de, D: Deserializer<'de>>(de: D) -> Result<Option<Vec<Region>>, D::Error> {
     Vec::deserialize(de).map(Some)
+}
+
+fn profile<'de, D: Deserializer<'de>>(de: D) -> Result<Option<PathBuf>, D::Error> {
+    PathBuf::deserialize(de).map(Some)
 }
 
 pub struct Palette {
@@ -155,7 +172,52 @@ fn color(value: &str) -> Result<[u8; 4]> {
 }
 
 pub fn load(path: &Path) -> Result<Palette> {
-    let palette: Recipe = serde_json::from_slice(&fs::read(path)?)?;
+    let mut recipe: Recipe = serde_json::from_slice(&fs::read(path)?)?;
+    if let Some(profile) = recipe.profile.take() {
+        ensure!(
+            recipe.regions.is_none(),
+            "Use a profile or inline regions, not both"
+        );
+        let profile: Profile = serde_json::from_slice(&fs::read(
+            path.parent().unwrap_or(Path::new(".")).join(profile),
+        )?)?;
+        let source_colors = profile
+            .source_colors
+            .iter()
+            .map(|s| color(s))
+            .collect::<Result<std::collections::BTreeSet<_>>>()?;
+        ensure!(
+            !source_colors.is_empty()
+                && source_colors.len() == profile.source_colors.len()
+                && !profile.regions.is_empty(),
+            "Profile needs distinct source colors and reviewed regions"
+        );
+        let mapping_colors = recipe
+            .rgba_map
+            .keys()
+            .map(|s| color(s))
+            .collect::<Result<std::collections::BTreeSet<_>>>()?;
+        ensure!(
+            source_colors == mapping_colors,
+            "Palette source colors differ from profile"
+        );
+        recipe.regions = Some(serde_json::from_value(serde_json::Value::Array(
+            profile.regions,
+        ))?);
+    }
+    decode(recipe)
+}
+
+pub fn parse(bytes: &[u8]) -> Result<Palette> {
+    let palette: Recipe = serde_json::from_slice(bytes)?;
+    ensure!(
+        palette.profile.is_none(),
+        "Profile references require a palette file path"
+    );
+    decode(palette)
+}
+
+fn decode(palette: Recipe) -> Result<Palette> {
     let mut mapping = BTreeMap::new();
     for (source, target) in palette.rgba_map {
         let (source, target) = (color(&source)?, color(&target)?);

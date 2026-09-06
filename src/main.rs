@@ -1,9 +1,11 @@
 mod assets;
+mod catalog;
 mod commands;
 mod contact_sheet;
 mod installed;
 mod installer;
 mod palette;
+mod presets;
 mod toggle;
 
 use anyhow::Result;
@@ -22,6 +24,22 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
+    /// Inventory player skin ramps and unclassified portrait colors from a local archive.
+    Catalog {
+        #[arg(long)]
+        archive: PathBuf,
+        #[arg(long)]
+        output: PathBuf,
+    },
+    /// Build several named variants from one reviewed region profile.
+    BuildPresets {
+        #[arg(long)]
+        original: PathBuf,
+        #[arg(long)]
+        presets: PathBuf,
+        #[arg(long)]
+        output: PathBuf,
+    },
     /// Generate and install the Adeline toggle into an explicit, closed game copy.
     Install {
         #[arg(long)]
@@ -32,6 +50,9 @@ enum Command {
         /// Exact-color palette; defaults to the embedded blue study.
         #[arg(long)]
         palette: Option<PathBuf>,
+        /// Named presets sharing a reviewed region profile.
+        #[arg(long, conflicts_with = "palette")]
+        presets: Option<PathBuf>,
         /// Current MOMI config/mods/manifest.json; required for a MOMI-modified archive.
         #[arg(long)]
         installed_mods: Option<PathBuf>,
@@ -108,15 +129,23 @@ enum Command {
 
 fn run() -> Result<()> {
     let report = match Cli::parse().command {
+        Command::Catalog { archive, output } => catalog::build(&archive, &output)?,
+        Command::BuildPresets {
+            original,
+            presets,
+            output,
+        } => presets::build(&original, &presets, &output)?,
         Command::Install {
             game_dir,
             momi,
             palette,
+            presets,
             installed_mods,
         } => installer::install(
             &game_dir,
             momi.as_deref(),
             palette.as_deref(),
+            presets.as_deref(),
             installed_mods.as_deref(),
         )?,
         Command::Uninstall { game_dir } => installer::uninstall(&game_dir)?,

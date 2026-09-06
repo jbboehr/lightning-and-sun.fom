@@ -1,4 +1,4 @@
-use crate::{assets::file_digest, commands, installed, palette, toggle};
+use crate::{assets::file_digest, commands, installed, palette, presets, toggle};
 use anyhow::{Context, Result, ensure};
 use rc_zip_sync::ReadZip;
 use serde::{Deserialize, Serialize};
@@ -154,6 +154,7 @@ pub fn install(
     path: &Path,
     momi: Option<&Path>,
     palette: Option<&Path>,
+    presets: Option<&Path>,
     installed_mods: Option<&Path>,
 ) -> Result<Value> {
     let (game, _lock) = game(path)?;
@@ -205,17 +206,17 @@ pub fn install(
     );
     let original = build.join("original");
     let modified = build.join("modified");
-    let palette_file = build.join("palette.json");
-    fs::write(
-        &palette_file,
-        match palette {
-            Some(path) => fs::read(path)?,
-            None => include_bytes!("../palettes/stylized/adeline.json").to_vec(),
-        },
-    )?;
-    let assets = palette::load(&palette_file)?
-        .assets()
-        .unwrap_or_else(|| vec![format!("{}.png", installed::SOURCE)]);
+    let mut preset_set = presets.map(presets::load).transpose()?;
+    let single_palette = match palette {
+        Some(path) => palette::load(path)?,
+        None => palette::parse(include_bytes!("../palettes/stylized/adeline.json"))?,
+    };
+    let assets = match &preset_set {
+        Some(set) => set.assets(),
+        None => single_palette
+            .assets()
+            .unwrap_or_else(|| vec![format!("{}.png", installed::SOURCE)]),
+    };
     for asset in &assets {
         toggle::sprite_pair(asset)?;
         ensure!(
@@ -229,8 +230,18 @@ pub fn install(
         assets.len()
     );
     commands::export(&build.join("assets.zip"), &assets, &original)?;
-    let report = commands::apply(&original, &palette_file, &modified)?;
-    toggle::package(&original, &modified, &mods.join("lns_palette"))?;
+    let report = match &mut preset_set {
+        Some(set) => {
+            let reports = set.generate(&original, &modified)?;
+            toggle::package_variants(&original, &set.variants, &mods.join("lns_palette"))?;
+            json!({"presets": reports})
+        }
+        None => {
+            let report = commands::apply_palette(&original, &single_palette, &modified)?;
+            toggle::package(&original, &modified, &mods.join("lns_palette"))?;
+            report
+        }
+    };
     let expected_mods = selected_mods(&mods)?;
     eprintln!("Building an isolated MOMI archive...");
     let result = Command::new(runner)
@@ -264,7 +275,12 @@ pub fn install(
             "MOMI changed the existing mod load order; nothing was published. This CLI cannot preserve that custom order; use a MOMI workflow that preserves it"
         );
     }
-    installed::verify(&build.join("assets.zip"), &original, &modified)?;
+    match &preset_set {
+        Some(set) => {
+            installed::verify_variants(&build.join("assets.zip"), &original, &set.variants)?
+        }
+        None => installed::verify(&build.join("assets.zip"), &original, &modified)?,
+    }
     let installed_sha256 = file_digest(&build.join("assets.zip"))?;
     ensure!(
         file_digest(&game.join("assets.zip"))? == previous_sha256,

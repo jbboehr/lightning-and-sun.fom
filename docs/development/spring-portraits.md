@@ -166,7 +166,9 @@ snapshot is `tmp/spring-installed.zip`. The original game files remain untouched
 
 The interactive user test covered the earlier neutral portrait, as recorded in
 [portrait-regions.md](portrait-regions.md#interactive-playtest). The expanded
-25-expression runtime has not yet had an interactive in-game pass. The two older
+25-expression runtime subsequently passed the isolated engine test and the user
+approved the expanded visual playtest ("damn looks pretty good"). Lip treatment
+remains provisional. The two older
 MOMI opt-in lab tests were not rerun against their stale one-portrait installations.
 
 Reliability verdict: **PASS_WITH_RESIDUAL_RISK**. The independent correctness
@@ -174,5 +176,6 @@ review's namespace finding was reproduced and fixed, including the missing-scrip
 case discovered by its regression test. The independent test review found no
 additional production defects and added the protections described above. No
 accepted static findings remain. Final checks and the full MOMI roundtrip were
-rerun after the fix. The remaining uncertainty is the expanded in-game visual
-pass and provisional lip colors.
+rerun after the fix. The user later approved the expanded visual pass; provisional
+lip colors remain. The next [palette preset study](palette-presets.md) moves these
+same masks into a shared profile and adds native creator-color trials.

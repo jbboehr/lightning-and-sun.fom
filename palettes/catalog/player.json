@@ -1,0 +1,378 @@
+{
+  "source": {
+    "asset": "assets/animations/Player/Base/spr_player_base_lut.png",
+    "size": [
+      37,
+      256
+    ],
+    "skin_rows": [
+      225,
+      186,
+      125,
+      82
+    ],
+    "source_sha256": "ef2b59df161aff6c7c0a17c89766ff0187851399d2ad42df9990c485ef8e7c0d"
+  },
+  "presets": [
+    {
+      "id": "player_01",
+      "label": "Player 01",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF"
+      ]
+    },
+    {
+      "id": "player_02",
+      "label": "Player 02",
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF"
+      ]
+    },
+    {
+      "id": "player_03",
+      "label": "Player 03",
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF"
+      ]
+    },
+    {
+      "id": "player_04",
+      "label": "Player 04",
+      "colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ]
+    },
+    {
+      "id": "player_05",
+      "label": "Player 05",
+      "colors": [
+        "#FDD8C9FF",
+        "#F3B597FF",
+        "#D47B65FF",
+        "#AA3C32FF"
+      ]
+    },
+    {
+      "id": "player_06",
+      "label": "Player 06",
+      "colors": [
+        "#FCD9B3FF",
+        "#F0B988FF",
+        "#D37A57FF",
+        "#7D3B14FF"
+      ]
+    },
+    {
+      "id": "player_07",
+      "label": "Player 07",
+      "colors": [
+        "#F7C39CFF",
+        "#EA996CFF",
+        "#D16C4AFF",
+        "#773826FF"
+      ]
+    },
+    {
+      "id": "player_08",
+      "label": "Player 08",
+      "colors": [
+        "#F9BEA1FF",
+        "#EBA07EFF",
+        "#C56D50FF",
+        "#923A22FF"
+      ]
+    },
+    {
+      "id": "player_09",
+      "label": "Player 09",
+      "colors": [
+        "#F7CD96FF",
+        "#E8AD72FF",
+        "#C56E46FF",
+        "#6C3516FF"
+      ]
+    },
+    {
+      "id": "player_10",
+      "label": "Player 10",
+      "colors": [
+        "#F6B183FF",
+        "#E08550FF",
+        "#C15C3CFF",
+        "#692F1EFF"
+      ]
+    },
+    {
+      "id": "player_11",
+      "label": "Player 11",
+      "colors": [
+        "#F8A783FF",
+        "#DB7A58FF",
+        "#BD4F3EFF",
+        "#712A19FF"
+      ]
+    },
+    {
+      "id": "player_12",
+      "label": "Player 12",
+      "colors": [
+        "#F6BD7CFF",
+        "#D99055FF",
+        "#B7653EFF",
+        "#623315FF"
+      ]
+    },
+    {
+      "id": "player_13",
+      "label": "Player 13",
+      "colors": [
+        "#F0A36FFF",
+        "#D26F44FF",
+        "#A44D33FF",
+        "#592719FF"
+      ]
+    },
+    {
+      "id": "player_14",
+      "label": "Player 14",
+      "colors": [
+        "#F39566FF",
+        "#CE6648FF",
+        "#A8402EFF",
+        "#541F14FF"
+      ]
+    },
+    {
+      "id": "player_15",
+      "label": "Player 15",
+      "colors": [
+        "#F0B06AFF",
+        "#CC8348FF",
+        "#A05D36FF",
+        "#562E17FF"
+      ]
+    },
+    {
+      "id": "player_16",
+      "label": "Player 16",
+      "colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ]
+    },
+    {
+      "id": "player_17",
+      "label": "Player 17",
+      "colors": [
+        "#E57B60FF",
+        "#C2574AFF",
+        "#913836FF",
+        "#4F1D1BFF"
+      ]
+    },
+    {
+      "id": "player_18",
+      "label": "Player 18",
+      "colors": [
+        "#D58E57FF",
+        "#AE6433FF",
+        "#7B4228FF",
+        "#4A2616FF"
+      ]
+    },
+    {
+      "id": "player_19",
+      "label": "Player 19",
+      "colors": [
+        "#B65C3FFF",
+        "#8A3B2CFF",
+        "#58211EFF",
+        "#3C1714FF"
+      ]
+    },
+    {
+      "id": "player_20",
+      "label": "Player 20",
+      "colors": [
+        "#C45B48FF",
+        "#A23D32FF",
+        "#7C2926FF",
+        "#4B1918FF"
+      ]
+    },
+    {
+      "id": "player_21",
+      "label": "Player 21",
+      "colors": [
+        "#B5683EFF",
+        "#8E4925FF",
+        "#63331DFF",
+        "#3D1E12FF"
+      ]
+    },
+    {
+      "id": "player_22",
+      "label": "Player 22",
+      "colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF"
+      ]
+    },
+    {
+      "id": "player_23",
+      "label": "Player 23",
+      "colors": [
+        "#A23C3AFF",
+        "#832829FF",
+        "#5C1E1FFF",
+        "#351311FF"
+      ]
+    },
+    {
+      "id": "player_24",
+      "label": "Player 24",
+      "colors": [
+        "#97492FFF",
+        "#743620FF",
+        "#542616FF",
+        "#36190EFF"
+      ]
+    },
+    {
+      "id": "player_25",
+      "label": "Player 25",
+      "colors": [
+        "#743435FF",
+        "#5C2624FF",
+        "#3E1817FF",
+        "#280F0EFF"
+      ]
+    },
+    {
+      "id": "player_26",
+      "label": "Player 26",
+      "colors": [
+        "#802C31FF",
+        "#651C24FF",
+        "#461618FF",
+        "#321011FF"
+      ]
+    },
+    {
+      "id": "player_27",
+      "label": "Player 27",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF"
+      ]
+    },
+    {
+      "id": "player_28",
+      "label": "Player 28",
+      "colors": [
+        "#59272FFF",
+        "#441C1FFF",
+        "#2D1113FF",
+        "#1E0A0CFF"
+      ]
+    },
+    {
+      "id": "player_29",
+      "label": "Player 29",
+      "colors": [
+        "#681F28FF",
+        "#50141BFF",
+        "#3C1013FF",
+        "#280C0CFF"
+      ]
+    },
+    {
+      "id": "player_30",
+      "label": "Player 30",
+      "colors": [
+        "#6A2918FF",
+        "#50210FFF",
+        "#3A1809FF",
+        "#271003FF"
+      ]
+    },
+    {
+      "id": "player_31",
+      "label": "Player 31",
+      "colors": [
+        "#452329FF",
+        "#31171BFF",
+        "#261014FF",
+        "#1E0C0FFF"
+      ]
+    },
+    {
+      "id": "player_32",
+      "label": "Player 32",
+      "colors": [
+        "#581B21FF",
+        "#461417FF",
+        "#340E0FFF",
+        "#200A09FF"
+      ]
+    },
+    {
+      "id": "player_33",
+      "label": "Player 33",
+      "colors": [
+        "#521D11FF",
+        "#3C170AFF",
+        "#2D1006FF",
+        "#1E0A03FF"
+      ]
+    },
+    {
+      "id": "player_34",
+      "label": "Player 34",
+      "colors": [
+        "#391D22FF",
+        "#2D161AFF",
+        "#220F13FF",
+        "#180A0DFF"
+      ]
+    },
+    {
+      "id": "player_35",
+      "label": "Player 35",
+      "colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ]
+    },
+    {
+      "id": "player_36",
+      "label": "Player 36",
+      "colors": [
+        "#44190FFF",
+        "#2F1208FF",
+        "#200A03FF",
+        "#100602FF"
+      ]
+    }
+  ]
+}

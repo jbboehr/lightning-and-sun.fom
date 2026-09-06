@@ -5,7 +5,8 @@ function __lns_palette_runtime() {
             registered: false,
             initialized: false,
             ready: false,
-            blue: false,
+            selected: 0,
+            names: [],
             pairs: [],
         };
     }
@@ -19,8 +20,12 @@ function lns_palette_apply(menu) {
     var current = node.get_sprite();
     for (var i = 0; i < array_length(state.pairs); i++) {
         var pair = state.pairs[i];
-        if (current != pair[0] && current != pair[1]) continue;
-        var target = state.blue ? pair[1] : pair[0];
+        var included = false;
+        for (var j = 0; j < array_length(pair); j++) {
+            if (current == pair[j]) included = true;
+        }
+        if (!included) continue;
+        var target = pair[state.selected];
         if (current == target) return;
         // set_sprite resets the index; preserve the raw phase because get_index floors it.
         var index = node.index;
@@ -47,9 +52,12 @@ function lns_palette_menu_opened(ctx) {
 function lns_palette_toggle() {
     var state = __lns_palette_runtime();
     if (!state.ready) return;
-    state.blue = !state.blue;
+    state.selected = (state.selected + 1) % array_length(state.names);
     lns_palette_apply(ANCHOR.get_menu(Menu.Textbox));
-    mmapi_log_info("lns_palette", state.blue ? "Palette: blue" : "Palette: vanilla");
+    var label = "Adeline palette: " + state.names[state.selected];
+    mmapi_log_info("lns_palette", label);
+    var notices = ANCHOR.get_menu(Menu.InfoToasts);
+    if (notices != undefined) notices.create_notification(ANCHOR.wrap_for_local(label));
 }
 
 function lns_palette_initialize() {
@@ -57,14 +65,26 @@ function lns_palette_initialize() {
     if (state.initialized) return;
     state.initialized = true;
     var names = lns_palette_assets();
+    state.names = lns_palette_names();
+    if (array_length(state.names) < 2 || array_length(names) == 0) {
+        mmapi_log_warn("lns_palette", "Palette study disabled: empty preset table.");
+        return;
+    }
     for (var i = 0; i < array_length(names); i++) {
-        var vanilla_sprite = try_string_to_asset(names[i][0]);
-        var blue_sprite = try_string_to_asset(names[i][1]);
-        if (vanilla_sprite == undefined || blue_sprite == undefined) {
-            mmapi_log_warn("lns_palette", "Palette study disabled: a portrait asset is missing.");
+        if (array_length(names[i]) != array_length(state.names)) {
+            mmapi_log_warn("lns_palette", "Palette study disabled: incomplete preset table.");
             return;
         }
-        array_push(state.pairs, [vanilla_sprite, blue_sprite]);
+        var sprites = [];
+        for (var j = 0; j < array_length(names[i]); j++) {
+            var sprite = try_string_to_asset(names[i][j]);
+            if (sprite == undefined) {
+                mmapi_log_warn("lns_palette", "Palette study disabled: a portrait asset is missing.");
+                return;
+            }
+            array_push(sprites, sprite);
+        }
+        array_push(state.pairs, sprites);
     }
     state.ready = true;
     mmapi_hotkey_register(mmapi_hotkey_vk_from_name("F6"), lns_palette_toggle);

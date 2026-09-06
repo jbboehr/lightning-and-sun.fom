@@ -43,6 +43,21 @@ This covers both frames of each spring expression. Other outfits and overworld
 sprites remain original. The colors are provisional, especially the lips. The
 default installation continues to use only the neutral portrait.
 
+For a trial with several skin palettes, uninstall the previous study, then use:
+
+```sh
+target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
+  --presets palettes/sets/adeline-trial.json
+```
+
+Press **F6** to cycle **Vanilla → Debug Blue → Player 01 → Player 18 → Player 33**.
+The three numbered palettes come from the game's player customization colors.
+They cover all 25 Adeline spring expressions and share the reviewed skin regions.
+The game shows the chosen palette in a notification when the HUD is available.
+Every launch starts with Vanilla. Lips and blush remain provisional; these player
+colors have not yet had a full portrait art pass. See
+[palette options](docs/TOOLS.md#palette-catalog-and-preset-sets) to choose other ramps.
+
 The included palette is tied to the reviewed portrait's original PNG bytes. If
 those change, installation stops until the region definition is reviewed. See
 [palette and preview options](docs/TOOLS.md#export-recolor-and-compare) for custom

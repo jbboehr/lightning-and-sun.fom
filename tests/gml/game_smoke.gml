@@ -20,11 +20,14 @@ function lns_palette_smoke_phase() {
     var menu = ANCHOR.get_menu(Menu.Textbox);
     if (menu == undefined) return;
     menu.portrait.set_index(1.25);
-    lns_palette_toggle();
-    assert(menu.portrait.index == 1.25, "Palette swap lost fractional phase");
-    lns_palette_toggle();
-    assert(menu.portrait.index == 1.25, "Palette restore lost fractional phase");
-    mmapi_log_info("lns_palette", "Fractional phase preserved in both directions.");
+    var state = __lns_palette_runtime();
+    var selected = state.selected;
+    for (var i = 0; i < array_length(state.names); i++) {
+        lns_palette_toggle();
+        assert(menu.portrait.index == 1.25, "Palette swap lost fractional phase");
+    }
+    assert(state.selected == selected, "Palette cycle did not restore selection");
+    mmapi_log_info("lns_palette", "Fractional phase preserved through every preset.");
 }
 function lns_palette_smoke_talk() {
     var menu = ANCHOR.get_menu(Menu.Textbox);
@@ -40,10 +43,10 @@ function lns_palette_smoke_observe() {
     var menu = ANCHOR.get_menu(Menu.Textbox);
     if (menu == undefined) return;
     var frame = floor(menu.portrait.get_index());
-    var label = string(__lns_palette_runtime().blue) + "_" + string(frame);
+    var label = __lns_palette_runtime().names[__lns_palette_runtime().selected] + "_" + string(frame);
     if (global.__lns_palette_smoke_frames[$ label] == undefined) {
         global.__lns_palette_smoke_frames[$ label] = true;
-        mmapi_log_info("lns_palette", "Observed blue_frame: " + label);
+        mmapi_log_info("lns_palette", "Observed preset_frame: " + label);
     }
 }
 mmapi_register(lns_palette_smoke_observe);

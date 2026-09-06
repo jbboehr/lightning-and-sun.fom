@@ -2,7 +2,62 @@ use crate::assets::*;
 use anyhow::{Context, Result, ensure};
 use serde::Deserialize;
 use serde_json::{Value, json};
-use std::{collections::BTreeSet, fs, path::Path};
+use std::{
+    collections::BTreeSet,
+    fs,
+    path::{Path, PathBuf},
+};
+
+pub struct Variant {
+    pub id: String,
+    pub label: String,
+    pub directory: PathBuf,
+}
+
+impl Variant {
+    pub fn blue(directory: &Path) -> Self {
+        Self {
+            id: "blue".into(),
+            label: "Debug Blue".into(),
+            directory: directory.into(),
+        }
+    }
+}
+
+pub fn validate_variants(variants: &[Variant]) -> Result<()> {
+    ensure!(
+        (1..=8).contains(&variants.len()),
+        "Select between one and eight presets"
+    );
+    let mut ids = BTreeSet::new();
+    for variant in variants {
+        ensure!(
+            !variant.id.is_empty()
+                && variant.id.len() <= 32
+                && variant
+                    .id
+                    .bytes()
+                    .all(|c| c.is_ascii_lowercase() || c.is_ascii_digit() || c == b'_')
+                && variant.id != "vanilla"
+                && ids.insert(&variant.id),
+            "Preset IDs must be distinct lowercase names; vanilla is reserved"
+        );
+        ensure!(
+            !variant.label.trim().is_empty()
+                && variant.label.len() <= 64
+                && !variant.label.chars().any(char::is_control),
+            "Invalid preset label"
+        );
+    }
+    Ok(())
+}
+
+pub fn variant_name(path: &str, id: &str) -> Result<String> {
+    Ok(format!(
+        "{}_{id}",
+        sprite_pair(path)?[1].strip_suffix("_blue").unwrap()
+    ))
+}
 
 const EXPRESSIONS: &str = "angry_blush blush cartoon_embarrassed concerned embarrassed embarrassed_tired evasive_tired gloomy_special happy happy_blush hope_special mad neutral neutral_tired sad shocked sick_eyes_closed sick_eyes_open sick_smile sick_think sigh sly think ugh wink";
 
@@ -26,8 +81,11 @@ pub fn sprite_pair(path: &str) -> Result<[String; 2]> {
     ])
 }
 
-pub fn asset_script(pairs: &[[String; 2]]) -> Result<Vec<u8>> {
-    Ok(format!("// Generated from the portraits included in this local package.\nfunction lns_palette_assets() {{ return {}; }}\n", serde_json::to_string(pairs)?).into_bytes())
+pub fn runtime_script(groups: &[Vec<String>], variants: &[Variant]) -> Result<Vec<u8>> {
+    let labels: Vec<_> = std::iter::once("Vanilla")
+        .chain(variants.iter().map(|v| v.label.as_str()))
+        .collect();
+    Ok(format!("// Generated from the portraits included in this local package.\nfunction lns_palette_assets() {{ return {}; }}\nfunction lns_palette_names() {{ return {}; }}\n", serde_json::to_string(groups)?, serde_json::to_string(&labels)?).into_bytes())
 }
 
 #[derive(Deserialize)]
@@ -42,8 +100,20 @@ struct Frames {
 }
 
 pub fn package(original: &Path, modified: &Path, output: &Path) -> Result<Value> {
-    let output = fresh_output(output, &[original, modified])?;
-    let mut report = compare(original, modified)?;
+    package_variants(original, &[Variant::blue(modified)], output)
+}
+
+pub fn package_variants(original: &Path, variants: &[Variant], output: &Path) -> Result<Value> {
+    validate_variants(variants)?;
+    let inputs: Vec<_> = std::iter::once(original)
+        .chain(variants.iter().map(|v| v.directory.as_path()))
+        .collect();
+    let output = fresh_output(output, &inputs)?;
+    let reports = variants
+        .iter()
+        .map(|v| compare(original, &v.directory))
+        .collect::<Result<Vec<_>>>()?;
+    let mut report = reports[0].clone();
     let rows = report["files"].as_array().unwrap();
     ensure!(
         (1..=25).contains(&rows.len()),
@@ -51,7 +121,7 @@ pub fn package(original: &Path, modified: &Path, output: &Path) -> Result<Value>
     );
     let mut names = BTreeSet::new();
     let mut pairs = Vec::new();
-    let mut variants = Vec::new();
+    let mut variant_paths = Vec::new();
     let mut outputs = Outputs::new();
     for row in rows {
         let relative = Path::new(row["path"].as_str().unwrap());
@@ -83,14 +153,22 @@ pub fn package(original: &Path, modified: &Path, output: &Path) -> Result<Value>
             "asset_kind",
             "Animation",
         )]))?;
-        let variant = format!("animations/LightningAndSun/{}", pair[1]);
-        outputs.insert(format!("{variant}.png"), fs::read(modified.join(relative))?);
-        outputs.insert(
-            format!("{variant}.meta.toml"),
-            toml::to_string_pretty(&meta)?.into_bytes(),
-        );
-        variants.push(format!("{variant}.png"));
-        pairs.push(pair);
+        let mut group = vec![pair[0].clone()];
+        for variant in variants {
+            let name = variant_name(row["path"].as_str().unwrap(), &variant.id)?;
+            let destination = format!("animations/LightningAndSun/{name}");
+            outputs.insert(
+                format!("{destination}.png"),
+                fs::read(variant.directory.join(relative))?,
+            );
+            outputs.insert(
+                format!("{destination}.meta.toml"),
+                toml::to_string_pretty(&meta)?.into_bytes(),
+            );
+            variant_paths.push(format!("{destination}.png"));
+            group.push(name);
+        }
+        pairs.push(group);
     }
     outputs.insert(
         "manifest.toml".into(),
@@ -100,9 +178,19 @@ pub fn package(original: &Path, modified: &Path, output: &Path) -> Result<Value>
         "gml/palette_toggle.gml".into(),
         include_bytes!("../mod/toggle/gml/palette_toggle.gml").to_vec(),
     );
-    outputs.insert("gml/palette_assets.gml".into(), asset_script(&pairs)?);
+    outputs.insert(
+        "gml/palette_assets.gml".into(),
+        runtime_script(&pairs, variants)?,
+    );
     write_tree(&output, outputs)?;
-    report["variants"] = json!(variants);
+    if variants.len() > 1 {
+        report = json!({
+            "changed_pixels": reports.iter().map(|r| r["changed_pixels"].as_u64().unwrap()).sum::<u64>(),
+            "presets": variants.iter().zip(&reports).map(|(v, r)| json!({"id":v.id,"label":v.label,"report":r})).collect::<Vec<_>>()
+        });
+    }
+    report["variants"] = json!(variant_paths);
+    report["preset_names"] = json!(variants.iter().map(|v| &v.label).collect::<Vec<_>>());
     report["hotkey"] = json!("F6");
     Ok(report)
 }

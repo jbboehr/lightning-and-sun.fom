@@ -1,0 +1,45 @@
+{
+  "profile": "../profiles/adeline-spring.json",
+  "presets": [
+    {
+      "id": "blue",
+      "label": "Debug Blue",
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83"
+      ]
+    },
+    {
+      "id": "player_01",
+      "label": "Player 01",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF"
+      ]
+    },
+    {
+      "id": "player_18",
+      "label": "Player 18",
+      "colors": [
+        "#D58E57FF",
+        "#AE6433FF",
+        "#7B4228FF",
+        "#4A2616FF"
+      ]
+    },
+    {
+      "id": "player_33",
+      "label": "Player 33",
+      "colors": [
+        "#521D11FF",
+        "#3C170AFF",
+        "#2D1006FF",
+        "#1E0A03FF"
+      ]
+    }
+  ]
+}

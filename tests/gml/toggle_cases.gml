@@ -5,7 +5,7 @@ global.initialize();
 global.initialize();
 assert(global.hotkey_count == 1);
 assert(__lns_palette_runtime().ready);
-assert(!__lns_palette_runtime().blue);
+assert(__lns_palette_runtime().selected == 0);
 
 // Opening another kind of menu must not require a portrait or speaker method.
 global.menu_opened({kind: Menu.Other, menu: {}});
@@ -65,7 +65,7 @@ lns_palette_initialize();
 assert(global.hotkey_count == 0);
 assert(global.warning_count == 1);
 assert(!__lns_palette_runtime().ready);
-assert(!__lns_palette_runtime().blue);
+assert(__lns_palette_runtime().selected == 0);
 
 // Losing either side of a later pair also disables the entire toggle.
 global.__lns_palette = undefined;
@@ -78,6 +78,57 @@ assert(global.hotkey_count == 0);
 assert(global.warning_count == 1);
 assert(!__lns_palette_runtime().ready);
 assert(array_length(__lns_palette_runtime().pairs) == 1);
+
+// A third preset must cycle on the same expression and preserve raw phase.
+global.__lns_palette = undefined;
+global.missing_asset_name = undefined;
+global.third_preset = true;
+global.menu = new TestTextbox();
+lns_palette_initialize();
+lns_palette_menu_opened({kind: Menu.Textbox, menu: global.menu});
+global.hotkey();
+assert(global.menu.portrait.sprite == 20);
+global.hotkey();
+assert(global.menu.portrait.sprite == 60);
+assert(global.notice == "Adeline palette: Warm trial");
+assert(global.menu.portrait.index == 1.25);
+global.menu.set_speaker({sprite: 40, index: 0.75});
+assert(global.menu.portrait.sprite == 70);
+assert(global.menu.portrait.index == 0.75);
+global.hotkey();
+assert(global.menu.portrait.sprite == 40);
+assert(global.menu.portrait.index == 0.75);
+global.third_preset = false;
+
+// Vanilla plus the maximum eight presets must all be reachable before wrapping.
+global.__lns_palette = undefined;
+global.max_presets = true;
+global.menu = new TestTextbox();
+lns_palette_initialize();
+lns_palette_menu_opened({kind: Menu.Textbox, menu: global.menu});
+var expected_max_sprites = [20, 61, 62, 63, 64, 65, 66, 67];
+for (var preset = 1; preset <= 8; preset++) {
+    global.hotkey();
+    assert(__lns_palette_runtime().selected == preset);
+    assert(global.menu.portrait.sprite == expected_max_sprites[preset - 1]);
+    assert(global.menu.portrait.index == 1.25);
+}
+global.hotkey();
+assert(__lns_palette_runtime().selected == 0);
+assert(global.menu.portrait.sprite == 10);
+assert(global.menu.portrait.index == 1.25);
+assert(global.notice == "Adeline palette: Vanilla");
+
+// The final asset is as mandatory as the first; partial maximum tables stay disabled.
+global.__lns_palette = undefined;
+global.missing_asset_name = "spr_lns_adeline_spring_neutral_eight";
+global.hotkey_count = 0;
+global.warning_count = 0;
+lns_palette_initialize();
+assert(global.hotkey_count == 0);
+assert(global.warning_count == 1);
+assert(!__lns_palette_runtime().ready);
+global.max_presets = false;
 
 global.__lns_palette = undefined;
 global.missing_asset_name = "spr_lns_adeline_spring_happy_blue";

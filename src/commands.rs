@@ -13,6 +13,11 @@ use std::{
 pub fn apply(input: &Path, palette_path: &Path, output: &Path) -> Result<Value> {
     let output = fresh_output(output, &[input, palette_path])?;
     let palette = palette::load(palette_path)?;
+    apply_palette(input, &palette, &output)
+}
+
+pub fn apply_palette(input: &Path, palette: &palette::Palette, output: &Path) -> Result<Value> {
+    let output = fresh_output(output, &[input])?;
     let (images, metadata) = inventory(input)?;
     palette.check_inventory(&images)?;
     let mut outputs = Outputs::new();

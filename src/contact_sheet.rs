@@ -5,7 +5,7 @@ use image::{DynamicImage, Rgb, RgbImage, Rgba, RgbaImage};
 use serde_json::{Value, json};
 use std::{fs, path::Path};
 
-fn text(sheet: &mut RgbImage, x: u32, y: u32, label: &str) {
+pub(crate) fn text(sheet: &mut RgbImage, x: u32, y: u32, label: &str) {
     for (index, character) in label.chars().enumerate() {
         let glyph = BASIC_FONTS
             .get(character)

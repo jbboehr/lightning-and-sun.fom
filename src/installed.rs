@@ -46,6 +46,15 @@ struct AtlasPage {
 }
 
 pub fn verify(archive: &Path, original: &Path, modified: &Path) -> Result<()> {
+    verify_variants(archive, original, &[toggle::Variant::blue(modified)])
+}
+
+pub fn verify_variants(
+    archive: &Path,
+    original: &Path,
+    variants: &[toggle::Variant],
+) -> Result<()> {
+    toggle::validate_variants(variants)?;
     let file = fs::File::open(archive)?;
     let archive = file.read_zip()?;
     bytes(&archive, "manifest.toml")?;
@@ -80,7 +89,6 @@ pub fn verify(archive: &Path, original: &Path, modified: &Path) -> Result<()> {
     ensure!(!pages.is_empty(), "Missing PortraitsSpring atlas pages");
     for (name, path) in images {
         let pair = toggle::sprite_pair(&name)?;
-        let variant_path = format!("assets/animations/LightningAndSun/{}", pair[1]);
         let metadata_path = name
             .strip_suffix(".png")
             .context("Expected a PNG portrait")?;
@@ -93,11 +101,6 @@ pub fn verify(archive: &Path, original: &Path, modified: &Path) -> Result<()> {
             document(&archive, &format!("{metadata_path}.meta.toml"))? == meta,
             "Vanilla metadata changed"
         );
-        let variant = document(&archive, &format!("{variant_path}.meta.toml"))?;
-        ensure!(
-            variant.get("asset_properties") == meta.get("asset_properties"),
-            "Variant properties differ"
-        );
         let uid = |v: &toml::Value| -> Result<String> {
             Ok(v.get("meta_properties")
                 .and_then(|v| v.get("id"))
@@ -106,12 +109,10 @@ pub fn verify(archive: &Path, original: &Path, modified: &Path) -> Result<()> {
                 .to_owned())
         };
         let original_id = uid(&meta)?;
-        let variant_id = uid(&variant)?;
         ensure!(
-            ids.insert(original_id.clone()) && ids.insert(variant_id.clone()),
+            ids.insert(original_id.clone()),
             "Portrait animation IDs overlap"
         );
-        let blue = fs::read(modified.join(&name))?;
         let frames = meta
             .get("asset_properties")
             .context("Missing frame properties")?;
@@ -128,12 +129,41 @@ pub fn verify(archive: &Path, original: &Path, modified: &Path) -> Result<()> {
                 .and_then(toml::Value::as_integer)
                 .context("Missing frame count")?,
         )?;
-        for (id, expected) in [(original_id, rgba(&before)?), (variant_id, rgba(&blue)?)] {
+        check_frames(
+            &pages,
+            &original_id,
+            &rgba(&before)?,
+            [width, height],
+            count,
+        )?;
+        let mut group = vec![pair[0].clone()];
+        for variant in variants {
+            let sprite = toggle::variant_name(&name, &variant.id)?;
+            let installed = document(
+                &archive,
+                &format!("assets/animations/LightningAndSun/{sprite}.meta.toml"),
+            )?;
+            ensure!(
+                installed
+                    .get("meta_properties")
+                    .and_then(|v| v.get("asset_kind"))
+                    .and_then(toml::Value::as_str)
+                    == Some("Animation"),
+                "Variant asset kind must be Animation"
+            );
+            ensure!(
+                installed.get("asset_properties") == meta.get("asset_properties"),
+                "Variant properties differ"
+            );
+            let id = uid(&installed)?;
+            ensure!(ids.insert(id.clone()), "Portrait animation IDs overlap");
+            let expected = rgba(&fs::read(variant.directory.join(&name))?)?;
             check_frames(&pages, &id, &expected, [width, height], count)?;
+            group.push(sprite);
         }
-        pairs.push(pair);
+        pairs.push(group);
     }
-    let asset_script = toggle::asset_script(&pairs)?;
+    let asset_script = toggle::runtime_script(&pairs, variants)?;
     for (name, expected) in [
         (
             "palette_toggle.gml",
