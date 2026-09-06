@@ -1,8 +1,26 @@
 {
-  "description": "Cool blue study on one portrait strip. Test colors only; requires manual region review before an art release.",
+  "description": "Cool blue study on reviewed skin regions of Adeline's spring neutral portrait. Source-bound seeds cover both frames; test colors, not final art.",
   "rgba_map": {
     "#E3A17B": "#9DB9D4",
+    "#D48363": "#7F9FBD",
     "#C47054": "#6687AD",
     "#9F5544": "#445F83"
-  }
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Adeline/Portraits/Spring/spr_portrait_adeline_spring_neutral.png",
+      "source_sha256": "52e2871f2c96db217a568d15f3daaef666c2af9b90263ef0b39f0e38722c51bc",
+      "size": [592, 180],
+      "seeds": [
+        [152, 55], [133, 70], [164, 68], [162, 83],
+        [140, 82], [162, 90], [156, 89], [153, 101],
+        [164, 100], [137, 116], [178, 115], [175, 122],
+        [183, 128], [187, 129], [188, 142], [187, 143],
+        [448, 55], [429, 70], [460, 68], [458, 83],
+        [436, 82], [458, 90], [452, 89], [449, 101],
+        [460, 100], [433, 116], [474, 115], [471, 122],
+        [479, 128], [483, 129], [484, 142], [483, 143]
+      ]
+    }
+  ]
 }

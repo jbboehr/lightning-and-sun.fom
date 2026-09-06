@@ -65,6 +65,9 @@ enum Command {
         original: PathBuf,
         #[arg(long)]
         modified: PathBuf,
+        /// Also verify exact palette output, including region restrictions.
+        #[arg(long)]
+        palette: Option<PathBuf>,
     },
     /// Draw labeled original/modified pairs at 4x or 8x nearest-neighbor zoom.
     ContactSheet {
@@ -76,6 +79,9 @@ enum Command {
         output: PathBuf,
         #[arg(long, default_value_t = 4)]
         zoom: u32,
+        /// Add a third column highlighting changed pixels in magenta.
+        #[arg(long)]
+        changes: bool,
     },
     /// Package at most two changed strips for MOMI; print the report to stdout.
     Package {
@@ -124,13 +130,18 @@ fn run() -> Result<()> {
             palette,
             output,
         } => commands::apply(&input, &palette, &output)?,
-        Command::Validate { original, modified } => assets::compare(&original, &modified)?,
+        Command::Validate {
+            original,
+            modified,
+            palette,
+        } => commands::validate(&original, &modified, palette.as_deref())?,
         Command::ContactSheet {
             original,
             modified,
             output,
             zoom,
-        } => contact_sheet::build(&original, &modified, &output, zoom)?,
+            changes,
+        } => contact_sheet::build(&original, &modified, &output, zoom, changes)?,
         Command::Package {
             original,
             modified,

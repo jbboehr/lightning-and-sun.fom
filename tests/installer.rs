@@ -1,5 +1,6 @@
 #![cfg(all(target_os = "linux", target_arch = "x86_64"))]
 use image::{DynamicImage, ImageFormat, Rgba, RgbaImage};
+use sha2::{Digest, Sha256};
 use std::{
     fs,
     io::{Cursor, Read, Write},
@@ -131,6 +132,11 @@ animations = [
             ),
         ]);
         let result = temp.path().join("momi-result.zip");
+        let source_hash = format!("{:x}", Sha256::digest(&entries[0].1));
+        fs::write(result.with_extension("palette.json"), serde_json::to_vec(&serde_json::json!({
+            "rgba_map": {"#E3A17B":"#9DB9D4"},
+            "regions": [{"asset":format!("{SOURCE}.png"),"source_sha256":source_hash,"size":[4,1],"seeds":[[0,0]]}]
+        })).unwrap()).unwrap();
         fs::write(&result, zip(entries)).unwrap();
         fs::write(result.with_extension("zip.mods"), br#"{"mods":[{"name":"Other","version":"1.0.0"},{"name":"Adeline Palette Toggle Study","version":"0.1.0"}]}"#).unwrap();
         let runner = temp.path().join("runner");
@@ -160,6 +166,9 @@ animations = [
             .env("MISTRIA_MOMI_RUNNER", &self.runner);
         if action == "install" {
             command.arg("--momi").arg(&self.result);
+            command
+                .arg("--palette")
+                .arg(self.result.with_extension("palette.json"));
             if let Some(path) = installed_mods {
                 command.arg("--installed-mods").arg(path);
             }
@@ -180,6 +189,27 @@ animations = [
             String::from_utf8_lossy(&result.stderr)
         );
     }
+}
+
+#[test]
+fn default_palette_refuses_an_unreviewed_portrait() {
+    let lab = Lab::new();
+    let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
+        .arg("install")
+        .arg("--game-dir")
+        .arg(&lab.game)
+        .arg("--momi")
+        .arg(&lab.result)
+        .env("MISTRIA_MOMI_RUNNER", &lab.runner)
+        .output()
+        .unwrap();
+    assert!(
+        !result.status.success(),
+        "default palette accepted an unreviewed portrait"
+    );
+    assert!(String::from_utf8_lossy(&result.stderr).contains("Region source checksum mismatch"));
+    assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+    assert!(!lab.game.join(".mistria-palette").exists());
 }
 
 #[test]

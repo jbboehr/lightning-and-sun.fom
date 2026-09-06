@@ -3,7 +3,8 @@
 An experimental Fields of Mistria palette toolkit. It exports selected assets from
 your own game copy, applies exact color replacements, and makes comparison sheets.
 Vanilla is the default. The optional Adeline study changes one portrait strip to
-a stylized blue palette. It is unfinished test art.
+a stylized blue palette within reviewed skin regions, preserving robe and jewelry
+details. It is unfinished test art.
 
 Build the Rust command-line tool with the pinned Nix environment:
 
@@ -29,6 +30,11 @@ installed portrait frames before changing the selected game archive. It keeps th
 exact previous archive in that game's `.mistria-palette/` directory. Keep that
 directory until removal. If another installer or a game update changes the archive,
 removal stops instead of overwriting those changes.
+
+The included palette is tied to the reviewed portrait's original PNG bytes. If
+those change, installation stops until the region definition is reviewed. See
+[palette and preview options](docs/TOOLS.md#export-recolor-and-compare) for custom
+colors, exact recipe validation, and changed-pixel previews.
 
 Existing MOMI mods need their complete source folders in `mods/` or `Mods/`, plus
 the matching `assets.bak.zip`. Add `--installed-mods /path/to/mods/manifest.json`

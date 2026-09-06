@@ -12,17 +12,28 @@ use std::{
 
 pub fn apply(input: &Path, palette_path: &Path, output: &Path) -> Result<Value> {
     let output = fresh_output(output, &[input, palette_path])?;
-    let mapping = palette::load(palette_path)?;
+    let palette = palette::load(palette_path)?;
     let (images, metadata) = inventory(input)?;
+    palette.check_inventory(&images)?;
     let mut outputs = Outputs::new();
     let mut rows = Vec::new();
     let mut total = 0u64;
     for (name, path) in images {
         let before = fs::read(path)?;
         let mut image = rgba(&before).with_context(|| name.clone())?;
+        let mask = palette.mask(&name, &before, &image)?;
         let mut counts = BTreeMap::<String, u64>::new();
-        for pixel in image.pixels_mut() {
-            if let Some(target) = mapping.get(&pixel.0).filter(|target| **target != pixel.0) {
+        let mut excluded = 0u64;
+        for (index, pixel) in image.pixels_mut().enumerate() {
+            if let Some(target) = palette
+                .mapping
+                .get(&pixel.0)
+                .filter(|target| **target != pixel.0)
+            {
+                if mask.as_ref().is_some_and(|mask| !mask[index]) {
+                    excluded += 1;
+                    continue;
+                }
                 let [r, g, b, a] = pixel.0;
                 *counts
                     .entry(format!("#{r:02X}{g:02X}{b:02X}{a:02X}"))
@@ -38,10 +49,13 @@ pub fn apply(input: &Path, palette_path: &Path, output: &Path) -> Result<Value> 
             png(&DynamicImage::ImageRgba8(image))?
         };
         total += changed;
-        rows.push(
-            json!({"path":name,"size":size,"changed_pixels":changed,"changed_by_source":counts,
-            "original_sha256":digest(&before),"modified_sha256":digest(&after)}),
-        );
+        let mut row = json!({"path":name,"size":size,"changed_pixels":changed,"changed_by_source":counts,
+            "original_sha256":digest(&before),"modified_sha256":digest(&after)});
+        if let Some(mask) = mask {
+            row["selected_pixels"] = json!(mask.iter().filter(|&&selected| selected).count());
+            row["excluded_matching_pixels"] = json!(excluded);
+        }
+        rows.push(row);
         outputs.insert(name, after);
     }
     for (name, path) in &metadata {
@@ -50,6 +64,36 @@ pub fn apply(input: &Path, palette_path: &Path, output: &Path) -> Result<Value> 
     let report = json!({"files":rows,"changed_pixels":total,"metadata_files":metadata.keys().collect::<Vec<_>>()});
     outputs.insert("palette-report.json".into(), json_bytes(&report)?);
     write_tree(&output, outputs)?;
+    Ok(report)
+}
+
+pub fn validate(original: &Path, modified: &Path, palette_path: Option<&Path>) -> Result<Value> {
+    let mut report = compare(original, modified)?;
+    if let Some(path) = palette_path {
+        let palette = palette::load(path)?;
+        let (images, _) = inventory(original)?;
+        palette.check_inventory(&images)?;
+        for (name, path) in images {
+            let bytes = fs::read(path)?;
+            let before = rgba(&bytes)?;
+            let after = rgba(&fs::read(modified.join(&name))?)?;
+            let mask = palette.mask(&name, &bytes, &before)?;
+            for (index, (left, right)) in before.pixels().zip(after.pixels()).enumerate() {
+                let expected = if mask.as_ref().is_none_or(|mask| mask[index]) {
+                    palette.mapping.get(&left.0).unwrap_or(&left.0)
+                } else {
+                    &left.0
+                };
+                ensure!(
+                    right.0 == *expected,
+                    "Palette mismatch: {name} at [{},{}]",
+                    index % before.width() as usize,
+                    index / before.width() as usize
+                );
+            }
+        }
+        report["palette_verified"] = json!(true);
+    }
     Ok(report)
 }
 

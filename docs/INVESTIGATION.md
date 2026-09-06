@@ -97,12 +97,15 @@ eight-digit colors match alpha too. Mapping is simultaneous, so A→B and B→C 
 turn original A pixels into C. Alpha-changing maps are rejected. Fully transparent
 pixels remain unchanged. An empty map copies original PNG bytes exactly.
 
-The blue study changes 4,000 pixels across the two-frame portrait. QA visibly shows
-that some robe ornament colors change too. Exact matching preserves pixel data
-predictably but cannot identify body regions. Before a complexion art pass, make
-manual region masks and review shared colors. Do not use fuzzy HSV recoloring as
-the first solution. Contact sheets use nearest-neighbor 4× or 8× zoom and a
-checkerboard background. Validation checks file sets, size, alpha, and metadata,
+The initial blue study changed 4,000 pixels across the two-frame portrait, including
+unwanted robe and jewelry details. The subsequent [region study](development/portrait-regions.md)
+uses reviewed seed points to select connected skin-color regions and adds one
+previously missed shade. It changes 3,259 pixels while protecting 822 matching-color
+pixels outside the mask. Dark linework, eyes, clothing, and jewelry retain their
+original colors in the reviewed portrait. Exact matching alone does not identify
+body regions; each additional asset still needs region review. Contact sheets use
+nearest-neighbor 4× or 8× zoom and a checkerboard, with an optional changed-pixel
+column. Recipe-aware validation checks every pixel against the mask and palette,
 but cannot certify artistic correctness.
 
 For AI-assisted exploration: export one representative portrait, manually mask the

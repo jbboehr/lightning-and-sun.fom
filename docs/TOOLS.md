@@ -105,13 +105,14 @@ target/release/mistria-palette apply \
 
 target/release/mistria-palette validate \
   --original extracted/adeline \
-  --modified generated/adeline-stylized
+  --modified generated/adeline-stylized \
+  --palette palettes/stylized/adeline.json
 
 target/release/mistria-palette contact-sheet \
   --original extracted/adeline \
   --modified generated/adeline-stylized \
   --output generated/contact-sheet-adeline-stylized.png \
-  --zoom 4
+  --zoom 4 --changes
 
 target/release/mistria-palette package \
   --original extracted/adeline \
@@ -126,6 +127,12 @@ hashes, change counts, dimensions, and image positions. Keep reports outside the
 MOMI package: MOMI can interpret root JSON files as installable game content.
 `package` uses the manifest embedded when the binary was built; use
 `--manifest path/to/manifest.toml` to supply a different one.
+
+`validate --palette` checks every output pixel against the exact recipe, including
+pixels outside selected regions and transparent RGB. Without `--palette`, it
+retains the filename, dimension, alpha, and metadata checks. `contact-sheet
+--changes` adds a third column: magenta marks changed pixels and the checkerboard
+marks unchanged pixels.
 
 Use `palettes/vanilla/adeline.json` with a fresh output to generate unchanged
 copies. Building from those copies emits no replacement PNGs. Leave vanilla
@@ -152,7 +159,29 @@ installation and verification.
 Palettes require an `rgba_map` object. Keys and values are `#RRGGBB` or
 `#RRGGBBAA`; omitted alpha means `FF`. Replacements happen simultaneously against
 decoded RGBA8 pixels. Duplicate source colors, alpha changes, and edits to fully
-transparent RGB are rejected. An empty map means vanilla.
+transparent RGB are rejected. The vanilla recipe has an empty map and no regions.
+
+The included blue recipe also has `regions`, with one entry per input PNG. Each
+entry names the exact relative `asset` path, original PNG `source_sha256`, `size`
+as `[width, height]`, and `seeds` as `[x, y]` pixel coordinates. Coordinates start
+at the strip's top-left; the second frame's coordinates include its horizontal
+offset. A seed selects all nontransparent pixels reachable through up/down/left/
+right neighbors whose original RGBA is a source key in `rgba_map`. Diagonal
+contact does not connect regions. Repeated seeds in one region do not duplicate
+work or counts. Empty seeds intentionally select no pixels.
+
+Omitting `regions` retains unrestricted exact-color replacement. If present,
+region entries must cover the exact input PNG set; an empty list, null, duplicate
+assets, stale source hash, mismatched dimensions, or invalid seeds stop before
+output is written. Recipe and region field names are checked for typos.
+
+For custom target colors, edit the values in `rgba_map`. Adding or removing source
+keys changes region connectivity and needs another visual review. After a source
+PNG changes, review both the image and seeds before updating its checksum.
+Masked reports include `selected_pixels` and `excluded_matching_pixels`; the latter
+counts pixels outside the mask that unrestricted mapping would have changed.
+Only recipes and seed coordinates belong in Git. All images stay local.
+See [the region study](development/portrait-regions.md) for authoring and QA evidence.
 
 The image tools support static PNGs, including indexed transparency, grayscale,
 RGB, and RGBA. APNG is rejected. Changed images are encoded as RGBA8 PNGs. Sidecar

@@ -1,7 +1,7 @@
 use crate::assets::*;
 use anyhow::{Result, ensure};
 use font8x8::{BASIC_FONTS, UnicodeFonts};
-use image::{DynamicImage, Rgb, RgbImage};
+use image::{DynamicImage, Rgb, RgbImage, Rgba, RgbaImage};
 use serde_json::{Value, json};
 use std::{fs, path::Path};
 
@@ -21,7 +21,13 @@ fn text(sheet: &mut RgbImage, x: u32, y: u32, label: &str) {
     }
 }
 
-pub fn build(original: &Path, modified: &Path, output: &Path, zoom: u32) -> Result<Value> {
+pub fn build(
+    original: &Path,
+    modified: &Path,
+    output: &Path,
+    zoom: u32,
+    changes: bool,
+) -> Result<Value> {
     ensure!(zoom == 4 || zoom == 8, "Zoom must be 4 or 8");
     ensure!(
         output
@@ -41,7 +47,8 @@ pub fn build(original: &Path, modified: &Path, output: &Path, zoom: u32) -> Resu
         column = column.max(row["path"].as_str().unwrap().chars().count() as u64 * 8);
         height += row["size"][1].as_u64().unwrap() * u64::from(zoom) + heading + margin;
     }
-    let width = column * 2 + margin * 3;
+    let columns = if changes { 3 } else { 2 };
+    let width = column * columns + margin * (columns + 1);
     ensure!(
         width
             .checked_mul(height)
@@ -53,13 +60,24 @@ pub fn build(original: &Path, modified: &Path, output: &Path, zoom: u32) -> Resu
     for row in rows {
         let path = row["path"].as_str().unwrap().to_owned();
         text(&mut sheet, margin as u32, y, &path);
-        for (index, (label, root)) in [("original", original), ("modified", modified)]
-            .into_iter()
-            .enumerate()
-        {
+        let before = rgba(&fs::read(original.join(&path))?)?;
+        let after = rgba(&fs::read(modified.join(&path))?)?;
+        let diff = changes.then(|| {
+            RgbaImage::from_fn(before.width(), before.height(), |x, y| {
+                if before.get_pixel(x, y) != after.get_pixel(x, y) {
+                    Rgba([255, 0, 255, 255])
+                } else {
+                    Rgba([0; 4])
+                }
+            })
+        });
+        let mut images = vec![("original", before), ("modified", after)];
+        if let Some(diff) = diff {
+            images.push(("changes", diff));
+        }
+        for (index, (label, image)) in images.into_iter().enumerate() {
             let x = (margin + index as u64 * (column + margin)) as u32;
             text(&mut sheet, x, y + 17, label);
-            let image = rgba(&fs::read(root.join(&path))?)?;
             let (w, h) = (image.width() * zoom, image.height() * zoom);
             let box_y = y + heading as u32;
             for dy in 0..h {
