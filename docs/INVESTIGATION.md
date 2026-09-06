@@ -5,6 +5,10 @@ through MOMI's current PNG replacement path. Both frames of the test portrait we
 installed into an isolated archive copy and recovered pixel-for-pixel from its
 atlas. In-game rendering remains unverified.
 
+Follow-up [runtime integration research](development/runtime-capabilities.md)
+examines calling a Rust helper from GML, loading generated images during play,
+and the limitations of the game's existing palette shader.
+
 ## The supplied build changes the plan
 
 `tmp/fields-of-mistria` contains a native Linux executable, `Maybe.toml`, and a
