@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "default_preset": "vanilla",
+  "characters": {
+    "adeline": {
+      "selected_preset": "vanilla",
+      "portrait_assets": [
+        "assets/animations/NPCs/Adeline/Portraits/Spring/spr_portrait_adeline_spring_neutral.png"
+      ],
+      "sprite_assets": [],
+      "presets": {
+        "vanilla": "palettes/vanilla/adeline.json",
+        "stylized": "palettes/stylized/adeline.json"
+      }
+    }
+  }
+}

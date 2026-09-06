@@ -1,0 +1,21 @@
+/tmp*
+
+# Local game material and all derived images/packages.
+extracted/
+generated/
+backups/
+*.win
+*.unx
+assets.zip
+assets.bak.zip
+
+# Leftover local environments and caches from the pre-Rust toolkit.
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+result
+result-*
+
+# Rust build output.
+/target/

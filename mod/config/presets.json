@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "presets": {
+    "vanilla": {"description": "Original assets; no installed replacement.", "status": "default"},
+    "stylized": {"description": "Cool blue portrait experiment.", "status": "proof_of_concept"},
+    "light": {"description": "Optional light complexion ramp.", "status": "unimplemented"},
+    "medium": {"description": "Optional medium complexion ramp.", "status": "unimplemented"},
+    "deep": {"description": "Optional deep complexion ramp.", "status": "unimplemented"},
+    "warm": {"description": "Optional warm palette variant.", "status": "unimplemented"},
+    "cool": {"description": "Optional cool palette variant.", "status": "unimplemented"}
+  }
+}

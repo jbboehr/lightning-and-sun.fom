@@ -1,0 +1,8 @@
+{
+  "description": "Cool blue study on one portrait strip. Test colors only; requires manual region review before an art release.",
+  "rgba_map": {
+    "#E3A17B": "#9DB9D4",
+    "#C47054": "#6687AD",
+    "#9F5544": "#445F83"
+  }
+}
