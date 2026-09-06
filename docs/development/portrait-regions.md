@@ -83,8 +83,8 @@ were not rerun for this slice; the current MOMI roundtrip is recorded below.
 Reliability verdict: **PASS_WITH_RESIDUAL_RISK**. Independent correctness and test
 reviews found no demonstrated defects or accepted static findings. The test review
 added coverage for empty versus omitted selections, original-pixel traversal and
-mapping chains, malformed hashes, and unmapped seeds. Live-game rendering of this
-masked variant remains unverified.
+mapping chains, malformed hashes, and unmapped seeds. The later interactive
+playtest is recorded below; final art quality remains provisional.
 
 Local preview commands, using fresh output paths:
 
@@ -100,8 +100,7 @@ target/release/mistria-palette contact-sheet --original extracted/adeline-rust \
 
 The contact sheet, generated PNGs, and investigation crops remain under ignored
 `generated/` and `tmp/` directories. Neither game files nor derived images belong
-in the commit. Broader portrait coverage and an in-game visual pass for this new
-masked variant remain separate work.
+in the commit. Broader portrait coverage remains separate work.
 
 ## Installer integration
 
@@ -122,3 +121,23 @@ All four commands exited zero. Removal restored the exact pre-palette archive
 containing the probe; the pristine backup and supplied read-only archive remained
 unchanged. Reports stay in `tmp/masked-install-report.json` and
 `tmp/masked-remove-report.json`.
+
+## Interactive playtest
+
+The user tested the masked neutral portrait in `tmp/masked-playtest` on
+2026-09-06 and accepted its appearance provisionally. They noted that the lips
+might look slightly off and agreed to defer that art refinement. This does not
+establish visual correctness for other expressions.
+
+The first launch used the headless setup's `llvmpipe` software renderer and felt
+slow. The local launcher was rebuilt to expose GPU devices and the host NixOS
+graphics drivers, while keeping the game files read-only and saves/config confined
+to the disposable lab. The next log identified the AMD Radeon RX 9070 XT renderer.
+It recorded both portrait frames with blue and vanilla selected, repeated F6
+switches, and normal exit. The F9 fractional-phase assertion was not exercised in
+this session. An earlier log also recorded a naturally encountered Adeline
+conversation; the final GPU-backed check used the test textbox helper.
+
+The launcher, installed copy, and logs remain ignored under `tmp/`; the current
+log is `tmp/masked-playtest/state/game.log`. The playtest includes the F7/F8/F9
+driver and is not a distributable player package.

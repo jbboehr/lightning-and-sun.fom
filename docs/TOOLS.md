@@ -33,13 +33,18 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria'
 target/release/mistria-palette uninstall --game-dir '/path/to/Fields of Mistria'
 ```
 
-The first command exports the Adeline spring neutral portrait, applies the embedded
-blue palette, builds the toggle package, runs MOMI in isolation, and verifies the
-actual atlas frames before publishing. F6 selects vanilla/blue during play.
+By default the first command exports the Adeline spring neutral portrait, applies
+the embedded blue palette, builds the toggle package, runs MOMI in isolation, and
+verifies the actual atlas frames before publishing. F6 selects vanilla/blue during play.
 This currently supports x86_64 Linux with Nix. No game images are downloaded.
 Nix pins the MOMI binary, bubblewrap, dynamic loader, and runtime libraries.
 
 Use `--palette path/to/palette.json` on `install` to use another exact-color recipe.
+When that recipe has regions, their exact asset paths select which spring portraits
+to install. A recipe without regions keeps the neutral-only selection. Use
+`--palette palettes/stylized/adeline-spring.json` for all 25 supported spring
+expressions. Missing or changed source files stop installation. Lip refinement
+remains deferred; other outfits and overworld sprites are outside this recipe.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;
@@ -86,11 +91,11 @@ See [installer internals and verification](development/cli-installer.md).
 
 ## Export, recolor, and compare
 
-Only one portrait animation (two frames) is selected. The exporter reads exact
+The example below selects one portrait animation (two frames). The exporter reads exact
 archive members and their `.meta.toml` files, preserving the `assets/…` tree. It
 does not unpack the entire game or modify the ZIP. Its report pins the source ZIP
-and exported bytes by SHA-256. Repeat `--asset` to select a second PNG; the proof
-of concept limits exports and changed package replacements to two assets.
+and exported bytes by SHA-256. Repeat `--asset` to select up to 25 distinct PNGs.
+The older replacement `package` command still permits at most two changed assets.
 
 ```sh
 target/release/mistria-palette export \
@@ -132,7 +137,8 @@ MOMI package: MOMI can interpret root JSON files as installable game content.
 pixels outside selected regions and transparent RGB. Without `--palette`, it
 retains the filename, dimension, alpha, and metadata checks. `contact-sheet
 --changes` adds a third column: magenta marks changed pixels and the checkerboard
-marks unchanged pixels.
+marks unchanged pixels. Large batches may exceed the preview's size limit; split
+them into smaller input trees for enlarged comparisons.
 
 Use `palettes/vanilla/adeline.json` with a fresh output to generate unchanged
 copies. Building from those copies emits no replacement PNGs. Leave vanilla
@@ -150,11 +156,12 @@ target/release/mistria-palette package-toggle \
 
 Install that generated folder as `mods/lns_palette` through MOMI v0.15.10. Remove
 the earlier replacement study first so the base portrait is vanilla. This package
-adds a separate animation and an F6 hotkey: press F6 again to restore vanilla.
-The choice lasts for the running game session, covers only Adeline's spring
-neutral portrait, and is not saved. Rebuild and reinstall after changing its
-palette. See [the developer procedure](development/portrait-toggle.md) for isolated
-installation and verification.
+adds separate animations and an F6 hotkey: press F6 again to restore vanilla.
+It accepts one through 25 supported Adeline spring expressions and generates the
+matching runtime sprite table. Keep both generated GML files in the package.
+The choice lasts for the running game session and is not saved. Rebuild and
+reinstall after changing its palette. See [the developer procedure](development/portrait-toggle.md)
+and [spring coverage](development/spring-portraits.md) for verification details.
 
 Palettes require an `rgba_map` object. Keys and values are `#RRGGBB` or
 `#RRGGBBAA`; omitted alpha means `FF`. Replacements happen simultaneously against

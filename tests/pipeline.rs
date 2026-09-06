@@ -337,7 +337,7 @@ fn contact_sheet_reports_pairs_and_uses_nearest_neighbor_at_both_zooms() {
 }
 
 #[test]
-fn export_selects_one_or_two_assets_and_leaves_archive_intact() {
+fn export_selects_only_requested_assets_and_leaves_archive_intact() {
     let f = Fixture::new();
     let archive = f.root.join("assets.zip");
     let members = [
@@ -373,18 +373,15 @@ fn export_selects_one_or_two_assets_and_leaves_archive_intact() {
             args.extend([Path::new("--asset"), Path::new(member)]);
         }
         let result = cli("export", &args);
-        if count > 2 {
-            rejected(result);
-            assert!(!output.exists());
-        } else {
-            let report = ok(result);
-            assert_eq!(report["files"].as_array().unwrap().len(), count);
-            for member in &members[..count] {
-                assert_eq!(
-                    fs::read(output.join(member)).unwrap(),
-                    fs::read(f.original.join("nested/spr_test.png")).unwrap()
-                );
-            }
+        let report = ok(result);
+        assert_eq!(report["files"].as_array().unwrap().len(), count);
+        for member in &members[..count] {
+            assert_eq!(
+                fs::read(output.join(member)).unwrap(),
+                fs::read(f.original.join("nested/spr_test.png")).unwrap()
+            );
+        }
+        if count < 3 {
             assert!(!output.join(members[2]).exists());
         }
         assert_eq!(fs::read(&archive).unwrap(), before);

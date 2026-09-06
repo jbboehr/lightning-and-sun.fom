@@ -1,5 +1,9 @@
 # One-portrait runtime toggle
 
+This document records the original one-portrait slice. The later
+[spring coverage slice](spring-portraits.md) extends packaging, installation,
+verification, and runtime selection to a recipe-defined set of up to 25 expressions.
+
 Rust prepares a blue variant from the player's local Adeline spring neutral
 portrait. MOMI installs it as a new animation in `PortraitsSpring`; it does not
 replace the original animation. GML selects the installed sprite during dialogue.

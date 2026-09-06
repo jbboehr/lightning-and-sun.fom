@@ -31,6 +31,18 @@ exact previous archive in that game's `.mistria-palette/` directory. Keep that
 directory until removal. If another installer or a game update changes the archive,
 removal stops instead of overwriting those changes.
 
+To try all 25 Adeline spring expressions, remove any previous palette installation,
+then choose the larger study:
+
+```sh
+target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
+  --palette palettes/stylized/adeline-spring.json
+```
+
+This covers both frames of each spring expression. Other outfits and overworld
+sprites remain original. The colors are provisional, especially the lips. The
+default installation continues to use only the neutral portrait.
+
 The included palette is tied to the reviewed portrait's original PNG bytes. If
 those change, installation stops until the region definition is reviewed. See
 [palette and preview options](docs/TOOLS.md#export-recolor-and-compare) for custom
@@ -48,9 +60,10 @@ and custom palette input.
 
 Follow [TOOLS.md](docs/TOOLS.md) to export the portrait, generate a preview, and build a
 local MOMI package. The experimental `package-toggle` mode keeps vanilla installed
-and adds the blue variant. Press **F6** during play to switch Adeline's spring
-neutral portrait; each game launch starts with vanilla. Other expressions and
-characters are unchanged. There is no preset menu or graphical installer yet.
+and adds blue variants. Press **F6** during play to switch the included Adeline
+spring portraits; each game launch starts with vanilla. Portraits outside the
+chosen recipe and other characters are unchanged. There is no preset menu or
+graphical installer yet.
 See [INVESTIGATION.md](docs/INVESTIGATION.md) for compatibility and experiment limits.
 
 Game files, extracted PNGs, generated mods, and contact sheets stay local and are

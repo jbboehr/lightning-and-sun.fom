@@ -3,6 +3,7 @@ enum Menu { Textbox, Other }
 globalvar ANCHOR;
 global.menu = undefined;
 global.missing_asset = false;
+global.missing_asset_name = undefined;
 global.hotkey_count = 0;
 global.warning_count = 0;
 global.hook_count = 0;
@@ -23,10 +24,18 @@ function mmapi_hotkey_register(key, callback) {
 }
 function mmapi_log_info(name, message) {}
 function mmapi_log_warn(name, message) { global.warning_count += 1; }
+function lns_palette_assets() {
+    return [
+        ["spr_portrait_adeline_spring_neutral", "spr_lns_adeline_spring_neutral_blue"],
+        ["spr_portrait_adeline_spring_happy", "spr_lns_adeline_spring_happy_blue"]
+    ];
+}
 function try_string_to_asset(name) {
-    if (global.missing_asset) return undefined;
+    if (global.missing_asset || name == global.missing_asset_name) return undefined;
     if (name == "spr_portrait_adeline_spring_neutral") return 10;
     if (name == "spr_lns_adeline_spring_neutral_blue") return 20;
+    if (name == "spr_portrait_adeline_spring_happy") return 40;
+    if (name == "spr_lns_adeline_spring_happy_blue") return 50;
     return undefined;
 }
 function TestPortrait() constructor {

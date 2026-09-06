@@ -13,7 +13,20 @@ use zip::{ZipWriter, write::SimpleFileOptions};
 const SOURCE: &str =
     "assets/animations/NPCs/Adeline/Portraits/Spring/spr_portrait_adeline_spring_neutral";
 const VARIANT: &str = "assets/animations/LightningAndSun/spr_lns_adeline_spring_neutral_blue";
+const PALETTE_SCRIPTS: &str = "assets/gml/scripts/lightning_and_sun_adeline_palette_toggle_study";
 const META: &str = "[meta_properties]\nid = '0000000000000001'\nasset_kind = 'Animation'\n[asset_properties]\nframe_size = [2,1]\nframe_len = 2\nduration = 0.2\natlas = 'PortraitsSpring'\n";
+fn asset_script(expressions: &[&str]) -> Vec<u8> {
+    let pairs: Vec<_> = expressions
+        .iter()
+        .map(|e| {
+            [
+                format!("spr_portrait_adeline_spring_{e}"),
+                format!("spr_lns_adeline_spring_{e}_blue"),
+            ]
+        })
+        .collect();
+    format!("// Generated from the portraits included in this local package.\nfunction lns_palette_assets() {{ return {}; }}\n",serde_json::to_string(&pairs).unwrap()).into_bytes()
+}
 
 fn png(image: RgbaImage) -> Vec<u8> {
     let mut bytes = Cursor::new(Vec::new());
@@ -114,8 +127,12 @@ impl Lab {
                     .into_bytes(),
             ),
             (
-                "assets/gml/scripts/lns/palette_toggle.gml".into(),
+                format!("{PALETTE_SCRIPTS}/palette_toggle.gml"),
                 include_bytes!("../mod/toggle/gml/palette_toggle.gml").to_vec(),
+            ),
+            (
+                format!("{PALETTE_SCRIPTS}/palette_assets.gml"),
+                asset_script(&["neutral"]),
             ),
             ("assets/atlases/PortraitsSpringAtlas.png".into(), png(atlas)),
             (
@@ -188,6 +205,175 @@ animations = [
             "{}",
             String::from_utf8_lossy(&result.stderr)
         );
+    }
+}
+
+#[test]
+fn every_selected_portrait_and_its_runtime_mapping_are_verified() {
+    for corruption in [
+        "none",
+        "second_frame",
+        "second_metadata",
+        "overlapping_id",
+        "mapping",
+    ] {
+        let mut lab = Lab::new();
+        let source = SOURCE.replace("neutral", "happy");
+        let variant = VARIANT.replace("neutral", "happy");
+        let original = png(RgbaImage::from_pixel(4, 1, Rgba([227, 161, 123, 255])));
+        let meta = META.replace("0000000000000001", "0000000000000003");
+        lab.before = with_zip_entry(&lab.before, &format!("{source}.png"), &original);
+        lab.before = with_zip_entry(&lab.before, &format!("{source}.meta.toml"), meta.as_bytes());
+        fs::write(lab.game.join("assets.zip"), &lab.before).unwrap();
+        let palette_path = lab.result.with_extension("palette.json");
+        let mut recipe: serde_json::Value =
+            serde_json::from_slice(&fs::read(&palette_path).unwrap()).unwrap();
+        let mut second = recipe["regions"][0].clone();
+        second["asset"] = serde_json::json!(format!("{source}.png"));
+        recipe["regions"].as_array_mut().unwrap().push(second);
+        fs::write(palette_path, serde_json::to_vec(&recipe).unwrap()).unwrap();
+        let mut result = fs::read(&lab.result).unwrap();
+        result = with_zip_entry(&result, &format!("{source}.png"), &original);
+        result = with_zip_entry(&result, &format!("{source}.meta.toml"), meta.as_bytes());
+        let variant_meta = meta.replace("0000000000000003", "0000000000000004");
+        let variant_meta = match corruption {
+            "second_metadata" => variant_meta.replace("duration = 0.2", "duration = 0.3"),
+            "overlapping_id" => variant_meta.replace("0000000000000004", "0000000000000002"),
+            _ => variant_meta,
+        };
+        result = with_zip_entry(
+            &result,
+            &format!("{variant}.meta.toml"),
+            variant_meta.as_bytes(),
+        );
+        let mut atlas = RgbaImage::from_fn(4, 4, |_, y| {
+            Rgba(if y % 2 == 0 {
+                [227, 161, 123, 255]
+            } else {
+                [157, 185, 212, 255]
+            })
+        });
+        if corruption == "second_frame" {
+            atlas.put_pixel(3, 3, Rgba([0, 0, 0, 255]));
+        }
+        result = replace_zip_entry(
+            &result,
+            "assets/atlases/PortraitsSpringAtlas.png",
+            &png(atlas),
+        );
+        let mut placements = String::from("[asset_properties]\nanimations = [\n");
+        for row in 0..4 {
+            for frame in 0..2 {
+                placements.push_str(&format!("{{texture_ids = [\"{:016}::{frame}\"], placement = [{},{row},2,1,2,1,0,0]}},\n",row+1,frame*2));
+            }
+        }
+        placements.push_str("]\n");
+        result = replace_zip_entry(
+            &result,
+            "assets/atlases/PortraitsSpringAtlas.meta.toml",
+            placements.as_bytes(),
+        );
+        result = replace_zip_entry(
+            &result,
+            &format!("{PALETTE_SCRIPTS}/palette_assets.gml"),
+            &asset_script(if corruption == "mapping" {
+                &["neutral"]
+            } else {
+                &["happy", "neutral"]
+            }),
+        );
+        fs::write(&lab.result, result).unwrap();
+        let outcome = lab.run("install");
+        if corruption == "none" {
+            assert!(
+                outcome.status.success(),
+                "{}",
+                String::from_utf8_lossy(&outcome.stderr)
+            );
+            assert!(lab.run("uninstall").status.success());
+        } else {
+            assert!(!outcome.status.success(), "accepted {corruption}");
+            assert!(!lab.game.join(".mistria-palette").exists());
+        }
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+    }
+}
+
+#[test]
+fn palette_without_regions_uses_the_neutral_fallback() {
+    let lab = Lab::new();
+    let palette = lab.result.with_extension("palette.json");
+    let mut recipe: serde_json::Value =
+        serde_json::from_slice(&fs::read(&palette).unwrap()).unwrap();
+    recipe.as_object_mut().unwrap().remove("regions");
+    fs::write(&palette, serde_json::to_vec(&recipe).unwrap()).unwrap();
+
+    let installed = lab.run("install");
+    assert!(
+        installed.status.success(),
+        "region-free recipe did not use neutral fallback: {}",
+        String::from_utf8_lossy(&installed.stderr)
+    );
+    assert_eq!(
+        fs::read(lab.game.join("assets.zip")).unwrap(),
+        fs::read(&lab.result).unwrap()
+    );
+    assert!(lab.run("uninstall").status.success());
+    assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+}
+
+#[test]
+fn verification_follows_frames_across_numbered_atlas_pages() {
+    for case in ["split", "duplicate", "wrong_pixels"] {
+        let lab = Lab::new();
+        let mut result = fs::read(&lab.result).unwrap();
+        if case != "duplicate" {
+            result = replace_zip_entry(
+                &result,
+                "assets/atlases/PortraitsSpringAtlas.meta.toml",
+                br#"[asset_properties]
+animations = [
+ {texture_ids = ["0000000000000001::0"], placement = [0,0,2,1,2,1,0,0]},
+ {texture_ids = ["0000000000000001::1"], placement = [2,0,2,1,2,1,0,0]},
+ {texture_ids = ["0000000000000002::0"], placement = [0,1,2,1,2,1,0,0]},
+]
+"#,
+            );
+        }
+        result = with_zip_entry(
+            &result,
+            "assets/atlases/PortraitsSpringAtlas_1.meta.toml",
+            br#"[asset_properties]
+animations = [{texture_ids = ["0000000000000002::1"], placement = [0,0,2,1,2,1,0,0]}]
+"#,
+        );
+        result = with_zip_entry(
+            &result,
+            "assets/atlases/PortraitsSpringAtlas_1.png",
+            &png(RgbaImage::from_pixel(
+                2,
+                1,
+                Rgba(if case == "wrong_pixels" {
+                    [0, 0, 0, 255]
+                } else {
+                    [157, 185, 212, 255]
+                }),
+            )),
+        );
+        fs::write(&lab.result, result).unwrap();
+        let outcome = lab.run("install");
+        if case == "split" {
+            assert!(
+                outcome.status.success(),
+                "{}",
+                String::from_utf8_lossy(&outcome.stderr)
+            );
+            assert!(lab.run("uninstall").status.success());
+        } else {
+            assert!(!outcome.status.success(), "accepted {case}");
+            assert!(!lab.game.join(".mistria-palette").exists());
+        }
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
     }
 }
 
@@ -546,6 +732,60 @@ fn unsuccessful_or_incomplete_installer_output_leaves_live_files_unchanged() {
 }
 
 #[test]
+fn palette_scripts_can_share_filenames_with_another_mod() {
+    for name in ["palette_assets.gml", "palette_toggle.gml"] {
+        let lab = Lab::new();
+        let result = with_zip_entry(
+            &fs::read(&lab.result).unwrap(),
+            &format!("assets/gml/scripts/test_other/{name}"),
+            b"// Another mod's script with its own contents.\n",
+        );
+        fs::write(&lab.result, &result).unwrap();
+
+        let installed = lab.run("install");
+        assert!(
+            installed.status.success(),
+            "another mod's {name} prevented installation: {}",
+            String::from_utf8_lossy(&installed.stderr)
+        );
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), result);
+        assert!(lab.run("uninstall").status.success());
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+    }
+}
+
+#[test]
+fn palette_scripts_must_be_present_in_the_package_namespace() {
+    for (name, expected) in [
+        ("palette_assets.gml", asset_script(&["neutral"])),
+        (
+            "palette_toggle.gml",
+            include_bytes!("../mod/toggle/gml/palette_toggle.gml").to_vec(),
+        ),
+    ] {
+        let lab = Lab::new();
+        let result = without_zip_entry(
+            &fs::read(&lab.result).unwrap(),
+            &format!("{PALETTE_SCRIPTS}/{name}"),
+        );
+        let result = with_zip_entry(
+            &result,
+            &format!("assets/gml/scripts/test_other/{name}"),
+            &expected,
+        );
+        fs::write(&lab.result, result).unwrap();
+
+        let installed = lab.run("install");
+        assert!(
+            !installed.status.success(),
+            "accepted {name} from another mod when the package's script was missing"
+        );
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+        assert!(!lab.game.join(".mistria-palette").exists());
+    }
+}
+
+#[test]
 fn corrupted_pixels_metadata_or_script_prevent_publication() {
     let corruptions = [
         (
@@ -561,7 +801,7 @@ fn corrupted_pixels_metadata_or_script_prevent_publication() {
             "Variant properties differ",
         ),
         (
-            "assets/gml/scripts/lns/palette_toggle.gml",
+            &format!("{PALETTE_SCRIPTS}/palette_toggle.gml"),
             b"// wrong script\n".to_vec(),
             "Installed palette script differs",
         ),

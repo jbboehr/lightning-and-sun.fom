@@ -41,7 +41,7 @@ enum Command {
         #[arg(long)]
         game_dir: PathBuf,
     },
-    /// Copy one or two explicit PNG assets and their metadata from assets.zip.
+    /// Copy up to 25 explicit PNG assets and their metadata from assets.zip.
     Export {
         #[arg(long)]
         archive: PathBuf,
@@ -95,7 +95,7 @@ enum Command {
         #[arg(long)]
         output: PathBuf,
     },
-    /// Build the one-portrait F6 toggle study using a locally generated variant.
+    /// Build an F6 toggle for locally generated Adeline spring portrait variants.
     PackageToggle {
         #[arg(long)]
         original: PathBuf,

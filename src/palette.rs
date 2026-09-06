@@ -38,6 +38,12 @@ pub struct Palette {
 }
 
 impl Palette {
+    pub fn assets(&self) -> Option<Vec<String>> {
+        self.regions
+            .as_ref()
+            .map(|regions| regions.keys().cloned().collect())
+    }
+
     pub fn check_inventory(&self, images: &Files) -> Result<()> {
         if let Some(regions) = &self.regions {
             let names: std::collections::BTreeSet<_> =

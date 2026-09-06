@@ -31,7 +31,17 @@ assert(global.menu.original_calls == 1);
 assert(global.menu.portrait.sprite == 20);
 assert(global.menu.portrait.index == 0.75);
 
-// Other expressions and characters are left alone in either state.
+// Each supported expression keeps its own sprite pair and animation phase.
+global.menu.set_speaker({sprite: 40, index: 1.75});
+assert(global.menu.portrait.sprite == 50);
+assert(global.menu.portrait.index == 1.75);
+global.hotkey();
+assert(global.menu.portrait.sprite == 40);
+assert(global.menu.portrait.index == 1.75);
+global.hotkey();
+assert(global.menu.portrait.sprite == 50);
+
+// Unsupported portraits are left alone in either state.
 global.menu.set_speaker({sprite: 30, index: 0.5});
 assert(global.menu.portrait.sprite == 30);
 assert(global.menu.portrait.index == 0.5);
@@ -56,3 +66,25 @@ assert(global.hotkey_count == 0);
 assert(global.warning_count == 1);
 assert(!__lns_palette_runtime().ready);
 assert(!__lns_palette_runtime().blue);
+
+// Losing either side of a later pair also disables the entire toggle.
+global.__lns_palette = undefined;
+global.missing_asset = false;
+global.missing_asset_name = "spr_portrait_adeline_spring_happy";
+global.hotkey_count = 0;
+global.warning_count = 0;
+lns_palette_initialize();
+assert(global.hotkey_count == 0);
+assert(global.warning_count == 1);
+assert(!__lns_palette_runtime().ready);
+assert(array_length(__lns_palette_runtime().pairs) == 1);
+
+global.__lns_palette = undefined;
+global.missing_asset_name = "spr_lns_adeline_spring_happy_blue";
+global.hotkey_count = 0;
+global.warning_count = 0;
+lns_palette_initialize();
+assert(global.hotkey_count == 0);
+assert(global.warning_count == 1);
+assert(!__lns_palette_runtime().ready);
+assert(array_length(__lns_palette_runtime().pairs) == 1);

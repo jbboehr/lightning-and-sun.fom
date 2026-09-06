@@ -1,4 +1,4 @@
-use crate::{assets::file_digest, commands, installed, toggle};
+use crate::{assets::file_digest, commands, installed, palette, toggle};
 use anyhow::{Context, Result, ensure};
 use rc_zip_sync::ReadZip;
 use serde::{Deserialize, Serialize};
@@ -205,12 +205,6 @@ pub fn install(
     );
     let original = build.join("original");
     let modified = build.join("modified");
-    eprintln!("Generating the portrait from local game assets...");
-    commands::export(
-        &build.join("assets.zip"),
-        &[format!("{}.png", installed::SOURCE)],
-        &original,
-    )?;
     let palette_file = build.join("palette.json");
     fs::write(
         &palette_file,
@@ -219,6 +213,22 @@ pub fn install(
             None => include_bytes!("../palettes/stylized/adeline.json").to_vec(),
         },
     )?;
+    let assets = palette::load(&palette_file)?
+        .assets()
+        .unwrap_or_else(|| vec![format!("{}.png", installed::SOURCE)]);
+    for asset in &assets {
+        toggle::sprite_pair(asset)?;
+        ensure!(
+            asset.starts_with("assets/animations/NPCs/Adeline/Portraits/Spring/")
+                && asset.ends_with(".png"),
+            "Expected an exact Adeline spring portrait path"
+        );
+    }
+    eprintln!(
+        "Generating {} portrait(s) from local game assets...",
+        assets.len()
+    );
+    commands::export(&build.join("assets.zip"), &assets, &original)?;
     let report = commands::apply(&original, &palette_file, &modified)?;
     toggle::package(&original, &modified, &mods.join("lns_palette"))?;
     let expected_mods = selected_mods(&mods)?;

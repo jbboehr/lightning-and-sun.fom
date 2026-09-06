@@ -2,8 +2,9 @@
 
 This slice makes the existing one-portrait experiment repeatable. It does not
 expand recoloring coverage. The later [region-mask slice](portrait-regions.md)
-refines this portrait's recipe. All 25 Adeline spring portrait strips, then other
-outfits and overworld animations, remain the next art/pipeline slices.
+refines this portrait's recipe. The subsequent [spring coverage slice](spring-portraits.md)
+adds an opt-in 25-expression recipe. Other outfits and overworld animations remain
+future art/pipeline slices.
 
 ## Target and dependency handling
 
