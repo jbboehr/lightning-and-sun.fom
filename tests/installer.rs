@@ -25,7 +25,19 @@ fn asset_script(expressions: &[&str]) -> Vec<u8> {
             ]
         })
         .collect();
-    format!("// Generated from the portraits included in this local package.\nfunction lns_palette_assets() {{ return {}; }}\nfunction lns_palette_names() {{ return [\"Vanilla\",\"Debug Blue\"]; }}\n",serde_json::to_string(&pairs).unwrap()).into_bytes()
+    adeline_script(
+        serde_json::json!(pairs),
+        serde_json::json!(["Vanilla", "Debug Blue"]),
+    )
+}
+
+fn adeline_script(groups: serde_json::Value, labels: serde_json::Value) -> Vec<u8> {
+    character_script(serde_json::json!([[
+        "adeline", "Adeline", "F6", labels, groups
+    ]]))
+}
+fn character_script(definitions: serde_json::Value) -> Vec<u8> {
+    format!("// Character rows: id, label, hotkey, preset names, animation groups.\nfunction lns_palette_definitions() {{ return {definitions}; }}\n").into_bytes()
 }
 
 fn png(image: RgbaImage) -> Vec<u8> {
@@ -370,14 +382,14 @@ animations = [
                     vec![spring, seasonal]
                 }
             };
-            let script = format!(
-                "// Generated from the portraits included in this local package.\nfunction lns_palette_assets() {{ return {}; }}\nfunction lns_palette_names() {{ return [\"Vanilla\",\"Debug Blue\"]; }}\n",
-                serde_json::to_string(&groups).unwrap()
+            let script = adeline_script(
+                serde_json::json!(groups),
+                serde_json::json!(["Vanilla", "Debug Blue"]),
             );
             result = replace_zip_entry(
                 &result,
                 &format!("{PALETTE_SCRIPTS}/palette_assets.gml"),
-                script.as_bytes(),
+                &script,
             );
             fs::write(&lab.result, result).unwrap();
             let outcome = lab.run("install");
@@ -1132,7 +1144,18 @@ fn preset_install_verifies_the_last_variant_and_restores_the_prior_archive() {
             "assets/atlases/PortraitsSpringAtlas.meta.toml",
             placements.as_bytes(),
         );
-        result=replace_zip_entry(&result,&format!("{PALETTE_SCRIPTS}/palette_assets.gml"),b"// Generated from the portraits included in this local package.\nfunction lns_palette_assets() { return [[\"spr_portrait_adeline_spring_neutral\",\"spr_lns_adeline_spring_neutral_blue\",\"spr_lns_adeline_spring_neutral_warm\"]]; }\nfunction lns_palette_names() { return [\"Vanilla\",\"Debug Blue\",\"Warm trial\"]; }\n");
+        result = replace_zip_entry(
+            &result,
+            &format!("{PALETTE_SCRIPTS}/palette_assets.gml"),
+            &adeline_script(
+                serde_json::json!([[
+                    "spr_portrait_adeline_spring_neutral",
+                    "spr_lns_adeline_spring_neutral_blue",
+                    "spr_lns_adeline_spring_neutral_warm"
+                ]]),
+                serde_json::json!(["Vanilla", "Debug Blue", "Warm trial"]),
+            ),
+        );
         fs::write(&lab.result, result).unwrap();
         let installed = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
             .arg("install")
@@ -1287,4 +1310,119 @@ animations = [
     );
     assert!(lab.run("uninstall").status.success());
     assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+}
+
+#[test]
+fn combined_install_verifies_hayden_and_restores_the_whole_archive() {
+    use serde_json::json;
+    const HAYDEN: &str =
+        "assets/animations/NPCs/Hayden/Portraits/Spring/spr_portrait_hayden_spring_neutral";
+    for corrupt_hayden in [false, true] {
+        let mut lab = Lab::new();
+        let original = png(RgbaImage::from_pixel(4, 1, Rgba([227, 161, 123, 255])));
+        let meta = META.replace("0000000000000001", "0000000000000003");
+        lab.before = with_zip_entry(&lab.before, &format!("{HAYDEN}.png"), &original);
+        lab.before = with_zip_entry(&lab.before, &format!("{HAYDEN}.meta.toml"), meta.as_bytes());
+        fs::write(lab.game.join("assets.zip"), &lab.before).unwrap();
+        let mut installed = fs::read(&lab.result).unwrap();
+        installed = with_zip_entry(&installed, &format!("{HAYDEN}.png"), &original);
+        installed = with_zip_entry(&installed, &format!("{HAYDEN}.meta.toml"), meta.as_bytes());
+        installed = with_zip_entry(
+            &installed,
+            "assets/animations/LightningAndSun/spr_lns_hayden_spring_neutral_blue.meta.toml",
+            meta.replace("0000000000000003", "0000000000000004")
+                .as_bytes(),
+        );
+        let mut page = RgbaImage::from_fn(4, 2, |_, y| {
+            Rgba(if y == 0 {
+                [227, 161, 123, 255]
+            } else {
+                [157, 185, 212, 255]
+            })
+        });
+        if corrupt_hayden {
+            page.put_pixel(3, 1, Rgba([1, 2, 3, 255]));
+        }
+        installed = with_zip_entry(
+            &installed,
+            "assets/atlases/PortraitsSpringAtlas_1.png",
+            &png(page),
+        );
+        let mut placements = String::from("[asset_properties]\nanimations=[\n");
+        for (row, id) in [(0, 3), (1, 4)] {
+            for frame in 0..2 {
+                placements.push_str(&format!(
+                    "{{texture_ids=['{id:016}::{frame}'],placement=[{},{row},2,1,2,1,0,0]}},\n",
+                    frame * 2
+                ));
+            }
+        }
+        placements.push_str("]\n");
+        installed = with_zip_entry(
+            &installed,
+            "assets/atlases/PortraitsSpringAtlas_1.meta.toml",
+            placements.as_bytes(),
+        );
+        installed = replace_zip_entry(
+            &installed,
+            &format!("{PALETTE_SCRIPTS}/palette_assets.gml"),
+            &character_script(json!([
+                [
+                    "adeline",
+                    "Adeline",
+                    "F6",
+                    ["Vanilla", "Debug Blue"],
+                    [[
+                        "spr_portrait_adeline_spring_neutral",
+                        "spr_lns_adeline_spring_neutral_blue"
+                    ]]
+                ],
+                [
+                    "hayden",
+                    "Hayden",
+                    "F8",
+                    ["Vanilla", "Debug Blue"],
+                    [[
+                        "spr_portrait_hayden_spring_neutral",
+                        "spr_lns_hayden_spring_neutral_blue"
+                    ]]
+                ]
+            ])),
+        );
+        fs::write(&lab.result, installed).unwrap();
+        for (id, source) in [("adeline", SOURCE), ("hayden", HAYDEN)] {
+            fs::write(lab.game.join(format!("{id}-profile.json")),serde_json::to_vec(&json!({"source_colors":["#E3A17B"],"regions":[{"asset":format!("{source}.png"),"source_sha256":format!("{:x}",Sha256::digest(&original)),"size":[4,1],"seeds":[[0,0]]}]})).unwrap()).unwrap();
+            fs::write(lab.game.join(format!("{id}.json")),serde_json::to_vec(&json!({"profile":format!("{id}-profile.json"),"presets":[{"id":"blue","label":"Debug Blue","colors":["#9DB9D4"]}]})).unwrap()).unwrap();
+        }
+        let config = lab.game.join("characters.json");
+        fs::write(&config, br#"{"characters":[{"id":"adeline","presets":"adeline.json"},{"id":"hayden","presets":"hayden.json"}]}"#).unwrap();
+        let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
+            .arg("install")
+            .arg("--game-dir")
+            .arg(&lab.game)
+            .arg("--momi")
+            .arg(&lab.result)
+            .arg("--characters")
+            .arg(config)
+            .env("MISTRIA_MOMI_RUNNER", &lab.runner)
+            .output()
+            .unwrap();
+        if corrupt_hayden {
+            assert!(!result.status.success(), "Published a corrupt Hayden atlas");
+            assert!(String::from_utf8_lossy(&result.stderr).contains("Installed pixels differ"));
+            assert!(!lab.game.join(".mistria-palette").exists());
+        } else {
+            assert!(
+                result.status.success(),
+                "{}",
+                String::from_utf8_lossy(&result.stderr)
+            );
+            assert!(lab.run("uninstall").status.success());
+        }
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+        assert_eq!(
+            fs::read_to_string(lab.game.join("mods/other/keep.txt")).unwrap(),
+            "another mod's source"
+        );
+    }
 }

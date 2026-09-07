@@ -18,9 +18,11 @@ function TestActor() constructor {
 }
 
 global.world = true;
+global.characters = true;
 global.__lns_palette = undefined;
 global.menu = new TestTextbox();
 global.initialize();
+assert(__lns_palette_runtime().ready, "World palette must resolve the NPC object through the game mapping");
 global.hotkey();
 assert(global.menu.portrait.sprite == 20);
 // Entering the room after choosing a palette attaches once and updates display.
@@ -39,6 +41,10 @@ assert(actor.animator.sprite() == 311);
 assert(actor.animator.current.sprite == 310);
 assert(actor.animator.current.index == 2);
 assert(actor.animator.current.frame == 7.75);
+global.hotkey_hayden();
+assert(actor.animator.sprite() == 311, "Hayden selection changed Adeline's world palette");
+assert(actor.animator.current.frame == 7.75);
+assert(actor.x == 34 && actor.y == 72 && actor.image_xscale == -1);
 global.hotkey();
 assert(actor.sprite_index == 310);
 assert(actor.image_index == 2 && actor.image_xscale == -1);
@@ -87,3 +93,16 @@ var original_getter = untouched.animator.sprite;
 global.initialize();
 assert(!__lns_palette_runtime().ready && global.hotkey_count == 0);
 assert(untouched.animator.sprite == original_getter);
+// Unknown NPC IDs must disable initialization before the game's strict object
+// mapping is called, before controls register, and before any animator is wrapped.
+global.__lns_palette = undefined;
+global.missing_asset_name = undefined;
+global.missing_npc_id = true;
+global.warning_count = 0;
+global.menu = new TestTextbox();
+global.initialize();
+global.initialize();
+assert(!__lns_palette_runtime().ready && global.hotkey_count == 0);
+assert(global.warning_count == 1);
+assert(untouched.animator.sprite == original_getter);
+assert(global.menu.portrait.sprite == 10);

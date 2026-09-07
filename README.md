@@ -92,6 +92,21 @@ For spring sitting, eating, drinking, and blinking as well, use
 same palette across these actions and the included portraits. Other overworld
 actions and outfits still use their original colors.
 
+To include Hayden's portraits alongside Adeline, uninstall the previous study,
+then install the combined trial:
+
+```sh
+target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
+  --characters palettes/sets/characters-trial.json
+```
+
+**F6** cycles Adeline's existing palettes. **F8** switches Hayden between
+**Vanilla and Debug Blue**, independently. Both start on Vanilla each launch.
+Hayden's 133 portrait strips cover seasonal, beach, bath, and wedding portraits;
+his overworld sprites remain original. A few pixels in his embarrassed expression
+still need adjustment. To try Hayden alone, use
+`--presets palettes/sets/hayden-portraits-trial.json` instead.
+
 The included palette is tied to the reviewed portrait's original PNG bytes. If
 those change, installation stops until the region definition is reviewed. See
 [palette and preview options](docs/TOOLS.md#export-recolor-and-compare) for custom
@@ -118,7 +133,8 @@ See [INVESTIGATION.md](docs/INVESTIGATION.md) for compatibility and experiment l
 
 Game files, extracted PNGs, generated mods, and contact sheets stay local and are
 excluded from Git. Keep an untouched game copy and back up saves before installing
-any mod. F6 returns the toggle study to vanilla; removing the mod entirely still
+any mod. Cycle the character's palette control back to Vanilla to restore their
+original colors; removing the mod entirely still
 uses the same installation method: CLI-installed studies use `uninstall` above;
 manually installed packages use MOMI. The older replacement package must be removed
 through MOMI too.

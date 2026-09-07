@@ -1,0 +1,143 @@
+# Independent character palettes
+
+The combined trial includes Adeline's 143 reviewed animations with four recolors
+and Hayden's 133 portrait strips with Debug Blue: 705 generated variant strips.
+Both characters start on Vanilla each session. F6 cycles Adeline's five choices;
+F8 cycles Hayden's two. Hayden's overworld sprites are not covered. The small
+embarrassed-expression art follow-up remains deferred in
+[Hayden portraits](hayden-portraits.md).
+
+## Add and review one character at a time
+
+- `mod/config/characters.json` records character IDs, labels, temporary hotkeys,
+  and exact reviewed animation paths with their original atlas.
+- A region profile under `palettes/profiles/` owns the character's reviewed masks,
+  source hashes and color groups. A preset set under `palettes/sets/` supplies
+  colors. There is no requirement for characters to have the same preset count.
+- A collection such as `palettes/sets/characters-trial.json` selects the characters
+  and points to each preset set. Paths are relative to the containing definition.
+  Select just one entry to build or install that character alone. Existing
+  `build-presets` and `install --presets` also accept a single Hayden set.
+
+The registry contains filenames and atlas names, not image data. When expanding
+coverage, add only reviewed paths and verify the atlas against local metadata;
+do not infer it from the filename. Hayden's `beach_shy_special` strip lives in the
+Spring folder and uses `PortraitsSpring` even though its name says beach.
+The current export command retains its prototype limit of 143 strips per
+character. A larger corpus will need that extraction limit revisited.
+
+Build a combined local bundle:
+
+```sh
+nix-shell --pure --run 'cargo run --locked -- build-characters \
+  --archive tmp/fields-of-mistria/assets.zip \
+  --characters palettes/sets/characters-trial.json \
+  --output generated/characters-trial'
+```
+
+The bundle contains per-character originals and generated variants, one MOMI
+package, and a JSON report. All generated content stays under ignored paths.
+The installer uses the same collection and package builder, verifies every
+character's vanilla and variant atlas frames and the complete generated runtime
+table, then publishes one reversible archive transaction. Existing mod selection
+and load-order checks still apply. Uninstall restores the entire previous archive.
+The MOMI manifest retains the historical `Adeline Palette Toggle Study` name.
+
+## Runtime
+
+The generated GML table holds one row per character: ID, label, hotkey,
+preset labels, and animation groups. Each group starts with vanilla.
+The runtime resolves the complete table before enabling any hotkeys, and keeps
+selection and sprite pairs in separate character states. The shared textbox hook
+finds the owner of the current portrait, including already-recolored variants,
+and preserves its fractional animation phase. World animators reference their
+character's state; they retain their original timing, movement and animation packs.
+World objects come from the game's `try_string_to_npc_id` and
+`npc_id_to_gm_obj_id` mapping. The real game does not resolve objects through
+`try_string_to_asset`, and it does not expose Fabricator's `asset_get_index` API.
+
+F6 and F8 are test controls. A future character-and-palette menu should call the
+same `lns_palette_toggle(character)` selection path (or a direct selection
+function) instead of assigning a new key to every NPC. We can finish masks for
+one character before adding the next; changing the shared game hook is not part
+of each art pass.
+
+## Verification
+
+Run the normal checks from [verification](verification.md). The synthetic
+character bundle test checks different preset counts and rejects wrong-owner
+and duplicate selections. Installer tests check a corrupt second character's
+atlas cannot be published and that uninstall restores the complete archive.
+
+```sh
+nix-shell --pure --run 'FOM_GML_INTERPRETER="$PWD/tmp/runtime-capabilities/fabricator/target/debug/interpreter" cargo test --locked --test gml_runtime -- --ignored --nocapture'
+```
+
+These interpreter tests exercise both character callbacks, Vanilla restoration,
+speaker/menu changes, missing assets and NPC IDs, fractional portrait phase, and
+Adeline's world animator while Hayden changes palette.
+
+2026-09-07 verification: formatting, Clippy, 86 active tests, the three opt-in GML
+tests, and the release build passed. All 705 regenerated strips passed exact
+recipe validation. A fresh MOMI installation verified every selected vanilla and
+variant frame, metadata, and generated script. Uninstall restored the prior
+archive byte-for-byte. A separate Hayden-only bundle contained 133 variants and
+only his F8 control.
+
+The real game ran in a new isolated state directory under Xvfb. Its 259 unique
+portrait checks covered every included expression across both characters and
+all six outfits, cycling both characters' selections while checking the displayed
+sprite and fractional phase. Another 24 checks exercised Adeline's world actions
+and directions while both palette controls cycled, preserving animator state,
+movement, facing, and food/drink renderers. No script errors or disabled palette
+callbacks were logged. An additional live check cycled all six portrait outfits
+with the world preview active, also without script or callback errors.
+The supplied source archive's SHA-256 remained
+`b4d4b47afa1459d0d4aa4b6cacffe7b2f30f11a3f6a35e471e58bb2dafc636f5`.
+
+The independent test pass added a Hayden-only runtime table check. Live testing
+found the object-lookup mismatch described above; the corrected engine stub first
+failed the world regression, then passed with the native NPC mapping. A separate
+review suggestion to verify unselected animations against arbitrary MOMI
+corruption concerned the pre-existing verifier scope; no new defect was
+demonstrated there, and that broader work was deferred.
+
+Reliability verdict: **PASS_WITH_RESIDUAL_RISK**. The remaining concrete gaps are
+interaction with other mods that wrap the same game methods and the deferred
+Hayden embarrassed-expression pixels.
+The interpreter and game tests cover runtime behavior; they are not a finished
+art review of every recolored frame.
+
+The first preview used F2, which also opens the game's debugger. The sprite
+checks missed that overlay. The preview now uses F4, and its F9 check also asserts
+that the debug console is hidden. A live regression failed with F2 and passed
+with F4 in both directions; Hayden's blue portrait was visually confirmed with
+the console closed. The rebuilt launcher uses the separate
+`tmp/characters-f4-playtest` copy. Formatting, Clippy, all 86 active tests, the
+release build, and fresh MOMI verification passed for this correction.
+The user then tried the corrected preview on their desktop and accepted its
+appearance. This was a visual spot check, not a review of every frame.
+
+## Local visual check
+
+The ignored `tmp/play-characters` launcher opens the combined package with its
+own saves and state, mounting the supplied game files read-only. Run it from the
+normal desktop terminal:
+
+```sh
+./tmp/play-characters
+```
+
+- F7 opens the portrait trial and advances expressions; F10 goes backward.
+- F4 switches the displayed character; F5 switches outfits. F2 belongs to the
+  game's debugger and is not a preview control.
+- F6 cycles Adeline's palette; F8 switches Hayden's palette.
+- F9 checks independent palette cycles and portrait phase.
+- Optional world controls: F1 spawns Adeline, F3 changes action, F12 changes
+  facing, and F11 checks world phase and movement.
+
+The world helper disables Adeline's town scheduling before manually placing her,
+as established by the earlier pathfinding-crash fix. These preview controls and
+scheduling changes are excluded from the player package. The launcher is retained
+by a Nix output link; rebuild it if necessary with
+`nix-build --out-link tmp/play-characters tmp/characters-playtest-launch.nix`.

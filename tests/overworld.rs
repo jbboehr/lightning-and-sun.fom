@@ -144,7 +144,7 @@ fn world_package_preserves_idle_defaults_walk_timing_and_offsets() {
         }
     }
     let script = fs::read_to_string(output.join("gml/palette_assets.gml")).unwrap();
-    let table: serde_json::Value = serde_json::from_str(
+    let definitions: serde_json::Value = serde_json::from_str(
         script
             .split_once("return ")
             .unwrap()
@@ -154,6 +154,7 @@ fn world_package_preserves_idle_defaults_walk_timing_and_offsets() {
             .0,
     )
     .unwrap();
+    let table = &definitions[0][4];
     assert_eq!(table.as_array().unwrap().len(), 6);
     assert!(table.as_array().unwrap().contains(&serde_json::json!([
         "spr_npc_adeline_spring_walk_east",

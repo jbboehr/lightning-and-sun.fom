@@ -196,11 +196,11 @@ fn toggle_package_preserves_each_expressions_frames_and_properties() {
     }
     let script = fs::read_to_string(output.join("gml/palette_assets.gml")).unwrap();
     let table = script
-        .strip_prefix("// Generated from the portraits included in this local package.\nfunction lns_palette_assets() { return ")
+        .strip_prefix("// Character rows: id, label, hotkey, preset names, animation groups.\nfunction lns_palette_definitions() { return ")
         .and_then(|value| value.split_once("; }\n"))
         .map(|(table, _)| table)
         .expect("unexpected palette asset script wrapper");
-    let actual: Value = serde_json::from_str(table).unwrap();
+    let actual: Value = serde_json::from_str::<Value>(table).unwrap()[0][4].clone();
     let expected: Vec<_> = EXPRESSIONS
         .iter()
         .map(|expression| {

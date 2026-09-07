@@ -82,7 +82,7 @@ fn spring_actions_preserve_seated_and_blink_animation_metadata() {
     }
     expected.sort();
     let script = fs::read_to_string(output.join("gml/palette_assets.gml")).unwrap();
-    let table: Vec<Vec<String>> = serde_json::from_str(
+    let table: serde_json::Value = serde_json::from_str(
         script
             .split_once("return ")
             .unwrap()
@@ -92,7 +92,7 @@ fn spring_actions_preserve_seated_and_blink_animation_metadata() {
             .0,
     )
     .unwrap();
-    assert_eq!(table, expected);
+    assert_eq!(table[0][4], serde_json::json!(expected));
 
     // West is mirrored by the game, and north has no blink strip. Other spring
     // actions still need an art pass before the packager accepts them.
@@ -122,10 +122,7 @@ fn spring_actions_preserve_seated_and_blink_animation_metadata() {
             .output()
             .unwrap();
         assert!(!result.status.success());
-        assert!(
-            String::from_utf8_lossy(&result.stderr)
-                .contains("Unsupported Adeline spring world animation")
-        );
+        assert!(String::from_utf8_lossy(&result.stderr).contains("Unsupported animation"));
         assert!(!rejected.exists());
     }
 }

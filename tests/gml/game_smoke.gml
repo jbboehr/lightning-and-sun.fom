@@ -20,10 +20,10 @@ function lns_palette_smoke_phase() {
     var menu = ANCHOR.get_menu(Menu.Textbox);
     if (menu == undefined) return;
     menu.portrait.set_index(1.25);
-    var state = __lns_palette_runtime();
+    var state = __lns_palette_runtime().characters[0];
     var selected = state.selected;
     for (var i = 0; i < array_length(state.names); i++) {
-        lns_palette_toggle();
+        lns_palette_toggle(state);
         assert(menu.portrait.index == 1.25, "Palette swap lost fractional phase");
     }
     assert(state.selected == selected, "Palette cycle did not restore selection");
@@ -38,12 +38,12 @@ function lns_palette_smoke_talk() {
 function lns_palette_smoke_observe() {
     if (global[$ "__lns_palette_smoke_frames"] == undefined) {
         global.__lns_palette_smoke_frames = {};
-        mmapi_hotkey_register(mmapi_hotkey_vk_from_name("F8"), lns_palette_smoke_talk);
+        mmapi_hotkey_register(mmapi_hotkey_vk_from_name("F10"), lns_palette_smoke_talk);
     }
     var menu = ANCHOR.get_menu(Menu.Textbox);
     if (menu == undefined) return;
     var frame = floor(menu.portrait.get_index());
-    var label = __lns_palette_runtime().names[__lns_palette_runtime().selected] + "_" + string(frame);
+    var label = __lns_palette_runtime().characters[0].names[__lns_palette_runtime().characters[0].selected] + "_" + string(frame);
     if (global.__lns_palette_smoke_frames[$ label] == undefined) {
         global.__lns_palette_smoke_frames[$ label] = true;
         mmapi_log_info("lns_palette", "Observed preset_frame: " + label);

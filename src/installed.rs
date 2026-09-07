@@ -89,94 +89,104 @@ pub fn verify_variants(
     original: &Path,
     variants: &[toggle::Variant],
 ) -> Result<()> {
-    toggle::validate_variants(variants)?;
+    verify_characters(archive, &[toggle::PackageInput { original, variants }])
+}
+
+pub fn verify_characters(archive: &Path, inputs: &[toggle::PackageInput<'_>]) -> Result<()> {
     let file = fs::File::open(archive)?;
     let archive = file.read_zip()?;
     bytes(&archive, "manifest.toml")?;
-    let (images, _) = inventory(original)?;
-    let mut pairs = Vec::new();
     let mut ids = BTreeSet::new();
     let mut atlases = BTreeMap::new();
-    for name in images.keys() {
-        let atlas = toggle::animation(name)?.atlas;
-        if !atlases.contains_key(atlas) {
-            atlases.insert(atlas, atlas_pages(&archive, atlas)?);
+    let mut runtime = Vec::new();
+    for input in inputs {
+        let original = input.original;
+        let variants = input.variants;
+        toggle::validate_variants(variants)?;
+        let (images, _) = inventory(original)?;
+        let mut pairs = Vec::new();
+        for name in images.keys() {
+            let atlas = toggle::animation(name)?.atlas;
+            if !atlases.contains_key(atlas) {
+                atlases.insert(atlas, atlas_pages(&archive, atlas)?);
+            }
         }
-    }
-    for (name, path) in images {
-        let portrait = toggle::animation(&name)?;
-        let pages = &atlases[portrait.atlas];
-        let metadata_path = name
-            .strip_suffix(".png")
-            .context("Expected a PNG portrait")?;
-        let before = fs::read(path)?;
-        ensure!(bytes(&archive, &name)? == before, "Vanilla PNG changed");
-        let meta: toml::Value = toml::from_str(&fs::read_to_string(
-            original.join(format!("{metadata_path}.meta.toml")),
-        )?)?;
-        ensure!(
-            document(&archive, &format!("{metadata_path}.meta.toml"))? == meta,
-            "Vanilla metadata changed"
-        );
-        let uid = |v: &toml::Value| -> Result<String> {
-            Ok(v.get("meta_properties")
-                .and_then(|v| v.get("id"))
-                .and_then(toml::Value::as_str)
-                .context("Animation has no ID")?
-                .to_owned())
-        };
-        let original_id = uid(&meta)?;
-        ensure!(
-            ids.insert(original_id.clone()),
-            "Portrait animation IDs overlap"
-        );
-        let frames = meta
-            .get("asset_properties")
-            .context("Missing frame properties")?;
-        ensure!(
-            frames.get("atlas").and_then(toml::Value::as_str) == Some(portrait.atlas),
-            "Portrait uses the wrong season's atlas"
-        );
-        let size = frames
-            .get("frame_size")
-            .and_then(toml::Value::as_array)
-            .context("Missing frame size")?;
-        ensure!(size.len() == 2, "Expected a two-dimensional frame size");
-        let width = u32::try_from(size[0].as_integer().context("Invalid frame width")?)?;
-        let height = u32::try_from(size[1].as_integer().context("Invalid frame height")?)?;
-        let count = u32::try_from(match frames.get("frame_len") {
-            Some(value) => value.as_integer().context("Invalid frame count")?,
-            None => 1,
-        })?;
-        check_frames(pages, &original_id, &rgba(&before)?, [width, height], count)?;
-        let mut group = vec![portrait.source.to_owned()];
-        for variant in variants {
-            let sprite = portrait.variant_name(&variant.id);
-            let installed = document(
-                &archive,
-                &format!("assets/animations/LightningAndSun/{sprite}.meta.toml"),
-            )?;
+        for (name, path) in images {
+            let portrait = toggle::animation(&name)?;
+            let pages = &atlases[portrait.atlas];
+            let metadata_path = name
+                .strip_suffix(".png")
+                .context("Expected a PNG portrait")?;
+            let before = fs::read(path)?;
+            ensure!(bytes(&archive, &name)? == before, "Vanilla PNG changed");
+            let meta: toml::Value = toml::from_str(&fs::read_to_string(
+                original.join(format!("{metadata_path}.meta.toml")),
+            )?)?;
             ensure!(
-                installed
-                    .get("meta_properties")
-                    .and_then(|v| v.get("asset_kind"))
+                document(&archive, &format!("{metadata_path}.meta.toml"))? == meta,
+                "Vanilla metadata changed"
+            );
+            let uid = |v: &toml::Value| -> Result<String> {
+                Ok(v.get("meta_properties")
+                    .and_then(|v| v.get("id"))
                     .and_then(toml::Value::as_str)
-                    == Some("Animation"),
-                "Variant asset kind must be Animation"
-            );
+                    .context("Animation has no ID")?
+                    .to_owned())
+            };
+            let original_id = uid(&meta)?;
             ensure!(
-                installed.get("asset_properties") == meta.get("asset_properties"),
-                "Variant properties differ"
+                ids.insert(original_id.clone()),
+                "Portrait animation IDs overlap"
             );
-            let id = uid(&installed)?;
-            ensure!(ids.insert(id.clone()), "Portrait animation IDs overlap");
-            let expected = rgba(&fs::read(variant.directory.join(&name))?)?;
-            check_frames(pages, &id, &expected, [width, height], count)?;
-            group.push(sprite);
+            let frames = meta
+                .get("asset_properties")
+                .context("Missing frame properties")?;
+            ensure!(
+                frames.get("atlas").and_then(toml::Value::as_str) == Some(portrait.atlas),
+                "Portrait uses the wrong season's atlas"
+            );
+            let size = frames
+                .get("frame_size")
+                .and_then(toml::Value::as_array)
+                .context("Missing frame size")?;
+            ensure!(size.len() == 2, "Expected a two-dimensional frame size");
+            let width = u32::try_from(size[0].as_integer().context("Invalid frame width")?)?;
+            let height = u32::try_from(size[1].as_integer().context("Invalid frame height")?)?;
+            let count = u32::try_from(match frames.get("frame_len") {
+                Some(value) => value.as_integer().context("Invalid frame count")?,
+                None => 1,
+            })?;
+            check_frames(pages, &original_id, &rgba(&before)?, [width, height], count)?;
+            let mut group = vec![portrait.source.to_owned()];
+            for variant in variants {
+                let sprite = portrait.variant_name(&variant.id);
+                let installed = document(
+                    &archive,
+                    &format!("assets/animations/LightningAndSun/{sprite}.meta.toml"),
+                )?;
+                ensure!(
+                    installed
+                        .get("meta_properties")
+                        .and_then(|v| v.get("asset_kind"))
+                        .and_then(toml::Value::as_str)
+                        == Some("Animation"),
+                    "Variant asset kind must be Animation"
+                );
+                ensure!(
+                    installed.get("asset_properties") == meta.get("asset_properties"),
+                    "Variant properties differ"
+                );
+                let id = uid(&installed)?;
+                ensure!(ids.insert(id.clone()), "Portrait animation IDs overlap");
+                let expected = rgba(&fs::read(variant.directory.join(&name))?)?;
+                check_frames(pages, &id, &expected, [width, height], count)?;
+                group.push(sprite);
+            }
+            pairs.push(group);
         }
-        pairs.push(group);
+        runtime.push(toggle::RuntimeCharacter::new(pairs, variants)?);
     }
-    let asset_script = toggle::runtime_script(&pairs, variants)?;
+    let asset_script = toggle::runtime_script(&runtime)?;
     for (name, expected) in [
         (
             "palette_toggle.gml",

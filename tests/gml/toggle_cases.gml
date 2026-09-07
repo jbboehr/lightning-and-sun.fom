@@ -5,7 +5,7 @@ global.initialize();
 global.initialize();
 assert(global.hotkey_count == 1);
 assert(__lns_palette_runtime().ready);
-assert(__lns_palette_runtime().selected == 0);
+assert(__lns_palette_runtime().characters[0].selected == 0);
 
 // Opening another kind of menu must not require a portrait or speaker method.
 global.menu_opened({kind: Menu.Other, menu: {}});
@@ -66,7 +66,7 @@ lns_palette_initialize();
 assert(global.hotkey_count == 0);
 assert(global.warning_count == 1);
 assert(!__lns_palette_runtime().ready);
-assert(__lns_palette_runtime().selected == 0);
+assert(__lns_palette_runtime().characters[0].selected == 0);
 
 // Losing either side of a later pair also disables the entire toggle.
 global.__lns_palette = undefined;
@@ -78,7 +78,7 @@ lns_palette_initialize();
 assert(global.hotkey_count == 0);
 assert(global.warning_count == 1);
 assert(!__lns_palette_runtime().ready);
-assert(array_length(__lns_palette_runtime().pairs) == 1);
+assert(array_length(__lns_palette_runtime().characters[0].pairs) == 1);
 
 // Changing outfit keeps the selected palette and the new portrait's phase.
 global.__lns_palette = undefined;
@@ -167,12 +167,12 @@ lns_palette_menu_opened({kind: Menu.Textbox, menu: global.menu});
 var expected_max_sprites = [20, 61, 62, 63, 64, 65, 66, 67];
 for (var preset = 1; preset <= 8; preset++) {
     global.hotkey();
-    assert(__lns_palette_runtime().selected == preset);
+    assert(__lns_palette_runtime().characters[0].selected == preset);
     assert(global.menu.portrait.sprite == expected_max_sprites[preset - 1]);
     assert(global.menu.portrait.index == 1.25);
 }
 global.hotkey();
-assert(__lns_palette_runtime().selected == 0);
+assert(__lns_palette_runtime().characters[0].selected == 0);
 assert(global.menu.portrait.sprite == 10);
 assert(global.menu.portrait.index == 1.25);
 assert(global.palette_log == "Adeline palette: Vanilla");
@@ -197,4 +197,4 @@ lns_palette_initialize();
 assert(global.hotkey_count == 0);
 assert(global.warning_count == 1);
 assert(!__lns_palette_runtime().ready);
-assert(array_length(__lns_palette_runtime().pairs) == 1);
+assert(array_length(__lns_palette_runtime().characters[0].pairs) == 1);

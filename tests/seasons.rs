@@ -92,7 +92,7 @@ fn complete_package_keeps_all_126_portraits_in_their_source_atlas() {
         .split_once("; }")
         .unwrap()
         .0;
-    let groups: Value = serde_json::from_str(table).unwrap();
+    let groups: Value = serde_json::from_str::<Value>(table).unwrap()[0][4].clone();
     assert_eq!(groups.as_array().unwrap().len(), 126);
     assert!(groups.as_array().unwrap().contains(&json!([
         "spr_portrait_adeline_beach_bath_neutral",
@@ -185,7 +185,7 @@ fn packaging_rejects_expressions_absent_from_the_selected_outfit() {
             .output()
             .unwrap();
         assert!(!result.status.success());
-        assert!(String::from_utf8_lossy(&result.stderr).contains("Unsupported Adeline"));
+        assert!(String::from_utf8_lossy(&result.stderr).contains("Unsupported animation"));
         assert!(!output.exists());
     }
 }

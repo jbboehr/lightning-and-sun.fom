@@ -1,5 +1,6 @@
 mod assets;
 mod catalog;
+mod characters;
 mod commands;
 mod contact_sheet;
 mod installed;
@@ -25,6 +26,15 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
+    /// Build a local package containing independently selectable characters.
+    BuildCharacters {
+        #[arg(long)]
+        archive: PathBuf,
+        #[arg(long)]
+        characters: PathBuf,
+        #[arg(long)]
+        output: PathBuf,
+    },
     /// Generate a local mask review gallery with exact-frame reuse and component suggestions.
     ReviewBatch {
         #[arg(long)]
@@ -50,7 +60,7 @@ enum Command {
         #[arg(long)]
         output: PathBuf,
     },
-    /// Generate and install the Adeline toggle into an explicit, closed game copy.
+    /// Generate and install palette toggles into an explicit, closed game copy.
     Install {
         #[arg(long)]
         game_dir: PathBuf,
@@ -63,6 +73,9 @@ enum Command {
         /// Named presets sharing a reviewed region profile.
         #[arg(long, conflicts_with = "palette")]
         presets: Option<PathBuf>,
+        /// Character selection and per-character preset sets.
+        #[arg(long, conflicts_with_all = ["palette", "presets"])]
+        characters: Option<PathBuf>,
         /// Current MOMI config/mods/manifest.json; required for a MOMI-modified archive.
         #[arg(long)]
         installed_mods: Option<PathBuf>,
@@ -126,7 +139,7 @@ enum Command {
         #[arg(long)]
         output: PathBuf,
     },
-    /// Build an F6 toggle for locally generated Adeline portraits and reviewed spring world sprites.
+    /// Build a toggle for one character's locally generated, reviewed animations.
     PackageToggle {
         #[arg(long)]
         original: PathBuf,
@@ -139,6 +152,11 @@ enum Command {
 
 fn run() -> Result<()> {
     let report = match Cli::parse().command {
+        Command::BuildCharacters {
+            archive,
+            characters,
+            output,
+        } => characters::build(&archive, &characters, &output)?,
         Command::ReviewBatch {
             archive,
             config,
@@ -155,12 +173,14 @@ fn run() -> Result<()> {
             momi,
             palette,
             presets,
+            characters,
             installed_mods,
         } => installer::install(
             &game_dir,
             momi.as_deref(),
             palette.as_deref(),
             presets.as_deref(),
+            characters.as_deref(),
             installed_mods.as_deref(),
         )?,
         Command::Uninstall { game_dir } => installer::uninstall(&game_dir)?,

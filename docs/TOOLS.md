@@ -362,3 +362,11 @@ starting it in a copied game folder does not isolate it. The documented lab make
 the copied archive the only visible installation.
 
 For tests and local proof results, see [the verification record](development/verification.md).
+
+## Multiple characters
+
+`build-characters --archive PATH --characters palettes/sets/characters-trial.json
+--output generated/characters-trial` builds one local package with independent
+Adeline and Hayden choices. The installer accepts the same `--characters` file.
+See [character configuration and testing](development/characters.md) for the
+per-character workflow and coverage.

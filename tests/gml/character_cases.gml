@@ -1,0 +1,42 @@
+global.characters = true;
+global.third_preset = true;
+global.initialize();
+global.initialize();
+assert(global.hotkey_count == 2, "Both character controls must be registered once");
+global.menu = new TestTextbox();
+global.menu_opened({kind:Menu.Textbox, menu:global.menu});
+assert(global.menu.portrait.sprite == 10);
+global.hotkey_hayden();
+assert(global.menu.portrait.sprite == 10, "Hayden selection changed Adeline");
+global.hotkey();
+assert(global.menu.portrait.sprite == 20);
+global.menu.set_speaker({sprite:400,index:0.75});
+assert(global.menu.portrait.sprite == 401);
+assert(global.menu.portrait.index == 0.75);
+global.hotkey(); // Adeline warm, Hayden remains blue.
+assert(global.menu.portrait.sprite == 401);
+global.hotkey_hayden();
+assert(global.menu.portrait.sprite == 400);
+assert(global.menu.portrait.index == 0.75);
+global.menu.set_speaker({sprite:10,index:1.5});
+assert(global.menu.portrait.sprite == 60, "Adeline selection lost on speaker change");
+global.hotkey();
+assert(global.menu.portrait.sprite == 10);
+assert(global.menu.portrait.index == 1.5);
+// Closed menu, room callbacks and reopening retain both choices.
+global.menu = undefined;
+global.hotkey_hayden();
+global.initialize();
+assert(global.hotkey_count == 2);
+global.menu = new TestTextbox();
+global.menu.portrait.sprite = 400;
+global.menu_opened({kind:Menu.Textbox, menu:global.menu});
+assert(global.menu.portrait.sprite == 401);
+assert(array_length(global.notices) == 0);
+// Missing Hayden must not leave a partially working package.
+global.__lns_palette = undefined;
+global.missing_asset_name = "spr_lns_hayden_spring_neutral_blue";
+global.hotkey_count = 0;
+global.initialize();
+assert(global.hotkey_count == 0);
+assert(!__lns_palette_runtime().ready);

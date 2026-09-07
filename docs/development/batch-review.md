@@ -155,11 +155,12 @@ installation and live gameplay were not rerun for this authoring-only change.
 
 ## Scope after this slice
 
-This is authoring tooling. Installing other characters still requires making
-the package allowlist and GML NPC selection data-driven. The existing mod,
-installed preview, and approved Adeline profiles are unchanged. New masks need
-source inspection and recoloring checks; a successful analysis alone does not
-establish coverage. The subsequent Hayden authoring pass records its own checks.
+This slice added authoring tooling. The later
+[independent character palettes](characters.md) slice made the package allowlist
+and GML NPC selection data-driven and added Hayden installation. New masks still
+need source inspection and recoloring checks; a successful analysis alone does
+not establish coverage. The subsequent Hayden authoring pass records its own
+checks.
 
 ## Initial corpus measurements
 

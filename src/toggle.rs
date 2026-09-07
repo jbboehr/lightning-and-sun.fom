@@ -54,11 +54,10 @@ pub fn validate_variants(variants: &[Variant]) -> Result<()> {
 
 pub struct Animation<'a> {
     pub source: &'a str,
-    pub season: &'static str,
     pub atlas: &'static str,
-    pub category: &'static str,
+    pub character: &'static crate::characters::Character,
+    path: &'static str,
 }
-
 impl Animation<'_> {
     pub fn variant_name(&self, id: &str) -> String {
         format!(
@@ -69,78 +68,74 @@ impl Animation<'_> {
                 .unwrap()
         )
     }
-
     pub fn asset_path(&self) -> String {
-        format!(
-            "assets/animations/NPCs/Adeline/{}/{}/{}.png",
-            self.category, self.season, self.source
-        )
+        self.path.to_owned()
     }
 }
-
-const EXPRESSIONS: &str = "angry_blush blush cartoon_embarrassed concerned embarrassed embarrassed_tired evasive_tired gloomy_special happy happy_blush hope_special mad neutral neutral_tired sad shocked sick_eyes_closed sick_eyes_open sick_smile sick_think sigh sly think ugh wink";
-const BEACH_EXPRESSIONS: &str = "angry_blush bath_neutral blush cartoon_embarrassed concerned embarrassed gloomy_special happy happy_blush hope_special mad neutral sad shocked sigh sly think ugh wink";
-const WEDDING_EXPRESSIONS: &str = "embarrassed happy_blush hope_special neutral sad sly think";
-
 pub fn animation(path: &str) -> Result<Animation<'_>> {
     let source = Path::new(path)
         .file_stem()
         .and_then(|s| s.to_str())
         .context("Invalid animation filename")?;
-    if let Some(cycle) = source.strip_prefix("spr_npc_adeline_spring_") {
-        ensure!(
-            "idle_north idle_south idle_east walk_north walk_south walk_east sit_north sit_south sit_east drink_north drink_south drink_east eat_north eat_south eat_east blink_south blink_east"
-                .split_whitespace()
-                .any(|name| name == cycle),
-            "Unsupported Adeline spring world animation: {cycle}"
-        );
-        return Ok(Animation {
-            source,
-            season: "Spring",
-            atlas: "Default",
-            category: "Sprites",
-        });
+    for character in crate::characters::registry() {
+        for (asset, atlas) in &character.animations {
+            if Path::new(asset).file_stem().and_then(|s| s.to_str()) == Some(source) {
+                return Ok(Animation {
+                    source,
+                    atlas,
+                    character,
+                    path: asset,
+                });
+            }
+        }
     }
-    let (season, atlas, expression) =
-        if let Some(expression) = source.strip_prefix("spr_portrait_adeline_spring_") {
-            ("Spring", "PortraitsSpring", expression)
-        } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_summer_") {
-            ("Summer", "PortraitsSummer", expression)
-        } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_autumn_") {
-            ("Autumn", "PortraitsAutumn", expression)
-        } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_winter_") {
-            ("Winter", "PortraitsWinter", expression)
-        } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_beach_") {
-            ("Beach", "PortraitsSummer", expression)
-        } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_wedding_") {
-            ("Wedding", "PortraitsMisc", expression)
-        } else {
-            anyhow::bail!("Only Adeline portraits and reviewed spring world sprites are supported");
-        };
-    let expressions = match season {
-        "Beach" => BEACH_EXPRESSIONS,
-        "Wedding" => WEDDING_EXPRESSIONS,
-        _ => EXPRESSIONS,
-    };
-    ensure!(
-        expressions
-            .split_whitespace()
-            .any(|name| name == expression),
-        "Unsupported Adeline {season} expression: {expression}"
-    );
-    Ok(Animation {
-        source,
-        season,
-        atlas,
-        category: "Portraits",
-    })
+    anyhow::bail!("Unsupported animation: {source}")
 }
 
-pub fn runtime_script(groups: &[Vec<String>], variants: &[Variant]) -> Result<Vec<u8>> {
-    let labels: Vec<_> = std::iter::once("Vanilla")
-        .chain(variants.iter().map(|v| v.label.as_str()))
+pub struct PackageInput<'a> {
+    pub original: &'a Path,
+    pub variants: &'a [Variant],
+}
+pub struct RuntimeCharacter {
+    pub character: &'static crate::characters::Character,
+    pub groups: Vec<Vec<String>>,
+    pub labels: Vec<String>,
+}
+impl RuntimeCharacter {
+    pub fn new(groups: Vec<Vec<String>>, variants: &[Variant]) -> Result<Self> {
+        let first = groups.first().context("Select at least one animation")?;
+        let character = animation(&first[0])?.character;
+        for group in &groups {
+            ensure!(
+                animation(&group[0])?.character.id == character.id,
+                "Use a separate preset set for each character"
+            );
+        }
+        let labels = std::iter::once("Vanilla".to_owned())
+            .chain(variants.iter().map(|v| v.label.clone()))
+            .collect();
+        Ok(Self {
+            character,
+            groups,
+            labels,
+        })
+    }
+}
+pub fn runtime_script(characters: &[RuntimeCharacter]) -> Result<Vec<u8>> {
+    // Arrays are valid in both JSON and the game's GML dialect.
+    let table: Vec<_> = characters
+        .iter()
+        .map(|c| {
+            (
+                &c.character.id,
+                &c.character.label,
+                &c.character.hotkey,
+                &c.labels,
+                &c.groups,
+            )
+        })
         .collect();
-    Ok(format!("// Generated from the portraits included in this local package.\nfunction lns_palette_assets() {{ return {}; }}\nfunction lns_palette_names() {{ return {}; }}\n", serde_json::to_string(groups)?, serde_json::to_string(&labels)?).into_bytes())
+    Ok(format!("// Character rows: id, label, hotkey, preset names, animation groups.\nfunction lns_palette_definitions() {{ return {}; }}\n", serde_json::to_string(&table)?).into_bytes())
 }
 
 #[derive(Deserialize)]
@@ -164,72 +159,100 @@ pub fn package(original: &Path, modified: &Path, output: &Path) -> Result<Value>
 }
 
 pub fn package_variants(original: &Path, variants: &[Variant], output: &Path) -> Result<Value> {
-    validate_variants(variants)?;
-    let inputs: Vec<_> = std::iter::once(original)
-        .chain(variants.iter().map(|v| v.directory.as_path()))
-        .collect();
-    let output = fresh_output(output, &inputs)?;
-    let reports = variants
+    package_characters(&[PackageInput { original, variants }], output)
+}
+
+pub fn package_characters(inputs: &[PackageInput<'_>], output: &Path) -> Result<Value> {
+    ensure!(!inputs.is_empty(), "Select at least one character");
+    let paths: Vec<_> = inputs
         .iter()
-        .map(|v| compare(original, &v.directory))
-        .collect::<Result<Vec<_>>>()?;
-    let mut report = reports[0].clone();
-    let rows = report["files"].as_array().unwrap();
-    ensure!(
-        (1..=143).contains(&rows.len()),
-        "Select between one and 143 supported Adeline animations"
-    );
-    let mut names = BTreeSet::new();
-    let mut pairs = Vec::new();
-    let mut variant_paths = Vec::new();
+        .flat_map(|p| {
+            std::iter::once(p.original).chain(p.variants.iter().map(|v| v.directory.as_path()))
+        })
+        .collect();
+    let output = fresh_output(output, &paths)?;
     let mut outputs = Outputs::new();
-    for row in rows {
-        let relative = Path::new(row["path"].as_str().unwrap());
-        let animation = animation(row["path"].as_str().unwrap())?;
-        ensure!(
-            names.insert(animation.source),
-            "Duplicate animation expression: {}",
-            animation.source
-        );
-        let text = fs::read_to_string(original.join(relative.with_extension("meta.toml")))?;
-        let meta: Metadata = toml::from_str(&text)?;
-        let Frames {
-            frame_size: [w, h],
-            frame_len,
-            atlas,
-        } = meta.asset_properties;
-        let width = w.checked_mul(frame_len).context("Strip width overflow")?;
-        ensure!(
-            w > 0 && h > 0 && frame_len > 0 && row["size"] == json!([width, h]),
-            "Expected an unchanged horizontal animation strip"
-        );
-        ensure!(
-            atlas == animation.atlas,
-            "The animation requires the {} atlas",
-            animation.atlas
-        );
-        let mut meta: toml::Value = toml::from_str(&text)?;
-        // MOMI assigns a fresh ID. Copying the source ID would replace vanilla.
-        meta["meta_properties"] = toml::Value::try_from(std::collections::BTreeMap::from([(
-            "asset_kind",
-            "Animation",
-        )]))?;
-        let mut group = vec![animation.source.to_owned()];
-        for variant in variants {
-            let name = animation.variant_name(&variant.id);
-            let destination = format!("animations/LightningAndSun/{name}");
-            outputs.insert(
-                format!("{destination}.png"),
-                fs::read(variant.directory.join(relative))?,
+    let mut runtime = Vec::new();
+    let mut character_reports = Vec::new();
+    let mut owners = BTreeSet::new();
+    for input in inputs {
+        let original = input.original;
+        let variants = input.variants;
+        validate_variants(variants)?;
+        let reports = variants
+            .iter()
+            .map(|v| compare(original, &v.directory))
+            .collect::<Result<Vec<_>>>()?;
+        let mut report = reports[0].clone();
+        let rows = report["files"].as_array().unwrap();
+        ensure!(!rows.is_empty(), "Select at least one supported animation");
+        let mut names = BTreeSet::new();
+        let mut pairs = Vec::new();
+        let mut variant_paths = Vec::new();
+        for row in rows {
+            let relative = Path::new(row["path"].as_str().unwrap());
+            let animation = animation(row["path"].as_str().unwrap())?;
+            ensure!(
+                names.insert(animation.source),
+                "Duplicate animation expression: {}",
+                animation.source
             );
-            outputs.insert(
-                format!("{destination}.meta.toml"),
-                toml::to_string_pretty(&meta)?.into_bytes(),
+            let text = fs::read_to_string(original.join(relative.with_extension("meta.toml")))?;
+            let meta: Metadata = toml::from_str(&text)?;
+            let Frames {
+                frame_size: [w, h],
+                frame_len,
+                atlas,
+            } = meta.asset_properties;
+            let width = w.checked_mul(frame_len).context("Strip width overflow")?;
+            ensure!(
+                w > 0 && h > 0 && frame_len > 0 && row["size"] == json!([width, h]),
+                "Expected an unchanged horizontal animation strip"
             );
-            variant_paths.push(format!("{destination}.png"));
-            group.push(name);
+            ensure!(
+                atlas == animation.atlas,
+                "The animation requires the {} atlas",
+                animation.atlas
+            );
+            let mut meta: toml::Value = toml::from_str(&text)?;
+            // MOMI assigns a fresh ID. Copying the source ID would replace vanilla.
+            meta["meta_properties"] = toml::Value::try_from(std::collections::BTreeMap::from([(
+                "asset_kind",
+                "Animation",
+            )]))?;
+            let mut group = vec![animation.source.to_owned()];
+            for variant in variants {
+                let name = animation.variant_name(&variant.id);
+                let destination = format!("animations/LightningAndSun/{name}");
+                outputs.insert(
+                    format!("{destination}.png"),
+                    fs::read(variant.directory.join(relative))?,
+                );
+                outputs.insert(
+                    format!("{destination}.meta.toml"),
+                    toml::to_string_pretty(&meta)?.into_bytes(),
+                );
+                variant_paths.push(format!("{destination}.png"));
+                group.push(name);
+            }
+            pairs.push(group);
         }
-        pairs.push(group);
+        let definition = RuntimeCharacter::new(pairs, variants)?;
+        ensure!(
+            owners.insert(&definition.character.id),
+            "Duplicate character package"
+        );
+        runtime.push(definition);
+        if variants.len() > 1 {
+            report = json!({
+                "changed_pixels": reports.iter().map(|r| r["changed_pixels"].as_u64().unwrap()).sum::<u64>(),
+                "presets": variants.iter().zip(&reports).map(|(v, r)| json!({"id":v.id,"label":v.label,"report":r})).collect::<Vec<_>>()
+            });
+        }
+        report["variants"] = json!(variant_paths);
+        report["preset_names"] = json!(variants.iter().map(|v| &v.label).collect::<Vec<_>>());
+        report["hotkey"] = json!(runtime.last().unwrap().character.hotkey);
+        character_reports.push(report);
     }
     outputs.insert(
         "manifest.toml".into(),
@@ -239,19 +262,11 @@ pub fn package_variants(original: &Path, variants: &[Variant], output: &Path) ->
         "gml/palette_toggle.gml".into(),
         include_bytes!("../mod/toggle/gml/palette_toggle.gml").to_vec(),
     );
-    outputs.insert(
-        "gml/palette_assets.gml".into(),
-        runtime_script(&pairs, variants)?,
-    );
+    outputs.insert("gml/palette_assets.gml".into(), runtime_script(&runtime)?);
     write_tree(&output, outputs)?;
-    if variants.len() > 1 {
-        report = json!({
-            "changed_pixels": reports.iter().map(|r| r["changed_pixels"].as_u64().unwrap()).sum::<u64>(),
-            "presets": variants.iter().zip(&reports).map(|(v, r)| json!({"id":v.id,"label":v.label,"report":r})).collect::<Vec<_>>()
-        });
+    if character_reports.len() == 1 {
+        Ok(character_reports.remove(0))
+    } else {
+        Ok(json!({"characters":character_reports}))
     }
-    report["variants"] = json!(variant_paths);
-    report["preset_names"] = json!(variants.iter().map(|v| &v.label).collect::<Vec<_>>());
-    report["hotkey"] = json!("F6");
-    Ok(report)
 }

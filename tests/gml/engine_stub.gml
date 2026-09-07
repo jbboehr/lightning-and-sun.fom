@@ -1,9 +1,11 @@
 // Only the engine boundary is simulated. The test runs the shipped mod's GML.
 enum Menu { Textbox, Other, InfoToasts }
+enum NpcId { Adeline, Hayden = 10 }
 globalvar ANCHOR;
 global.menu = undefined;
 global.missing_asset = false;
 global.missing_asset_name = undefined;
+global.missing_npc_id = false;
 global.hotkey_count = 0;
 global.warning_count = 0;
 global.hook_count = 0;
@@ -11,6 +13,7 @@ global.third_preset = false;
 global.max_presets = false;
 global.seasons = false;
 global.world = false;
+global.characters = false;
 global.notices = [];
 global.palette_log = undefined;
 ANCHOR = {
@@ -28,10 +31,11 @@ function mmapi_on(name, callback) {
     global.hook_count += 1;
 }
 function mmapi_register(callback) { global.initialize = callback; }
-function mmapi_hotkey_vk_from_name(name) { assert(name == "F6"); return 117; }
+function mmapi_hotkey_vk_from_name(name) { assert(name == "F6" || name == "F8"); return name == "F6" ? 117 : 119; }
 function mmapi_hotkey_register(key, callback) {
-    assert(key == 117);
-    global.hotkey = callback;
+    assert(key == 117 || key == 119);
+    if (key == 117) global.hotkey = callback;
+    else global.hotkey_hayden = callback;
     global.hotkey_count += 1;
 }
 function mmapi_log_info(name, message) { global.palette_log = message; }
@@ -77,8 +81,23 @@ function lns_palette_names() {
     ];
     return global.third_preset ? ["Vanilla", "Debug Blue", "Warm trial"] : ["Vanilla", "Debug Blue"];
 }
+function try_string_to_npc_id(name) {
+    if (global.missing_npc_id) return undefined;
+    if (name == "adeline") return NpcId.Adeline;
+    if (name == "hayden") return NpcId.Hayden;
+    return undefined;
+}
+function npc_id_to_gm_obj_id(npc_id) {
+    // The game's mapping rejects an undefined ID instead of returning an object.
+    assert(npc_id != undefined, "World lookup must guard an unknown NPC ID");
+    if (npc_id == NpcId.Adeline) return 1000;
+    if (npc_id == NpcId.Hayden) return 1001;
+    assert(false, "Unexpected NPC ID");
+}
 function try_string_to_asset(name) {
     if (global.missing_asset || name == global.missing_asset_name) return undefined;
+    if (name == "spr_portrait_hayden_spring_neutral") return 400;
+    if (name == "spr_lns_hayden_spring_neutral_blue") return 401;
     if (name == "spr_npc_adeline_spring_idle_south") return 300;
     if (name == "spr_lns_npc_adeline_spring_idle_south_blue") return 301;
     if (name == "spr_npc_adeline_spring_walk_east") return 310;
@@ -139,4 +158,9 @@ function TestTextbox() constructor {
         self.original_calls += 1;
         self.portrait.set_sprite(speaker.sprite).set_index(speaker.index);
     }
+}
+function lns_palette_definitions() {
+    var definitions = [["adeline", "Adeline", "F6", lns_palette_names(), lns_palette_assets()]];
+    if (global.characters) array_push(definitions, ["hayden", "Hayden", "F8", ["Vanilla","Debug Blue"], [["spr_portrait_hayden_spring_neutral","spr_lns_hayden_spring_neutral_blue"]]]);
+    return definitions;
 }

@@ -123,9 +123,9 @@ is live installation/rendering, which this offline art pass did not exercise.
 The source archive still has SHA-256
 `b4d4b47afa1459d0d4aa4b6cacffe7b2f30f11a3f6a35e471e58bb2dafc636f5`.
 
-This pass produces authored masks and a visual preview. Hayden has not been added
-to the package allowlist or in-game character selector, and MOMI installation and
-live gameplay have not been tested for him.
+This pass produced authored masks and a visual preview. The later
+[independent character palettes](characters.md) slice added Hayden installation
+and in-game selection, with MOMI and live-game verification recorded there.
 
 Known art follow-up: the user noticed a few pixels that still look wrong in the
 embarrassed expression. Their exact positions and source colors have not yet
