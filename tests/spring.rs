@@ -60,13 +60,13 @@ fn fixture(root: &Path, name: &str, frames: u32, color: [u8; 4]) {
 }
 
 #[test]
-fn export_supports_a_complete_50_portrait_selection() {
+fn export_supports_a_complete_100_portrait_selection() {
     let temp = tempfile::tempdir().unwrap();
     let source = temp.path().join("source");
     fixture(&source, "sample", 2, [10, 20, 30, 255]);
     let archive = temp.path().join("assets.zip");
     let mut zip = ZipWriter::new(fs::File::create(&archive).unwrap());
-    for i in 0..50 {
+    for i in 0..100 {
         for ext in ["png", "meta.toml"] {
             zip.start_file(
                 format!("assets/spr_test_{i}.{ext}"),
@@ -86,12 +86,12 @@ fn export_supports_a_complete_50_portrait_selection() {
         .arg(&archive)
         .arg("--output")
         .arg(&output);
-    for i in 0..50 {
+    for i in 0..100 {
         cmd.arg("--asset").arg(format!("assets/spr_test_{i}.png"));
     }
     let report = success(cmd.output().unwrap());
-    assert_eq!(report["files"].as_array().unwrap().len(), 50);
-    for i in 0..50 {
+    assert_eq!(report["files"].as_array().unwrap().len(), 100);
+    for i in 0..100 {
         assert_eq!(
             fs::read(output.join(format!("assets/spr_test_{i}.png"))).unwrap(),
             fs::read(source.join("sample.png")).unwrap()
@@ -101,13 +101,13 @@ fn export_supports_a_complete_50_portrait_selection() {
 }
 
 #[test]
-fn export_rejects_empty_duplicate_and_51_asset_selections_before_writing() {
+fn export_rejects_empty_duplicate_and_101_asset_selections_before_writing() {
     let temp = tempfile::tempdir().unwrap();
     let source = temp.path().join("source");
     fixture(&source, "sample", 1, [10, 20, 30, 255]);
     let archive = temp.path().join("assets.zip");
     let mut zip = ZipWriter::new(fs::File::create(&archive).unwrap());
-    for i in 0..51 {
+    for i in 0..101 {
         for ext in ["png", "meta.toml"] {
             zip.start_file(
                 format!("assets/spr_test_{i}.{ext}"),
@@ -126,7 +126,7 @@ fn export_rejects_empty_duplicate_and_51_asset_selections_before_writing() {
         ("duplicate", vec!["assets/spr_test_0.png".to_owned(); 2]),
         (
             "over-limit",
-            (0..51)
+            (0..101)
                 .map(|i| format!("assets/spr_test_{i}.png"))
                 .collect(),
         ),

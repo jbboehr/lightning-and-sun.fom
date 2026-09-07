@@ -14,12 +14,17 @@ fn fixture(root: &Path, season: &str, expression: &str, atlas: &str, color: [u8;
 }
 
 #[test]
-fn spring_and_summer_package_keeps_all_50_portraits_in_their_season_atlas() {
+fn all_four_seasons_package_keeps_all_100_portraits_in_their_season_atlas() {
     let temp = tempfile::tempdir().unwrap();
     let original = temp.path().join("original");
     let modified = temp.path().join("modified");
     let output = temp.path().join("package");
-    for (season, atlas) in [("spring", "PortraitsSpring"), ("summer", "PortraitsSummer")] {
+    for (season, atlas) in [
+        ("spring", "PortraitsSpring"),
+        ("summer", "PortraitsSummer"),
+        ("autumn", "PortraitsAutumn"),
+        ("winter", "PortraitsWinter"),
+    ] {
         for expression in EXPRESSIONS.split_whitespace() {
             fixture(&original, season, expression, atlas, [10, 20, 30, 255]);
             fixture(&modified, season, expression, atlas, [40, 50, 60, 255]);
@@ -41,8 +46,13 @@ fn spring_and_summer_package_keeps_all_50_portraits_in_their_season_atlas() {
         String::from_utf8_lossy(&result.stderr)
     );
     let report: Value = serde_json::from_slice(&result.stdout).unwrap();
-    assert_eq!(report["variants"].as_array().unwrap().len(), 50);
-    for (season, atlas) in [("spring", "PortraitsSpring"), ("summer", "PortraitsSummer")] {
+    assert_eq!(report["variants"].as_array().unwrap().len(), 100);
+    for (season, atlas) in [
+        ("spring", "PortraitsSpring"),
+        ("summer", "PortraitsSummer"),
+        ("autumn", "PortraitsAutumn"),
+        ("winter", "PortraitsWinter"),
+    ] {
         for expression in EXPRESSIONS.split_whitespace() {
             let path = output.join(format!(
                 "animations/LightningAndSun/spr_lns_adeline_{season}_{expression}_blue"
@@ -67,7 +77,7 @@ fn spring_and_summer_package_keeps_all_50_portraits_in_their_season_atlas() {
         .unwrap()
         .0;
     let groups: Value = serde_json::from_str(table).unwrap();
-    assert_eq!(groups.as_array().unwrap().len(), 50);
+    assert_eq!(groups.as_array().unwrap().len(), 100);
     assert!(groups.as_array().unwrap().contains(&json!([
         "spr_portrait_adeline_summer_neutral",
         "spr_lns_adeline_summer_neutral_blue"
@@ -80,7 +90,12 @@ fn spring_and_summer_package_keeps_all_50_portraits_in_their_season_atlas() {
 
 #[test]
 fn packaging_rejects_a_season_with_the_other_seasons_atlas() {
-    for (season, atlas) in [("summer", "PortraitsSpring"), ("spring", "PortraitsSummer")] {
+    for (season, atlas) in [
+        ("summer", "PortraitsSpring"),
+        ("spring", "PortraitsSummer"),
+        ("autumn", "PortraitsWinter"),
+        ("winter", "PortraitsAutumn"),
+    ] {
         let temp = tempfile::tempdir().unwrap();
         let original = temp.path().join("original");
         let modified = temp.path().join("modified");

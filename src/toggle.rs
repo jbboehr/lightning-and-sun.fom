@@ -81,14 +81,19 @@ pub fn portrait(path: &str) -> Result<Portrait<'_>> {
         .file_stem()
         .and_then(|s| s.to_str())
         .context("Invalid portrait filename")?;
-    let (season, atlas, expression) =
-        if let Some(expression) = source.strip_prefix("spr_portrait_adeline_spring_") {
-            ("Spring", "PortraitsSpring", expression)
-        } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_summer_") {
-            ("Summer", "PortraitsSummer", expression)
-        } else {
-            anyhow::bail!("Only Adeline spring and summer portraits are supported");
-        };
+    let (season, atlas, expression) = if let Some(expression) =
+        source.strip_prefix("spr_portrait_adeline_spring_")
+    {
+        ("Spring", "PortraitsSpring", expression)
+    } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_summer_") {
+        ("Summer", "PortraitsSummer", expression)
+    } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_autumn_") {
+        ("Autumn", "PortraitsAutumn", expression)
+    } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_winter_") {
+        ("Winter", "PortraitsWinter", expression)
+    } else {
+        anyhow::bail!("Only Adeline spring, summer, autumn, and winter portraits are supported");
+    };
     ensure!(
         EXPRESSIONS
             .split_whitespace()
@@ -137,8 +142,8 @@ pub fn package_variants(original: &Path, variants: &[Variant], output: &Path) ->
     let mut report = reports[0].clone();
     let rows = report["files"].as_array().unwrap();
     ensure!(
-        (1..=50).contains(&rows.len()),
-        "Select between one and 50 Adeline spring and summer portraits"
+        (1..=100).contains(&rows.len()),
+        "Select between one and 100 Adeline seasonal portraits"
     );
     let mut names = BTreeSet::new();
     let mut pairs = Vec::new();

@@ -1,5 +1,9 @@
 # Adeline spring and summer coverage
 
+The subsequent [four-season slice](all-season-portraits.md) adds autumn and winter
+and records the calendar-transition checks. This page preserves the spring/summer
+slice's results.
+
 This slice extends the [NPC palette trial](npc-palettes.md) to Adeline's 25 summer
 portrait strips while retaining the 25 approved spring strips. Each strip has two
 frames. The combined trial offers Vanilla, Debug Blue, Hayden, Ryis, and Seridia;

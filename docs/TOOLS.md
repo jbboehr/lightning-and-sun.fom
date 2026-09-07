@@ -42,14 +42,17 @@ Nix pins the MOMI binary, bubblewrap, dynamic loader, and runtime libraries.
 Use `--palette path/to/palette.json` on `install` to use another exact-color recipe.
 Use `--presets palettes/sets/adeline-trial.json` for the five-choice spring trial
 described below. `--palette` and `--presets` are mutually exclusive.
-When that recipe has regions, their exact asset paths select which spring or
-summer portraits to install. A recipe without regions keeps the neutral-only selection. Use
+When that recipe has regions, their exact asset paths select which spring, summer,
+autumn, or winter portraits to install. A recipe without regions keeps the neutral-only selection. Use
 `--palette palettes/stylized/adeline-spring.json` for all 25 supported spring
 expressions. Missing or changed source files stop installation. Lip refinement
 remains deferred; other outfits and overworld sprites are outside this recipe.
 Use `--presets palettes/sets/adeline-seasonal-trial.json` for 50 expressions across
 spring and summer with Debug Blue, Hayden, Ryis, and Seridia colors. The blue-only
 equivalent is `--palette palettes/stylized/adeline-spring-summer.json`.
+Use `--presets palettes/sets/adeline-all-seasons-trial.json` for all 100 seasonal
+strips with the same five choices, or `--palette palettes/stylized/adeline-all-seasons.json`
+for Vanilla and Debug Blue only. Beach, wedding, and overworld sprites are not included.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;
@@ -99,7 +102,7 @@ See [installer internals and verification](development/cli-installer.md).
 The example below selects one portrait animation (two frames). The exporter reads exact
 archive members and their `.meta.toml` files, preserving the `assets/…` tree. It
 does not unpack the entire game or modify the ZIP. Its report pins the source ZIP
-and exported bytes by SHA-256. Repeat `--asset` to select up to 50 distinct PNGs.
+and exported bytes by SHA-256. Repeat `--asset` to select up to 100 distinct PNGs.
 The older replacement `package` command still permits at most two changed assets.
 
 ```sh
@@ -162,11 +165,11 @@ target/release/mistria-palette package-toggle \
 Install that generated folder as `mods/lns_palette` through MOMI v0.15.10. Remove
 the earlier replacement study first so the base portrait is vanilla. This package
 adds separate animations and an F6 hotkey: press F6 again to restore vanilla.
-It accepts one through 50 supported Adeline spring and summer expressions and
+It accepts one through 100 supported Adeline expressions across the four seasons and
 generates the matching runtime sprite table. Keep both generated GML files in the package.
 The choice lasts for the running game session and is not saved. Rebuild and
 reinstall after changing its palette. See [the developer procedure](development/portrait-toggle.md)
-and [seasonal coverage](development/seasonal-portraits.md) for verification details.
+and [four-season coverage](development/all-season-portraits.md) for verification details.
 
 Palettes require an `rgba_map` object. Keys and values are `#RRGGBB` or
 `#RRGGBBAA`; omitted alpha means `FF`. Replacements happen simultaneously against
@@ -239,6 +242,11 @@ An omitted profile is supported; an explicit `null` profile is rejected.
 individually checked summer strips. Every variant keeps its outfit's atlas, so the
 palette choice follows supported outfit changes without loading both seasons at
 once. Use `palettes/sets/adeline-seasonal-trial.json` with this combined profile.
+
+`palettes/profiles/adeline-all-seasons.json` retains those 50 regions and adds 25
+autumn and 25 winter strips. Use `palettes/sets/adeline-all-seasons-trial.json` for
+the complete seasonal set. The corresponding atlas families are `PortraitsSpring`,
+`PortraitsSummer`, `PortraitsAutumn`, and `PortraitsWinter`.
 
 A preset set references one profile and supplies target colors in the same order
 as its `source_colors`:

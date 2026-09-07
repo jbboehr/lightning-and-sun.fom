@@ -38,7 +38,9 @@ function mmapi_log_warn(name, message) { global.warning_count += 1; }
 function lns_palette_assets() {
     if (global.seasons) return [
         ["spr_portrait_adeline_spring_neutral", "spr_lns_adeline_spring_neutral_blue", "spr_lns_adeline_spring_neutral_warm"],
-        ["spr_portrait_adeline_summer_neutral", "spr_lns_adeline_summer_neutral_blue", "spr_lns_adeline_summer_neutral_warm"]
+        ["spr_portrait_adeline_summer_neutral", "spr_lns_adeline_summer_neutral_blue", "spr_lns_adeline_summer_neutral_warm"],
+        ["spr_portrait_adeline_autumn_neutral", "spr_lns_adeline_autumn_neutral_blue", "spr_lns_adeline_autumn_neutral_warm"],
+        ["spr_portrait_adeline_winter_neutral", "spr_lns_adeline_winter_neutral_blue", "spr_lns_adeline_winter_neutral_warm"]
     ];
     if (global.max_presets) return [[
         "spr_portrait_adeline_spring_neutral",
@@ -77,6 +79,12 @@ function try_string_to_asset(name) {
     if (name == "spr_portrait_adeline_summer_neutral") return 80;
     if (name == "spr_lns_adeline_summer_neutral_blue") return 90;
     if (name == "spr_lns_adeline_summer_neutral_warm") return 100;
+    if (name == "spr_portrait_adeline_autumn_neutral") return 110;
+    if (name == "spr_lns_adeline_autumn_neutral_blue") return 120;
+    if (name == "spr_lns_adeline_autumn_neutral_warm") return 130;
+    if (name == "spr_portrait_adeline_winter_neutral") return 140;
+    if (name == "spr_lns_adeline_winter_neutral_blue") return 150;
+    if (name == "spr_lns_adeline_winter_neutral_warm") return 160;
     if (name == "spr_lns_adeline_spring_neutral_two") return 61;
     if (name == "spr_lns_adeline_spring_neutral_three") return 62;
     if (name == "spr_lns_adeline_spring_neutral_four") return 63;

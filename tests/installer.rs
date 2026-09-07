@@ -210,62 +210,68 @@ animations = [
 
 #[test]
 fn seasonal_install_checks_each_atlas_and_restores_the_original_archive() {
-    for case in [
-        "mixed",
-        "summer_only",
-        "wrong_pixels",
-        "wrong_atlas",
-        "variant_wrong_atlas",
-        "wrong_folder",
+    for (season, folder, atlas_name) in [
+        ("summer", "Summer", "PortraitsSummer"),
+        ("autumn", "Autumn", "PortraitsAutumn"),
+        ("winter", "Winter", "PortraitsWinter"),
     ] {
-        let mut lab = Lab::new();
-        let source = if case == "wrong_folder" {
-            SOURCE.replace("_spring_", "_summer_")
-        } else {
-            SOURCE
-                .replace("Spring", "Summer")
-                .replace("_spring_", "_summer_")
-        };
-        let variant = VARIANT.replace("_spring_", "_summer_");
-        let meta = META
-            .replace("PortraitsSpring", "PortraitsSummer")
-            .replace("0000000000000001", "0000000000000003");
-        let original = png(RgbaImage::from_pixel(4, 1, Rgba([227, 161, 123, 255])));
-        lab.before = with_zip_entry(&lab.before, &format!("{source}.png"), &original);
-        lab.before = with_zip_entry(&lab.before, &format!("{source}.meta.toml"), meta.as_bytes());
-        fs::write(lab.game.join("assets.zip"), &lab.before).unwrap();
-        let recipe_path = lab.result.with_extension("palette.json");
-        let mut recipe: serde_json::Value =
-            serde_json::from_slice(&fs::read(&recipe_path).unwrap()).unwrap();
-        let mut summer = recipe["regions"][0].clone();
-        summer["asset"] = serde_json::json!(format!("{source}.png"));
-        if case == "summer_only" {
-            recipe["regions"] = serde_json::json!([summer]);
-        } else {
-            recipe["regions"].as_array_mut().unwrap().push(summer);
-        }
-        fs::write(recipe_path, serde_json::to_vec(&recipe).unwrap()).unwrap();
-
-        let mut result = fs::read(&lab.result).unwrap();
-        result = with_zip_entry(&result, &format!("{source}.png"), &original);
-        result = with_zip_entry(&result, &format!("{source}.meta.toml"), meta.as_bytes());
-        result = with_zip_entry(
-            &result,
-            &format!("{variant}.meta.toml"),
-            meta.replace("0000000000000003", "0000000000000004")
-                .as_bytes(),
-        );
-        let mut atlas = RgbaImage::from_fn(4, 2, |_, y| {
-            Rgba(if y == 0 {
-                [227, 161, 123, 255]
+        for case in [
+            "mixed",
+            "season_only",
+            "wrong_pixels",
+            "wrong_atlas",
+            "variant_wrong_atlas",
+            "wrong_folder",
+        ] {
+            let mut lab = Lab::new();
+            let source = if case == "wrong_folder" {
+                SOURCE.replace("_spring_", &format!("_{season}_"))
             } else {
-                [157, 185, 212, 255]
-            })
-        });
-        if case == "wrong_pixels" {
-            atlas.put_pixel(3, 1, Rgba([0, 0, 0, 255]));
-        }
-        let placements = br#"[asset_properties]
+                SOURCE
+                    .replace("Spring", folder)
+                    .replace("_spring_", &format!("_{season}_"))
+            };
+            let variant = VARIANT.replace("_spring_", &format!("_{season}_"));
+            let meta = META
+                .replace("PortraitsSpring", atlas_name)
+                .replace("0000000000000001", "0000000000000003");
+            let original = png(RgbaImage::from_pixel(4, 1, Rgba([227, 161, 123, 255])));
+            lab.before = with_zip_entry(&lab.before, &format!("{source}.png"), &original);
+            lab.before =
+                with_zip_entry(&lab.before, &format!("{source}.meta.toml"), meta.as_bytes());
+            fs::write(lab.game.join("assets.zip"), &lab.before).unwrap();
+            let recipe_path = lab.result.with_extension("palette.json");
+            let mut recipe: serde_json::Value =
+                serde_json::from_slice(&fs::read(&recipe_path).unwrap()).unwrap();
+            let mut region = recipe["regions"][0].clone();
+            region["asset"] = serde_json::json!(format!("{source}.png"));
+            if case == "season_only" {
+                recipe["regions"] = serde_json::json!([region]);
+            } else {
+                recipe["regions"].as_array_mut().unwrap().push(region);
+            }
+            fs::write(recipe_path, serde_json::to_vec(&recipe).unwrap()).unwrap();
+
+            let mut result = fs::read(&lab.result).unwrap();
+            result = with_zip_entry(&result, &format!("{source}.png"), &original);
+            result = with_zip_entry(&result, &format!("{source}.meta.toml"), meta.as_bytes());
+            result = with_zip_entry(
+                &result,
+                &format!("{variant}.meta.toml"),
+                meta.replace("0000000000000003", "0000000000000004")
+                    .as_bytes(),
+            );
+            let mut atlas = RgbaImage::from_fn(4, 2, |_, y| {
+                Rgba(if y == 0 {
+                    [227, 161, 123, 255]
+                } else {
+                    [157, 185, 212, 255]
+                })
+            });
+            if case == "wrong_pixels" {
+                atlas.put_pixel(3, 1, Rgba([0, 0, 0, 255]));
+            }
+            let placements = br#"[asset_properties]
 animations = [
  {texture_ids = ["0000000000000003::0"], placement = [0,0,2,1,2,1,0,0]},
  {texture_ids = ["0000000000000003::1"], placement = [2,0,2,1,2,1,0,0]},
@@ -273,92 +279,98 @@ animations = [
  {texture_ids = ["0000000000000004::1"], placement = [2,1,2,1,2,1,0,0]},
 ]
 "#;
-        result = with_zip_entry(
-            &result,
-            "assets/atlases/PortraitsSummerAtlas_1.png",
-            &png(atlas.clone()),
-        );
-        result = with_zip_entry(
-            &result,
-            "assets/atlases/PortraitsSummerAtlas_1.meta.toml",
-            match case {
-                "wrong_atlas" => b"[asset_properties]\nanimations=[]\n",
-                "variant_wrong_atlas" => {
-                    br#"[asset_properties]
+            result = with_zip_entry(
+                &result,
+                &format!("assets/atlases/{atlas_name}Atlas_1.png"),
+                &png(atlas.clone()),
+            );
+            result = with_zip_entry(
+                &result,
+                &format!("assets/atlases/{atlas_name}Atlas_1.meta.toml"),
+                match case {
+                    "wrong_atlas" => b"[asset_properties]\nanimations=[]\n",
+                    "variant_wrong_atlas" => {
+                        br#"[asset_properties]
 animations = [
  {texture_ids = ["0000000000000003::0"], placement = [0,0,2,1,2,1,0,0]},
  {texture_ids = ["0000000000000003::1"], placement = [2,0,2,1,2,1,0,0]},
 ]
 "#
-                }
-                _ => placements,
-            },
-        );
-        if ["wrong_atlas", "variant_wrong_atlas"].contains(&case) {
-            result = with_zip_entry(
-                &result,
-                "assets/atlases/PortraitsSpringAtlas_1.png",
-                &png(atlas),
+                    }
+                    _ => placements,
+                },
             );
-            result = with_zip_entry(
-                &result,
-                "assets/atlases/PortraitsSpringAtlas_1.meta.toml",
-                if case == "variant_wrong_atlas" {
-                    br#"[asset_properties]
+            if ["wrong_atlas", "variant_wrong_atlas"].contains(&case) {
+                result = with_zip_entry(
+                    &result,
+                    "assets/atlases/PortraitsSpringAtlas_1.png",
+                    &png(atlas),
+                );
+                result = with_zip_entry(
+                    &result,
+                    "assets/atlases/PortraitsSpringAtlas_1.meta.toml",
+                    if case == "variant_wrong_atlas" {
+                        br#"[asset_properties]
 animations = [
  {texture_ids = ["0000000000000004::0"], placement = [0,1,2,1,2,1,0,0]},
  {texture_ids = ["0000000000000004::1"], placement = [2,1,2,1,2,1,0,0]},
 ]
 "#
-                } else {
-                    placements
-                },
-            );
-        }
-        let spring = [
-            "spr_portrait_adeline_spring_neutral",
-            "spr_lns_adeline_spring_neutral_blue",
-        ];
-        let summer = [
-            "spr_portrait_adeline_summer_neutral",
-            "spr_lns_adeline_summer_neutral_blue",
-        ];
-        let groups = if case == "summer_only" {
-            vec![summer]
-        } else {
-            vec![spring, summer]
-        };
-        let script = format!(
-            "// Generated from the portraits included in this local package.\nfunction lns_palette_assets() {{ return {}; }}\nfunction lns_palette_names() {{ return [\"Vanilla\",\"Debug Blue\"]; }}\n",
-            serde_json::to_string(&groups).unwrap()
-        );
-        result = replace_zip_entry(
-            &result,
-            &format!("{PALETTE_SCRIPTS}/palette_assets.gml"),
-            script.as_bytes(),
-        );
-        fs::write(&lab.result, result).unwrap();
-        let outcome = lab.run("install");
-        if ["mixed", "summer_only"].contains(&case) {
-            assert!(
-                outcome.status.success(),
-                "{case}: {}",
-                String::from_utf8_lossy(&outcome.stderr)
-            );
-            assert!(lab.run("uninstall").status.success());
-        } else {
-            assert!(!outcome.status.success(), "accepted {case}");
-            if case == "variant_wrong_atlas" {
-                assert!(
-                    String::from_utf8_lossy(&outcome.stderr)
-                        .contains("Missing or duplicate atlas frame: 0000000000000004::0"),
-                    "variant case failed before testing atlas-family isolation: {}",
-                    String::from_utf8_lossy(&outcome.stderr)
+                    } else {
+                        placements
+                    },
                 );
             }
-            assert!(!lab.game.join(".mistria-palette").exists());
+            let spring = [
+                "spr_portrait_adeline_spring_neutral".to_owned(),
+                "spr_lns_adeline_spring_neutral_blue".to_owned(),
+            ];
+            let seasonal = [
+                format!("spr_portrait_adeline_{season}_neutral"),
+                format!("spr_lns_adeline_{season}_neutral_blue"),
+            ];
+            let groups = if case == "season_only" {
+                vec![seasonal]
+            } else {
+                // Packaging sorts the source paths before emitting the table.
+                if season == "autumn" {
+                    vec![seasonal, spring]
+                } else {
+                    vec![spring, seasonal]
+                }
+            };
+            let script = format!(
+                "// Generated from the portraits included in this local package.\nfunction lns_palette_assets() {{ return {}; }}\nfunction lns_palette_names() {{ return [\"Vanilla\",\"Debug Blue\"]; }}\n",
+                serde_json::to_string(&groups).unwrap()
+            );
+            result = replace_zip_entry(
+                &result,
+                &format!("{PALETTE_SCRIPTS}/palette_assets.gml"),
+                script.as_bytes(),
+            );
+            fs::write(&lab.result, result).unwrap();
+            let outcome = lab.run("install");
+            if ["mixed", "season_only"].contains(&case) {
+                assert!(
+                    outcome.status.success(),
+                    "{season} {case}: {}",
+                    String::from_utf8_lossy(&outcome.stderr)
+                );
+                assert!(lab.run("uninstall").status.success());
+            } else {
+                assert!(!outcome.status.success(), "accepted {case}");
+                if case == "variant_wrong_atlas" {
+                    assert!(
+                        String::from_utf8_lossy(&outcome.stderr)
+                            .contains("Missing or duplicate atlas frame: 0000000000000004::0"),
+                        "variant case failed before testing atlas-family isolation: {}",
+                        String::from_utf8_lossy(&outcome.stderr)
+                    );
+                }
+                assert!(!lab.game.join(".mistria-palette").exists());
+            }
+            assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
         }
-        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
     }
 }
 

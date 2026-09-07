@@ -3,6 +3,9 @@
 2026-09-06. Rust port reliability verdict: **PASS_WITH_RESIDUAL_RISK** for the
 offline proof of concept. The later [portrait toggle verification](portrait-toggle.md)
 adds in-game evidence. Finished art remains outside the experiment.
+The [four-season portrait record](all-season-portraits.md) tracks the later
+Adeline coverage and calendar-rollover checks; the original port results below
+remain historical.
 
 ## Repeatable automated checks
 
