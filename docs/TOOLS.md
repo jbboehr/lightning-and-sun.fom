@@ -4,6 +4,9 @@ Run commands from the repository root. Use fresh output paths for each run.
 The tool refuses existing or overlapping outputs, so it cannot silently replace
 an earlier export or leave stale images from a previous preset.
 
+For authoring masks across characters and outfits, see the
+[batch review gallery workflow](development/batch-review.md).
+
 ## Build with Nix and Fenix
 
 ```sh

@@ -1,0 +1,7 @@
+{
+  "label": "Hayden — authored portrait masks",
+  "prefixes": ["assets/animations/NPCs/Hayden/Portraits/"],
+  "source_colors": ["#E8B271", "#CA9052", "#B27146", "#6E4922", "#FAD8A8", "#F9C4A1", "#CBAD93", "#CA894D", "#C58A4A", "#CE913B", "#9F7D6F"],
+  "preview_colors": ["#9DB9D4", "#7F9FBD", "#6687AD", "#445F83", "#9DB9D4", "#9DB9D4", "#7F9FBD", "#7F9FBD", "#7F9FBD", "#7F9FBD", "#6687AD"],
+  "reference_profile": "../profiles/hayden-portraits.json"
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palette mask review</title>
+<link rel="stylesheet" href="review.css">
+<header>
+  <h1 id="title">Palette mask review</h1>
+  <p id="summary"></p>
+  <div class="toolbar">
+    <button id="export-profile">Export reviewed profile</button>
+    <button id="save-progress">Save progress</button>
+    <label class="file">Load progress <input id="load-progress" type="file" accept=".json"></label>
+  </div>
+  <p id="message" role="status">Select skin regions, then approve the frame. Identical frames share your decisions; matching regions become suggestions for other frames.</p>
+</header>
+<main>
+  <aside>
+    <label>Show <select id="filter"><option value="pending">Needs review</option><option value="all">All frames</option><option value="reviewed">Reviewed</option></select></label>
+    <label>Find an outfit or action <input id="search" type="search" placeholder="e.g. Winter or walk"></label>
+    <div id="frames" aria-label="Animation frames"></div>
+  </aside>
+  <section id="editor">
+    <h2 id="frame-title"></h2>
+    <p id="status"></p>
+    <div class="toolbar">
+      <button id="previous">Previous</button><button id="next">Next</button>
+      <label>Zoom <select id="zoom"><option value="auto">Auto</option><option>2</option><option>4</option><option>6</option></select></label>
+      <button id="clear">Clear selection</button><button id="approve">Approve frame</button>
+    </div>
+    <p>Click a connected region in any view to select or deselect it. Pink marks selected skin; orange marks other pixels with the same source colors. Empty masks can be approved too.</p>
+    <div class="previews">
+      <figure><figcaption>Original</figcaption><canvas id="original" aria-label="Original frame"></canvas></figure>
+      <figure><figcaption>Debug Blue</figcaption><canvas id="blue" aria-label="Recolored frame"></canvas></figure>
+      <figure><figcaption>Selected / other matching colors</figcaption><canvas id="mask" aria-label="Mask regions"></canvas></figure>
+    </div>
+    <details><summary>Shared frames and reference artwork</summary><pre id="occurrences"></pre></details>
+  </section>
+</main>
+<footer>Local authoring preview. Exports contain colors, coordinates, and source checksums. Incomplete strips are excluded from profile export. Save progress before closing to keep a portable copy.</footer>
+<script src="batch.js"></script>
+<script src="review.js"></script>
+</html>

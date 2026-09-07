@@ -18,6 +18,8 @@ struct Recipe {
     _description: Option<String>,
     #[serde(deserialize_with = "unique_map")]
     rgba_map: BTreeMap<String, String>,
+    #[serde(default)]
+    color_groups: Vec<Vec<String>>,
     #[serde(default, deserialize_with = "regions")]
     regions: Option<Vec<Region>>,
     #[serde(default, deserialize_with = "profile")]
@@ -28,6 +30,8 @@ struct Recipe {
 #[serde(deny_unknown_fields)]
 pub struct Profile {
     pub source_colors: Vec<String>,
+    #[serde(default)]
+    pub color_groups: Vec<Vec<String>>,
     pub regions: Vec<serde_json::Value>,
 }
 
@@ -51,10 +55,21 @@ fn profile<'de, D: Deserializer<'de>>(de: D) -> Result<Option<PathBuf>, D::Error
 
 pub struct Palette {
     pub mapping: BTreeMap<[u8; 4], [u8; 4]>,
+    color_groups: BTreeMap<[u8; 4], usize>,
     regions: Option<BTreeMap<String, Region>>,
 }
 
 impl Palette {
+    /// Adjacent original pixels connect only within the same source-color group.
+    pub fn connected(&self, a: &[u8; 4], b: &[u8; 4]) -> bool {
+        a[3] != 0
+            && b[3] != 0
+            && self
+                .color_groups
+                .get(a)
+                .is_some_and(|group| self.color_groups.get(b) == Some(group))
+    }
+
     pub fn assets(&self) -> Option<Vec<String>> {
         self.regions
             .as_ref()
@@ -109,8 +124,8 @@ impl Palette {
                 stack.push((x, y));
             }
         }
-        // Flood only original source colors, with four-way connectivity. Seed overlap
-        // is harmless, and transparent pixels cannot connect separate regions.
+        // Flood only original source colors within one group. Seed overlap is
+        // harmless, and transparent pixels cannot connect separate regions.
         while let Some((x, y)) = stack.pop() {
             for (nx, ny) in [
                 x.checked_sub(1).map(|nx| (nx, y)),
@@ -124,7 +139,7 @@ impl Palette {
                 if nx < image.width()
                     && ny < image.height()
                     && !selected[index(nx, ny)]
-                    && eligible(nx, ny)
+                    && self.connected(&image.get_pixel(x, y).0, &image.get_pixel(nx, ny).0)
                 {
                     selected[index(nx, ny)] = true;
                     stack.push((nx, ny));
@@ -181,6 +196,11 @@ pub fn load(path: &Path) -> Result<Palette> {
         let profile: Profile = serde_json::from_slice(&fs::read(
             path.parent().unwrap_or(Path::new(".")).join(profile),
         )?)?;
+        ensure!(
+            recipe.color_groups.is_empty(),
+            "Color groups must come from the referenced profile"
+        );
+        recipe.color_groups = profile.color_groups;
         let source_colors = profile
             .source_colors
             .iter()
@@ -235,6 +255,24 @@ fn decode(palette: Recipe) -> Result<Palette> {
         );
         mapping.insert(source, target);
     }
+    let mut color_groups = BTreeMap::new();
+    if palette.color_groups.is_empty() {
+        color_groups.extend(mapping.keys().map(|&source| (source, 0)));
+    } else {
+        for (group, colors) in palette.color_groups.iter().enumerate() {
+            ensure!(!colors.is_empty(), "Color groups must not be empty");
+            for source in colors {
+                ensure!(
+                    color_groups.insert(color(source)?, group).is_none(),
+                    "Duplicate color in color groups"
+                );
+            }
+        }
+        ensure!(
+            color_groups.keys().eq(mapping.keys()),
+            "Color groups must partition the palette source colors"
+        );
+    }
     let regions = palette
         .regions
         .map(|entries| -> Result<_> {
@@ -262,5 +300,9 @@ fn decode(palette: Recipe) -> Result<Palette> {
             Ok(regions)
         })
         .transpose()?;
-    Ok(Palette { mapping, regions })
+    Ok(Palette {
+        mapping,
+        color_groups,
+        regions,
+    })
 }

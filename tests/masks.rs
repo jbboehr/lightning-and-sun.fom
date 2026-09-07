@@ -62,6 +62,75 @@ impl Lab {
 }
 
 #[test]
+fn color_groups_keep_detail_seeds_from_joining_skin_and_clothing() {
+    for shared_profile in [false, true] {
+        let mut lab = Lab::new();
+        let original = RgbaImage::from_fn(5, 1, |x, _| {
+            Rgba(match x {
+                0 | 2 => [16, 32, 48, 255],
+                1 | 4 => [64, 80, 96, 255],
+                _ => [0, 0, 0, 255],
+            })
+        });
+        original.save(lab.original.join("sprite.png")).unwrap();
+        let hash = format!(
+            "{:x}",
+            Sha256::digest(fs::read(lab.original.join("sprite.png")).unwrap())
+        );
+        lab.recipe = json!({
+            "rgba_map":{"#102030":"#405060", "#405060":"#708090"},
+            "color_groups":[["#102030"],["#405060"]],
+            "regions":[{"asset":"sprite.png","source_sha256":hash,"size":[5,1],"seeds":[[0,0],[4,0]]}]
+        });
+        if shared_profile {
+            fs::write(
+                lab.palette.with_file_name("profile.json"),
+                serde_json::to_vec(&json!({
+                    "source_colors":["#102030", "#405060"],
+                    "color_groups":lab.recipe["color_groups"], "regions":lab.recipe["regions"]
+                }))
+                .unwrap(),
+            )
+            .unwrap();
+            lab.recipe.as_object_mut().unwrap().remove("regions");
+            lab.recipe.as_object_mut().unwrap().remove("color_groups");
+            lab.recipe["profile"] = json!("profile.json");
+        }
+        let result = lab.apply();
+        assert!(
+            result.status.success(),
+            "{}",
+            String::from_utf8_lossy(&result.stderr)
+        );
+        let mut expected = original;
+        expected.put_pixel(0, 0, Rgba([64, 80, 96, 255]));
+        expected.put_pixel(4, 0, Rgba([112, 128, 144, 255]));
+        assert_eq!(
+            image::open(lab.modified.join("sprite.png"))
+                .unwrap()
+                .to_rgba8(),
+            expected
+        );
+    }
+}
+
+#[test]
+fn color_groups_reject_ambiguous_or_incomplete_color_partitions() {
+    for groups in [
+        json!([["#102030"], []]),
+        json!([["#102030"]]),
+        json!([["#102030", "#40506080", "#10203000"], ["#102030FF"]]),
+        json!([["#102030", "#40506080", "#10203000", "#FFFFFF"]]),
+        Value::Null,
+    ] {
+        let mut lab = Lab::new();
+        lab.recipe["color_groups"] = groups;
+        assert!(!lab.apply().status.success());
+        assert!(!lab.modified.exists());
+    }
+}
+
+#[test]
 fn seeded_regions_limit_recoloring_and_count_overlapping_seeds_once() {
     let lab = Lab::new();
     let result = lab.apply();

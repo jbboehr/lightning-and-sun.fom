@@ -58,7 +58,7 @@ pub fn load(path: &Path) -> Result<Set> {
         );
         let mapping: BTreeMap<_, _> = profile.source_colors.iter().zip(&preset.colors).collect();
         let p = palette::parse(&serde_json::to_vec(
-            &json!({"rgba_map":mapping,"regions":profile.regions}),
+            &json!({"rgba_map":mapping,"color_groups":profile.color_groups,"regions":profile.regions}),
         )?)?;
         palettes.push(p);
         variants.push(Variant {

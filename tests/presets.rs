@@ -35,6 +35,47 @@ fn fixture(root: &Path) -> (std::path::PathBuf, std::path::PathBuf) {
     (original, set)
 }
 #[test]
+fn presets_preserve_profile_color_groups() {
+    let temp = tempfile::tempdir().unwrap();
+    let (original, set) = fixture(temp.path());
+    let profile_path = temp.path().join("profile.json");
+    let mut profile: Value = serde_json::from_slice(&fs::read(&profile_path).unwrap()).unwrap();
+    profile["source_colors"] = json!(["#0A141E", "#000000"]);
+    profile["color_groups"] = json!([["#0A141E"], ["#000000"]]);
+    fs::write(profile_path, serde_json::to_vec(&profile).unwrap()).unwrap();
+    let mut definition: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
+    for preset in definition["presets"].as_array_mut().unwrap() {
+        preset["colors"]
+            .as_array_mut()
+            .unwrap()
+            .push(json!("#010203"));
+    }
+    fs::write(&set, serde_json::to_vec(&definition).unwrap()).unwrap();
+    let output = temp.path().join("bundle");
+    let result = run(&[
+        Path::new("build-presets"),
+        Path::new("--original"),
+        &original,
+        Path::new("--presets"),
+        &set,
+        Path::new("--output"),
+        &output,
+    ]);
+    assert!(
+        result.status.success(),
+        "{}",
+        String::from_utf8_lossy(&result.stderr)
+    );
+    for id in ["blue", "warm"] {
+        let after = image::open(output.join(format!("variants/{id}/{NAME}.png")))
+            .unwrap()
+            .to_rgba8();
+        assert_eq!(after.get_pixel(1, 0).0, [0, 0, 0, 255]);
+        assert_eq!(after.get_pixel(2, 0).0, [10, 20, 30, 255]);
+    }
+}
+
+#[test]
 fn shared_masks_generate_distinct_presets_and_one_runtime_package() {
     let temp = tempfile::tempdir().unwrap();
     let (original, set) = fixture(temp.path());

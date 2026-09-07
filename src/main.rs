@@ -6,6 +6,7 @@ mod installed;
 mod installer;
 mod palette;
 mod presets;
+mod review;
 mod toggle;
 
 use anyhow::Result;
@@ -24,6 +25,15 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
+    /// Generate a local mask review gallery with exact-frame reuse and component suggestions.
+    ReviewBatch {
+        #[arg(long)]
+        archive: PathBuf,
+        #[arg(long)]
+        config: PathBuf,
+        #[arg(long)]
+        output: PathBuf,
+    },
     /// Inventory player skin ramps and unclassified portrait colors from a local archive.
     Catalog {
         #[arg(long)]
@@ -129,6 +139,11 @@ enum Command {
 
 fn run() -> Result<()> {
     let report = match Cli::parse().command {
+        Command::ReviewBatch {
+            archive,
+            config,
+            output,
+        } => review::build(&archive, &config, &output)?,
         Command::Catalog { archive, output } => catalog::build(&archive, &output)?,
         Command::BuildPresets {
             original,

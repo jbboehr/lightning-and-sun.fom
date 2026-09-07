@@ -1,0 +1,17 @@
+{
+  "description": "Hayden portrait skin and body-hair shading in Debug Blue; head hair, beard, clothing, and jewelry stay original.",
+  "rgba_map": {
+    "#E8B271": "#9DB9D4",
+    "#CA9052": "#7F9FBD",
+    "#B27146": "#6687AD",
+    "#6E4922": "#445F83",
+    "#FAD8A8": "#9DB9D4",
+    "#F9C4A1": "#9DB9D4",
+    "#CBAD93": "#7F9FBD",
+    "#CA894D": "#7F9FBD",
+    "#C58A4A": "#7F9FBD",
+    "#CE913B": "#7F9FBD",
+    "#9F7D6F": "#6687AD"
+  },
+  "profile": "../profiles/hayden-portraits.json"
+}
