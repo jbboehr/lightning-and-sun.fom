@@ -98,13 +98,13 @@ pub fn verify_variants(
     let mut ids = BTreeSet::new();
     let mut atlases = BTreeMap::new();
     for name in images.keys() {
-        let atlas = toggle::portrait(name)?.atlas;
+        let atlas = toggle::animation(name)?.atlas;
         if !atlases.contains_key(atlas) {
             atlases.insert(atlas, atlas_pages(&archive, atlas)?);
         }
     }
     for (name, path) in images {
-        let portrait = toggle::portrait(&name)?;
+        let portrait = toggle::animation(&name)?;
         let pages = &atlases[portrait.atlas];
         let metadata_path = name
             .strip_suffix(".png")
@@ -144,12 +144,10 @@ pub fn verify_variants(
         ensure!(size.len() == 2, "Expected a two-dimensional frame size");
         let width = u32::try_from(size[0].as_integer().context("Invalid frame width")?)?;
         let height = u32::try_from(size[1].as_integer().context("Invalid frame height")?)?;
-        let count = u32::try_from(
-            frames
-                .get("frame_len")
-                .and_then(toml::Value::as_integer)
-                .context("Missing frame count")?,
-        )?;
+        let count = u32::try_from(match frames.get("frame_len") {
+            Some(value) => value.as_integer().context("Invalid frame count")?,
+            None => 1,
+        })?;
         check_frames(pages, &original_id, &rgba(&before)?, [width, height], count)?;
         let mut group = vec![portrait.source.to_owned()];
         for variant in variants {
@@ -244,8 +242,13 @@ fn check_frames(
             i64::from(tx),
             i64::from(ty),
         );
+        // Atlases trim/deduplicate transparent texels. Their hidden RGB can
+        // differ even in the pristine game; alpha and visible RGBA must match.
         ensure!(
-            recovered == expected.view(frame * width, 0, width, height).to_image(),
+            recovered.enumerate_pixels().all(|(x, y, pixel)| {
+                let source = expected.get_pixel(frame * width + x, y);
+                pixel == source || (pixel[3] == 0 && source[3] == 0)
+            }),
             "Installed pixels differ: {name}"
         );
     }

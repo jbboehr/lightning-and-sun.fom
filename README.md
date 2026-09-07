@@ -74,6 +74,19 @@ The selected palette carries across outfit changes for the current
 session. These colors are adapted from the named NPCs; only
 Adeline's portraits change. Overworld sprites remain original.
 
+To also recolor Adeline while she stands and walks in her spring outfit,
+uninstall the previous study and choose:
+
+```sh
+target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
+  --presets palettes/sets/adeline-world-trial.json
+```
+
+F6 switches her portrait and supported overworld animations together, using the
+same five choices. This includes all four walking directions. Other overworld
+actions and outfits still show her original skin colors. All 126 portraits are
+included. Each launch starts with Vanilla.
+
 The included palette is tied to the reviewed portrait's original PNG bytes. If
 those change, installation stops until the region definition is reviewed. See
 [palette and preview options](docs/TOOLS.md#export-recolor-and-compare) for custom
@@ -92,7 +105,8 @@ and custom palette input.
 Follow [TOOLS.md](docs/TOOLS.md) to export the portrait, generate a preview, and build a
 local MOMI package. The experimental `package-toggle` mode keeps vanilla installed
 and adds blue variants. Press **F6** during play to switch the included Adeline
-seasonal, beach, and wedding portraits; each game launch starts with vanilla. Portraits
+seasonal, beach, and wedding portraits, plus spring idle/walk sprites when selected
+by the recipe; each game launch starts with vanilla. Portraits
 outside the chosen recipe and other characters are unchanged. There is no preset menu or
 graphical installer yet.
 See [INVESTIGATION.md](docs/INVESTIGATION.md) for compatibility and experiment limits.

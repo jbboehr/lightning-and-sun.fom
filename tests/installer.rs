@@ -216,6 +216,7 @@ fn seasonal_install_checks_each_atlas_and_restores_the_original_archive() {
         ("winter", "Winter", "PortraitsWinter"),
         ("beach", "Beach", "PortraitsSummer"),
         ("wedding", "Wedding", "PortraitsMisc"),
+        ("world", "Spring", "Default"),
     ] {
         for case in [
             "mixed",
@@ -226,14 +227,35 @@ fn seasonal_install_checks_each_atlas_and_restores_the_original_archive() {
             "wrong_folder",
         ] {
             let mut lab = Lab::new();
-            let source = if case == "wrong_folder" {
+            let source = if season == "world" {
+                SOURCE
+                    .replace(
+                        "Portraits",
+                        if case == "wrong_folder" {
+                            "Portraits"
+                        } else {
+                            "Sprites"
+                        },
+                    )
+                    .replace(
+                        "spr_portrait_adeline_spring_neutral",
+                        "spr_npc_adeline_spring_idle_south",
+                    )
+            } else if case == "wrong_folder" {
                 SOURCE.replace("_spring_", &format!("_{season}_"))
             } else {
                 SOURCE
                     .replace("Spring", folder)
                     .replace("_spring_", &format!("_{season}_"))
             };
-            let variant = VARIANT.replace("_spring_", &format!("_{season}_"));
+            let variant = if season == "world" {
+                VARIANT.replace(
+                    "spr_lns_adeline_spring_neutral",
+                    "spr_lns_npc_adeline_spring_idle_south",
+                )
+            } else {
+                VARIANT.replace("_spring_", &format!("_{season}_"))
+            };
             let meta = META
                 .replace("PortraitsSpring", atlas_name)
                 .replace("0000000000000001", "0000000000000003");
@@ -327,10 +349,17 @@ animations = [
                 "spr_portrait_adeline_spring_neutral".to_owned(),
                 "spr_lns_adeline_spring_neutral_blue".to_owned(),
             ];
-            let seasonal = [
-                format!("spr_portrait_adeline_{season}_neutral"),
-                format!("spr_lns_adeline_{season}_neutral_blue"),
-            ];
+            let seasonal = if season == "world" {
+                [
+                    "spr_npc_adeline_spring_idle_south".to_owned(),
+                    "spr_lns_npc_adeline_spring_idle_south_blue".to_owned(),
+                ]
+            } else {
+                [
+                    format!("spr_portrait_adeline_{season}_neutral"),
+                    format!("spr_lns_adeline_{season}_neutral_blue"),
+                ]
+            };
             let groups = if case == "season_only" {
                 vec![seasonal]
             } else {
@@ -1130,4 +1159,132 @@ fn preset_install_verifies_the_last_variant_and_restores_the_prior_archive() {
         }
         assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
     }
+}
+
+#[test]
+fn atlas_verification_ignores_invisible_rgb_but_still_checks_alpha() {
+    for case in ["hidden_rgb", "wrong_alpha"] {
+        let mut lab = Lab::new();
+        let mut original = RgbaImage::from_pixel(4, 1, Rgba([227, 161, 123, 255]));
+        original.put_pixel(3, 0, Rgba([93, 27, 18, 0]));
+        let original = png(original);
+        lab.before = replace_zip_entry(&lab.before, &format!("{SOURCE}.png"), &original);
+        fs::write(lab.game.join("assets.zip"), &lab.before).unwrap();
+        let recipe_path = lab.result.with_extension("palette.json");
+        let mut recipe: serde_json::Value =
+            serde_json::from_slice(&fs::read(&recipe_path).unwrap()).unwrap();
+        recipe["regions"][0]["source_sha256"] =
+            serde_json::json!(format!("{:x}", Sha256::digest(&original)));
+        fs::write(recipe_path, serde_json::to_vec(&recipe).unwrap()).unwrap();
+        let mut rebuilt = replace_zip_entry(
+            &fs::read(&lab.result).unwrap(),
+            &format!("{SOURCE}.png"),
+            &original,
+        );
+        let mut atlas = RgbaImage::from_fn(4, 2, |_, y| {
+            Rgba(if y == 0 {
+                [227, 161, 123, 255]
+            } else {
+                [157, 185, 212, 255]
+            })
+        });
+        atlas.put_pixel(3, 0, Rgba([0, 0, 0, 0]));
+        atlas.put_pixel(
+            3,
+            1,
+            Rgba([0, 0, 0, if case == "wrong_alpha" { 255 } else { 0 }]),
+        );
+        rebuilt = replace_zip_entry(
+            &rebuilt,
+            "assets/atlases/PortraitsSpringAtlas.png",
+            &png(atlas),
+        );
+        fs::write(&lab.result, rebuilt).unwrap();
+        let result = lab.run("install");
+        if case == "hidden_rgb" {
+            assert!(
+                result.status.success(),
+                "{}",
+                String::from_utf8_lossy(&result.stderr)
+            );
+            assert!(lab.run("uninstall").status.success());
+        } else {
+            assert!(!result.status.success());
+            assert!(String::from_utf8_lossy(&result.stderr).contains("Installed pixels differ"));
+        }
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+    }
+}
+
+#[test]
+fn installed_single_frame_animation_defaults_an_absent_frame_len_to_one() {
+    let mut lab = Lab::new();
+    let original = png(RgbaImage::from_pixel(2, 1, Rgba([227, 161, 123, 255])));
+    let blue = png(RgbaImage::from_pixel(2, 1, Rgba([157, 185, 212, 255])));
+    let metadata = META.replace("frame_len = 2\n", "");
+
+    lab.before = replace_zip_entry(&lab.before, &format!("{SOURCE}.png"), &original);
+    lab.before = replace_zip_entry(
+        &lab.before,
+        &format!("{SOURCE}.meta.toml"),
+        metadata.as_bytes(),
+    );
+    fs::write(lab.game.join("assets.zip"), &lab.before).unwrap();
+
+    let recipe_path = lab.result.with_extension("palette.json");
+    let mut recipe: serde_json::Value =
+        serde_json::from_slice(&fs::read(&recipe_path).unwrap()).unwrap();
+    recipe["regions"][0]["source_sha256"] =
+        serde_json::json!(format!("{:x}", Sha256::digest(&original)));
+    recipe["regions"][0]["size"] = serde_json::json!([2, 1]);
+    fs::write(recipe_path, serde_json::to_vec(&recipe).unwrap()).unwrap();
+
+    let mut result = fs::read(&lab.result).unwrap();
+    result = replace_zip_entry(&result, &format!("{SOURCE}.png"), &original);
+    result = replace_zip_entry(&result, &format!("{SOURCE}.meta.toml"), metadata.as_bytes());
+    result = replace_zip_entry(
+        &result,
+        &format!("{VARIANT}.meta.toml"),
+        metadata
+            .replace("0000000000000001", "0000000000000002")
+            .as_bytes(),
+    );
+    let mut atlas = RgbaImage::new(2, 2);
+    image::imageops::replace(
+        &mut atlas,
+        &image::load_from_memory(&original).unwrap().to_rgba8(),
+        0,
+        0,
+    );
+    image::imageops::replace(
+        &mut atlas,
+        &image::load_from_memory(&blue).unwrap().to_rgba8(),
+        0,
+        1,
+    );
+    result = replace_zip_entry(
+        &result,
+        "assets/atlases/PortraitsSpringAtlas.png",
+        &png(atlas),
+    );
+    result = replace_zip_entry(
+        &result,
+        "assets/atlases/PortraitsSpringAtlas.meta.toml",
+        br#"[asset_properties]
+animations = [
+  {texture_ids = ["0000000000000001::0"], placement = [0,0,2,1,2,1,0,0]},
+  {texture_ids = ["0000000000000002::0"], placement = [0,1,2,1,2,1,0,0]},
+]
+"#,
+    );
+    fs::write(&lab.result, result).unwrap();
+
+    let installed = lab.run("install");
+    assert!(
+        installed.status.success(),
+        "one-frame installed animation was rejected: {}",
+        String::from_utf8_lossy(&installed.stderr)
+    );
+    assert!(lab.run("uninstall").status.success());
+    assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
 }

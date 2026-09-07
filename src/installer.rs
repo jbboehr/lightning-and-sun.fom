@@ -219,12 +219,12 @@ pub fn install(
     };
     for asset in &assets {
         ensure!(
-            *asset == toggle::portrait(asset)?.asset_path(),
-            "Expected an exact Adeline seasonal, beach, or wedding portrait path"
+            *asset == toggle::animation(asset)?.asset_path(),
+            "Expected an exact supported Adeline animation path"
         );
     }
     eprintln!(
-        "Generating {} portrait(s) from local game assets...",
+        "Generating {} animation(s) from local game assets...",
         assets.len()
     );
     commands::export(&build.join("assets.zip"), &assets, &original)?;
@@ -254,7 +254,7 @@ pub fn install(
         String::from_utf8_lossy(&result.stdout),
         String::from_utf8_lossy(&result.stderr)
     );
-    eprintln!("Verifying installed portrait pixels and animation metadata...");
+    eprintln!("Verifying installed pixels and animation metadata...");
     let installed_mods = read_installed_mods(&build.join("config/mods/manifest.json"))
         .context("MOMI did not report its installed mod selection")?;
     let mut installed_selection = installed_mods.clone();

@@ -1,4 +1,4 @@
-// Locally packaged portraits, with vanilla as the session default.
+// Locally packaged animations, with vanilla as the session default.
 function __lns_palette_runtime() {
     if (global[$ "__lns_palette"] == undefined) {
         global.__lns_palette = {
@@ -8,9 +8,39 @@ function __lns_palette_runtime() {
             selected: 0,
             names: [],
             pairs: [],
+            world_pairs: [],
         };
     }
     return global.__lns_palette;
+}
+
+// Return a render asset without changing the animator's frame, timing or packs.
+function lns_palette_world_sprite() {
+    var current = self.__lns_palette_original_sprite();
+    var state = __lns_palette_runtime();
+    if (!state.ready) return current;
+    for (var i = 0; i < array_length(state.world_pairs); i++) {
+        var pair = state.world_pairs[i];
+        if (current == pair[0]) return pair[state.selected];
+    }
+    return current;
+}
+
+function lns_palette_world_install(refresh) {
+    var state = __lns_palette_runtime();
+    if (!state.ready || array_length(state.world_pairs) == 0) return;
+    for (var i = 0; i < instance_number(obj_adeline); i++) {
+        var actor = instance_find(obj_adeline, i);
+        var animator = actor.animator;
+        if (!is_struct(animator) || animator.current == undefined) continue;
+        var attach = animator[$ "__lns_palette_original_sprite"] == undefined;
+        if (attach) {
+            animator.__lns_palette_original_sprite = animator.sprite;
+            animator.sprite = method(animator, lns_palette_world_sprite);
+        }
+        // Also refresh while paused; calling animate() would advance time.
+        if (attach || refresh) actor.sprite_index = animator.sprite();
+    }
 }
 
 function lns_palette_apply(menu) {
@@ -54,13 +84,18 @@ function lns_palette_toggle() {
     if (!state.ready) return;
     state.selected = (state.selected + 1) % array_length(state.names);
     lns_palette_apply(ANCHOR.get_menu(Menu.Textbox));
+    lns_palette_world_install(true);
     var label = "Adeline palette: " + state.names[state.selected];
     mmapi_log_info("lns_palette", label);
 }
 
 function lns_palette_initialize() {
     var state = __lns_palette_runtime();
-    if (state.initialized) return;
+    if (state.initialized) {
+        // MMAPI reruns installers each begin-step, including after room changes.
+        lns_palette_world_install(false);
+        return;
+    }
     state.initialized = true;
     var names = lns_palette_assets();
     state.names = lns_palette_names();
@@ -77,15 +112,20 @@ function lns_palette_initialize() {
         for (var j = 0; j < array_length(names[i]); j++) {
             var sprite = try_string_to_asset(names[i][j]);
             if (sprite == undefined) {
-                mmapi_log_warn("lns_palette", "Palette study disabled: a portrait asset is missing.");
+                mmapi_log_warn("lns_palette", "Palette study disabled: an animation asset is missing.");
                 return;
             }
             array_push(sprites, sprite);
         }
-        array_push(state.pairs, sprites);
+        if (string_pos("spr_npc_", names[i][0]) == 1) {
+            array_push(state.world_pairs, sprites);
+        } else {
+            array_push(state.pairs, sprites);
+        }
     }
     state.ready = true;
     mmapi_hotkey_register(mmapi_hotkey_vk_from_name("F6"), lns_palette_toggle);
+    lns_palette_world_install(true);
 }
 
 mmapi_mod_declare("lns_palette", "0.1.0");

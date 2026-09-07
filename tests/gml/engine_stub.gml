@@ -10,6 +10,7 @@ global.hook_count = 0;
 global.third_preset = false;
 global.max_presets = false;
 global.seasons = false;
+global.world = false;
 global.notices = [];
 global.palette_log = undefined;
 ANCHOR = {
@@ -36,6 +37,11 @@ function mmapi_hotkey_register(key, callback) {
 function mmapi_log_info(name, message) { global.palette_log = message; }
 function mmapi_log_warn(name, message) { global.warning_count += 1; }
 function lns_palette_assets() {
+    if (global.world) return [
+        ["spr_portrait_adeline_spring_neutral", "spr_lns_adeline_spring_neutral_blue"],
+        ["spr_npc_adeline_spring_idle_south", "spr_lns_npc_adeline_spring_idle_south_blue"],
+        ["spr_npc_adeline_spring_walk_east", "spr_lns_npc_adeline_spring_walk_east_blue"]
+    ];
     if (global.seasons) return [
         ["spr_portrait_adeline_spring_neutral", "spr_lns_adeline_spring_neutral_blue", "spr_lns_adeline_spring_neutral_warm"],
         ["spr_portrait_adeline_summer_neutral", "spr_lns_adeline_summer_neutral_blue", "spr_lns_adeline_summer_neutral_warm"],
@@ -73,6 +79,10 @@ function lns_palette_names() {
 }
 function try_string_to_asset(name) {
     if (global.missing_asset || name == global.missing_asset_name) return undefined;
+    if (name == "spr_npc_adeline_spring_idle_south") return 300;
+    if (name == "spr_lns_npc_adeline_spring_idle_south_blue") return 301;
+    if (name == "spr_npc_adeline_spring_walk_east") return 310;
+    if (name == "spr_lns_npc_adeline_spring_walk_east_blue") return 311;
     if (name == "spr_portrait_adeline_spring_neutral") return 10;
     if (name == "spr_lns_adeline_spring_neutral_blue") return 20;
     if (name == "spr_portrait_adeline_spring_happy") return 40;

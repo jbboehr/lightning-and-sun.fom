@@ -52,24 +52,28 @@ pub fn validate_variants(variants: &[Variant]) -> Result<()> {
     Ok(())
 }
 
-pub struct Portrait<'a> {
+pub struct Animation<'a> {
     pub source: &'a str,
     pub season: &'static str,
     pub atlas: &'static str,
+    pub category: &'static str,
 }
 
-impl Portrait<'_> {
+impl Animation<'_> {
     pub fn variant_name(&self, id: &str) -> String {
         format!(
             "spr_lns_{}_{id}",
-            self.source.strip_prefix("spr_portrait_").unwrap()
+            self.source
+                .strip_prefix("spr_portrait_")
+                .or_else(|| self.source.strip_prefix("spr_"))
+                .unwrap()
         )
     }
 
     pub fn asset_path(&self) -> String {
         format!(
-            "assets/animations/NPCs/Adeline/Portraits/{}/{}.png",
-            self.season, self.source
+            "assets/animations/NPCs/Adeline/{}/{}/{}.png",
+            self.category, self.season, self.source
         )
     }
 }
@@ -78,11 +82,25 @@ const EXPRESSIONS: &str = "angry_blush blush cartoon_embarrassed concerned embar
 const BEACH_EXPRESSIONS: &str = "angry_blush bath_neutral blush cartoon_embarrassed concerned embarrassed gloomy_special happy happy_blush hope_special mad neutral sad shocked sigh sly think ugh wink";
 const WEDDING_EXPRESSIONS: &str = "embarrassed happy_blush hope_special neutral sad sly think";
 
-pub fn portrait(path: &str) -> Result<Portrait<'_>> {
+pub fn animation(path: &str) -> Result<Animation<'_>> {
     let source = Path::new(path)
         .file_stem()
         .and_then(|s| s.to_str())
-        .context("Invalid portrait filename")?;
+        .context("Invalid animation filename")?;
+    if let Some(cycle) = source.strip_prefix("spr_npc_adeline_spring_") {
+        ensure!(
+            "idle_north idle_south idle_east walk_north walk_south walk_east"
+                .split_whitespace()
+                .any(|name| name == cycle),
+            "Unsupported Adeline spring world animation: {cycle}"
+        );
+        return Ok(Animation {
+            source,
+            season: "Spring",
+            atlas: "Default",
+            category: "Sprites",
+        });
+    }
     let (season, atlas, expression) =
         if let Some(expression) = source.strip_prefix("spr_portrait_adeline_spring_") {
             ("Spring", "PortraitsSpring", expression)
@@ -97,7 +115,7 @@ pub fn portrait(path: &str) -> Result<Portrait<'_>> {
         } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_wedding_") {
             ("Wedding", "PortraitsMisc", expression)
         } else {
-            anyhow::bail!("Only Adeline seasonal, beach, and wedding portraits are supported");
+            anyhow::bail!("Only Adeline portraits and spring idle/walk sprites are supported");
         };
     let expressions = match season {
         "Beach" => BEACH_EXPRESSIONS,
@@ -110,10 +128,11 @@ pub fn portrait(path: &str) -> Result<Portrait<'_>> {
             .any(|name| name == expression),
         "Unsupported Adeline {season} expression: {expression}"
     );
-    Ok(Portrait {
+    Ok(Animation {
         source,
         season,
         atlas,
+        category: "Portraits",
     })
 }
 
@@ -131,8 +150,13 @@ struct Metadata {
 #[derive(Deserialize)]
 struct Frames {
     frame_size: [u32; 2],
+    #[serde(default = "default_frame_len")]
     frame_len: u32,
     atlas: String,
+}
+
+fn default_frame_len() -> u32 {
+    1
 }
 
 pub fn package(original: &Path, modified: &Path, output: &Path) -> Result<Value> {
@@ -152,8 +176,8 @@ pub fn package_variants(original: &Path, variants: &[Variant], output: &Path) ->
     let mut report = reports[0].clone();
     let rows = report["files"].as_array().unwrap();
     ensure!(
-        (1..=126).contains(&rows.len()),
-        "Select between one and 126 Adeline seasonal, beach, or wedding portraits"
+        (1..=132).contains(&rows.len()),
+        "Select between one and 132 supported Adeline animations"
     );
     let mut names = BTreeSet::new();
     let mut pairs = Vec::new();
@@ -161,11 +185,11 @@ pub fn package_variants(original: &Path, variants: &[Variant], output: &Path) ->
     let mut outputs = Outputs::new();
     for row in rows {
         let relative = Path::new(row["path"].as_str().unwrap());
-        let portrait = portrait(row["path"].as_str().unwrap())?;
+        let animation = animation(row["path"].as_str().unwrap())?;
         ensure!(
-            names.insert(portrait.source),
-            "Duplicate portrait expression: {}",
-            portrait.source
+            names.insert(animation.source),
+            "Duplicate animation expression: {}",
+            animation.source
         );
         let text = fs::read_to_string(original.join(relative.with_extension("meta.toml")))?;
         let meta: Metadata = toml::from_str(&text)?;
@@ -180,9 +204,9 @@ pub fn package_variants(original: &Path, variants: &[Variant], output: &Path) ->
             "Expected an unchanged horizontal animation strip"
         );
         ensure!(
-            atlas == portrait.atlas,
-            "The portrait requires the {} atlas",
-            portrait.atlas
+            atlas == animation.atlas,
+            "The animation requires the {} atlas",
+            animation.atlas
         );
         let mut meta: toml::Value = toml::from_str(&text)?;
         // MOMI assigns a fresh ID. Copying the source ID would replace vanilla.
@@ -190,9 +214,9 @@ pub fn package_variants(original: &Path, variants: &[Variant], output: &Path) ->
             "asset_kind",
             "Animation",
         )]))?;
-        let mut group = vec![portrait.source.to_owned()];
+        let mut group = vec![animation.source.to_owned()];
         for variant in variants {
-            let name = portrait.variant_name(&variant.id);
+            let name = animation.variant_name(&variant.id);
             let destination = format!("animations/LightningAndSun/{name}");
             outputs.insert(
                 format!("{destination}.png"),
