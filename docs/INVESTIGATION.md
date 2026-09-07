@@ -8,7 +8,9 @@ separate variant and switches it with F6 in-game; vanilla remains the session de
 The [CLI installer](development/cli-installer.md) now generates and installs that
 study from local assets, with checked snapshot restoration for removal.
 The later [four-season portrait trial](development/all-season-portraits.md) covers
-Adeline's 100 seasonal strips with five palette choices.
+Adeline's 100 seasonal strips with five palette choices. The subsequent
+[beach extension](development/beach-portraits.md) adds 19 strips, including the
+towel portrait, while retaining the seasonal masks.
 
 Follow-up [runtime integration research](development/runtime-capabilities.md)
 examines calling a Rust helper from GML, loading generated images during play,

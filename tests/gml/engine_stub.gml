@@ -40,7 +40,9 @@ function lns_palette_assets() {
         ["spr_portrait_adeline_spring_neutral", "spr_lns_adeline_spring_neutral_blue", "spr_lns_adeline_spring_neutral_warm"],
         ["spr_portrait_adeline_summer_neutral", "spr_lns_adeline_summer_neutral_blue", "spr_lns_adeline_summer_neutral_warm"],
         ["spr_portrait_adeline_autumn_neutral", "spr_lns_adeline_autumn_neutral_blue", "spr_lns_adeline_autumn_neutral_warm"],
-        ["spr_portrait_adeline_winter_neutral", "spr_lns_adeline_winter_neutral_blue", "spr_lns_adeline_winter_neutral_warm"]
+        ["spr_portrait_adeline_winter_neutral", "spr_lns_adeline_winter_neutral_blue", "spr_lns_adeline_winter_neutral_warm"],
+        ["spr_portrait_adeline_beach_neutral", "spr_lns_adeline_beach_neutral_blue", "spr_lns_adeline_beach_neutral_warm"],
+        ["spr_portrait_adeline_beach_bath_neutral", "spr_lns_adeline_beach_bath_neutral_blue", "spr_lns_adeline_beach_bath_neutral_warm"]
     ];
     if (global.max_presets) return [[
         "spr_portrait_adeline_spring_neutral",
@@ -85,6 +87,12 @@ function try_string_to_asset(name) {
     if (name == "spr_portrait_adeline_winter_neutral") return 140;
     if (name == "spr_lns_adeline_winter_neutral_blue") return 150;
     if (name == "spr_lns_adeline_winter_neutral_warm") return 160;
+    if (name == "spr_portrait_adeline_beach_neutral") return 170;
+    if (name == "spr_lns_adeline_beach_neutral_blue") return 180;
+    if (name == "spr_lns_adeline_beach_neutral_warm") return 190;
+    if (name == "spr_portrait_adeline_beach_bath_neutral") return 200;
+    if (name == "spr_lns_adeline_beach_bath_neutral_blue") return 210;
+    if (name == "spr_lns_adeline_beach_bath_neutral_warm") return 220;
     if (name == "spr_lns_adeline_spring_neutral_two") return 61;
     if (name == "spr_lns_adeline_spring_neutral_three") return 62;
     if (name == "spr_lns_adeline_spring_neutral_four") return 63;

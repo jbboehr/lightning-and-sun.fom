@@ -214,6 +214,7 @@ fn seasonal_install_checks_each_atlas_and_restores_the_original_archive() {
         ("summer", "Summer", "PortraitsSummer"),
         ("autumn", "Autumn", "PortraitsAutumn"),
         ("winter", "Winter", "PortraitsWinter"),
+        ("beach", "Beach", "PortraitsSummer"),
     ] {
         for case in [
             "mixed",
@@ -333,7 +334,7 @@ animations = [
                 vec![seasonal]
             } else {
                 // Packaging sorts the source paths before emitting the table.
-                if season == "autumn" {
+                if ["autumn", "beach"].contains(&season) {
                     vec![seasonal, spring]
                 } else {
                     vec![spring, seasonal]

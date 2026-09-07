@@ -62,7 +62,7 @@ enum Command {
         #[arg(long)]
         game_dir: PathBuf,
     },
-    /// Copy up to 100 explicit PNG assets and their metadata from assets.zip.
+    /// Copy up to 119 explicit PNG assets and their metadata from assets.zip.
     Export {
         #[arg(long)]
         archive: PathBuf,
@@ -116,7 +116,7 @@ enum Command {
         #[arg(long)]
         output: PathBuf,
     },
-    /// Build an F6 toggle for locally generated Adeline portraits in all four seasons.
+    /// Build an F6 toggle for locally generated Adeline seasonal and beach portraits.
     PackageToggle {
         #[arg(long)]
         original: PathBuf,

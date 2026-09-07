@@ -1,5 +1,8 @@
 # Adeline's four seasonal outfits
 
+The subsequent [beach extension](beach-portraits.md) adds 19 strips to this set.
+This page preserves the four-season slice's results.
+
 This extends the [spring/summer trial](seasonal-portraits.md) with 25 autumn and
 25 winter strips. All 100 strips have two frames and the same five choices:
 Vanilla, Debug Blue, Hayden, Ryis, and Seridia. Beach, wedding, other special

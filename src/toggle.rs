@@ -75,27 +75,34 @@ impl Portrait<'_> {
 }
 
 const EXPRESSIONS: &str = "angry_blush blush cartoon_embarrassed concerned embarrassed embarrassed_tired evasive_tired gloomy_special happy happy_blush hope_special mad neutral neutral_tired sad shocked sick_eyes_closed sick_eyes_open sick_smile sick_think sigh sly think ugh wink";
+const BEACH_EXPRESSIONS: &str = "angry_blush bath_neutral blush cartoon_embarrassed concerned embarrassed gloomy_special happy happy_blush hope_special mad neutral sad shocked sigh sly think ugh wink";
 
 pub fn portrait(path: &str) -> Result<Portrait<'_>> {
     let source = Path::new(path)
         .file_stem()
         .and_then(|s| s.to_str())
         .context("Invalid portrait filename")?;
-    let (season, atlas, expression) = if let Some(expression) =
-        source.strip_prefix("spr_portrait_adeline_spring_")
-    {
-        ("Spring", "PortraitsSpring", expression)
-    } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_summer_") {
-        ("Summer", "PortraitsSummer", expression)
-    } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_autumn_") {
-        ("Autumn", "PortraitsAutumn", expression)
-    } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_winter_") {
-        ("Winter", "PortraitsWinter", expression)
+    let (season, atlas, expression) =
+        if let Some(expression) = source.strip_prefix("spr_portrait_adeline_spring_") {
+            ("Spring", "PortraitsSpring", expression)
+        } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_summer_") {
+            ("Summer", "PortraitsSummer", expression)
+        } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_autumn_") {
+            ("Autumn", "PortraitsAutumn", expression)
+        } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_winter_") {
+            ("Winter", "PortraitsWinter", expression)
+        } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_beach_") {
+            ("Beach", "PortraitsSummer", expression)
+        } else {
+            anyhow::bail!("Only Adeline seasonal and beach portraits are supported");
+        };
+    let expressions = if season == "Beach" {
+        BEACH_EXPRESSIONS
     } else {
-        anyhow::bail!("Only Adeline spring, summer, autumn, and winter portraits are supported");
+        EXPRESSIONS
     };
     ensure!(
-        EXPRESSIONS
+        expressions
             .split_whitespace()
             .any(|name| name == expression),
         "Unsupported Adeline {season} expression: {expression}"
@@ -142,8 +149,8 @@ pub fn package_variants(original: &Path, variants: &[Variant], output: &Path) ->
     let mut report = reports[0].clone();
     let rows = report["files"].as_array().unwrap();
     ensure!(
-        (1..=100).contains(&rows.len()),
-        "Select between one and 100 Adeline seasonal portraits"
+        (1..=119).contains(&rows.len()),
+        "Select between one and 119 Adeline seasonal or beach portraits"
     );
     let mut names = BTreeSet::new();
     let mut pairs = Vec::new();
