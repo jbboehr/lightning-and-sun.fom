@@ -1,0 +1,14 @@
+{
+  "description": "Ryis portrait skin shading in Debug Blue; hair, clothing and accessories stay original.",
+  "rgba_map": {
+    "#B06C57": "#9DB9D4",
+    "#814A3A": "#7F9FBD",
+    "#63342A": "#6687AD",
+    "#491F1B": "#445F83",
+    "#995B48": "#7F9FBD",
+    "#A5624E": "#7F9FBD",
+    "#D6906A": "#9DB9D4",
+    "#C27B55": "#7F9FBD"
+  },
+  "profile": "../profiles/ryis-portraits.json"
+}

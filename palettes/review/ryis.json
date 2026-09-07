@@ -1,0 +1,27 @@
+{
+  "label": "Ryis — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Ryis/Portraits/"
+  ],
+  "source_colors": [
+    "#B06C57",
+    "#814A3A",
+    "#63342A",
+    "#491F1B",
+    "#995B48",
+    "#A5624E",
+    "#D6906A",
+    "#C27B55"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#7F9FBD",
+    "#9DB9D4",
+    "#7F9FBD"
+  ],
+  "reference_profile": "../profiles/ryis-portraits.json"
+}

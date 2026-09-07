@@ -12,6 +12,9 @@ over that sheet. Individual component editing is available for corrections;
 it is not a required user workflow. The [Hayden portrait pass](hayden-portraits.md)
 uses this division of work.
 
+The later [Ryis portrait pass](ryis-portraits.md) uses the same workflow for a
+darker source palette, including shared-color gloves and wedding clothing.
+
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`
 or `tmp/` paths. Only review configurations and approved recipe data belong in Git.
