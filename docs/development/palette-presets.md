@@ -64,7 +64,73 @@ Nine local comparison pages cover both frames of all 25 expressions:
 `generated/adeline-preset-previews/page-1.png` through `page-9.png`. The four-color
 creator ramps are portrait adaptations, not fully curated NPC art. Lips, blush,
 and outlines retain their previous treatment. Their contrast is particularly
-visible in the deepest preset and needs an art pass before final presentation.
+visible in the deepest preset. The face-detail review below keeps the approved
+prototype appearance and records an optional alternative.
+
+## Lip and blush review
+
+After the user accepted the five-choice trial, the next slice inspected face
+details before making further art changes. All 25 expressions, both frames, and
+all five choices were compared at 8× nearest-neighbor zoom. The close-ups are
+`generated/adeline-face-review/<expression>.png`; `face-colors.json` records
+source-color coordinates in each crop. The local authoring helper is
+`tmp/face-review.rs`.
+
+The review found no mouth-shape or talking-frame problem that justified changing
+the approved lips. The existing skin shades around the mouth follow the selected
+ramp; pink highlights and mouth-interior colors retain their original values.
+Some pink lip pixels use `#E3779D`, which also occurs in the hair. Adding this
+color to the shared skin map would need separately reviewed selection boundaries.
+A broad recolor of pink pixels is not a suitable lip-only change.
+
+Blush has distinct source colors beyond the four main skin shades:
+
+| Source color | Reviewed use | Pixels across both frames of all 25 strips |
+| --- | --- | ---: |
+| `#E37B7B` | Most dotted cheek blush | 244 |
+| `#E6687A` | Cartoon embarrassed cheek blush | 34 |
+| `#DE8074` | Tired/sick nose flush | 234 |
+| `#DE9374` | Lighter sick nose flush detail | 32 |
+
+These 544 pixels occur in 14 expressions. The local experiment checked that every
+occurrence lies in the inspected face bounds: frame-relative x=132..169,
+y=58..92. The warm sick/tired nose patch is present in the original art; keeping
+its colors makes it contrast more strongly with blue and Player 33. This is a
+color-treatment choice, not an omitted patch of the four-color skin mask.
+
+A local alternative for Debug Blue and Player 33 blends each of these four blush
+colors equally with the preset's main skin color, using integer sRGB channels
+rounded down. This is an art experiment, not a recovered game formula. It uses a
+second source-bound `apply` recipe against the existing generated variant, with
+seeds for the reviewed blush pixels. Lips and all other pixels remain unchanged.
+The candidate changes 544 pixels in each preset and preserves alpha and metadata.
+The 11 expressions without these blush colors retain their PNG bytes.
+
+Current/softer comparisons for `blush`, `neutral_tired`, and `sick_eyes_closed` are
+under `generated/adeline-blush-comparison/`. That directory also contains both
+recipes, candidate trees, baseline validation recipes, and `study.json`. The
+local helper is `tmp/blush-comparison.rs`. All generated images and helpers stay
+ignored; the candidate was not installed or added to a production preset.
+
+Decision: retain the user-approved lips and blush for this prototype. The softer
+candidate reduces the peach contrast on Player 33, but makes the flush less
+distinct on blue. It is not a clear improvement across both presets. These are
+visual judgments; they do not establish a universally correct color treatment.
+Manual NPC ramp classification is the next planned slice. Blush refinement can
+be revisited if the user prefers the local alternative.
+
+Exact recipe validation passed for all four baseline variants at 80,951 changed
+pixels each. Both candidate passes also validated at 544 changes each. The local
+experiment independently checked that every non-blush pixel was unchanged.
+Reports are `tmp/face-review-<id>-validation.json` and
+`tmp/soft-blush-<id>-validation.json`. This slice changes documentation only in the
+tracked tree; runtime code, preset definitions, and the installed trial retain
+their approved state. The alternative has not had an in-game visual pass.
+
+Fresh verification after this review passed formatting, Clippy, all 59 active
+tests, the release build, and the optional full-spring mask test. The unchanged
+game runtime and MOMI installation were not rerun for this documentation and
+local-preview slice.
 
 ## Atlas cost and installation evidence
 
@@ -147,6 +213,6 @@ cmp tmp/fields-of-mistria/assets.zip tmp/cli-installer-lab/assets.bak.zip
 
 All commands passed. Reliability verdict: **PASS_WITH_RESIDUAL_RISK**. Both
 demonstrated validation defects are fixed, with fresh full checks and a real MOMI
-roundtrip. Remaining work is lip/blush art refinement and manual NPC ramp
-classification. Desktop performance and
-larger preset sets have not been measured in the game engine.
+roundtrip. Manual NPC ramp classification remains planned; the face-detail review
+above leaves further lip/blush refinement optional for the prototype. Desktop
+performance and larger preset sets have not been measured in the game engine.
