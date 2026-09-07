@@ -20,6 +20,7 @@ assert(global.menu.portrait.changes == 0);
 global.hotkey();
 assert(global.menu.portrait.sprite == 20);
 assert(global.menu.portrait.index == 1.25);
+assert(array_length(global.notices) == 0, "Palette popup obscures the portrait");
 global.hotkey();
 assert(global.menu.portrait.sprite == 10);
 assert(global.menu.portrait.index == 1.25);
@@ -79,6 +80,30 @@ assert(global.warning_count == 1);
 assert(!__lns_palette_runtime().ready);
 assert(array_length(__lns_palette_runtime().pairs) == 1);
 
+// Changing outfit keeps the selected palette and the new portrait's phase.
+global.__lns_palette = undefined;
+global.missing_asset_name = undefined;
+global.seasons = true;
+global.third_preset = true;
+global.menu = new TestTextbox();
+lns_palette_initialize();
+lns_palette_menu_opened({kind: Menu.Textbox, menu: global.menu});
+global.hotkey();
+global.hotkey();
+assert(global.menu.portrait.sprite == 60);
+global.menu.set_speaker({sprite: 80, index: 0.75});
+assert(global.menu.portrait.sprite == 100);
+assert(global.menu.portrait.index == 0.75);
+global.menu.set_speaker({sprite: 10, index: 1.5});
+assert(global.menu.portrait.sprite == 60);
+assert(global.menu.portrait.index == 1.5);
+global.hotkey();
+global.menu.set_speaker({sprite: 80, index: 0.5});
+assert(global.menu.portrait.sprite == 80);
+assert(global.menu.portrait.index == 0.5);
+global.seasons = false;
+global.third_preset = false;
+
 // A third preset must cycle on the same expression and preserve raw phase.
 global.__lns_palette = undefined;
 global.missing_asset_name = undefined;
@@ -90,7 +115,7 @@ global.hotkey();
 assert(global.menu.portrait.sprite == 20);
 global.hotkey();
 assert(global.menu.portrait.sprite == 60);
-assert(global.notice == "Adeline palette: Warm trial");
+assert(global.palette_log == "Adeline palette: Warm trial");
 assert(global.menu.portrait.index == 1.25);
 global.menu.set_speaker({sprite: 40, index: 0.75});
 assert(global.menu.portrait.sprite == 70);
@@ -117,7 +142,8 @@ global.hotkey();
 assert(__lns_palette_runtime().selected == 0);
 assert(global.menu.portrait.sprite == 10);
 assert(global.menu.portrait.index == 1.25);
-assert(global.notice == "Adeline palette: Vanilla");
+assert(global.palette_log == "Adeline palette: Vanilla");
+assert(array_length(global.notices) == 0, "Cycling palettes queued HUD popups");
 
 // The final asset is as mandatory as the first; partial maximum tables stay disabled.
 global.__lns_palette = undefined;

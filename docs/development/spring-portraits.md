@@ -1,5 +1,9 @@
 # Adeline spring portrait coverage
 
+This records the original spring expansion. The later
+[spring and summer slice](seasonal-portraits.md) raises the export/package limit
+to 50 and adds verification across both atlas families.
+
 This slice adds an opt-in recipe for all 25 spring portrait strips in the supplied
 archive: 50 frames in total. The default installer recipe remains the neutral
 portrait that the user tested. Other outfits, overworld animations, secondary

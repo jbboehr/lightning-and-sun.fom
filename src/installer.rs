@@ -218,11 +218,9 @@ pub fn install(
             .unwrap_or_else(|| vec![format!("{}.png", installed::SOURCE)]),
     };
     for asset in &assets {
-        toggle::sprite_pair(asset)?;
         ensure!(
-            asset.starts_with("assets/animations/NPCs/Adeline/Portraits/Spring/")
-                && asset.ends_with(".png"),
-            "Expected an exact Adeline spring portrait path"
+            *asset == toggle::portrait(asset)?.asset_path(),
+            "Expected an exact Adeline spring or summer portrait path"
         );
     }
     eprintln!(

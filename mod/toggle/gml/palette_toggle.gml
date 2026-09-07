@@ -1,4 +1,4 @@
-// Locally packaged spring portraits, with vanilla as the session default.
+// Locally packaged portraits, with vanilla as the session default.
 function __lns_palette_runtime() {
     if (global[$ "__lns_palette"] == undefined) {
         global.__lns_palette = {
@@ -56,8 +56,6 @@ function lns_palette_toggle() {
     lns_palette_apply(ANCHOR.get_menu(Menu.Textbox));
     var label = "Adeline palette: " + state.names[state.selected];
     mmapi_log_info("lns_palette", label);
-    var notices = ANCHOR.get_menu(Menu.InfoToasts);
-    if (notices != undefined) notices.create_notification(ANCHOR.wrap_for_local(label));
 }
 
 function lns_palette_initialize() {

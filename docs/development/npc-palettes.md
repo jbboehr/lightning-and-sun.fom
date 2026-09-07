@@ -130,9 +130,10 @@ above exercised this new set separately from the synthetic test suite.
 
 ## Remaining work
 
-The next useful check is an in-game visual pass of this small NPC trial. The
-existing `./tmp/play-masked` desktop launcher still has the approved creator
-trial; it has not been switched to these NPC choices. Other seasons, outfits,
+The `./tmp/play-masked` desktop launcher now contains this NPC trial; its
+installation passed the real atlas verification. User visual feedback on that
+installation is pending. The next [seasonal coverage slice](seasonal-portraits.md)
+adds summer in a separate playtest copy. Other seasons, outfits,
 lighting, and overworld sprites still need their own classification and masks.
 Expanding the catalog into a source recoloring map for another character requires
 reviewing that character's full expression set and protecting shared colors.

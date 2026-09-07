@@ -7,7 +7,11 @@ use anyhow::{Context, Result, ensure};
 use image::{GenericImageView, RgbaImage};
 use rc_zip_sync::{ArchiveHandle, ReadZip};
 use serde::Deserialize;
-use std::{collections::BTreeSet, fs, path::Path};
+use std::{
+    collections::{BTreeMap, BTreeSet},
+    fs,
+    path::Path,
+};
 
 pub const SOURCE: &str =
     "assets/animations/NPCs/Adeline/Portraits/Spring/spr_portrait_adeline_spring_neutral";
@@ -45,6 +49,37 @@ struct AtlasPage {
     placements: Vec<Placement>,
 }
 
+fn atlas_pages(archive: &ArchiveHandle<'_, fs::File>, atlas: &str) -> Result<Vec<AtlasPage>> {
+    // MOMI adds atlas frames and metadata; it does not add loose variant PNGs.
+    let mut pages = Vec::new();
+    let prefix = format!("assets/atlases/{atlas}Atlas");
+    for entry in archive.entries() {
+        let Some(suffix) = entry
+            .name
+            .strip_prefix(&prefix)
+            .and_then(|s| s.strip_suffix(".meta.toml"))
+        else {
+            continue;
+        };
+        if !suffix.is_empty()
+            && !suffix
+                .strip_prefix('_')
+                .is_some_and(|n| n.parse::<u32>().is_ok())
+        {
+            continue;
+        }
+        let placements: Atlas =
+            toml::from_str(std::str::from_utf8(&bytes(archive, &entry.name)?)?)?;
+        let png = format!("{}.png", entry.name.strip_suffix(".meta.toml").unwrap());
+        pages.push(AtlasPage {
+            image: rgba(&bytes(archive, &png)?)?,
+            placements: placements.asset_properties.animations,
+        });
+    }
+    ensure!(!pages.is_empty(), "Missing {atlas} atlas pages");
+    Ok(pages)
+}
+
 pub fn verify(archive: &Path, original: &Path, modified: &Path) -> Result<()> {
     verify_variants(archive, original, &[toggle::Variant::blue(modified)])
 }
@@ -61,34 +96,16 @@ pub fn verify_variants(
     let (images, _) = inventory(original)?;
     let mut pairs = Vec::new();
     let mut ids = BTreeSet::new();
-    // MOMI adds atlas frames and metadata; it does not add loose variant PNGs.
-    let mut pages = Vec::new();
-    for entry in archive.entries() {
-        let Some(suffix) = entry
-            .name
-            .strip_prefix("assets/atlases/PortraitsSpringAtlas")
-            .and_then(|s| s.strip_suffix(".meta.toml"))
-        else {
-            continue;
-        };
-        if !suffix.is_empty()
-            && !suffix
-                .strip_prefix('_')
-                .is_some_and(|n| n.parse::<u32>().is_ok())
-        {
-            continue;
+    let mut atlases = BTreeMap::new();
+    for name in images.keys() {
+        let atlas = toggle::portrait(name)?.atlas;
+        if !atlases.contains_key(atlas) {
+            atlases.insert(atlas, atlas_pages(&archive, atlas)?);
         }
-        let placements: Atlas =
-            toml::from_str(std::str::from_utf8(&bytes(&archive, &entry.name)?)?)?;
-        let png = format!("{}.png", entry.name.strip_suffix(".meta.toml").unwrap());
-        pages.push(AtlasPage {
-            image: rgba(&bytes(&archive, &png)?)?,
-            placements: placements.asset_properties.animations,
-        });
     }
-    ensure!(!pages.is_empty(), "Missing PortraitsSpring atlas pages");
     for (name, path) in images {
-        let pair = toggle::sprite_pair(&name)?;
+        let portrait = toggle::portrait(&name)?;
+        let pages = &atlases[portrait.atlas];
         let metadata_path = name
             .strip_suffix(".png")
             .context("Expected a PNG portrait")?;
@@ -116,6 +133,10 @@ pub fn verify_variants(
         let frames = meta
             .get("asset_properties")
             .context("Missing frame properties")?;
+        ensure!(
+            frames.get("atlas").and_then(toml::Value::as_str) == Some(portrait.atlas),
+            "Portrait uses the wrong season's atlas"
+        );
         let size = frames
             .get("frame_size")
             .and_then(toml::Value::as_array)
@@ -129,16 +150,10 @@ pub fn verify_variants(
                 .and_then(toml::Value::as_integer)
                 .context("Missing frame count")?,
         )?;
-        check_frames(
-            &pages,
-            &original_id,
-            &rgba(&before)?,
-            [width, height],
-            count,
-        )?;
-        let mut group = vec![pair[0].clone()];
+        check_frames(pages, &original_id, &rgba(&before)?, [width, height], count)?;
+        let mut group = vec![portrait.source.to_owned()];
         for variant in variants {
-            let sprite = toggle::variant_name(&name, &variant.id)?;
+            let sprite = portrait.variant_name(&variant.id);
             let installed = document(
                 &archive,
                 &format!("assets/animations/LightningAndSun/{sprite}.meta.toml"),
@@ -158,7 +173,7 @@ pub fn verify_variants(
             let id = uid(&installed)?;
             ensure!(ids.insert(id.clone()), "Portrait animation IDs overlap");
             let expected = rgba(&fs::read(variant.directory.join(&name))?)?;
-            check_frames(&pages, &id, &expected, [width, height], count)?;
+            check_frames(pages, &id, &expected, [width, height], count)?;
             group.push(sprite);
         }
         pairs.push(group);

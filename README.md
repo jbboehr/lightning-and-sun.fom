@@ -53,10 +53,25 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
 Press **F6** to cycle **Vanilla → Debug Blue → Player 01 → Player 18 → Player 33**.
 The three numbered palettes come from the game's player customization colors.
 They cover all 25 Adeline spring expressions and share the reviewed skin regions.
-The game shows the chosen palette in a notification when the HUD is available.
+Palette switching is silent so popups cannot obscure the portrait; the game log
+records the selected name.
 Every launch starts with Vanilla. Lips and blush remain provisional; these player
 colors have not yet had a full portrait art pass. See
 [palette options](docs/TOOLS.md#palette-catalog-and-preset-sets) to choose other ramps.
+
+For both spring and summer outfits, use this trial instead after uninstalling the
+previous study:
+
+```sh
+target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
+  --presets palettes/sets/adeline-seasonal-trial.json
+```
+
+F6 cycles **Vanilla → Debug Blue → Hayden → Ryis → Seridia** across all 25
+expressions in each outfit. The selected palette carries across outfit changes
+for the current session. These colors are adapted from the named NPCs; only
+Adeline's portraits change. Autumn, winter, special outfits, and overworld sprites
+are not covered yet.
 
 The included palette is tied to the reviewed portrait's original PNG bytes. If
 those change, installation stops until the region definition is reviewed. See
@@ -76,8 +91,8 @@ and custom palette input.
 Follow [TOOLS.md](docs/TOOLS.md) to export the portrait, generate a preview, and build a
 local MOMI package. The experimental `package-toggle` mode keeps vanilla installed
 and adds blue variants. Press **F6** during play to switch the included Adeline
-spring portraits; each game launch starts with vanilla. Portraits outside the
-chosen recipe and other characters are unchanged. There is no preset menu or
+spring and summer portraits; each game launch starts with vanilla. Portraits
+outside the chosen recipe and other characters are unchanged. There is no preset menu or
 graphical installer yet.
 See [INVESTIGATION.md](docs/INVESTIGATION.md) for compatibility and experiment limits.
 

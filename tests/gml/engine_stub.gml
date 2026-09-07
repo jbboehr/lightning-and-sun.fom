@@ -9,10 +9,12 @@ global.warning_count = 0;
 global.hook_count = 0;
 global.third_preset = false;
 global.max_presets = false;
-global.notice = undefined;
+global.seasons = false;
+global.notices = [];
+global.palette_log = undefined;
 ANCHOR = {
     get_menu: function(kind) {
-        if (kind == Menu.InfoToasts) return { create_notification: function(label) { global.notice = label; } };
+        if (kind == Menu.InfoToasts) return { create_notification: function(label) { array_push(global.notices, label); } };
         return global.menu;
     },
     wrap_for_local: function(label) { return label; }
@@ -31,9 +33,13 @@ function mmapi_hotkey_register(key, callback) {
     global.hotkey = callback;
     global.hotkey_count += 1;
 }
-function mmapi_log_info(name, message) {}
+function mmapi_log_info(name, message) { global.palette_log = message; }
 function mmapi_log_warn(name, message) { global.warning_count += 1; }
 function lns_palette_assets() {
+    if (global.seasons) return [
+        ["spr_portrait_adeline_spring_neutral", "spr_lns_adeline_spring_neutral_blue", "spr_lns_adeline_spring_neutral_warm"],
+        ["spr_portrait_adeline_summer_neutral", "spr_lns_adeline_summer_neutral_blue", "spr_lns_adeline_summer_neutral_warm"]
+    ];
     if (global.max_presets) return [[
         "spr_portrait_adeline_spring_neutral",
         "spr_lns_adeline_spring_neutral_blue",
@@ -68,6 +74,9 @@ function try_string_to_asset(name) {
     if (name == "spr_lns_adeline_spring_happy_blue") return 50;
     if (name == "spr_lns_adeline_spring_neutral_warm") return 60;
     if (name == "spr_lns_adeline_spring_happy_warm") return 70;
+    if (name == "spr_portrait_adeline_summer_neutral") return 80;
+    if (name == "spr_lns_adeline_summer_neutral_blue") return 90;
+    if (name == "spr_lns_adeline_summer_neutral_warm") return 100;
     if (name == "spr_lns_adeline_spring_neutral_two") return 61;
     if (name == "spr_lns_adeline_spring_neutral_three") return 62;
     if (name == "spr_lns_adeline_spring_neutral_four") return 63;
