@@ -1,5 +1,8 @@
 # Adeline beach portraits
 
+The subsequent [wedding extension](wedding-portraits.md) covers all 126 Adeline
+portrait strips while retaining this trial's 119 masks and outputs unchanged.
+
 This extends the [four-season trial](all-season-portraits.md) with the 19 strips
 in Adeline's `Beach` folder. There are 119 strips and 238 original frames in the
 combined trial. Vanilla, Debug Blue, Hayden, Ryis, and Seridia remain the five

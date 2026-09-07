@@ -4,6 +4,7 @@ use std::{fs, path::Path, process::Command};
 
 const EXPRESSIONS: &str = "angry_blush blush cartoon_embarrassed concerned embarrassed embarrassed_tired evasive_tired gloomy_special happy happy_blush hope_special mad neutral neutral_tired sad shocked sick_eyes_closed sick_eyes_open sick_smile sick_think sigh sly think ugh wink";
 const BEACH_EXPRESSIONS: &str = "angry_blush bath_neutral blush cartoon_embarrassed concerned embarrassed gloomy_special happy happy_blush hope_special mad neutral sad shocked sigh sly think ugh wink";
+const WEDDING_EXPRESSIONS: &str = "embarrassed happy_blush hope_special neutral sad sly think";
 
 fn fixture(root: &Path, season: &str, expression: &str, atlas: &str, color: [u8; 4]) {
     fs::create_dir_all(root).unwrap();
@@ -15,7 +16,7 @@ fn fixture(root: &Path, season: &str, expression: &str, atlas: &str, color: [u8;
 }
 
 #[test]
-fn seasonal_and_beach_package_keeps_all_119_portraits_in_their_source_atlas() {
+fn complete_package_keeps_all_126_portraits_in_their_source_atlas() {
     let temp = tempfile::tempdir().unwrap();
     let original = temp.path().join("original");
     let modified = temp.path().join("modified");
@@ -26,11 +27,12 @@ fn seasonal_and_beach_package_keeps_all_119_portraits_in_their_source_atlas() {
         ("autumn", "PortraitsAutumn"),
         ("winter", "PortraitsWinter"),
         ("beach", "PortraitsSummer"),
+        ("wedding", "PortraitsMisc"),
     ] {
-        let expressions = if season == "beach" {
-            BEACH_EXPRESSIONS
-        } else {
-            EXPRESSIONS
+        let expressions = match season {
+            "beach" => BEACH_EXPRESSIONS,
+            "wedding" => WEDDING_EXPRESSIONS,
+            _ => EXPRESSIONS,
         };
         for expression in expressions.split_whitespace() {
             fixture(&original, season, expression, atlas, [10, 20, 30, 255]);
@@ -53,18 +55,19 @@ fn seasonal_and_beach_package_keeps_all_119_portraits_in_their_source_atlas() {
         String::from_utf8_lossy(&result.stderr)
     );
     let report: Value = serde_json::from_slice(&result.stdout).unwrap();
-    assert_eq!(report["variants"].as_array().unwrap().len(), 119);
+    assert_eq!(report["variants"].as_array().unwrap().len(), 126);
     for (season, atlas) in [
         ("spring", "PortraitsSpring"),
         ("summer", "PortraitsSummer"),
         ("autumn", "PortraitsAutumn"),
         ("winter", "PortraitsWinter"),
         ("beach", "PortraitsSummer"),
+        ("wedding", "PortraitsMisc"),
     ] {
-        let expressions = if season == "beach" {
-            BEACH_EXPRESSIONS
-        } else {
-            EXPRESSIONS
+        let expressions = match season {
+            "beach" => BEACH_EXPRESSIONS,
+            "wedding" => WEDDING_EXPRESSIONS,
+            _ => EXPRESSIONS,
         };
         for expression in expressions.split_whitespace() {
             let path = output.join(format!(
@@ -90,10 +93,14 @@ fn seasonal_and_beach_package_keeps_all_119_portraits_in_their_source_atlas() {
         .unwrap()
         .0;
     let groups: Value = serde_json::from_str(table).unwrap();
-    assert_eq!(groups.as_array().unwrap().len(), 119);
+    assert_eq!(groups.as_array().unwrap().len(), 126);
     assert!(groups.as_array().unwrap().contains(&json!([
         "spr_portrait_adeline_beach_bath_neutral",
         "spr_lns_adeline_beach_bath_neutral_blue"
+    ])));
+    assert!(groups.as_array().unwrap().contains(&json!([
+        "spr_portrait_adeline_wedding_happy_blush",
+        "spr_lns_adeline_wedding_happy_blush_blue"
     ])));
     assert!(groups.as_array().unwrap().contains(&json!([
         "spr_portrait_adeline_spring_neutral",
@@ -109,6 +116,7 @@ fn packaging_rejects_a_season_with_the_other_seasons_atlas() {
         ("autumn", "PortraitsWinter"),
         ("winter", "PortraitsAutumn"),
         ("beach", "PortraitsSpring"),
+        ("wedding", "PortraitsSummer"),
     ] {
         let temp = tempfile::tempdir().unwrap();
         let original = temp.path().join("original");
@@ -137,6 +145,8 @@ fn packaging_rejects_expressions_absent_from_the_selected_outfit() {
         ("beach", "sick_smile"),
         ("beach", "neutral_tired"),
         ("summer", "bath_neutral"),
+        ("wedding", "happy"),
+        ("wedding", "bath_neutral"),
     ] {
         let temp = tempfile::tempdir().unwrap();
         let original = temp.path().join("original");
@@ -146,14 +156,22 @@ fn packaging_rejects_expressions_absent_from_the_selected_outfit() {
             &original,
             outfit,
             expression,
-            "PortraitsSummer",
+            if outfit == "wedding" {
+                "PortraitsMisc"
+            } else {
+                "PortraitsSummer"
+            },
             [10, 20, 30, 255],
         );
         fixture(
             &modified,
             outfit,
             expression,
-            "PortraitsSummer",
+            if outfit == "wedding" {
+                "PortraitsMisc"
+            } else {
+                "PortraitsSummer"
+            },
             [40, 50, 60, 255],
         );
         let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))

@@ -220,7 +220,7 @@ pub fn install(
     for asset in &assets {
         ensure!(
             *asset == toggle::portrait(asset)?.asset_path(),
-            "Expected an exact Adeline seasonal or beach portrait path"
+            "Expected an exact Adeline seasonal, beach, or wedding portrait path"
         );
     }
     eprintln!(

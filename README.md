@@ -59,19 +59,20 @@ Every launch starts with Vanilla. Lips and blush remain provisional; these playe
 colors have not yet had a full portrait art pass. See
 [palette options](docs/TOOLS.md#palette-catalog-and-preset-sets) to choose other ramps.
 
-For all four seasonal outfits plus beach portraits, uninstall the previous study
+For all four seasonal outfits plus beach and wedding portraits, uninstall the previous study
 and use this trial:
 
 ```sh
 target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
-  --presets palettes/sets/adeline-seasonal-beach-trial.json
+  --presets palettes/sets/adeline-portraits-trial.json
 ```
 
 F6 cycles **Vanilla → Debug Blue → Hayden → Ryis → Seridia** across all 25
-expressions in each seasonal outfit and 19 beach strips, including the towel
-portrait. The selected palette carries across outfit changes for the current
+expressions in each seasonal outfit, 19 beach strips (including the towel), and
+seven wedding strips: all 126 Adeline portrait strips in the reviewed game build.
+The selected palette carries across outfit changes for the current
 session. These colors are adapted from the named NPCs; only
-Adeline's portraits change. Wedding portraits and overworld sprites remain original.
+Adeline's portraits change. Overworld sprites remain original.
 
 The included palette is tied to the reviewed portrait's original PNG bytes. If
 those change, installation stops until the region definition is reviewed. See
@@ -91,7 +92,7 @@ and custom palette input.
 Follow [TOOLS.md](docs/TOOLS.md) to export the portrait, generate a preview, and build a
 local MOMI package. The experimental `package-toggle` mode keeps vanilla installed
 and adds blue variants. Press **F6** during play to switch the included Adeline
-seasonal and beach portraits; each game launch starts with vanilla. Portraits
+seasonal, beach, and wedding portraits; each game launch starts with vanilla. Portraits
 outside the chosen recipe and other characters are unchanged. There is no preset menu or
 graphical installer yet.
 See [INVESTIGATION.md](docs/INVESTIGATION.md) for compatibility and experiment limits.

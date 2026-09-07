@@ -1,0 +1,10 @@
+{
+  "description": "Adeline seasonal, beach, and wedding debug blue, with source-bound skin masks.",
+  "rgba_map": {
+    "#9F5544": "#445F83",
+    "#C47054": "#6687AD",
+    "#D48363": "#7F9FBD",
+    "#E3A17B": "#9DB9D4"
+  },
+  "profile": "../profiles/adeline-portraits.json"
+}

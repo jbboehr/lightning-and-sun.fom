@@ -215,6 +215,7 @@ fn seasonal_install_checks_each_atlas_and_restores_the_original_archive() {
         ("autumn", "Autumn", "PortraitsAutumn"),
         ("winter", "Winter", "PortraitsWinter"),
         ("beach", "Beach", "PortraitsSummer"),
+        ("wedding", "Wedding", "PortraitsMisc"),
     ] {
         for case in [
             "mixed",

@@ -43,7 +43,7 @@ Use `--palette path/to/palette.json` on `install` to use another exact-color rec
 Use `--presets palettes/sets/adeline-trial.json` for the five-choice spring trial
 described below. `--palette` and `--presets` are mutually exclusive.
 When that recipe has regions, their exact asset paths select which spring, summer,
-autumn, winter, or beach portraits to install. A recipe without regions keeps the
+autumn, winter, beach, or wedding portraits to install. A recipe without regions keeps the
 neutral-only selection. Use
 `--palette palettes/stylized/adeline-spring.json` for all 25 supported spring
 expressions. Missing or changed source files stop installation. Lip refinement
@@ -58,6 +58,10 @@ Use `--presets palettes/sets/adeline-seasonal-beach-trial.json` to include the
 19 beach strips as well, including the towel portrait, for 119 strips in total.
 Its blue-only recipe is `palettes/stylized/adeline-seasonal-beach.json`.
 Wedding portraits and overworld sprites remain original.
+Use `--presets palettes/sets/adeline-portraits-trial.json` to add all seven wedding
+strips, covering all 126 Adeline portrait strips in the reviewed archive. The
+blue-only recipe is `palettes/stylized/adeline-portraits.json`. Overworld sprites
+remain original; every launch starts with Vanilla.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;
@@ -107,7 +111,7 @@ See [installer internals and verification](development/cli-installer.md).
 The example below selects one portrait animation (two frames). The exporter reads exact
 archive members and their `.meta.toml` files, preserving the `assets/…` tree. It
 does not unpack the entire game or modify the ZIP. Its report pins the source ZIP
-and exported bytes by SHA-256. Repeat `--asset` to select up to 119 distinct PNGs.
+and exported bytes by SHA-256. Repeat `--asset` to select up to 126 distinct PNGs.
 The older replacement `package` command still permits at most two changed assets.
 
 ```sh
@@ -170,12 +174,12 @@ target/release/mistria-palette package-toggle \
 Install that generated folder as `mods/lns_palette` through MOMI v0.15.10. Remove
 the earlier replacement study first so the base portrait is vanilla. This package
 adds separate animations and an F6 hotkey: press F6 again to restore vanilla.
-It accepts one through 119 supported Adeline strips from the four seasons and
-beach, and generates the matching runtime sprite table. Keep both generated GML
+It accepts one through 126 supported Adeline strips from the four seasons,
+beach, and wedding, and generates the matching runtime sprite table. Keep both generated GML
 files in the package.
 The choice lasts for the running game session and is not saved. Rebuild and
 reinstall after changing its palette. See [the developer procedure](development/portrait-toggle.md)
-and [beach coverage](development/beach-portraits.md) for verification details.
+and [complete portrait coverage](development/wedding-portraits.md) for verification details.
 
 Palettes require an `rgba_map` object. Keys and values are `#RRGGBB` or
 `#RRGGBBAA`; omitted alpha means `FF`. Replacements happen simultaneously against
