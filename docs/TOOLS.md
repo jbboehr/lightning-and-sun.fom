@@ -218,6 +218,13 @@ are marked `unreviewed_colors`: they include hair, clothing, animals, and other
 colors, and do not identify NPC skin ramps automatically. The numeric creator
 catalog is also recorded in `palettes/catalog/player.json`.
 
+`palettes/catalog/npc-spring.json` separately records manually sampled skin and
+facial-detail ramps for 36 characters, with PNG hashes and source coordinates.
+Its 34 distinct ramps come from the first frame of spring neutral portraits;
+they are not complete source recoloring maps. Some entries have three or five
+shades and need adaptation before use with Adeline's four-color profile.
+See [the NPC palette study](development/npc-palettes.md) for scope and evidence.
+
 `palettes/profiles/adeline-spring.json` holds the source colors and reviewed regions
 for all 25 spring expressions. A single-color recipe can reference this profile
 with `"profile": "../profiles/adeline-spring.json"` alongside its `rgba_map`.
@@ -248,6 +255,12 @@ or underscores, at most 32 characters. Labels must be nonblank, contain no contr
 characters, and fit in 64 UTF-8 bytes. A set accepts one through eight variants;
 Vanilla is implicit and cannot be used as a variant ID. This limit keeps the
 prebuilt portrait count bounded while the prototype is evaluated.
+
+For NPC-derived colors, use `palettes/sets/adeline-npc-trial.json` instead. It
+includes Debug Blue plus Hayden, Ryis, and Seridia palettes on the same Adeline
+spring expressions. Pass this path to either `build-presets` or `install` in
+place of `adeline-trial.json`. These choices recolor Adeline; they do not modify
+the source NPCs.
 
 Close the game and remove any previous study, then install the set:
 

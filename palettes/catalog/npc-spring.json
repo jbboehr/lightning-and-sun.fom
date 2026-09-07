@@ -1,0 +1,1348 @@
+{
+  "excluded": [
+    {
+      "asset": "assets/animations/NPCs/Dozy/Portraits/spr_portrait_dozy_spring_neutral.png",
+      "character": "Dozy",
+      "reason": "Animal portrait; not classified as a skin ramp"
+    },
+    {
+      "asset": "assets/animations/NPCs/Great Bird/Portraits/spr_portrait_great_bird_spring_neutral.png",
+      "character": "Great Bird",
+      "reason": "Animal portrait; not classified as a skin ramp"
+    },
+    {
+      "asset": "assets/animations/NPCs/Henrietta/Portraits/spr_portrait_henrietta_spring_neutral.png",
+      "character": "Henrietta",
+      "reason": "Animal portrait; not classified as a skin ramp"
+    }
+  ],
+  "ramps": [
+    {
+      "colors": [
+        "#E3A17BFF",
+        "#D48363FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "id": "npc_adeline",
+      "label": "Adeline",
+      "source": {
+        "asset": "assets/animations/NPCs/Adeline/Portraits/Spring/spr_portrait_adeline_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            150,
+            77
+          ],
+          [
+            152,
+            73
+          ],
+          [
+            146,
+            73
+          ],
+          [
+            153,
+            80
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "52e2871f2c96db217a568d15f3daaef666c2af9b90263ef0b39f0e38722c51bc"
+      }
+    },
+    {
+      "colors": [
+        "#FCDEBEFF",
+        "#EFA67AFF",
+        "#C16640FF",
+        "#914A2CFF"
+      ],
+      "id": "npc_balor",
+      "label": "Balor",
+      "source": {
+        "asset": "assets/animations/NPCs/Balor/Portraits/Spring/spr_portrait_balor_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            150,
+            72
+          ],
+          [
+            151,
+            72
+          ],
+          [
+            152,
+            72
+          ],
+          [
+            156,
+            79
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "222a427b39b5569b03746b07bfdeb6733f0edb6d87f4e666aac30c9f5ab01133"
+      }
+    },
+    {
+      "colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF"
+      ],
+      "id": "npc_caldarus",
+      "label": "Caldarus",
+      "source": {
+        "asset": "assets/animations/NPCs/Caldarus/Portraits/Spring/spr_portrait_caldarus_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            128,
+            70
+          ],
+          [
+            131,
+            65
+          ],
+          [
+            128,
+            69
+          ],
+          [
+            129,
+            69
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "8d872563d69ebd14848e5a72fa517e9f7bbf5108acd84375c45a4a17af3f5b16"
+      }
+    },
+    {
+      "colors": [
+        "#FCDEBEFF",
+        "#F5BB90FF",
+        "#EA9866FF",
+        "#B35A35FF"
+      ],
+      "id": "npc_celine",
+      "label": "Celine",
+      "source": {
+        "asset": "assets/animations/NPCs/Celine/Portraits/Spring/spr_portrait_celine_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            150,
+            85
+          ],
+          [
+            150,
+            83
+          ],
+          [
+            151,
+            84
+          ],
+          [
+            152,
+            86
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "900ca2057c3bb69764508e1f3bc697e1d49eda75331f25860e6fffc3e9408fb7"
+      }
+    },
+    {
+      "colors": [
+        "#FCD8A9FF",
+        "#EAB979FF",
+        "#D99D60FF",
+        "#B7672FFF"
+      ],
+      "id": "npc_darcy",
+      "label": "Darcy",
+      "source": {
+        "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            150,
+            80
+          ],
+          [
+            149,
+            82
+          ],
+          [
+            159,
+            82
+          ],
+          [
+            150,
+            83
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "eecd54aa1c15ae1571c2b67c194552d347ab22226eb09ca4c2cf9372ee1efcf1"
+      }
+    },
+    {
+      "colors": [
+        "#A3614EFF",
+        "#83453AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "id": "npc_darren",
+      "label": "Darren",
+      "source": {
+        "asset": "assets/animations/NPCs/Darren/Portraits/spr_portrait_darren_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            158,
+            65
+          ],
+          [
+            158,
+            62
+          ],
+          [
+            158,
+            60
+          ],
+          [
+            166,
+            68
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "2f67503aeec4f3fed6f54239f081aeba77c267397228b25d9e757d90d84c4ca6"
+      }
+    },
+    {
+      "colors": [
+        "#F5C88EFF",
+        "#DD905BFF",
+        "#A8571CFF"
+      ],
+      "id": "npc_dell",
+      "label": "Dell",
+      "source": {
+        "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            150,
+            101
+          ],
+          [
+            150,
+            104
+          ],
+          [
+            154,
+            99
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "9b4279cc83b32eed6ab4bbf933351e3d7d86796eca55607b694ed44d6c5d70ce"
+      }
+    },
+    {
+      "colors": [
+        "#E9A980FF",
+        "#D98E72FF",
+        "#C9785AFF",
+        "#9C5241FF"
+      ],
+      "id": "npc_eiland",
+      "label": "Eiland",
+      "source": {
+        "asset": "assets/animations/NPCs/Eiland/Portraits/Spring/spr_portrait_eiland_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            144,
+            69
+          ],
+          [
+            144,
+            72
+          ],
+          [
+            143,
+            72
+          ],
+          [
+            144,
+            73
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "2b5e8540132b993f9fa0dcb79448cfd95588445eab7a5d96005a11a7b944dc11"
+      }
+    },
+    {
+      "colors": [
+        "#F6D2AFFF",
+        "#E3B598FF",
+        "#CB9472FF",
+        "#B46D5FFF"
+      ],
+      "id": "npc_elsie",
+      "label": "Elsie",
+      "source": {
+        "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            155,
+            73
+          ],
+          [
+            153,
+            73
+          ],
+          [
+            153,
+            72
+          ],
+          [
+            161,
+            70
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "021868dcb35db930736471ab451dce0fb7bb7a3a797e2f2475edb3cbed85926f"
+      }
+    },
+    {
+      "colors": [
+        "#F4C49CFF",
+        "#DDAB82FF",
+        "#C38C70FF",
+        "#9B6656FF"
+      ],
+      "id": "npc_errol",
+      "label": "Errol",
+      "source": {
+        "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            147,
+            58
+          ],
+          [
+            152,
+            54
+          ],
+          [
+            149,
+            57
+          ],
+          [
+            157,
+            57
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "fb8039f40883eab345993035659b1552ae91ac0acdd3bdc83d95fd314c41d3a6"
+      }
+    },
+    {
+      "colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden",
+      "source": {
+        "asset": "assets/animations/NPCs/Hayden/Portraits/Spring/spr_portrait_hayden_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            146,
+            52
+          ],
+          [
+            149,
+            67
+          ],
+          [
+            164,
+            45
+          ],
+          [
+            157,
+            68
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "6461a864e5e10f4f0e9fe7dad29e85c36fa55db132d41cfca081221c662ee94a"
+      }
+    },
+    {
+      "colors": [
+        "#C9906AFF",
+        "#B36844FF",
+        "#8A3F31FF",
+        "#712922FF"
+      ],
+      "id": "npc_hemlock",
+      "label": "Hemlock",
+      "source": {
+        "asset": "assets/animations/NPCs/Hemlock/Portraits/Spring/spr_portrait_hemlock_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            163,
+            77
+          ],
+          [
+            159,
+            78
+          ],
+          [
+            167,
+            75
+          ],
+          [
+            168,
+            76
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "ddea0e0dd2b16a045279685321b00f4ab3f8c89ac939f3bbcf3af233c7e80061"
+      }
+    },
+    {
+      "colors": [
+        "#F5C88EFF",
+        "#CD9067FF",
+        "#B45732FF",
+        "#762E21FF"
+      ],
+      "id": "npc_holt",
+      "label": "Holt",
+      "source": {
+        "asset": "assets/animations/NPCs/Holt/Portraits/Spring/spr_portrait_holt_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            148,
+            73
+          ],
+          [
+            149,
+            70
+          ],
+          [
+            150,
+            70
+          ],
+          [
+            151,
+            80
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "a9dc7b67531d0387ab8dba4337dd01a7ec6253ca94a926e532bb7e6e2eac1e37"
+      }
+    },
+    {
+      "colors": [
+        "#9B643AFF",
+        "#814030FF",
+        "#752F23FF",
+        "#5B241EFF"
+      ],
+      "id": "npc_josephine",
+      "label": "Josephine",
+      "source": {
+        "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            155,
+            78
+          ],
+          [
+            155,
+            80
+          ],
+          [
+            160,
+            76
+          ],
+          [
+            158,
+            84
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "34f74930a53cc5e7f89627c949a4e5fdd459f249fcb6e8f45c886df218d48b16"
+      }
+    },
+    {
+      "colors": [
+        "#EFD89AFF",
+        "#E3BF7FFF",
+        "#D2AB66FF",
+        "#B87D4CFF"
+      ],
+      "id": "npc_juniper",
+      "label": "Juniper",
+      "source": {
+        "asset": "assets/animations/NPCs/Juniper/Portraits/Spring/spr_portrait_juniper_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            156,
+            77
+          ],
+          [
+            158,
+            76
+          ],
+          [
+            157,
+            75
+          ],
+          [
+            158,
+            74
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "3ebb646d5d7af84c6ea0610eab5d8b98d3137de088ba05218e797eee89e5d739"
+      }
+    },
+    {
+      "colors": [
+        "#9F6250FF",
+        "#854D3CFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "id": "npc_landen",
+      "label": "Landen",
+      "source": {
+        "asset": "assets/animations/NPCs/Landen/Portraits/Spring/spr_portrait_landen_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            157,
+            71
+          ],
+          [
+            157,
+            72
+          ],
+          [
+            159,
+            74
+          ],
+          [
+            161,
+            75
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "08a099db32b286c4b66c3c97e870d18d11ec313ced8a9dea456b9399e9c255ad"
+      }
+    },
+    {
+      "colors": [
+        "#C7875CFF",
+        "#A36049FF",
+        "#6D3328FF",
+        "#4A1B16FF"
+      ],
+      "id": "npc_linnet",
+      "label": "Linnet",
+      "source": {
+        "asset": "assets/animations/NPCs/Linnet/Portraits/spr_portrait_linnet_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            152,
+            67
+          ],
+          [
+            151,
+            68
+          ],
+          [
+            161,
+            73
+          ],
+          [
+            155,
+            69
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "d6bce7b88fb29c7a0f76549a0159d6ffac0f4d016feb360673f521cbbd3ffbdd"
+      }
+    },
+    {
+      "colors": [
+        "#F6D2AFFF",
+        "#CB9879FF",
+        "#AD6F5CFF",
+        "#784B42FF"
+      ],
+      "id": "npc_louis",
+      "label": "Louis",
+      "source": {
+        "asset": "assets/animations/NPCs/Louis/Portraits/Spring/spr_portrait_louis_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            151,
+            79
+          ],
+          [
+            153,
+            80
+          ],
+          [
+            150,
+            78
+          ],
+          [
+            151,
+            78
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "a5c75bfa7405b2437a68af910810e2aae5ea9c233e217872bb18f51d2e163774"
+      }
+    },
+    {
+      "colors": [
+        "#C48E68FF",
+        "#B36844FF",
+        "#712922FF"
+      ],
+      "id": "npc_luc",
+      "label": "Luc",
+      "source": {
+        "asset": "assets/animations/NPCs/Luc/Portraits/Spring/spr_portrait_luc_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            155,
+            104
+          ],
+          [
+            155,
+            106
+          ],
+          [
+            156,
+            106
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "3626ad3df3b6ce580f040713435f21c7b17199f91e136524714a7cdf65f97831"
+      }
+    },
+    {
+      "colors": [
+        "#97623EFF",
+        "#89492AFF",
+        "#713527FF",
+        "#57271DFF"
+      ],
+      "id": "npc_maple",
+      "label": "Maple",
+      "source": {
+        "asset": "assets/animations/NPCs/Maple/Portraits/Spring/spr_portrait_maple_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            151,
+            100
+          ],
+          [
+            152,
+            97
+          ],
+          [
+            152,
+            102
+          ],
+          [
+            153,
+            103
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "b45eaca3b06c7d18d802c16311a6cdb6932a259d5438b516760affbaa844596c"
+      }
+    },
+    {
+      "colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF"
+      ],
+      "id": "npc_march",
+      "label": "March",
+      "source": {
+        "asset": "assets/animations/NPCs/March/Portraits/Spring/spr_portrait_march_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            159,
+            72
+          ],
+          [
+            155,
+            78
+          ],
+          [
+            159,
+            69
+          ],
+          [
+            157,
+            79
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "50156c7be8a18bb9f976f413287c1af2e2017e4eaf84da2efbd62d4b9d3d9468"
+      }
+    },
+    {
+      "colors": [
+        "#DD9266FF",
+        "#CB7A56FF",
+        "#B36644FF",
+        "#7F382BFF"
+      ],
+      "id": "npc_merri",
+      "label": "Merri",
+      "source": {
+        "asset": "assets/animations/NPCs/Merri/Portraits/Spring/spr_portrait_merri_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            150,
+            79
+          ],
+          [
+            150,
+            72
+          ],
+          [
+            149,
+            79
+          ],
+          [
+            153,
+            76
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "533dad9e0b23256fd1619ea740213ee288e3987f35e96c7ba7753d3fb527334c"
+      }
+    },
+    {
+      "colors": [
+        "#FCDEBEFF",
+        "#EFA67AFF",
+        "#B65932FF",
+        "#762E21FF"
+      ],
+      "id": "npc_nora",
+      "label": "Nora",
+      "source": {
+        "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            151,
+            80
+          ],
+          [
+            151,
+            81
+          ],
+          [
+            150,
+            94
+          ],
+          [
+            150,
+            81
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "89cb48012d09b7a420a2b32cfafb4073adf284d370cb3191aadf1bd2d90c498b"
+      }
+    },
+    {
+      "colors": [
+        "#F2DBA7FF",
+        "#DDA966FF",
+        "#C37B43FF",
+        "#B7672FFF",
+        "#813E16FF"
+      ],
+      "id": "npc_olric",
+      "label": "Olric",
+      "source": {
+        "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            147,
+            66
+          ],
+          [
+            146,
+            66
+          ],
+          [
+            149,
+            67
+          ],
+          [
+            147,
+            67
+          ],
+          [
+            152,
+            60
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "aaf07f5a101e79cff3cf3032279ea7a6ff83400eaad1c4cd421469134d36ba9b"
+      }
+    },
+    {
+      "colors": [
+        "#B36644FF",
+        "#9E512FFF",
+        "#7F382BFF",
+        "#541C1EFF"
+      ],
+      "id": "npc_reina",
+      "label": "Reina",
+      "source": {
+        "asset": "assets/animations/NPCs/Reina/Portraits/Spring/spr_portrait_reina_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            149,
+            82
+          ],
+          [
+            148,
+            82
+          ],
+          [
+            147,
+            81
+          ],
+          [
+            148,
+            81
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "aa18c0a3cb34c803dc152a7c21e1acdb02a8f9df8dc507ec9fe9e0e695f28ebd"
+      }
+    },
+    {
+      "colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis",
+      "source": {
+        "asset": "assets/animations/NPCs/Ryis/Portraits/Spring/spr_portrait_ryis_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            148,
+            71
+          ],
+          [
+            148,
+            72
+          ],
+          [
+            150,
+            74
+          ],
+          [
+            154,
+            75
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "b719db1e753c34aa9efbcdd6a0e2728354732af81e55ca9cad8956401d3add13"
+      }
+    },
+    {
+      "colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia",
+      "same_ramp_as": "npc_caldarus",
+      "source": {
+        "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            158,
+            68
+          ],
+          [
+            158,
+            67
+          ],
+          [
+            157,
+            69
+          ],
+          [
+            159,
+            67
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "ac0190731b35aa5f6063c04687b4d5406f2ed1579ace651ee4ab84d5654249b3"
+      }
+    },
+    {
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF"
+      ],
+      "id": "npc_stillwell",
+      "label": "Stillwell",
+      "source": {
+        "asset": "assets/animations/NPCs/Stillwell/Portraits/Spring/spr_portrait_stillwell_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            170,
+            87
+          ],
+          [
+            170,
+            90
+          ],
+          [
+            173,
+            88
+          ],
+          [
+            172,
+            91
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "5eff5ec6322f1200089a0225c54f2c6a5a47c3de6c44fbb92884d3581b4b3675"
+      }
+    },
+    {
+      "colors": [
+        "#FFDBB8FF",
+        "#F2A174FF",
+        "#C4613BFF",
+        "#762E21FF"
+      ],
+      "id": "npc_taliferro",
+      "label": "Taliferro",
+      "source": {
+        "asset": "assets/animations/NPCs/Taliferro/Portraits/Spring/spr_portrait_taliferro_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            150,
+            74
+          ],
+          [
+            149,
+            73
+          ],
+          [
+            150,
+            73
+          ],
+          [
+            148,
+            72
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "5c40da3b73924f34db7126050d708817949b7b36fce071551acb48e9ffeb40ad"
+      }
+    },
+    {
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF"
+      ],
+      "id": "npc_terithia",
+      "label": "Terithia",
+      "source": {
+        "asset": "assets/animations/NPCs/Terithia/Portraits/Spring/spr_portrait_terithia_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            153,
+            83
+          ],
+          [
+            153,
+            82
+          ],
+          [
+            151,
+            83
+          ],
+          [
+            155,
+            83
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "43d3140dcc8a72de21f31e726e7fb932306f05221e1b0d93b752857fcf7e637a"
+      }
+    },
+    {
+      "colors": [
+        "#F9CDA3FF",
+        "#EDA27AFF",
+        "#CD825AFF",
+        "#B65932FF"
+      ],
+      "id": "npc_valen",
+      "label": "Valen",
+      "source": {
+        "asset": "assets/animations/NPCs/Valen/Portraits/Spring/spr_portrait_valen_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            147,
+            76
+          ],
+          [
+            149,
+            77
+          ],
+          [
+            140,
+            82
+          ],
+          [
+            147,
+            78
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "8362b1d941c92d97c6556029a7b1d4f275d7d3e3588e947d3b6476b288a161b1"
+      }
+    },
+    {
+      "colors": [
+        "#B68454FF",
+        "#A15F3FFF",
+        "#7F402BFF",
+        "#541C1EFF"
+      ],
+      "id": "npc_vera",
+      "label": "Vera",
+      "source": {
+        "asset": "assets/animations/NPCs/Vera/Portraits/Spring/spr_portrait_vera_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            148,
+            83
+          ],
+          [
+            147,
+            84
+          ],
+          [
+            149,
+            88
+          ],
+          [
+            148,
+            85
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "44a3c47e2047940c769a9a6059e831516d5a9e666740dbdf41f33d859f2337e6"
+      }
+    },
+    {
+      "colors": [
+        "#F6C38DFF",
+        "#D39876FF",
+        "#AF7456FF",
+        "#A56C54FF"
+      ],
+      "id": "npc_wheedle",
+      "label": "Wheedle",
+      "source": {
+        "asset": "assets/animations/NPCs/Wheedle/Portraits/Spring/spr_portrait_wheedle_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            147,
+            71
+          ],
+          [
+            143,
+            69
+          ],
+          [
+            146,
+            63
+          ],
+          [
+            146,
+            72
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "0f26a6d92f0c9e920346dc66c661fe38979f613013517b2a3dfedb2b5173d4f5"
+      }
+    },
+    {
+      "colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "id": "npc_wiscar",
+      "label": "Wiscar",
+      "source": {
+        "asset": "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            152,
+            74
+          ],
+          [
+            149,
+            75
+          ],
+          [
+            150,
+            80
+          ],
+          [
+            150,
+            79
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "dcf9e6b6b8e0f4823936f1a0970d3624decaa7d410fe417829f073a6937936b4"
+      }
+    },
+    {
+      "colors": [
+        "#A3614EFF",
+        "#83453AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "id": "npc_wynne",
+      "label": "Wynne",
+      "same_ramp_as": "npc_darren",
+      "source": {
+        "asset": "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            150,
+            76
+          ],
+          [
+            146,
+            80
+          ],
+          [
+            153,
+            90
+          ],
+          [
+            147,
+            82
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "62a4b3995c450bd2bf767aedf2a1776cd7be4693db9a8e0e08ab910e8763e0f8"
+      }
+    },
+    {
+      "colors": [
+        "#B0755DFF",
+        "#985750FF",
+        "#642E3DFF"
+      ],
+      "id": "npc_zorel",
+      "label": "Zorel",
+      "source": {
+        "asset": "assets/animations/NPCs/Zorel/Portraits/Spring/spr_portrait_zorel_spring_neutral.png",
+        "frame": 0,
+        "samples": [
+          [
+            145,
+            82
+          ],
+          [
+            146,
+            82
+          ],
+          [
+            147,
+            84
+          ]
+        ],
+        "size": [
+          592,
+          180
+        ],
+        "source_sha256": "32584cfe0e7fc82756a610b83ff475a28a44cf26c55fe0f812e05e1dd01157c1"
+      }
+    }
+  ],
+  "sample_coordinates": "Zero-based PNG coordinates, one point per color in the same order.",
+  "scope": "Manually selected skin and facial-detail shades in frame 0 of each spring neutral portrait, ordered light to dark. Some shades also appear in lips, hair or clothing. Blush, cosmetics, highlights and intermediate colors are not exhaustively classified. Not a complete source recoloring map.",
+  "source_archive_sha256": "b4d4b47afa1459d0d4aa4b6cacffe7b2f30f11a3f6a35e471e58bb2dafc636f5"
+}

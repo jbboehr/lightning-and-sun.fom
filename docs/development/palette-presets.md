@@ -28,6 +28,10 @@ Manual review of representative neutral portraits confirmed that NPC portraits
 need their own source-color classification. A full NPC ramp catalog remains work
 for a later art slice.
 
+The subsequent [NPC palette study](npc-palettes.md) records manually sampled
+ramps for the 36 non-animal spring neutral portraits and a separate Adeline trial.
+Its scope remains narrower than a complete NPC source-color classification.
+
 Only numeric creator colors and provenance are stored in
 `palettes/catalog/player.json`. Full histograms, source previews, recolored PNGs,
 and generated MOMI packages stay in ignored local directories.
