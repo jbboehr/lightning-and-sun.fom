@@ -89,7 +89,7 @@ pub fn animation(path: &str) -> Result<Animation<'_>> {
         .context("Invalid animation filename")?;
     if let Some(cycle) = source.strip_prefix("spr_npc_adeline_spring_") {
         ensure!(
-            "idle_north idle_south idle_east walk_north walk_south walk_east"
+            "idle_north idle_south idle_east walk_north walk_south walk_east sit_north sit_south sit_east drink_north drink_south drink_east eat_north eat_south eat_east blink_south blink_east"
                 .split_whitespace()
                 .any(|name| name == cycle),
             "Unsupported Adeline spring world animation: {cycle}"
@@ -115,7 +115,7 @@ pub fn animation(path: &str) -> Result<Animation<'_>> {
         } else if let Some(expression) = source.strip_prefix("spr_portrait_adeline_wedding_") {
             ("Wedding", "PortraitsMisc", expression)
         } else {
-            anyhow::bail!("Only Adeline portraits and spring idle/walk sprites are supported");
+            anyhow::bail!("Only Adeline portraits and reviewed spring world sprites are supported");
         };
     let expressions = match season {
         "Beach" => BEACH_EXPRESSIONS,
@@ -176,8 +176,8 @@ pub fn package_variants(original: &Path, variants: &[Variant], output: &Path) ->
     let mut report = reports[0].clone();
     let rows = report["files"].as_array().unwrap();
     ensure!(
-        (1..=132).contains(&rows.len()),
-        "Select between one and 132 supported Adeline animations"
+        (1..=143).contains(&rows.len()),
+        "Select between one and 143 supported Adeline animations"
     );
     let mut names = BTreeSet::new();
     let mut pairs = Vec::new();

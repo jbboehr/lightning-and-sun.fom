@@ -43,7 +43,7 @@ Use `--palette path/to/palette.json` on `install` to use another exact-color rec
 Use `--presets palettes/sets/adeline-trial.json` for the five-choice spring trial
 described below. `--palette` and `--presets` are mutually exclusive.
 When that recipe has regions, their exact asset paths select which supported
-Adeline portraits and spring idle/walk sprites to install. A recipe without regions keeps the
+Adeline portraits and reviewed spring world sprites to install. A recipe without regions keeps the
 neutral-only selection. Use
 `--palette palettes/stylized/adeline-spring.json` for all 25 supported spring
 expressions. Missing or changed source files stop installation. Lip refinement
@@ -66,6 +66,11 @@ Use `--presets palettes/sets/adeline-world-trial.json` to include those 126 port
 and six spring overworld idle/walk strips. F6 switches both together. North, south,
 east, and mirrored west are covered; other actions and overworld outfits remain
 original. Its blue-only recipe is `palettes/stylized/adeline-world-trial.json`.
+Use `--presets palettes/sets/adeline-world-actions-trial.json` to add spring sitting,
+eating, drinking, and blinking, for 143 strips total. Its blue-only recipe is
+`palettes/stylized/adeline-world-actions.json`. Other world actions/outfits remain
+original. See [the action study](development/overworld-actions.md) for coverage
+and verification details.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;
@@ -115,7 +120,7 @@ See [installer internals and verification](development/cli-installer.md).
 The example below selects one portrait animation (two frames). The exporter reads exact
 archive members and their `.meta.toml` files, preserving the `assets/…` tree. It
 does not unpack the entire game or modify the ZIP. Its report pins the source ZIP
-and exported bytes by SHA-256. Repeat `--asset` to select up to 132 distinct PNGs.
+and exported bytes by SHA-256. Repeat `--asset` to select up to 143 distinct PNGs.
 The older replacement `package` command still permits at most two changed assets.
 
 ```sh
@@ -178,9 +183,10 @@ target/release/mistria-palette package-toggle \
 Install that generated folder as `mods/lns_palette` through MOMI v0.15.10. Remove
 the earlier replacement study first so the base portrait is vanilla. This package
 adds separate animations and an F6 hotkey: press F6 again to restore vanilla.
-It accepts one through 132 supported Adeline strips: portraits from the four
-seasons, beach, and wedding, plus spring overworld idle/walk north, south, and
-east. It generates the matching runtime sprite table. Keep both generated GML
+It accepts one through 143 supported Adeline strips: portraits from the four
+seasons, beach, and wedding, plus spring overworld idle, walk, sit, eat, and drink
+in north, south, and east directions, and blink in south/east. It generates the
+matching runtime sprite table. Keep both generated GML
 files in the package.
 The choice lasts for the running game session and is not saved. Rebuild and
 reinstall after changing its palette. See [the developer procedure](development/portrait-toggle.md)

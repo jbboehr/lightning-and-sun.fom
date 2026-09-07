@@ -87,6 +87,11 @@ same five choices. This includes all four walking directions. Other overworld
 actions and outfits still show her original skin colors. All 126 portraits are
 included. Each launch starts with Vanilla.
 
+For spring sitting, eating, drinking, and blinking as well, use
+`--presets palettes/sets/adeline-world-actions-trial.json` instead. F6 selects the
+same palette across these actions and the included portraits. Other overworld
+actions and outfits still use their original colors.
+
 The included palette is tied to the reviewed portrait's original PNG bytes. If
 those change, installation stops until the region definition is reviewed. See
 [palette and preview options](docs/TOOLS.md#export-recolor-and-compare) for custom

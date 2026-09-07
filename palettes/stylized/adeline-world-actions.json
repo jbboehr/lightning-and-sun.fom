@@ -1,0 +1,14 @@
+{
+  "description": "Adeline portraits and spring idle, walk, sit, eat, drink, and blink debug blue.",
+  "rgba_map": {
+    "#9F5544": "#445F83",
+    "#C47054": "#6687AD",
+    "#D48363": "#7F9FBD",
+    "#E3A17B": "#9DB9D4",
+    "#E9A980": "#9DB9D4",
+    "#DE8F5D": "#7F9FBD",
+    "#BA6A4C": "#6687AD",
+    "#7D3B14": "#445F83"
+  },
+  "profile": "../profiles/adeline-world-actions.json"
+}
