@@ -1,0 +1,14 @@
+{
+  "description": "Valen portrait skin shading in Debug Blue; eyebrows, eye outlines, mouth interiors, hair, clothing and accessories stay original.",
+  "rgba_map": {
+    "#F9CDA3": "#9DB9D4",
+    "#EDA27A": "#7F9FBD",
+    "#CD825A": "#6687AD",
+    "#B65932": "#445F83",
+    "#762E21": "#445F83",
+    "#DC8662": "#6687AD",
+    "#EDA37B": "#7F9FBD",
+    "#E69A72": "#7F9FBD"
+  },
+  "profile": "../profiles/valen-portraits.json"
+}

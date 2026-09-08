@@ -19,6 +19,8 @@ with separate character files and an independent art reviewer. Integration and
 the user-facing comparison remain one combined task.
 The next [Celine and March batch](celine-march-portraits.md) applies the same
 workflow to larger corpora, including gardening outfits and special expressions.
+The [Balor and Valen batch](balor-valen-portraits.md) continues portrait coverage
+with the same authoring and integration tools.
 
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`

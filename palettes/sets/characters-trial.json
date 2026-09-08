@@ -6,6 +6,8 @@
     {"id": "reina", "presets": "reina-portraits-trial.json"},
     {"id": "juniper", "presets": "juniper-portraits-trial.json"},
     {"id": "celine", "presets": "celine-portraits-trial.json"},
-    {"id": "march", "presets": "march-portraits-trial.json"}
+    {"id": "march", "presets": "march-portraits-trial.json"},
+    {"id": "balor", "presets": "balor-portraits-trial.json"},
+    {"id": "valen", "presets": "valen-portraits-trial.json"}
   ]
 }

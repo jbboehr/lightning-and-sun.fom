@@ -1,0 +1,25 @@
+{
+  "label": "Balor — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Balor/Portraits/"
+  ],
+  "source_colors": [
+    "#FCDEBE",
+    "#EFA67A",
+    "#C16640",
+    "#914A2C",
+    "#F4BF98",
+    "#A75939",
+    "#612026"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#445F83",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/balor-portraits.json"
+}

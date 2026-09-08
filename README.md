@@ -92,8 +92,8 @@ For spring sitting, eating, drinking, and blinking as well, use
 same palette across these actions and the included portraits. Other overworld
 actions and outfits still use their original colors.
 
-To include Hayden, Ryis, Reina, Juniper, Celine, and March alongside Adeline,
-uninstall the previous study, then install the combined trial:
+To include Hayden, Ryis, Reina, Juniper, Celine, March, Balor, and Valen alongside
+Adeline, uninstall the previous study, then install the combined trial:
 
 ```sh
 target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
@@ -103,6 +103,7 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
 **F6** cycles Adeline's palettes, **F8** Hayden's, and **F10** Ryis's.
 **Home** cycles Reina's palettes; **Page Down** cycles Juniper's.
 **Insert** cycles Celine's palettes; **U** cycles March's.
+**I** cycles Balor's palettes; **O** cycles Valen's.
 Each character starts on **Vanilla** every launch, followed by **Debug Blue**
 and three sampled NPC palettes. Selections are independent.
 
@@ -115,16 +116,19 @@ and three sampled NPC palettes. Selections are independent.
 | Juniper | Hayden, Ryis, Seridia |
 | Celine | Hayden, Ryis, Seridia |
 | March | Hayden, Ryis, Seridia |
+| Balor | Hayden, Ryis, Seridia |
+| Valen | Hayden, Ryis, Seridia |
 
 These adapt the sampled colors to each character's reviewed shading and masks.
-The trial includes 133 Hayden, 109 Ryis, 103 Reina, 132 Juniper, 183 Celine, and
-181 March portrait strips covering seasonal, beach, bath, and wedding artwork.
+The trial includes 133 Hayden, 109 Ryis, 103 Reina, 132 Juniper, 183 Celine,
+181 March, 110 Balor, and 92 Valen portrait strips covering seasonal, beach,
+bath, and wedding artwork.
 Celine's gardening portraits and March's special expressions are included.
 Their overworld sprites remain original. Hayden's embarrassed expression and
 possible Reina/Juniper mouth details await a later art pass. To try one character
 alone, use its set instead; for example,
-`--presets palettes/sets/celine-portraits-trial.json` or
-`--presets palettes/sets/march-portraits-trial.json`.
+`--presets palettes/sets/balor-portraits-trial.json` or
+`--presets palettes/sets/valen-portraits-trial.json`.
 
 The included palette is tied to the reviewed portrait's original PNG bytes. If
 those change, installation stops until the region definition is reviewed. See

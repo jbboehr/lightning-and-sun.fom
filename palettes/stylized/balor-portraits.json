@@ -1,0 +1,13 @@
+{
+  "description": "Balor portrait skin shading in Debug Blue; hair, clothing, jewelry, blush, chest scar and mouth interiors stay original.",
+  "rgba_map": {
+    "#FCDEBE": "#9DB9D4",
+    "#EFA67A": "#7F9FBD",
+    "#C16640": "#6687AD",
+    "#914A2C": "#445F83",
+    "#F4BF98": "#7F9FBD",
+    "#A75939": "#445F83",
+    "#612026": "#445F83"
+  },
+  "profile": "../profiles/balor-portraits.json"
+}

@@ -46,11 +46,13 @@ default control bindings and direct keyboard handlers; customized controls can
 still overlap prototype keys. Existing F6/F8/F10/Home/Page Down bindings remain.
 A future palette menu can replace this growing list of prototype keys.
 
-The ignored `./tmp/play-characters` launcher uses `tmp/celine-march-playtest`,
+This batch's retained trial is `tmp/celine-march-playtest`,
 with separate state and read-only source mounts. F7 opens Celine and advances
 expressions; Page Up goes back, F4 switches characters, and F5 switches outfits.
 Press F1 after portrait switches before using the optional Adeline world controls,
 so the preview actor resets to the reviewed Spring outfit.
+The shared `./tmp/play-characters` launcher now follows the
+[latest combined trial](characters.md#local-visual-check).
 
 ## Local build
 
