@@ -1,11 +1,12 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 143 reviewed animations, Hayden's 133
-portrait strips, and Ryis's 109 portrait strips, each with four recolors:
-1,540 generated variant strips. All characters start on Vanilla each session.
-F6 cycles Adeline's five choices; F8 cycles Hayden's five; F10 cycles Ryis's five.
-The [shared NPC presets](shared-npc-presets.md) record the new natural colors.
-Hayden's and Ryis's overworld sprites are not covered. The small
+The combined trial includes Adeline's 143 reviewed animations, Hayden's 133,
+Ryis's 109, Reina's 103, and Juniper's 132 portrait strips, each with four
+recolors: 2,480 generated variant strips. All five characters start on Vanilla
+each session. F6 cycles Adeline, F8 Hayden, F10 Ryis, Home Reina, and Page Down
+Juniper. Each has five choices. The [shared NPC presets](shared-npc-presets.md)
+record the earlier natural colors; the [parallel portrait batch](parallel-portraits.md)
+records Reina and Juniper. Their overworld sprites are not covered. The small
 embarrassed-expression art follow-up remains deferred in
 [Hayden portraits](hayden-portraits.md).
 
@@ -19,12 +20,14 @@ embarrassed-expression art follow-up remains deferred in
 - A collection such as `palettes/sets/characters-trial.json` selects the characters
   and points to each preset set. Paths are relative to the containing definition.
   Select just one entry to build or install that character alone. Existing
-  `build-presets` and `install --presets` also accept a single Hayden or Ryis set.
+  `build-presets` and `install --presets` also accept any single character set.
 
 The registry contains filenames and atlas names, not image data. When expanding
 coverage, add only reviewed paths and verify the atlas against local metadata;
 do not infer it from the filename. Hayden's `beach_shy_special` strip lives in the
 Spring folder and uses `PortraitsSpring` even though its name says beach.
+Juniper's beach portraits use `PortraitsMisc`, whereas Reina's use
+`PortraitsSummer`.
 The current export command retains its prototype limit of 143 strips per
 character. A larger corpus will need that extraction limit revisited.
 
@@ -58,11 +61,11 @@ World objects come from the game's `try_string_to_npc_id` and
 `npc_id_to_gm_obj_id` mapping. The real game does not resolve objects through
 `try_string_to_asset`, and it does not expose Fabricator's `asset_get_index` API.
 
-F6, F8, and F10 are test controls. A future character-and-palette menu should call
-the same `lns_palette_toggle(character)` selection path (or a direct selection
-function) instead of assigning a new key to every NPC. We can finish masks for
-one character before adding the next; changing the shared game hook is not part
-of each art pass.
+The per-character keys are test controls. A future character-and-palette menu
+should call the same `lns_palette_toggle(character)` selection path (or a direct
+selection function) instead of assigning a new key to every NPC. We can finish
+masks for one character before adding the next; changing the shared game hook
+is not part of each art pass.
 
 ## Verification
 
@@ -168,22 +171,23 @@ Local evidence includes `tmp/ryis-integration-final-checks.log`,
 ## Local visual check
 
 The ignored `tmp/play-characters` launcher opens the combined package with its
-own saves and state in `tmp/characters-natural-playtest`, mounting the supplied
-game files read-only. The previous `tmp/ryis-playtest` and
-`tmp/characters-f4-playtest` copies are retained separately.
+own saves and state in `tmp/parallel-character-playtest`, mounting the supplied
+game files read-only. Previous trial copies are retained separately.
 Run it from the normal desktop terminal:
 
 ```sh
 ./tmp/play-characters
 ```
 
-- F7 opens the portrait trial on Ryis and advances expressions; Page Up goes backward.
+- F7 opens the portrait trial on Reina and advances expressions; Page Up goes backward.
 - F4 switches the displayed character; F5 switches outfits. F2 belongs to the
   game's debugger and is not a preview control.
 - F6 cycles Adeline's palette; F8 switches Hayden's palette; F10 switches Ryis's palette.
+- Home cycles Reina's palette; Page Down cycles Juniper's palette.
 - F9 checks independent palette cycles and portrait phase.
-- Optional world controls: F1 spawns Adeline, F3 changes action, F12 changes
-  facing, and F11 checks world phase and movement.
+- Optional world controls: press F1 after finishing portrait/outfit switches to
+  reset Adeline's Spring test actor. F3 changes action, F12 changes facing, and
+  F11 checks world phase and movement.
 
 The world helper disables Adeline's town scheduling before manually placing her,
 as established by the earlier pathfinding-crash fix. These preview controls and

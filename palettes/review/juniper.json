@@ -1,0 +1,35 @@
+{
+  "label": "Juniper — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Juniper/Portraits/"
+  ],
+  "source_colors": [
+    "#EFD89A",
+    "#E3BF7F",
+    "#D2AB66",
+    "#B87D4C",
+    "#763F21",
+    "#592323",
+    "#A16C3D",
+    "#E9CC8B",
+    "#D29C66",
+    "#965532",
+    "#DFAB68",
+    "#9D5A33"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#445F83",
+    "#445F83",
+    "#9DB9D4",
+    "#6687AD",
+    "#445F83",
+    "#6687AD",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/juniper-portraits.json"
+}

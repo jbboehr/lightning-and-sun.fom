@@ -14,6 +14,9 @@ uses this division of work.
 
 The later [Ryis portrait pass](ryis-portraits.md) uses the same workflow for a
 darker source palette, including shared-color gloves and wedding clothing.
+The [Reina and Juniper batch](parallel-portraits.md) runs two authors concurrently
+with separate character files and an independent art reviewer. Integration and
+the user-facing comparison remain one combined task.
 
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`

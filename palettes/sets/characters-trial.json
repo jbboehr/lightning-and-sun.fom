@@ -2,6 +2,8 @@
   "characters": [
     {"id": "adeline", "presets": "adeline-world-actions-trial.json"},
     {"id": "hayden", "presets": "hayden-portraits-trial.json"},
-    {"id": "ryis", "presets": "ryis-portraits-trial.json"}
+    {"id": "ryis", "presets": "ryis-portraits-trial.json"},
+    {"id": "reina", "presets": "reina-portraits-trial.json"},
+    {"id": "juniper", "presets": "juniper-portraits-trial.json"}
   ]
 }

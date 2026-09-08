@@ -1,0 +1,18 @@
+{
+  "description": "Juniper portrait skin shading in Debug Blue; cosmetics, hair, clothing and accessories stay original.",
+  "rgba_map": {
+    "#EFD89A": "#9DB9D4",
+    "#E3BF7F": "#7F9FBD",
+    "#D2AB66": "#6687AD",
+    "#B87D4C": "#445F83",
+    "#763F21": "#445F83",
+    "#592323": "#445F83",
+    "#A16C3D": "#445F83",
+    "#E9CC8B": "#9DB9D4",
+    "#D29C66": "#6687AD",
+    "#965532": "#445F83",
+    "#DFAB68": "#6687AD",
+    "#9D5A33": "#445F83"
+  },
+  "profile": "../profiles/juniper-portraits.json"
+}

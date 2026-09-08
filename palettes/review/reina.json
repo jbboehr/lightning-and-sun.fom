@@ -1,0 +1,27 @@
+{
+  "label": "Reina — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Reina/Portraits/"
+  ],
+  "source_colors": [
+    "#B36644",
+    "#9E512F",
+    "#7F382B",
+    "#541C1E",
+    "#AD5F3C",
+    "#A95835",
+    "#CB815C",
+    "#B36844"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#7F9FBD",
+    "#9DB9D4",
+    "#9DB9D4"
+  ],
+  "reference_profile": "../profiles/reina-portraits.json"
+}

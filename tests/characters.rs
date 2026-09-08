@@ -15,6 +15,8 @@ fn fixture(root: &Path) -> std::path::PathBuf {
         ("adeline", "Adeline", vec!["#28323C", "#64503C"]),
         ("hayden", "Hayden", vec!["#28323C"]),
         ("ryis", "Ryis", vec!["#28323C"]),
+        ("reina", "Reina", vec!["#28323C"]),
+        ("juniper", "Juniper", vec!["#28323C"]),
     ] {
         let name = format!(
             "assets/animations/NPCs/{folder}/Portraits/Spring/spr_portrait_{id}_spring_neutral.png"
@@ -135,8 +137,19 @@ fn hayden_can_be_built_alone_with_his_own_runtime_control() {
 }
 
 #[test]
-fn ryis_can_be_built_alone_or_with_existing_characters() {
-    for ids in [vec!["ryis"], vec!["adeline", "hayden", "ryis"]] {
+fn characters_can_be_built_alone_or_with_existing_characters() {
+    for (ids, label, hotkey) in [
+        (vec!["ryis"], "Ryis", "F10"),
+        (vec!["adeline", "hayden", "ryis"], "Ryis", "F10"),
+        (vec!["reina"], "Reina", "HOME"),
+        (vec!["juniper"], "Juniper", "PAGE_DOWN"),
+        (
+            vec!["adeline", "hayden", "ryis", "reina", "juniper"],
+            "Juniper",
+            "PAGE_DOWN",
+        ),
+    ] {
+        let id = ids.last().unwrap();
         let temp = tempfile::tempdir().unwrap();
         let config = fixture(temp.path());
         fs::write(
@@ -170,24 +183,24 @@ fn ryis_can_be_built_alone_or_with_existing_characters() {
         assert_eq!(
             characters.last().unwrap(),
             &json!([
-                "ryis",
-                "Ryis",
-                "F10",
+                id,
+                label,
+                hotkey,
                 ["Vanilla", "Debug Blue"],
                 [[
-                    "spr_portrait_ryis_spring_neutral",
-                    "spr_lns_ryis_spring_neutral_blue"
+                    format!("spr_portrait_{id}_spring_neutral"),
+                    format!("spr_lns_{id}_spring_neutral_blue")
                 ]]
             ])
         );
-        let image = image::open(
-            package.join("animations/LightningAndSun/spr_lns_ryis_spring_neutral_blue.png"),
-        )
+        let image = image::open(package.join(format!(
+            "animations/LightningAndSun/spr_lns_{id}_spring_neutral_blue.png"
+        )))
         .unwrap()
         .to_rgba8();
         assert_eq!(image.dimensions(), (4, 1));
         assert!(image.pixels().all(|p| p.0 == [40, 50, 60, 255]));
-        if ids.len() == 3 {
+        if ids.len() > 1 {
             assert_eq!(characters[0][3], json!(["Vanilla", "Debug Blue", "Warm"]));
             assert_eq!(characters[1][3], json!(["Vanilla", "Debug Blue"]));
         }
