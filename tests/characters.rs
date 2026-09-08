@@ -21,6 +21,8 @@ fn fixture(root: &Path) -> std::path::PathBuf {
         ("march", "March", vec!["#28323C"]),
         ("balor", "Balor", vec!["#28323C"]),
         ("valen", "Valen", vec!["#28323C"]),
+        ("eiland", "Eiland", vec!["#28323C"]),
+        ("olric", "Olric", vec!["#28323C"]),
     ] {
         let name = format!(
             "assets/animations/NPCs/{folder}/Portraits/Spring/spr_portrait_{id}_spring_neutral.png"
@@ -170,6 +172,16 @@ fn characters_can_be_built_alone_or_with_existing_characters() {
             ],
             "Valen",
             "O",
+        ),
+        (vec!["eiland"], "Eiland", "J"),
+        (vec!["olric"], "Olric", "K"),
+        (
+            vec![
+                "adeline", "hayden", "ryis", "reina", "juniper", "celine", "march", "balor",
+                "valen", "eiland", "olric",
+            ],
+            "Olric",
+            "K",
         ),
     ] {
         let id = ids.last().unwrap();

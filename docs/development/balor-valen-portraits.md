@@ -50,10 +50,12 @@ target/release/mistria-palette build-characters \
 
 The initial batch comparison is `generated/balor-valen-preview/index.html`.
 The current Balor mouth comparison is `generated/balor-mouth-preview/index.html`
-and its `summary.png`. The ignored launcher uses `tmp/balor-mouth-playtest` with
+and its `summary.png`. This batch's retained trial is `tmp/balor-mouth-playtest` with
 separate state and read-only source game mounts. F7 opens Balor and advances expressions;
 Page Up goes back, F4 switches characters, and F5 switches outfits. I cycles
 Balor's palette; O cycles Valen's. Existing palette keys remain available.
+The shared `./tmp/play-characters` launcher follows the
+[latest combined trial](characters.md#local-visual-check).
 
 For optional Adeline world checks, press F1 after portrait switches to restore
 the reviewed Spring actor before using F3/F12/F11. The scheduling guard from the

@@ -1,0 +1,29 @@
+{
+  "label": "Eiland — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Eiland/Portraits/"
+  ],
+  "source_colors": [
+    "#E9A980FF",
+    "#D98E72FF",
+    "#C9785AFF",
+    "#9C5241FF",
+    "#E18F71FF",
+    "#6A3126FF",
+    "#C17A5BFF",
+    "#955342FF",
+    "#653227FF"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#445F83",
+    "#6687AD",
+    "#445F83",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/eiland-portraits.json"
+}

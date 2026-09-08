@@ -21,6 +21,8 @@ The next [Celine and March batch](celine-march-portraits.md) applies the same
 workflow to larger corpora, including gardening outfits and special expressions.
 The [Balor and Valen batch](balor-valen-portraits.md) continues portrait coverage
 with the same authoring and integration tools.
+The [Eiland and Olric batch](eiland-olric-portraits.md) includes bunny-ears
+portraits and characters with different sets of available outfits.
 
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`

@@ -367,7 +367,8 @@ For tests and local proof results, see [the verification record](development/ver
 
 `build-characters --archive PATH --characters palettes/sets/characters-trial.json
 --output generated/characters-trial` builds one local package with independent
-Adeline, Hayden, Ryis, Reina, Juniper, Celine, March, Balor, and Valen choices.
+Adeline, Hayden, Ryis, Reina, Juniper, Celine, March, Balor, Valen, Eiland, and
+Olric choices.
 The installer accepts the same `--characters` file.
 See [character configuration and testing](development/characters.md) for the
 per-character workflow and coverage.

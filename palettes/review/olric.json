@@ -1,0 +1,27 @@
+{
+  "label": "Olric — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Olric/Portraits/"
+  ],
+  "source_colors": [
+    "#F2DBA7",
+    "#DDA966",
+    "#C37B43",
+    "#B7672F",
+    "#813E16",
+    "#E5C586",
+    "#B65932",
+    "#CB884E"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#9DB9D4",
+    "#445F83",
+    "#6687AD"
+  ],
+  "reference_profile": "../profiles/olric-portraits.json"
+}

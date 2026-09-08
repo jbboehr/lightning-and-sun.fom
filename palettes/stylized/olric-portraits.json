@@ -1,0 +1,14 @@
+{
+  "description": "Olric portrait skin, eye creases, brow fringes and lip shading in Debug Blue; black outlines, iris details, mouth interiors, hair, clothes and accessories stay original.",
+  "rgba_map": {
+    "#F2DBA7": "#9DB9D4",
+    "#DDA966": "#7F9FBD",
+    "#C37B43": "#6687AD",
+    "#B7672F": "#445F83",
+    "#813E16": "#445F83",
+    "#E5C586": "#9DB9D4",
+    "#B65932": "#445F83",
+    "#CB884E": "#6687AD"
+  },
+  "profile": "../profiles/olric-portraits.json"
+}

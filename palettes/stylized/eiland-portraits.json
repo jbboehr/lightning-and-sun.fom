@@ -1,0 +1,15 @@
+{
+  "description": "Eiland portrait skin shading in Debug Blue; gold trim, jewelry, hair, brows, gloves and mouth interiors stay original.",
+  "rgba_map": {
+    "#E9A980FF": "#9DB9D4",
+    "#D98E72FF": "#7F9FBD",
+    "#C9785AFF": "#6687AD",
+    "#9C5241FF": "#445F83",
+    "#E18F71FF": "#7F9FBD",
+    "#6A3126FF": "#445F83",
+    "#C17A5BFF": "#6687AD",
+    "#955342FF": "#445F83",
+    "#653227FF": "#445F83"
+  },
+  "profile": "../profiles/eiland-portraits.json"
+}

@@ -2,15 +2,18 @@
 
 The combined trial includes Adeline's 143 reviewed animations, Hayden's 133,
 Ryis's 109, Reina's 103, Juniper's 132, Celine's 183, March's 181, Balor's 110,
-and Valen's 92 portrait strips, each with four recolors: 4,744 generated variant
-strips. All nine characters start on Vanilla each session. F6 cycles Adeline,
-F8 Hayden, F10 Ryis, Home Reina, Page Down Juniper, Insert Celine, U March,
-I Balor, and O Valen. Each has five choices.
+Valen's 92, Eiland's 78, and Olric's 36 portrait strips, each with four recolors:
+5,200 generated variant strips. All eleven characters start on Vanilla each
+session. F6 cycles Adeline, F8 Hayden, F10 Ryis, Home Reina, Page Down Juniper,
+Insert Celine, U March, I Balor, O Valen, J Eiland, and K Olric.
+Each has five choices.
 The [shared NPC presets](shared-npc-presets.md)
 record the earlier natural colors; the [parallel portrait batch](parallel-portraits.md)
 records Reina and Juniper. The [Celine and March batch](celine-march-portraits.md)
 adds gardening and special-expression coverage. The next
 [Balor and Valen batch](balor-valen-portraits.md) adds 202 portrait strips.
+The [Eiland and Olric batch](eiland-olric-portraits.md) adds 114 more, including
+Olric's seasonal bunny-ears portraits.
 Their overworld sprites are not covered. The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
 
@@ -175,7 +178,7 @@ Local evidence includes `tmp/ryis-integration-final-checks.log`,
 ## Local visual check
 
 The ignored `tmp/play-characters` launcher opens the combined package with its
-own saves and state in `tmp/balor-mouth-playtest`, mounting the supplied
+own saves and state in `tmp/olric-eyes-playtest`, mounting the supplied
 game files read-only. Previous trial copies are retained separately.
 Run it from the normal desktop terminal:
 
@@ -183,13 +186,14 @@ Run it from the normal desktop terminal:
 ./tmp/play-characters
 ```
 
-- F7 opens the portrait trial on Balor and advances expressions; Page Up goes backward.
+- F7 opens the portrait trial on Eiland and advances expressions; Page Up goes backward.
 - F4 switches the displayed character; F5 switches outfits. F2 belongs to the
   game's debugger and is not a preview control.
 - F6 cycles Adeline's palette; F8 switches Hayden's palette; F10 switches Ryis's palette.
 - Home cycles Reina's palette; Page Down cycles Juniper's palette.
 - Insert cycles Celine's palette; U cycles March's palette.
 - I cycles Balor's palette; O cycles Valen's palette.
+- J cycles Eiland's palette; K cycles Olric's palette.
 - F9 checks independent palette cycles and portrait phase.
 - Optional world controls: press F1 after finishing portrait/outfit switches to
   reset Adeline's Spring test actor. F3 changes action, F12 changes facing, and
@@ -199,4 +203,9 @@ The world helper disables Adeline's town scheduling before manually placing her,
 as established by the earlier pathfinding-crash fix. These preview controls and
 scheduling changes are excluded from the player package. The launcher is retained
 by a Nix output link; rebuild it if necessary with
-`nix-build --out-link tmp/play-characters tmp/balor-mouth-playtest-launch.nix`.
+`nix-build --out-link tmp/play-characters tmp/olric-eyes-playtest-launch.nix`.
+
+F5 skips outfit groups with no included portraits. Olric cycles spring, summer,
+autumn, and winter. F4 retains the current outfit when the next character has
+portraits for it, otherwise it falls back to spring. Bunny ears appear among
+Olric's expressions; the helper selects the game's corresponding native outfit.
