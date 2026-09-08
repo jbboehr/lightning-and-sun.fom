@@ -80,7 +80,8 @@ ignored by Git.
 
 The accepted art checkpoint was committed before integration. Ryis now has a
 standalone preset set and is included in the combined trial with independent
-Vanilla / Debug Blue choices on F10. The installable recolors match these offline
+choices on F10. His initial Vanilla / Debug Blue trial was later extended with
+[shared NPC presets](shared-npc-presets.md). The blue recolors match these offline
 outputs exactly. See [character configuration](characters.md#ryis-integration-2026-09-07)
 for installation and live-game verification. The user also tried the integrated
 trial on their desktop and accepted its appearance.

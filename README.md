@@ -100,9 +100,17 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
   --characters palettes/sets/characters-trial.json
 ```
 
-**F6** cycles Adeline's existing palettes. **F8** switches Hayden between
-**Vanilla and Debug Blue**; **F10** does the same for Ryis. Each character's
-selection is independent, and all start on Vanilla each launch.
+**F6** cycles Adeline's palettes, **F8** Hayden's, and **F10** Ryis's.
+Each character starts on **Vanilla** every launch, followed by **Debug Blue**
+and three sampled NPC palettes. Selections are independent.
+
+| Character | Additional palettes |
+| --- | --- |
+| Adeline | Hayden, Ryis, Seridia |
+| Hayden | Adeline, Ryis, Seridia |
+| Ryis | Adeline, Hayden, Seridia |
+
+These adapt the sampled colors to each character's reviewed shading and masks.
 Hayden's 133 and Ryis's 109 portrait strips cover seasonal, beach, bath, and
 wedding portraits; their overworld sprites remain original. A few pixels in
 Hayden's embarrassed expression still need adjustment. To try either character

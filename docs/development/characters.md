@@ -1,10 +1,11 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 143 reviewed animations with four recolors,
-Hayden's 133 portrait strips with Debug Blue, and Ryis's 109 portrait strips with
-Debug Blue: 814 generated variant strips. All characters start on Vanilla each
-session. F6 cycles Adeline's five choices; F8 cycles Hayden's two; F10 cycles
-Ryis's two. Hayden's and Ryis's overworld sprites are not covered. The small
+The combined trial includes Adeline's 143 reviewed animations, Hayden's 133
+portrait strips, and Ryis's 109 portrait strips, each with four recolors:
+1,540 generated variant strips. All characters start on Vanilla each session.
+F6 cycles Adeline's five choices; F8 cycles Hayden's five; F10 cycles Ryis's five.
+The [shared NPC presets](shared-npc-presets.md) record the new natural colors.
+Hayden's and Ryis's overworld sprites are not covered. The small
 embarrassed-expression art follow-up remains deferred in
 [Hayden portraits](hayden-portraits.md).
 
@@ -167,8 +168,9 @@ Local evidence includes `tmp/ryis-integration-final-checks.log`,
 ## Local visual check
 
 The ignored `tmp/play-characters` launcher opens the combined package with its
-own saves and state in `tmp/ryis-playtest`, mounting the supplied game files
-read-only. The previous `tmp/characters-f4-playtest` copy is retained separately.
+own saves and state in `tmp/characters-natural-playtest`, mounting the supplied
+game files read-only. The previous `tmp/ryis-playtest` and
+`tmp/characters-f4-playtest` copies are retained separately.
 Run it from the normal desktop terminal:
 
 ```sh

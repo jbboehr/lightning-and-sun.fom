@@ -14,6 +14,48 @@
         "#9DB9D4",
         "#7F9FBD"
       ]
+    },
+    {
+      "id": "npc_adeline",
+      "label": "Adeline palette",
+      "colors": [
+        "#E3A17BFF",
+        "#D48363FF",
+        "#C47054FF",
+        "#9F5544FF",
+        "#D48363FF",
+        "#D48363FF",
+        "#E3A17BFF",
+        "#D48363FF"
+      ]
+    },
+    {
+      "id": "npc_hayden",
+      "label": "Hayden palette",
+      "colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF",
+        "#CA9052FF",
+        "#CA9052FF",
+        "#E8B271FF",
+        "#CA9052FF"
+      ]
+    },
+    {
+      "id": "npc_seridia",
+      "label": "Seridia palette",
+      "colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF",
+        "#A69084FF",
+        "#A69084FF",
+        "#C1AFA5FF",
+        "#A69084FF"
+      ]
     }
   ]
 }

@@ -17,6 +17,57 @@
         "#7F9FBD",
         "#6687AD"
       ]
+    },
+    {
+      "id": "npc_adeline",
+      "label": "Adeline palette",
+      "colors": [
+        "#E3A17BFF",
+        "#D48363FF",
+        "#C47054FF",
+        "#9F5544FF",
+        "#E3A17BFF",
+        "#E3A17BFF",
+        "#D48363FF",
+        "#D48363FF",
+        "#D48363FF",
+        "#D48363FF",
+        "#C47054FF"
+      ]
+    },
+    {
+      "id": "npc_ryis",
+      "label": "Ryis palette",
+      "colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF",
+        "#B06C57FF",
+        "#B06C57FF",
+        "#814A3AFF",
+        "#814A3AFF",
+        "#814A3AFF",
+        "#814A3AFF",
+        "#63342AFF"
+      ]
+    },
+    {
+      "id": "npc_seridia",
+      "label": "Seridia palette",
+      "colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF",
+        "#C1AFA5FF",
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#A69084FF",
+        "#A69084FF",
+        "#A69084FF",
+        "#8E746DFF"
+      ]
     }
   ]
 }
