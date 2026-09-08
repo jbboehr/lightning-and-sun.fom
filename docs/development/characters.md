@@ -1,13 +1,15 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 143 reviewed animations, Hayden's 133,
-Ryis's 109, Reina's 103, and Juniper's 132 portrait strips, each with four
-recolors: 2,480 generated variant strips. All five characters start on Vanilla
-each session. F6 cycles Adeline, F8 Hayden, F10 Ryis, Home Reina, and Page Down
-Juniper. Each has five choices. The [shared NPC presets](shared-npc-presets.md)
+Ryis's 109, Reina's 103, Juniper's 132, Celine's 183, and March's 181 portrait
+strips, each with four recolors: 3,936 generated variant strips. All seven
+characters start on Vanilla each session. F6 cycles Adeline, F8 Hayden, F10 Ryis,
+Home Reina, Page Down Juniper, Insert Celine, and U March. Each has five choices.
+The [shared NPC presets](shared-npc-presets.md)
 record the earlier natural colors; the [parallel portrait batch](parallel-portraits.md)
-records Reina and Juniper. Their overworld sprites are not covered. The small
-embarrassed-expression art follow-up remains deferred in
+records Reina and Juniper. The [Celine and March batch](celine-march-portraits.md)
+adds gardening and special-expression coverage. Their overworld sprites are not
+covered. The small embarrassed-expression art follow-up remains deferred in
 [Hayden portraits](hayden-portraits.md).
 
 ## Add and review one character at a time
@@ -28,8 +30,8 @@ do not infer it from the filename. Hayden's `beach_shy_special` strip lives in t
 Spring folder and uses `PortraitsSpring` even though its name says beach.
 Juniper's beach portraits use `PortraitsMisc`, whereas Reina's use
 `PortraitsSummer`.
-The current export command retains its prototype limit of 143 strips per
-character. A larger corpus will need that extraction limit revisited.
+The export command accepts up to 256 distinct strips per character. Celine's
+183 and March's 181 required raising the earlier 143-strip prototype limit.
 
 Build a combined local bundle:
 
@@ -171,7 +173,7 @@ Local evidence includes `tmp/ryis-integration-final-checks.log`,
 ## Local visual check
 
 The ignored `tmp/play-characters` launcher opens the combined package with its
-own saves and state in `tmp/parallel-character-playtest`, mounting the supplied
+own saves and state in `tmp/celine-march-playtest`, mounting the supplied
 game files read-only. Previous trial copies are retained separately.
 Run it from the normal desktop terminal:
 
@@ -179,11 +181,12 @@ Run it from the normal desktop terminal:
 ./tmp/play-characters
 ```
 
-- F7 opens the portrait trial on Reina and advances expressions; Page Up goes backward.
+- F7 opens the portrait trial on Celine and advances expressions; Page Up goes backward.
 - F4 switches the displayed character; F5 switches outfits. F2 belongs to the
   game's debugger and is not a preview control.
 - F6 cycles Adeline's palette; F8 switches Hayden's palette; F10 switches Ryis's palette.
 - Home cycles Reina's palette; Page Down cycles Juniper's palette.
+- Insert cycles Celine's palette; U cycles March's palette.
 - F9 checks independent palette cycles and portrait phase.
 - Optional world controls: press F1 after finishing portrait/outfit switches to
   reset Adeline's Spring test actor. F3 changes action, F12 changes facing, and

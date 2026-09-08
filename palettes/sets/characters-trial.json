@@ -4,6 +4,8 @@
     {"id": "hayden", "presets": "hayden-portraits-trial.json"},
     {"id": "ryis", "presets": "ryis-portraits-trial.json"},
     {"id": "reina", "presets": "reina-portraits-trial.json"},
-    {"id": "juniper", "presets": "juniper-portraits-trial.json"}
+    {"id": "juniper", "presets": "juniper-portraits-trial.json"},
+    {"id": "celine", "presets": "celine-portraits-trial.json"},
+    {"id": "march", "presets": "march-portraits-trial.json"}
   ]
 }

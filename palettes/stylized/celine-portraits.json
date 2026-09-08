@@ -1,0 +1,17 @@
+{
+  "description": "Celine portrait skin shading in Debug Blue; hair, clothing, jewelry, blush and mouth interiors stay original.",
+  "rgba_map": {
+    "#FCDEBE": "#9DB9D4",
+    "#F5BB90": "#7F9FBD",
+    "#EA9866": "#6687AD",
+    "#B35A35": "#445F83",
+    "#9A4825": "#445F83",
+    "#E28A55": "#6687AD",
+    "#954D24": "#445F83",
+    "#FBDFC0": "#9DB9D4",
+    "#EDA77D": "#7F9FBD",
+    "#672115": "#445F83",
+    "#D97C56": "#6687AD"
+  },
+  "profile": "../profiles/celine-portraits.json"
+}

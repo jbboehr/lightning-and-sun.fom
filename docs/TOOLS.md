@@ -123,7 +123,7 @@ See [installer internals and verification](development/cli-installer.md).
 The example below selects one portrait animation (two frames). The exporter reads exact
 archive members and their `.meta.toml` files, preserving the `assets/…` tree. It
 does not unpack the entire game or modify the ZIP. Its report pins the source ZIP
-and exported bytes by SHA-256. Repeat `--asset` to select up to 143 distinct PNGs.
+and exported bytes by SHA-256. Repeat `--asset` to select up to 256 distinct PNGs.
 The older replacement `package` command still permits at most two changed assets.
 
 ```sh
@@ -367,7 +367,7 @@ For tests and local proof results, see [the verification record](development/ver
 
 `build-characters --archive PATH --characters palettes/sets/characters-trial.json
 --output generated/characters-trial` builds one local package with independent
-Adeline, Hayden, Ryis, Reina, and Juniper choices. The installer accepts the same
-`--characters` file.
+Adeline, Hayden, Ryis, Reina, Juniper, Celine, and March choices. The installer
+accepts the same `--characters` file.
 See [character configuration and testing](development/characters.md) for the
 per-character workflow and coverage.

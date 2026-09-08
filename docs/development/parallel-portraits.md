@@ -49,12 +49,15 @@ The pinned MOMI key resolver explicitly supports `HOME` and `PAGE_DOWN`. These
 bindings avoid the keys already used by the other characters and the preview.
 A future palette menu can replace this growing list of prototype hotkeys.
 
-The ignored `./tmp/play-characters` launcher uses `tmp/parallel-character-playtest`
+This batch's ignored launcher used `tmp/parallel-character-playtest`
 with separate state and read-only source game mounts. F7 opens Reina and advances
 expressions; Page Up goes backward. F4 changes character, F5 changes outfit,
 Home cycles Reina, and Page Down cycles Juniper. The existing F6/F8/F10 bindings
 remain Adeline/Hayden/Ryis. The previous three-character trial is retained in
 `tmp/characters-natural-playtest`.
+The shared `./tmp/play-characters` launcher now follows the
+[latest combined trial](characters.md#local-visual-check); the five-character
+copy remains available separately.
 
 ## Rebuild
 

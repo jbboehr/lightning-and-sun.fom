@@ -1,0 +1,19 @@
+{
+  "description": "March portrait skin shading in Debug Blue; eyebrows, mouth interiors, hair, clothing and accessories stay original.",
+  "rgba_map": {
+    "#EEDDA5": "#9DB9D4",
+    "#E6BD7C": "#7F9FBD",
+    "#DCA966": "#6687AD",
+    "#CC8155": "#445F83",
+    "#AE542E": "#445F83",
+    "#B36436": "#445F83",
+    "#B4613E": "#445F83",
+    "#DFAB68": "#6687AD",
+    "#E9C487": "#7F9FBD",
+    "#EDCA92": "#7F9FBD",
+    "#7D3B14": "#445F83",
+    "#B65932": "#445F83",
+    "#D0A179": "#6687AD"
+  },
+  "profile": "../profiles/march-portraits.json"
+}

@@ -85,7 +85,7 @@ enum Command {
         #[arg(long)]
         game_dir: PathBuf,
     },
-    /// Copy up to 143 explicit PNG assets and their metadata from assets.zip.
+    /// Copy up to 256 explicit PNG assets and their metadata from assets.zip.
     Export {
         #[arg(long)]
         archive: PathBuf,
