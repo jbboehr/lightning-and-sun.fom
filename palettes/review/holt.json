@@ -1,0 +1,29 @@
+{
+  "label": "Holt — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Holt/Portraits/"
+  ],
+  "source_colors": [
+    "#F5C88E",
+    "#CD9067",
+    "#B45732",
+    "#762E21",
+    "#E5AF7E",
+    "#C38358",
+    "#A3593C",
+    "#9A4929",
+    "#A05F4C"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#6687AD",
+    "#6687AD",
+    "#445F83",
+    "#6687AD"
+  ],
+  "reference_profile": "../profiles/holt-portraits.json"
+}

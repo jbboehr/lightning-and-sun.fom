@@ -1,0 +1,15 @@
+{
+  "description": "Josephine skin and fine nose/hand shading in Debug Blue; original hair, eye details, saturated lipstick, mouth interiors, clothing and accessories stay intact.",
+  "rgba_map": {
+    "#9B643A": "#9DB9D4",
+    "#814030": "#7F9FBD",
+    "#752F23": "#6687AD",
+    "#5B241E": "#445F83",
+    "#481518": "#445F83",
+    "#8D5036": "#7F9FBD",
+    "#8E522F": "#7F9FBD",
+    "#46232B": "#445F83",
+    "#3A1D24": "#445F83"
+  },
+  "profile": "../profiles/josephine-portraits.json"
+}

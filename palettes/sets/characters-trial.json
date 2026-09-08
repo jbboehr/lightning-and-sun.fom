@@ -12,6 +12,8 @@
     {"id": "eiland", "presets": "eiland-portraits-trial.json"},
     {"id": "olric", "presets": "olric-portraits-trial.json"},
     {"id": "landen", "presets": "landen-portraits-trial.json"},
-    {"id": "nora", "presets": "nora-portraits-trial.json"}
+    {"id": "nora", "presets": "nora-portraits-trial.json"},
+    {"id": "holt", "presets": "holt-portraits-trial.json"},
+    {"id": "josephine", "presets": "josephine-portraits-trial.json"}
   ]
 }

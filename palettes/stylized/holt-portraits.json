@@ -1,0 +1,15 @@
+{
+  "rgba_map": {
+    "#F5C88E": "#9DB9D4",
+    "#CD9067": "#7F9FBD",
+    "#B45732": "#6687AD",
+    "#762E21": "#445F83",
+    "#E5AF7E": "#7F9FBD",
+    "#C38358": "#6687AD",
+    "#A3593C": "#6687AD",
+    "#9A4929": "#445F83",
+    "#A05F4C": "#6687AD"
+  },
+  "description": "Holt portrait skin including fine hand, neck and eye shading; orange hair, brows and moustache, actual mouth interiors and clothing stay original.",
+  "profile": "../profiles/holt-portraits.json"
+}

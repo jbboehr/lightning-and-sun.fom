@@ -25,9 +25,16 @@ fn fixture(root: &Path) -> std::path::PathBuf {
         ("olric", "Olric", vec!["#28323C"]),
         ("landen", "Landen", vec!["#28323C"]),
         ("nora", "Nora", vec!["#28323C"]),
+        ("holt", "Holt", vec!["#28323C"]),
+        ("josephine", "Josephine", vec!["#28323C"]),
     ] {
+        let (portrait_folder, atlas) = if id == "josephine" {
+            ("Portraits", "PortraitsMisc")
+        } else {
+            ("Portraits/Spring", "PortraitsSpring")
+        };
         let name = format!(
-            "assets/animations/NPCs/{folder}/Portraits/Spring/spr_portrait_{id}_spring_neutral.png"
+            "assets/animations/NPCs/{folder}/{portrait_folder}/spr_portrait_{id}_spring_neutral.png"
         );
         let mut image = Cursor::new(Vec::new());
         RgbaImage::from_pixel(4, 1, Rgba([10, 20, 30, 255]))
@@ -41,7 +48,7 @@ fn fixture(root: &Path) -> std::path::PathBuf {
             SimpleFileOptions::default(),
         )
         .unwrap();
-        zip.write_all(format!("[meta_properties]\nid='{id}'\nasset_kind='Animation'\n[asset_properties]\nframe_size=[2,1]\nframe_len=2\natlas='PortraitsSpring'\n").as_bytes()).unwrap();
+        zip.write_all(format!("[meta_properties]\nid='{id}'\nasset_kind='Animation'\n[asset_properties]\nframe_size=[2,1]\nframe_len=2\natlas='{atlas}'\n").as_bytes()).unwrap();
         fs::write(root.join(format!("{id}-profile.json")), serde_json::to_vec(&json!({
             "source_colors":["#0A141E"], "regions":[{"asset":name,"source_sha256":format!("{:x}",Sha256::digest(&bytes)),"size":[4,1],"seeds":[[0,0],[2,0]]}]
         })).unwrap()).unwrap();
@@ -194,6 +201,29 @@ fn characters_can_be_built_alone_or_with_existing_characters() {
             ],
             "Nora",
             "N",
+        ),
+        (vec!["holt"], "Holt", "H"),
+        (vec!["josephine"], "Josephine", "P"),
+        (
+            vec![
+                "adeline",
+                "hayden",
+                "ryis",
+                "reina",
+                "juniper",
+                "celine",
+                "march",
+                "balor",
+                "valen",
+                "eiland",
+                "olric",
+                "landen",
+                "nora",
+                "holt",
+                "josephine",
+            ],
+            "Josephine",
+            "P",
         ),
     ] {
         let id = ids.last().unwrap();

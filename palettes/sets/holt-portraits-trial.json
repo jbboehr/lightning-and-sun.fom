@@ -1,0 +1,65 @@
+{
+  "profile": "../profiles/holt-portraits.json",
+  "presets": [
+    {
+      "id": "blue",
+      "label": "Debug Blue",
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#7F9FBD",
+        "#6687AD",
+        "#6687AD",
+        "#445F83",
+        "#6687AD"
+      ]
+    },
+    {
+      "id": "npc_hayden",
+      "label": "Hayden palette",
+      "colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#B27146FF",
+        "#6E4922FF",
+        "#B27146FF"
+      ]
+    },
+    {
+      "id": "npc_ryis",
+      "label": "Ryis palette",
+      "colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#63342AFF",
+        "#491F1BFF",
+        "#63342AFF"
+      ]
+    },
+    {
+      "id": "npc_seridia",
+      "label": "Seridia palette",
+      "colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#8E746DFF",
+        "#624A48FF",
+        "#8E746DFF"
+      ]
+    }
+  ]
+}

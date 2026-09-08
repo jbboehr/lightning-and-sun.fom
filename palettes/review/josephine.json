@@ -1,0 +1,29 @@
+{
+  "label": "Josephine — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Josephine/Portraits/"
+  ],
+  "source_colors": [
+    "#9B643A",
+    "#814030",
+    "#752F23",
+    "#5B241E",
+    "#481518",
+    "#8D5036",
+    "#8E522F",
+    "#46232B",
+    "#3A1D24"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#7F9FBD",
+    "#7F9FBD",
+    "#445F83",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/josephine-portraits.json"
+}
