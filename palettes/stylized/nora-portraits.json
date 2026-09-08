@@ -1,0 +1,16 @@
+{
+  "description": "Nora skin and lip shading in Debug Blue, with adapted lip colors and brown eye/brow fringes; actual hair, eyes, mouth interiors, clothes and jewelry stay original.",
+  "profile": "../profiles/nora-portraits.json",
+  "rgba_map": {
+    "#762E21": "#445F83",
+    "#B35A35": "#6687AD",
+    "#B65932": "#6687AD",
+    "#D37249": "#6687AD",
+    "#E6687A": "#8F5788",
+    "#EFA67A": "#7F9FBD",
+    "#F4BF94": "#7F9FBD",
+    "#F5BB90": "#7F9FBD",
+    "#FCB0B6": "#9D93CB",
+    "#FCDEBE": "#9DB9D4"
+  }
+}

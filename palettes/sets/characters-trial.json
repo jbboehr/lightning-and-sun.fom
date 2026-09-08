@@ -10,6 +10,8 @@
     {"id": "balor", "presets": "balor-portraits-trial.json"},
     {"id": "valen", "presets": "valen-portraits-trial.json"},
     {"id": "eiland", "presets": "eiland-portraits-trial.json"},
-    {"id": "olric", "presets": "olric-portraits-trial.json"}
+    {"id": "olric", "presets": "olric-portraits-trial.json"},
+    {"id": "landen", "presets": "landen-portraits-trial.json"},
+    {"id": "nora", "presets": "nora-portraits-trial.json"}
   ]
 }

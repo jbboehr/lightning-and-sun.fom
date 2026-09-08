@@ -1,0 +1,25 @@
+{
+  "label": "Landen — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Landen/Portraits/"
+  ],
+  "source_colors": [
+    "#9F6250",
+    "#854D3C",
+    "#63342A",
+    "#491F1B",
+    "#CF9887",
+    "#C1816E",
+    "#361714"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#9DB9D4",
+    "#7F9FBD",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/landen-portraits.json"
+}

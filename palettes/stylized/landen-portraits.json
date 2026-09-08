@@ -1,0 +1,13 @@
+{
+  "rgba_map": {
+    "#9F6250": "#9DB9D4",
+    "#854D3C": "#7F9FBD",
+    "#63342A": "#6687AD",
+    "#491F1B": "#445F83",
+    "#CF9887": "#9DB9D4",
+    "#C1816E": "#7F9FBD",
+    "#361714": "#445F83"
+  },
+  "description": "Landen portrait skin including light palms, deep arm contours, eye fringes and lip skin; gray facial hair, black outlines, mouth interiors and clothing remain original.",
+  "profile": "../profiles/landen-portraits.json"
+}
