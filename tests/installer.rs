@@ -935,7 +935,11 @@ fn unsuccessful_or_incomplete_installer_output_leaves_live_files_unchanged() {
     fs::write(&lab.result, &lab.before).unwrap();
     let result = lab.run("install");
     assert!(!result.status.success());
-    assert!(String::from_utf8_lossy(&result.stderr).contains("Missing archive member"));
+    assert!(
+        String::from_utf8_lossy(&result.stderr).contains("Missing archive member"),
+        "Unexpected installer error: {}",
+        String::from_utf8_lossy(&result.stderr)
+    );
     assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
     assert!(!lab.game.join(".mistria-palette").exists());
 }

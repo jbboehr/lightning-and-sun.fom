@@ -14,6 +14,7 @@ fn fixture(root: &Path) -> std::path::PathBuf {
     for (id, folder, colors) in [
         ("adeline", "Adeline", vec!["#28323C", "#64503C"]),
         ("hayden", "Hayden", vec!["#28323C"]),
+        ("ryis", "Ryis", vec!["#28323C"]),
     ] {
         let name = format!(
             "assets/animations/NPCs/{folder}/Portraits/Spring/spr_portrait_{id}_spring_neutral.png"
@@ -131,6 +132,66 @@ fn hayden_can_be_built_alone_with_his_own_runtime_control() {
             ]]
         ]])
     );
+}
+
+#[test]
+fn ryis_can_be_built_alone_or_with_existing_characters() {
+    for ids in [vec!["ryis"], vec!["adeline", "hayden", "ryis"]] {
+        let temp = tempfile::tempdir().unwrap();
+        let config = fixture(temp.path());
+        fs::write(
+            &config,
+            serde_json::to_vec(&json!({"characters": ids.iter().map(|id| {
+                json!({"id":id,"presets":format!("{id}.json")})
+            }).collect::<Vec<_>>()}))
+            .unwrap(),
+        )
+        .unwrap();
+        let result = build(temp.path(), &config);
+        assert!(
+            result.status.success(),
+            "{}",
+            String::from_utf8_lossy(&result.stderr)
+        );
+        let package = temp.path().join("bundle/package");
+        let script = fs::read_to_string(package.join("gml/palette_assets.gml")).unwrap();
+        let table: Value = serde_json::from_str(
+            script
+                .split_once("return ")
+                .unwrap()
+                .1
+                .split_once("; }")
+                .unwrap()
+                .0,
+        )
+        .unwrap();
+        let characters = table.as_array().unwrap();
+        assert_eq!(characters.len(), ids.len());
+        assert_eq!(
+            characters.last().unwrap(),
+            &json!([
+                "ryis",
+                "Ryis",
+                "F10",
+                ["Vanilla", "Debug Blue"],
+                [[
+                    "spr_portrait_ryis_spring_neutral",
+                    "spr_lns_ryis_spring_neutral_blue"
+                ]]
+            ])
+        );
+        let image = image::open(
+            package.join("animations/LightningAndSun/spr_lns_ryis_spring_neutral_blue.png"),
+        )
+        .unwrap()
+        .to_rgba8();
+        assert_eq!(image.dimensions(), (4, 1));
+        assert!(image.pixels().all(|p| p.0 == [40, 50, 60, 255]));
+        if ids.len() == 3 {
+            assert_eq!(characters[0][3], json!(["Vanilla", "Debug Blue", "Warm"]));
+            assert_eq!(characters[1][3], json!(["Vanilla", "Debug Blue"]));
+        }
+    }
 }
 
 #[test]

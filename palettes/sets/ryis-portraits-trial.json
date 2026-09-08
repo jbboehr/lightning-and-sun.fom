@@ -1,0 +1,19 @@
+{
+  "profile": "../profiles/ryis-portraits.json",
+  "presets": [
+    {
+      "id": "blue",
+      "label": "Debug Blue",
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#7F9FBD",
+        "#7F9FBD",
+        "#9DB9D4",
+        "#7F9FBD"
+      ]
+    }
+  ]
+}

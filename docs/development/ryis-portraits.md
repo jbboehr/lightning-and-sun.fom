@@ -78,8 +78,9 @@ Local evidence lives in `tmp/ryis-catalog-only-red.log`,
 Extracted portraits, generated recolors, previews, and authoring programs are
 ignored by Git.
 
-This is an offline art pass. Ryis has not yet been added to the installable
-character registry or the combined trial, and his recolors have not been checked
-in-game. After visual acceptance, add his reviewed paths and original atlas
-names through the existing [character configuration](characters.md). No shared
-runtime change is part of this pass.
+The accepted art checkpoint was committed before integration. Ryis now has a
+standalone preset set and is included in the combined trial with independent
+Vanilla / Debug Blue choices on F10. The installable recolors match these offline
+outputs exactly. See [character configuration](characters.md#ryis-integration-2026-09-07)
+for installation and live-game verification. The user also tried the integrated
+trial on their desktop and accepted its appearance.

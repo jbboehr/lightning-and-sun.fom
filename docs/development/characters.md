@@ -1,9 +1,10 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 143 reviewed animations with four recolors
-and Hayden's 133 portrait strips with Debug Blue: 705 generated variant strips.
-Both characters start on Vanilla each session. F6 cycles Adeline's five choices;
-F8 cycles Hayden's two. Hayden's overworld sprites are not covered. The small
+The combined trial includes Adeline's 143 reviewed animations with four recolors,
+Hayden's 133 portrait strips with Debug Blue, and Ryis's 109 portrait strips with
+Debug Blue: 814 generated variant strips. All characters start on Vanilla each
+session. F6 cycles Adeline's five choices; F8 cycles Hayden's two; F10 cycles
+Ryis's two. Hayden's and Ryis's overworld sprites are not covered. The small
 embarrassed-expression art follow-up remains deferred in
 [Hayden portraits](hayden-portraits.md).
 
@@ -17,7 +18,7 @@ embarrassed-expression art follow-up remains deferred in
 - A collection such as `palettes/sets/characters-trial.json` selects the characters
   and points to each preset set. Paths are relative to the containing definition.
   Select just one entry to build or install that character alone. Existing
-  `build-presets` and `install --presets` also accept a single Hayden set.
+  `build-presets` and `install --presets` also accept a single Hayden or Ryis set.
 
 The registry contains filenames and atlas names, not image data. When expanding
 coverage, add only reviewed paths and verify the atlas against local metadata;
@@ -56,8 +57,8 @@ World objects come from the game's `try_string_to_npc_id` and
 `npc_id_to_gm_obj_id` mapping. The real game does not resolve objects through
 `try_string_to_asset`, and it does not expose Fabricator's `asset_get_index` API.
 
-F6 and F8 are test controls. A future character-and-palette menu should call the
-same `lns_palette_toggle(character)` selection path (or a direct selection
+F6, F8, and F10 are test controls. A future character-and-palette menu should call
+the same `lns_palette_toggle(character)` selection path (or a direct selection
 function) instead of assigning a new key to every NPC. We can finish masks for
 one character before adding the next; changing the shared game hook is not part
 of each art pass.
@@ -77,8 +78,8 @@ These interpreter tests exercise both character callbacks, Vanilla restoration,
 speaker/menu changes, missing assets and NPC IDs, fractional portrait phase, and
 Adeline's world animator while Hayden changes palette.
 
-2026-09-07 verification: formatting, Clippy, 86 active tests, the three opt-in GML
-tests, and the release build passed. All 705 regenerated strips passed exact
+Initial Adeline/Hayden verification, 2026-09-07: formatting, Clippy, 86 active
+tests, the three opt-in GML tests, and the release build passed. All 705 regenerated strips passed exact
 recipe validation. A fresh MOMI installation verified every selected vanilla and
 variant frame, metadata, and generated script. Uninstall restored the prior
 archive byte-for-byte. A separate Hayden-only bundle contained 133 variants and
@@ -118,20 +119,66 @@ release build, and fresh MOMI verification passed for this correction.
 The user then tried the corrected preview on their desktop and accepted its
 appearance. This was a visual spot check, not a review of every frame.
 
+### Ryis integration, 2026-09-07
+
+The registry adds Ryis's 109 reviewed paths with atlas names taken from their
+source metadata. His standalone preset set and the combined collection use the
+same profile and Debug Blue colors as the accepted offline art. This addition
+does not change the shared Rust or GML runtime.
+
+The new synthetic test first failed with `Unsupported character: ryis`, then
+passed for Ryis alone and alongside Adeline and Hayden. It checks Ryis's F10
+control, vanilla-first choices, generated pixels, and the existing characters'
+different preset counts. Formatting, Clippy, all 87 active tests, the three
+opt-in GML tests, the Ryis corpus test, and the release build passed.
+
+All 814 variants in `generated/characters-ryis-trial` passed exact recipe
+validation. A separate Ryis-only bundle's 109 recolored strips matched the
+approved offline outputs pixel-for-pixel. A fresh MOMI installation into
+`tmp/ryis-playtest` verified every selected vanilla and variant atlas frame,
+metadata, and generated scripts. Uninstalling a separate copy restored the
+original archive byte-for-byte. The supplied game archive retained the SHA-256
+recorded above.
+
+The real game ran under Xvfb with separate state. Its 368 distinct portrait
+checks matched every included source strip across all three characters and all
+six outfits. Each check cycled every character's palettes while asserting
+independent selections, the displayed sprite, fractional animation phase, and
+a closed debugger console. F10 and Page Up were also exercised as actual key
+bindings, and Ryis's blue portrait was visually inspected. Six outfit
+transitions with Adeline's world preview active and 24 world action/direction
+checks preserved animation state and movement while all palettes cycled.
+No script errors or disabled palette callbacks were logged. The isolated run
+logged a Steam initialization error and a starting-room placement warning;
+it continued through the full test matrix. The user then tried the integrated
+trial on their desktop and accepted its appearance as a visual spot check.
+
+An earlier full check hit an intermittent assertion failure in the existing
+incomplete-installer-output test. It did not reproduce in a focused rerun,
+three installer-suite reruns, or the subsequent full checks. Its assertion now
+prints the unexpected stderr; the cause remains undiagnosed, and no behavior
+or assertion was weakened.
+
+Local evidence includes `tmp/ryis-integration-final-checks.log`,
+`tmp/ryis-combined-build-report.json`, `tmp/ryis-standalone-comparison.json`,
+`tmp/ryis-install-report.json`, `tmp/ryis-uninstall-report.json`,
+`tmp/ryis-live-matrix-run.log`, and `tmp/ryis-live-matrix-game.log`.
+
 ## Local visual check
 
 The ignored `tmp/play-characters` launcher opens the combined package with its
-own saves and state, mounting the supplied game files read-only. Run it from the
-normal desktop terminal:
+own saves and state in `tmp/ryis-playtest`, mounting the supplied game files
+read-only. The previous `tmp/characters-f4-playtest` copy is retained separately.
+Run it from the normal desktop terminal:
 
 ```sh
 ./tmp/play-characters
 ```
 
-- F7 opens the portrait trial and advances expressions; F10 goes backward.
+- F7 opens the portrait trial on Ryis and advances expressions; Page Up goes backward.
 - F4 switches the displayed character; F5 switches outfits. F2 belongs to the
   game's debugger and is not a preview control.
-- F6 cycles Adeline's palette; F8 switches Hayden's palette.
+- F6 cycles Adeline's palette; F8 switches Hayden's palette; F10 switches Ryis's palette.
 - F9 checks independent palette cycles and portrait phase.
 - Optional world controls: F1 spawns Adeline, F3 changes action, F12 changes
   facing, and F11 checks world phase and movement.
