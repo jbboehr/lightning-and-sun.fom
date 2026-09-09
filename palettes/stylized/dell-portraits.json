@@ -1,0 +1,18 @@
+{
+  "description": "Dell skin and fine eye, ear, mouth, neck and hand shading in Debug Blue. Actual blond hair and brows, clothes, bandage, fasteners, blush and tongue/interior colors stay original.",
+  "rgba_map": {
+    "#F5C88E": "#9DB9D4",
+    "#DD905B": "#7F9FBD",
+    "#A8571C": "#6687AD",
+    "#691B03": "#445F83",
+    "#91390E": "#445F83",
+    "#9D4428": "#6687AD",
+    "#B15634": "#6687AD",
+    "#ECAA71": "#7F9FBD",
+    "#FFDEB4": "#9DB9D4",
+    "#EC9871": "#7F9FBD",
+    "#DB9150": "#7F9FBD",
+    "#770C1D": "#445F83"
+  },
+  "profile": "../profiles/dell-portraits.json"
+}

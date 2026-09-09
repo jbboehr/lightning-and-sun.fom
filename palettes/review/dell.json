@@ -1,0 +1,35 @@
+{
+  "label": "Dell authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Dell/Portraits/"
+  ],
+  "source_colors": [
+    "#F5C88E",
+    "#DD905B",
+    "#A8571C",
+    "#691B03",
+    "#91390E",
+    "#9D4428",
+    "#B15634",
+    "#ECAA71",
+    "#FFDEB4",
+    "#EC9871",
+    "#DB9150",
+    "#770C1D"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#6687AD",
+    "#6687AD",
+    "#7F9FBD",
+    "#9DB9D4",
+    "#7F9FBD",
+    "#7F9FBD",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/dell-portraits.json"
+}

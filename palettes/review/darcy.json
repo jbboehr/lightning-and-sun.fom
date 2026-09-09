@@ -1,0 +1,31 @@
+{
+  "label": "Darcy — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Darcy/Portraits/"
+  ],
+  "source_colors": [
+    "#FCD8A9",
+    "#EAB979",
+    "#D99D60",
+    "#B7672F",
+    "#FFD8AC",
+    "#DDA266",
+    "#904522",
+    "#6C3407",
+    "#551D06",
+    "#7B2806"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#9DB9D4",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#445F83",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/darcy-portraits.json"
+}

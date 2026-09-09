@@ -2,12 +2,12 @@
 
 The combined trial includes Adeline's 143 reviewed animations, Hayden's 133,
 Ryis's 109, Reina's 103, Juniper's 132, Celine's 183, March's 181, Balor's 110,
-Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32, and
-Josephine's 32 portrait strips, each with four recolors: 5,712 generated variant
-strips. All fifteen characters start on Vanilla each session. F6 cycles Adeline,
-F8 Hayden, F10 Ryis, Home Reina, Page Down Juniper,
+Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
+Josephine's 32, Darcy's 32, and Dell's 32 portrait strips, each with four recolors:
+5,968 generated variant strips. All seventeen characters start on Vanilla each
+session. F6 cycles Adeline, F8 Hayden, F10 Ryis, Home Reina, Page Down Juniper,
 Insert Celine, U March, I Balor, O Valen, J Eiland, K Olric, L Landen, N Nora,
-H Holt, and P Josephine.
+H Holt, P Josephine, B Darcy, and Y Dell.
 Each has five choices.
 The [shared NPC presets](shared-npc-presets.md)
 record the earlier natural colors; the [parallel portrait batch](parallel-portraits.md)
@@ -18,6 +18,7 @@ The [Eiland and Olric batch](eiland-olric-portraits.md) adds 114 more, including
 Olric's seasonal bunny-ears portraits.
 The [Landen and Nora batch](landen-nora-portraits.md) adds 64 seasonal portrait strips.
 The [Holt and Josephine batch](holt-josephine-portraits.md) adds another 64.
+The [Darcy and Dell batch](darcy-dell-portraits.md) adds 64 more seasonal strips.
 Their overworld sprites are not covered. The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
 
@@ -182,7 +183,7 @@ Local evidence includes `tmp/ryis-integration-final-checks.log`,
 ## Local visual check
 
 The ignored `tmp/play-characters` launcher opens the combined package with its
-own saves and state in `tmp/holt-mouth-fix-playtest`, mounting the supplied
+own saves and state in `tmp/dell-eye-ear-playtest`, mounting the supplied
 game files read-only. Previous trial copies are retained separately.
 Run it from the normal desktop terminal:
 
@@ -190,7 +191,7 @@ Run it from the normal desktop terminal:
 ./tmp/play-characters
 ```
 
-- F7 opens the portrait trial on Holt and advances expressions; Page Up goes backward.
+- F7 opens the portrait trial on Darcy and advances expressions; Page Up goes backward.
 - F4 switches the displayed character; F5 switches outfits. F2 belongs to the
   game's debugger and is not a preview control.
 - F6 cycles Adeline's palette; F8 switches Hayden's palette; F10 switches Ryis's palette.
@@ -200,6 +201,7 @@ Run it from the normal desktop terminal:
 - J cycles Eiland's palette; K cycles Olric's palette.
 - L cycles Landen's palette; N cycles Nora's palette.
 - H cycles Holt's palette; P cycles Josephine's palette.
+- B cycles Darcy's palette; Y cycles Dell's palette.
 - F9 checks independent palette cycles and portrait phase.
 - Optional world controls: press F1 after finishing portrait/outfit switches to
   reset Adeline's Spring test actor. F3 changes action, F12 changes facing, and
@@ -209,10 +211,11 @@ The world helper disables Adeline's town scheduling before manually placing her,
 as established by the earlier pathfinding-crash fix. These preview controls and
 scheduling changes are excluded from the player package. The launcher is retained
 by a Nix output link; rebuild it if necessary with
-`nix build --impure --file tmp/holt-mouth-fix-playtest-launch.nix --out-link tmp/play-characters`.
+`nix build --impure --file tmp/dell-eye-ear-playtest-launch.nix --out-link tmp/play-characters`.
 
-F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt, and
-Josephine cycle spring, summer, autumn, and winter. F4 retains the current outfit
-when the next character has portraits for it, otherwise it falls back to spring.
+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
+Josephine, Darcy, and Dell cycle spring, summer, autumn, and winter.
+F4 retains the current outfit when the next character has portraits for it,
+otherwise it falls back to spring.
 Bunny ears appear among Olric's expressions; the helper selects the game's
 corresponding native outfit.

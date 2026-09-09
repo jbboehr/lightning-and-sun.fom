@@ -27,6 +27,8 @@ The [Landen and Nora batch](landen-nora-portraits.md) applies it to 64 seasonal
 portrait strips, including lighter palms and skin colors shared with hair.
 The [Holt and Josephine batch](holt-josephine-portraits.md) adds another 64,
 including skin colors shared with ginger hair and clothing details.
+The [Darcy and Dell batch](darcy-dell-portraits.md) adds 64 more, including
+fine skin shading and colors shared with hair and accessories.
 
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`

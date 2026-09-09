@@ -27,11 +27,13 @@ fn fixture(root: &Path) -> std::path::PathBuf {
         ("nora", "Nora", vec!["#28323C"]),
         ("holt", "Holt", vec!["#28323C"]),
         ("josephine", "Josephine", vec!["#28323C"]),
+        ("darcy", "Darcy", vec!["#28323C"]),
+        ("dell", "Dell", vec!["#28323C"]),
     ] {
-        let (portrait_folder, atlas) = if id == "josephine" {
-            ("Portraits", "PortraitsMisc")
-        } else {
-            ("Portraits/Spring", "PortraitsSpring")
+        let (portrait_folder, atlas) = match id {
+            "josephine" => ("Portraits", "PortraitsMisc"),
+            "darcy" => ("Portraits/Spring", "PortraitsMisc"),
+            _ => ("Portraits/Spring", "PortraitsSpring"),
         };
         let name = format!(
             "assets/animations/NPCs/{folder}/{portrait_folder}/spr_portrait_{id}_spring_neutral.png"
@@ -224,6 +226,31 @@ fn characters_can_be_built_alone_or_with_existing_characters() {
             ],
             "Josephine",
             "P",
+        ),
+        (vec!["darcy"], "Darcy", "B"),
+        (vec!["dell"], "Dell", "Y"),
+        (
+            vec![
+                "adeline",
+                "hayden",
+                "ryis",
+                "reina",
+                "juniper",
+                "celine",
+                "march",
+                "balor",
+                "valen",
+                "eiland",
+                "olric",
+                "landen",
+                "nora",
+                "holt",
+                "josephine",
+                "darcy",
+                "dell",
+            ],
+            "Dell",
+            "Y",
         ),
     ] {
         let id = ids.last().unwrap();
