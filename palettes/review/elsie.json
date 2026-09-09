@@ -1,0 +1,27 @@
+{
+  "label": "Elsie — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Elsie/Portraits/"
+  ],
+  "source_colors": [
+    "#F6D2AF",
+    "#E3B598",
+    "#CB9472",
+    "#B46D5F",
+    "#794035",
+    "#4C0F1E",
+    "#CB9879",
+    "#784B42"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#445F83",
+    "#6687AD",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/elsie-portraits.json"
+}

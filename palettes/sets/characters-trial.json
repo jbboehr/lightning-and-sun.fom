@@ -16,6 +16,8 @@
     {"id": "holt", "presets": "holt-portraits-trial.json"},
     {"id": "josephine", "presets": "josephine-portraits-trial.json"},
     {"id": "darcy", "presets": "darcy-portraits-trial.json"},
-    {"id": "dell", "presets": "dell-portraits-trial.json"}
+    {"id": "dell", "presets": "dell-portraits-trial.json"},
+    {"id": "elsie", "presets": "elsie-portraits-trial.json"},
+    {"id": "errol", "presets": "errol-portraits-trial.json"}
   ]
 }

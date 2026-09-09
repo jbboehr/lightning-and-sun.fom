@@ -1,0 +1,15 @@
+{
+  "description": "Errol skin, fine eye and ear shading, outer lips, neck and hands in Debug Blue. Actual eyebrows, beard and body hair, clothes, accessories and speaking-mouth interiors stay original.",
+  "profile": "../profiles/errol-portraits.json",
+  "rgba_map": {
+    "#F4C49CFF": "#9DB9D4",
+    "#DDAB82FF": "#7F9FBD",
+    "#C38C70FF": "#6687AD",
+    "#9B6656FF": "#445F83",
+    "#724A3E": "#445F83",
+    "#85584B": "#445F83",
+    "#C9927B": "#6687AD",
+    "#A77E6A": "#6687AD",
+    "#D3B296": "#7F9FBD"
+  }
+}

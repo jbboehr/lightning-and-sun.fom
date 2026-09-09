@@ -93,8 +93,8 @@ same palette across these actions and the included portraits. Other overworld
 actions and outfits still use their original colors.
 
 To include Hayden, Ryis, Reina, Juniper, Celine, March, Balor, Valen, Eiland,
-Olric, Landen, Nora, Holt, Josephine, Darcy, and Dell alongside Adeline, uninstall
-the previous study, then install the combined trial:
+Olric, Landen, Nora, Holt, Josephine, Darcy, Dell, Elsie, and Errol alongside
+Adeline, uninstall the previous study, then install the combined trial:
 
 ```sh
 target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
@@ -109,6 +109,7 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
 **L** cycles Landen's palettes; **N** cycles Nora's.
 **H** cycles Holt's palettes; **P** cycles Josephine's.
 **B** cycles Darcy's palettes; **Y** cycles Dell's.
+**Z** cycles Elsie's palettes; **X** cycles Errol's.
 Each character starts on **Vanilla** every launch, followed by **Debug Blue**
 and three sampled NPC palettes. Selections are independent.
 
@@ -131,11 +132,13 @@ and three sampled NPC palettes. Selections are independent.
 | Josephine | Hayden, Ryis, Seridia |
 | Darcy | Hayden, Ryis, Seridia |
 | Dell | Hayden, Ryis, Seridia |
+| Elsie | Hayden, Ryis, Seridia |
+| Errol | Hayden, Ryis, Seridia |
 
 These adapt the sampled colors to each character's reviewed shading and masks.
 The trial includes 133 Hayden, 109 Ryis, 103 Reina, 132 Juniper, 183 Celine,
 181 March, 110 Balor, 92 Valen, 78 Eiland, 36 Olric, 32 Landen, 32 Nora,
-32 Holt, 32 Josephine, 32 Darcy, and 32 Dell portrait strips.
+32 Holt, 32 Josephine, 32 Darcy, 32 Dell, 36 Elsie, and 36 Errol portrait strips.
 These cover seasonal portraits plus beach, bath, and wedding artwork where
 available. Celine's gardening portraits, March's special expressions, and Olric's
 bunny-ears portraits are included.
