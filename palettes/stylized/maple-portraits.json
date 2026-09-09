@@ -1,0 +1,16 @@
+{
+  "description": "Maple skin, fine face and hand shades in Debug Blue; actual hair, irises, clothing and mouth interiors stay original.",
+  "profile": "../profiles/maple-portraits.json",
+  "rgba_map": {
+    "#97623EFF": "#9DB9D4",
+    "#89492AFF": "#7F9FBD",
+    "#713527FF": "#6687AD",
+    "#57271DFF": "#445F83",
+    "#83462E": "#7F9FBD",
+    "#5D3228": "#445F83",
+    "#CE794E": "#9DB9D4",
+    "#89502A": "#7F9FBD",
+    "#392222": "#445F83",
+    "#BF5C70": "#947FA7"
+  }
+}

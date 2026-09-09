@@ -1,0 +1,29 @@
+{
+  "label": "Luc authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Luc/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#445F83",
+    "#6687AD",
+    "#6687AD",
+    "#6687AD",
+    "#445F83",
+    "#C0D1E1",
+    "#C9D7E5"
+  ],
+  "reference_profile": "../profiles/luc-portraits.json",
+  "source_colors": [
+    "#C48E68",
+    "#B36844",
+    "#712922",
+    "#9B533C",
+    "#83462E",
+    "#965332",
+    "#793D25",
+    "#E8B896",
+    "#F0C09D"
+  ]
+}
