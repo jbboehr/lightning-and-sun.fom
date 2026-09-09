@@ -1,0 +1,22 @@
+{
+  "description": "Louis skin, fine hand and facial shades in Debug Blue; hair, glasses, clothes and mouth interiors stay original.",
+  "profile": "../profiles/louis-portraits.json",
+  "rgba_map": {
+    "#F6D2AFFF": "#9DB9D4",
+    "#CB9879FF": "#7F9FBD",
+    "#AD6F5CFF": "#6687AD",
+    "#784B42FF": "#445F83",
+    "#AB6F5C": "#6687AD",
+    "#AC6F5C": "#6687AD",
+    "#C99679": "#7F9FBD",
+    "#CA9779": "#7F9FBD",
+    "#CA9879": "#7F9FBD",
+    "#F4D0AE": "#9DB9D4",
+    "#E3B590": "#7F9FBD",
+    "#E3BD97": "#7F9FBD",
+    "#F1CEAD": "#9DB9D4",
+    "#634040": "#445F83",
+    "#40252A": "#445F83",
+    "#491F1B": "#445F83"
+  }
+}

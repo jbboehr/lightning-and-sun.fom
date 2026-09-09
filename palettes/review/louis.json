@@ -1,0 +1,43 @@
+{
+  "label": "Louis portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Louis/Portraits/"
+  ],
+  "source_colors": [
+    "#F6D2AFFF",
+    "#CB9879FF",
+    "#AD6F5CFF",
+    "#784B42FF",
+    "#AB6F5C",
+    "#AC6F5C",
+    "#C99679",
+    "#CA9779",
+    "#CA9879",
+    "#F4D0AE",
+    "#E3B590",
+    "#E3BD97",
+    "#F1CEAD",
+    "#634040",
+    "#40252A",
+    "#491F1B"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#6687AD",
+    "#6687AD",
+    "#7F9FBD",
+    "#7F9FBD",
+    "#7F9FBD",
+    "#9DB9D4",
+    "#7F9FBD",
+    "#7F9FBD",
+    "#9DB9D4",
+    "#445F83",
+    "#445F83",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/louis-portraits.json"
+}

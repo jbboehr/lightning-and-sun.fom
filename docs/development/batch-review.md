@@ -31,6 +31,8 @@ The [Darcy and Dell batch](darcy-dell-portraits.md) adds 64 more, including
 fine skin shading and colors shared with hair and accessories.
 The [Elsie and Errol batch](elsie-errol-portraits.md) adds 72 seasonal strips,
 including wrinkles and fine face, ear, and hand shading.
+The [Hemlock and Louis batch](hemlock-louis-portraits.md) adds another 64,
+including skin colors shared with clothing and different original atlas assignments.
 
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`

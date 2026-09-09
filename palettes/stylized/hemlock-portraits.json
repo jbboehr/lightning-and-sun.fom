@@ -1,0 +1,12 @@
+{
+  "profile": "../profiles/hemlock-portraits.json",
+  "rgba_map": {
+    "#C9906A": "#9DB9D4",
+    "#B36844": "#7F9FBD",
+    "#8A3F31": "#6687AD",
+    "#712922": "#445F83",
+    "#A05748": "#6687AD",
+    "#BF7B5A": "#7F9FBD",
+    "#4C242C": "#445F83"
+  }
+}

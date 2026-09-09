@@ -1,0 +1,25 @@
+{
+  "label": "Hemlock — authored portrait masks",
+  "prefixes": [
+    "assets/animations/NPCs/Hemlock/Portraits/"
+  ],
+  "source_colors": [
+    "#C9906A",
+    "#B36844",
+    "#8A3F31",
+    "#712922",
+    "#A05748",
+    "#BF7B5A",
+    "#4C242C"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#6687AD",
+    "#7F9FBD",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/hemlock-portraits.json"
+}
