@@ -1,0 +1,16 @@
+{
+  "description": "Wynne reviewed skin and facial transitions; actual hair, cosmetics, jewelry and clothing remain original.",
+  "profile": "../profiles/wynne-portraits.json",
+  "rgba_map": {
+    "#491F1B": "#445F83",
+    "#612924": "#647CA7",
+    "#63342A": "#6687AD",
+    "#804136": "#7C9BB9",
+    "#83453A": "#7F9FBD",
+    "#955343": "#91ADC6",
+    "#A3614E": "#9DB9D4",
+    "#AD6C59": "#A7C4DF",
+    "#B67565": "#B0CDEB",
+    "#C88A76": "#C2E2FC"
+  }
+}

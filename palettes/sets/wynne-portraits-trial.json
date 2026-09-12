@@ -1,0 +1,69 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#91ADC6",
+        "#A7C4DF",
+        "#B0CDEB",
+        "#C2E2FC",
+        "#647CA7",
+        "#7C9BB9"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#6E4922",
+        "#DC9E5B",
+        "#F2BD7C",
+        "#FBC688",
+        "#FFDB99",
+        "#B06640",
+        "#C78C4E"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#491F1B",
+        "#935843",
+        "#BA7762",
+        "#C3806E",
+        "#D5957F",
+        "#612924",
+        "#7E4636"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#624A48",
+        "#B89E8D",
+        "#CBBAB0",
+        "#D4C3BC",
+        "#E6D8CD",
+        "#8C6967",
+        "#A38C80"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    }
+  ],
+  "profile": "../profiles/wynne-portraits.json"
+}

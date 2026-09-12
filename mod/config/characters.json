@@ -2132,5 +2132,65 @@
     "hotkey": "R",
     "id": "zorel",
     "label": "Zorel"
+  },
+  {
+    "animations": {
+      "assets/animations/NPCs/Darren/Portraits/spr_portrait_darren_spring_embarrassed.png": "PortraitsMisc",
+      "assets/animations/NPCs/Darren/Portraits/spr_portrait_darren_spring_happy.png": "PortraitsMisc",
+      "assets/animations/NPCs/Darren/Portraits/spr_portrait_darren_spring_mad.png": "PortraitsMisc",
+      "assets/animations/NPCs/Darren/Portraits/spr_portrait_darren_spring_neutral.png": "PortraitsMisc",
+      "assets/animations/NPCs/Darren/Portraits/spr_portrait_darren_spring_sad.png": "PortraitsMisc",
+      "assets/animations/NPCs/Darren/Portraits/spr_portrait_darren_spring_think.png": "PortraitsMisc",
+      "assets/animations/NPCs/Darren/Portraits/spr_portrait_darren_spring_ugh.png": "PortraitsMisc",
+      "assets/animations/NPCs/Darren/Portraits/spr_portrait_darren_spring_wink.png": "PortraitsMisc"
+    },
+    "hotkey": "D",
+    "id": "darren",
+    "label": "Darren"
+  },
+  {
+    "animations": {
+      "assets/animations/NPCs/Linnet/Portraits/spr_portrait_linnet_spring_embarrassed.png": "PortraitsMisc",
+      "assets/animations/NPCs/Linnet/Portraits/spr_portrait_linnet_spring_happy.png": "PortraitsMisc",
+      "assets/animations/NPCs/Linnet/Portraits/spr_portrait_linnet_spring_mad.png": "PortraitsMisc",
+      "assets/animations/NPCs/Linnet/Portraits/spr_portrait_linnet_spring_neutral.png": "PortraitsMisc",
+      "assets/animations/NPCs/Linnet/Portraits/spr_portrait_linnet_spring_sad.png": "PortraitsMisc",
+      "assets/animations/NPCs/Linnet/Portraits/spr_portrait_linnet_spring_think.png": "PortraitsMisc",
+      "assets/animations/NPCs/Linnet/Portraits/spr_portrait_linnet_spring_ugh.png": "PortraitsMisc",
+      "assets/animations/NPCs/Linnet/Portraits/spr_portrait_linnet_spring_wink.png": "PortraitsMisc"
+    },
+    "hotkey": "C",
+    "id": "linnet",
+    "label": "Linnet"
+  },
+  {
+    "animations": {
+      "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_embarrassed.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_happy.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_mad.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_neutral.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_sad.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_think.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_ugh.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_wink.png": "PortraitsMisc"
+    },
+    "hotkey": "W",
+    "id": "wiscar",
+    "label": "Wiscar"
+  },
+  {
+    "animations": {
+      "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_embarrassed.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_happy.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_mad.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_neutral.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_sad.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_think.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_ugh.png": "PortraitsMisc",
+      "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_wink.png": "PortraitsMisc"
+    },
+    "hotkey": "Q",
+    "id": "wynne",
+    "label": "Wynne"
   }
 ]

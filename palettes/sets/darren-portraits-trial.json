@@ -1,0 +1,57 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#7F9FBD",
+        "#7F9FBD",
+        "#445F83"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#6E4922",
+        "#CA9052",
+        "#CA9052",
+        "#6E4922"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#491F1B",
+        "#814A3A",
+        "#814A3A",
+        "#491F1B"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#624A48",
+        "#A69084",
+        "#A69084",
+        "#624A48"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    }
+  ],
+  "profile": "../profiles/darren-portraits.json"
+}

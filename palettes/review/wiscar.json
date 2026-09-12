@@ -1,0 +1,29 @@
+{
+  "label": "Wiscar reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Wiscar/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#2D3F57",
+    "#364C69",
+    "#1B2634",
+    "#B6CBDF",
+    "#97C3DB"
+  ],
+  "reference_profile": "../profiles/wiscar-portraits.json",
+  "source_colors": [
+    "#E3A17B",
+    "#D98364",
+    "#C47054",
+    "#9F5544",
+    "#6D3328",
+    "#834132",
+    "#441B14",
+    "#F4C2A7",
+    "#DDAB82"
+  ]
+}

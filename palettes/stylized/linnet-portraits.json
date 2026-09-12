@@ -1,0 +1,22 @@
+{
+  "description": "Linnet reviewed exposed skin and fine contours. Hair, eyes and clothing remain original.",
+  "profile": "../profiles/linnet-portraits.json",
+  "rgba_map": {
+    "#472721": "#445F83",
+    "#4A1B16": "#445F83",
+    "#5B241E": "#445F83",
+    "#6A3126": "#445F83",
+    "#6C3327": "#445F83",
+    "#6D3328": "#6687AD",
+    "#884636": "#6687AD",
+    "#8F5042": "#6687AD",
+    "#9A5547": "#6687AD",
+    "#9F5544": "#6687AD",
+    "#A36049": "#7F9FBD",
+    "#B16A52": "#7F9FBD",
+    "#B9755A": "#7F9FBD",
+    "#BB6C5D": "#6687AD",
+    "#C7875C": "#9DB9D4",
+    "#C87463": "#7F9FBD"
+  }
+}

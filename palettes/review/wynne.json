@@ -1,0 +1,31 @@
+{
+  "label": "Wynne reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Wynne/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#91ADC6",
+    "#A7C4DF",
+    "#B0CDEB",
+    "#C2E2FC",
+    "#647CA7",
+    "#7C9BB9"
+  ],
+  "reference_profile": "../profiles/wynne-portraits.json",
+  "source_colors": [
+    "#A3614E",
+    "#83453A",
+    "#63342A",
+    "#491F1B",
+    "#955343",
+    "#AD6C59",
+    "#B67565",
+    "#C88A76",
+    "#612924",
+    "#804136"
+  ]
+}

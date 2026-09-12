@@ -1,0 +1,65 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#2D3F57",
+        "#364C69",
+        "#1B2634",
+        "#B6CBDF",
+        "#97C3DB"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#6E4922",
+        "#493117",
+        "#583A1B",
+        "#2C1D0E",
+        "#EEC595",
+        "#E2BC78"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#491F1B",
+        "#311512",
+        "#3A1916",
+        "#1D0C0B",
+        "#C49181",
+        "#AA765E"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#624A48",
+        "#413130",
+        "#4E3B3A",
+        "#271E1D",
+        "#D1C3BC",
+        "#BBB9AC"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    }
+  ],
+  "profile": "../profiles/wiscar-portraits.json"
+}

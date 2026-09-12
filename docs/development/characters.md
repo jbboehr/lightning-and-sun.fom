@@ -5,15 +5,16 @@ Ryis's 109, Reina's 103, Juniper's 132, Celine's 183, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
-Taliferro's 36, Vera's 32, Wheedle's 32, and Zorel's 32 portrait strips, each with four
-recolors: 7,696 generated variant strips. All thirty characters start on
+Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
+Linnet, Wiscar, and Wynne, each with four recolors: 7,824 generated variant strips.
+All thirty-four characters start on
 Vanilla each session.
 F6 cycles Adeline, F8 Hayden, F10 Ryis,
 Home Reina, Page Down Juniper,
 Insert Celine, U March, I Balor, O Valen, J Eiland, K Olric, L Landen, N Nora,
 H Holt, P Josephine, B Darcy, Y Dell, Z Elsie, X Errol, F Hemlock, V Louis,
 F11 Luc, F12 Maple, F1 Merri, F3 Terithia, F4 Stillwell, F5 Taliferro, G Vera,
-T Wheedle, and R Zorel.
+T Wheedle, R Zorel, D Darren, C Linnet, W Wiscar, and Q Wynne.
 Each has five choices.
 The [shared NPC presets](shared-npc-presets.md)
 record the earlier natural colors; the [parallel portrait batch](parallel-portraits.md)
@@ -33,6 +34,8 @@ The [Stillwell and Taliferro batch](stillwell-taliferro-portraits.md) adds 72 mo
 The [Vera and Wheedle batch](vera-wheedle-portraits.md) adds another 64 and includes
 small offline Vanilla/Blue review pages for every expression and frame.
 The [Zorel portrait pass](zorel-portraits.md) adds another 32 seasonal strips.
+The [Darren, Linnet, Wiscar, and Wynne batch](darren-linnet-wiscar-wynne-portraits.md)
+adds 32 Spring-only cameo strips with complete offline review pages.
 Their overworld sprites are not covered. The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
 
@@ -196,7 +199,7 @@ Local evidence includes `tmp/ryis-integration-final-checks.log`,
 
 ## Local visual check
 
-The ignored `tmp/play-characters` launcher opens the combined package with its
+The ignored `tmp/play-characters` launcher retains the previous Zorel package with its
 own saves and state in `tmp/zorel-playtest`, mounting the supplied
 game files read-only. Previous trial copies are retained separately.
 Run it from the normal desktop terminal:
@@ -238,6 +241,12 @@ The Zorel package passed a fresh isolated MOMI installation, but the
 mounted game folder was empty during this slice. The launcher was rebuilt;
 native gameplay remains untested. The [offline review pages](../../../generated/zorel-preview/blue-review/index.html)
 cover every included Zorel portrait expression and frame without the game.
+
+Darren, Linnet, Wiscar, and Wynne are cameos. Their native `CameoSpeaker` requires
+an active cutscene and cameo instance; the existing `NpcSpeaker` preview helper
+does not support them. This slice leaves that launcher on the Zorel package.
+Use the [new offline review](../../../generated/four-npcs-preview/blue-review/index.html)
+for all 32 new strips and both frames. Native cameo rendering remains untested.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

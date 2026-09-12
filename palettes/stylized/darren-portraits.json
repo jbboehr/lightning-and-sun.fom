@@ -1,0 +1,13 @@
+{
+  "description": "Darren reviewed exposed skin and fine contours. Hair, eyes and clothing remain original.",
+  "profile": "../profiles/darren-portraits.json",
+  "rgba_map": {
+    "#392222": "#445F83",
+    "#491F1B": "#445F83",
+    "#63342A": "#6687AD",
+    "#83453A": "#7F9FBD",
+    "#87473B": "#7F9FBD",
+    "#955343": "#7F9FBD",
+    "#A3614E": "#9DB9D4"
+  }
+}

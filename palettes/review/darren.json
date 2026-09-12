@@ -1,0 +1,25 @@
+{
+  "label": "Darren reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Darren/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#7F9FBD",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/darren-portraits.json",
+  "source_colors": [
+    "#A3614E",
+    "#83453A",
+    "#63342A",
+    "#491F1B",
+    "#955343",
+    "#87473B",
+    "#392222"
+  ]
+}

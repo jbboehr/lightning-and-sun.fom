@@ -1,0 +1,15 @@
+{
+  "description": "Wiscar reviewed skin and facial transitions; actual hair, cosmetics, jewelry and clothing remain original.",
+  "profile": "../profiles/wiscar-portraits.json",
+  "rgba_map": {
+    "#441B14": "#1B2634",
+    "#6D3328": "#2D3F57",
+    "#834132": "#364C69",
+    "#9F5544": "#445F83",
+    "#C47054": "#6687AD",
+    "#D98364": "#7F9FBD",
+    "#DDAB82": "#97C3DB",
+    "#E3A17B": "#9DB9D4",
+    "#F4C2A7": "#B6CBDF"
+  }
+}

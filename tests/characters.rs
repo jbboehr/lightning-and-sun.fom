@@ -42,9 +42,15 @@ fn fixture(root: &Path) -> std::path::PathBuf {
         ("vera", "Vera", vec!["#28323C"]),
         ("wheedle", "Wheedle", vec!["#28323C"]),
         ("zorel", "Zorel", vec!["#28323C"]),
+        ("darren", "Darren", vec!["#28323C"]),
+        ("linnet", "Linnet", vec!["#28323C"]),
+        ("wiscar", "Wiscar", vec!["#28323C"]),
+        ("wynne", "Wynne", vec!["#28323C"]),
     ] {
         let (portrait_folder, atlas) = match id {
-            "josephine" => ("Portraits", "PortraitsMisc"),
+            "josephine" | "darren" | "linnet" | "wiscar" | "wynne" => {
+                ("Portraits", "PortraitsMisc")
+            }
             "darcy" | "louis" | "merri" | "stillwell" | "taliferro" | "vera" => {
                 ("Portraits/Spring", "PortraitsMisc")
             }
@@ -361,6 +367,10 @@ fn characters_can_be_built_alone_or_with_existing_characters() {
         (vec!["vera"], "Vera", "G"),
         (vec!["wheedle"], "Wheedle", "T"),
         (vec!["zorel"], "Zorel", "R"),
+        (vec!["darren"], "Darren", "D"),
+        (vec!["linnet"], "Linnet", "C"),
+        (vec!["wiscar"], "Wiscar", "W"),
+        (vec!["wynne"], "Wynne", "Q"),
         (
             vec![
                 "adeline",
@@ -393,9 +403,13 @@ fn characters_can_be_built_alone_or_with_existing_characters() {
                 "vera",
                 "wheedle",
                 "zorel",
+                "darren",
+                "linnet",
+                "wiscar",
+                "wynne",
             ],
-            "Zorel",
-            "R",
+            "Wynne",
+            "Q",
         ),
     ] {
         let id = ids.last().unwrap();

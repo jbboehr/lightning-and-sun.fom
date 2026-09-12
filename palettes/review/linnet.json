@@ -1,0 +1,43 @@
+{
+  "label": "Linnet reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Linnet/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#6687AD",
+    "#6687AD"
+  ],
+  "reference_profile": "../profiles/linnet-portraits.json",
+  "source_colors": [
+    "#C7875C",
+    "#A36049",
+    "#6D3328",
+    "#4A1B16",
+    "#B16A52",
+    "#8F5042",
+    "#472721",
+    "#6A3126",
+    "#B9755A",
+    "#884636",
+    "#6C3327",
+    "#C87463",
+    "#BB6C5D",
+    "#5B241E",
+    "#9A5547",
+    "#9F5544"
+  ]
+}
