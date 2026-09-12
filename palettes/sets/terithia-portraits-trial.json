@@ -1,0 +1,73 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#445F83",
+        "#445F83",
+        "#445F83",
+        "#A6C0E8",
+        "#ABC6EE",
+        "#B3D0F9",
+        "#445F83"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#6E4922",
+        "#6E4922",
+        "#6E4922",
+        "#6E4922",
+        "#F1B985",
+        "#F6BF8B",
+        "#FEC996",
+        "#6E4922"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#491F1B",
+        "#491F1B",
+        "#491F1B",
+        "#491F1B",
+        "#B9736B",
+        "#BE7971",
+        "#C6837C",
+        "#491F1B"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#624A48",
+        "#624A48",
+        "#624A48",
+        "#624A48",
+        "#CAB6B9",
+        "#CFBCBF",
+        "#D7C6CA",
+        "#624A48"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    }
+  ],
+  "profile": "../profiles/terithia-portraits.json"
+}

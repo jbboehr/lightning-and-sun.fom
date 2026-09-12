@@ -1,0 +1,61 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#445F83",
+        "#445F83",
+        "#B0CFEC",
+        "#445F83"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#6E4922",
+        "#6E4922",
+        "#6E4922",
+        "#FBC889",
+        "#6E4922"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#491F1B",
+        "#491F1B",
+        "#491F1B",
+        "#C3826F",
+        "#491F1B"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#624A48",
+        "#624A48",
+        "#624A48",
+        "#D4C5BD",
+        "#624A48"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    }
+  ],
+  "profile": "../profiles/merri-portraits.json"
+}

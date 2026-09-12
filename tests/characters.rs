@@ -35,10 +35,12 @@ fn fixture(root: &Path) -> std::path::PathBuf {
         ("louis", "Louis", vec!["#28323C"]),
         ("luc", "Luc", vec!["#28323C"]),
         ("maple", "Maple", vec!["#28323C"]),
+        ("merri", "Merri", vec!["#28323C"]),
+        ("terithia", "Terithia", vec!["#28323C"]),
     ] {
         let (portrait_folder, atlas) = match id {
             "josephine" => ("Portraits", "PortraitsMisc"),
-            "darcy" | "louis" => ("Portraits/Spring", "PortraitsMisc"),
+            "darcy" | "louis" | "merri" => ("Portraits/Spring", "PortraitsMisc"),
             _ => ("Portraits/Spring", "PortraitsSpring"),
         };
         let name = format!(
@@ -344,6 +346,39 @@ fn characters_can_be_built_alone_or_with_existing_characters() {
             ],
             "Maple",
             "F12",
+        ),
+        (vec!["merri"], "Merri", "F1"),
+        (vec!["terithia"], "Terithia", "F3"),
+        (
+            vec![
+                "adeline",
+                "hayden",
+                "ryis",
+                "reina",
+                "juniper",
+                "celine",
+                "march",
+                "balor",
+                "valen",
+                "eiland",
+                "olric",
+                "landen",
+                "nora",
+                "holt",
+                "josephine",
+                "darcy",
+                "dell",
+                "elsie",
+                "errol",
+                "hemlock",
+                "louis",
+                "luc",
+                "maple",
+                "merri",
+                "terithia",
+            ],
+            "Terithia",
+            "F3",
         ),
     ] {
         let id = ids.last().unwrap();

@@ -1,0 +1,27 @@
+{
+  "label": "Merri portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Merri/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#445F83",
+    "#B0CFEC",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/merri-portraits.json",
+  "source_colors": [
+    "#DD9266",
+    "#CB7A56",
+    "#B36644",
+    "#7F382B",
+    "#9E512F",
+    "#7E4C3B",
+    "#F0A87E",
+    "#482323"
+  ]
+}

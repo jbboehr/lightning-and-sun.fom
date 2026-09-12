@@ -1,0 +1,13 @@
+{
+  "profile": "../profiles/merri-portraits.json",
+  "rgba_map": {
+    "#482323": "#445F83",
+    "#7E4C3B": "#445F83",
+    "#7F382B": "#445F83",
+    "#9E512F": "#445F83",
+    "#B36644": "#6687AD",
+    "#CB7A56": "#7F9FBD",
+    "#DD9266": "#9DB9D4",
+    "#F0A87E": "#B0CFEC"
+  }
+}

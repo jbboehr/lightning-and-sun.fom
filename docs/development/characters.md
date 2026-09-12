@@ -4,14 +4,14 @@ The combined trial includes Adeline's 143 reviewed animations, Hayden's 133,
 Ryis's 109, Reina's 103, Juniper's 132, Celine's 183, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
-Louis's 32, Luc's 32, and Maple's 32 portrait strips, each with four recolors:
-6,768 generated variant strips. All twenty-three characters start on Vanilla
-each session.
+Louis's 32, Luc's 32, Maple's 32, Merri's 32, and Terithia's 32 portrait strips,
+each with four recolors: 7,024 generated variant strips. All twenty-five characters
+start on Vanilla each session.
 F6 cycles Adeline, F8 Hayden, F10 Ryis,
 Home Reina, Page Down Juniper,
 Insert Celine, U March, I Balor, O Valen, J Eiland, K Olric, L Landen, N Nora,
 H Holt, P Josephine, B Darcy, Y Dell, Z Elsie, X Errol, F Hemlock, V Louis,
-F11 Luc, and F12 Maple.
+F11 Luc, F12 Maple, F1 Merri, and F3 Terithia.
 Each has five choices.
 The [shared NPC presets](shared-npc-presets.md)
 record the earlier natural colors; the [parallel portrait batch](parallel-portraits.md)
@@ -26,6 +26,7 @@ The [Darcy and Dell batch](darcy-dell-portraits.md) adds 64 more seasonal strips
 The [Elsie and Errol batch](elsie-errol-portraits.md) adds another 72.
 The [Hemlock and Louis batch](hemlock-louis-portraits.md) adds 64 more seasonal strips.
 The [Luc and Maple batch](luc-maple-portraits.md) adds 64 more.
+The [Merri and Terithia batch](merri-terithia-portraits.md) adds another 64.
 Their overworld sprites are not covered. The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
 
@@ -190,7 +191,7 @@ Local evidence includes `tmp/ryis-integration-final-checks.log`,
 ## Local visual check
 
 The ignored `tmp/play-characters` launcher opens the combined package with its
-own saves and state in `tmp/luc-maple-detail-playtest`, mounting the supplied
+own saves and state in `tmp/merri-terithia-playtest`, mounting the supplied
 game files read-only. Previous trial copies are retained separately.
 Run it from the normal desktop terminal:
 
@@ -198,7 +199,7 @@ Run it from the normal desktop terminal:
 ./tmp/play-characters
 ```
 
-- F7 opens the portrait trial on Luc and advances expressions; Page Up goes backward.
+- F7 opens the portrait trial on Merri and advances expressions; Page Up goes backward.
 - F4 switches the displayed character; F5 switches outfits. F2 belongs to the
   game's debugger and is not a preview control.
 - F6 cycles Adeline's palette; F8 switches Hayden's palette; F10 switches Ryis's palette.
@@ -212,20 +213,21 @@ Run it from the normal desktop terminal:
 - Z cycles Elsie's palette; X cycles Errol's palette.
 - F cycles Hemlock's palette; V cycles Louis's palette.
 - F11 cycles Luc's palette; F12 cycles Maple's palette.
+- F1 cycles Merri's palette; F3 cycles Terithia's palette.
 - F9 checks independent palette cycles and portrait phase.
-- Optional world controls: press F1 after finishing portrait/outfit switches to
-  reset Adeline's Spring test actor. F3 changes action, Shift+F12 changes facing,
+- Optional world controls: press Shift+F1 after finishing portrait/outfit switches to
+  reset Adeline's Spring test actor. Shift+F3 changes action, Shift+F12 changes facing,
   and Shift+F11 checks world phase and movement.
 
 The world helper disables Adeline's town scheduling before manually placing her,
 as established by the earlier pathfinding-crash fix. These preview controls and
 scheduling changes are excluded from the player package. The launcher is retained
 by a Nix output link; rebuild it if necessary with
-`nix build --impure --file tmp/luc-maple-detail-playtest-launch.nix --out-link tmp/play-characters`.
+`nix build --impure --file tmp/merri-terithia-playtest-launch.nix --out-link tmp/play-characters`.
 
 F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
-Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, and Maple cycle spring,
-summer, autumn, and winter.
+Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri, and
+Terithia cycle spring, summer, autumn, and winter.
 F4 retains the current outfit when the next character has portraits for it,
 otherwise it falls back to spring.
 Bunny ears appear among Olric's expressions; the helper selects the game's

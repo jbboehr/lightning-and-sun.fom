@@ -1,0 +1,33 @@
+{
+  "label": "Terithia reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Terithia/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#445F83",
+    "#445F83",
+    "#A6C0E8",
+    "#ABC6EE",
+    "#B3D0F9",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/terithia-portraits.json",
+  "source_colors": [
+    "#D29A7DFF",
+    "#BA7E66FF",
+    "#AD7465FF",
+    "#7E4C3BFF",
+    "#724A3EFF",
+    "#583131FF",
+    "#482323FF",
+    "#DBA191FF",
+    "#E0A797FF",
+    "#E8B1A2FF",
+    "#7A4D45FF"
+  ]
+}

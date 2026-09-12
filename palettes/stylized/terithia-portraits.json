@@ -1,0 +1,17 @@
+{
+  "description": "Terithia skin, fine eye and hand shades, and target-relative pale scars. Actual gray hair, neck cord, laces, bag, and tongue stay original.",
+  "profile": "../profiles/terithia-portraits.json",
+  "rgba_map": {
+    "#482323FF": "#445F83",
+    "#583131FF": "#445F83",
+    "#724A3EFF": "#445F83",
+    "#7A4D45FF": "#445F83",
+    "#7E4C3BFF": "#445F83",
+    "#AD7465FF": "#6687AD",
+    "#BA7E66FF": "#7F9FBD",
+    "#D29A7DFF": "#9DB9D4",
+    "#DBA191FF": "#A6C0E8",
+    "#E0A797FF": "#ABC6EE",
+    "#E8B1A2FF": "#B3D0F9"
+  }
+}

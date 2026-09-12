@@ -35,6 +35,8 @@ The [Hemlock and Louis batch](hemlock-louis-portraits.md) adds another 64,
 including skin colors shared with clothing and different original atlas assignments.
 The [Luc and Maple batch](luc-maple-portraits.md) adds 64 seasonal strips,
 including fine face and hand shading shared with glasses, hair, and clothing.
+The [Merri and Terithia batch](merri-terithia-portraits.md) adds another 64,
+retaining Merri's miscellaneous atlas and unusual Winter file locations.
 
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`
