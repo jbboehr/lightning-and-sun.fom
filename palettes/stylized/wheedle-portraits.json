@@ -1,0 +1,16 @@
+{
+  "description": "Wheedle seasonal skin, hands, eye and outer-mouth shading. Actual hair, beard, eyes, mouth interior and clothing retain original colors.",
+  "profile": "../profiles/wheedle-portraits.json",
+  "rgba_map": {
+    "#553728": "#2D3F57",
+    "#7C5846": "#3F678D",
+    "#81503C": "#445F83",
+    "#A56C54": "#5C7FAB",
+    "#AF7456": "#6687AD",
+    "#B57657": "#6C89AE",
+    "#D39876": "#7F9FBD",
+    "#D89D7A": "#84A4C1",
+    "#E5AC7E": "#8EACC9",
+    "#F6C38D": "#9DB9D4"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "label": "Wheedle reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Wheedle/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#5C7FAB",
+    "#445F83",
+    "#2D3F57",
+    "#84A4C1",
+    "#8EACC9",
+    "#6C89AE",
+    "#3F678D"
+  ],
+  "reference_profile": "../profiles/wheedle-portraits.json",
+  "source_colors": [
+    "#F6C38D",
+    "#D39876",
+    "#AF7456",
+    "#A56C54",
+    "#81503C",
+    "#553728",
+    "#D89D7A",
+    "#E5AC7E",
+    "#B57657",
+    "#7C5846"
+  ]
+}

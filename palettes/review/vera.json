@@ -1,0 +1,23 @@
+{
+  "label": "Vera reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Vera/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/vera-portraits.json",
+  "source_colors": [
+    "#B68454",
+    "#A15F3F",
+    "#7F402B",
+    "#541C1E",
+    "#B07342",
+    "#762E21"
+  ]
+}

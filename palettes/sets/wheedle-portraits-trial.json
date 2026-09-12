@@ -1,0 +1,69 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#5C7FAB",
+        "#445F83",
+        "#2D3F57",
+        "#84A4C1",
+        "#8EACC9",
+        "#6C89AE",
+        "#3F678D"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#A86944",
+        "#6E4922",
+        "#493117",
+        "#CF9556",
+        "#D9A162",
+        "#B87347",
+        "#69512C"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#592C28",
+        "#491F1B",
+        "#311512",
+        "#864F3E",
+        "#995B49",
+        "#69362B",
+        "#442725"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#846C6B",
+        "#624A48",
+        "#413130",
+        "#AB9588",
+        "#B4A095",
+        "#94766E",
+        "#5D5252"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    }
+  ],
+  "profile": "../profiles/wheedle-portraits.json"
+}

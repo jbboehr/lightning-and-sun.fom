@@ -1,0 +1,12 @@
+{
+  "description": "Vera exposed face, ears, neck, shoulders, arms and hands, including fine eyebrow, nose and outer lip skin blends. Magenta hair, lipstick, nail polish, eyes, gold earrings and seasonal clothing remain original.",
+  "profile": "../profiles/vera-portraits.json",
+  "rgba_map": {
+    "#541C1E": "#445F83",
+    "#762E21": "#445F83",
+    "#7F402B": "#6687AD",
+    "#A15F3F": "#7F9FBD",
+    "#B07342": "#7F9FBD",
+    "#B68454": "#9DB9D4"
+  }
+}
