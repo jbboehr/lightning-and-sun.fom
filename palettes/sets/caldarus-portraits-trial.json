@@ -1,0 +1,65 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#445F83",
+        "#9DB9D4",
+        "#7F9FBD",
+        "#94ADC5",
+        "#9DB9D4"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E3A17B",
+        "#D48363",
+        "#C47054",
+        "#9F5544",
+        "#9F5544",
+        "#E3A17B",
+        "#D48363",
+        "#DA956C",
+        "#E3A17B"
+      ],
+      "id": "npc_adeline",
+      "label": "Adeline palette"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#6E4922",
+        "#6E4922",
+        "#E8B271",
+        "#CA9052",
+        "#DFA662",
+        "#E8B271"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#491F1B",
+        "#491F1B",
+        "#B06C57",
+        "#814A3A",
+        "#A76048",
+        "#B06C57"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    }
+  ],
+  "profile": "../profiles/caldarus-portraits.json"
+}

@@ -370,7 +370,7 @@ For tests and local proof results, see [the verification record](development/ver
 Adeline, Hayden, Ryis, Reina, Juniper, Celine, March, Balor, Valen, Eiland,
 Olric, Landen, Nora, Holt, Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis,
 Luc, Maple, Merri, Terithia, Stillwell, Taliferro, Vera, Wheedle, Zorel, Darren,
-Linnet, Wiscar, and Wynne choices.
+Linnet, Wiscar, Wynne, and Caldarus choices.
 The installer accepts the same `--characters` file.
 See [character configuration and testing](development/characters.md) for the
 per-character workflow and coverage.

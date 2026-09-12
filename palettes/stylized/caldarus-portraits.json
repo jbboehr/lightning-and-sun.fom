@@ -1,0 +1,15 @@
+{
+  "description": "Caldarus reviewed exposed skin and fine contours. Hair, eyes and clothing remain original.",
+  "profile": "../profiles/caldarus-portraits.json",
+  "rgba_map": {
+    "#624A48": "#445F83",
+    "#755A54": "#445F83",
+    "#8E746D": "#6687AD",
+    "#A69084": "#7F9FBD",
+    "#AA8E7E": "#7F9FBD",
+    "#B8A396": "#94ADC5",
+    "#BEABA0": "#9DB9D4",
+    "#C1AFA5": "#9DB9D4",
+    "#C3AA9B": "#9DB9D4"
+  }
+}

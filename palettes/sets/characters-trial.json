@@ -33,6 +33,7 @@
     {"id": "darren", "presets": "darren-portraits-trial.json"},
     {"id": "linnet", "presets": "linnet-portraits-trial.json"},
     {"id": "wiscar", "presets": "wiscar-portraits-trial.json"},
-    {"id": "wynne", "presets": "wynne-portraits-trial.json"}
+    {"id": "wynne", "presets": "wynne-portraits-trial.json"},
+    {"id": "caldarus", "presets": "caldarus-portraits-trial.json"}
   ]
 }

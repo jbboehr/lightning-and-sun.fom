@@ -62,6 +62,8 @@ The [Zorel portrait pass](zorel-portraits.md) adds 32 more seasonal strips with
 the same compact overview and complete Vanilla/Blue review format.
 The [Darren, Linnet, Wiscar, and Wynne batch](darren-linnet-wiscar-wynne-portraits.md)
 adds 32 Spring-only cameo strips, with one small review page per character.
+The [Caldarus pass](caldarus-portraits.md) adds 95 human strips and three unchanged
+dragon/statue strips, with review pages split into at most eight cases.
 
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`

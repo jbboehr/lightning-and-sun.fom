@@ -95,8 +95,8 @@ actions and outfits still use their original colors.
 To include Hayden, Ryis, Reina, Juniper, Celine, March, Balor, Valen, Eiland,
 Olric, Landen, Nora, Holt, Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis,
 Luc, Maple, Merri, Terithia, Stillwell, Taliferro, Vera, Wheedle, Zorel, Darren,
-Linnet, Wiscar, and Wynne alongside Adeline, uninstall the previous study, then
-install the combined trial:
+Linnet, Wiscar, Wynne, and Caldarus alongside Adeline, uninstall the previous
+study, then install the combined trial:
 
 ```sh
 target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
@@ -120,6 +120,7 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
 **R** cycles Zorel's palettes.
 **D** cycles Darren's palettes; **C** cycles Linnet's.
 **W** cycles Wiscar's palettes; **Q** cycles Wynne's.
+**Delete** cycles Caldarus's palettes.
 Each character starts on **Vanilla** every launch, followed by **Debug Blue**
 and three sampled NPC palettes. Selections are independent.
 
@@ -159,17 +160,21 @@ and three sampled NPC palettes. Selections are independent.
 | Linnet | Hayden, Ryis, Seridia |
 | Wiscar | Hayden, Ryis, Seridia |
 | Wynne | Hayden, Ryis, Seridia |
+| Caldarus | Adeline, Hayden, Ryis |
 
 These adapt the sampled colors to each character's reviewed shading and masks.
 The trial includes 133 Hayden, 109 Ryis, 103 Reina, 132 Juniper, 183 Celine,
 181 March, 110 Balor, 92 Valen, 78 Eiland, 36 Olric, 32 Landen, 32 Nora,
 32 Holt, 32 Josephine, 32 Darcy, 32 Dell, 36 Elsie, 36 Errol, 32 Hemlock,
 32 Louis, 32 Luc, 32 Maple, 32 Merri, 32 Terithia, 36 Stillwell, 36 Taliferro,
-32 Vera, 32 Wheedle, 32 Zorel, and eight each for Darren, Linnet, Wiscar, and Wynne.
+32 Vera, 32 Wheedle, 32 Zorel, eight each for Darren, Linnet, Wiscar, and Wynne,
+and 98 Caldarus portrait strips.
 These cover seasonal portraits plus beach, bath, and wedding artwork where
 available. Celine's gardening portraits, March's special expressions, and Olric's
 bunny-ears portraits are included. Darren, Linnet, Wiscar, and Wynne have
-Spring-only cameo portraits.
+Spring-only cameo portraits. Caldarus’s 95 human portraits recolor; his three
+dragon/statue portraits retain their original appearance. His natural skin ramp
+already matches Seridia, so his alternatives include Adeline instead.
 Their overworld sprites remain original. Hayden's embarrassed expression and
 possible Reina/Juniper mouth details await a later art pass. To try one character
 alone, use its set instead; for example,

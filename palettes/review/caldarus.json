@@ -1,0 +1,29 @@
+{
+  "label": "Caldarus reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Caldarus/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#9DB9D4",
+    "#7F9FBD",
+    "#94ADC5",
+    "#9DB9D4"
+  ],
+  "reference_profile": "../profiles/caldarus-portraits.json",
+  "source_colors": [
+    "#C1AFA5",
+    "#A69084",
+    "#8E746D",
+    "#624A48",
+    "#755A54",
+    "#C3AA9B",
+    "#AA8E7E",
+    "#B8A396",
+    "#BEABA0"
+  ]
+}
