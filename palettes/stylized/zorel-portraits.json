@@ -1,0 +1,16 @@
+{
+  "description": "Zorel exposed face, neck, arms and hands including paler palms and fine eye and mouth contours. Purple hair, eyes, wraps, clothing and staff remain original.",
+  "profile": "../profiles/zorel-portraits.json",
+  "rgba_map": {
+    "#432234": "#445F83",
+    "#642E3D": "#445F83",
+    "#7A3118": "#445F83",
+    "#7A354C": "#445F83",
+    "#874048": "#6687AD",
+    "#975250": "#7F9FBD",
+    "#985750": "#7F9FBD",
+    "#A56553": "#7F9FBD",
+    "#B0755D": "#9DB9D4",
+    "#DA977E": "#C7DBF5"
+  }
+}

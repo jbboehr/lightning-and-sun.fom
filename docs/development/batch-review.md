@@ -58,6 +58,8 @@ The [Stillwell and Taliferro batch](stillwell-taliferro-portraits.md) adds 72,
 including Stillwell's closed-eyes and Taliferro's sly expressions.
 The [Vera and Wheedle batch](vera-wheedle-portraits.md) adds 64 seasonal strips,
 with the compact overview and separate Vanilla/Blue review pages from the start.
+The [Zorel portrait pass](zorel-portraits.md) adds 32 more seasonal strips with
+the same compact overview and complete Vanilla/Blue review format.
 
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`

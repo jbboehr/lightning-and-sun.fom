@@ -1,0 +1,31 @@
+{
+  "label": "Zorel reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Zorel/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#7F9FBD",
+    "#445F83",
+    "#C7DBF5",
+    "#7F9FBD",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/zorel-portraits.json",
+  "source_colors": [
+    "#B0755D",
+    "#985750",
+    "#874048",
+    "#642E3D",
+    "#432234",
+    "#A56553",
+    "#7A354C",
+    "#DA977E",
+    "#975250",
+    "#7A3118"
+  ]
+}

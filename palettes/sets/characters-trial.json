@@ -28,6 +28,7 @@
     {"id": "stillwell", "presets": "stillwell-portraits-trial.json"},
     {"id": "taliferro", "presets": "taliferro-portraits-trial.json"},
     {"id": "vera", "presets": "vera-portraits-trial.json"},
-    {"id": "wheedle", "presets": "wheedle-portraits-trial.json"}
+    {"id": "wheedle", "presets": "wheedle-portraits-trial.json"},
+    {"id": "zorel", "presets": "zorel-portraits-trial.json"}
   ]
 }
