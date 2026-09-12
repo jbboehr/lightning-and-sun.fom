@@ -24,6 +24,8 @@
     {"id": "luc", "presets": "luc-portraits-trial.json"},
     {"id": "maple", "presets": "maple-portraits-trial.json"},
     {"id": "merri", "presets": "merri-portraits-trial.json"},
-    {"id": "terithia", "presets": "terithia-portraits-trial.json"}
+    {"id": "terithia", "presets": "terithia-portraits-trial.json"},
+    {"id": "stillwell", "presets": "stillwell-portraits-trial.json"},
+    {"id": "taliferro", "presets": "taliferro-portraits-trial.json"}
   ]
 }

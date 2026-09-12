@@ -5,12 +5,29 @@ It groups identical decoded frames, reuses approved masks, and suggests matching
 color-connected regions for other frames. This replaces the per-slice temporary
 authoring scripts with a reusable Rust command and a small browser editor.
 
-This is an authoring tool for the maintainer or coding agent. The user-facing
-review should be a small sheet of completed recolors and any uncertain cases.
+This is an authoring tool for the maintainer or coding agent. Keep the compact
+user-facing overview, and also provide a complete offline visual review for
+each new batch. The user should not need to launch the game or edit components
+to see every case. A local HTML page containing labeled PNG comparison sheets
+is suitable. Keep all palette choices in the compact overview, explicitly
+labeled as a sample. For detailed review, the user prefers Vanilla and Debug
+Blue only for now, with both frames side by side and enlarged face details.
+Split the review into small pages by character and outfit instead of a single
+long page. Include every expression and frame; produce focused natural-palette
+comparisons when a reported issue needs them.
+
+Verify the complete review against the current registry and animation metadata,
+including every frame in both review palettes; check that cropping hides no visible
+art. Generate sheets from the actual current bundle, preserve nearest-neighbor
+scaling, and keep the HTML and images together under ignored output directories.
+The [Stillwell and Taliferro batch](stillwell-taliferro-portraits.md) includes the
+first complete user-facing review in this format.
+
 Do the region selection, propagation, and full-corpus inspection before handing
-over that sheet. Individual component editing is available for corrections;
+over the previews. Individual component editing is available for corrections;
 it is not a required user workflow. The [Hayden portrait pass](hayden-portraits.md)
-uses this division of work.
+uses this division of work. Record summary-only acceptance separately from a
+user review of the complete image set or an in-game test.
 
 The later [Ryis portrait pass](ryis-portraits.md) uses the same workflow for a
 darker source palette, including shared-color gloves and wedding clothing.
@@ -37,6 +54,8 @@ The [Luc and Maple batch](luc-maple-portraits.md) adds 64 seasonal strips,
 including fine face and hand shading shared with glasses, hair, and clothing.
 The [Merri and Terithia batch](merri-terithia-portraits.md) adds another 64,
 retaining Merri's miscellaneous atlas and unusual Winter file locations.
+The [Stillwell and Taliferro batch](stillwell-taliferro-portraits.md) adds 72,
+including Stillwell's closed-eyes and Taliferro's sly expressions.
 
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`

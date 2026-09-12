@@ -94,8 +94,8 @@ actions and outfits still use their original colors.
 
 To include Hayden, Ryis, Reina, Juniper, Celine, March, Balor, Valen, Eiland,
 Olric, Landen, Nora, Holt, Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis,
-Luc, Maple, Merri, and Terithia alongside Adeline, uninstall the previous study,
-then install the combined trial:
+Luc, Maple, Merri, Terithia, Stillwell, and Taliferro alongside Adeline, uninstall
+the previous study, then install the combined trial:
 
 ```sh
 target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
@@ -114,6 +114,7 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
 **F** cycles Hemlock's palettes; **V** cycles Louis's.
 **F11** cycles Luc's palettes; **F12** cycles Maple's.
 **F1** cycles Merri's palettes; **F3** cycles Terithia's.
+**F4** cycles Stillwell's palettes; **F5** cycles Taliferro's.
 Each character starts on **Vanilla** every launch, followed by **Debug Blue**
 and three sampled NPC palettes. Selections are independent.
 
@@ -144,12 +145,15 @@ and three sampled NPC palettes. Selections are independent.
 | Maple | Hayden, Ryis, Seridia |
 | Merri | Hayden, Ryis, Seridia |
 | Terithia | Hayden, Ryis, Seridia |
+| Stillwell | Hayden, Ryis, Seridia |
+| Taliferro | Hayden, Ryis, Seridia |
 
 These adapt the sampled colors to each character's reviewed shading and masks.
 The trial includes 133 Hayden, 109 Ryis, 103 Reina, 132 Juniper, 183 Celine,
 181 March, 110 Balor, 92 Valen, 78 Eiland, 36 Olric, 32 Landen, 32 Nora,
 32 Holt, 32 Josephine, 32 Darcy, 32 Dell, 36 Elsie, 36 Errol, 32 Hemlock,
-32 Louis, 32 Luc, 32 Maple, 32 Merri, and 32 Terithia portrait strips.
+32 Louis, 32 Luc, 32 Maple, 32 Merri, 32 Terithia, 36 Stillwell, and 36 Taliferro
+portrait strips.
 These cover seasonal portraits plus beach, bath, and wedding artwork where
 available. Celine's gardening portraits, March's special expressions, and Olric's
 bunny-ears portraits are included.

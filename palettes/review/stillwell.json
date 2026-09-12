@@ -1,0 +1,23 @@
+{
+  "label": "Stillwell reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Stillwell/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#6687AD"
+  ],
+  "reference_profile": "../profiles/stillwell-portraits.json",
+  "source_colors": [
+    "#E8C99E",
+    "#CBA282",
+    "#BD876C",
+    "#8F564C",
+    "#5A2F2F",
+    "#AA6B60"
+  ]
+}

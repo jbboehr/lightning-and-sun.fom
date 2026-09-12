@@ -1,0 +1,61 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#91AFCB",
+        "#7393B5",
+        "#7CA4C3",
+        "#9ABCDA"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#6E4922",
+        "#DCA465",
+        "#BE814C",
+        "#C79558",
+        "#E5B577"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#491F1B",
+        "#9D5E4B",
+        "#723F32",
+        "#7E4F40",
+        "#AD6F5D"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#624A48",
+        "#B6A398",
+        "#9A8279",
+        "#A3958A",
+        "#BEB2AB"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    }
+  ],
+  "profile": "../profiles/taliferro-portraits.json"
+}

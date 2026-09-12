@@ -1,0 +1,12 @@
+{
+  "description": "Stillwell exposed skin, fine hairline and hand contours, and lip/chin shading. Gray eyes, blue hair, silver jewelry, coats and Winter glove material remain original.",
+  "profile": "../profiles/stillwell-portraits.json",
+  "rgba_map": {
+    "#5A2F2F": "#445F83",
+    "#8F564C": "#445F83",
+    "#AA6B60": "#6687AD",
+    "#BD876C": "#6687AD",
+    "#CBA282": "#7F9FBD",
+    "#E8C99E": "#9DB9D4"
+  }
+}

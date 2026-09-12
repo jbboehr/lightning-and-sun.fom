@@ -1,0 +1,14 @@
+{
+  "description": "Taliferro skin with target-relative pale eye and outer-mouth blends. Actual blond hair, eyebrows, sideburns, jewelry and tongue stay original.",
+  "profile": "../profiles/taliferro-portraits.json",
+  "rgba_map": {
+    "#762E21": "#445F83",
+    "#C4613B": "#6687AD",
+    "#DE7E48": "#7393B5",
+    "#EFA67A": "#7CA4C3",
+    "#F2A174": "#7F9FBD",
+    "#FCC49A": "#91AFCB",
+    "#FCDEBE": "#9ABCDA",
+    "#FFDBB8": "#9DB9D4"
+  }
+}
