@@ -2,7 +2,7 @@ use image::{Rgba, RgbaImage};
 use std::{fs, process::Command};
 
 #[test]
-fn spring_actions_preserve_frame_timing_and_offsets() {
+fn world_actions_preserve_frame_timing_and_offsets() {
     let temp = tempfile::tempdir().unwrap();
     let original = temp.path().join("original");
     let modified = temp.path().join("modified");
@@ -85,6 +85,39 @@ fn spring_actions_preserve_frame_timing_and_offsets() {
             7,
             "[0.2,0.1,0.15,0.8,0.1,0.1,1.6]",
         ),
+        ("autumn_blink_east", 3, "[0.075, 0.125, 0.075]"),
+        ("autumn_blink_south", 3, "[0.075, 0.125, 0.075]"),
+        ("autumn_drink_east", 3, "1.0"),
+        ("autumn_drink_north", 3, "1.0"),
+        ("autumn_drink_south", 3, "1.0"),
+        ("autumn_eat_east", 5, "[0.125, 0.15, 0.175, 0.125, 0.6]"),
+        ("autumn_eat_north", 3, "1.0"),
+        ("autumn_eat_south", 5, "[0.125, 0.15, 0.175, 0.125, 0.6]"),
+        ("autumn_sit_east", 1, "1.0"),
+        ("autumn_sit_north", 1, "1.0"),
+        ("autumn_sit_south", 1, "1.0"),
+        ("summer_blink_east", 3, "[0.075, 0.125, 0.075]"),
+        ("summer_blink_south", 3, "[0.075, 0.125, 0.075]"),
+        ("summer_drink_east", 3, "1.0"),
+        ("summer_drink_north", 3, "1.0"),
+        ("summer_drink_south", 3, "1.0"),
+        ("summer_eat_east", 5, "[0.125, 0.15, 0.175, 0.125, 0.6]"),
+        ("summer_eat_north", 3, "1.0"),
+        ("summer_eat_south", 5, "[0.125, 0.15, 0.175, 0.125, 0.6]"),
+        ("summer_sit_east", 1, "1.0"),
+        ("summer_sit_north", 1, "1.0"),
+        ("summer_sit_south", 1, "1.0"),
+        ("winter_blink_east", 3, "[0.075, 0.125, 0.075]"),
+        ("winter_blink_south", 3, "[0.075, 0.125, 0.075]"),
+        ("winter_drink_east", 3, "1.0"),
+        ("winter_drink_north", 3, "1.0"),
+        ("winter_drink_south", 3, "1.0"),
+        ("winter_eat_east", 5, "[0.125, 0.15, 0.175, 0.125, 0.6]"),
+        ("winter_eat_north", 3, "1.0"),
+        ("winter_eat_south", 5, "[0.125, 0.15, 0.175, 0.125, 0.6]"),
+        ("winter_sit_east", 1, "1.0"),
+        ("winter_sit_north", 1, "1.0"),
+        ("winter_sit_south", 1, "1.0"),
     ];
     for (cycle, count, duration) in cases {
         let name = format!("spr_npc_adeline_{cycle}");
@@ -173,7 +206,10 @@ fn spring_actions_preserve_frame_timing_and_offsets() {
         "summer_walk_west",
         "autumn_idle_west",
         "winter_walk_west",
-        "summer_blink_south",
+        "summer_action_south",
+        "summer_blink_north",
+        "autumn_drink_west",
+        "winter_sit_west",
     ] {
         let source = temp.path().join(format!("unsupported-{cycle}"));
         let recolor = temp.path().join(format!("recolor-{cycle}"));
@@ -206,7 +242,7 @@ fn spring_actions_preserve_frame_timing_and_offsets() {
 }
 
 #[test]
-#[ignore = "requires the 186 local animations in extracted/adeline-world-actions-study"]
+#[ignore = "requires the 219 local animations in extracted/adeline-world-actions-study"]
 fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
@@ -231,7 +267,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
         String::from_utf8_lossy(&result.stderr)
     );
     let report: serde_json::Value = serde_json::from_slice(&result.stdout).unwrap();
-    assert_eq!(report["files"].as_array().unwrap().len(), 186);
+    assert_eq!(report["files"].as_array().unwrap().len(), 219);
     let sources = [
         [233, 169, 128, 255],
         [222, 143, 93, 255],
@@ -331,7 +367,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
 }
 
 #[test]
-#[ignore = "requires the 186 local animations in extracted/adeline-world-actions-study"]
+#[ignore = "requires the 219 local animations in extracted/adeline-world-actions-study"]
 fn world_masks_preserve_material_boundaries() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
@@ -398,6 +434,39 @@ fn world_masks_preserve_material_boundaries() {
         ("winter_walk_east", 4),
         ("winter_walk_north", 4),
         ("winter_walk_south", 4),
+        ("autumn_blink_east", 3),
+        ("autumn_blink_south", 3),
+        ("autumn_drink_east", 3),
+        ("autumn_drink_north", 3),
+        ("autumn_drink_south", 3),
+        ("autumn_eat_east", 5),
+        ("autumn_eat_north", 3),
+        ("autumn_eat_south", 5),
+        ("autumn_sit_east", 1),
+        ("autumn_sit_north", 1),
+        ("autumn_sit_south", 1),
+        ("summer_blink_east", 3),
+        ("summer_blink_south", 3),
+        ("summer_drink_east", 3),
+        ("summer_drink_north", 3),
+        ("summer_drink_south", 3),
+        ("summer_eat_east", 5),
+        ("summer_eat_north", 3),
+        ("summer_eat_south", 5),
+        ("summer_sit_east", 1),
+        ("summer_sit_north", 1),
+        ("summer_sit_south", 1),
+        ("winter_blink_east", 3),
+        ("winter_blink_south", 3),
+        ("winter_drink_east", 3),
+        ("winter_drink_north", 3),
+        ("winter_drink_south", 3),
+        ("winter_eat_east", 5),
+        ("winter_eat_north", 3),
+        ("winter_eat_south", 5),
+        ("winter_sit_east", 1),
+        ("winter_sit_north", 1),
+        ("winter_sit_south", 1),
     ];
     let sources = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x7D3B14];
     let targets = [
@@ -597,6 +666,26 @@ fn world_masks_preserve_material_boundaries() {
         ("winter_idle_east", 41, 42, 0xC47054, false),  // winter east lower neckline chain
         ("winter_walk_north", 115, 47, 0xBA6A4C, true), // winter rear walking hand shade
         ("winter_walk_east", 276, 48, 0x7D3B14, true),  // winter east last frame fingertip
+        ("summer_blink_south", 117, 37, 0x000000, false), // summer closed blink eye line
+        ("summer_blink_east", 125, 46, 0xDE8F5D, true), // summer blink east isolated far hand
+        ("summer_sit_north", 34, 47, 0x7D3B14, true),   // summer seated rear left finger
+        ("summer_eat_north", 114, 47, 0x7D3B14, true),  // summer rear eating hidden hand contour
+        ("summer_eat_south", 119, 41, 0xBA6A4C, true),  // summer eating dipped neck isolated shade
+        ("summer_eat_south", 197, 38, 0xBA6A4C, true),  // summer eating cheek beside open mouth
+        ("summer_eat_south", 198, 35, 0x410808, false), // summer eating dark mouth interior
+        ("summer_eat_east", 360, 45, 0xBA6A4C, true),   // summer east eating last frame hand shade
+        ("summer_drink_east", 120, 44, 0xBA6A4C, true), // summer east drinking isolated fingertip
+        ("autumn_blink_east", 40, 45, 0xBA6A4C, false), // autumn blink east chest trim
+        ("autumn_eat_north", 46, 45, 0xBA6A4C, true),   // autumn rear eating isolated far hand
+        ("autumn_eat_south", 198, 36, 0x9E2626, false), // autumn eating mouth interior
+        ("autumn_drink_south", 35, 44, 0xBA6A4C, true), // autumn drinking gripping finger
+        ("winter_blink_east", 40, 41, 0xC47054, false), // winter blink east neckline
+        ("winter_sit_north", 35, 47, 0xDE8F5D, true),   // winter seated rear hand beyond cuff
+        ("winter_eat_north", 46, 45, 0xBA6A4C, true),   // winter rear eating isolated far hand
+        ("winter_eat_north", 115, 47, 0xDE8F5D, true),  // winter rear eating tiny hand light
+        ("winter_eat_south", 119, 41, 0xBA6A4C, true),  // winter eating dipped neck island
+        ("winter_eat_south", 198, 35, 0x410808, false), // winter eating dark mouth interior
+        ("winter_drink_east", 119, 43, 0xBA6A4C, true), // winter east drinking lower finger
     ];
     let mut blue_selection = Vec::new();
     for (target_index, (id, target)) in targets.iter().enumerate() {
@@ -656,7 +745,7 @@ fn world_masks_preserve_material_boundaries() {
             }
             frames += count;
         }
-        assert_eq!(frames, 126);
+        assert_eq!(frames, 219);
         if target_index == 0 {
             blue_selection = selection;
         } else {

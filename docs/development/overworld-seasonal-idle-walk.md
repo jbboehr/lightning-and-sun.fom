@@ -1,5 +1,9 @@
 # Adeline seasonal idle and walking animations
 
+This records the idle/walk slice. The subsequent
+[seasonal action pass](overworld-seasonal-actions.md) adds blinking, sitting,
+eating, and drinking in Summer, Autumn, and Winter.
+
 This adds the 18 idle/walk strips from Adeline's Summer, Autumn, and Winter
 overworld outfits. They contain 45 source frame occurrences and 28 distinct
 images. Together with the [complete Spring coverage](overworld-special-actions.md)
@@ -141,8 +145,10 @@ data stay ignored by Git.
 
 ## Remaining coverage
 
-Adeline's other Summer, Autumn, and Winter actions and other characters'
-overworld sprites remain original. All Adeline portraits, all Spring overworld
+The subsequent [seasonal action pass](overworld-seasonal-actions.md) covers
+33 Summer, Autumn, and Winter blink, sit, eat, and drink strips. Other actions in
+those outfits and other characters' overworld sprites remain original.
+All Adeline portraits, all Spring overworld
 strips, and idle/walk in the other three seasons now have masks. The accepted
 offline review covers recolored art; native gameplay timing and natural outfit
 transitions remain unverified.
