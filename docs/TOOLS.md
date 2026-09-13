@@ -69,12 +69,13 @@ Use `--presets palettes/sets/adeline-world-trial.json` to include those 126 port
 and six spring overworld idle/walk strips. F6 switches both together. North, south,
 east, and mirrored west are covered; other actions and overworld outfits remain
 original. Its blue-only recipe is `palettes/stylized/adeline-world-trial.json`.
-Use `--presets palettes/sets/adeline-world-actions-trial.json` for all 25 standard
-Spring overworld strips, including sitting, eating, drinking, blinking, general
-actions, shocked poses, sleeping, and kissing: 151 strips with the portraits.
+Use `--presets palettes/sets/adeline-world-actions-trial.json` for all 42 Spring
+overworld strips, including sitting, eating, drinking, blinking, general actions,
+shocked poses, sleeping, kissing, writing, reading, working, thinking, finger
+snapping, and fainting: 168 strips with the portraits.
 Its blue-only recipe is `palettes/stylized/adeline-world-actions.json`.
-Special animations and other overworld outfits remain original. See
-[standard Spring coverage](development/overworld-standard-actions.md) for
+Other overworld outfits remain original. See
+[complete Spring coverage](development/overworld-special-actions.md) for
 coverage and verification details.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
@@ -188,12 +189,14 @@ target/release/mistria-palette package-toggle \
 Install that generated folder as `mods/lns_palette` through MOMI v0.15.10. Remove
 the earlier replacement study first so the base portrait is vanilla. This package
 adds separate animations and an F6 hotkey: press F6 again to restore vanilla.
-It accepts one through 151 supported Adeline strips: portraits from the four
+It accepts one through 168 supported Adeline strips: portraits from the four
 seasons, beach, and wedding, plus spring overworld idle, walk, sit, eat, and drink
 and general actions in north, south, and east directions, blink in south/east,
 shocked start/loop/end in south, and sleep/kiss in east. West mirrors the east
-strips. It generates the matching runtime sprite table. Keep both generated GML
-files in the package.
+strips. Writing (standing and seated), reading, working, and thinking have
+start/loop/end strips in south; finger snapping and fainting also face south.
+It generates the matching runtime sprite table. Keep both generated GML files
+in the package.
 The choice lasts for the running game session and is not saved. Rebuild and
 reinstall after changing its palette. See [the developer procedure](development/portrait-toggle.md)
 and [complete portrait coverage](development/wedding-portraits.md) for verification details.

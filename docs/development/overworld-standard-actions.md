@@ -1,5 +1,8 @@
 # Adeline standard Spring overworld actions
 
+This records the standard-action slice. The subsequent
+[special-animation pass](overworld-special-actions.md) completes Spring coverage.
+
 This completes the 25 standard strips in Adeline's Spring sprite directory.
 The eight additions are general actions in three directions, shocked
 start/loop/end, sleep, and kiss. They contain 29 frame occurrences and 19 distinct
@@ -131,8 +134,9 @@ local game data remain ignored by Git.
 
 ## Remaining coverage
 
-Seventeen special-animation Spring strips remain: writing, reading, working,
-thinking, finger snapping and fainting. Other overworld outfits and other
-characters' world sprites remain original. See the
+The subsequent [special-animation pass](overworld-special-actions.md) covers the
+remaining 17 Spring strips: writing, reading, working, thinking, finger snapping
+and fainting. Other overworld outfits and other characters' world sprites remain
+original. See the
 [preceding action record](overworld-actions.md) for the existing world hook and
 its earlier native playtest coverage.

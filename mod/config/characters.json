@@ -154,7 +154,24 @@
       "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_shocked_loop_south.png": "Default",
       "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_sleep_east.png": "Default",
-      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_kiss_east.png": "Default"
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_kiss_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_write_start_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_write_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_write_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_write_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_write_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_read_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_read_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_read_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_work_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_work_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_work_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_think_start_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_think_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_think_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_finger_snap_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_faint_south.png": "Default"
     }
   },
   {

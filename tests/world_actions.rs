@@ -9,28 +9,85 @@ fn spring_actions_preserve_frame_timing_and_offsets() {
     fs::create_dir(&original).unwrap();
     fs::create_dir(&modified).unwrap();
     let cases = [
-        ("blink_south", 3, "[0.075,0.125,0.075]"),
-        ("blink_east", 3, "[0.075,0.125,0.075]"),
-        ("drink_north", 3, "1.0"),
-        ("drink_south", 3, "1.0"),
-        ("drink_east", 3, "1.0"),
-        ("eat_north", 3, "1.0"),
-        ("eat_south", 5, "[0.125,0.15,0.175,0.125,0.6]"),
-        ("eat_east", 5, "[0.125,0.15,0.175,0.125,0.6]"),
-        ("sit_north", 1, "1.0"),
-        ("sit_south", 1, "1.0"),
-        ("sit_east", 1, "1.0"),
-        ("action_north", 7, "[0.1,0.25,0.25,0.25,0.25,0.1,0.4]"),
-        ("action_south", 7, "[0.1,0.25,0.25,0.25,0.25,0.1,0.4]"),
-        ("action_east", 7, "[0.1,0.25,0.25,0.25,0.25,0.1,0.4]"),
-        ("shocked_start_south", 1, "1.0"),
-        ("shocked_loop_south", 1, "1.0"),
-        ("shocked_end_south", 1, "1.0"),
-        ("sleep_east", 1, "1.0"),
-        ("kiss_east", 4, "[0.15,0.15,0.8,0.15]"),
+        ("spring_blink_south", 3, "[0.075,0.125,0.075]"),
+        ("spring_blink_east", 3, "[0.075,0.125,0.075]"),
+        ("spring_drink_north", 3, "1.0"),
+        ("spring_drink_south", 3, "1.0"),
+        ("spring_drink_east", 3, "1.0"),
+        ("spring_eat_north", 3, "1.0"),
+        ("spring_eat_south", 5, "[0.125,0.15,0.175,0.125,0.6]"),
+        ("spring_eat_east", 5, "[0.125,0.15,0.175,0.125,0.6]"),
+        ("spring_sit_north", 1, "1.0"),
+        ("spring_sit_south", 1, "1.0"),
+        ("spring_sit_east", 1, "1.0"),
+        (
+            "spring_action_north",
+            7,
+            "[0.1,0.25,0.25,0.25,0.25,0.1,0.4]",
+        ),
+        (
+            "spring_action_south",
+            7,
+            "[0.1,0.25,0.25,0.25,0.25,0.1,0.4]",
+        ),
+        ("spring_action_east", 7, "[0.1,0.25,0.25,0.25,0.25,0.1,0.4]"),
+        ("spring_shocked_start_south", 1, "1.0"),
+        ("spring_shocked_loop_south", 1, "1.0"),
+        ("spring_shocked_end_south", 1, "1.0"),
+        ("spring_sleep_east", 1, "1.0"),
+        ("spring_kiss_east", 4, "[0.15,0.15,0.8,0.15]"),
+        ("specialanimation_spring_write_start_south", 2, "0.125"),
+        (
+            "specialanimation_spring_write_loop_south",
+            4,
+            "[0.1,0.125,0.1,0.3]",
+        ),
+        ("specialanimation_spring_write_end_south", 2, "[0.125,0.1]"),
+        ("specialanimation_spring_write_sit_start_south", 2, "0.125"),
+        (
+            "specialanimation_spring_write_sit_loop_south",
+            4,
+            "[0.1,0.125,0.1,0.3]",
+        ),
+        (
+            "specialanimation_spring_write_sit_end_south",
+            2,
+            "[0.125,0.1]",
+        ),
+        ("specialanimation_spring_read_sit_start_south", 3, "0.1"),
+        (
+            "specialanimation_spring_read_sit_loop_south",
+            4,
+            "[3.0,0.1,3.0,0.1]",
+        ),
+        ("specialanimation_spring_read_sit_end_south", 3, "0.1"),
+        ("specialanimation_spring_work_sit_start_south", 1, "1.0"),
+        (
+            "specialanimation_spring_work_sit_loop_south",
+            7,
+            "[0.5,0.25,0.25,0.25,0.25,0.25,0.25]",
+        ),
+        (
+            "specialanimation_spring_work_sit_end_south",
+            2,
+            "[0.25,0.175]",
+        ),
+        ("specialanimation_spring_think_start_south", 2, "0.1"),
+        ("specialanimation_spring_think_loop_south", 1, "1.0"),
+        ("specialanimation_spring_think_end_south", 1, "1.0"),
+        (
+            "specialanimation_spring_finger_snap_south",
+            5,
+            "[0.1,0.25,0.1,0.75,0.1]",
+        ),
+        (
+            "specialanimation_spring_faint_south",
+            7,
+            "[0.2,0.1,0.15,0.8,0.1,0.1,1.6]",
+        ),
     ];
     for (cycle, count, duration) in cases {
-        let name = format!("spr_npc_adeline_spring_{cycle}");
+        let name = format!("spr_npc_adeline_{cycle}");
         let timing = if count == 1 {
             String::new()
         } else {
@@ -67,8 +124,8 @@ fn spring_actions_preserve_frame_timing_and_offsets() {
     );
     let mut expected = Vec::new();
     for (cycle, _, _) in cases {
-        let name = format!("spr_npc_adeline_spring_{cycle}");
-        let target = format!("spr_lns_npc_adeline_spring_{cycle}_blue");
+        let name = format!("spr_npc_adeline_{cycle}");
+        let target = format!("spr_lns_npc_adeline_{cycle}_blue");
         let before: toml::Value = toml::from_str(
             &fs::read_to_string(original.join(format!("{name}.meta.toml"))).unwrap(),
         )
@@ -102,14 +159,17 @@ fn spring_actions_preserve_frame_timing_and_offsets() {
     .unwrap();
     assert_eq!(table[0][4], serde_json::json!(expected));
 
-    // West is mirrored by the game; these other directional strips do not exist.
+    // These directional strips do not exist; special-animation names still
+    // require an exact reviewed registry entry.
     for cycle in [
-        "blink_north",
-        "sit_west",
-        "action_west",
-        "shocked_start_east",
-        "sleep_north",
-        "kiss_south",
+        "spring_blink_north",
+        "spring_sit_west",
+        "spring_action_west",
+        "spring_shocked_start_east",
+        "spring_sleep_north",
+        "spring_kiss_south",
+        "specialanimation_spring_write_start_east",
+        "specialanimation_spring_faint_west",
     ] {
         let source = temp.path().join(format!("unsupported-{cycle}"));
         let recolor = temp.path().join(format!("recolor-{cycle}"));
@@ -119,7 +179,7 @@ fn spring_actions_preserve_frame_timing_and_offsets() {
             for extension in ["png", "meta.toml"] {
                 fs::copy(
                     from.join(format!("spr_npc_adeline_spring_sit_south.{extension}")),
-                    to.join(format!("spr_npc_adeline_spring_{cycle}.{extension}")),
+                    to.join(format!("spr_npc_adeline_{cycle}.{extension}")),
                 )
                 .unwrap();
             }
@@ -142,7 +202,7 @@ fn spring_actions_preserve_frame_timing_and_offsets() {
 }
 
 #[test]
-#[ignore = "requires the 151 local animations in extracted/adeline-world-actions-study"]
+#[ignore = "requires the 168 local animations in extracted/adeline-world-actions-study"]
 fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
@@ -167,7 +227,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
         String::from_utf8_lossy(&result.stderr)
     );
     let report: serde_json::Value = serde_json::from_slice(&result.stdout).unwrap();
-    assert_eq!(report["files"].as_array().unwrap().len(), 151);
+    assert_eq!(report["files"].as_array().unwrap().len(), 168);
     let sources = [
         [233, 169, 128, 255],
         [222, 143, 93, 255],
@@ -183,7 +243,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
     let (mut strips, mut frames, mut changed) = (0, 0, 0);
     for row in report["files"].as_array().unwrap() {
         let name = row["path"].as_str().unwrap();
-        if !name.contains("/Sprites/")
+        if !name.contains("/spr_npc_adeline_spring_")
             || !["_sit_", "_eat_", "_drink_", "_blink_"]
                 .iter()
                 .any(|cycle| name.contains(cycle))
@@ -267,8 +327,8 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
 }
 
 #[test]
-#[ignore = "requires the 151 local animations in extracted/adeline-world-actions-study"]
-fn standard_spring_masks_cover_every_frame_and_preserve_material_boundaries() {
+#[ignore = "requires the 168 local animations in extracted/adeline-world-actions-study"]
+fn spring_standard_and_special_masks_preserve_material_boundaries() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
     let temp = tempfile::tempdir().unwrap();
@@ -291,14 +351,31 @@ fn standard_spring_masks_cover_every_frame_and_preserve_material_boundaries() {
         String::from_utf8_lossy(&result.stderr)
     );
     let cases = [
-        ("action_north", 7),
-        ("action_south", 7),
-        ("action_east", 7),
-        ("shocked_start_south", 1),
-        ("shocked_loop_south", 1),
-        ("shocked_end_south", 1),
-        ("sleep_east", 1),
-        ("kiss_east", 4),
+        ("spring_action_north", 7),
+        ("spring_action_south", 7),
+        ("spring_action_east", 7),
+        ("spring_shocked_start_south", 1),
+        ("spring_shocked_loop_south", 1),
+        ("spring_shocked_end_south", 1),
+        ("spring_sleep_east", 1),
+        ("spring_kiss_east", 4),
+        ("specialanimation_spring_write_start_south", 2),
+        ("specialanimation_spring_write_loop_south", 4),
+        ("specialanimation_spring_write_end_south", 2),
+        ("specialanimation_spring_write_sit_start_south", 2),
+        ("specialanimation_spring_write_sit_loop_south", 4),
+        ("specialanimation_spring_write_sit_end_south", 2),
+        ("specialanimation_spring_read_sit_start_south", 3),
+        ("specialanimation_spring_read_sit_loop_south", 4),
+        ("specialanimation_spring_read_sit_end_south", 3),
+        ("specialanimation_spring_work_sit_start_south", 1),
+        ("specialanimation_spring_work_sit_loop_south", 7),
+        ("specialanimation_spring_work_sit_end_south", 2),
+        ("specialanimation_spring_think_start_south", 2),
+        ("specialanimation_spring_think_loop_south", 1),
+        ("specialanimation_spring_think_end_south", 1),
+        ("specialanimation_spring_finger_snap_south", 5),
+        ("specialanimation_spring_faint_south", 7),
     ];
     let sources = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x7D3B14];
     let targets = [
@@ -310,34 +387,174 @@ fn standard_spring_masks_cover_every_frame_and_preserve_material_boundaries() {
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     // Source-art landmarks, independent of the connected-component seeds.
     let landmarks = [
-        ("action_north", 32, 44, 0xE9A980, true),
-        ("action_north", 34, 45, 0xE9A980, true),
-        ("action_north", 33, 45, 0x7D3B14, true),
-        ("action_north", 39, 47, 0xBA6A4C, false),
-        ("action_north", 37, 52, 0xBA6A4C, false),
-        ("shocked_loop_south", 31, 33, 0xE9A980, true),
-        ("shocked_loop_south", 48, 33, 0xE9A980, true),
-        ("shocked_loop_south", 39, 36, 0x410808, false),
-        ("shocked_loop_south", 39, 37, 0x9E2626, false),
-        ("action_south", 39, 36, 0xE9A980, true),
-        ("action_south", 115, 45, 0xE9A980, true), // frame 1 hand
-        ("action_south", 198, 47, 0x7D3B14, true), // frame 2 inward hand
-        ("action_south", 526, 47, 0x7D3B14, true), // frame 6 far hand
-        ("action_east", 41, 36, 0xE9A980, true),
-        ("action_east", 44, 46, 0xBA6A4C, false), // gold trim
-        ("action_east", 44, 36, 0xA59DA2, false), // eye fringe
-        ("action_east", 128, 43, 0xE9A980, true), // frame 1 extended finger
-        ("action_east", 205, 46, 0x7D3B14, true), // frame 2 hand crease
-        ("action_east", 525, 46, 0xDE8F5D, true), // frame 6 isolated far hand
-        ("shocked_start_south", 33, 48, 0x7D3B14, true),
-        ("shocked_end_south", 46, 48, 0x7D3B14, true),
-        ("sleep_east", 43, 40, 0xE9A980, true), // hand below chin
-        ("sleep_east", 40, 45, 0xBA6A4C, false), // cape trim
-        ("kiss_east", 35, 48, 0x7D3B14, true),  // frame 0 hand
-        ("kiss_east", 125, 38, 0x7D3B14, true), // frame 1 face edge
-        ("kiss_east", 196, 46, 0x7D3B14, true), // frame 2 hand crease
-        ("kiss_east", 203, 35, 0xE9A980, true), // frame 2 cheek
-        ("kiss_east", 276, 48, 0x7D3B14, true), // frame 3 hand
+        ("spring_action_north", 32, 44, 0xE9A980, true),
+        ("spring_action_north", 34, 45, 0xE9A980, true),
+        ("spring_action_north", 33, 45, 0x7D3B14, true),
+        ("spring_action_north", 39, 47, 0xBA6A4C, false),
+        ("spring_action_north", 37, 52, 0xBA6A4C, false),
+        ("spring_shocked_loop_south", 31, 33, 0xE9A980, true),
+        ("spring_shocked_loop_south", 48, 33, 0xE9A980, true),
+        ("spring_shocked_loop_south", 39, 36, 0x410808, false),
+        ("spring_shocked_loop_south", 39, 37, 0x9E2626, false),
+        ("spring_action_south", 39, 36, 0xE9A980, true),
+        ("spring_action_south", 115, 45, 0xE9A980, true), // frame 1 hand
+        ("spring_action_south", 198, 47, 0x7D3B14, true), // frame 2 inward hand
+        ("spring_action_south", 526, 47, 0x7D3B14, true), // frame 6 far hand
+        ("spring_action_east", 41, 36, 0xE9A980, true),
+        ("spring_action_east", 44, 46, 0xBA6A4C, false), // gold trim
+        ("spring_action_east", 44, 36, 0xA59DA2, false), // eye fringe
+        ("spring_action_east", 128, 43, 0xE9A980, true), // frame 1 extended finger
+        ("spring_action_east", 205, 46, 0x7D3B14, true), // frame 2 hand crease
+        ("spring_action_east", 525, 46, 0xDE8F5D, true), // frame 6 isolated far hand
+        ("spring_shocked_start_south", 33, 48, 0x7D3B14, true),
+        ("spring_shocked_end_south", 46, 48, 0x7D3B14, true),
+        ("spring_sleep_east", 43, 40, 0xE9A980, true), // hand below chin
+        ("spring_sleep_east", 40, 45, 0xBA6A4C, false), // cape trim
+        ("spring_kiss_east", 35, 48, 0x7D3B14, true),  // frame 0 hand
+        ("spring_kiss_east", 125, 38, 0x7D3B14, true), // frame 1 face edge
+        ("spring_kiss_east", 196, 46, 0x7D3B14, true), // frame 2 hand crease
+        ("spring_kiss_east", 203, 35, 0xE9A980, true), // frame 2 cheek
+        ("spring_kiss_east", 276, 48, 0x7D3B14, true), // frame 3 hand
+        (
+            "specialanimation_spring_write_start_south",
+            46,
+            49,
+            0xDE8F5D,
+            true,
+        ), // standing writing supporting finger
+        (
+            "specialanimation_spring_write_loop_south",
+            43,
+            43,
+            0xC5895C,
+            false,
+        ), // writing board light wood
+        (
+            "specialanimation_spring_write_loop_south",
+            274,
+            44,
+            0xBA6A4C,
+            true,
+        ), // last standing writing frame forearm edge
+        (
+            "specialanimation_spring_write_sit_start_south",
+            123,
+            49,
+            0xDE8F5D,
+            true,
+        ), // seated writing supporting fingers
+        (
+            "specialanimation_spring_write_sit_loop_south",
+            274,
+            47,
+            0xDE8F5D,
+            true,
+        ), // last seated writing frame fingers
+        (
+            "specialanimation_spring_read_sit_start_south",
+            195,
+            47,
+            0x7D3B14,
+            true,
+        ), // opening book left finger edge
+        (
+            "specialanimation_spring_read_sit_start_south",
+            196,
+            41,
+            0xC9AF9C,
+            false,
+        ), // paper shadow
+        (
+            "specialanimation_spring_read_sit_end_south",
+            114,
+            45,
+            0xBA6A4C,
+            true,
+        ), // closing book hand shade
+        (
+            "specialanimation_spring_work_sit_loop_south",
+            515,
+            48,
+            0x7D3B14,
+            true,
+        ), // last working frame left hand tip
+        (
+            "specialanimation_spring_work_sit_loop_south",
+            521,
+            48,
+            0x7D3B14,
+            true,
+        ), // last working frame right hand tip
+        (
+            "specialanimation_spring_think_start_south",
+            124,
+            41,
+            0x7D3B14,
+            true,
+        ), // thinking raised finger crease
+        (
+            "specialanimation_spring_think_end_south",
+            35,
+            47,
+            0x7D3B14,
+            true,
+        ), // thinking end lowered hand edge
+        (
+            "specialanimation_spring_finger_snap_south",
+            117,
+            47,
+            0xDE8F5D,
+            true,
+        ), // finger snap lowered fingertip light
+        (
+            "specialanimation_spring_finger_snap_south",
+            117,
+            48,
+            0xBA6A4C,
+            true,
+        ), // finger snap lowered fingertip shade
+        (
+            "specialanimation_spring_finger_snap_south",
+            118,
+            45,
+            0xBA6A4C,
+            false,
+        ), // finger snap adjacent chest trim
+        (
+            "specialanimation_spring_finger_snap_south",
+            288,
+            40,
+            0x7D3B14,
+            true,
+        ), // finger snap release fingertip
+        (
+            "specialanimation_spring_faint_south",
+            32,
+            46,
+            0x7D3B14,
+            true,
+        ), // faint first frame left hand contour
+        (
+            "specialanimation_spring_faint_south",
+            514,
+            51,
+            0x7D3B14,
+            true,
+        ), // faint final frame left fingers
+        (
+            "specialanimation_spring_faint_south",
+            525,
+            51,
+            0x7D3B14,
+            true,
+        ), // faint final frame right fingers
+        (
+            "specialanimation_spring_faint_south",
+            518,
+            49,
+            0xBA6A4C,
+            false,
+        ), // faint final frame chest trim
     ];
     let mut blue_selection = Vec::new();
     for (target_index, (id, target)) in targets.iter().enumerate() {
@@ -345,7 +562,7 @@ fn standard_spring_masks_cover_every_frame_and_preserve_material_boundaries() {
         let mut frames = 0;
         for (cycle, count) in cases {
             let name = format!(
-                "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_{cycle}.png"
+                "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_{cycle}.png"
             );
             let before = image::open(original.join(&name)).unwrap().to_rgba8();
             let modified = output.join("variants").join(id);
@@ -390,7 +607,7 @@ fn standard_spring_masks_cover_every_frame_and_preserve_material_boundaries() {
             }
             frames += count;
         }
-        assert_eq!(frames, 29);
+        assert_eq!(frames, 81);
         if target_index == 0 {
             blue_selection = selection;
         } else {
