@@ -2082,6 +2082,92 @@
       "seeds": [
         [34,45], [45,45]
       ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_action_south.png",
+      "source_sha256": "1dcfd4c20d0c0c40b2697ecd5023be793f0735a1637e5bdd826c033a4bc7f169",
+      "size": [560,80],
+      "seeds": [
+        [119,33], [199,33], [279,33], [359,33],
+        [519,33], [39,34], [439,34], [115,36],
+        [124,36], [195,36], [204,36], [275,36],
+        [284,36], [355,36], [364,36], [515,36],
+        [524,36], [35,37], [44,37], [435,37],
+        [444,37], [115,44], [124,44], [196,44],
+        [204,44], [275,44], [284,44], [356,44],
+        [364,44], [514,44], [524,44], [34,45],
+        [44,45], [434,45], [444,45]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_action_east.png",
+      "source_sha256": "39568d33d6a3b629299d7103068b00b22b35f476af8e77e0bcdcfdae90510018",
+      "size": [560,80],
+      "seeds": [
+        [123,33], [203,33], [283,33], [363,33],
+        [520,33], [41,34], [441,34], [119,36],
+        [127,36], [199,36], [207,36], [279,36],
+        [287,36], [359,36], [367,36], [516,36],
+        [524,36], [37,37], [45,37], [437,37],
+        [445,37], [123,42], [283,42], [202,43],
+        [362,43], [515,44], [38,45], [438,45],
+        [525,46]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_action_north.png",
+      "source_sha256": "71e0529d5a3932b24674db4de761e46af9b2b5613ac4bb74e1ebc6731e0bb849",
+      "size": [560,80],
+      "seeds": [
+        [32,44], [114,44], [194,44], [274,44],
+        [354,44], [433,45], [513,45], [525,45]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_shocked_start_south.png",
+      "source_sha256": "990b759ee76d7fa1efe0313f827548be127cd86d1216ee42d24e594616ed07f7",
+      "size": [80,80],
+      "seeds": [
+        [39,34], [35,37], [44,37], [34,45],
+        [44,45]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_shocked_loop_south.png",
+      "source_sha256": "59509ba6d10ae489aa70a4756dcc9802d8d387fad5b3bc6b12679f6769c6859b",
+      "size": [80,80],
+      "seeds": [
+        [39,31], [31,33], [46,33], [35,34],
+        [44,34], [37,36], [41,36], [39,38]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_shocked_end_south.png",
+      "source_sha256": "990b759ee76d7fa1efe0313f827548be127cd86d1216ee42d24e594616ed07f7",
+      "size": [80,80],
+      "seeds": [
+        [39,34], [35,37], [44,37], [34,45],
+        [44,45]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_sleep_east.png",
+      "source_sha256": "e8b9546aea39e152535d4e0fe1d878c2062150186c969023a74bf477ac888795",
+      "size": [80,80],
+      "seeds": [
+        [40,33], [36,36], [43,39]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_spring_kiss_east.png",
+      "source_sha256": "533455751e7995858630034c099c336d5b15a89deaff2151682522c5541615d7",
+      "size": [320,80],
+      "seeds": [
+        [203,33], [39,34], [121,34], [281,34],
+        [199,36], [35,37], [43,37], [117,37],
+        [277,37], [125,38], [198,43], [35,45],
+        [116,45], [276,45]
+      ]
     }
   ]
 }

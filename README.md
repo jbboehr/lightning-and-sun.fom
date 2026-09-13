@@ -87,10 +87,11 @@ same five choices. This includes all four walking directions. Other overworld
 actions and outfits still show her original skin colors. All 126 portraits are
 included. Each launch starts with Vanilla.
 
-For spring sitting, eating, drinking, and blinking as well, use
+For all standard Spring actions, including sitting, eating, drinking, blinking,
+general actions, shocked poses, sleeping, and kissing, use
 `--presets palettes/sets/adeline-world-actions-trial.json` instead. F6 selects the
-same palette across these actions and the included portraits. Other overworld
-actions and outfits still use their original colors.
+same palette across these 25 overworld strips and the included portraits.
+Special animations and other overworld outfits still use their original colors.
 
 To include Hayden, Ryis, Reina, Juniper, Celine, March, Balor, Valen, Eiland,
 Olric, Landen, Nora, Holt, Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis,

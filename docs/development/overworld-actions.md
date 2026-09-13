@@ -1,5 +1,10 @@
 # Adeline spring everyday actions
 
+This records the original everyday-action slice. The same profile and preset
+set now include [all standard Spring actions](overworld-standard-actions.md),
+bringing current coverage to 151 strips. The measurements and playtest below
+describe the earlier 143-strip package.
+
 This extends the [spring idle/walk trial](overworld-spring.md) with sitting,
 eating, drinking, and blinking. The combined profile has **143 strips**: all 126
 portraits and 17 spring overworld strips. F6 keeps Vanilla, Debug Blue, Hayden,
@@ -161,7 +166,8 @@ Natural schedules, seating at real furniture, room transitions, and story scenes
 remain unverified. Other overworld outfits and unreviewed spring actions retain
 the original colors. The user accepted the added actions in the isolated preview.
 
-The next coverage increment is the eight remaining standard spring strips:
-three general-action directions, shocked start/loop/end, sleep, and kiss. After
-those, 17 special-animation strips remain (writing, reading, working, thinking,
-finger snapping, and fainting). Other outfits follow a complete spring review.
+The subsequent [standard-action slice](overworld-standard-actions.md) adds the
+eight remaining standard Spring strips: three general-action directions,
+shocked start/loop/end, sleep, and kiss. Seventeen special-animation strips remain
+(writing, reading, working, thinking, finger snapping, and fainting).
+Other outfits follow a complete Spring review.

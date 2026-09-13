@@ -1,13 +1,13 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 143 reviewed animations, Hayden's 133,
+The combined trial includes Adeline's 151 reviewed animations, Hayden's 133,
 Ryis's 109, Reina's 103, Juniper's 132, Celine's 183, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 8,872 variant strips. Caldarus's three dragon/statue
+variants per source give 8,904 variant strips. Caldarus's three dragon/statue
 strips and Seridia's 17 spectral Priestess strips and one dragon stay unchanged.
 All thirty-six characters start on
 Vanilla each session.
@@ -45,6 +45,9 @@ The [Seridia pass](seridia-portraits.md) covers 146 human strips and preserves
 18 spectral/dragon strips, with all 164 in the offline review.
 Their overworld sprites are not covered. The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
+Adeline's [standard Spring overworld pass](overworld-standard-actions.md)
+now covers all 25 standard strips alongside her 126 portraits. Special animations
+and other overworld outfits remain original.
 
 ## Add and review one character at a time
 
@@ -265,6 +268,12 @@ covers all 164 strips and both frames, including the unchanged spectral and
 dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
+
+The latest combined package, including Adeline's eight additional standard
+Spring strips, is installed in `tmp/adeline-standard-playtest`. It has no preview
+helper and does not replace the desktop launcher. Use the
+[complete offline review](../../../generated/adeline-standard-preview/blue-review/index.html)
+to inspect every new frame and the native mirrored West views.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,
