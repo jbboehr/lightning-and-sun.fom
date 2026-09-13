@@ -170,6 +170,10 @@ fn spring_actions_preserve_frame_timing_and_offsets() {
         "spring_kiss_south",
         "specialanimation_spring_write_start_east",
         "specialanimation_spring_faint_west",
+        "summer_walk_west",
+        "autumn_idle_west",
+        "winter_walk_west",
+        "summer_blink_south",
     ] {
         let source = temp.path().join(format!("unsupported-{cycle}"));
         let recolor = temp.path().join(format!("recolor-{cycle}"));
@@ -202,7 +206,7 @@ fn spring_actions_preserve_frame_timing_and_offsets() {
 }
 
 #[test]
-#[ignore = "requires the 168 local animations in extracted/adeline-world-actions-study"]
+#[ignore = "requires the 186 local animations in extracted/adeline-world-actions-study"]
 fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
@@ -227,7 +231,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
         String::from_utf8_lossy(&result.stderr)
     );
     let report: serde_json::Value = serde_json::from_slice(&result.stdout).unwrap();
-    assert_eq!(report["files"].as_array().unwrap().len(), 168);
+    assert_eq!(report["files"].as_array().unwrap().len(), 186);
     let sources = [
         [233, 169, 128, 255],
         [222, 143, 93, 255],
@@ -327,8 +331,8 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
 }
 
 #[test]
-#[ignore = "requires the 168 local animations in extracted/adeline-world-actions-study"]
-fn spring_standard_and_special_masks_preserve_material_boundaries() {
+#[ignore = "requires the 186 local animations in extracted/adeline-world-actions-study"]
+fn world_masks_preserve_material_boundaries() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
     let temp = tempfile::tempdir().unwrap();
@@ -376,6 +380,24 @@ fn spring_standard_and_special_masks_preserve_material_boundaries() {
         ("specialanimation_spring_think_end_south", 1),
         ("specialanimation_spring_finger_snap_south", 5),
         ("specialanimation_spring_faint_south", 7),
+        ("autumn_idle_east", 1),
+        ("autumn_idle_north", 1),
+        ("autumn_idle_south", 1),
+        ("autumn_walk_east", 4),
+        ("autumn_walk_north", 4),
+        ("autumn_walk_south", 4),
+        ("summer_idle_east", 1),
+        ("summer_idle_north", 1),
+        ("summer_idle_south", 1),
+        ("summer_walk_east", 4),
+        ("summer_walk_north", 4),
+        ("summer_walk_south", 4),
+        ("winter_idle_east", 1),
+        ("winter_idle_north", 1),
+        ("winter_idle_south", 1),
+        ("winter_walk_east", 4),
+        ("winter_walk_north", 4),
+        ("winter_walk_south", 4),
     ];
     let sources = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x7D3B14];
     let targets = [
@@ -555,14 +577,41 @@ fn spring_standard_and_special_masks_preserve_material_boundaries() {
             0xBA6A4C,
             false,
         ), // faint final frame chest trim
+        ("summer_idle_north", 33, 47, 0x7D3B14, true), // summer rear left finger contour
+        ("summer_idle_south", 39, 42, 0xE9A980, true), // summer chest opening
+        ("summer_idle_east", 45, 46, 0xDE8F5D, true),  // summer idle east isolated far hand
+        ("summer_walk_north", 285, 48, 0x7D3B14, true), // summer rear last frame finger
+        ("summer_walk_south", 276, 43, 0xE9A980, true), // summer front last frame shoulder skin
+        ("summer_walk_east", 122, 52, 0xBA6A4C, false), // summer boot trim
+        ("summer_walk_east", 284, 46, 0xDE8F5D, true), // summer east final frame isolated far arm
+        ("autumn_idle_north", 39, 48, 0xBA6A4C, false), // autumn rear gold hem shadow
+        ("autumn_idle_south", 38, 41, 0xC47054, false), // autumn gold collar left border touching skin
+        ("autumn_idle_south", 41, 41, 0xC47054, false), // autumn gold collar right border touching skin
+        ("autumn_idle_south", 39, 41, 0xDE8F5D, true),  // autumn exposed neck beside gold
+        ("autumn_idle_south", 39, 42, 0xE9A980, true),  // autumn exposed upper chest
+        ("autumn_idle_east", 34, 47, 0xBA6A4C, true),   // autumn east hand contour
+        ("autumn_walk_east", 276, 48, 0x7D3B14, true),  // autumn east last frame near finger
+        ("winter_idle_north", 37, 53, 0xBA6A4C, false), // winter rear warm boot detail
+        ("winter_idle_south", 32, 46, 0xE9A980, true),  // winter front bare hand beyond cuff
+        ("winter_idle_east", 40, 41, 0xC47054, false),  // winter east gold neckline touching face
+        ("winter_idle_east", 41, 42, 0xC47054, false),  // winter east lower neckline chain
+        ("winter_walk_north", 115, 47, 0xBA6A4C, true), // winter rear walking hand shade
+        ("winter_walk_east", 276, 48, 0x7D3B14, true),  // winter east last frame fingertip
     ];
     let mut blue_selection = Vec::new();
     for (target_index, (id, target)) in targets.iter().enumerate() {
         let mut selection = Vec::new();
         let mut frames = 0;
         for (cycle, count) in cases {
+            let outfit = match cycle.split('_').next().unwrap() {
+                "spring" | "specialanimation" => "Spring",
+                "summer" => "Summer",
+                "autumn" => "Autumn",
+                "winter" => "Winter",
+                _ => panic!("unexpected test cycle: {cycle}"),
+            };
             let name = format!(
-                "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_{cycle}.png"
+                "assets/animations/NPCs/Adeline/Sprites/{outfit}/spr_npc_adeline_{cycle}.png"
             );
             let before = image::open(original.join(&name)).unwrap().to_rgba8();
             let modified = output.join("variants").join(id);
@@ -607,7 +656,7 @@ fn spring_standard_and_special_masks_preserve_material_boundaries() {
             }
             frames += count;
         }
-        assert_eq!(frames, 81);
+        assert_eq!(frames, 126);
         if target_index == 0 {
             blue_selection = selection;
         } else {

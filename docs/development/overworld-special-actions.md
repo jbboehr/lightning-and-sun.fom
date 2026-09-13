@@ -1,5 +1,9 @@
 # Adeline Spring special animations
 
+This records completion of Spring coverage. The subsequent
+[seasonal idle/walk pass](overworld-seasonal-idle-walk.md) adds everyday movement
+in Summer, Autumn, and Winter.
+
 This completes all 42 PNG strips in Adeline's Spring overworld directory in the
 reviewed archive. The 17 additions cover standing and seated writing, seated
 reading and working, thinking, finger snapping, and fainting. They contain
@@ -135,7 +139,9 @@ earlier Zorel copy. All images, archives, helpers and local game data stay ignor
 
 ## Remaining coverage
 
-Adeline's other overworld outfits and other characters' overworld sprites remain
-original. All Adeline portraits and all Spring overworld strips in the reviewed
+The subsequent [seasonal idle/walk pass](overworld-seasonal-idle-walk.md) covers
+18 strips across Adeline's Summer, Autumn, and Winter outfits. Other actions in
+those outfits and other characters' overworld sprites remain original.
+All Adeline portraits and all Spring overworld strips in the reviewed
 archive now have masks. The accepted offline review covers recolored art;
 interactive gameplay and native playback timing remain unverified.

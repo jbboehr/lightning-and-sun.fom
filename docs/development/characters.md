@@ -1,13 +1,13 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 168 reviewed animations, Hayden's 133,
+The combined trial includes Adeline's 186 reviewed animations, Hayden's 133,
 Ryis's 109, Reina's 103, Juniper's 132, Celine's 183, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 8,972 variant strips. Caldarus's three dragon/statue
+variants per source give 9,044 variant strips. Caldarus's three dragon/statue
 strips and Seridia's 17 spectral Priestess strips and one dragon stay unchanged.
 All thirty-six characters start on
 Vanilla each session.
@@ -47,7 +47,9 @@ Their overworld sprites are not covered. The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
 Adeline's [complete Spring overworld pass](overworld-special-actions.md)
 covers all 42 standard and special-animation strips alongside her 126 portraits.
-Other overworld outfits remain original.
+The [seasonal idle/walk pass](overworld-seasonal-idle-walk.md) adds 18 strips
+across Summer, Autumn, and Winter, for 60 overworld strips. Other actions in
+those outfits remain original.
 
 ## Add and review one character at a time
 
@@ -269,11 +271,11 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package, including Adeline's 17 Spring special-animation
-strips, is installed in `tmp/adeline-special-playtest`. It has no preview
+The latest combined package, including Adeline's 18 seasonal idle/walk
+strips, is installed in `tmp/adeline-seasonal-world-playtest`. It has no preview
 helper and does not replace the desktop launcher. Use the
-[complete offline review](../../generated/adeline-special-preview/blue-review/index.html)
-to inspect all 52 new South-facing frames.
+[complete offline review](../../generated/adeline-seasonal-world-preview/blue-review/index.html)
+to inspect all 45 new source frames and mirrored West views.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

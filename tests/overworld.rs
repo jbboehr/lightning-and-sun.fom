@@ -83,26 +83,28 @@ fn world_package_preserves_idle_defaults_walk_timing_and_offsets() {
     let modified = temp.path().join("modified");
     fs::create_dir(&original).unwrap();
     fs::create_dir(&modified).unwrap();
-    for cycle in ["idle", "walk"] {
-        for direction in ["north", "south", "east"] {
-            let name = format!("spr_npc_adeline_spring_{cycle}_{direction}");
-            let timing = if cycle == "idle" {
-                ""
-            } else {
-                "frame_len=4\nduration=0.15\n"
-            };
-            let count = if cycle == "idle" { 1 } else { 4 };
-            let meta = format!(
-                "[meta_properties]\nid='{name}'\nasset_kind='Animation'\n[asset_properties]\nframe_size=[2,3]\n{timing}atlas='Default'\n[asset_properties.offset]\nhorizontal='Middle'\nvertical=54.0\n"
-            );
-            for (root, color) in [
-                (&original, [10, 20, 30, 255]),
-                (&modified, [40, 50, 60, 255]),
-            ] {
-                RgbaImage::from_pixel(2 * count, 3, Rgba(color))
-                    .save(root.join(format!("{name}.png")))
-                    .unwrap();
-                fs::write(root.join(format!("{name}.meta.toml")), &meta).unwrap();
+    for season in ["spring", "summer", "autumn", "winter"] {
+        for cycle in ["idle", "walk"] {
+            for direction in ["north", "south", "east"] {
+                let name = format!("spr_npc_adeline_{season}_{cycle}_{direction}");
+                let timing = if cycle == "idle" {
+                    ""
+                } else {
+                    "frame_len=4\nduration=0.15\n"
+                };
+                let count = if cycle == "idle" { 1 } else { 4 };
+                let meta = format!(
+                    "[meta_properties]\nid='{name}'\nasset_kind='Animation'\n[asset_properties]\nframe_size=[2,3]\n{timing}atlas='Default'\n[asset_properties.offset]\nhorizontal='Middle'\nvertical=54.0\n"
+                );
+                for (root, color) in [
+                    (&original, [10, 20, 30, 255]),
+                    (&modified, [40, 50, 60, 255]),
+                ] {
+                    RgbaImage::from_pixel(2 * count, 3, Rgba(color))
+                        .save(root.join(format!("{name}.png")))
+                        .unwrap();
+                    fs::write(root.join(format!("{name}.meta.toml")), &meta).unwrap();
+                }
             }
         }
     }
@@ -122,25 +124,29 @@ fn world_package_preserves_idle_defaults_walk_timing_and_offsets() {
         "{}",
         String::from_utf8_lossy(&result.stderr)
     );
-    for cycle in ["idle", "walk"] {
-        for direction in ["north", "south", "east"] {
-            let name = format!("spr_npc_adeline_spring_{cycle}_{direction}");
-            let variant = output.join(format!(
-                "animations/LightningAndSun/spr_lns_npc_adeline_spring_{cycle}_{direction}_blue"
-            ));
-            let before: toml::Value = toml::from_str(
-                &fs::read_to_string(original.join(format!("{name}.meta.toml"))).unwrap(),
-            )
-            .unwrap();
-            let after: toml::Value =
-                toml::from_str(&fs::read_to_string(variant.with_extension("meta.toml")).unwrap())
-                    .unwrap();
-            assert_eq!(before["asset_properties"], after["asset_properties"]);
-            assert!(after["meta_properties"].get("id").is_none());
-            assert_eq!(
-                fs::read(variant.with_extension("png")).unwrap(),
-                fs::read(modified.join(format!("{name}.png"))).unwrap()
-            );
+    let mut expected = Vec::new();
+    for season in ["spring", "summer", "autumn", "winter"] {
+        for cycle in ["idle", "walk"] {
+            for direction in ["north", "south", "east"] {
+                let name = format!("spr_npc_adeline_{season}_{cycle}_{direction}");
+                let target = format!("spr_lns_npc_adeline_{season}_{cycle}_{direction}_blue");
+                let variant = output.join(format!("animations/LightningAndSun/{target}"));
+                let before: toml::Value = toml::from_str(
+                    &fs::read_to_string(original.join(format!("{name}.meta.toml"))).unwrap(),
+                )
+                .unwrap();
+                let after: toml::Value = toml::from_str(
+                    &fs::read_to_string(variant.with_extension("meta.toml")).unwrap(),
+                )
+                .unwrap();
+                assert_eq!(before["asset_properties"], after["asset_properties"]);
+                assert!(after["meta_properties"].get("id").is_none());
+                assert_eq!(
+                    fs::read(variant.with_extension("png")).unwrap(),
+                    fs::read(modified.join(format!("{name}.png"))).unwrap()
+                );
+                expected.push(vec![name, target]);
+            }
         }
     }
     let script = fs::read_to_string(output.join("gml/palette_assets.gml")).unwrap();
@@ -155,11 +161,8 @@ fn world_package_preserves_idle_defaults_walk_timing_and_offsets() {
     )
     .unwrap();
     let table = &definitions[0][4];
-    assert_eq!(table.as_array().unwrap().len(), 6);
-    assert!(table.as_array().unwrap().contains(&serde_json::json!([
-        "spr_npc_adeline_spring_walk_east",
-        "spr_lns_npc_adeline_spring_walk_east_blue"
-    ])));
+    expected.sort();
+    assert_eq!(table, &serde_json::json!(expected));
 }
 
 #[test]

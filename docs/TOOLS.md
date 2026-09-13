@@ -72,11 +72,13 @@ original. Its blue-only recipe is `palettes/stylized/adeline-world-trial.json`.
 Use `--presets palettes/sets/adeline-world-actions-trial.json` for all 42 Spring
 overworld strips, including sitting, eating, drinking, blinking, general actions,
 shocked poses, sleeping, kissing, writing, reading, working, thinking, finger
-snapping, and fainting: 168 strips with the portraits.
+snapping, and fainting. It also includes 18 idle/walk strips across Summer,
+Autumn, and Winter: 186 strips with the portraits.
 Its blue-only recipe is `palettes/stylized/adeline-world-actions.json`.
-Other overworld outfits remain original. See
-[complete Spring coverage](development/overworld-special-actions.md) for
-coverage and verification details.
+Other overworld actions in those outfits remain original. See
+[complete Spring coverage](development/overworld-special-actions.md) and
+[seasonal idle/walk coverage](development/overworld-seasonal-idle-walk.md) for
+verification details.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;
@@ -189,12 +191,13 @@ target/release/mistria-palette package-toggle \
 Install that generated folder as `mods/lns_palette` through MOMI v0.15.10. Remove
 the earlier replacement study first so the base portrait is vanilla. This package
 adds separate animations and an F6 hotkey: press F6 again to restore vanilla.
-It accepts one through 168 supported Adeline strips: portraits from the four
+It accepts one through 186 supported Adeline strips: portraits from the four
 seasons, beach, and wedding, plus spring overworld idle, walk, sit, eat, and drink
 and general actions in north, south, and east directions, blink in south/east,
 shocked start/loop/end in south, and sleep/kiss in east. West mirrors the east
 strips. Writing (standing and seated), reading, working, and thinking have
 start/loop/end strips in south; finger snapping and fainting also face south.
+Summer, Autumn, and Winter add idle/walk in north, south, east, and mirrored west.
 It generates the matching runtime sprite table. Keep both generated GML files
 in the package.
 The choice lasts for the running game session and is not saved. Rebuild and

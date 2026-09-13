@@ -171,7 +171,25 @@
       "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_think_loop_south.png": "Default",
       "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_think_end_south.png": "Default",
       "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_finger_snap_south.png": "Default",
-      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_faint_south.png": "Default"
+      "assets/animations/NPCs/Adeline/Sprites/Spring/spr_npc_adeline_specialanimation_spring_faint_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_idle_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_idle_north.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_idle_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_walk_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_walk_north.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_walk_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_idle_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_idle_north.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_idle_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_walk_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_walk_north.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_walk_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_idle_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_idle_north.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_idle_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_walk_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_walk_north.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_walk_south.png": "Default"
     }
   },
   {
