@@ -47,6 +47,7 @@ fn fixture(root: &Path) -> std::path::PathBuf {
         ("wiscar", "Wiscar", vec!["#28323C"]),
         ("wynne", "Wynne", vec!["#28323C"]),
         ("caldarus", "Caldarus", vec!["#28323C"]),
+        ("seridia", "Seridia", vec!["#28323C"]),
     ] {
         let (portrait_folder, atlas) = match id {
             "josephine" | "darren" | "linnet" | "wiscar" | "wynne" => {
@@ -373,6 +374,7 @@ fn characters_can_be_built_alone_or_with_existing_characters() {
         (vec!["wiscar"], "Wiscar", "W"),
         (vec!["wynne"], "Wynne", "Q"),
         (vec!["caldarus"], "Caldarus", "DELETE"),
+        (vec!["seridia"], "Seridia", "S"),
         (
             vec![
                 "adeline",
@@ -410,9 +412,10 @@ fn characters_can_be_built_alone_or_with_existing_characters() {
                 "wiscar",
                 "wynne",
                 "caldarus",
+                "seridia",
             ],
-            "Caldarus",
-            "DELETE",
+            "Seridia",
+            "S",
         ),
     ] {
         let id = ids.last().unwrap();

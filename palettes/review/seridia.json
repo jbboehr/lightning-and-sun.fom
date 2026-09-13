@@ -1,0 +1,51 @@
+{
+  "label": "Seridia reviewed portraits",
+  "prefixes": [
+    "assets/animations/NPCs/Seridia/Portraits/"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#90AAC4",
+    "#8EA8C2",
+    "#86809E",
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#7F9FBD",
+    "#6687AD",
+    "#6687AD",
+    "#9DB9D4",
+    "#6687AD",
+    "#445F83",
+    "#7D90B4",
+    "#A0BCDB"
+  ],
+  "reference_profile": "../profiles/seridia-portraits.json",
+  "source_colors": [
+    "#C1AFA5",
+    "#A69084",
+    "#8E746D",
+    "#624A48",
+    "#B4A095",
+    "#B29E93",
+    "#AD7165",
+    "#FCDEBE",
+    "#F5BB90",
+    "#EA9866",
+    "#B35A35",
+    "#9A4825",
+    "#F7C49D",
+    "#E28A55",
+    "#DA8A52",
+    "#C3AA9B",
+    "#95726A",
+    "#A5462C",
+    "#F3AC87",
+    "#FFE1C5"
+  ]
+}

@@ -6,16 +6,18 @@ Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
-Linnet, Wiscar, and Wynne, plus Caldarus’s 98. Four generated variants per source
-give 8,216 variant strips; Caldarus’s three dragon/statue strips stay unchanged.
-All thirty-five characters start on
+Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
+variants per source give 8,872 variant strips. Caldarus's three dragon/statue
+strips and Seridia's 17 spectral Priestess strips and one dragon stay unchanged.
+All thirty-six characters start on
 Vanilla each session.
 F6 cycles Adeline, F8 Hayden, F10 Ryis,
 Home Reina, Page Down Juniper,
 Insert Celine, U March, I Balor, O Valen, J Eiland, K Olric, L Landen, N Nora,
 H Holt, P Josephine, B Darcy, Y Dell, Z Elsie, X Errol, F Hemlock, V Louis,
 F11 Luc, F12 Maple, F1 Merri, F3 Terithia, F4 Stillwell, F5 Taliferro, G Vera,
-T Wheedle, R Zorel, D Darren, C Linnet, W Wiscar, Q Wynne, and Delete Caldarus.
+T Wheedle, R Zorel, D Darren, C Linnet, W Wiscar, Q Wynne, Delete Caldarus,
+and S Seridia.
 Each has five choices.
 The [shared NPC presets](shared-npc-presets.md)
 record the earlier natural colors; the [parallel portrait batch](parallel-portraits.md)
@@ -39,6 +41,8 @@ The [Darren, Linnet, Wiscar, and Wynne batch](darren-linnet-wiscar-wynne-portrai
 adds 32 Spring-only cameo strips with complete offline review pages.
 The [Caldarus pass](caldarus-portraits.md) covers 95 human strips and explicitly
 retains three dragon/statue strips, with all 98 in the offline review.
+The [Seridia pass](seridia-portraits.md) covers 146 human strips and preserves
+18 spectral/dragon strips, with all 164 in the offline review.
 Their overworld sprites are not covered. The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
 
@@ -255,6 +259,12 @@ Caldarus’s [complete offline review](../../../generated/caldarus-preview/blue-
 covers all 98 strips and both frames. His combined player package is installed
 in `tmp/caldarus-playtest` without a preview helper; the desktop launcher remains
 on the earlier Zorel copy. Native Caldarus rendering has not been exercised.
+
+Seridia's [complete offline review](../../../generated/seridia-preview/blue-review/index.html)
+covers all 164 strips and both frames, including the unchanged spectral and
+dragon forms. The combined 36-character player package is installed separately
+in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
+uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

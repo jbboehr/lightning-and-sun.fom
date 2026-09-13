@@ -64,6 +64,9 @@ The [Darren, Linnet, Wiscar, and Wynne batch](darren-linnet-wiscar-wynne-portrai
 adds 32 Spring-only cameo strips, with one small review page per character.
 The [Caldarus pass](caldarus-portraits.md) adds 95 human strips and three unchanged
 dragon/statue strips, with review pages split into at most eight cases.
+The [Seridia pass](seridia-portraits.md) adds 146 human strips, including
+Flashback Priestess, and preserves 17 spectral Priestess strips and one dragon.
+All 164 appear in the complete offline review.
 
 The gallery uses local files and works without a web server or JavaScript package
 manager. Game images and generated galleries belong under ignored `generated/`
