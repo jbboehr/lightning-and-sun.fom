@@ -1,5 +1,9 @@
 # Adeline standard seasonal animations
 
+This records completion of standard seasonal coverage. The subsequent
+[seasonal writing pass](overworld-seasonal-writing.md) adds standing and seated
+writing in Summer, Autumn, and Winter.
+
 This adds the remaining 15 standard strips across Adeline's Summer, Autumn,
 and Winter outfits: general actions in North/South/East, plus sleep and kiss in
 East. The source strips contain 78 frame occurrences and 52 distinct images. With the
@@ -113,7 +117,8 @@ the desktop launcher remains unchanged on its earlier Zorel copy.
 
 ## Remaining coverage
 
-Seasonal special animations, other outfits, and other characters' overworld
-sprites remain original. The user accepted the offline art review; native
-gameplay and natural scheduling remain unverified. Generated artwork and local
-game data stay ignored by Git.
+The subsequent [seasonal writing pass](overworld-seasonal-writing.md) adds
+18 standing/seated writing strips. Other special animations, other outfits and
+other characters' overworld sprites remain original. The user accepted this
+offline art review; native gameplay and natural scheduling remain unverified.
+Generated artwork and local game data stay ignored by Git.

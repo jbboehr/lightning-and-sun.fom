@@ -169,6 +169,60 @@ fn world_actions_preserve_frame_timing_and_offsets() {
         ),
         ("winter_kiss_east", 4, "[0.15, 0.15, 0.8, 0.15]"),
         ("winter_sleep_east", 1, "1.0"),
+        ("specialanimation_autumn_write_end_south", 2, "[0.125, 0.1]"),
+        (
+            "specialanimation_autumn_write_loop_south",
+            4,
+            "[0.1, 0.125, 0.1, 0.3]",
+        ),
+        (
+            "specialanimation_autumn_write_sit_end_south",
+            2,
+            "[0.125, 0.1]",
+        ),
+        (
+            "specialanimation_autumn_write_sit_loop_south",
+            4,
+            "[0.1, 0.125, 0.1, 0.3]",
+        ),
+        ("specialanimation_autumn_write_sit_start_south", 2, "0.125"),
+        ("specialanimation_autumn_write_start_south", 2, "0.125"),
+        ("specialanimation_summer_write_end_south", 2, "[0.125, 0.1]"),
+        (
+            "specialanimation_summer_write_loop_south",
+            4,
+            "[0.1, 0.125, 0.1, 0.3]",
+        ),
+        (
+            "specialanimation_summer_write_sit_end_south",
+            2,
+            "[0.125, 0.1]",
+        ),
+        (
+            "specialanimation_summer_write_sit_loop_south",
+            4,
+            "[0.1, 0.125, 0.1, 0.3]",
+        ),
+        ("specialanimation_summer_write_sit_start_south", 2, "0.125"),
+        ("specialanimation_summer_write_start_south", 2, "0.125"),
+        ("specialanimation_winter_write_end_south", 2, "[0.125, 0.1]"),
+        (
+            "specialanimation_winter_write_loop_south",
+            4,
+            "[0.1, 0.125, 0.1, 0.3]",
+        ),
+        (
+            "specialanimation_winter_write_sit_end_south",
+            2,
+            "[0.125, 0.1]",
+        ),
+        (
+            "specialanimation_winter_write_sit_loop_south",
+            4,
+            "[0.1, 0.125, 0.1, 0.3]",
+        ),
+        ("specialanimation_winter_write_sit_start_south", 2, "0.125"),
+        ("specialanimation_winter_write_start_south", 2, "0.125"),
     ];
     for (cycle, count, duration) in cases {
         let name = format!("spr_npc_adeline_{cycle}");
@@ -256,7 +310,10 @@ fn world_actions_preserve_frame_timing_and_offsets() {
         "summer_walk_west",
         "autumn_idle_west",
         "winter_walk_west",
-        "specialanimation_summer_write_start_south",
+        "specialanimation_summer_read_sit_start_south",
+        "specialanimation_summer_write_loop_east",
+        "specialanimation_autumn_write_sit_start_west",
+        "specialanimation_winter_write_end_north",
         "summer_action_west",
         "autumn_sleep_north",
         "winter_kiss_south",
@@ -296,7 +353,7 @@ fn world_actions_preserve_frame_timing_and_offsets() {
 }
 
 #[test]
-#[ignore = "requires the 234 local animations in extracted/adeline-world-actions-study"]
+#[ignore = "requires the 252 local animations in extracted/adeline-world-actions-study"]
 fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
@@ -321,7 +378,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
         String::from_utf8_lossy(&result.stderr)
     );
     let report: serde_json::Value = serde_json::from_slice(&result.stdout).unwrap();
-    assert_eq!(report["files"].as_array().unwrap().len(), 234);
+    assert_eq!(report["files"].as_array().unwrap().len(), 252);
     let sources = [
         [233, 169, 128, 255],
         [222, 143, 93, 255],
@@ -421,7 +478,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
 }
 
 #[test]
-#[ignore = "requires the 234 local animations in extracted/adeline-world-actions-study"]
+#[ignore = "requires the 252 local animations in extracted/adeline-world-actions-study"]
 fn world_masks_preserve_material_boundaries() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
@@ -536,6 +593,24 @@ fn world_masks_preserve_material_boundaries() {
         ("winter_action_south", 7),
         ("winter_kiss_east", 4),
         ("winter_sleep_east", 1),
+        ("specialanimation_autumn_write_end_south", 2),
+        ("specialanimation_autumn_write_loop_south", 4),
+        ("specialanimation_autumn_write_sit_end_south", 2),
+        ("specialanimation_autumn_write_sit_loop_south", 4),
+        ("specialanimation_autumn_write_sit_start_south", 2),
+        ("specialanimation_autumn_write_start_south", 2),
+        ("specialanimation_summer_write_end_south", 2),
+        ("specialanimation_summer_write_loop_south", 4),
+        ("specialanimation_summer_write_sit_end_south", 2),
+        ("specialanimation_summer_write_sit_loop_south", 4),
+        ("specialanimation_summer_write_sit_start_south", 2),
+        ("specialanimation_summer_write_start_south", 2),
+        ("specialanimation_winter_write_end_south", 2),
+        ("specialanimation_winter_write_loop_south", 4),
+        ("specialanimation_winter_write_sit_end_south", 2),
+        ("specialanimation_winter_write_sit_loop_south", 4),
+        ("specialanimation_winter_write_sit_start_south", 2),
+        ("specialanimation_winter_write_start_south", 2),
     ];
     let sources = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x7D3B14];
     let targets = [
@@ -775,14 +850,160 @@ fn world_masks_preserve_material_boundaries() {
         ("winter_sleep_east", 44, 39, 0x7D3B14, true),  // winter sleep hand contour
         ("winter_kiss_east", 125, 38, 0x7D3B14, true),  // winter kiss shifted face contour
         ("winter_kiss_east", 275, 48, 0xBA6A4C, true),  // winter kiss final hand shade
+        (
+            "specialanimation_summer_write_end_south",
+            126,
+            49,
+            0xDE8F5D,
+            true,
+        ), // summer standing lower board thumb
+        (
+            "specialanimation_summer_write_start_south",
+            32,
+            39,
+            0xBA7F3E,
+            false,
+        ), // summer standing pen gold shade
+        (
+            "specialanimation_summer_write_loop_south",
+            36,
+            46,
+            0xBA6A4C,
+            true,
+        ), // summer writing finger shade
+        (
+            "specialanimation_summer_write_loop_south",
+            42,
+            46,
+            0x57342B,
+            false,
+        ), // summer board dark wood
+        (
+            "specialanimation_summer_write_loop_south",
+            274,
+            47,
+            0xDE8F5D,
+            true,
+        ), // summer final writing finger edge
+        (
+            "specialanimation_summer_write_sit_end_south",
+            126,
+            49,
+            0xDE8F5D,
+            true,
+        ), // summer seated lower board thumb
+        (
+            "specialanimation_summer_write_sit_start_south",
+            123,
+            49,
+            0xDE8F5D,
+            true,
+        ), // summer seated raised thumb edge
+        (
+            "specialanimation_summer_write_sit_loop_south",
+            274,
+            47,
+            0xDE8F5D,
+            true,
+        ), // summer seated final writing finger
+        (
+            "specialanimation_autumn_write_end_south",
+            126,
+            49,
+            0xDE8F5D,
+            true,
+        ), // autumn standing lower board thumb
+        (
+            "specialanimation_autumn_write_start_south",
+            38,
+            42,
+            0xC47054,
+            false,
+        ), // autumn standing gold collar
+        (
+            "specialanimation_autumn_write_loop_south",
+            36,
+            46,
+            0xBA6A4C,
+            true,
+        ), // autumn writing hand shadow
+        (
+            "specialanimation_autumn_write_sit_end_south",
+            126,
+            49,
+            0xDE8F5D,
+            true,
+        ), // autumn seated lower board thumb
+        (
+            "specialanimation_autumn_write_sit_start_south",
+            124,
+            48,
+            0xBA6A4C,
+            true,
+        ), // autumn seated thumb side contour
+        (
+            "specialanimation_autumn_write_sit_loop_south",
+            274,
+            47,
+            0xDE8F5D,
+            true,
+        ), // autumn seated final writing finger
+        (
+            "specialanimation_winter_write_end_south",
+            126,
+            49,
+            0xDE8F5D,
+            true,
+        ), // winter standing lower board thumb
+        (
+            "specialanimation_winter_write_start_south",
+            38,
+            42,
+            0xC47054,
+            false,
+        ), // winter standing gold collar
+        (
+            "specialanimation_winter_write_loop_south",
+            36,
+            46,
+            0xBA6A4C,
+            true,
+        ), // winter writing finger contour
+        (
+            "specialanimation_winter_write_loop_south",
+            35,
+            40,
+            0xBA7F3E,
+            false,
+        ), // winter writing pen shade
+        (
+            "specialanimation_winter_write_sit_start_south",
+            124,
+            48,
+            0xBA6A4C,
+            true,
+        ), // winter seated thumb side contour
+        (
+            "specialanimation_winter_write_sit_loop_south",
+            274,
+            47,
+            0xDE8F5D,
+            true,
+        ), // winter seated final writing finger
     ];
     let mut blue_selection = Vec::new();
     for (target_index, (id, target)) in targets.iter().enumerate() {
         let mut selection = Vec::new();
         let mut frames = 0;
         for (cycle, count) in cases {
-            let outfit = match cycle.split('_').next().unwrap() {
-                "spring" | "specialanimation" => "Spring",
+            let season = cycle
+                .strip_prefix("specialanimation_")
+                .unwrap_or(cycle)
+                .split('_')
+                .next()
+                .unwrap();
+            let outfit = match season {
+                "spring" => "Spring",
                 "summer" => "Summer",
                 "autumn" => "Autumn",
                 "winter" => "Winter",
@@ -834,7 +1055,7 @@ fn world_masks_preserve_material_boundaries() {
             }
             frames += count;
         }
-        assert_eq!(frames, 297);
+        assert_eq!(frames, 345);
         if target_index == 0 {
             blue_selection = selection;
         } else {

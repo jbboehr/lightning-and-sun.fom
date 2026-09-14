@@ -237,7 +237,25 @@
       "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_action_north.png": "Default",
       "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_action_south.png": "Default",
       "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_kiss_east.png": "Default",
-      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_sleep_east.png": "Default"
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_sleep_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_specialanimation_autumn_write_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_specialanimation_autumn_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_specialanimation_autumn_write_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_specialanimation_autumn_write_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_specialanimation_autumn_write_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_specialanimation_autumn_write_start_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_specialanimation_summer_write_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_specialanimation_summer_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_specialanimation_summer_write_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_specialanimation_summer_write_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_specialanimation_summer_write_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_specialanimation_summer_write_start_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_specialanimation_winter_write_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_specialanimation_winter_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_specialanimation_winter_write_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_specialanimation_winter_write_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_specialanimation_winter_write_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_specialanimation_winter_write_start_south.png": "Default"
     }
   },
   {
