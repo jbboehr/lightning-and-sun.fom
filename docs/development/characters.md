@@ -1,13 +1,13 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 219 reviewed animations, Hayden's 133,
+The combined trial includes Adeline's 234 reviewed animations, Hayden's 133,
 Ryis's 109, Reina's 103, Juniper's 132, Celine's 183, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 9,176 variant strips. Caldarus's three dragon/statue
+variants per source give 9,236 variant strips. Caldarus's three dragon/statue
 strips and Seridia's 17 spectral Priestess strips and one dragon stay unchanged.
 All thirty-six characters start on
 Vanilla each session.
@@ -50,8 +50,10 @@ covers all 42 standard and special-animation strips alongside her 126 portraits.
 The [seasonal idle/walk pass](overworld-seasonal-idle-walk.md) adds 18 strips
 across Summer, Autumn, and Winter. The subsequent
 [seasonal action pass](overworld-seasonal-actions.md) adds 33 blink, sit, eat, and
-drink strips, for 93 overworld strips in total. Other actions in those outfits
-remain original.
+drink strips. The [standard seasonal pass](overworld-seasonal-standard.md) adds
+15 general-action, sleep, and kiss strips, completing the standard animations
+for all four seasons. This gives 108 overworld strips; special animations in
+Summer, Autumn, and Winter remain original.
 
 ## Add and review one character at a time
 
@@ -273,11 +275,11 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package, including Adeline's 33 seasonal blink, sit, eat, and
-drink strips, is installed in `tmp/adeline-seasonal-actions-playtest`. It has no preview
+The latest combined package, including Adeline's 15 seasonal general-action,
+sleep, and kiss strips, is installed in `tmp/adeline-seasonal-standard-playtest`. It has no preview
 helper and does not replace the desktop launcher. Use the
-[complete offline review](../../generated/adeline-seasonal-actions-preview/blue-review/index.html)
-to inspect all 93 new source frames and mirrored West views.
+[complete offline review](../../generated/adeline-seasonal-standard-preview/blue-review/index.html)
+to inspect all 78 new source frames and mirrored West views.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

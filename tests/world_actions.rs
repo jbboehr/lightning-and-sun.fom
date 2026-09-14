@@ -118,6 +118,57 @@ fn world_actions_preserve_frame_timing_and_offsets() {
         ("winter_sit_east", 1, "1.0"),
         ("winter_sit_north", 1, "1.0"),
         ("winter_sit_south", 1, "1.0"),
+        (
+            "autumn_action_east",
+            7,
+            "[0.1, 0.25, 0.25, 0.25, 0.25, 0.1, 0.4]",
+        ),
+        (
+            "autumn_action_north",
+            7,
+            "[0.1, 0.25, 0.25, 0.25, 0.25, 0.1, 0.4]",
+        ),
+        (
+            "autumn_action_south",
+            7,
+            "[0.1, 0.25, 0.25, 0.25, 0.25, 0.1, 0.4]",
+        ),
+        ("autumn_kiss_east", 4, "[0.15, 0.15, 0.8, 0.15]"),
+        ("autumn_sleep_east", 1, "1.0"),
+        (
+            "summer_action_east",
+            7,
+            "[0.1, 0.25, 0.25, 0.25, 0.25, 0.1, 0.4]",
+        ),
+        (
+            "summer_action_north",
+            7,
+            "[0.1, 0.25, 0.25, 0.25, 0.25, 0.1, 0.4]",
+        ),
+        (
+            "summer_action_south",
+            7,
+            "[0.1, 0.25, 0.25, 0.25, 0.25, 0.1, 0.4]",
+        ),
+        ("summer_kiss_east", 4, "[0.15, 0.15, 0.8, 0.15]"),
+        ("summer_sleep_east", 1, "1.0"),
+        (
+            "winter_action_east",
+            7,
+            "[0.1, 0.25, 0.25, 0.25, 0.25, 0.1, 0.4]",
+        ),
+        (
+            "winter_action_north",
+            7,
+            "[0.1, 0.25, 0.25, 0.25, 0.25, 0.1, 0.4]",
+        ),
+        (
+            "winter_action_south",
+            7,
+            "[0.1, 0.25, 0.25, 0.25, 0.25, 0.1, 0.4]",
+        ),
+        ("winter_kiss_east", 4, "[0.15, 0.15, 0.8, 0.15]"),
+        ("winter_sleep_east", 1, "1.0"),
     ];
     for (cycle, count, duration) in cases {
         let name = format!("spr_npc_adeline_{cycle}");
@@ -192,8 +243,7 @@ fn world_actions_preserve_frame_timing_and_offsets() {
     .unwrap();
     assert_eq!(table[0][4], serde_json::json!(expected));
 
-    // These directional strips do not exist; special-animation names still
-    // require an exact reviewed registry entry.
+    // Reject nonexistent directions and unreviewed special-animation strips.
     for cycle in [
         "spring_blink_north",
         "spring_sit_west",
@@ -206,7 +256,11 @@ fn world_actions_preserve_frame_timing_and_offsets() {
         "summer_walk_west",
         "autumn_idle_west",
         "winter_walk_west",
-        "summer_action_south",
+        "specialanimation_summer_write_start_south",
+        "summer_action_west",
+        "autumn_sleep_north",
+        "winter_kiss_south",
+        "winter_shocked_start_south",
         "summer_blink_north",
         "autumn_drink_west",
         "winter_sit_west",
@@ -242,7 +296,7 @@ fn world_actions_preserve_frame_timing_and_offsets() {
 }
 
 #[test]
-#[ignore = "requires the 219 local animations in extracted/adeline-world-actions-study"]
+#[ignore = "requires the 234 local animations in extracted/adeline-world-actions-study"]
 fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
@@ -267,7 +321,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
         String::from_utf8_lossy(&result.stderr)
     );
     let report: serde_json::Value = serde_json::from_slice(&result.stdout).unwrap();
-    assert_eq!(report["files"].as_array().unwrap().len(), 219);
+    assert_eq!(report["files"].as_array().unwrap().len(), 234);
     let sources = [
         [233, 169, 128, 255],
         [222, 143, 93, 255],
@@ -367,7 +421,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
 }
 
 #[test]
-#[ignore = "requires the 219 local animations in extracted/adeline-world-actions-study"]
+#[ignore = "requires the 234 local animations in extracted/adeline-world-actions-study"]
 fn world_masks_preserve_material_boundaries() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
@@ -467,6 +521,21 @@ fn world_masks_preserve_material_boundaries() {
         ("winter_sit_east", 1),
         ("winter_sit_north", 1),
         ("winter_sit_south", 1),
+        ("autumn_action_east", 7),
+        ("autumn_action_north", 7),
+        ("autumn_action_south", 7),
+        ("autumn_kiss_east", 4),
+        ("autumn_sleep_east", 1),
+        ("summer_action_east", 7),
+        ("summer_action_north", 7),
+        ("summer_action_south", 7),
+        ("summer_kiss_east", 4),
+        ("summer_sleep_east", 1),
+        ("winter_action_east", 7),
+        ("winter_action_north", 7),
+        ("winter_action_south", 7),
+        ("winter_kiss_east", 4),
+        ("winter_sleep_east", 1),
     ];
     let sources = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x7D3B14];
     let targets = [
@@ -686,6 +755,26 @@ fn world_masks_preserve_material_boundaries() {
         ("winter_eat_south", 119, 41, 0xBA6A4C, true),  // winter eating dipped neck island
         ("winter_eat_south", 198, 35, 0x410808, false), // winter eating dark mouth interior
         ("winter_drink_east", 119, 43, 0xBA6A4C, true), // winter east drinking lower finger
+        ("summer_action_north", 526, 47, 0x7D3B14, true), // summer rear final far finger
+        ("summer_action_south", 198, 47, 0x7D3B14, true), // summer front action curled hand
+        ("summer_action_east", 525, 46, 0xDE8F5D, true), // summer east final detached far hand
+        ("summer_sleep_east", 44, 39, 0x7D3B14, true),  // summer sleep raised hand contour
+        ("summer_kiss_east", 125, 38, 0x7D3B14, true),  // summer kiss shifted face contour
+        ("summer_kiss_east", 275, 48, 0xBA6A4C, true),  // summer kiss final hand shade
+        ("autumn_action_north", 115, 46, 0x7D3B14, true), // autumn rear raised finger
+        ("autumn_action_north", 119, 47, 0xBA6A4C, false), // autumn rear gold belt
+        ("autumn_action_south", 205, 46, 0x7D3B14, true), // autumn front action far finger
+        ("autumn_action_south", 198, 41, 0xC47054, false), // autumn front action collar
+        ("autumn_action_east", 514, 47, 0xBA6A4C, true), // autumn east final near hand shade
+        ("autumn_sleep_east", 44, 39, 0x7D3B14, true),  // autumn sleep hand contour
+        ("autumn_kiss_east", 275, 48, 0xBA6A4C, true),  // autumn kiss final hand shade
+        ("winter_action_north", 115, 46, 0x7D3B14, true), // winter rear raised finger
+        ("winter_action_north", 119, 47, 0xBA6A4C, false), // winter rear warm belt
+        ("winter_action_south", 198, 47, 0x7D3B14, true), // winter front action curled hand
+        ("winter_action_east", 514, 47, 0xBA6A4C, true), // winter east final hand shade
+        ("winter_sleep_east", 44, 39, 0x7D3B14, true),  // winter sleep hand contour
+        ("winter_kiss_east", 125, 38, 0x7D3B14, true),  // winter kiss shifted face contour
+        ("winter_kiss_east", 275, 48, 0xBA6A4C, true),  // winter kiss final hand shade
     ];
     let mut blue_selection = Vec::new();
     for (target_index, (id, target)) in targets.iter().enumerate() {
@@ -745,7 +834,7 @@ fn world_masks_preserve_material_boundaries() {
             }
             frames += count;
         }
-        assert_eq!(frames, 219);
+        assert_eq!(frames, 297);
         if target_index == 0 {
             blue_selection = selection;
         } else {

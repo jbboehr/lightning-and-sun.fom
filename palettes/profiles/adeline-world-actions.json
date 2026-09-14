@@ -2882,6 +2882,185 @@
         [44,36], [114,36], [196,36], [204,36],
         [119,40], [40,42], [200,42]
       ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_action_north.png",
+      "source_sha256": "62fbe212b231c7c3a06e092c84eafcc6b5ddfd6cf05bf39b115316a0da8aec2f",
+      "size": [560,80],
+      "seeds": [
+        [32,44], [114,44], [194,44], [274,44],
+        [354,44], [433,45], [513,45], [525,45]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_action_south.png",
+      "source_sha256": "cd0df17317d59eaffb473efda0d3728967b9e3fa39ee956772615e21b802cba4",
+      "size": [560,80],
+      "seeds": [
+        [119,33], [199,33], [279,33], [359,33],
+        [519,33], [39,34], [439,34], [115,36],
+        [124,36], [195,36], [204,36], [275,36],
+        [284,36], [355,36], [364,36], [515,36],
+        [524,36], [35,37], [44,37], [435,37],
+        [444,37], [119,42], [199,42], [279,42],
+        [359,42], [519,42], [39,43], [439,43],
+        [514,44], [525,44], [34,45], [45,45],
+        [114,45], [124,45], [196,45], [204,45],
+        [274,45], [284,45], [356,45], [364,45],
+        [434,45], [445,45]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_action_east.png",
+      "source_sha256": "1a3fc9ce8e5b5fe942c3d4c4bf76887b398c6631e9ac6c5cb6eeb702932166e9",
+      "size": [560,80],
+      "seeds": [
+        [123,33], [203,33], [283,33], [363,33],
+        [520,33], [41,34], [441,34], [119,36],
+        [127,36], [199,36], [207,36], [279,36],
+        [287,36], [359,36], [367,36], [516,36],
+        [524,36], [37,37], [45,37], [437,37],
+        [445,37], [204,42], [364,42], [520,42],
+        [41,43], [126,43], [286,43], [441,43],
+        [204,44], [364,44], [515,44], [524,45],
+        [38,46], [438,46], [525,46]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_sleep_east.png",
+      "source_sha256": "ca493f2dfabf1107cda6e09cbc5a3dce2c6e6ec905cc4c12e462e8e68102ad89",
+      "size": [80,80],
+      "seeds": [
+        [40,33], [36,36], [43,39]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_kiss_east.png",
+      "source_sha256": "babe389d3f31236309089fabd59665010e07c853a4af34f3b100e54f2cff09ed",
+      "size": [320,80],
+      "seeds": [
+        [203,33], [39,34], [121,34], [281,34],
+        [199,36], [35,37], [43,37], [117,37],
+        [277,37], [125,38], [202,42], [39,43],
+        [121,43], [281,43], [195,44], [116,45],
+        [276,45], [34,46]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_action_north.png",
+      "source_sha256": "7fe8e155806e8062dd950db1e5adc79a0c714398c0bfe27b1d1dafbeee89298d",
+      "size": [560,80],
+      "seeds": [
+        [32,44], [114,45], [194,45], [274,45],
+        [354,45], [433,46], [512,46], [525,46]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_action_south.png",
+      "source_sha256": "e70e1191c9ac38e4c289cda36d5a69963f9b594b83a633c5ff75be26c6639a5d",
+      "size": [560,80],
+      "seeds": [
+        [119,33], [199,33], [279,33], [359,33],
+        [519,33], [39,34], [439,34], [115,36],
+        [124,36], [195,36], [204,36], [275,36],
+        [284,36], [355,36], [364,36], [515,36],
+        [524,36], [35,37], [44,37], [435,37],
+        [444,37], [125,45], [205,45], [285,45],
+        [365,45], [45,46], [114,46], [197,46],
+        [274,46], [357,46], [445,46], [512,46],
+        [525,46], [33,47], [433,47]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_action_east.png",
+      "source_sha256": "2db98458aa01ef0f7b74ff39dd28680356a763f1e823cdd488acacb2d1a7c022",
+      "size": [560,80],
+      "seeds": [
+        [123,33], [203,33], [283,33], [363,33],
+        [520,33], [41,34], [441,34], [119,36],
+        [127,36], [199,36], [207,36], [279,36],
+        [287,36], [359,36], [367,36], [516,36],
+        [524,36], [37,37], [45,37], [437,37],
+        [445,37], [129,43], [289,43], [204,45],
+        [364,45], [514,46], [39,47], [439,47]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_sleep_east.png",
+      "source_sha256": "a54906a85cde7a1e54fa4f777fbdcb5ef25c60f558eadb058fa8c1d40ecd85f5",
+      "size": [80,80],
+      "seeds": [
+        [40,33], [36,36], [43,39]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_kiss_east.png",
+      "source_sha256": "8c823acd867587bfe034df35bbeb36bc16aed1cb3515d74b86b8ec35cef8833c",
+      "size": [320,80],
+      "seeds": [
+        [203,33], [39,34], [121,34], [281,34],
+        [199,36], [35,37], [43,37], [117,37],
+        [277,37], [125,38], [195,44], [34,47],
+        [115,47], [275,47]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_action_north.png",
+      "source_sha256": "d2e3b53f34006f052f9e940152914642c9ca93ab1cc9bff2d035c9d4392b62ac",
+      "size": [560,80],
+      "seeds": [
+        [32,44], [114,45], [194,45], [274,45],
+        [354,45], [433,46], [512,46], [525,46]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_action_south.png",
+      "source_sha256": "a14f6183bdc1f7809e2e3b0e3aabf37c6bbbd2003b2f4c92bff9be892f925393",
+      "size": [560,80],
+      "seeds": [
+        [119,33], [199,33], [279,33], [359,33],
+        [519,33], [39,34], [439,34], [115,36],
+        [124,36], [195,36], [204,36], [275,36],
+        [284,36], [355,36], [364,36], [515,36],
+        [524,36], [35,37], [44,37], [435,37],
+        [444,37], [124,45], [204,45], [284,45],
+        [364,45], [45,46], [114,46], [196,46],
+        [274,46], [356,46], [445,46], [512,46],
+        [525,46], [33,47], [433,47]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_action_east.png",
+      "source_sha256": "b694a05003ad1a62d6ccd98a4f40362b73d82322101726664cdf1512b72823ff",
+      "size": [560,80],
+      "seeds": [
+        [123,33], [203,33], [283,33], [363,33],
+        [520,33], [41,34], [441,34], [119,36],
+        [127,36], [199,36], [207,36], [279,36],
+        [287,36], [359,36], [367,36], [516,36],
+        [524,36], [37,37], [45,37], [437,37],
+        [445,37], [128,43], [288,43], [204,45],
+        [364,45], [514,46], [38,47], [438,47]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_sleep_east.png",
+      "source_sha256": "00be368bafdcfa862f791cf81355518af10da8b7f2d9a33b6629ee781555eb3e",
+      "size": [80,80],
+      "seeds": [
+        [40,33], [36,36], [43,39]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_kiss_east.png",
+      "source_sha256": "c31810ff41cab82dbe5bd89bb12194b0fdf4ee539be79e6dcf331ce9d8a61fd3",
+      "size": [320,80],
+      "seeds": [
+        [203,33], [39,34], [121,34], [281,34],
+        [199,36], [35,37], [43,37], [117,37],
+        [277,37], [125,38], [195,44], [34,47],
+        [115,47], [275,47]
+      ]
     }
   ]
 }

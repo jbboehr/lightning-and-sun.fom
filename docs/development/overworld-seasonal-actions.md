@@ -1,5 +1,9 @@
 # Adeline seasonal everyday actions
 
+This records the everyday-action slice. The subsequent
+[standard seasonal pass](overworld-seasonal-standard.md) adds general actions,
+sleeping, and kissing in Summer, Autumn, and Winter.
+
 This adds 33 blink, sit, eat, and drink strips from Adeline's Summer, Autumn,
 and Winter overworld outfits. They contain 93 source frame occurrences and
 69 distinct images. Together with the [seasonal idle/walk slice](overworld-seasonal-idle-walk.md),
@@ -113,7 +117,8 @@ local game data stay ignored by Git.
 
 ## Remaining coverage
 
-Adeline's other overworld actions/outfits and other characters' overworld sprites
-remain original. The complete Spring set and everyday actions in the other three
-seasons now have masks. The user accepted the offline art review; native gameplay
-timing and natural scheduling remain unverified.
+The subsequent [standard seasonal pass](overworld-seasonal-standard.md) adds
+15 general-action, sleep, and kiss strips. Other overworld actions/outfits and
+other characters' overworld sprites remain original. The user accepted this
+offline art review; native gameplay timing and natural scheduling remain
+unverified.

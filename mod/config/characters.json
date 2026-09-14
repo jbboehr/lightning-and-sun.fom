@@ -222,7 +222,22 @@
       "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_eat_south.png": "Default",
       "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_sit_east.png": "Default",
       "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_sit_north.png": "Default",
-      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_sit_south.png": "Default"
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_sit_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_action_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_action_north.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_action_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_kiss_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Autumn/spr_npc_adeline_autumn_sleep_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_action_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_action_north.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_action_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_kiss_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Summer/spr_npc_adeline_summer_sleep_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_action_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_action_north.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_action_south.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_kiss_east.png": "Default",
+      "assets/animations/NPCs/Adeline/Sprites/Winter/spr_npc_adeline_winter_sleep_east.png": "Default"
     }
   },
   {
