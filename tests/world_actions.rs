@@ -223,6 +223,84 @@ fn world_actions_preserve_frame_timing_and_offsets() {
         ),
         ("specialanimation_winter_write_sit_start_south", 2, "0.125"),
         ("specialanimation_winter_write_start_south", 2, "0.125"),
+        (
+            "specialanimation_autumn_faint_south",
+            7,
+            "[0.2, 0.1, 0.15, 0.8, 0.1, 0.1, 1.6]",
+        ),
+        ("specialanimation_autumn_read_sit_end_south", 3, "0.1"),
+        (
+            "specialanimation_autumn_read_sit_loop_south",
+            4,
+            "[3.0, 0.1, 3.0, 0.1]",
+        ),
+        ("specialanimation_autumn_read_sit_start_south", 3, "0.1"),
+        ("specialanimation_autumn_think_end_south", 1, "1.0"),
+        ("specialanimation_autumn_think_loop_south", 1, "1.0"),
+        ("specialanimation_autumn_think_start_south", 2, "0.1"),
+        (
+            "specialanimation_autumn_work_sit_end_south",
+            2,
+            "[0.25, 0.175]",
+        ),
+        (
+            "specialanimation_autumn_work_sit_loop_south",
+            7,
+            "[0.5, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25]",
+        ),
+        ("specialanimation_autumn_work_sit_start_south", 1, "1.0"),
+        (
+            "specialanimation_summer_faint_south",
+            7,
+            "[0.2, 0.1, 0.15, 0.8, 0.1, 0.1, 1.6]",
+        ),
+        ("specialanimation_summer_read_sit_end_south", 3, "0.1"),
+        (
+            "specialanimation_summer_read_sit_loop_south",
+            4,
+            "[3.0, 0.1, 3.0, 0.1]",
+        ),
+        ("specialanimation_summer_read_sit_start_south", 3, "0.1"),
+        ("specialanimation_summer_think_end_south", 1, "1.0"),
+        ("specialanimation_summer_think_loop_south", 1, "1.0"),
+        ("specialanimation_summer_think_start_south", 2, "0.1"),
+        (
+            "specialanimation_summer_work_sit_end_south",
+            2,
+            "[0.25, 0.175]",
+        ),
+        (
+            "specialanimation_summer_work_sit_loop_south",
+            7,
+            "[0.5, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25]",
+        ),
+        ("specialanimation_summer_work_sit_start_south", 1, "1.0"),
+        (
+            "specialanimation_winter_faint_south",
+            7,
+            "[0.2, 0.1, 0.15, 0.8, 0.1, 0.1, 1.6]",
+        ),
+        ("specialanimation_winter_read_sit_end_south", 3, "0.1"),
+        (
+            "specialanimation_winter_read_sit_loop_south",
+            4,
+            "[3.0, 0.1, 3.0, 0.1]",
+        ),
+        ("specialanimation_winter_read_sit_start_south", 3, "0.1"),
+        ("specialanimation_winter_think_end_south", 1, "1.0"),
+        ("specialanimation_winter_think_loop_south", 1, "1.0"),
+        ("specialanimation_winter_think_start_south", 2, "0.1"),
+        (
+            "specialanimation_winter_work_sit_end_south",
+            2,
+            "[0.25, 0.175]",
+        ),
+        (
+            "specialanimation_winter_work_sit_loop_south",
+            7,
+            "[0.5, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25]",
+        ),
+        ("specialanimation_winter_work_sit_start_south", 1, "1.0"),
     ];
     for (cycle, count, duration) in cases {
         let name = format!("spr_npc_adeline_{cycle}");
@@ -297,7 +375,7 @@ fn world_actions_preserve_frame_timing_and_offsets() {
     .unwrap();
     assert_eq!(table[0][4], serde_json::json!(expected));
 
-    // Reject nonexistent directions and unreviewed special-animation strips.
+    // Reject nonexistent directions and unreviewed outfit strips.
     for cycle in [
         "spring_blink_north",
         "spring_sit_west",
@@ -310,7 +388,11 @@ fn world_actions_preserve_frame_timing_and_offsets() {
         "summer_walk_west",
         "autumn_idle_west",
         "winter_walk_west",
-        "specialanimation_summer_read_sit_start_south",
+        "specialanimation_summer_read_sit_start_east",
+        "specialanimation_autumn_work_sit_loop_west",
+        "specialanimation_winter_think_end_north",
+        "specialanimation_winter_faint_east",
+        "specialanimation_beach_faint_south",
         "specialanimation_summer_write_loop_east",
         "specialanimation_autumn_write_sit_start_west",
         "specialanimation_winter_write_end_north",
@@ -353,7 +435,7 @@ fn world_actions_preserve_frame_timing_and_offsets() {
 }
 
 #[test]
-#[ignore = "requires the 252 local animations in extracted/adeline-world-actions-study"]
+#[ignore = "requires the 282 local animations in extracted/adeline-world-actions-study"]
 fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
@@ -378,7 +460,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
         String::from_utf8_lossy(&result.stderr)
     );
     let report: serde_json::Value = serde_json::from_slice(&result.stdout).unwrap();
-    assert_eq!(report["files"].as_array().unwrap().len(), 252);
+    assert_eq!(report["files"].as_array().unwrap().len(), 282);
     let sources = [
         [233, 169, 128, 255],
         [222, 143, 93, 255],
@@ -478,7 +560,7 @@ fn spring_action_masks_cover_hands_and_preserve_clothing_and_mouth_colors() {
 }
 
 #[test]
-#[ignore = "requires the 252 local animations in extracted/adeline-world-actions-study"]
+#[ignore = "requires the 282 local animations in extracted/adeline-world-actions-study"]
 fn world_masks_preserve_material_boundaries() {
     let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/adeline-world-actions-study");
@@ -611,6 +693,36 @@ fn world_masks_preserve_material_boundaries() {
         ("specialanimation_winter_write_sit_loop_south", 4),
         ("specialanimation_winter_write_sit_start_south", 2),
         ("specialanimation_winter_write_start_south", 2),
+        ("specialanimation_autumn_faint_south", 7),
+        ("specialanimation_autumn_read_sit_end_south", 3),
+        ("specialanimation_autumn_read_sit_loop_south", 4),
+        ("specialanimation_autumn_read_sit_start_south", 3),
+        ("specialanimation_autumn_think_end_south", 1),
+        ("specialanimation_autumn_think_loop_south", 1),
+        ("specialanimation_autumn_think_start_south", 2),
+        ("specialanimation_autumn_work_sit_end_south", 2),
+        ("specialanimation_autumn_work_sit_loop_south", 7),
+        ("specialanimation_autumn_work_sit_start_south", 1),
+        ("specialanimation_summer_faint_south", 7),
+        ("specialanimation_summer_read_sit_end_south", 3),
+        ("specialanimation_summer_read_sit_loop_south", 4),
+        ("specialanimation_summer_read_sit_start_south", 3),
+        ("specialanimation_summer_think_end_south", 1),
+        ("specialanimation_summer_think_loop_south", 1),
+        ("specialanimation_summer_think_start_south", 2),
+        ("specialanimation_summer_work_sit_end_south", 2),
+        ("specialanimation_summer_work_sit_loop_south", 7),
+        ("specialanimation_summer_work_sit_start_south", 1),
+        ("specialanimation_winter_faint_south", 7),
+        ("specialanimation_winter_read_sit_end_south", 3),
+        ("specialanimation_winter_read_sit_loop_south", 4),
+        ("specialanimation_winter_read_sit_start_south", 3),
+        ("specialanimation_winter_think_end_south", 1),
+        ("specialanimation_winter_think_loop_south", 1),
+        ("specialanimation_winter_think_start_south", 2),
+        ("specialanimation_winter_work_sit_end_south", 2),
+        ("specialanimation_winter_work_sit_loop_south", 7),
+        ("specialanimation_winter_work_sit_start_south", 1),
     ];
     let sources = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x7D3B14];
     let targets = [
@@ -990,6 +1102,146 @@ fn world_masks_preserve_material_boundaries() {
             0xDE8F5D,
             true,
         ), // winter seated final writing finger
+        (
+            "specialanimation_summer_read_sit_start_south",
+            115,
+            47,
+            0x7D3B14,
+            true,
+        ), // summer reading hand beside upright book
+        (
+            "specialanimation_summer_read_sit_start_south",
+            118,
+            41,
+            0xC9AF9C,
+            false,
+        ), // summer paper shadow
+        (
+            "specialanimation_summer_read_sit_loop_south",
+            32,
+            42,
+            0xF6E4D7,
+            false,
+        ), // summer open book paper
+        (
+            "specialanimation_summer_read_sit_end_south",
+            124,
+            47,
+            0x7D3B14,
+            true,
+        ), // summer closing book finger
+        (
+            "specialanimation_summer_work_sit_loop_south",
+            515,
+            48,
+            0x7D3B14,
+            true,
+        ), // summer final seated work near finger
+        (
+            "specialanimation_summer_think_loop_south",
+            44,
+            41,
+            0x7D3B14,
+            true,
+        ), // summer thinking finger at mouth
+        (
+            "specialanimation_summer_faint_south",
+            36,
+            35,
+            0x42CAFD,
+            false,
+        ), // summer fainting tear effect
+        (
+            "specialanimation_summer_faint_south",
+            39,
+            37,
+            0xAC3232,
+            false,
+        ), // summer fainting mouth interior
+        (
+            "specialanimation_summer_faint_south",
+            514,
+            51,
+            0x7D3B14,
+            true,
+        ), // summer final faint near finger
+        (
+            "specialanimation_autumn_read_sit_start_south",
+            115,
+            47,
+            0x7D3B14,
+            true,
+        ), // autumn reading hand beside upright book
+        (
+            "specialanimation_autumn_read_sit_loop_south",
+            38,
+            41,
+            0xC47054,
+            false,
+        ), // autumn reading collar
+        (
+            "specialanimation_autumn_work_sit_loop_south",
+            38,
+            48,
+            0x7D3B14,
+            true,
+        ), // autumn working near hand contour
+        (
+            "specialanimation_autumn_work_sit_loop_south",
+            515,
+            48,
+            0x7D3B14,
+            true,
+        ), // autumn final working near finger
+        (
+            "specialanimation_autumn_think_loop_south",
+            44,
+            41,
+            0x7D3B14,
+            true,
+        ), // autumn thinking finger at mouth
+        (
+            "specialanimation_autumn_faint_south",
+            514,
+            51,
+            0x7D3B14,
+            true,
+        ), // autumn final faint near finger
+        (
+            "specialanimation_winter_read_sit_start_south",
+            115,
+            47,
+            0x7D3B14,
+            true,
+        ), // winter reading hand beside upright book
+        (
+            "specialanimation_winter_read_sit_start_south",
+            115,
+            44,
+            0xC47054,
+            false,
+        ), // winter reading cuff trim
+        (
+            "specialanimation_winter_work_sit_loop_south",
+            515,
+            48,
+            0x7D3B14,
+            true,
+        ), // winter final working near finger
+        (
+            "specialanimation_winter_think_loop_south",
+            44,
+            41,
+            0x7D3B14,
+            true,
+        ), // winter thinking finger at mouth
+        (
+            "specialanimation_winter_faint_south",
+            514,
+            51,
+            0x7D3B14,
+            true,
+        ), // winter final faint near finger
     ];
     let mut blue_selection = Vec::new();
     for (target_index, (id, target)) in targets.iter().enumerate() {
@@ -1055,7 +1307,7 @@ fn world_masks_preserve_material_boundaries() {
             }
             frames += count;
         }
-        assert_eq!(frames, 345);
+        assert_eq!(frames, 438);
         if target_index == 0 {
             blue_selection = selection;
         } else {

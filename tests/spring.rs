@@ -60,54 +60,60 @@ fn fixture(root: &Path, name: &str, frames: u32, color: [u8; 4]) {
 }
 
 #[test]
-fn export_supports_a_complete_256_portrait_selection() {
-    let temp = tempfile::tempdir().unwrap();
-    let source = temp.path().join("source");
-    fixture(&source, "sample", 2, [10, 20, 30, 255]);
-    let archive = temp.path().join("assets.zip");
-    let mut zip = ZipWriter::new(fs::File::create(&archive).unwrap());
-    for i in 0..256 {
-        for ext in ["png", "meta.toml"] {
-            zip.start_file(
-                format!("assets/spr_test_{i}.{ext}"),
-                SimpleFileOptions::default(),
-            )
-            .unwrap();
-            zip.write_all(&fs::read(source.join(format!("sample.{ext}"))).unwrap())
+fn export_supports_complete_portrait_and_overworld_selections() {
+    for count in [256, 282, 512] {
+        let temp = tempfile::tempdir().unwrap();
+        let source = temp.path().join("source");
+        fixture(&source, "sample", 2, [10, 20, 30, 255]);
+        let archive = temp.path().join("assets.zip");
+        let mut zip = ZipWriter::new(fs::File::create(&archive).unwrap());
+        for i in 0..count {
+            for ext in ["png", "meta.toml"] {
+                zip.start_file(
+                    format!("assets/spr_test_{i}.{ext}"),
+                    SimpleFileOptions::default(),
+                )
                 .unwrap();
+                zip.write_all(&fs::read(source.join(format!("sample.{ext}"))).unwrap())
+                    .unwrap();
+            }
         }
+        zip.finish().unwrap();
+        let before = fs::read(&archive).unwrap();
+        let output = temp.path().join("export");
+        let mut cmd = Command::new(env!("CARGO_BIN_EXE_mistria-palette"));
+        cmd.arg("export")
+            .arg("--archive")
+            .arg(&archive)
+            .arg("--output")
+            .arg(&output);
+        for i in 0..count {
+            cmd.arg("--asset").arg(format!("assets/spr_test_{i}.png"));
+        }
+        let report = success(cmd.output().unwrap());
+        assert_eq!(report["files"].as_array().unwrap().len(), count);
+        for i in 0..count {
+            assert_eq!(
+                fs::read(output.join(format!("assets/spr_test_{i}.png"))).unwrap(),
+                fs::read(source.join("sample.png")).unwrap()
+            );
+            assert_eq!(
+                fs::read(output.join(format!("assets/spr_test_{i}.meta.toml"))).unwrap(),
+                fs::read(source.join("sample.meta.toml")).unwrap()
+            );
+        }
+        assert_eq!(fs::read(archive).unwrap(), before);
     }
-    zip.finish().unwrap();
-    let before = fs::read(&archive).unwrap();
-    let output = temp.path().join("export");
-    let mut cmd = Command::new(env!("CARGO_BIN_EXE_mistria-palette"));
-    cmd.arg("export")
-        .arg("--archive")
-        .arg(&archive)
-        .arg("--output")
-        .arg(&output);
-    for i in 0..256 {
-        cmd.arg("--asset").arg(format!("assets/spr_test_{i}.png"));
-    }
-    let report = success(cmd.output().unwrap());
-    assert_eq!(report["files"].as_array().unwrap().len(), 256);
-    for i in 0..256 {
-        assert_eq!(
-            fs::read(output.join(format!("assets/spr_test_{i}.png"))).unwrap(),
-            fs::read(source.join("sample.png")).unwrap()
-        );
-    }
-    assert_eq!(fs::read(archive).unwrap(), before);
 }
 
 #[test]
-fn export_rejects_empty_duplicate_and_257_asset_selections_before_writing() {
+fn export_rejects_empty_duplicate_and_513_asset_selections_before_writing() {
     let temp = tempfile::tempdir().unwrap();
     let source = temp.path().join("source");
     fixture(&source, "sample", 1, [10, 20, 30, 255]);
     let archive = temp.path().join("assets.zip");
     let mut zip = ZipWriter::new(fs::File::create(&archive).unwrap());
-    for i in 0..257 {
+    for i in 0..513 {
         for ext in ["png", "meta.toml"] {
             zip.start_file(
                 format!("assets/spr_test_{i}.{ext}"),
@@ -126,7 +132,7 @@ fn export_rejects_empty_duplicate_and_257_asset_selections_before_writing() {
         ("duplicate", vec!["assets/spr_test_0.png".to_owned(); 2]),
         (
             "over-limit",
-            (0..257)
+            (0..513)
                 .map(|i| format!("assets/spr_test_{i}.png"))
                 .collect(),
         ),

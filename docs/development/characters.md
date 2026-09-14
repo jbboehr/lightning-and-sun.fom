@@ -1,13 +1,13 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 252 reviewed animations, Hayden's 133,
+The combined trial includes Adeline's 282 reviewed animations, Hayden's 133,
 Ryis's 109, Reina's 103, Juniper's 132, Celine's 183, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 9,308 variant strips. Caldarus's three dragon/statue
+variants per source give 9,428 variant strips. Caldarus's three dragon/statue
 strips and Seridia's 17 spectral Priestess strips and one dragon stay unchanged.
 All thirty-six characters start on
 Vanilla each session.
@@ -53,8 +53,10 @@ across Summer, Autumn, and Winter. The subsequent
 drink strips. The [standard seasonal pass](overworld-seasonal-standard.md) adds
 15 general-action, sleep, and kiss strips, completing the standard animations
 for all four seasons. The [seasonal writing pass](overworld-seasonal-writing.md)
-adds 18 standing/seated writing strips, for 126 overworld strips in total.
-Other special animations in Summer, Autumn, and Winter remain original.
+adds 18 standing/seated writing strips. The
+[remaining seasonal specials](overworld-seasonal-special.md) add 30 reading,
+working, thinking, and fainting strips, completing all 156 strips in the four
+seasonal sprite folders. Other overworld outfits remain original.
 
 ## Add and review one character at a time
 
@@ -74,8 +76,8 @@ do not infer it from the filename. Hayden's `beach_shy_special` strip lives in t
 Spring folder and uses `PortraitsSpring` even though its name says beach.
 Juniper's beach portraits use `PortraitsMisc`, whereas Reina's use
 `PortraitsSummer`.
-The export command accepts up to 256 distinct strips per character. Celine's
-183 and March's 181 required raising the earlier 143-strip prototype limit.
+The export command accepts up to 512 distinct strips per character. Adeline's
+282 portraits and seasonal overworld strips exceed the previous 256-strip limit.
 
 Build a combined local bundle:
 
@@ -276,11 +278,11 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package, including Adeline's 18 seasonal writing strips,
-is installed in `tmp/adeline-seasonal-writing-playtest`. It has no preview helper
-and does not replace the desktop launcher. Use the
-[complete offline review](../../generated/adeline-seasonal-writing-preview/blue-review/index.html)
-to inspect all 48 new South-facing source frames.
+The latest combined package, including Adeline's 30 remaining seasonal special
+strips, is installed in `tmp/adeline-seasonal-special-playtest`. It has no preview
+helper and does not replace the desktop launcher. Use the
+[complete offline review](../../generated/adeline-seasonal-special-preview/blue-review/index.html)
+to inspect all 93 new South-facing source frames.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

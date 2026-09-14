@@ -111,7 +111,8 @@ launcher remains unchanged on its earlier Zorel copy.
 
 ## Remaining coverage
 
-Other seasonal special animations, other outfits and other characters' overworld
-sprites remain original. The user accepted this offline art review; native
-gameplay and natural scheduling remain unverified. Generated artwork and local
-game data stay ignored by Git.
+The [next seasonal pass](overworld-seasonal-special.md) adds the remaining
+reading, working, thinking, and fainting strips. Other outfits and other
+characters' overworld sprites remain original. The user accepted the offline
+writing review; native gameplay and natural scheduling remain unverified.
+Generated artwork and local game data stay ignored by Git.

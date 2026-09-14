@@ -93,9 +93,10 @@ thinking, finger snapping, and fainting, use
 `--presets palettes/sets/adeline-world-actions-trial.json` instead. F6 selects the
 same palette across these animations and the included portraits. This also
 includes standing, walking, blinking, sitting, eating, drinking, general actions,
-sleeping, kissing, and standing/seated writing in Summer, Autumn, and Winter,
-for 126 overworld strips in total. Other special animations in those outfits
-still use their original colors.
+sleeping, kissing, standing/seated writing, reading, working, thinking, and
+fainting in Summer, Autumn, and Winter. All 156 overworld strips in the four
+seasonal sprite folders are included. Other overworld outfits still use their
+original colors.
 
 To include Hayden, Ryis, Reina, Juniper, Celine, March, Balor, Valen, Eiland,
 Olric, Landen, Nora, Holt, Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis,

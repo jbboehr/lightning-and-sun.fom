@@ -106,8 +106,8 @@ pub fn export(archive_path: &Path, assets: &[String], output: &Path) -> Result<V
     let output = fresh_output(output, &[archive_path])?;
     let names: BTreeSet<_> = assets.iter().collect();
     ensure!(
-        (1..=256).contains(&assets.len()) && names.len() == assets.len(),
-        "Select between one and 256 distinct PNG assets"
+        (1..=512).contains(&assets.len()) && names.len() == assets.len(),
+        "Select between one and 512 distinct PNG assets"
     );
     let file = fs::File::open(archive_path)?;
     let archive = file.read_zip()?;
