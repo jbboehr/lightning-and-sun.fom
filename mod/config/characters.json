@@ -547,7 +547,13 @@
       "assets/animations/NPCs/Ryis/Portraits/Winter/spr_portrait_ryis_winter_thoughtful.png": "PortraitsWinter",
       "assets/animations/NPCs/Ryis/Portraits/Winter/spr_portrait_ryis_winter_thoughtful_blush.png": "PortraitsWinter",
       "assets/animations/NPCs/Ryis/Portraits/Winter/spr_portrait_ryis_winter_ugh.png": "PortraitsWinter",
-      "assets/animations/NPCs/Ryis/Portraits/Winter/spr_portrait_ryis_winter_wink.png": "PortraitsWinter"
+      "assets/animations/NPCs/Ryis/Portraits/Winter/spr_portrait_ryis_winter_wink.png": "PortraitsWinter",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_idle_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_idle_north.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_idle_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_walk_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_walk_north.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_walk_south.png": "Default"
     }
   },
   {

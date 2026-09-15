@@ -1,0 +1,15 @@
+{
+  "description": "Ryis portraits and Spring idle/walk skin in Debug Blue; hair, eyes, gloves and clothing stay original.",
+  "profile": "../profiles/ryis-world-trial.json",
+  "rgba_map": {
+    "#B06C57": "#9DB9D4",
+    "#814A3A": "#7F9FBD",
+    "#63342A": "#6687AD",
+    "#491F1B": "#445F83",
+    "#995B48": "#7F9FBD",
+    "#A5624E": "#7F9FBD",
+    "#D6906A": "#9DB9D4",
+    "#C27B55": "#7F9FBD",
+    "#854D3C": "#7F9FBD"
+  }
+}

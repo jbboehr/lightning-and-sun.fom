@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 139,
-Ryis's 109, Reina's 103, Juniper's 132, Celine's 183, March's 181, Balor's 110,
+Ryis's 115, Reina's 103, Juniper's 132, Celine's 183, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 9,452 variant strips. Caldarus's three dragon/statue
+variants per source give 9,476 variant strips. Caldarus's three dragon/statue
 strips and Seridia's 17 spectral Priestess strips and one dragon stay unchanged.
 All thirty-six characters start on
 Vanilla each session.
@@ -44,7 +44,9 @@ retains three dragon/statue strips, with all 98 in the offline review.
 The [Seridia pass](seridia-portraits.md) covers 146 human strips and preserves
 18 spectral/dragon strips, with all 164 in the offline review.
 Hayden's [first overworld batch](hayden-world.md) adds six Spring idle/walk strips
-alongside his 133 portraits. The other portrait batches above still use their
+alongside his 133 portraits. Ryis's [first overworld batch](ryis-world.md) adds
+six Spring idle/walk strips alongside his 109 portraits.
+The other portrait batches above still use their
 original overworld sprites. The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
 Adeline's [complete Spring overworld pass](overworld-special-actions.md)
@@ -280,10 +282,10 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package, including Hayden's six Spring idle/walk strips,
-is installed in `tmp/hayden-world-playtest`. It has no preview
+The latest combined package, including Ryis's six Spring idle/walk strips,
+is installed in `tmp/ryis-world-playtest`. It has no preview
 helper and does not replace the desktop launcher. Use the
-[complete offline review](../../generated/hayden-world-preview/blue-review/index.html)
+[complete offline review](../../generated/ryis-world-preview/blue-review/index.html)
 to inspect all 15 source frames and the five native West mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
