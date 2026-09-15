@@ -1,5 +1,5 @@
 {
-  "description": "Ryis portraits and Spring idle/walk/blink/sit/eat/drink skin in Debug Blue; hair, eyes, gloves, clothing, food and cups stay original.",
+  "description": "Ryis portraits and Spring idle/walk/blink/sit/eat/drink/action/sleep/kiss skin in Debug Blue; hair, eyes, gloves, clothing, food and cups stay original.",
   "profile": "../profiles/ryis-world-trial.json",
   "rgba_map": {
     "#B06C57": "#9DB9D4",

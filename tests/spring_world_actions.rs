@@ -10,14 +10,21 @@ fn spring_actions_keep_each_characters_controls_and_directional_timing() {
         let modified = temp.path().join("modified");
         fs::create_dir(&original).unwrap();
         fs::create_dir(&modified).unwrap();
-        for action in ["blink", "sit", "eat", "drink"] {
+        for action in ["blink", "sit", "eat", "drink", "action", "sleep", "kiss"] {
             for direction in ["north", "south", "east"] {
-                if action == "blink" && direction == "north" {
+                if (action == "blink" && direction == "north")
+                    || (matches!(action, "sleep" | "kiss") && direction != "east")
+                {
                     continue;
                 }
                 let (frames, timing) = match (action, direction) {
                     ("blink", _) => (3, "frame_len=3\nduration=[0.075,0.125,0.075]\n"),
-                    ("sit", _) => (1, ""),
+                    ("sit" | "sleep", _) => (1, ""),
+                    ("action", _) => (
+                        7,
+                        "frame_len=7\nduration=[0.1,0.25,0.25,0.25,0.25,0.1,0.4]\n",
+                    ),
+                    ("kiss", _) => (4, "frame_len=4\nduration=[0.15,0.15,0.8,0.15]\n"),
                     ("eat", "east" | "south") => {
                         (5, "frame_len=5\nduration=[0.125,0.15,0.175,0.125,0.6]\n")
                     }
@@ -67,7 +74,7 @@ fn spring_actions_keep_each_characters_controls_and_directional_timing() {
         assert_eq!(table.as_array().unwrap().len(), 1);
         assert_eq!(table[0][0], character);
         assert_eq!(table[0][2], hotkey);
-        assert_eq!(table[0][4].as_array().unwrap().len(), 11);
+        assert_eq!(table[0][4].as_array().unwrap().len(), 16);
         let mut frames = 0;
         for row in table[0][4].as_array().unwrap() {
             let name = row[0].as_str().unwrap();
@@ -96,6 +103,6 @@ fn spring_actions_keep_each_characters_controls_and_directional_timing() {
                 fs::read(output.join(format!("animations/LightningAndSun/{target}.png"))).unwrap()
             );
         }
-        assert_eq!(frames, 31);
+        assert_eq!(frames, 57);
     }
 }

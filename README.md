@@ -187,8 +187,8 @@ Seridia's 146 human portraits recolor, including her Flashback Priestess
 artwork. Her 17 spectral Priestess portraits and dragon portrait keep their
 original effects and colors.
 The combined trial also includes Hayden's, Ryis's and Celine's Spring idle,
-walking, blinking, sitting, eating and drinking sprites. F8 switches Hayden,
-F10 switches Ryis and Insert switches Celine,
+walking, blinking, sitting, eating, drinking, general-action, sleeping and kissing
+sprites. F8 switches Hayden, F10 switches Ryis and Insert switches Celine,
 keeping each character's portraits and these sprites together in all four
 directions. Celine's gardening outfit remains original in the overworld.
 Their other actions/outfits and the other portrait characters' overworld sprites

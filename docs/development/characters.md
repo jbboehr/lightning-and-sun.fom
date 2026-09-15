@@ -1,13 +1,13 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 282 reviewed animations, Hayden's 150,
-Ryis's 126, Reina's 103, Juniper's 132, Celine's 200, March's 181, Balor's 110,
+The combined trial includes Adeline's 282 reviewed animations, Hayden's 155,
+Ryis's 131, Reina's 103, Juniper's 132, Celine's 205, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 9,632 variant strips from 2,408 sources. Caldarus's three
+variants per source give 9,692 variant strips from 2,423 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -51,8 +51,10 @@ Celine's [first overworld batch](celine-world.md) adds six normal Spring
 idle/walk strips alongside her 183 portraits; garden outfits remain original
 in the overworld. Their [first parallel expansion](spring-world-actions.md) adds
 eleven Spring blink, sit, eat and drink strips each, for 33 new strips and 93
-source frames; the user accepted the offline review. The other portrait batches
-above still use their original overworld sprites. The small embarrassed-expression art
+source frames; the user accepted the offline review. The subsequent
+[general-action, sleep and kiss expansion](spring-world-standard.md) adds five
+strips per character, or 78 source frames; the user accepted the offline review. The other
+portrait batches above still use their original overworld sprites. The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
 Adeline's [complete Spring overworld pass](overworld-special-actions.md)
 covers all 42 standard and special-animation strips alongside her 126 portraits.
@@ -288,10 +290,10 @@ in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
 The latest combined package, including Hayden's, Ryis's and Celine's Spring
-blink, sit, eat and drink strips, is installed in `tmp/spring-actions-playtest`.
+general-action, sleep and kiss strips, is installed in `tmp/spring-standard-playtest`.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline reviews](../../generated/spring-actions-preview/index.html)
-to inspect all 93 new source frames and the 36 native West mirrors.
+[complete offline reviews](../../generated/spring-standard-preview/index.html)
+to inspect all 78 new source frames and the 36 native West mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,
