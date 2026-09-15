@@ -88,6 +88,9 @@ The portrait-only Hayden set remains available. See
 It also selects `ryis-world-trial.json`: all 109 Ryis portraits plus six Spring
 idle/walk strips, sharing his F10 control. The portrait-only Ryis set remains
 available. See [Ryis's first overworld batch](development/ryis-world.md).
+The `celine-world-trial.json` set adds six normal Spring idle/walk strips to her
+183 portraits, sharing the Insert control. Her portrait-only set remains
+available. See [Celine's first overworld batch](development/celine-world.md).
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;

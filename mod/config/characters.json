@@ -989,7 +989,13 @@
       "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_think_special.png": "PortraitsWinter",
       "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_ugh.png": "PortraitsWinter",
       "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_very_happy.png": "PortraitsWinter",
-      "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_wink.png": "PortraitsWinter"
+      "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_wink.png": "PortraitsWinter",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_idle_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_idle_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_idle_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_walk_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_walk_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_walk_south.png": "Default"
     },
     "hotkey": "INSERT",
     "id": "celine",
