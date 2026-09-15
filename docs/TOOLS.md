@@ -81,16 +81,19 @@ Other overworld outfits remain original. See
 [complete seasonal coverage](development/overworld-seasonal-special.md) for
 verification details.
 The combined `palettes/sets/characters-trial.json` trial also selects
-`hayden-world-trial.json`: all 133 Hayden portraits plus six Spring idle/walk
-strips. F8 switches both renderers together; West mirrors the East sources.
+`hayden-world-trial.json`: all 133 Hayden portraits plus 17 Spring idle, walk,
+blink, sit, eat and drink strips. F8 switches both renderers together; West
+mirrors the East sources.
 The portrait-only Hayden set remains available. See
 [Hayden's first overworld batch](development/hayden-world.md) for masks and review.
-It also selects `ryis-world-trial.json`: all 109 Ryis portraits plus six Spring
-idle/walk strips, sharing his F10 control. The portrait-only Ryis set remains
+It also selects `ryis-world-trial.json`: all 109 Ryis portraits plus the same 17
+Spring animation strips, sharing his F10 control. The portrait-only Ryis set remains
 available. See [Ryis's first overworld batch](development/ryis-world.md).
-The `celine-world-trial.json` set adds six normal Spring idle/walk strips to her
+The `celine-world-trial.json` set adds those 17 normal Spring strips to her
 183 portraits, sharing the Insert control. Her portrait-only set remains
 available. See [Celine's first overworld batch](development/celine-world.md).
+The [Spring action expansion](development/spring-world-actions.md) records the
+eleven new strips for each character and links their complete offline reviews.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;

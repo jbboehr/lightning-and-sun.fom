@@ -21,7 +21,7 @@ fn hayden_world_extends_the_reviewed_portraits_and_preserves_their_choices() {
     let old = read(root.join("palettes/profiles/hayden-portraits.json"));
     let world = read(root.join("palettes/profiles/hayden-world-trial.json"));
     assert_eq!(old["regions"].as_array().unwrap().len(), 133);
-    assert_eq!(world["regions"].as_array().unwrap().len(), 139);
+    assert_eq!(world["regions"].as_array().unwrap().len(), 150);
     assert_eq!(
         &world["regions"].as_array().unwrap()[..133],
         old["regions"].as_array().unwrap()
@@ -40,7 +40,7 @@ fn hayden_world_extends_the_reviewed_portraits_and_preserves_their_choices() {
             expected.push(format!("assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_{cycle}_{direction}.png"));
         }
     }
-    let actual: Vec<_> = world["regions"].as_array().unwrap()[133..]
+    let actual: Vec<_> = world["regions"].as_array().unwrap()[133..139]
         .iter()
         .map(|r| r["asset"].as_str().unwrap().to_owned())
         .collect();
@@ -146,10 +146,10 @@ fn hayden_world_package_keeps_his_control_and_native_geometry() {
 }
 
 #[test]
-#[ignore = "requires the 139 local animations in extracted/hayden-world-study"]
+#[ignore = "requires the 150 local animations in extracted/hayden-actions-study"]
 fn hayden_world_masks_cover_skin_without_crossing_into_shirt_shadows() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/hayden-world-study");
+    let original = root.join("extracted/hayden-actions-study");
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let set = std::env::var_os("FOM_HAYDEN_WORLD_PRESETS")

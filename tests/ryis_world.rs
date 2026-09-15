@@ -21,7 +21,7 @@ fn ryis_world_extends_the_reviewed_portraits_and_preserves_their_choices() {
     let old = read(root.join("palettes/profiles/ryis-portraits.json"));
     let world = read(root.join("palettes/profiles/ryis-world-trial.json"));
     assert_eq!(old["regions"].as_array().unwrap().len(), 109);
-    assert_eq!(world["regions"].as_array().unwrap().len(), 115);
+    assert_eq!(world["regions"].as_array().unwrap().len(), 126);
     assert_eq!(
         &world["regions"].as_array().unwrap()[..109],
         old["regions"].as_array().unwrap()
@@ -36,7 +36,7 @@ fn ryis_world_extends_the_reviewed_portraits_and_preserves_their_choices() {
             expected.push(format!("assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_{cycle}_{direction}.png"));
         }
     }
-    let actual: Vec<_> = world["regions"].as_array().unwrap()[109..]
+    let actual: Vec<_> = world["regions"].as_array().unwrap()[109..115]
         .iter()
         .map(|r| r["asset"].as_str().unwrap().to_owned())
         .collect();
@@ -143,10 +143,10 @@ fn ryis_world_package_keeps_his_control_and_native_geometry() {
 }
 
 #[test]
-#[ignore = "requires the 115 local animations in extracted/ryis-world-study"]
+#[ignore = "requires the 126 local animations in extracted/ryis-actions-study"]
 fn ryis_world_covers_skin_and_fingers_but_preserves_hair_and_gloves() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/ryis-world-study");
+    let original = root.join("extracted/ryis-actions-study");
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let set = std::env::var_os("FOM_RYIS_WORLD_PRESETS")
