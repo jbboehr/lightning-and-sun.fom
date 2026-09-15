@@ -2,36 +2,42 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis normal Spring corpus in extracted/ryis-reactions-study"]
-fn ryis_standard_cover_extended_hands_and_preserve_hair_gloves_and_closed_features() {
+#[ignore = "requires the local Ryis Spring reaction and reading corpus in extracted/ryis-reactions-study"]
+fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shocked_mouth() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/ryis-reactions-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/ryis-world-trial.json"));
-    let cases: [(&str, &[usize]); 5] = [
-        ("action_north", &[28, 27, 27, 27, 27, 28, 32]),
-        ("action_south", &[57, 56, 57, 56, 57, 57, 58]),
-        ("action_east", &[50, 51, 50, 51, 50, 50, 51]),
-        ("sleep_east", &[50]),
-        ("kiss_east", &[49, 52, 57, 56]),
+    let cases: [(&str, &[usize]); 6] = [
+        ("shocked_start", &[66]),
+        ("shocked_loop", &[64]),
+        ("shocked_end", &[66]),
+        ("read_sit_start", &[54, 48, 50]),
+        ("read_sit_loop", &[44, 56, 44, 56]),
+        ("read_sit_end", &[54, 44, 54]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    // The reviewed action corpus uses these shades only on skin, including
-    // disconnected fingers. The 5E423B rear head area is short hair.
+    // These shades occur only on reviewed skin in these six pinned strips.
+    // The blue book and cream pages use separate colors, despite resembling
+    // the Debug Blue skin target. Detached fingers still need their own seeds.
     let skin = [0xB06C57, 0x854D3C, 0x63342A, 0x491F1B];
     // Frame numbers are zero-based; x coordinates here are within the frame.
     let landmarks = [
-        ("action_north", 0, 39, 35, 0x5E423B, false),
-        ("action_north", 0, 33, 43, 0xECC45E, false),
-        ("action_east", 1, 48, 43, 0xECC45E, false),
-        ("action_east", 1, 48, 44, 0x63342A, true),
-        ("sleep_east", 0, 43, 38, 0x854D3C, true),
-        ("sleep_east", 0, 44, 38, 0xDA904D, false),
-        ("sleep_east", 0, 42, 40, 0xB06C57, true),
-        ("kiss_east", 2, 47, 37, 0x000000, false),
-        ("kiss_east", 2, 46, 37, 0x854D3C, true),
+        ("shocked_loop", 0, 39, 36, 0x410808, false),
+        ("shocked_loop", 0, 39, 37, 0xC83E37, false),
+        ("shocked_loop", 0, 34, 35, 0xB06C57, true),
+        ("shocked_loop", 0, 33, 35, 0xECC45E, false),
+        ("shocked_loop", 0, 35, 38, 0x491F1B, true),
+        ("read_sit_start", 1, 39, 43, 0xF6E4D7, false),
+        ("read_sit_start", 1, 34, 46, 0xECC45E, false),
+        ("read_sit_start", 1, 35, 47, 0x491F1B, true),
+        ("read_sit_start", 2, 40, 45, 0xC9AF9C, false),
+        ("read_sit_start", 2, 35, 47, 0x491F1B, true),
+        ("read_sit_loop", 0, 34, 45, 0x699CC1, false),
+        ("read_sit_loop", 0, 35, 46, 0x4E7E9F, false),
+        ("read_sit_loop", 0, 36, 47, 0x2E4D69, false),
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -65,8 +71,13 @@ fn ryis_standard_cover_extended_hands_and_preserve_hair_gloves_and_closed_featur
         });
         let mut changed = 0;
         for (name, counts) in cases {
+            let special = if name.starts_with("read_sit_") {
+                "specialanimation_"
+            } else {
+                ""
+            };
             let asset = format!(
-                "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_{name}.png"
+                "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_{special}spring_{name}_south.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -102,6 +113,6 @@ fn ryis_standard_cover_extended_hands_and_preserve_hair_gloves_and_closed_featur
                 }
             }
         }
-        assert_eq!(changed, 1211);
+        assert_eq!(changed, 700);
     }
 }

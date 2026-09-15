@@ -6929,6 +6929,298 @@
           47
         ]
       ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_shocked_start_south.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "07f30846da2f8421146b5219c33b9dccb00bed8cdb34552f69fa30d43abf7826",
+      "seeds": [
+        [
+          38,
+          32
+        ],
+        [
+          33,
+          45
+        ],
+        [
+          44,
+          45
+        ],
+        [
+          33,
+          47
+        ],
+        [
+          45,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_shocked_loop_south.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "15629815aeff5a165f181a1bd59e7eedb8d05c1f993cda656317b20fe8b2ffd9",
+      "seeds": [
+        [
+          38,
+          29
+        ],
+        [
+          32,
+          33
+        ],
+        [
+          35,
+          33
+        ],
+        [
+          44,
+          33
+        ],
+        [
+          46,
+          33
+        ],
+        [
+          34,
+          35
+        ],
+        [
+          45,
+          35
+        ],
+        [
+          33,
+          36
+        ],
+        [
+          46,
+          36
+        ],
+        [
+          35,
+          38
+        ],
+        [
+          39,
+          38
+        ],
+        [
+          44,
+          38
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_shocked_end_south.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "07f30846da2f8421146b5219c33b9dccb00bed8cdb34552f69fa30d43abf7826",
+      "seeds": [
+        [
+          38,
+          32
+        ],
+        [
+          33,
+          45
+        ],
+        [
+          44,
+          45
+        ],
+        [
+          33,
+          47
+        ],
+        [
+          45,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_read_sit_start_south.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "04cc392062b2d1cbb23a44dfd824117cd4fc204ef4bbbbf3c45293fc6e23aa0c",
+      "seeds": [
+        [
+          38,
+          32
+        ],
+        [
+          118,
+          33
+        ],
+        [
+          198,
+          33
+        ],
+        [
+          195,
+          36
+        ],
+        [
+          204,
+          36
+        ],
+        [
+          34,
+          45
+        ],
+        [
+          44,
+          45
+        ],
+        [
+          114,
+          45
+        ],
+        [
+          124,
+          45
+        ],
+        [
+          34,
+          47
+        ],
+        [
+          44,
+          47
+        ],
+        [
+          115,
+          47
+        ],
+        [
+          124,
+          47
+        ],
+        [
+          195,
+          47
+        ],
+        [
+          204,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_read_sit_loop_south.png",
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "91bbcef7e4b9a1d654788f0f91d33b96aa6b7e907451e717d387ff822f943c9b",
+      "seeds": [
+        [
+          39,
+          32
+        ],
+        [
+          199,
+          32
+        ],
+        [
+          118,
+          33
+        ],
+        [
+          278,
+          33
+        ],
+        [
+          44,
+          35
+        ],
+        [
+          195,
+          35
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_read_sit_end_south.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "ec29631f4a0944e66b2081134d70a62b283fcb67cbfbf47f9103b64401118aa9",
+      "seeds": [
+        [
+          198,
+          32
+        ],
+        [
+          38,
+          33
+        ],
+        [
+          118,
+          33
+        ],
+        [
+          115,
+          36
+        ],
+        [
+          124,
+          36
+        ],
+        [
+          114,
+          45
+        ],
+        [
+          124,
+          45
+        ],
+        [
+          194,
+          45
+        ],
+        [
+          204,
+          45
+        ],
+        [
+          35,
+          47
+        ],
+        [
+          44,
+          47
+        ],
+        [
+          115,
+          47
+        ],
+        [
+          124,
+          47
+        ],
+        [
+          194,
+          47
+        ],
+        [
+          204,
+          47
+        ]
+      ]
     }
   ],
   "source_colors": [

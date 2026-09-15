@@ -1,0 +1,105 @@
+use image::{Rgba, RgbaImage};
+use serde_json::Value;
+use std::{fs, process::Command};
+
+#[test]
+fn spring_reactions_package_all_phases_with_native_timing_and_controls() {
+    for (character, hotkey) in [("hayden", "F8"), ("ryis", "F10"), ("celine", "INSERT")] {
+        let temp = tempfile::tempdir().unwrap();
+        let original = temp.path().join("original");
+        let modified = temp.path().join("modified");
+        fs::create_dir(&original).unwrap();
+        fs::create_dir(&modified).unwrap();
+        let reading = if character == "celine" {
+            "book_sit"
+        } else {
+            "read_sit"
+        };
+        for cycle in ["shocked", reading] {
+            for phase in ["start", "loop", "end"] {
+                let (frames, timing) = match (cycle, phase) {
+                    ("shocked", _) => (1, ""),
+                    (_, "loop") => (4, "frame_len=4\nduration=[3.0,0.1,3.0,0.1]\n"),
+                    _ => (3, "frame_len=3\nduration=0.1\n"),
+                };
+                let prefix = if cycle == "shocked" {
+                    ""
+                } else {
+                    "specialanimation_"
+                };
+                let stem = format!("spr_npc_{character}_{prefix}spring_{cycle}_{phase}_south");
+                let meta = format!(
+                    "[meta_properties]\nid='synthetic'\nasset_kind='Animation'\n[asset_properties]\nframe_size=[2,3]\n{timing}atlas='Default'\n[asset_properties.offset]\nhorizontal='Middle'\nvertical=54.0\n"
+                );
+                for (directory, color) in [
+                    (&original, [10, 20, 30, 255]),
+                    (&modified, [40, 50, 60, 255]),
+                ] {
+                    RgbaImage::from_pixel(frames * 2, 3, Rgba(color))
+                        .save(directory.join(format!("{stem}.png")))
+                        .unwrap();
+                    fs::write(directory.join(format!("{stem}.meta.toml")), &meta).unwrap();
+                }
+            }
+        }
+        let output = temp.path().join("package");
+        let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
+            .args(["package-toggle", "--original"])
+            .arg(&original)
+            .arg("--modified")
+            .arg(&modified)
+            .arg("--output")
+            .arg(&output)
+            .output()
+            .unwrap();
+        assert!(
+            result.status.success(),
+            "{character}: {}",
+            String::from_utf8_lossy(&result.stderr)
+        );
+        let script = fs::read_to_string(output.join("gml/palette_assets.gml")).unwrap();
+        let table: Value = serde_json::from_str(
+            script
+                .split_once("return ")
+                .unwrap()
+                .1
+                .split_once("; }")
+                .unwrap()
+                .0,
+        )
+        .unwrap();
+        assert_eq!(table.as_array().unwrap().len(), 1);
+        assert_eq!(table[0][0], character);
+        assert_eq!(table[0][2], hotkey);
+        assert_eq!(table[0][4].as_array().unwrap().len(), 6);
+        let mut frames = 0;
+        for row in table[0][4].as_array().unwrap() {
+            let stem = row[0].as_str().unwrap();
+            let target = row[1].as_str().unwrap();
+            let before: toml::Value = toml::from_str(
+                &fs::read_to_string(original.join(format!("{stem}.meta.toml"))).unwrap(),
+            )
+            .unwrap();
+            let after: toml::Value = toml::from_str(
+                &fs::read_to_string(
+                    output.join(format!("animations/LightningAndSun/{target}.meta.toml")),
+                )
+                .unwrap(),
+            )
+            .unwrap();
+            assert_eq!(
+                before["asset_properties"], after["asset_properties"],
+                "{stem}"
+            );
+            frames += before["asset_properties"]
+                .get("frame_len")
+                .and_then(toml::Value::as_integer)
+                .unwrap_or(1);
+            assert_eq!(
+                fs::read(modified.join(format!("{stem}.png"))).unwrap(),
+                fs::read(output.join(format!("animations/LightningAndSun/{target}.png"))).unwrap()
+            );
+        }
+        assert_eq!(frames, 13);
+    }
+}

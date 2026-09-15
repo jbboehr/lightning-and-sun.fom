@@ -3,10 +3,10 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires the 161 local animations in extracted/hayden-reactions-study"]
-fn hayden_standard_masks_preserve_shirt_folds_and_cover_kissing_cheek_skin() {
+fn hayden_reaction_masks_preserve_books_and_shirt_edges_around_visible_skin() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/hayden-reactions-study");
-    let set = std::env::var_os("FOM_HAYDEN_STANDARD_PRESETS")
+    let set = std::env::var_os("FOM_HAYDEN_REACTIONS_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/hayden-world-trial.json"));
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
@@ -30,35 +30,38 @@ fn hayden_standard_masks_preserve_shirt_folds_and_cover_kissing_cheek_skin() {
     // Literal source landmarks distinguish hands/forearms from adjacent same-ramp
     // sleeve and torso folds. Frames are zero-based, coordinates are frame-local.
     let landmarks = [
-        ("action_east", 0, 36, 42, 0x815A2E, true),
-        ("action_east", 0, 40, 43, 0xAB7E3F, false),
-        ("action_east", 1, 42, 40, 0x815A2E, true),
-        ("action_east", 1, 39, 41, 0x815A2E, false),
-        ("action_east", 2, 41, 41, 0x815A2E, true),
-        ("action_east", 2, 39, 43, 0x815A2E, false),
-        ("action_north", 0, 32, 40, 0x815A2E, true),
-        ("action_north", 0, 35, 40, 0xAB7E3F, false),
-        ("action_north", 1, 45, 38, 0xAB7E3F, false),
-        ("action_north", 2, 46, 39, 0x815A2E, true),
-        ("action_north", 2, 44, 39, 0xAB7E3F, false),
-        ("action_south", 1, 36, 43, 0x815A2E, true),
-        ("action_south", 1, 37, 42, 0x815A2E, false),
-        ("action_south", 2, 36, 41, 0x815A2E, true),
-        ("action_south", 2, 37, 40, 0xAB7E3F, false),
-        ("kiss_east", 0, 36, 45, 0x815A2E, true),
-        ("kiss_east", 0, 37, 43, 0x815A2E, false),
-        ("kiss_east", 2, 41, 35, 0xE8B271, true),
-        ("kiss_east", 2, 41, 38, 0xE7B172, true),
-        ("kiss_east", 2, 40, 41, 0xAB7E3F, false),
-        ("sleep_east", 0, 38, 39, 0x815A2E, true),
-        ("sleep_east", 0, 38, 41, 0x523C26, false),
+        ("read_sit_start_south", 1, 35, 41, 0x815A2E, false),
+        ("read_sit_start_south", 1, 34, 43, 0x523C26, true),
+        ("read_sit_start_south", 1, 37, 40, 0xCC7F21, false),
+        ("read_sit_start_south", 1, 39, 40, 0xF6E4D7, false),
+        ("read_sit_start_south", 1, 39, 47, 0xFCA804, false),
+        ("read_sit_loop_south", 0, 37, 38, 0xE7B172, true),
+        ("read_sit_loop_south", 0, 45, 38, 0xAB7E3F, false),
+        ("read_sit_loop_south", 0, 39, 43, 0xC9AF9C, false),
+        ("read_sit_loop_south", 0, 44, 44, 0x9A5F1B, false),
+        ("read_sit_loop_south", 2, 42, 38, 0xE7B172, true),
+        ("read_sit_loop_south", 2, 44, 38, 0x815A2E, false),
+        ("read_sit_end_south", 0, 33, 44, 0x523C26, true),
+        ("read_sit_end_south", 1, 44, 41, 0x815A2E, false),
+        ("shocked_start_south", 0, 34, 43, 0x815A2E, true),
+        ("shocked_start_south", 0, 36, 43, 0x815A2E, false),
+        ("shocked_loop_south", 0, 34, 35, 0x523C26, true),
+        ("shocked_loop_south", 0, 35, 35, 0x815A2E, false),
+        ("shocked_loop_south", 0, 45, 35, 0x523C26, true),
+        ("shocked_loop_south", 0, 44, 35, 0x815A2E, false),
+        ("shocked_loop_south", 0, 37, 33, 0xE8B271, true),
+        ("shocked_loop_south", 0, 42, 33, 0xE8B271, true),
+        ("shocked_loop_south", 0, 39, 35, 0x9E2626, false),
+        ("shocked_loop_south", 0, 39, 36, 0x3F332D, false),
+        ("shocked_end_south", 0, 34, 42, 0x523C26, true),
     ];
     let cases = [
-        ("action_east", 7, 267),
-        ("action_north", 7, 191),
-        ("action_south", 7, 346),
-        ("kiss_east", 4, 166),
-        ("sleep_east", 1, 45),
+        ("read_sit_start_south", 3, 119),
+        ("read_sit_loop_south", 4, 88),
+        ("read_sit_end_south", 3, 119),
+        ("shocked_start_south", 1, 62),
+        ("shocked_loop_south", 1, 60),
+        ("shocked_end_south", 1, 62),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
@@ -68,14 +71,19 @@ fn hayden_standard_masks_preserve_shirt_folds_and_cover_kissing_cheek_skin() {
             .iter()
             .map(|c| u32::from_str_radix(&c.as_str().unwrap()[1..7], 16).unwrap())
             .collect();
-        // The existing portrait highlight occurs once in the kissing cheek.
+        // The shocked-loop cheeks reuse two existing portrait highlight pixels.
         let portrait_highlight =
             u32::from_str_radix(&preset["colors"][0].as_str().unwrap()[1..7], 16).unwrap();
         target.push(portrait_highlight);
         let mut mask = Vec::new();
         for (case, frames, expected_changed) in cases {
+            let family = if case.starts_with("read_sit_") {
+                "specialanimation_spring"
+            } else {
+                "spring"
+            };
             let asset = format!(
-                "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_{case}.png"
+                "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_{family}_{case}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let variant = output.join("variants").join(id);
@@ -96,7 +104,7 @@ fn hayden_standard_masks_preserve_shirt_folds_and_cover_kissing_cheek_skin() {
                     let index = source
                         .iter()
                         .position(|c| rgba(*c) == p.0)
-                        .expect("hair, clothing, mouth or another non-skin color changed");
+                        .expect("hair, clothing, book, mouth or another non-skin color changed");
                     assert_eq!(q.0, rgba(target[index]));
                     per_frame[x as usize / 80] += 1;
                 }

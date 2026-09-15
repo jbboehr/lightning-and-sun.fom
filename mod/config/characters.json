@@ -447,7 +447,13 @@
       "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_action_north.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_action_south.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_kiss_east.png": "Default",
-      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_sleep_east.png": "Default"
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_sleep_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_read_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_read_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_read_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_shocked_end_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_shocked_loop_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_shocked_start_south.png": "Default"
     }
   },
   {
@@ -585,7 +591,13 @@
       "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_action_north.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_action_south.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_kiss_east.png": "Default",
-      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_sleep_east.png": "Default"
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_sleep_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_read_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_read_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_read_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_shocked_end_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_shocked_loop_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_shocked_start_south.png": "Default"
     }
   },
   {
@@ -1043,7 +1055,13 @@
       "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_action_north.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_action_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_kiss_east.png": "Default",
-      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_sleep_east.png": "Default"
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_sleep_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_book_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_book_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_book_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_shocked_end_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_shocked_loop_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_shocked_start_south.png": "Default"
     },
     "hotkey": "INSERT",
     "id": "celine",

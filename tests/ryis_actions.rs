@@ -2,10 +2,10 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis action corpus in extracted/ryis-standard-study"]
+#[ignore = "requires the local Ryis action corpus in extracted/ryis-reactions-study"]
 fn ryis_actions_cover_raised_fingers_and_preserve_hair_gloves_cups_and_mouth() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/ryis-standard-study");
+    let original = root.join("extracted/ryis-reactions-study");
     let profile_path = std::env::var_os("FOM_RYIS_ACTIONS_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/ryis-world-trial.json"));
