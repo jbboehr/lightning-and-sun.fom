@@ -80,6 +80,11 @@ Other overworld outfits remain original. See
 [complete Spring coverage](development/overworld-special-actions.md) and
 [complete seasonal coverage](development/overworld-seasonal-special.md) for
 verification details.
+The combined `palettes/sets/characters-trial.json` trial also selects
+`hayden-world-trial.json`: all 133 Hayden portraits plus six Spring idle/walk
+strips. F8 switches both renderers together; West mirrors the East sources.
+The portrait-only Hayden set remains available. See
+[Hayden's first overworld batch](development/hayden-world.md) for masks and review.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;

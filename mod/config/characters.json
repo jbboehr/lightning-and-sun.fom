@@ -425,7 +425,13 @@
       "assets/animations/NPCs/Hayden/Portraits/Winter/spr_portrait_hayden_winter_ugh.png": "PortraitsWinter",
       "assets/animations/NPCs/Hayden/Portraits/Winter/spr_portrait_hayden_winter_wink.png": "PortraitsWinter",
       "assets/animations/NPCs/Hayden/Portraits/Winter/spr_portrait_hayden_winter_wink_arm_down.png": "PortraitsWinter",
-      "assets/animations/NPCs/Hayden/Portraits/Winter/spr_portrait_hayden_winter_wink_fist.png": "PortraitsWinter"
+      "assets/animations/NPCs/Hayden/Portraits/Winter/spr_portrait_hayden_winter_wink_fist.png": "PortraitsWinter",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_idle_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_idle_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_idle_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_walk_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_walk_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_walk_south.png": "Default"
     }
   },
   {

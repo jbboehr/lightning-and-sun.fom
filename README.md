@@ -186,8 +186,11 @@ already matches Seridia, so his alternatives include Adeline instead.
 Seridia's 146 human portraits recolor, including her Flashback Priestess
 artwork. Her 17 spectral Priestess portraits and dragon portrait keep their
 original effects and colors.
-Their overworld sprites remain original. Hayden's embarrassed expression and
-possible Reina/Juniper mouth details await a later art pass. To try one character
+The combined trial also includes Hayden's Spring idle and walking sprites.
+F8 switches his portraits and these sprites together in all four directions.
+Other Hayden actions/outfits and the other portrait characters' overworld sprites
+remain original. Hayden's embarrassed expression and possible Reina/Juniper mouth
+details await a later art pass. To try one character
 alone, use its set instead; for example,
 `--presets palettes/sets/landen-portraits-trial.json` or
 `--presets palettes/sets/nora-portraits-trial.json`.
