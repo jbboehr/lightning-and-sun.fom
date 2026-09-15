@@ -81,7 +81,7 @@ Other overworld outfits remain original. See
 [complete seasonal coverage](development/overworld-seasonal-special.md) for
 verification details.
 The combined `palettes/sets/characters-trial.json` trial also selects
-`hayden-world-trial.json`: all 133 Hayden portraits plus 35 Spring idle, walk,
+`hayden-world-trial.json`: all 133 Hayden portraits plus 35 normal Spring idle, walk,
 blink, sit, eat, drink, general-action, sleep, kiss, shocked, seated-reading
 and farm-action strips. F8 switches both renderers together; West mirrors the
 East sources where available. Shocked reactions and seated reading face South only.
@@ -102,7 +102,10 @@ The [shocked and seated-reading expansion](development/spring-world-reactions.md
 adds all six start/loop/end strips per character.
 The [remaining Spring special actions](development/spring-world-special.md)
 add seven Hayden strips, eight Ryis strips and eight normal Celine strips.
-Hayden's riding and Celine's gardening sprites remain original.
+The [outfit idle/walk pilots](development/world-outfit-pilots.md) add six strips
+each for Hayden riding, Ryis in Summer and Celine in Spring gardening clothes.
+Their totals are now 174, 151 and 225 sources respectively. Other riding,
+gardening and Summer actions remain original.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;

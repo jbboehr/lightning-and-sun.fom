@@ -2,8 +2,8 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis Spring reaction and reading corpus in extracted/ryis-outfit-pilot-study"]
-fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shocked_mouth() {
+#[ignore = "requires the local Ryis Summer idle/walk corpus in extracted/ryis-outfit-pilot-study"]
+fn ryis_summer_pilot_covers_exposed_skin_but_preserves_outfit_and_short_hair() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/ryis-outfit-pilot-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
@@ -11,33 +11,37 @@ fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shock
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/ryis-world-trial.json"));
     let cases: [(&str, &[usize]); 6] = [
-        ("shocked_start", &[66]),
-        ("shocked_loop", &[64]),
-        ("shocked_end", &[66]),
-        ("read_sit_start", &[54, 48, 50]),
-        ("read_sit_loop", &[44, 56, 44, 56]),
-        ("read_sit_end", &[54, 44, 54]),
+        ("idle_east", &[60]),
+        ("idle_north", &[42]),
+        ("idle_south", &[69]),
+        ("walk_east", &[60, 61, 60, 58]),
+        ("walk_north", &[42, 38, 42, 38]),
+        ("walk_south", &[69, 63, 69, 63]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    // These shades occur only on reviewed skin in these six pinned strips.
-    // The blue book and cream pages use separate colors, despite resembling
-    // the Debug Blue skin target. Detached fingers still need their own seeds.
+    // Summer's exposed lower legs use the same four skin shades as the face
+    // and detached fingers. Dark gloves, pink footwear and the broad short
+    // hair patch at the back of the head use different colors and stay original.
     let skin = [0xB06C57, 0x854D3C, 0x63342A, 0x491F1B];
     // Frame numbers are zero-based; x coordinates here are within the frame.
     let landmarks = [
-        ("shocked_loop", 0, 39, 36, 0x410808, false),
-        ("shocked_loop", 0, 39, 37, 0xC83E37, false),
-        ("shocked_loop", 0, 34, 35, 0xB06C57, true),
-        ("shocked_loop", 0, 33, 35, 0xECC45E, false),
-        ("shocked_loop", 0, 35, 38, 0x491F1B, true),
-        ("read_sit_start", 1, 39, 43, 0xF6E4D7, false),
-        ("read_sit_start", 1, 34, 46, 0xECC45E, false),
-        ("read_sit_start", 1, 35, 47, 0x491F1B, true),
-        ("read_sit_start", 2, 40, 45, 0xC9AF9C, false),
-        ("read_sit_start", 2, 35, 47, 0x491F1B, true),
-        ("read_sit_loop", 0, 34, 45, 0x699CC1, false),
-        ("read_sit_loop", 0, 35, 46, 0x4E7E9F, false),
-        ("read_sit_loop", 0, 36, 47, 0x2E4D69, false),
+        ("idle_north", 0, 39, 35, 0x5E423B, false), // short rear hair
+        ("idle_north", 0, 35, 35, 0xB06C57, true),  // adjacent ear
+        ("idle_south", 0, 38, 31, 0x63342A, true),  // forehead at hairline
+        ("idle_south", 0, 39, 31, 0x322724, false), // adjacent hair
+        ("idle_south", 0, 34, 44, 0xB06C57, true),  // forearm
+        ("idle_south", 0, 34, 45, 0x353A50, false), // dark glove
+        ("idle_south", 0, 34, 46, 0xB06C57, true),  // detached finger
+        ("idle_south", 0, 39, 41, 0xB06C57, true),  // chest
+        ("idle_south", 0, 39, 42, 0xF5ECE6, false), // undershirt
+        ("idle_south", 0, 37, 50, 0x121221, false), // shorts hem
+        ("idle_south", 0, 37, 51, 0x854D3C, true),  // exposed leg
+        ("idle_south", 0, 37, 52, 0x63342A, true),  // leg shading
+        ("idle_south", 0, 37, 53, 0xFFA799, false), // footwear
+        ("walk_east", 3, 36, 47, 0x491F1B, true),   // moving finger
+        ("walk_east", 3, 35, 47, 0x353A50, false),  // neighboring glove
+        ("walk_north", 1, 41, 52, 0xB06C57, true),  // moving lower leg
+        ("walk_north", 1, 41, 54, 0xFFA799, false), // moving footwear
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -71,13 +75,8 @@ fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shock
         });
         let mut changed = 0;
         for (name, counts) in cases {
-            let special = if name.starts_with("read_sit_") {
-                "specialanimation_"
-            } else {
-                ""
-            };
             let asset = format!(
-                "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_{special}spring_{name}_south.png"
+                "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -113,6 +112,6 @@ fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shock
                 }
             }
         }
-        assert_eq!(changed, 700);
+        assert_eq!(changed, 834);
     }
 }

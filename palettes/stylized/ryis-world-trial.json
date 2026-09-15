@@ -1,5 +1,5 @@
 {
-  "description": "Ryis portraits and reviewed Spring overworld skin in Debug Blue, including hammer, saw, seated closed eyes, brow wiping and writing; hair, eyes, gloves, clothing, tools and props stay original.",
+  "description": "Ryis portraits, reviewed Spring overworld skin and Summer idle/walk in Debug Blue; hair, eyes, gloves, clothing, footwear, tools and props stay original.",
   "profile": "../profiles/ryis-world-trial.json",
   "rgba_map": {
     "#B06C57": "#9DB9D4",

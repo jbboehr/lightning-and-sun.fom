@@ -1,5 +1,5 @@
 {
-  "description": "Celine portraits and all normal Spring world animations in Debug Blue; hair, eyes, outfit, books, tools, boots and mouth interiors stay original. Garden outfits stay original.",
+  "description": "Celine portraits, all normal Spring world animations and the Spring garden idle/walk pilot in Debug Blue; hair, eyes, outfit, books, tools, boots and mouth interiors stay original. Other garden actions stay original.",
   "profile": "../profiles/celine-world-trial.json",
   "rgba_map": {
     "#FCDEBE": "#9DB9D4",
