@@ -2,42 +2,43 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis Spring reaction and reading corpus in extracted/ryis-special-study"]
-fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shocked_mouth() {
+#[ignore = "requires the local Ryis Spring special corpus in extracted/ryis-special-study"]
+fn ryis_special_cover_tool_and_writing_fingers_but_preserve_props_gloves_and_hair() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/ryis-special-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/ryis-world-trial.json"));
-    let cases: [(&str, &[usize]); 6] = [
-        ("shocked_start", &[66]),
-        ("shocked_loop", &[64]),
-        ("shocked_end", &[66]),
-        ("read_sit_start", &[54, 48, 50]),
-        ("read_sit_loop", &[44, 56, 44, 56]),
-        ("read_sit_end", &[54, 44, 54]),
+    let cases: [(&str, &[usize]); 8] = [
+        ("hammer_east", &[50, 48, 48, 46, 48, 50, 50]),
+        ("saw_east", &[46, 49, 51, 49]),
+        ("siteyesclosed_east", &[56]),
+        ("siteyesclosed_south", &[64]),
+        ("wipebrow_south", &[36, 48, 54, 65, 59, 58]),
+        ("write_start_south", &[57, 56]),
+        ("write_loop_south", &[54, 54, 54, 54]),
+        ("write_end_south", &[56, 57]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    // These shades occur only on reviewed skin in these six pinned strips.
-    // The blue book and cream pages use separate colors, despite resembling
-    // the Debug Blue skin target. Detached fingers still need their own seeds.
+    // These four shades occur only on reviewed skin in the eight pinned strips.
+    // Brown tools and writing props use separate colors. Tiny detached fingers
+    // at the brow, hammer and clipboard need their own component seeds.
     let skin = [0xB06C57, 0x854D3C, 0x63342A, 0x491F1B];
     // Frame numbers are zero-based; x coordinates here are within the frame.
     let landmarks = [
-        ("shocked_loop", 0, 39, 36, 0x410808, false),
-        ("shocked_loop", 0, 39, 37, 0xC83E37, false),
-        ("shocked_loop", 0, 34, 35, 0xB06C57, true),
-        ("shocked_loop", 0, 33, 35, 0xECC45E, false),
-        ("shocked_loop", 0, 35, 38, 0x491F1B, true),
-        ("read_sit_start", 1, 39, 43, 0xF6E4D7, false),
-        ("read_sit_start", 1, 34, 46, 0xECC45E, false),
-        ("read_sit_start", 1, 35, 47, 0x491F1B, true),
-        ("read_sit_start", 2, 40, 45, 0xC9AF9C, false),
-        ("read_sit_start", 2, 35, 47, 0x491F1B, true),
-        ("read_sit_loop", 0, 34, 45, 0x699CC1, false),
-        ("read_sit_loop", 0, 35, 46, 0x4E7E9F, false),
-        ("read_sit_loop", 0, 36, 47, 0x2E4D69, false),
+        ("hammer_east", 0, 52, 43, 0x85CED4, false),
+        ("hammer_east", 0, 48, 44, 0x936244, false),
+        ("hammer_east", 3, 50, 44, 0x63342A, true),
+        ("saw_east", 0, 60, 44, 0xC0BDD7, false),
+        ("saw_east", 0, 50, 46, 0x491F1B, true),
+        ("wipebrow_south", 0, 42, 33, 0x63342A, true),
+        ("wipebrow_south", 0, 41, 33, 0xECC45E, false),
+        ("wipebrow_south", 0, 36, 33, 0x322724, false),
+        ("write_loop_south", 0, 36, 43, 0x854D3C, true),
+        ("write_loop_south", 0, 41, 47, 0xB06C57, true),
+        ("write_loop_south", 0, 43, 47, 0xECC45E, false),
+        ("write_loop_south", 0, 44, 43, 0x7D4F3D, false),
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -71,13 +72,8 @@ fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shock
         });
         let mut changed = 0;
         for (name, counts) in cases {
-            let special = if name.starts_with("read_sit_") {
-                "specialanimation_"
-            } else {
-                ""
-            };
             let asset = format!(
-                "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_{special}spring_{name}_south.png"
+                "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -113,6 +109,6 @@ fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shock
                 }
             }
         }
-        assert_eq!(changed, 700);
+        assert_eq!(changed, 1417);
     }
 }

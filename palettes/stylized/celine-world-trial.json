@@ -1,5 +1,5 @@
 {
-  "description": "Celine portraits and normal Spring idle/walk/blink/sit/eat/drink/action/sleep/kiss/shocked/book_sit skin in Debug Blue; hair, eyes, outfit, books, boots and mouth interiors stay original.",
+  "description": "Celine portraits and all normal Spring world animations in Debug Blue; hair, eyes, outfit, books, tools, boots and mouth interiors stay original. Garden outfits stay original.",
   "profile": "../profiles/celine-world-trial.json",
   "rgba_map": {
     "#FCDEBE": "#9DB9D4",

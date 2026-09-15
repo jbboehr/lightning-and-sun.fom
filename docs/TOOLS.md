@@ -81,16 +81,17 @@ Other overworld outfits remain original. See
 [complete seasonal coverage](development/overworld-seasonal-special.md) for
 verification details.
 The combined `palettes/sets/characters-trial.json` trial also selects
-`hayden-world-trial.json`: all 133 Hayden portraits plus 28 Spring idle, walk,
-blink, sit, eat, drink, general-action, sleep, kiss, shocked and seated-reading
-strips. F8 switches both renderers together; West mirrors the East sources where
-available. Shocked reactions and seated reading face South only.
+`hayden-world-trial.json`: all 133 Hayden portraits plus 35 Spring idle, walk,
+blink, sit, eat, drink, general-action, sleep, kiss, shocked, seated-reading
+and farm-action strips. F8 switches both renderers together; West mirrors the
+East sources where available. Shocked reactions and seated reading face South only.
 The portrait-only Hayden set remains available. See
 [Hayden's first overworld batch](development/hayden-world.md) for masks and review.
-It also selects `ryis-world-trial.json`: all 109 Ryis portraits plus the same 28
-Spring animation strips, sharing his F10 control. The portrait-only Ryis set remains
-available. See [Ryis's first overworld batch](development/ryis-world.md).
-The `celine-world-trial.json` set adds those 28 Spring strips to her
+It also selects `ryis-world-trial.json`: all 109 Ryis portraits plus 36
+Spring animation strips, including carpentry and writing, sharing his F10 control.
+The portrait-only Ryis set remains available. See
+[Ryis's first overworld batch](development/ryis-world.md).
+The `celine-world-trial.json` set adds 36 normal Spring strips to her
 183 portraits, sharing the Insert control. Her portrait-only set remains
 available. See [Celine's first overworld batch](development/celine-world.md).
 The [Spring action expansion](development/spring-world-actions.md) records the
@@ -99,6 +100,9 @@ The [general-action, sleep and kiss expansion](development/spring-world-standard
 adds another five strips per character with complete offline reviews.
 The [shocked and seated-reading expansion](development/spring-world-reactions.md)
 adds all six start/loop/end strips per character.
+The [remaining Spring special actions](development/spring-world-special.md)
+add seven Hayden strips, eight Ryis strips and eight normal Celine strips.
+Hayden's riding and Celine's gardening sprites remain original.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;

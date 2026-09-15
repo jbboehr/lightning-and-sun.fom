@@ -453,7 +453,14 @@
       "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_read_sit_start_south.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_shocked_loop_south.png": "Default",
-      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_shocked_start_south.png": "Default"
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_spring_shocked_start_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_hammer_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_harvest_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_pet_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_sigh_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_till_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_water_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_wipebrow_south.png": "Default"
     }
   },
   {
@@ -597,7 +604,15 @@
       "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_read_sit_start_south.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_shocked_loop_south.png": "Default",
-      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_shocked_start_south.png": "Default"
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_spring_shocked_start_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_hammer_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_saw_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_siteyesclosed_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_siteyesclosed_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_wipebrow_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_write_end_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_specialanimation_spring_write_start_south.png": "Default"
     }
   },
   {
@@ -1061,7 +1076,15 @@
       "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_book_sit_start_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_shocked_loop_south.png": "Default",
-      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_shocked_start_south.png": "Default"
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_shocked_start_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_book_stand_end_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_book_stand_loop_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_book_stand_start_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_herb_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_sweep_end_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_sweep_loop_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_sweep_start_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_specialanimation_spring_water_east.png": "Default"
     },
     "hotkey": "INSERT",
     "id": "celine",

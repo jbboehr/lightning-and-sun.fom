@@ -188,10 +188,11 @@ artwork. Her 17 spectral Priestess portraits and dragon portrait keep their
 original effects and colors.
 The combined trial also includes Hayden's, Ryis's and Celine's Spring idle,
 walking, blinking, sitting, eating, drinking, general-action, sleeping, kissing,
-shocked reactions and seated reading. F8 switches Hayden, F10 switches Ryis and
-Insert switches Celine, keeping each character's portraits and these sprites
-together in their supported directions. Celine's gardening outfit remains
-original in the overworld.
+shocked reactions and seated reading, plus their farming, carpentry, writing and
+household actions. F8 switches Hayden, F10 switches Ryis and Insert switches
+Celine, keeping each character's portraits and these sprites together in their
+supported directions. Hayden's riding animations and Celine's gardening outfit
+remain original in the overworld.
 Their other actions/outfits and the other portrait characters' overworld sprites
 remain original. Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
