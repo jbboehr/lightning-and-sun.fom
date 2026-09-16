@@ -466,7 +466,13 @@
       "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_idle_1_south.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_walk_east.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_walk_north.png": "Default",
-      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_walk_south.png": "Default"
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_walk_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_blink_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_blink_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_idle_2_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_idle_2_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_idle_2_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_ride_idle_3_east.png": "Default"
     }
   },
   {
@@ -624,7 +630,18 @@
       "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_idle_south.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_walk_east.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_walk_north.png": "Default",
-      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_walk_south.png": "Default"
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_walk_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_blink_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_blink_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_drink_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_drink_north.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_drink_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_eat_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_eat_north.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_eat_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_sit_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_sit_north.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_sit_south.png": "Default"
     }
   },
   {
@@ -1102,7 +1119,12 @@
       "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_garden_idle_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_garden_walk_east.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_garden_walk_north.png": "Default",
-      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_garden_walk_south.png": "Default"
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_garden_walk_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_garden_blink_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_garden_blink_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_garden_sit_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_garden_sit_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_garden_sit_south.png": "Default"
     },
     "hotkey": "INSERT",
     "id": "celine",

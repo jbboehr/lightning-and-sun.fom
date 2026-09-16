@@ -3,10 +3,10 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires the 230 local animations in extracted/celine-outfit-actions-study"]
-fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
+fn celine_garden_blink_sit_cover_skin_and_preserve_hair_belts_boots() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/celine-outfit-actions-study");
-    let profile = std::env::var_os("FOM_CELINE_STANDARD_PROFILE")
+    let profile = std::env::var_os("FOM_CELINE_OUTFIT_ACTIONS_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/celine-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile).unwrap()).unwrap();
@@ -19,39 +19,34 @@ fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
     fs::write(&profile_path, serde_json::to_vec(&profile).unwrap()).unwrap();
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let source = [0xFCD9B3, 0xF0B988, 0xD37A57, 0x672115];
-    // Source-art landmarks distinguish moving hands from the identical dark
-    // outline on orange hair, belts and boots, including North's tiny hand.
+    // Literal source landmarks separate closed-eye skin and seated wrists
+    // from matching hair, belt and boot outlines.
     let landmarks = [
-        ("action_east", 0, 40, 48, 0x672115, true),
-        ("action_east", 0, 36, 46, 0x672115, false),
-        ("action_east", 1, 48, 45, 0x672115, true),
-        ("action_east", 1, 38, 43, 0x672115, false),
-        ("action_east", 1, 40, 45, 0x672115, false),
-        ("action_east", 1, 45, 43, 0xFCD9B3, true),
-        ("action_east", 2, 45, 46, 0x672115, true),
-        ("action_east", 6, 35, 47, 0x672115, true),
-        ("action_north", 0, 33, 45, 0x672115, true),
-        ("action_north", 0, 35, 45, 0x672115, false),
-        ("action_north", 1, 35, 46, 0x672115, true),
-        ("action_north", 1, 35, 44, 0x672115, false),
-        ("action_north", 6, 46, 47, 0x672115, true),
-        ("action_north", 6, 44, 45, 0x672115, false),
-        ("action_south", 0, 34, 48, 0x672115, true),
-        ("action_south", 0, 37, 46, 0x672115, false),
-        ("action_south", 1, 35, 47, 0x672115, true),
-        ("action_south", 1, 38, 45, 0x672115, false),
-        ("action_south", 2, 38, 47, 0x672115, true),
-        ("action_south", 6, 36, 44, 0x672115, true),
-        ("action_south", 6, 37, 45, 0x672115, false),
-        ("kiss_east", 0, 35, 48, 0x672115, true),
-        ("kiss_east", 0, 33, 33, 0x672115, false),
-        ("kiss_east", 1, 36, 48, 0x672115, true),
-        ("kiss_east", 1, 39, 46, 0x672115, false),
-        ("kiss_east", 2, 36, 46, 0x672115, true),
-        ("kiss_east", 2, 40, 45, 0x672115, false),
-        ("sleep_east", 0, 44, 39, 0x672115, true),
-        ("sleep_east", 0, 35, 44, 0x672115, false),
-        ("sleep_east", 0, 38, 45, 0x672115, false),
+        ("blink_east", 0, 44, 36, 0x672115, true),
+        ("blink_east", 1, 44, 35, 0x672115, true),
+        ("blink_east", 1, 35, 40, 0x672115, false),
+        ("blink_east", 1, 37, 40, 0x672115, false),
+        ("blink_east", 1, 35, 47, 0x672115, true),
+        ("blink_east", 1, 38, 52, 0x672115, false),
+        ("blink_south", 1, 36, 35, 0x672115, true),
+        ("blink_south", 1, 43, 44, 0x672115, true),
+        ("blink_south", 1, 42, 45, 0x672115, false),
+        ("blink_south", 1, 36, 40, 0x672115, false),
+        ("blink_south", 1, 38, 41, 0xA1121D, false),
+        ("sit_east", 0, 40, 35, 0xF0B988, true),
+        ("sit_east", 0, 35, 47, 0x672115, true),
+        ("sit_east", 0, 44, 47, 0x672115, false),
+        ("sit_east", 0, 41, 48, 0x672115, false),
+        ("sit_north", 0, 36, 44, 0x672115, true),
+        ("sit_north", 0, 43, 44, 0x672115, true),
+        ("sit_north", 0, 34, 47, 0x672115, true),
+        ("sit_north", 0, 37, 45, 0x672115, false),
+        ("sit_north", 0, 35, 36, 0x672115, false),
+        ("sit_south", 0, 43, 44, 0x672115, true),
+        ("sit_south", 0, 34, 47, 0x672115, true),
+        ("sit_south", 0, 45, 47, 0x672115, true),
+        ("sit_south", 0, 37, 49, 0x672115, false),
+        ("sit_south", 0, 41, 49, 0x672115, false),
     ];
     let mut first_selection = Vec::new();
     for (id, targets) in [
@@ -108,14 +103,15 @@ fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
         let mut selection = Vec::new();
         let (mut changed, mut protected, mut frames) = (0, 0, 0);
         for (name, count) in [
-            ("action_east", 297),
-            ("action_north", 37),
-            ("action_south", 324),
-            ("kiss_east", 189),
-            ("sleep_east", 50),
+            ("blink_east", 136),
+            ("blink_south", 153),
+            ("sit_east", 36),
+            ("sit_north", 18),
+            ("sit_south", 38),
         ] {
+            let prefix = "spring_garden";
             let asset = format!(
-                "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_{name}.png"
+                "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_{prefix}_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -162,7 +158,7 @@ fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
             frames += per_frame.len();
             changed += count;
         }
-        assert_eq!((changed, protected, frames), (897, 306, 26));
+        assert_eq!((changed, protected, frames), (381, 54, 9));
         if first_selection.is_empty() {
             first_selection = selection;
         } else {

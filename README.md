@@ -191,9 +191,10 @@ walking, blinking, sitting, eating, drinking, general-action, sleeping, kissing,
 shocked reactions and seated reading, plus their farming, carpentry, writing and
 household actions. F8 switches Hayden, F10 switches Ryis and Insert switches
 Celine, keeping each character's portraits and these sprites together in their
-supported directions. Idle/walk coverage also includes Hayden riding, Celine's
-Spring gardening outfit and Ryis's Summer outfit. Other riding and gardening
-actions remain original.
+supported directions. Hayden's riding idles, blinks and walking are covered;
+riding runs and jumps remain original. Celine's Spring gardening outfit includes
+idle, walk, blink and sit. Ryis's Summer outfit includes idle, walk, blink, sit,
+eat and drink.
 Their other actions/outfits and the other portrait characters' overworld sprites
 remain original. Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

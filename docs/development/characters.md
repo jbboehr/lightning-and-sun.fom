@@ -1,13 +1,13 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 282 reviewed animations, Hayden's 174,
-Ryis's 151, Reina's 103, Juniper's 132, Celine's 225, March's 181, Balor's 110,
+The combined trial includes Adeline's 282 reviewed animations, Hayden's 180,
+Ryis's 162, Reina's 103, Juniper's 132, Celine's 230, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 9,928 variant strips from 2,482 sources. Caldarus's three
+variants per source give 10,016 variant strips from 2,504 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -62,8 +62,12 @@ review. This completes Ryis's Spring folder, Celine's normal Spring outfit and H
 non-riding Spring actions. The [outfit idle/walk pilots](world-outfit-pilots.md)
 add six strips each for Hayden riding, Ryis in Summer and Celine's Spring
 gardening outfit: 45 source frames and 15 native West mirrors. The user accepted
-the offline review; other actions in those outfits remain queued. The other
-portrait batches above still use their original overworld sprites. The small embarrassed-expression art
+the offline review. The [outfit action expansion](world-outfit-actions.md) adds
+Hayden's alternate riding idles and blinks, Celine's garden blinks/sitting, and
+Ryis's Summer blinks/sitting/eating/drinking: 22 strips, 75 source frames and
+36 West mirrors. The user accepted the offline review; remaining outfit actions stay queued.
+The other portrait batches above still use their original overworld sprites.
+The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
 Adeline's [complete Spring overworld pass](overworld-special-actions.md)
 covers all 42 standard and special-animation strips alongside her 126 portraits.
@@ -298,11 +302,11 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package, including the riding, Summer and gardening
-idle/walk pilots, is installed in `tmp/world-outfit-pilots-playtest`.
+The latest combined package, including the expanded riding, Summer and gardening
+actions, is installed in `tmp/world-outfit-actions-playtest`.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline reviews](../../generated/world-outfit-pilots-preview/index.html)
-to inspect all 45 new source frames and the 15 native West mirrors.
+[complete offline reviews](../../generated/world-outfit-actions-preview/index.html)
+to inspect all 75 new source frames and the 36 native West mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

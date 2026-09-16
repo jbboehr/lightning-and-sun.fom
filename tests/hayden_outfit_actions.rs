@@ -2,18 +2,18 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/hayden-outfit-actions-study and the local special baseline"]
-fn hayden_riding_masks_preserve_baked_horse_gear_and_shared_shirt_shadows() {
+#[ignore = "requires extracted/hayden-outfit-actions-study and the local outfit pilot baseline"]
+fn hayden_alternate_riding_masks_preserve_horse_animation_and_shirt_edges() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/hayden-outfit-actions-study");
-    let baseline = root.join("generated/characters-spring-special-trial/characters/hayden");
+    let baseline = root.join("generated/characters-world-outfit-pilots-trial/characters/hayden");
     let set = root.join("palettes/sets/hayden-world-trial.json");
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
     let profile: Value = serde_json::from_slice(
         &fs::read(root.join("palettes/profiles/hayden-world-trial.json")).unwrap(),
     )
     .unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..168];
+    let prior = &profile["regions"].as_array().unwrap()[..174];
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
@@ -34,44 +34,45 @@ fn hayden_riding_masks_preserve_baked_horse_gear_and_shared_shirt_shadows() {
     // Independently reviewed, literal frame-local boundaries. Frames are zero-based.
     // Shared browns on skin must change while neighboring sleeve folds stay original.
     let landmarks = [
-        ("ride_idle_1_east", 0, 36, 29, 0x815A2E, true),
-        ("ride_idle_1_east", 0, 33, 29, 0xAB7E3F, false),
-        ("ride_idle_1_east", 0, 34, 27, 0xAB7E3F, false),
-        ("ride_idle_1_east", 0, 41, 34, 0x815A2E, true),
-        ("ride_idle_1_east", 0, 39, 29, 0xE7B172, true),
-        ("ride_idle_1_east", 0, 48, 31, 0x967C7C, false),
-        ("ride_idle_1_north", 0, 35, 26, 0x523C26, true),
-        ("ride_idle_1_north", 0, 36, 26, 0xAB7E3F, false),
-        ("ride_idle_1_north", 0, 36, 27, 0x815A2E, false),
-        ("ride_idle_1_north", 0, 34, 27, 0xE7B172, true),
-        ("ride_idle_1_north", 0, 39, 33, 0xE7BA83, false),
-        ("ride_idle_1_north", 0, 39, 35, 0xE7BA83, false),
-        ("ride_idle_1_south", 0, 36, 28, 0x523C26, true),
-        ("ride_idle_1_south", 0, 37, 27, 0xAB7E3F, false),
-        ("ride_idle_1_south", 0, 37, 29, 0xE7B172, true),
-        ("ride_idle_1_south", 0, 42, 29, 0xE7B172, true),
-        ("ride_idle_1_south", 0, 39, 32, 0xF7E7DF, false),
-        ("ride_idle_1_south", 0, 39, 37, 0xF7E7DF, false),
-        ("ride_walk_east", 2, 35, 28, 0x815A2E, true),
-        ("ride_walk_east", 2, 32, 28, 0xAB7E3F, false),
-        ("ride_walk_east", 2, 40, 33, 0x815A2E, true),
-        ("ride_walk_north", 0, 33, 25, 0x815A2E, true),
-        ("ride_walk_north", 0, 36, 26, 0x815A2E, false),
-        ("ride_walk_north", 0, 34, 26, 0xE7B172, true),
-        ("ride_walk_north", 3, 34, 28, 0x523C26, true),
-        ("ride_walk_north", 3, 37, 28, 0xAB7E3F, false),
-        ("ride_walk_south", 0, 35, 27, 0x523C26, true),
-        ("ride_walk_south", 0, 35, 26, 0xAB7E3F, false),
-        ("ride_walk_south", 3, 36, 29, 0xE7B172, true),
-        ("ride_walk_south", 3, 37, 27, 0xAB7E3F, false),
+        ("ride_blink_east", 1, 36, 29, 0x815A2E, true),
+        ("ride_blink_east", 1, 33, 29, 0xAB7E3F, false),
+        ("ride_blink_east", 1, 41, 34, 0x815A2E, true),
+        ("ride_blink_east", 1, 50, 28, 0x825F62, false),
+        ("ride_blink_south", 1, 36, 28, 0x523C26, true),
+        ("ride_blink_south", 1, 37, 27, 0xAB7E3F, false),
+        ("ride_blink_south", 1, 37, 29, 0xE7B172, true),
+        ("ride_blink_south", 1, 39, 32, 0xF7E7DF, false),
+        ("ride_blink_south", 1, 36, 37, 0x825F62, false),
+        ("ride_idle_2_east", 8, 34, 30, 0x523C26, true),
+        ("ride_idle_2_east", 8, 34, 27, 0xAB7E3F, false),
+        ("ride_idle_2_east", 8, 39, 29, 0xE7B172, true),
+        ("ride_idle_2_east", 8, 48, 31, 0x967C7C, false),
+        ("ride_idle_2_north", 7, 35, 26, 0x523C26, true),
+        ("ride_idle_2_north", 7, 36, 26, 0xAB7E3F, false),
+        ("ride_idle_2_north", 7, 36, 27, 0x815A2E, false),
+        ("ride_idle_2_north", 7, 34, 27, 0xE7B172, true),
+        ("ride_idle_2_north", 7, 39, 33, 0xE7BA83, false),
+        ("ride_idle_2_north", 7, 41, 48, 0xF7E7DF, false),
+        ("ride_idle_2_south", 0, 35, 29, 0x523C26, true),
+        ("ride_idle_2_south", 0, 36, 29, 0xE7B172, true),
+        ("ride_idle_2_south", 0, 37, 27, 0xAB7E3F, false),
+        ("ride_idle_2_south", 0, 35, 23, 0x815A2E, false),
+        ("ride_idle_2_south", 1, 34, 30, 0x815A2E, true),
+        ("ride_idle_2_south", 1, 36, 29, 0x000000, false),
+        ("ride_idle_2_south", 1, 37, 29, 0xE7B172, true),
+        ("ride_idle_3_east", 6, 39, 32, 0x523C26, true),
+        ("ride_idle_3_east", 6, 33, 33, 0xAB7E3F, false),
+        ("ride_idle_3_east", 6, 41, 34, 0x815A2E, true),
+        ("ride_idle_3_east", 6, 54, 32, 0x958676, false),
+        ("ride_idle_3_east", 6, 50, 27, 0xC4A998, false),
     ];
     let cases = [
-        ("ride_idle_1_east", 1, 41),
-        ("ride_idle_1_north", 1, 12),
-        ("ride_idle_1_south", 1, 46),
-        ("ride_walk_east", 4, 164),
-        ("ride_walk_north", 4, 48),
-        ("ride_walk_south", 4, 178),
+        ("ride_blink_east", 3, 123),
+        ("ride_blink_south", 3, 138),
+        ("ride_idle_2_east", 9, 369),
+        ("ride_idle_2_north", 8, 96),
+        ("ride_idle_2_south", 4, 186),
+        ("ride_idle_3_east", 8, 328),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
@@ -101,8 +102,8 @@ fn hayden_riding_masks_preserve_baked_horse_gear_and_shared_shirt_shadows() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
                 // The rider's lowest exposed skin ends at row 34. The complete
-                // lower horse, tail, saddle and boots must remain byte-identical.
-                if y >= 35 {
+                // lower horse, tail, saddle, boots and East horse head must remain byte-identical.
+                if y >= 35 || (case.ends_with("_east") && x % 80 >= 43) {
                     assert_eq!(p, q, "horse or gear changed: {id} {case} [{x},{y}]");
                 }
                 mask.push(p != q);
