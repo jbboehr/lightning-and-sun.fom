@@ -11247,6 +11247,480 @@
           47
         ]
       ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_blink_east.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "9f6f4216b9128ddac980278eb19288944e124ed4e7761e6a0dc4735d6b4f8a45",
+      "seeds": [
+        [
+          39,
+          31
+        ],
+        [
+          119,
+          31
+        ],
+        [
+          199,
+          31
+        ],
+        [
+          35,
+          46
+        ],
+        [
+          44,
+          46
+        ],
+        [
+          115,
+          46
+        ],
+        [
+          124,
+          46
+        ],
+        [
+          195,
+          46
+        ],
+        [
+          204,
+          46
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_blink_south.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "4ae2c5901ffaf17f284e864c7065fe5cafad26f7f7487407d1f82492722e9294",
+      "seeds": [
+        [
+          38,
+          31
+        ],
+        [
+          118,
+          31
+        ],
+        [
+          198,
+          31
+        ],
+        [
+          33,
+          46
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          113,
+          46
+        ],
+        [
+          125,
+          46
+        ],
+        [
+          193,
+          46
+        ],
+        [
+          205,
+          46
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_drink_east.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "7de5bb05c121d1d7eb3403630ae70be5ca440be90b8249450a3aa84777591fc2",
+      "seeds": [
+        [
+          39,
+          32
+        ],
+        [
+          117,
+          32
+        ],
+        [
+          199,
+          32
+        ],
+        [
+          44,
+          35
+        ],
+        [
+          204,
+          35
+        ],
+        [
+          120,
+          41
+        ],
+        [
+          42,
+          43
+        ],
+        [
+          202,
+          43
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_drink_north.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "4e18f65e3644889414778a4b57e27ee6418af60664a8884f452062447f4d985e",
+      "seeds": [
+        [
+          35,
+          35
+        ],
+        [
+          195,
+          35
+        ],
+        [
+          115,
+          36
+        ],
+        [
+          34,
+          47
+        ],
+        [
+          114,
+          47
+        ],
+        [
+          194,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_drink_south.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "d2b492b2853e5701dedac2c08175fc4d3224ce3e53459c271c403d72d2e5d122",
+      "seeds": [
+        [
+          38,
+          32
+        ],
+        [
+          198,
+          32
+        ],
+        [
+          118,
+          33
+        ],
+        [
+          116,
+          41
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          195,
+          43
+        ],
+        [
+          44,
+          47
+        ],
+        [
+          124,
+          47
+        ],
+        [
+          204,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_eat_east.png",
+      "size": [
+        400,
+        80
+      ],
+      "source_sha256": "d3b94cfed9778b05288b06f8ba4b0ea6f916aad7bdb9def20625c28f2d7eb5e2",
+      "seeds": [
+        [
+          199,
+          30
+        ],
+        [
+          39,
+          32
+        ],
+        [
+          120,
+          32
+        ],
+        [
+          359,
+          32
+        ],
+        [
+          279,
+          33
+        ],
+        [
+          196,
+          34
+        ],
+        [
+          204,
+          34
+        ],
+        [
+          44,
+          35
+        ],
+        [
+          364,
+          35
+        ],
+        [
+          203,
+          39
+        ],
+        [
+          127,
+          40
+        ],
+        [
+          44,
+          42
+        ],
+        [
+          284,
+          43
+        ],
+        [
+          363,
+          44
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_eat_north.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "4e18f65e3644889414778a4b57e27ee6418af60664a8884f452062447f4d985e",
+      "seeds": [
+        [
+          35,
+          35
+        ],
+        [
+          195,
+          35
+        ],
+        [
+          115,
+          36
+        ],
+        [
+          34,
+          47
+        ],
+        [
+          114,
+          47
+        ],
+        [
+          194,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_eat_south.png",
+      "size": [
+        400,
+        80
+      ],
+      "source_sha256": "575eff1a1d05b08f176830fa72761b10ef8d2b55ac4ffadf971e4b46e8daa89a",
+      "seeds": [
+        [
+          198,
+          31
+        ],
+        [
+          38,
+          32
+        ],
+        [
+          358,
+          32
+        ],
+        [
+          118,
+          33
+        ],
+        [
+          278,
+          33
+        ],
+        [
+          195,
+          34
+        ],
+        [
+          204,
+          34
+        ],
+        [
+          196,
+          40
+        ],
+        [
+          198,
+          40
+        ],
+        [
+          119,
+          41
+        ],
+        [
+          275,
+          43
+        ],
+        [
+          277,
+          43
+        ],
+        [
+          36,
+          47
+        ],
+        [
+          44,
+          47
+        ],
+        [
+          117,
+          47
+        ],
+        [
+          124,
+          47
+        ],
+        [
+          204,
+          47
+        ],
+        [
+          284,
+          47
+        ],
+        [
+          354,
+          47
+        ],
+        [
+          364,
+          47
+        ],
+        [
+          117,
+          49
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_sit_east.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "a8902e53810aa451da51e73eef32244aa3f4351a103af032d465336f15daa60e",
+      "seeds": [
+        [
+          39,
+          32
+        ],
+        [
+          44,
+          35
+        ],
+        [
+          35,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_sit_north.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "3aa2b0b1cd686a2da268b05e6c40cd2f7e6b0283c50d1b0d95478b54d0a59a69",
+      "seeds": [
+        [
+          35,
+          35
+        ],
+        [
+          34,
+          47
+        ],
+        [
+          44,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_sit_south.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "4123437f46b317cc69cfec49508474e3f27e94eba6a85c3e9426461c8def6013",
+      "seeds": [
+        [
+          38,
+          32
+        ],
+        [
+          34,
+          47
+        ],
+        [
+          44,
+          47
+        ]
+      ]
     }
   ],
   "source_colors": [

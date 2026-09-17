@@ -2,8 +2,8 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis Summer special corpus in extracted/ryis-seasonal-standard-study"]
-fn ryis_summer_specials_cover_skin_but_preserve_tools_books_and_gloves() {
+#[ignore = "requires the local Ryis Autumn action corpus in extracted/ryis-seasonal-standard-study"]
+fn ryis_autumn_actions_cover_fingers_but_preserve_gloves_boots_and_mouth() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/ryis-seasonal-standard-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
@@ -11,50 +11,49 @@ fn ryis_summer_specials_cover_skin_but_preserve_tools_books_and_gloves() {
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/ryis-world-trial.json"));
     let cases: [(&str, &[usize]); 11] = [
-        ("hammer_east", &[59, 50, 50, 52, 53, 54, 54]),
-        ("read_sit_end_south", &[53, 41, 59]),
-        ("read_sit_loop_south", &[48, 57, 48, 57]),
-        ("read_sit_start_south", &[59, 45, 49]),
-        ("saw_east", &[53, 55, 58, 55]),
-        ("siteyesclosed_east", &[61]),
-        ("siteyesclosed_south", &[69]),
-        ("wipebrow_south", &[49, 59, 64, 72, 70, 69]),
-        ("write_end_south", &[63, 66]),
-        ("write_loop_south", &[64, 65, 64, 65]),
-        ("write_start_south", &[66, 64]),
+        ("blink_east", &[51, 55, 51]),
+        ("blink_south", &[56, 60, 56]),
+        ("drink_east", &[43, 47, 43]),
+        ("drink_north", &[24, 24, 24]),
+        ("drink_south", &[51, 57, 51]),
+        ("eat_east", &[43, 43, 42, 47, 45]),
+        ("eat_north", &[24, 24, 24]),
+        ("eat_south", &[52, 55, 45, 61, 52]),
+        ("sit_east", &[46]),
+        ("sit_north", &[26]),
+        ("sit_south", &[52]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    // These shades occur only on reviewed Summer skin. Blue book covers,
-    // cream paper, brown tool/clipboard materials and dark gloves are separate
-    // colors. Detached fingers and exposed lower legs need their own seeds.
+    // Skin includes eyelids, neck and exposed fingertips. Autumn gloves,
+    // sleeves, covered legs and boots use separate shades. Rear short hair
+    // and eating mouth details are pinned independently at material boundaries.
     let skin = [0xB06C57, 0x854D3C, 0x63342A, 0x491F1B];
     // Frame numbers are zero-based; x coordinates here are within the frame.
     let landmarks = [
-        ("hammer_east", 0, 52, 43, 0x85CED4, false), // hammer head
-        ("hammer_east", 0, 48, 44, 0x936244, false), // brown handle
-        ("hammer_east", 3, 50, 44, 0x63342A, true),  // gripping finger
-        ("saw_east", 0, 60, 44, 0xC0BDD7, false),    // saw blade
-        ("saw_east", 0, 50, 46, 0x491F1B, true),     // detached finger
-        ("saw_east", 0, 49, 45, 0x353A50, false),    // adjacent glove
-        ("wipebrow_south", 0, 42, 33, 0x353A50, false), // raised glove
-        ("wipebrow_south", 0, 41, 33, 0xB06C57, true), // finger at brow
-        ("wipebrow_south", 4, 40, 38, 0x9E2626, false), // mouth detail
-        ("write_loop_south", 0, 36, 43, 0x854D3C, true), // writing hand
-        ("write_loop_south", 0, 41, 47, 0xB06C57, true), // clipboard finger
-        ("write_loop_south", 0, 43, 47, 0x353A50, false), // dark glove
-        ("write_loop_south", 0, 44, 43, 0x7D4F3D, false), // brown clipboard
-        ("write_loop_south", 0, 37, 51, 0x854D3C, true), // lower leg
-        ("write_loop_south", 0, 37, 53, 0xFFA799, false), // pink footwear
-        ("read_sit_start_south", 1, 39, 41, 0xF6E4D7, false), // cream pages
-        ("read_sit_start_south", 1, 38, 48, 0x699CC1, false), // blue cover
-        ("read_sit_start_south", 1, 34, 46, 0x353A50, false), // glove by book
-        ("read_sit_start_south", 1, 35, 47, 0x491F1B, true), // detached finger
-        ("read_sit_start_south", 2, 40, 45, 0xC9AF9C, false), // shaded page
-        ("read_sit_loop_south", 0, 35, 46, 0x4E7E9F, false), // blue cover shading
-        ("read_sit_loop_south", 0, 36, 47, 0x2E4D69, false), // blue cover edge
-        ("siteyesclosed_south", 0, 37, 50, 0x63342A, true), // seated leg
-        ("siteyesclosed_south", 0, 37, 51, 0xFFA799, false), // adjacent footwear
-        ("siteyesclosed_south", 0, 37, 36, 0x000000, false), // closed eye
+        ("blink_south", 1, 38, 35, 0xB06C57, true), // closed eyelid
+        ("blink_south", 1, 38, 36, 0x000000, false), // closed eye line
+        ("sit_north", 0, 39, 36, 0x5E423B, false),  // short rear hair
+        ("sit_north", 0, 34, 46, 0xF4CD86, false),  // yellow glove
+        ("sit_north", 0, 40, 44, 0x3A4A6B, false),  // blue coat shading
+        ("sit_south", 0, 34, 46, 0xF4CD86, false),  // glove above finger
+        ("sit_south", 0, 34, 47, 0x63342A, true),   // detached finger
+        ("sit_south", 0, 37, 49, 0x111315, false),  // trouser hem
+        ("sit_south", 0, 37, 50, 0x5A2E2B, false),  // boot shadow
+        ("sit_south", 0, 37, 51, 0x805E54, false),  // boot highlight
+        ("eat_south", 2, 38, 35, 0x410808, false),  // mouth interior
+        ("eat_south", 2, 38, 36, 0xC83E37, false),  // red mouth detail
+        ("eat_south", 2, 36, 40, 0x491F1B, true),   // raised finger outline
+        ("eat_south", 2, 38, 40, 0x854D3C, true),   // finger beside glove
+        ("eat_south", 2, 37, 41, 0xF4CD86, false),  // adjacent glove
+        ("eat_east", 2, 42, 35, 0x410808, false),   // side mouth interior
+        ("eat_east", 2, 42, 36, 0xC83E37, false),   // side mouth detail
+        ("eat_east", 2, 44, 40, 0xF4CD86, false),   // raised glove
+        ("drink_south", 1, 35, 40, 0xF4CD86, false), // glove at cup
+        ("drink_south", 1, 36, 41, 0xB06C57, true), // adjacent finger
+        ("drink_east", 0, 42, 42, 0xE7A063, false), // glove shading
+        ("drink_east", 0, 40, 44, 0xDCEEF8, false), // light cuff
+        ("drink_east", 1, 39, 40, 0xE7A063, false), // raised glove shading
+        ("drink_east", 1, 40, 41, 0x854D3C, true),  // raised finger
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -89,7 +88,7 @@ fn ryis_summer_specials_cover_skin_but_preserve_tools_books_and_gloves() {
         let mut changed = 0;
         for (name, counts) in cases {
             let asset = format!(
-                "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_specialanimation_summer_{name}.png"
+                "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -125,6 +124,6 @@ fn ryis_summer_specials_cover_skin_but_preserve_tools_books_and_gloves() {
                 }
             }
         }
-        assert_eq!(changed, 2139);
+        assert_eq!(changed, 1374);
     }
 }
