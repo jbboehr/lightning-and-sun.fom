@@ -3,10 +3,10 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires the 268 local animations in extracted/celine-seasonal-special-study"]
-fn celine_summer_actions_cover_bare_arms_and_preserve_materials() {
+fn celine_summer_special_cover_hands_and_preserve_books_tools_and_clothing() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/celine-seasonal-special-study");
-    let profile = std::env::var_os("FOM_CELINE_SEASONAL_ACTIONS_PROFILE")
+    let profile = std::env::var_os("FOM_CELINE_SEASONAL_SPECIAL_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/celine-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile).unwrap()).unwrap();
@@ -19,54 +19,52 @@ fn celine_summer_actions_cover_bare_arms_and_preserve_materials() {
     fs::write(&profile_path, serde_json::to_vec(&profile).unwrap()).unwrap();
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let source = [0xFCD9B3, 0xF0B988, 0xD37A57, 0x672115];
-    // Independent source-art points distinguish exposed forearms/armpits,
-    // fingertips and toes from shared hair, belt, scarf and sandal colors.
+    // Source-art points distinguish bare Summer arm shadows and moving fingers
+    // from shared dark hair, belt, sandal and garment colors beside the tools.
     let landmarks = [
-        ("blink_east", 0, 34, 32, 0x672115, false),
-        ("blink_east", 1, 44, 35, 0x672115, true),
-        ("blink_east", 0, 35, 47, 0x672115, true),
-        ("blink_east", 1, 38, 45, 0x672115, false),
-        ("blink_south", 0, 36, 44, 0x672115, true),
-        ("blink_south", 1, 36, 35, 0x672115, true),
-        ("blink_south", 0, 37, 45, 0x672115, false),
-        ("sit_east", 0, 35, 47, 0x672115, true),
-        ("sit_east", 0, 43, 44, 0x672115, false),
-        ("sit_east", 0, 41, 49, 0xD37A57, true),
-        ("sit_east", 0, 42, 48, 0xB65932, false),
-        ("sit_north", 0, 34, 47, 0x672115, true),
-        ("sit_north", 0, 45, 47, 0x672115, true),
-        ("sit_north", 0, 38, 46, 0x672115, false),
-        ("sit_south", 0, 34, 47, 0x672115, true),
-        ("sit_south", 0, 36, 44, 0x672115, true),
-        ("sit_south", 0, 37, 50, 0xFCD9B3, true),
-        ("sit_south", 0, 37, 49, 0xB65932, false),
-        ("drink_east", 1, 42, 34, 0x672115, true),
-        ("drink_east", 1, 32, 32, 0x672115, false),
-        ("drink_east", 1, 36, 44, 0xF0B988, true),
-        ("drink_east", 1, 43, 44, 0x672115, false),
-        ("drink_north", 1, 34, 47, 0x672115, true),
-        ("drink_north", 1, 35, 46, 0x672115, false),
-        ("drink_south", 1, 35, 43, 0x672115, true),
-        ("drink_south", 1, 38, 42, 0x672115, false),
-        ("drink_south", 1, 43, 44, 0x672115, true),
-        ("eat_east", 0, 39, 43, 0x672115, true),
-        ("eat_east", 1, 40, 43, 0x672115, true),
-        ("eat_east", 1, 46, 42, 0x672115, true),
-        ("eat_east", 2, 39, 42, 0x672115, true),
-        ("eat_east", 2, 43, 44, 0x672115, false),
-        ("eat_east", 2, 40, 36, 0x9E2626, false),
-        ("eat_east", 3, 39, 44, 0x672115, true),
-        ("eat_east", 4, 40, 42, 0x672115, true),
-        ("eat_east", 4, 38, 45, 0x672115, false),
-        ("eat_north", 1, 34, 47, 0x672115, true),
-        ("eat_north", 1, 38, 47, 0x672115, false),
-        ("eat_south", 0, 36, 43, 0x672115, true),
-        ("eat_south", 1, 38, 44, 0x672115, true),
-        ("eat_south", 1, 38, 42, 0x672115, false),
-        ("eat_south", 2, 36, 33, 0x672115, true),
-        ("eat_south", 2, 39, 35, 0x410808, false),
-        ("eat_south", 2, 39, 37, 0x9E2626, false),
-        ("eat_south", 4, 34, 47, 0x672115, true),
+        ("book_stand_start_south", 0, 36, 44, 0x672115, true),
+        ("book_stand_start_south", 0, 37, 45, 0x672115, false),
+        ("book_stand_start_south", 1, 35, 47, 0x672115, true),
+        ("book_stand_start_south", 1, 39, 41, 0xF6E4D7, false),
+        ("book_stand_loop_south", 0, 44, 36, 0x672115, true),
+        ("book_stand_loop_south", 0, 35, 32, 0xDF8D4B, false),
+        ("book_stand_loop_south", 0, 32, 42, 0xF6E4D7, false),
+        ("book_stand_loop_south", 2, 38, 40, 0x672115, true),
+        ("book_stand_end_south", 0, 44, 47, 0x672115, true),
+        ("book_stand_end_south", 2, 37, 45, 0x672115, false),
+        ("book_sit_start_south", 0, 34, 47, 0x672115, true),
+        ("book_sit_start_south", 0, 37, 45, 0x672115, false),
+        ("book_sit_start_south", 1, 44, 47, 0x672115, true),
+        ("book_sit_start_south", 1, 39, 41, 0xF6E4D7, false),
+        ("book_sit_loop_south", 0, 41, 40, 0x672115, true),
+        ("book_sit_loop_south", 0, 32, 42, 0xF6E4D7, false),
+        ("book_sit_loop_south", 2, 35, 36, 0x672115, true),
+        ("book_sit_end_south", 0, 35, 47, 0x672115, true),
+        ("book_sit_end_south", 2, 42, 45, 0x672115, false),
+        ("sweep_start_south", 0, 33, 48, 0x672115, true),
+        ("sweep_start_south", 0, 37, 46, 0x672115, false),
+        ("sweep_end_south", 0, 46, 48, 0x672115, true),
+        ("sweep_end_south", 0, 42, 46, 0x672115, false),
+        ("sweep_loop_south", 0, 39, 48, 0x672115, true),
+        ("sweep_loop_south", 0, 44, 47, 0xBB8151, false),
+        ("sweep_loop_south", 1, 39, 46, 0x672115, false),
+        ("sweep_loop_south", 1, 44, 47, 0xFCD9B3, true),
+        ("sweep_loop_south", 3, 38, 35, 0x672115, true),
+        ("sweep_loop_south", 6, 38, 45, 0x672115, true),
+        ("sweep_loop_south", 12, 40, 47, 0x672115, true),
+        ("sweep_loop_south", 13, 36, 47, 0x672115, true),
+        ("sweep_loop_south", 14, 43, 42, 0x672115, true),
+        ("sweep_loop_south", 14, 43, 44, 0x672115, true),
+        ("sweep_loop_south", 14, 37, 45, 0x672115, false),
+        ("water_east", 0, 38, 44, 0x672115, true),
+        ("water_east", 0, 34, 46, 0x672115, false),
+        ("water_east", 0, 46, 44, 0xFFCF36, false),
+        ("water_east", 1, 38, 41, 0x672115, false),
+        ("water_east", 1, 47, 39, 0x672115, true),
+        ("water_east", 1, 45, 43, 0x672115, false),
+        ("water_east", 1, 43, 52, 0x672115, false),
+        ("water_east", 3, 36, 44, 0x672115, true),
+        ("water_east", 3, 43, 43, 0xDD9D3E, false),
     ];
     let mut first_selection = Vec::new();
     for (id, targets) in [
@@ -123,20 +121,20 @@ fn celine_summer_actions_cover_bare_arms_and_preserve_materials() {
         let mut selection = Vec::new();
         let (mut changed, mut protected, mut frames) = (0, 0, 0);
         for (name, count) in [
-            ("blink_east", 193),
-            ("blink_south", 220),
-            ("sit_east", 49),
-            ("sit_north", 8),
-            ("sit_south", 54),
-            ("drink_east", 165),
-            ("drink_north", 12),
-            ("drink_south", 163),
-            ("eat_east", 265),
-            ("eat_north", 12),
-            ("eat_south", 292),
+            ("book_sit_end_south", 124),
+            ("book_sit_loop_south", 142),
+            ("book_sit_start_south", 124),
+            ("book_stand_end_south", 156),
+            ("book_stand_loop_south", 186),
+            ("book_stand_start_south", 156),
+            ("sweep_end_south", 76),
+            ("sweep_loop_south", 892),
+            ("sweep_start_south", 66),
+            ("water_east", 227),
         ] {
+            let prefix = "specialanimation_summer";
             let asset = format!(
-                "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_{name}.png"
+                "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_{prefix}_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -183,7 +181,7 @@ fn celine_summer_actions_cover_bare_arms_and_preserve_materials() {
             frames += per_frame.len();
             changed += count;
         }
-        assert_eq!((changed, protected, frames), (1433, 196, 31));
+        assert_eq!((changed, protected, frames), (2149, 64, 41));
         if first_selection.is_empty() {
             first_selection = selection;
         } else {

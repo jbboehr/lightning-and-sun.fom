@@ -2,46 +2,47 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis Summer idle/walk corpus in extracted/ryis-seasonal-special-study"]
-fn ryis_summer_pilot_covers_exposed_skin_but_preserves_outfit_and_short_hair() {
+#[ignore = "requires the local Ryis Autumn action/sleep/kiss corpus in extracted/ryis-seasonal-special-study"]
+fn ryis_autumn_special_preserves_gloves_sleeves_boots_and_closed_features() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/ryis-seasonal-special-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/ryis-world-trial.json"));
-    let cases: [(&str, &[usize]); 6] = [
-        ("idle_east", &[60]),
-        ("idle_north", &[42]),
-        ("idle_south", &[69]),
-        ("walk_east", &[60, 61, 60, 58]),
-        ("walk_north", &[42, 38, 42, 38]),
-        ("walk_south", &[69, 63, 69, 63]),
+    let cases: [(&str, &[usize]); 5] = [
+        ("action_east", &[46, 44, 46, 44, 46, 46, 47]),
+        ("action_north", &[23, 24, 24, 24, 24, 24, 26]),
+        ("action_south", &[51, 51, 51, 51, 51, 51, 52]),
+        ("kiss_east", &[46, 49, 54, 53]),
+        ("sleep_east", &[48]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    // Summer's exposed lower legs use the same four skin shades as the face
-    // and detached fingers. Dark gloves, pink footwear and the broad short
-    // hair patch at the back of the head use different colors and stay original.
+    // Reviewed Autumn skin includes detached fingertips and closed eyelids.
+    // Yellow gloves, blue sleeves, covered legs and boots retain their shades.
+    // Short rear hair, black closed eyes and the kissing mouth stay original.
     let skin = [0xB06C57, 0x854D3C, 0x63342A, 0x491F1B];
     // Frame numbers are zero-based; x coordinates here are within the frame.
     let landmarks = [
-        ("idle_north", 0, 39, 35, 0x5E423B, false), // short rear hair
-        ("idle_north", 0, 35, 35, 0xB06C57, true),  // adjacent ear
-        ("idle_south", 0, 38, 31, 0x63342A, true),  // forehead at hairline
-        ("idle_south", 0, 39, 31, 0x322724, false), // adjacent hair
-        ("idle_south", 0, 34, 44, 0xB06C57, true),  // forearm
-        ("idle_south", 0, 34, 45, 0x353A50, false), // dark glove
-        ("idle_south", 0, 34, 46, 0xB06C57, true),  // detached finger
-        ("idle_south", 0, 39, 41, 0xB06C57, true),  // chest
-        ("idle_south", 0, 39, 42, 0xF5ECE6, false), // undershirt
-        ("idle_south", 0, 37, 50, 0x121221, false), // shorts hem
-        ("idle_south", 0, 37, 51, 0x854D3C, true),  // exposed leg
-        ("idle_south", 0, 37, 52, 0x63342A, true),  // leg shading
-        ("idle_south", 0, 37, 53, 0xFFA799, false), // footwear
-        ("walk_east", 3, 36, 47, 0x491F1B, true),   // moving finger
-        ("walk_east", 3, 35, 47, 0x353A50, false),  // neighboring glove
-        ("walk_north", 1, 41, 52, 0xB06C57, true),  // moving lower leg
-        ("walk_north", 1, 41, 54, 0xFFA799, false), // moving footwear
+        ("action_north", 0, 39, 35, 0x5E423B, false), // short rear hair
+        ("action_north", 0, 35, 35, 0xB06C57, true),  // nearby ear
+        ("action_north", 0, 33, 43, 0xF4CD86, false), // yellow glove
+        ("action_north", 1, 37, 50, 0x111315, false), // moving trouser hem
+        ("action_north", 1, 37, 52, 0x5C413D, false), // boot shading
+        ("action_east", 1, 48, 42, 0xE7A063, false),  // extended glove shading
+        ("action_east", 1, 48, 43, 0xF4CD86, false),  // glove beside finger
+        ("action_east", 1, 48, 44, 0x63342A, true),   // detached fingertip
+        ("action_south", 6, 37, 50, 0x1E2124, false), // trousers
+        ("action_south", 6, 37, 51, 0x111315, false), // covered lower leg
+        ("action_south", 6, 37, 53, 0x805E54, false), // brown footwear
+        ("sleep_east", 0, 43, 38, 0xE7A063, false),   // glove at cheek
+        ("sleep_east", 0, 44, 38, 0x63342A, true),    // finger beside glove
+        ("sleep_east", 0, 42, 40, 0x6482AA, false),   // raised blue sleeve
+        ("sleep_east", 0, 38, 36, 0x000000, false),   // closed eye
+        ("kiss_east", 2, 47, 37, 0x000000, false),    // kissing mouth outline
+        ("kiss_east", 2, 46, 37, 0x854D3C, true),     // lip/cheek skin
+        ("kiss_east", 2, 38, 35, 0x000000, false),    // closed eye
+        ("kiss_east", 2, 39, 35, 0xB06C57, true),     // skin beside closed eye
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -76,7 +77,7 @@ fn ryis_summer_pilot_covers_exposed_skin_but_preserves_outfit_and_short_hair() {
         let mut changed = 0;
         for (name, counts) in cases {
             let asset = format!(
-                "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_summer_{name}.png"
+                "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -112,6 +113,6 @@ fn ryis_summer_pilot_covers_exposed_skin_but_preserves_outfit_and_short_hair() {
                 }
             }
         }
-        assert_eq!(changed, 834);
+        assert_eq!(changed, 1096);
     }
 }

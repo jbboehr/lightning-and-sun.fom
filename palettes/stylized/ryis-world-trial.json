@@ -1,5 +1,5 @@
 {
-  "description": "Ryis portraits, reviewed Spring and Summer overworld skin, and Autumn idle, walk, blink, sit, eat and drink in Debug Blue; hair, eyes, mouth details, gloves, clothing, footwear, tools and props stay original.",
+  "description": "Ryis portraits and reviewed Spring, Summer and Autumn overworld skin in Debug Blue, including Autumn action, sleep and kiss; hair, eyes, mouth details, gloves, clothing, footwear, tools and props stay original.",
   "profile": "../profiles/ryis-world-trial.json",
   "rgba_map": {
     "#B06C57": "#9DB9D4",

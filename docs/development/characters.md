@@ -1,13 +1,13 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 282 reviewed animations, Hayden's 208,
-Ryis's 195, Reina's 103, Juniper's 132, Celine's 258, March's 181, Balor's 110,
+The combined trial includes Adeline's 282 reviewed animations, Hayden's 216,
+Ryis's 200, Reina's 103, Juniper's 132, Celine's 268, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 10,372 variant strips from 2,593 sources. Caldarus's three
+variants per source give 10,464 variant strips from 2,616 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -81,7 +81,10 @@ and 29 West mirrors. The user accepted this offline artwork on 2026-09-16. The
 [seasonal standard batch](world-seasonal-standard.md) adds Summer general actions,
 sleep and kiss for Hayden and Celine and Autumn blink/sit/eat/drink for Ryis:
 21 strips, 83 source frames and 36 West mirrors. The user accepted this offline
-artwork on 2026-09-16.
+artwork on 2026-09-16. The [seasonal special batch](world-seasonal-special.md)
+finishes Hayden's Summer folder and Celine's regular Summer outfit and adds
+Ryis's Autumn general actions, sleep and kiss: 23 strips, 108 source frames and
+41 West mirrors. The user accepted this offline artwork on 2026-09-16.
 The other portrait batches above still use their original overworld sprites.
 The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
@@ -318,12 +321,12 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package, including Hayden's and Celine's Summer general
-actions, sleep and kiss and Ryis's Autumn blink/sit/eat/drink, is installed in
-`tmp/world-seasonal-standard-playtest`. It has no preview helper and does not
+The latest combined package, including Hayden's and Celine's regular Summer
+specials and Ryis's Autumn general actions, sleep and kiss, is installed in
+`tmp/world-seasonal-special-playtest`. It has no preview helper and does not
 replace the desktop launcher. Use the
-[complete offline reviews](../../generated/world-seasonal-standard-preview/index.html)
-to inspect all 83 new source frames and the 36 native West mirrors.
+[complete offline reviews](../../generated/world-seasonal-special-preview/index.html)
+to inspect all 108 new source frames and the 41 native West mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

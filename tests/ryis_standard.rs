@@ -2,10 +2,10 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis normal Spring corpus in extracted/ryis-seasonal-standard-study"]
+#[ignore = "requires the local Ryis normal Spring corpus in extracted/ryis-seasonal-special-study"]
 fn ryis_standard_cover_extended_hands_and_preserve_hair_gloves_and_closed_features() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/ryis-seasonal-standard-study");
+    let original = root.join("extracted/ryis-seasonal-special-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
