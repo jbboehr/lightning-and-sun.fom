@@ -106,8 +106,12 @@ The [outfit idle/walk pilots](development/world-outfit-pilots.md) add six strips
 each for Hayden riding, Ryis in Summer and Celine in Spring gardening clothes.
 The [outfit action expansion](development/world-outfit-actions.md) adds Hayden's
 alternate riding idles and blinks, Celine's garden blinks/sitting, and Ryis's
-Summer blinks/sitting/eating/drinking. Their totals are now 180, 162 and 230
-sources respectively. Other riding, gardening and Summer actions remain original.
+Summer blinks/sitting/eating/drinking.
+The [outfit special expansion](development/world-outfit-special.md) finishes
+Hayden's Spring riding runs/jumps and Celine's Spring garden actions, and adds
+Ryis's Summer general actions, sleep and kiss. Their totals are now 186, 167
+and 236 sources respectively. Both complete Spring sprite folders for Hayden
+and Celine are covered; Ryis's eleven Summer special strips remain original.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;

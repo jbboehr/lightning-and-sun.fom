@@ -3,10 +3,10 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires the 236 local animations in extracted/celine-outfit-special-study"]
-fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
+fn celine_garden_specials_cover_hands_and_preserve_braids_tools_and_boots() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/celine-outfit-special-study");
-    let profile = std::env::var_os("FOM_CELINE_STANDARD_PROFILE")
+    let profile = std::env::var_os("FOM_CELINE_OUTFIT_SPECIAL_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/celine-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile).unwrap()).unwrap();
@@ -19,39 +19,48 @@ fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
     fs::write(&profile_path, serde_json::to_vec(&profile).unwrap()).unwrap();
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let source = [0xFCD9B3, 0xF0B988, 0xD37A57, 0x672115];
-    // Source-art landmarks distinguish moving hands from the identical dark
-    // outline on orange hair, belts and boots, including North's tiny hand.
+    // Literal source landmarks distinguish moving hand contours from braids,
+    // belt/boot shadows, mouth interiors and the golden watering can.
     let landmarks = [
-        ("action_east", 0, 40, 48, 0x672115, true),
-        ("action_east", 0, 36, 46, 0x672115, false),
-        ("action_east", 1, 48, 45, 0x672115, true),
-        ("action_east", 1, 38, 43, 0x672115, false),
-        ("action_east", 1, 40, 45, 0x672115, false),
-        ("action_east", 1, 45, 43, 0xFCD9B3, true),
-        ("action_east", 2, 45, 46, 0x672115, true),
-        ("action_east", 6, 35, 47, 0x672115, true),
-        ("action_north", 0, 33, 45, 0x672115, true),
-        ("action_north", 0, 35, 45, 0x672115, false),
-        ("action_north", 1, 35, 46, 0x672115, true),
-        ("action_north", 1, 35, 44, 0x672115, false),
-        ("action_north", 6, 46, 47, 0x672115, true),
-        ("action_north", 6, 44, 45, 0x672115, false),
-        ("action_south", 0, 34, 48, 0x672115, true),
-        ("action_south", 0, 37, 46, 0x672115, false),
-        ("action_south", 1, 35, 47, 0x672115, true),
-        ("action_south", 1, 38, 45, 0x672115, false),
-        ("action_south", 2, 38, 47, 0x672115, true),
-        ("action_south", 6, 36, 44, 0x672115, true),
-        ("action_south", 6, 37, 45, 0x672115, false),
+        ("harvest_east", 0, 40, 53, 0x672115, true),
+        ("harvest_east", 0, 38, 45, 0x672115, false),
+        ("harvest_east", 1, 48, 51, 0x672115, true),
+        ("harvest_east", 1, 42, 52, 0x672115, true),
+        ("harvest_east", 1, 37, 52, 0x672115, false),
+        ("harvest_east", 2, 50, 51, 0x672115, true),
+        ("harvest_east", 2, 46, 52, 0x672115, true),
+        ("harvest_east", 2, 40, 47, 0x672115, false),
+        ("harvest_east", 3, 51, 52, 0x672115, true),
+        ("harvest_east", 3, 47, 53, 0x672115, true),
+        ("harvest_east", 3, 36, 52, 0x672115, false),
+        ("harvest_east", 8, 39, 45, 0x672115, false),
+        ("harvest_east", 9, 40, 53, 0x672115, true),
+        ("water_east", 0, 39, 47, 0xFCD9B3, true),
+        ("water_east", 0, 36, 41, 0x672115, false),
+        ("water_east", 1, 37, 39, 0x672115, false),
+        ("water_east", 1, 38, 41, 0x672115, false),
+        ("water_east", 1, 38, 44, 0x672115, false),
+        ("water_east", 1, 47, 38, 0x672115, true),
+        ("water_east", 1, 48, 41, 0xFCD9B3, true),
+        ("water_east", 1, 55, 40, 0xFFF672, false),
+        ("water_east", 3, 36, 44, 0x672115, true),
+        ("water_east", 3, 43, 43, 0xDD9D3E, false),
         ("kiss_east", 0, 35, 48, 0x672115, true),
-        ("kiss_east", 0, 33, 33, 0x672115, false),
+        ("kiss_east", 0, 36, 41, 0x672115, false),
         ("kiss_east", 1, 36, 48, 0x672115, true),
-        ("kiss_east", 1, 39, 46, 0x672115, false),
+        ("kiss_east", 1, 36, 42, 0x672115, false),
         ("kiss_east", 2, 36, 46, 0x672115, true),
-        ("kiss_east", 2, 40, 45, 0x672115, false),
-        ("sleep_east", 0, 44, 39, 0x672115, true),
-        ("sleep_east", 0, 35, 44, 0x672115, false),
-        ("sleep_east", 0, 38, 45, 0x672115, false),
+        ("kiss_east", 2, 38, 41, 0x672115, false),
+        ("kiss_east", 3, 36, 48, 0x672115, true),
+        ("shocked_start_south", 0, 43, 45, 0x672115, true),
+        ("shocked_start_south", 0, 42, 46, 0x672115, false),
+        ("shocked_loop_south", 0, 39, 36, 0x410808, false),
+        ("shocked_loop_south", 0, 31, 33, 0xFCD9B3, true),
+        ("shocked_loop_south", 0, 47, 33, 0xD37A57, true),
+        ("shocked_loop_south", 0, 35, 49, 0xFCD9B3, true),
+        ("shocked_loop_south", 0, 33, 49, 0x672115, false),
+        ("shocked_end_south", 0, 46, 48, 0x672115, true),
+        ("shocked_end_south", 0, 36, 41, 0x672115, false),
     ];
     let mut first_selection = Vec::new();
     for (id, targets) in [
@@ -108,14 +117,20 @@ fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
         let mut selection = Vec::new();
         let (mut changed, mut protected, mut frames) = (0, 0, 0);
         for (name, count) in [
-            ("action_east", 297),
-            ("action_north", 37),
-            ("action_south", 324),
-            ("kiss_east", 189),
-            ("sleep_east", 50),
+            ("harvest_east", 514),
+            ("water_east", 157),
+            ("kiss_east", 174),
+            ("shocked_end_south", 57),
+            ("shocked_loop_south", 51),
+            ("shocked_start_south", 57),
         ] {
+            let prefix = if name.starts_with("water") || name.starts_with("harvest") {
+                "specialanimation_spring_garden"
+            } else {
+                "spring_garden"
+            };
             let asset = format!(
-                "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_{name}.png"
+                "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_{prefix}_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -162,7 +177,7 @@ fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
             frames += per_frame.len();
             changed += count;
         }
-        assert_eq!((changed, protected, frames), (897, 306, 26));
+        assert_eq!((changed, protected, frames), (1010, 91, 21));
         if first_selection.is_empty() {
             first_selection = selection;
         } else {
