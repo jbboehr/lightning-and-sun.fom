@@ -10983,6 +10983,270 @@
           51
         ]
       ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_idle_east.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "63b6052899aac8aee269b3e1f8bbfbb793f48f4df2e093bf2c56e365e2c82754",
+      "seeds": [
+        [
+          39,
+          31
+        ],
+        [
+          44,
+          34
+        ],
+        [
+          35,
+          46
+        ],
+        [
+          44,
+          46
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_idle_north.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "a822563a5713cf365c57d86fb1c68d6a8084fea8d111093094dadbb94865e8ad",
+      "seeds": [
+        [
+          35,
+          34
+        ],
+        [
+          33,
+          46
+        ],
+        [
+          45,
+          46
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_idle_south.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "942728a4f9ccbc21df68a9bf986dbededb22fa975b8bb1c3eb91313e4a9fe7b8",
+      "seeds": [
+        [
+          38,
+          31
+        ],
+        [
+          33,
+          46
+        ],
+        [
+          45,
+          46
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_walk_east.png",
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "eae2de1a456513e72c283cdb672784fd328739b33adb8996e28b69d99a1fac8c",
+      "seeds": [
+        [
+          39,
+          31
+        ],
+        [
+          199,
+          31
+        ],
+        [
+          119,
+          32
+        ],
+        [
+          279,
+          32
+        ],
+        [
+          44,
+          34
+        ],
+        [
+          204,
+          34
+        ],
+        [
+          124,
+          35
+        ],
+        [
+          284,
+          35
+        ],
+        [
+          115,
+          45
+        ],
+        [
+          35,
+          46
+        ],
+        [
+          44,
+          46
+        ],
+        [
+          113,
+          46
+        ],
+        [
+          125,
+          46
+        ],
+        [
+          195,
+          46
+        ],
+        [
+          204,
+          46
+        ],
+        [
+          284,
+          46
+        ],
+        [
+          276,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_walk_north.png",
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "a05c8f6a81a3dc87a3a9657f3fffbc0ddb26810b0456815ad9676638f94e5e7f",
+      "seeds": [
+        [
+          35,
+          34
+        ],
+        [
+          195,
+          34
+        ],
+        [
+          115,
+          35
+        ],
+        [
+          275,
+          35
+        ],
+        [
+          33,
+          46
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          125,
+          46
+        ],
+        [
+          193,
+          46
+        ],
+        [
+          205,
+          46
+        ],
+        [
+          274,
+          46
+        ],
+        [
+          114,
+          47
+        ],
+        [
+          284,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_walk_south.png",
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "c6425c94664aee0369143bf1bf2b717828c0f68fb122850771ee398f7025bc6b",
+      "seeds": [
+        [
+          38,
+          31
+        ],
+        [
+          198,
+          31
+        ],
+        [
+          118,
+          32
+        ],
+        [
+          278,
+          32
+        ],
+        [
+          33,
+          46
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          125,
+          46
+        ],
+        [
+          193,
+          46
+        ],
+        [
+          205,
+          46
+        ],
+        [
+          274,
+          46
+        ],
+        [
+          114,
+          47
+        ],
+        [
+          284,
+          47
+        ]
+      ]
     }
   ],
   "source_colors": [

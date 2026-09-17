@@ -112,7 +112,9 @@ Hayden's Spring riding runs/jumps and Celine's Spring garden actions, and adds
 Ryis's Summer general actions, sleep and kiss. The
 [Summer expansion](development/world-summer-expansion.md) adds Hayden's and
 Celine's regular Summer idle/walk pilots and finishes all eleven Ryis Summer
-special strips. Their totals are now 192, 178 and 242 sources respectively.
+special strips. The [seasonal action batch](development/world-seasonal-actions.md)
+adds Hayden's and Celine's Summer blink/sit/eat/drink animations and Ryis's
+Autumn idle/walk pilot. Their totals are now 203, 184 and 253 sources respectively.
 Hayden and Celine cover their complete Spring sprite folders; Ryis covers
 both complete Spring and Summer sprite folders.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
