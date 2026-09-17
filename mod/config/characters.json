@@ -508,7 +508,13 @@
       "assets/animations/NPCs/Hayden/Sprites/Summer/spr_npc_hayden_specialanimation_summer_read_sit_start_south.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Summer/spr_npc_hayden_specialanimation_summer_till_east.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Summer/spr_npc_hayden_specialanimation_summer_water_east.png": "Default",
-      "assets/animations/NPCs/Hayden/Sprites/Summer/spr_npc_hayden_specialanimation_summer_wipebrow_south.png": "Default"
+      "assets/animations/NPCs/Hayden/Sprites/Summer/spr_npc_hayden_specialanimation_summer_wipebrow_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_autumn_idle_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_autumn_idle_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_autumn_idle_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_autumn_walk_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_autumn_walk_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_autumn_walk_south.png": "Default"
     }
   },
   {
@@ -715,7 +721,18 @@
       "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_action_north.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_action_south.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_kiss_east.png": "Default",
-      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_sleep_east.png": "Default"
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_autumn_sleep_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_hammer_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_read_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_read_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_read_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_saw_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_siteyesclosed_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_siteyesclosed_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_wipebrow_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_write_end_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_write_start_south.png": "Default"
     }
   },
   {
@@ -1236,7 +1253,21 @@
       "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_specialanimation_summer_sweep_end_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_specialanimation_summer_sweep_loop_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_specialanimation_summer_sweep_start_south.png": "Default",
-      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_specialanimation_summer_water_east.png": "Default"
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_specialanimation_summer_water_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_specialanimation_summer_garden_harvest_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_specialanimation_summer_garden_water_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_blink_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_blink_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_idle_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_idle_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_idle_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_kiss_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_sit_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_sit_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_sit_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_walk_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_walk_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_summer_garden_walk_south.png": "Default"
     },
     "hotkey": "INSERT",
     "id": "celine",

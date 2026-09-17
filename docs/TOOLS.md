@@ -118,10 +118,12 @@ Autumn idle/walk pilot. The [seasonal standard batch](development/world-seasonal
 adds Hayden's and Celine's Summer general actions, sleep and kiss and Ryis's
 Autumn blink/sit/eat/drink. The [seasonal special batch](development/world-seasonal-special.md)
 finishes Hayden's Summer folder and Celine's regular Summer outfit, and adds
-Ryis's Autumn general actions, sleep and kiss. Their totals are now 216, 200 and
-268 sources respectively. All three cover their complete Spring sprite folders;
-Hayden and Ryis also cover their complete Summer folders. Celine's fourteen
-Summer garden strips remain separate.
+Ryis's Autumn general actions, sleep and kiss. The
+[seasonal expansion](development/world-seasonal-expansion.md) adds Celine's
+Summer garden outfit, Ryis's remaining Autumn specials and Hayden's Autumn
+idle/walk pilot. Their totals are now 222, 211 and 282 sources respectively.
+All three cover their complete Spring and Summer sprite folders; Ryis also
+covers his complete Autumn folder.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;

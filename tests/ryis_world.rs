@@ -21,7 +21,7 @@ fn ryis_world_extends_the_reviewed_portraits_and_preserves_their_choices() {
     let old = read(root.join("palettes/profiles/ryis-portraits.json"));
     let world = read(root.join("palettes/profiles/ryis-world-trial.json"));
     assert_eq!(old["regions"].as_array().unwrap().len(), 109);
-    assert_eq!(world["regions"].as_array().unwrap().len(), 200);
+    assert_eq!(world["regions"].as_array().unwrap().len(), 211);
     assert_eq!(
         &world["regions"].as_array().unwrap()[..109],
         old["regions"].as_array().unwrap()
@@ -143,10 +143,10 @@ fn ryis_world_package_keeps_his_control_and_native_geometry() {
 }
 
 #[test]
-#[ignore = "requires the 200 local animations in extracted/ryis-seasonal-special-study"]
+#[ignore = "requires the 211 local animations in extracted/ryis-seasonal-expansion-study"]
 fn ryis_world_covers_skin_and_fingers_but_preserves_hair_and_gloves() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/ryis-seasonal-special-study");
+    let original = root.join("extracted/ryis-seasonal-expansion-study");
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let set = std::env::var_os("FOM_RYIS_WORLD_PRESETS")

@@ -3,10 +3,10 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires the 282 local animations in extracted/celine-seasonal-expansion-study"]
-fn celine_summer_special_cover_hands_and_preserve_books_tools_and_clothing() {
+fn celine_summer_garden_cover_hands_legs_and_preserve_braids_tools_and_clothing() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/celine-seasonal-expansion-study");
-    let profile = std::env::var_os("FOM_CELINE_SEASONAL_SPECIAL_PROFILE")
+    let profile = std::env::var_os("FOM_CELINE_SEASONAL_EXPANSION_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/celine-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile).unwrap()).unwrap();
@@ -19,49 +19,61 @@ fn celine_summer_special_cover_hands_and_preserve_books_tools_and_clothing() {
     fs::write(&profile_path, serde_json::to_vec(&profile).unwrap()).unwrap();
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let source = [0xFCD9B3, 0xF0B988, 0xD37A57, 0x672115];
-    // Source-art points distinguish bare Summer arm shadows and moving fingers
-    // from shared dark hair, belt, sandal and garment colors beside the tools.
+    // Source-art landmarks distinguish moving wrists, fingers and leg shadows
+    // from identical dark braid, belt and sandal colors in the Summer garden outfit.
     let landmarks = [
-        ("book_stand_start_south", 0, 36, 44, 0x672115, true),
-        ("book_stand_start_south", 0, 37, 45, 0x672115, false),
-        ("book_stand_start_south", 1, 35, 47, 0x672115, true),
-        ("book_stand_start_south", 1, 39, 41, 0xF6E4D7, false),
-        ("book_stand_loop_south", 0, 44, 36, 0x672115, true),
-        ("book_stand_loop_south", 0, 35, 32, 0xDF8D4B, false),
-        ("book_stand_loop_south", 0, 32, 42, 0xF6E4D7, false),
-        ("book_stand_loop_south", 2, 38, 40, 0x672115, true),
-        ("book_stand_end_south", 0, 44, 47, 0x672115, true),
-        ("book_stand_end_south", 2, 37, 45, 0x672115, false),
-        ("book_sit_start_south", 0, 34, 47, 0x672115, true),
-        ("book_sit_start_south", 0, 37, 45, 0x672115, false),
-        ("book_sit_start_south", 1, 44, 47, 0x672115, true),
-        ("book_sit_start_south", 1, 39, 41, 0xF6E4D7, false),
-        ("book_sit_loop_south", 0, 41, 40, 0x672115, true),
-        ("book_sit_loop_south", 0, 32, 42, 0xF6E4D7, false),
-        ("book_sit_loop_south", 2, 35, 36, 0x672115, true),
-        ("book_sit_end_south", 0, 35, 47, 0x672115, true),
-        ("book_sit_end_south", 2, 42, 45, 0x672115, false),
-        ("sweep_start_south", 0, 33, 48, 0x672115, true),
-        ("sweep_start_south", 0, 37, 46, 0x672115, false),
-        ("sweep_end_south", 0, 46, 48, 0x672115, true),
-        ("sweep_end_south", 0, 42, 46, 0x672115, false),
-        ("sweep_loop_south", 0, 39, 48, 0x672115, true),
-        ("sweep_loop_south", 0, 44, 47, 0xBB8151, false),
-        ("sweep_loop_south", 1, 39, 46, 0x672115, false),
-        ("sweep_loop_south", 1, 44, 47, 0xFCD9B3, true),
-        ("sweep_loop_south", 3, 38, 35, 0x672115, true),
-        ("sweep_loop_south", 6, 38, 45, 0x672115, true),
-        ("sweep_loop_south", 12, 40, 47, 0x672115, true),
-        ("sweep_loop_south", 13, 36, 47, 0x672115, true),
-        ("sweep_loop_south", 14, 43, 42, 0x672115, true),
-        ("sweep_loop_south", 14, 43, 44, 0x672115, true),
-        ("sweep_loop_south", 14, 37, 45, 0x672115, false),
+        ("idle_south", 0, 43, 44, 0x672115, true),
+        ("idle_south", 0, 42, 45, 0x672115, false),
+        ("idle_south", 0, 37, 52, 0xB65932, false),
+        ("idle_east", 0, 44, 36, 0x672115, true),
+        ("idle_east", 0, 35, 40, 0x672115, false),
+        ("idle_east", 0, 35, 47, 0x672115, true),
+        ("idle_north", 0, 36, 44, 0x672115, true),
+        ("idle_north", 0, 35, 36, 0x672115, false),
+        ("walk_north", 1, 34, 48, 0x672115, true),
+        ("walk_north", 1, 37, 46, 0x672115, false),
+        ("walk_north", 3, 45, 48, 0x672115, true),
+        ("walk_south", 1, 34, 48, 0x672115, true),
+        ("walk_south", 1, 34, 41, 0x672115, false),
+        ("walk_south", 3, 45, 48, 0x672115, true),
+        ("walk_east", 1, 44, 46, 0x672115, true),
+        ("walk_east", 1, 41, 50, 0x672115, true),
+        ("walk_east", 1, 39, 51, 0x672115, true),
+        ("walk_east", 1, 42, 46, 0x672115, false),
+        ("walk_east", 3, 36, 48, 0x672115, true),
+        ("blink_east", 1, 44, 35, 0x672115, true),
+        ("blink_east", 1, 35, 40, 0x672115, false),
+        ("blink_east", 1, 35, 47, 0x672115, true),
+        ("blink_south", 1, 36, 35, 0x672115, true),
+        ("blink_south", 1, 43, 44, 0x672115, true),
+        ("blink_south", 1, 36, 40, 0x672115, false),
+        ("sit_east", 0, 35, 47, 0x672115, true),
+        ("sit_east", 0, 43, 44, 0x672115, false),
+        ("sit_east", 0, 41, 48, 0xB65932, false),
+        ("sit_north", 0, 34, 47, 0x672115, true),
+        ("sit_north", 0, 35, 36, 0x672115, false),
+        ("sit_south", 0, 45, 47, 0x672115, true),
+        ("sit_south", 0, 42, 45, 0x672115, false),
+        ("kiss_east", 2, 47, 35, 0x672115, true),
+        ("kiss_east", 2, 36, 46, 0x672115, true),
+        ("kiss_east", 2, 38, 41, 0x672115, false),
+        ("kiss_east", 2, 44, 45, 0x672115, false),
+        ("kiss_east", 1, 36, 48, 0x672115, true),
+        ("harvest_east", 0, 40, 53, 0x672115, true),
+        ("harvest_east", 0, 38, 45, 0x672115, false),
+        ("harvest_east", 0, 43, 50, 0x672115, false),
+        ("harvest_east", 1, 48, 51, 0x672115, true),
+        ("harvest_east", 1, 42, 52, 0x672115, true),
+        ("harvest_east", 1, 44, 50, 0x672115, false),
+        ("harvest_east", 3, 51, 52, 0x672115, true),
+        ("harvest_east", 3, 47, 53, 0x672115, true),
+        ("harvest_east", 3, 40, 47, 0x672115, false),
+        ("harvest_east", 3, 41, 50, 0x672115, false),
         ("water_east", 0, 38, 44, 0x672115, true),
-        ("water_east", 0, 34, 46, 0x672115, false),
+        ("water_east", 0, 36, 41, 0x672115, false),
         ("water_east", 0, 46, 44, 0xFFCF36, false),
-        ("water_east", 1, 38, 41, 0x672115, false),
         ("water_east", 1, 47, 39, 0x672115, true),
-        ("water_east", 1, 45, 43, 0x672115, false),
+        ("water_east", 1, 37, 39, 0x672115, false),
         ("water_east", 1, 43, 52, 0x672115, false),
         ("water_east", 3, 36, 44, 0x672115, true),
         ("water_east", 3, 43, 43, 0xDD9D3E, false),
@@ -121,18 +133,26 @@ fn celine_summer_special_cover_hands_and_preserve_books_tools_and_clothing() {
         let mut selection = Vec::new();
         let (mut changed, mut protected, mut frames) = (0, 0, 0);
         for (name, count) in [
-            ("book_sit_end_south", 124),
-            ("book_sit_loop_south", 142),
-            ("book_sit_start_south", 124),
-            ("book_stand_end_south", 156),
-            ("book_stand_loop_south", 186),
-            ("book_stand_start_south", 156),
-            ("sweep_end_south", 76),
-            ("sweep_loop_south", 892),
-            ("sweep_start_south", 66),
-            ("water_east", 227),
+            ("harvest_east", 565),
+            ("water_east", 222),
+            ("blink_east", 175),
+            ("blink_south", 198),
+            ("idle_east", 55),
+            ("idle_north", 42),
+            ("idle_south", 63),
+            ("kiss_east", 216),
+            ("sit_east", 44),
+            ("sit_north", 22),
+            ("sit_south", 48),
+            ("walk_east", 220),
+            ("walk_north", 154),
+            ("walk_south", 235),
         ] {
-            let prefix = "specialanimation_summer";
+            let prefix = if name.starts_with("harvest") || name.starts_with("water") {
+                "specialanimation_summer_garden"
+            } else {
+                "summer_garden"
+            };
             let asset = format!(
                 "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_{prefix}_{name}.png"
             );
@@ -181,7 +201,7 @@ fn celine_summer_special_cover_hands_and_preserve_books_tools_and_clothing() {
             frames += per_frame.len();
             changed += count;
         }
-        assert_eq!((changed, protected, frames), (2149, 64, 41));
+        assert_eq!((changed, protected, frames), (2259, 132, 42));
         if first_selection.is_empty() {
             first_selection = selection;
         } else {

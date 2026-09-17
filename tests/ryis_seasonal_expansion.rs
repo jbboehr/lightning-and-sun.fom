@@ -2,8 +2,8 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis Summer special corpus in extracted/ryis-seasonal-expansion-study"]
-fn ryis_summer_specials_cover_skin_but_preserve_tools_books_and_gloves() {
+#[ignore = "requires the local Ryis Autumn special corpus in extracted/ryis-seasonal-expansion-study"]
+fn ryis_autumn_specials_preserve_tools_books_gloves_and_coat() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/ryis-seasonal-expansion-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
@@ -11,49 +11,53 @@ fn ryis_summer_specials_cover_skin_but_preserve_tools_books_and_gloves() {
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/ryis-world-trial.json"));
     let cases: [(&str, &[usize]); 11] = [
-        ("hammer_east", &[59, 50, 50, 52, 53, 54, 54]),
-        ("read_sit_end_south", &[53, 41, 59]),
-        ("read_sit_loop_south", &[48, 57, 48, 57]),
-        ("read_sit_start_south", &[59, 45, 49]),
-        ("saw_east", &[53, 55, 58, 55]),
-        ("siteyesclosed_east", &[61]),
-        ("siteyesclosed_south", &[69]),
-        ("wipebrow_south", &[49, 59, 64, 72, 70, 69]),
-        ("write_end_south", &[63, 66]),
-        ("write_loop_south", &[64, 65, 64, 65]),
-        ("write_start_south", &[66, 64]),
+        ("hammer_east", &[52, 44, 44, 51, 51, 51, 51]),
+        ("read_sit_end_south", &[54, 40, 51]),
+        ("read_sit_loop_south", &[44, 56, 44, 56]),
+        ("read_sit_start_south", &[51, 44, 50]),
+        ("saw_east", &[43, 47, 47, 47]),
+        ("siteyesclosed_east", &[54]),
+        ("siteyesclosed_south", &[60]),
+        ("wipebrow_south", &[32, 44, 50, 59, 53, 52]),
+        ("write_end_south", &[55, 59]),
+        ("write_loop_south", &[54, 54, 54, 54]),
+        ("write_start_south", &[59, 55]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    // These shades occur only on reviewed Summer skin. Blue book covers,
-    // cream paper, brown tool/clipboard materials and dark gloves are separate
-    // colors. Detached fingers and exposed lower legs need their own seeds.
+    // Reviewed skin includes detached fingertips beside yellow gloves and
+    // props. Blue covers, cream paper, brown handles/clipboard and the coat
+    // use separate shades. Covered legs, boots and mouth details stay original.
     let skin = [0xB06C57, 0x854D3C, 0x63342A, 0x491F1B];
     // Frame numbers are zero-based; x coordinates here are within the frame.
     let landmarks = [
         ("hammer_east", 0, 52, 43, 0x85CED4, false), // hammer head
         ("hammer_east", 0, 48, 44, 0x936244, false), // brown handle
-        ("hammer_east", 3, 50, 44, 0x63342A, true),  // gripping finger
+        ("hammer_east", 3, 50, 44, 0xE7A063, false), // glove beside hammer
+        ("hammer_east", 3, 47, 45, 0xB06C57, true),  // gripping fingertip
         ("saw_east", 0, 60, 44, 0xC0BDD7, false),    // saw blade
         ("saw_east", 0, 50, 46, 0x491F1B, true),     // detached finger
-        ("saw_east", 0, 49, 45, 0x353A50, false),    // adjacent glove
-        ("wipebrow_south", 0, 42, 33, 0x353A50, false), // raised glove
+        ("saw_east", 0, 49, 45, 0xF4CD86, false),    // adjacent yellow glove
+        ("wipebrow_south", 0, 42, 33, 0x63342A, true), // finger shading
         ("wipebrow_south", 0, 41, 33, 0xB06C57, true), // finger at brow
+        ("wipebrow_south", 0, 43, 35, 0xF4CD86, false), // raised glove
         ("wipebrow_south", 4, 40, 38, 0x9E2626, false), // mouth detail
-        ("write_loop_south", 0, 36, 43, 0x854D3C, true), // writing hand
+        ("write_loop_south", 0, 36, 43, 0xDCEEF8, false), // light cuff
+        ("write_loop_south", 0, 37, 45, 0xB06C57, true), // writing finger
         ("write_loop_south", 0, 41, 47, 0xB06C57, true), // clipboard finger
-        ("write_loop_south", 0, 43, 47, 0x353A50, false), // dark glove
+        ("write_loop_south", 0, 43, 47, 0x854D3C, true), // finger shading
+        ("write_loop_south", 0, 43, 46, 0xF4CD86, false), // glove above finger
         ("write_loop_south", 0, 44, 43, 0x7D4F3D, false), // brown clipboard
-        ("write_loop_south", 0, 37, 51, 0x854D3C, true), // lower leg
-        ("write_loop_south", 0, 37, 53, 0xFFA799, false), // pink footwear
+        ("write_loop_south", 0, 37, 51, 0x111315, false), // covered lower leg
+        ("write_loop_south", 0, 37, 53, 0x805E54, false), // brown boot
         ("read_sit_start_south", 1, 39, 41, 0xF6E4D7, false), // cream pages
         ("read_sit_start_south", 1, 38, 48, 0x699CC1, false), // blue cover
-        ("read_sit_start_south", 1, 34, 46, 0x353A50, false), // glove by book
+        ("read_sit_start_south", 1, 34, 46, 0xF4CD86, false), // glove by book
         ("read_sit_start_south", 1, 35, 47, 0x491F1B, true), // detached finger
         ("read_sit_start_south", 2, 40, 45, 0xC9AF9C, false), // shaded page
-        ("read_sit_loop_south", 0, 35, 46, 0x4E7E9F, false), // blue cover shading
-        ("read_sit_loop_south", 0, 36, 47, 0x2E4D69, false), // blue cover edge
-        ("siteyesclosed_south", 0, 37, 50, 0x63342A, true), // seated leg
-        ("siteyesclosed_south", 0, 37, 51, 0xFFA799, false), // adjacent footwear
+        ("read_sit_loop_south", 0, 35, 46, 0x4E7E9F, false), // cover shading
+        ("read_sit_loop_south", 0, 36, 47, 0x2E4D69, false), // cover edge
+        ("siteyesclosed_south", 0, 37, 50, 0x5A2E2B, false), // boot shadow
+        ("siteyesclosed_south", 0, 37, 51, 0x805E54, false), // boot highlight
         ("siteyesclosed_south", 0, 37, 36, 0x000000, false), // closed eye
     ];
     let temp = tempfile::tempdir().unwrap();
@@ -89,7 +93,7 @@ fn ryis_summer_specials_cover_skin_but_preserve_tools_books_and_gloves() {
         let mut changed = 0;
         for (name, counts) in cases {
             let asset = format!(
-                "assets/animations/NPCs/Ryis/Sprites/Summer/spr_npc_ryis_specialanimation_summer_{name}.png"
+                "assets/animations/NPCs/Ryis/Sprites/Autumn/spr_npc_ryis_specialanimation_autumn_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -125,6 +129,6 @@ fn ryis_summer_specials_cover_skin_but_preserve_tools_books_and_gloves() {
                 }
             }
         }
-        assert_eq!(changed, 2139);
+        assert_eq!(changed, 1866);
     }
 }
