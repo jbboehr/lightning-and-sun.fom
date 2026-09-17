@@ -3,10 +3,10 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires the 242 local animations in extracted/celine-summer-expansion-study"]
-fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
+fn celine_summer_idle_walk_cover_arms_legs_and_preserve_sandals() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/celine-summer-expansion-study");
-    let profile = std::env::var_os("FOM_CELINE_STANDARD_PROFILE")
+    let profile = std::env::var_os("FOM_CELINE_SUMMER_EXPANSION_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/celine-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile).unwrap()).unwrap();
@@ -19,39 +19,42 @@ fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
     fs::write(&profile_path, serde_json::to_vec(&profile).unwrap()).unwrap();
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let source = [0xFCD9B3, 0xF0B988, 0xD37A57, 0x672115];
-    // Source-art landmarks distinguish moving hands from the identical dark
-    // outline on orange hair, belts and boots, including North's tiny hand.
+    // Independent source-art points separate skin at fingertips, calves and toes
+    // from the same brown outlines in hair, belt and sandal straps.
     let landmarks = [
-        ("action_east", 0, 40, 48, 0x672115, true),
-        ("action_east", 0, 36, 46, 0x672115, false),
-        ("action_east", 1, 48, 45, 0x672115, true),
-        ("action_east", 1, 38, 43, 0x672115, false),
-        ("action_east", 1, 40, 45, 0x672115, false),
-        ("action_east", 1, 45, 43, 0xFCD9B3, true),
-        ("action_east", 2, 45, 46, 0x672115, true),
-        ("action_east", 6, 35, 47, 0x672115, true),
-        ("action_north", 0, 33, 45, 0x672115, true),
-        ("action_north", 0, 35, 45, 0x672115, false),
-        ("action_north", 1, 35, 46, 0x672115, true),
-        ("action_north", 1, 35, 44, 0x672115, false),
-        ("action_north", 6, 46, 47, 0x672115, true),
-        ("action_north", 6, 44, 45, 0x672115, false),
-        ("action_south", 0, 34, 48, 0x672115, true),
-        ("action_south", 0, 37, 46, 0x672115, false),
-        ("action_south", 1, 35, 47, 0x672115, true),
-        ("action_south", 1, 38, 45, 0x672115, false),
-        ("action_south", 2, 38, 47, 0x672115, true),
-        ("action_south", 6, 36, 44, 0x672115, true),
-        ("action_south", 6, 37, 45, 0x672115, false),
-        ("kiss_east", 0, 35, 48, 0x672115, true),
-        ("kiss_east", 0, 33, 33, 0x672115, false),
-        ("kiss_east", 1, 36, 48, 0x672115, true),
-        ("kiss_east", 1, 39, 46, 0x672115, false),
-        ("kiss_east", 2, 36, 46, 0x672115, true),
-        ("kiss_east", 2, 40, 45, 0x672115, false),
-        ("sleep_east", 0, 44, 39, 0x672115, true),
-        ("sleep_east", 0, 35, 44, 0x672115, false),
-        ("sleep_east", 0, 38, 45, 0x672115, false),
+        ("idle_east", 0, 44, 36, 0x672115, true),
+        ("idle_east", 0, 34, 32, 0x672115, false),
+        ("idle_east", 0, 35, 47, 0x672115, true),
+        ("idle_east", 0, 38, 45, 0x672115, false),
+        ("idle_east", 0, 38, 51, 0xD37A57, true),
+        ("idle_east", 0, 38, 52, 0xB65932, false),
+        ("idle_east", 0, 40, 53, 0xFCD9B3, true),
+        ("idle_north", 0, 33, 47, 0x672115, true),
+        ("idle_north", 0, 35, 45, 0x672115, false),
+        ("idle_north", 0, 38, 46, 0x672115, false),
+        ("idle_north", 0, 37, 50, 0xD37A57, true),
+        ("idle_north", 0, 37, 52, 0xB65932, false),
+        ("idle_south", 0, 36, 44, 0x672115, true),
+        ("idle_south", 0, 42, 45, 0x672115, false),
+        ("idle_south", 0, 39, 41, 0xF5F5F5, false),
+        ("idle_south", 0, 37, 53, 0xFCD9B3, true),
+        ("walk_east", 1, 41, 50, 0x672115, true),
+        ("walk_east", 1, 39, 51, 0x672115, true),
+        ("walk_east", 1, 42, 46, 0x672115, false),
+        ("walk_east", 1, 41, 53, 0xB65932, false),
+        ("walk_east", 3, 36, 48, 0x672115, true),
+        ("walk_east", 3, 35, 44, 0x672115, false),
+        ("walk_east", 3, 34, 45, 0x672115, false),
+        ("walk_east", 3, 36, 52, 0xFCD9B3, true),
+        ("walk_north", 1, 34, 48, 0x672115, true),
+        ("walk_north", 1, 33, 46, 0x672115, false),
+        ("walk_north", 1, 44, 46, 0x672115, true),
+        ("walk_north", 3, 45, 48, 0x672115, true),
+        ("walk_north", 3, 46, 46, 0x672115, false),
+        ("walk_south", 1, 34, 48, 0x672115, true),
+        ("walk_south", 1, 37, 46, 0x672115, false),
+        ("walk_south", 3, 45, 48, 0x672115, true),
+        ("walk_south", 3, 42, 46, 0x672115, false),
     ];
     let mut first_selection = Vec::new();
     for (id, targets) in [
@@ -108,14 +111,16 @@ fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
         let mut selection = Vec::new();
         let (mut changed, mut protected, mut frames) = (0, 0, 0);
         for (name, count) in [
-            ("action_east", 297),
-            ("action_north", 37),
-            ("action_south", 324),
-            ("kiss_east", 189),
-            ("sleep_east", 50),
+            ("idle_east", 61),
+            ("idle_north", 26),
+            ("idle_south", 70),
+            ("walk_east", 249),
+            ("walk_north", 90),
+            ("walk_south", 262),
         ] {
+            let prefix = "summer";
             let asset = format!(
-                "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_spring_{name}.png"
+                "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_{prefix}_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -162,7 +167,7 @@ fn celine_standard_preserve_hair_boots_and_mouths_while_covering_hands() {
             frames += per_frame.len();
             changed += count;
         }
-        assert_eq!((changed, protected, frames), (897, 306, 26));
+        assert_eq!((changed, protected, frames), (758, 115, 15));
         if first_selection.is_empty() {
             first_selection = selection;
         } else {
