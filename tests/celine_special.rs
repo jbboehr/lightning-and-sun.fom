@@ -2,10 +2,10 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the 282 local animations in extracted/celine-seasonal-expansion-study"]
+#[ignore = "requires the 288 local animations in extracted/celine-autumn-actions-study"]
 fn celine_special_preserve_hair_boots_and_mouths_while_covering_hands() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/celine-seasonal-expansion-study");
+    let original = root.join("extracted/celine-autumn-actions-study");
     let profile = std::env::var_os("FOM_CELINE_SPECIAL_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/celine-world-trial.json"));

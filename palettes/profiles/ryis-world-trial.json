@@ -12573,6 +12573,262 @@
           47
         ]
       ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_idle_east.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "dc528944a2ea06e112cffe244e3abf897d645b7b201a3476e0906ebc1b6b2244",
+      "seeds": [
+        [
+          39,
+          31
+        ],
+        [
+          44,
+          34
+        ],
+        [
+          35,
+          46
+        ],
+        [
+          44,
+          46
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_idle_north.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "051fa60ff7054903da03685ca6459d05f0caf34cc56306c6db1bcf0bcab59db2",
+      "seeds": [
+        [
+          35,
+          34
+        ],
+        [
+          33,
+          46
+        ],
+        [
+          45,
+          46
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_idle_south.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "d0352b24a35255e22026081d776027d607f635580c69d46b334f0b22828f7d7a",
+      "seeds": [
+        [
+          38,
+          31
+        ],
+        [
+          33,
+          46
+        ],
+        [
+          45,
+          46
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_walk_east.png",
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "67e9d72483d994e6ea6ed7831b962ddbd1b33a10118a1275486e7064b3164857",
+      "seeds": [
+        [
+          39,
+          31
+        ],
+        [
+          199,
+          31
+        ],
+        [
+          119,
+          32
+        ],
+        [
+          279,
+          32
+        ],
+        [
+          44,
+          34
+        ],
+        [
+          204,
+          34
+        ],
+        [
+          124,
+          35
+        ],
+        [
+          284,
+          35
+        ],
+        [
+          35,
+          46
+        ],
+        [
+          44,
+          46
+        ],
+        [
+          113,
+          46
+        ],
+        [
+          125,
+          46
+        ],
+        [
+          195,
+          46
+        ],
+        [
+          204,
+          46
+        ],
+        [
+          276,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_walk_north.png",
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "be7bf10beee43887748252aeddbd7b3b3f4d5f635729bf1f6e802f0a600f033f",
+      "seeds": [
+        [
+          35,
+          34
+        ],
+        [
+          195,
+          34
+        ],
+        [
+          115,
+          35
+        ],
+        [
+          275,
+          35
+        ],
+        [
+          33,
+          46
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          125,
+          46
+        ],
+        [
+          193,
+          46
+        ],
+        [
+          205,
+          46
+        ],
+        [
+          274,
+          46
+        ],
+        [
+          114,
+          47
+        ],
+        [
+          284,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_walk_south.png",
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "d1c7601764a9633fede75e1272678523dbb2a4013ac99fd757559919f4abe2fd",
+      "seeds": [
+        [
+          38,
+          31
+        ],
+        [
+          198,
+          31
+        ],
+        [
+          118,
+          32
+        ],
+        [
+          278,
+          32
+        ],
+        [
+          33,
+          46
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          125,
+          46
+        ],
+        [
+          193,
+          46
+        ],
+        [
+          205,
+          46
+        ],
+        [
+          274,
+          46
+        ],
+        [
+          114,
+          47
+        ],
+        [
+          284,
+          47
+        ]
+      ]
     }
   ],
   "source_colors": [

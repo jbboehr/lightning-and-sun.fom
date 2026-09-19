@@ -2,10 +2,10 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the 222 local animations in extracted/hayden-seasonal-expansion-study"]
+#[ignore = "requires the 233 local animations in extracted/hayden-autumn-actions-study"]
 fn hayden_reaction_masks_preserve_books_and_shirt_edges_around_visible_skin() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/hayden-seasonal-expansion-study");
+    let original = root.join("extracted/hayden-autumn-actions-study");
     let set = std::env::var_os("FOM_HAYDEN_REACTIONS_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/hayden-world-trial.json"));

@@ -2,18 +2,19 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/hayden-autumn-actions-study and the local accepted Summer actions baseline"]
-fn hayden_summer_standard_masks_cover_kissing_cheek_and_preserve_clothing() {
+#[ignore = "requires extracted/hayden-autumn-actions-study and the local accepted Autumn pilot baseline"]
+fn hayden_autumn_actions_masks_preserve_sleeves_mouth_and_previous_outputs() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/hayden-autumn-actions-study");
-    let baseline = root.join("generated/characters-world-seasonal-actions-trial/characters/hayden");
+    let baseline =
+        root.join("generated/characters-world-seasonal-expansion-trial/characters/hayden");
     let set = root.join("palettes/sets/hayden-world-trial.json");
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
     let profile: Value = serde_json::from_slice(
         &fs::read(root.join("palettes/profiles/hayden-world-trial.json")).unwrap(),
     )
     .unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..203];
+    let prior = &profile["regions"].as_array().unwrap()[..222];
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
@@ -30,59 +31,76 @@ fn hayden_summer_standard_masks_cover_kissing_cheek_and_preserve_clothing() {
         "{}",
         String::from_utf8_lossy(&result.stderr)
     );
-    let source = [0xE7B172, 0xAB7E3F, 0x815A2E, 0x523C26, 0xE8B271];
+    let source = [0xE7B172, 0xAB7E3F, 0x815A2E, 0x523C26];
     // Independently reviewed, literal frame-local boundaries. Frames are zero-based.
-    // Shared browns on skin must change while neighboring sleeve folds stay original.
+    // Hands and eyelids change beside purple sleeve edges and preserved facial hair;
+    // both red mouth shades remain original throughout the eating animation.
     let landmarks = [
-        ("action_east", 0, 39, 44, 0x815A2E, true),
-        ("action_east", 0, 40, 47, 0x815A2E, true),
-        ("action_east", 1, 41, 41, 0xAB7E3F, true),
-        ("action_east", 1, 39, 44, 0x523C26, false),
-        ("action_east", 2, 43, 44, 0xAB7E3F, true),
-        ("action_east", 2, 39, 44, 0x523C26, false),
-        ("action_east", 6, 43, 44, 0x523C26, false),
-        ("action_north", 0, 48, 42, 0x815A2E, true),
-        ("action_north", 2, 33, 43, 0xE7B172, true),
-        ("action_north", 2, 35, 45, 0x815A2E, true),
-        ("action_north", 2, 40, 36, 0xDFC6A1, false),
-        ("action_south", 1, 36, 43, 0x815A2E, true),
-        ("action_south", 1, 43, 44, 0x523C26, false),
-        ("action_south", 2, 38, 43, 0x815A2E, true),
-        ("action_south", 2, 40, 44, 0xAB7E3F, true),
-        ("action_south", 5, 43, 45, 0x523C26, false),
-        ("kiss_east", 0, 42, 45, 0x523C26, false),
-        ("kiss_east", 0, 43, 45, 0x815A2E, true),
-        ("kiss_east", 2, 41, 35, 0xE8B271, true),
-        ("kiss_east", 2, 41, 38, 0xE7B172, true),
-        ("kiss_east", 2, 39, 44, 0x523C26, false),
-        ("kiss_east", 2, 45, 44, 0x523C26, false),
-        ("kiss_east", 2, 37, 46, 0x815A2E, true),
-        ("sleep_east", 0, 44, 36, 0x815A2E, true),
-        ("sleep_east", 0, 44, 38, 0xAB7E3F, true),
-        ("sleep_east", 0, 37, 44, 0x523C26, false),
+        ("blink_east", 1, 35, 46, 0x815A2E, true),
+        ("blink_east", 1, 45, 43, 0xAB7E3F, true),
+        ("blink_east", 1, 36, 38, 0x582D52, false),
+        ("blink_south", 1, 34, 46, 0x815A2E, true),
+        ("blink_south", 1, 37, 42, 0x924A75, false),
+        ("blink_south", 1, 39, 27, 0x66534A, false),
+        ("drink_east", 1, 35, 43, 0x815A2E, true),
+        ("drink_east", 1, 36, 43, 0xAB7E3F, true),
+        ("drink_east", 1, 35, 39, 0xAE6982, false),
+        ("drink_north", 1, 31, 44, 0xAB7E3F, true),
+        ("drink_north", 1, 33, 46, 0x815A2E, true),
+        ("drink_north", 1, 46, 39, 0xAE6982, false),
+        ("drink_south", 1, 47, 43, 0x815A2E, true),
+        ("drink_south", 1, 45, 43, 0xE7B172, true),
+        ("drink_south", 1, 43, 40, 0x743B68, false),
+        ("eat_east", 0, 40, 43, 0x815A2E, true),
+        ("eat_east", 1, 41, 36, 0x9E2626, false),
+        ("eat_east", 2, 40, 32, 0x410808, false),
+        ("eat_east", 2, 40, 33, 0x9E2626, false),
+        ("eat_east", 2, 38, 38, 0x924A75, false),
+        ("eat_east", 3, 37, 44, 0x815A2E, true),
+        ("eat_north", 1, 31, 44, 0xAB7E3F, true),
+        ("eat_north", 1, 33, 46, 0x815A2E, true),
+        ("eat_north", 1, 46, 38, 0x743B68, false),
+        ("eat_south", 1, 39, 37, 0x9E2626, false),
+        ("eat_south", 2, 38, 32, 0x410808, false),
+        ("eat_south", 2, 38, 33, 0x9E2626, false),
+        ("eat_south", 2, 44, 38, 0x924A75, false),
+        ("eat_south", 3, 37, 43, 0x815A2E, true),
+        ("sit_east", 0, 32, 44, 0xAB7E3F, true),
+        ("sit_east", 0, 35, 43, 0xE7B172, true),
+        ("sit_east", 0, 35, 39, 0xAE6982, false),
+        ("sit_north", 0, 47, 43, 0xAB7E3F, true),
+        ("sit_north", 0, 33, 46, 0x815A2E, true),
+        ("sit_north", 0, 35, 38, 0x582D52, false),
+        ("sit_south", 0, 47, 43, 0x815A2E, true),
+        ("sit_south", 0, 34, 43, 0xE7B172, true),
+        ("sit_south", 0, 34, 38, 0xAE6982, false),
     ];
     let cases = [
-        ("action_east", 7, 247),
-        ("action_north", 7, 70),
-        ("action_south", 7, 341),
-        ("kiss_east", 4, 155),
-        ("sleep_east", 1, 39),
+        ("blink_east", 3, 112),
+        ("blink_south", 3, 145),
+        ("drink_east", 3, 100),
+        ("drink_north", 3, 57),
+        ("drink_south", 3, 147),
+        ("eat_east", 5, 150),
+        ("eat_north", 3, 57),
+        ("eat_south", 5, 255),
+        ("sit_east", 1, 26),
+        ("sit_north", 1, 29),
+        ("sit_south", 1, 49),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
     for preset in presets["presets"].as_array().unwrap() {
         let id = preset["id"].as_str().unwrap();
-        let mut target: Vec<_> = preset["colors"].as_array().unwrap()[11..15]
+        let target: Vec<_> = preset["colors"].as_array().unwrap()[11..15]
             .iter()
             .map(|c| u32::from_str_radix(&c.as_str().unwrap()[1..7], 16).unwrap())
             .collect();
-        // The isolated kissing cheek uses the existing portrait highlight.
-        target.push(u32::from_str_radix(&preset["colors"][0].as_str().unwrap()[1..7], 16).unwrap());
         let variant = output.join("variants").join(id);
         let mut mask = Vec::new();
         for (case, frames, expected_changed) in cases {
             let asset = format!(
-                "assets/animations/NPCs/Hayden/Sprites/Summer/spr_npc_hayden_summer_{case}.png"
+                "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_autumn_{case}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(variant.join(&asset)).unwrap().to_rgba8();
@@ -97,8 +115,8 @@ fn hayden_summer_standard_masks_cover_kissing_cheek_and_preserve_clothing() {
             for (x, y, p) in before.enumerate_pixels() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
-                // The lowered hands end at row 47; trousers and boots below stay original.
-                if y >= 48 {
+                // The lowered hand reaches row 48; trousers and boots below stay original.
+                if y >= 49 {
                     assert_eq!(p, q, "lower clothing changed: {id} {case} [{x},{y}]");
                 }
                 mask.push(p != q);

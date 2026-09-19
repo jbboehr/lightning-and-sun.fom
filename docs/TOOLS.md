@@ -121,7 +121,9 @@ finishes Hayden's Summer folder and Celine's regular Summer outfit, and adds
 Ryis's Autumn general actions, sleep and kiss. The
 [seasonal expansion](development/world-seasonal-expansion.md) adds Celine's
 Summer garden outfit, Ryis's remaining Autumn specials and Hayden's Autumn
-idle/walk pilot. Their totals are now 222, 211 and 282 sources respectively.
+idle/walk pilot. The [Autumn action batch](development/world-autumn-actions.md)
+adds Hayden's Autumn blink/sit/eat/drink, Celine's regular Autumn idle/walk and
+Ryis's Winter idle/walk. Their totals are now 233, 217 and 288 sources respectively.
 All three cover their complete Spring and Summer sprite folders; Ryis also
 covers his complete Autumn folder.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
