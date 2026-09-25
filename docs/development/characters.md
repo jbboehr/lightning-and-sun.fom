@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 276,
-Ryis's 244, Reina's 103, Juniper's 132, Celine's 345, March's 181, Balor's 110,
+Ryis's 244, Reina's 103, Juniper's 132, Celine's 350, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 11,188 variant strips from 2,797 sources. Caldarus's three
+variants per source give 11,208 variant strips from 2,802 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -116,6 +116,9 @@ for commit on 2026-09-25.
 The [Winter special batch](world-winter-special.md) finishes Hayden's Winter
 folder and adds Celine's Winter blink/sit/eat/drink: nineteen strips, 72 source
 frames and 37 West mirrors. The user approved this batch for commit on 2026-09-25.
+The [Celine Winter general-action batch](world-winter-general.md) adds her
+general actions, sleep and kiss: five strips, 26 source frames and twelve native
+West mirrors. The user approved this batch for commit on 2026-09-25.
 The other portrait batches above still use their original overworld sprites.
 The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
@@ -353,12 +356,12 @@ in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
 The latest combined package, including Hayden's complete Winter folder and
-Celine's Winter idle/walk/blink/sit/eat/drink, is retained in
-`generated/characters-world-winter-special-trial/package`. It was verified in
-the isolated `tmp/world-winter-special-playtest` lab with MOMI v0.16.4. It has no
+Celine's Winter idle/walk/blink/sit/eat/drink/action/sleep/kiss, is retained in
+`generated/characters-world-winter-general-trial/package`. It was verified in
+the isolated `tmp/world-winter-general-playtest` lab with MOMI v0.16.4. It has no
 preview helper and did not replace the desktop launcher. Use the
-[complete offline reviews](../../generated/world-winter-special-preview/index.html)
-to inspect all 72 new source frames and the 37 native West mirrors.
+[complete offline review](../../generated/celine-winter-general-preview/blue-review/index.html)
+to inspect all 26 new source frames and the twelve native West mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

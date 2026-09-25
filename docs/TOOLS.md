@@ -135,7 +135,9 @@ The [Winter standard batch](development/world-winter-standard.md) adds Hayden's
 Winter general actions, sleep and kiss alongside Celine's Winter idle/walk pilot.
 The [Winter special batch](development/world-winter-special.md) finishes Hayden's
 Winter folder and adds Celine's Winter blink/sit/eat/drink.
-Their totals are now 276, 244 and 345 sources
+The [Celine Winter general-action batch](development/world-winter-general.md)
+adds her general actions, sleep and kiss.
+Their totals are now 276, 244 and 350 sources
 respectively. All three cover their complete Spring and Summer sprite folders;
 all three also cover their complete Autumn folders, and Hayden and Ryis cover Winter.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

@@ -2,11 +2,11 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the 328 local animations in extracted/celine-winter-general-study"]
-fn celine_autumn_garden_cover_hands_and_preserve_braids_tools_and_clothing() {
+#[ignore = "requires the 350 local animations in extracted/celine-winter-general-study"]
+fn celine_winter_general_actions_cover_moving_fingers_and_preserve_hair_and_clothes() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/celine-winter-general-study");
-    let profile = std::env::var_os("FOM_CELINE_WINTER_ACTIONS_PROFILE")
+    let profile = std::env::var_os("FOM_CELINE_WINTER_GENERAL_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/celine-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile).unwrap()).unwrap();
@@ -19,68 +19,39 @@ fn celine_autumn_garden_cover_hands_and_preserve_braids_tools_and_clothing() {
     fs::write(&profile_path, serde_json::to_vec(&profile).unwrap()).unwrap();
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let source = [0xFCD9B3, 0xF0B988, 0xD37A57, 0x672115];
-    // Source-art landmarks distinguish moving wrists, fingers and facial contours
-    // from identical dark braid, belt and footwear colors in the Autumn garden outfit.
+    // Source-art points distinguish tiny hand and cheek contours from the
+    // same dark brown in hair, belt and boots; covered cuffs and mouths stay intact.
     let landmarks = [
-        ("idle_south", 0, 43, 44, 0x8686A6, false),
-        ("idle_south", 0, 42, 45, 0x672115, false),
-        ("idle_south", 0, 37, 52, 0x672115, false),
-        ("idle_east", 0, 44, 36, 0x672115, true),
-        ("idle_east", 0, 35, 40, 0x672115, false),
-        ("idle_east", 0, 35, 47, 0x672115, true),
-        ("idle_north", 0, 36, 44, 0x8686A6, false),
-        ("idle_north", 0, 35, 36, 0x672115, false),
-        ("walk_north", 1, 34, 48, 0x672115, true),
-        ("walk_north", 1, 37, 46, 0x000000, false),
-        ("walk_north", 3, 45, 48, 0x672115, true),
-        ("walk_south", 1, 34, 48, 0x672115, true),
-        ("walk_south", 1, 34, 41, 0x672115, false),
-        ("walk_south", 3, 45, 48, 0x672115, true),
-        ("walk_east", 1, 44, 46, 0xB1B1C7, false),
-        ("walk_east", 1, 41, 50, 0xB65932, false),
-        ("walk_east", 1, 39, 51, 0x672115, false),
-        ("walk_east", 1, 42, 46, 0x672115, false),
-        ("walk_east", 3, 36, 48, 0x672115, true),
-        ("blink_east", 1, 44, 35, 0x672115, true),
-        ("blink_east", 1, 35, 40, 0x672115, false),
-        ("blink_east", 1, 35, 47, 0x672115, true),
-        ("blink_south", 1, 36, 35, 0x672115, true),
-        ("blink_south", 1, 43, 44, 0x8686A6, false),
-        ("blink_south", 1, 36, 40, 0x672115, false),
-        ("sit_east", 0, 35, 47, 0x672115, true),
-        ("sit_east", 0, 43, 44, 0x000000, false),
-        ("sit_east", 0, 41, 48, 0x672115, false),
-        ("sit_north", 0, 34, 47, 0x672115, true),
-        ("sit_north", 0, 35, 36, 0x672115, false),
-        ("sit_south", 0, 45, 47, 0x672115, true),
-        ("sit_south", 0, 42, 45, 0x535B8B, false),
+        ("action_east", 0, 45, 37, 0x672115, true),
+        ("action_east", 0, 36, 32, 0x672115, false),
+        ("action_east", 0, 40, 48, 0x672115, true),
+        ("action_east", 0, 38, 52, 0x672115, false),
+        ("action_east", 1, 48, 45, 0x672115, true),
+        ("action_east", 1, 38, 43, 0x672115, false),
+        ("action_east", 1, 40, 45, 0x672115, false),
+        ("action_east", 2, 45, 46, 0x672115, true),
+        ("action_north", 0, 33, 45, 0x672115, true),
+        ("action_north", 0, 35, 45, 0x672115, false),
+        ("action_north", 0, 38, 46, 0x672115, false),
+        ("action_north", 1, 35, 46, 0x672115, true),
+        ("action_north", 1, 35, 44, 0x672115, false),
+        ("action_north", 6, 33, 47, 0x672115, true),
+        ("action_north", 6, 46, 47, 0x672115, true),
+        ("action_south", 2, 38, 47, 0x672115, true),
+        ("action_south", 2, 42, 45, 0x672115, false),
+        ("action_south", 2, 45, 46, 0x672115, true),
+        ("action_south", 2, 37, 52, 0x672115, false),
+        ("action_south", 0, 36, 37, 0x672115, true),
+        ("kiss_east", 0, 43, 37, 0x672115, true),
+        ("kiss_east", 0, 34, 32, 0x672115, false),
+        ("kiss_east", 0, 35, 48, 0x672115, true),
         ("kiss_east", 2, 47, 35, 0x672115, true),
-        ("kiss_east", 2, 36, 46, 0x672115, true),
-        ("kiss_east", 2, 38, 41, 0x672115, false),
-        ("kiss_east", 2, 44, 45, 0x000000, false),
-        ("kiss_east", 1, 36, 48, 0x672115, true),
-        ("harvest_east", 0, 40, 53, 0x672115, true),
-        ("harvest_east", 0, 38, 45, 0x672115, false),
-        ("harvest_east", 0, 43, 50, 0xB65932, false),
-        ("harvest_east", 1, 48, 51, 0x672115, true),
-        ("harvest_east", 1, 42, 52, 0x672115, true),
-        ("harvest_east", 1, 44, 50, 0xB65932, false),
-        ("harvest_east", 3, 51, 52, 0x672115, true),
-        ("harvest_east", 3, 47, 53, 0x672115, true),
-        ("harvest_east", 3, 40, 47, 0x672115, false),
-        ("harvest_east", 3, 41, 50, 0x535B8B, false),
-        ("water_east", 0, 38, 44, 0x33335C, false),
-        ("water_east", 0, 36, 41, 0x000000, false),
-        ("water_east", 0, 46, 44, 0xFFCF36, false),
-        ("water_east", 1, 47, 39, 0x672115, true),
-        ("water_east", 1, 37, 39, 0x672115, false),
-        ("water_east", 1, 43, 52, 0x672115, false),
-        ("water_east", 3, 36, 44, 0x33335C, false),
-        ("water_east", 3, 43, 43, 0xDD9D3E, false),
-        ("water_east", 0, 44, 37, 0x672115, true),
-        ("water_east", 1, 47, 36, 0x672115, true),
-        ("kiss_east", 2, 40, 40, 0x672115, false),
-        ("kiss_east", 2, 42, 40, 0x672115, false),
+        ("kiss_east", 2, 38, 40, 0xB65932, false),
+        ("kiss_east", 3, 36, 48, 0x672115, true),
+        ("sleep_east", 0, 44, 35, 0x672115, true),
+        ("sleep_east", 0, 36, 43, 0x672115, false),
+        ("sleep_east", 0, 38, 45, 0x672115, false),
+        ("sleep_east", 0, 38, 52, 0x672115, false),
     ];
     let mut first_selection = Vec::new();
     for (id, targets) in [
@@ -137,28 +108,14 @@ fn celine_autumn_garden_cover_hands_and_preserve_braids_tools_and_clothing() {
         let mut selection = Vec::new();
         let (mut changed, mut protected, mut frames) = (0, 0, 0);
         for (name, count) in [
-            ("water_east", 135),
-            ("kiss_east", 163),
-            ("blink_east", 118),
-            ("blink_south", 123),
-            ("idle_east", 36),
-            ("idle_north", 12),
-            ("idle_south", 38),
-            ("sit_east", 34),
-            ("sit_north", 6),
-            ("sit_south", 32),
-            ("walk_east", 146),
-            ("walk_north", 44),
-            ("walk_south", 148),
-            ("harvest_east", 426),
+            ("action_east", 265),
+            ("action_north", 36),
+            ("action_south", 270),
+            ("kiss_east", 167),
+            ("sleep_east", 41),
         ] {
-            let prefix = if name.starts_with("harvest") || name.starts_with("water") {
-                "specialanimation_autumn_garden"
-            } else {
-                "autumn_garden"
-            };
             let asset = format!(
-                "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_{prefix}_{name}.png"
+                "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -205,7 +162,7 @@ fn celine_autumn_garden_cover_hands_and_preserve_braids_tools_and_clothing() {
             frames += per_frame.len();
             changed += count;
         }
-        assert_eq!((changed, protected, frames), (1461, 262, 42));
+        assert_eq!((changed, protected, frames), (779, 287, 26));
         if first_selection.is_empty() {
             first_selection = selection;
         } else {

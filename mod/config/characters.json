@@ -1417,7 +1417,12 @@
       "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_eat_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_sit_east.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_sit_north.png": "Default",
-      "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_sit_south.png": "Default"
+      "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_sit_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_action_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_action_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_action_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_kiss_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Winter/spr_npc_celine_winter_sleep_east.png": "Default"
     },
     "hotkey": "INSERT",
     "id": "celine",
