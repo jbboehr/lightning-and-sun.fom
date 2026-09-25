@@ -2,18 +2,18 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/hayden-winter-expansion-study and the local accepted Spring baseline"]
-fn hayden_summer_masks_preserve_the_plaid_shirt_hat_and_previous_outputs() {
+#[ignore = "requires extracted/hayden-winter-expansion-study and the local accepted Autumn special baseline"]
+fn hayden_winter_masks_preserve_skin_colored_sleeves_and_cover_neckline() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/hayden-winter-expansion-study");
-    let baseline = root.join("generated/characters-world-outfit-special-trial/characters/hayden");
+    let baseline = root.join("generated/characters-world-autumn-special-trial/characters/hayden");
     let set = root.join("palettes/sets/hayden-world-trial.json");
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
     let profile: Value = serde_json::from_slice(
         &fs::read(root.join("palettes/profiles/hayden-world-trial.json")).unwrap(),
     )
     .unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..186];
+    let prior = &profile["regions"].as_array().unwrap()[..246];
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
@@ -32,49 +32,59 @@ fn hayden_summer_masks_preserve_the_plaid_shirt_hat_and_previous_outputs() {
     );
     let source = [0xE7B172, 0xAB7E3F, 0x815A2E, 0x523C26];
     // Independently reviewed, literal frame-local boundaries. Frames are zero-based.
-    // Shared browns on skin must change while neighboring sleeve folds stay original.
+    // Winter sleeves share the exact skin shades above cream cuffs; only exposed
+    // hands below them and the neckline between the collar edges should change.
     let landmarks = [
-        ("idle_east", 0, 43, 44, 0x523C26, false),
-        ("idle_east", 0, 37, 44, 0x523C26, false),
-        ("idle_east", 0, 34, 40, 0xE7B172, true),
         ("idle_east", 0, 41, 40, 0xE7B172, true),
-        ("idle_east", 0, 45, 41, 0x815A2E, true),
-        ("idle_east", 0, 40, 29, 0x3F332D, false),
-        ("idle_north", 0, 32, 42, 0xE7B172, true),
-        ("idle_north", 0, 33, 44, 0xAB7E3F, true),
-        ("idle_north", 0, 40, 37, 0xDFC6A1, false),
-        ("idle_south", 0, 36, 44, 0x523C26, false),
-        ("idle_south", 0, 43, 44, 0x523C26, false),
-        ("idle_south", 0, 45, 44, 0xAB7E3F, true),
+        ("idle_east", 0, 36, 42, 0x6E4922, false),
+        ("idle_east", 0, 34, 45, 0xE7B172, true),
+        ("idle_east", 0, 35, 44, 0xFFF5DA, false),
+        ("idle_north", 0, 35, 42, 0x6E4922, false),
+        ("idle_north", 0, 44, 43, 0x6E4922, false),
+        ("idle_north", 0, 32, 45, 0xE7B172, true),
+        ("idle_north", 0, 34, 46, 0x815A2E, true),
         ("idle_south", 0, 39, 40, 0xE7B172, true),
-        ("idle_south", 0, 40, 42, 0xFFC16A, false),
-        ("idle_south", 0, 40, 37, 0x66534A, false),
-        ("walk_east", 1, 35, 43, 0x523C26, true),
-        ("walk_east", 1, 43, 45, 0x523C26, false),
-        ("walk_east", 1, 45, 45, 0x815A2E, true),
-        ("walk_east", 1, 33, 44, 0x585654, false),
-        ("walk_east", 3, 44, 42, 0x523C26, true),
-        ("walk_east", 3, 43, 45, 0x523C26, false),
-        ("walk_east", 3, 37, 47, 0x815A2E, true),
+        ("idle_south", 0, 40, 40, 0xE7B172, true),
+        ("idle_south", 0, 44, 41, 0x6E4922, false),
+        ("idle_south", 0, 45, 45, 0xE7B172, true),
+        ("walk_east", 1, 41, 41, 0xE7B172, true),
+        ("walk_east", 1, 36, 42, 0x6E4922, false),
+        ("walk_east", 1, 36, 45, 0x6E4922, false),
+        ("walk_east", 1, 32, 45, 0xE7B172, true),
+        ("walk_east", 1, 47, 46, 0xAB7E3F, true),
+        ("walk_east", 3, 35, 46, 0xE7B172, true),
+        ("walk_north", 1, 44, 40, 0x815A2E, false),
+        ("walk_north", 1, 44, 41, 0x815A2E, false),
+        ("walk_north", 1, 46, 41, 0x815A2E, false),
+        ("walk_north", 1, 45, 44, 0x815A2E, true),
         ("walk_north", 1, 46, 45, 0x815A2E, true),
-        ("walk_north", 1, 34, 46, 0xAB7E3F, true),
-        ("walk_north", 3, 33, 45, 0x815A2E, true),
-        ("walk_north", 3, 45, 46, 0xAB7E3F, true),
-        ("walk_north", 1, 40, 38, 0xDFC6A1, false),
-        ("walk_south", 1, 45, 40, 0x523C26, true),
-        ("walk_south", 1, 44, 41, 0x523C26, true),
-        ("walk_south", 3, 34, 40, 0x523C26, true),
-        ("walk_south", 3, 35, 41, 0x523C26, true),
-        ("walk_south", 3, 43, 47, 0x815A2E, true),
-        ("walk_south", 3, 40, 42, 0x585654, false),
+        ("walk_north", 3, 35, 40, 0x815A2E, false),
+        ("walk_north", 3, 33, 41, 0x815A2E, false),
+        ("walk_north", 3, 33, 44, 0xAB7E3F, true),
+        ("walk_south", 1, 45, 40, 0x523C26, false),
+        ("walk_south", 1, 45, 41, 0xAB7E3F, false),
+        ("walk_south", 1, 46, 43, 0xAB7E3F, false),
+        ("walk_south", 1, 40, 41, 0xE7B172, true),
+        ("walk_south", 1, 45, 45, 0xAB7E3F, true),
+        ("walk_south", 1, 34, 47, 0xAB7E3F, true),
+        ("walk_south", 3, 34, 40, 0x523C26, false),
+        ("walk_south", 3, 34, 41, 0xAB7E3F, false),
+        ("walk_south", 3, 34, 43, 0x815A2E, false),
+        ("walk_south", 3, 39, 41, 0xE7B172, true),
+        ("walk_south", 3, 34, 45, 0xAB7E3F, true),
+        ("walk_south", 3, 45, 47, 0xAB7E3F, true),
+        ("idle_south", 0, 38, 31, 0xAB7E3F, true),
+        ("idle_south", 0, 35, 33, 0xE7B172, true),
+        ("idle_south", 0, 40, 28, 0x9E7C6E, false),
+        ("idle_south", 0, 39, 36, 0x3F332D, false),
     ];
     let cases = [
-        ("idle_east", 1, 39),
-        ("idle_north", 1, 19),
-        ("idle_south", 1, 55),
-        ("walk_east", 4, 157),
-        ("walk_north", 4, 46),
-        ("walk_south", 4, 203),
+        ("idle_east", 1, 22),
+        ("idle_north", 1, 12),
+        ("idle_south", 1, 30),
+        ("walk_east", 4, 90),
+        ("walk_north", 4, 50),
+        ("walk_south", 4, 116),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
@@ -88,7 +98,7 @@ fn hayden_summer_masks_preserve_the_plaid_shirt_hat_and_previous_outputs() {
         let mut mask = Vec::new();
         for (case, frames, expected_changed) in cases {
             let asset = format!(
-                "assets/animations/NPCs/Hayden/Sprites/Summer/spr_npc_hayden_summer_{case}.png"
+                "assets/animations/NPCs/Hayden/Sprites/Winter/spr_npc_hayden_winter_{case}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(variant.join(&asset)).unwrap().to_rgba8();
@@ -103,9 +113,12 @@ fn hayden_summer_masks_preserve_the_plaid_shirt_hat_and_previous_outputs() {
             for (x, y, p) in before.enumerate_pixels() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
-                // The exposed hands end at row 47; trousers and boots stay original.
-                if y >= 48 {
-                    assert_eq!(p, q, "lower clothing changed: {id} {case} [{x},{y}]");
+                // Clothing below the hands and the whole upper coat stay original,
+                // except the tiny open neckline and the raised North-facing hand.
+                let neckline = (39..=41).contains(&(x % 80)) && (40..=41).contains(&y);
+                let raised_hand = case == "walk_north" && y == 44;
+                if y >= 49 || ((38..=44).contains(&y) && !neckline && !raised_hand) {
+                    assert_eq!(p, q, "Winter clothing changed: {id} {case} [{x},{y}]");
                 }
                 mask.push(p != q);
                 if p != q {

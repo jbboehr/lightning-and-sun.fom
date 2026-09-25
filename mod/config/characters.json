@@ -538,7 +538,13 @@
       "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_specialanimation_autumn_read_sit_start_south.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_specialanimation_autumn_till_east.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_specialanimation_autumn_water_east.png": "Default",
-      "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_specialanimation_autumn_wipebrow_south.png": "Default"
+      "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_specialanimation_autumn_wipebrow_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Winter/spr_npc_hayden_winter_idle_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Winter/spr_npc_hayden_winter_idle_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Winter/spr_npc_hayden_winter_idle_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Winter/spr_npc_hayden_winter_walk_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Winter/spr_npc_hayden_winter_walk_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Winter/spr_npc_hayden_winter_walk_south.png": "Default"
     }
   },
   {
@@ -778,7 +784,18 @@
       "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_action_north.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_action_south.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_kiss_east.png": "Default",
-      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_sleep_east.png": "Default"
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_sleep_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_hammer_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_read_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_read_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_read_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_saw_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_siteyesclosed_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_siteyesclosed_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_wipebrow_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_write_end_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_specialanimation_winter_write_start_south.png": "Default"
     }
   },
   {
@@ -1335,7 +1352,17 @@
       "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_autumn_action_north.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_autumn_action_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_autumn_kiss_east.png": "Default",
-      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_autumn_sleep_east.png": "Default"
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_autumn_sleep_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_specialanimation_autumn_book_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_specialanimation_autumn_book_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_specialanimation_autumn_book_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_specialanimation_autumn_book_stand_end_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_specialanimation_autumn_book_stand_loop_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_specialanimation_autumn_book_stand_start_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_specialanimation_autumn_sweep_end_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_specialanimation_autumn_sweep_loop_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_specialanimation_autumn_sweep_start_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_specialanimation_autumn_water_east.png": "Default"
     },
     "hotkey": "INSERT",
     "id": "celine",

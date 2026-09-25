@@ -195,8 +195,9 @@ supported directions. Hayden's complete Spring riding animations and Celine's
 complete Spring gardening outfit are covered. All three complete Summer sprite
 folders are covered, including Celine's garden outfit and their reading,
 household and tool animations. Hayden's and Ryis's complete Autumn folders are
-covered too. Ryis's Winter and Celine's regular Autumn coverage includes idle,
-walk, blink, sit, eat, drink, general actions, sleep and kiss.
+covered too, along with Ryis's complete Winter folder and Celine's regular Autumn
+outfit. Hayden's Winter idle and walking sprites are included; Celine's Autumn
+gardening outfit remains original.
 Their other actions/outfits and the other portrait characters' overworld sprites
 remain original. Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

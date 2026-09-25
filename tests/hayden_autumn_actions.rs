@@ -2,10 +2,10 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/hayden-autumn-special-study and the local accepted Autumn pilot baseline"]
+#[ignore = "requires extracted/hayden-winter-expansion-study and the local accepted Autumn pilot baseline"]
 fn hayden_autumn_actions_masks_preserve_sleeves_mouth_and_previous_outputs() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/hayden-autumn-special-study");
+    let original = root.join("extracted/hayden-winter-expansion-study");
     let baseline =
         root.join("generated/characters-world-seasonal-expansion-trial/characters/hayden");
     let set = root.join("palettes/sets/hayden-world-trial.json");

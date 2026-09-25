@@ -1,13 +1,13 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 282 reviewed animations, Hayden's 246,
-Ryis's 233, Reina's 103, Juniper's 132, Celine's 304, March's 181, Balor's 110,
+The combined trial includes Adeline's 282 reviewed animations, Hayden's 252,
+Ryis's 244, Reina's 103, Juniper's 132, Celine's 314, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 10,860 variant strips from 2,715 sources. Caldarus's three
+variants per source give 10,968 variant strips from 2,742 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -101,6 +101,10 @@ folder and adds Celine's regular Autumn and Ryis's Winter general actions, sleep
 and kiss: 18 strips, 93 source frames and 49 West mirrors. The user approved this
 batch for commit on 2026-09-25. Existing supported artwork matches the updated game archive exactly;
 the Nix MOMI pin moves to v0.16.4 to handle changed engine code.
+The [Winter expansion](world-winter-expansion.md) finishes Ryis's Winter specials
+and Celine's regular Autumn specials, and starts Hayden's Winter idle/walk:
+27 strips, 93 source frames and 21 West mirrors. The user approved this batch
+for commit on 2026-09-25; Celine's Autumn garden outfit remains outside it.
 The other portrait batches above still use their original overworld sprites.
 The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
@@ -337,13 +341,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package, including Hayden's remaining Autumn specials and
-Celine's Autumn and Ryis's Winter general actions, sleep and kiss, is retained in
-`generated/characters-world-autumn-special-trial/package`. It was verified in
-the isolated `tmp/world-autumn-special-playtest` lab with MOMI v0.16.4. It has no
+The latest combined package, including Hayden's Winter idle/walk and the remaining
+Ryis Winter and regular Celine Autumn specials, is retained in
+`generated/characters-world-winter-expansion-trial/package`. It was verified in
+the isolated `tmp/world-winter-expansion-playtest` lab with MOMI v0.16.4. It has no
 preview helper and did not replace the desktop launcher. Use the
-[complete offline reviews](../../generated/world-autumn-special-preview/index.html)
-to inspect all 93 new source frames and the 49 native West mirrors.
+[complete offline reviews](../../generated/world-winter-expansion-preview/index.html)
+to inspect all 93 new source frames and the 21 native West mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

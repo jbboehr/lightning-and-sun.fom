@@ -2,10 +2,10 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis Winter idle/walk corpus in extracted/ryis-autumn-special-study"]
+#[ignore = "requires the local Ryis Winter idle/walk corpus in extracted/ryis-winter-expansion-study"]
 fn ryis_winter_pilot_keeps_warm_coat_shades_distinct_from_skin() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/ryis-autumn-special-study");
+    let original = root.join("extracted/ryis-winter-expansion-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
