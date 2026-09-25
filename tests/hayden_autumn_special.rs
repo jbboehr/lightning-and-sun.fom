@@ -2,18 +2,18 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/hayden-autumn-special-study and the local outfit actions baseline"]
-fn hayden_run_jump_masks_follow_rider_motion_and_preserve_horse_gear() {
+#[ignore = "requires extracted/hayden-autumn-special-study and the local accepted Autumn standard baseline"]
+fn hayden_autumn_special_masks_cover_moved_fingers_and_preserve_props() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/hayden-autumn-special-study");
-    let baseline = root.join("generated/characters-world-outfit-actions-trial/characters/hayden");
+    let baseline = root.join("generated/characters-world-autumn-standard-trial/characters/hayden");
     let set = root.join("palettes/sets/hayden-world-trial.json");
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
     let profile: Value = serde_json::from_slice(
         &fs::read(root.join("palettes/profiles/hayden-world-trial.json")).unwrap(),
     )
     .unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..180];
+    let prior = &profile["regions"].as_array().unwrap()[..238];
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
@@ -32,49 +32,66 @@ fn hayden_run_jump_masks_follow_rider_motion_and_preserve_horse_gear() {
     );
     let source = [0xE7B172, 0xAB7E3F, 0x815A2E, 0x523C26];
     // Independently reviewed, literal frame-local boundaries. Frames are zero-based.
-    // Shared browns on skin must change while neighboring sleeve folds stay original.
+    // Autumn sleeves differ from the Summer reference; detached reading fingers
+    // and water-holding forearm highlights must change, while props stay original.
     let landmarks = [
-        ("ride_jump_east", 3, 41, 35, 0x815A2E, true),
-        ("ride_jump_east", 3, 33, 34, 0xAB7E3F, false),
-        ("ride_jump_east", 3, 39, 35, 0xAB7E3F, true),
-        ("ride_jump_east", 3, 47, 30, 0x967C7C, false),
-        ("ride_jump_north", 1, 35, 22, 0x523C26, true),
-        ("ride_jump_north", 1, 36, 22, 0xAB7E3F, false),
-        ("ride_jump_north", 1, 34, 23, 0xE7B172, true),
-        ("ride_jump_north", 1, 39, 29, 0xBB8151, false),
-        ("ride_jump_south", 0, 37, 13, 0x815A2E, true),
-        ("ride_jump_south", 0, 35, 20, 0x815A2E, false),
-        ("ride_jump_south", 0, 35, 23, 0x523C26, true),
-        ("ride_jump_south", 1, 35, 25, 0x523C26, true),
-        ("ride_jump_south", 1, 37, 23, 0xAB7E3F, false),
-        ("ride_jump_south", 1, 37, 26, 0xE7B172, true),
-        ("ride_jump_south", 1, 44, 26, 0xAB7E3F, true),
-        ("ride_jump_south", 1, 39, 30, 0xF7E7DF, false),
-        ("ride_jump_south", 2, 36, 27, 0xE7B172, true),
-        ("ride_jump_south", 2, 44, 28, 0xAB7E3F, true),
-        ("ride_run_east", 0, 42, 35, 0x815A2E, true),
-        ("ride_run_east", 0, 34, 34, 0xAB7E3F, false),
-        ("ride_run_east", 0, 40, 30, 0xE7B172, true),
-        ("ride_run_north", 2, 35, 24, 0x523C26, true),
-        ("ride_run_north", 2, 36, 24, 0xAB7E3F, false),
-        ("ride_run_north", 2, 34, 25, 0xE7B172, true),
-        ("ride_run_north", 2, 39, 31, 0x936244, false),
-        ("ride_run_south", 2, 37, 15, 0x815A2E, true),
-        ("ride_run_south", 2, 35, 22, 0x815A2E, false),
-        ("ride_run_south", 2, 35, 28, 0x523C26, true),
-        ("ride_run_south", 2, 36, 30, 0xAB7E3F, true),
-        ("ride_run_south", 2, 43, 30, 0xAB7E3F, true),
-        ("ride_run_south", 2, 37, 26, 0xAB7E3F, false),
-        ("ride_run_south", 2, 42, 26, 0xAB7E3F, false),
-        ("ride_run_south", 2, 39, 35, 0xC4A998, false),
+        ("hammer_east", 0, 39, 43, 0x815A2E, true),
+        ("hammer_east", 0, 53, 39, 0x85CED4, false),
+        ("hammer_east", 1, 35, 33, 0xAB7E3F, true),
+        ("hammer_east", 1, 37, 33, 0x815A2E, true),
+        ("hammer_east", 1, 38, 44, 0x924A75, false),
+        ("hammer_east", 2, 51, 28, 0xC5E3E4, false),
+        ("hammer_east", 2, 47, 43, 0x743B68, false),
+        ("harvest_east", 2, 42, 48, 0x743B68, false),
+        ("harvest_east", 2, 47, 52, 0x815A2E, true),
+        ("harvest_east", 3, 48, 53, 0x815A2E, true),
+        ("harvest_east", 3, 43, 46, 0x743B68, false),
+        ("read_sit_start_south", 0, 32, 43, 0x3D3C3A, false),
+        ("read_sit_start_south", 0, 36, 43, 0x743B68, false),
+        ("read_sit_start_south", 1, 39, 39, 0xF6E4D7, false),
+        ("read_sit_start_south", 1, 44, 43, 0xAB7E3F, true),
+        ("read_sit_start_south", 2, 46, 44, 0x815A2E, true),
+        ("read_sit_loop_south", 0, 38, 39, 0xE7B172, true),
+        ("read_sit_loop_south", 0, 39, 40, 0x743B68, false),
+        ("read_sit_loop_south", 0, 34, 39, 0xC9AF9C, false),
+        ("read_sit_loop_south", 0, 33, 40, 0x693F22, false),
+        ("read_sit_loop_south", 0, 34, 41, 0x9A5F1B, false),
+        ("read_sit_loop_south", 2, 42, 38, 0xE7B172, true),
+        ("read_sit_end_south", 0, 46, 44, 0x815A2E, true),
+        ("read_sit_end_south", 0, 35, 38, 0xF6E4D7, false),
+        ("read_sit_end_south", 1, 38, 45, 0x9A5F1B, false),
+        ("read_sit_end_south", 2, 43, 43, 0x743B68, false),
+        ("till_east", 0, 41, 47, 0x815A2E, true),
+        ("till_east", 1, 50, 43, 0x815A2E, true),
+        ("till_east", 1, 51, 47, 0x7C4A53, false),
+        ("till_east", 1, 56, 47, 0xDDEAF6, false),
+        ("water_east", 0, 38, 44, 0x815A2E, true),
+        ("water_east", 0, 47, 39, 0xBE6D44, false),
+        ("water_east", 1, 39, 44, 0x743B68, false),
+        ("water_east", 1, 51, 37, 0xDD9D3E, false),
+        ("water_east", 1, 52, 37, 0xFFF672, false),
+        ("wipebrow_south", 0, 39, 31, 0xE7B172, true),
+        ("wipebrow_south", 0, 40, 35, 0x815A2E, true),
+        ("wipebrow_south", 0, 40, 28, 0x66534A, false),
+        ("wipebrow_south", 1, 43, 35, 0x815A2E, true),
+        ("wipebrow_south", 2, 44, 35, 0x815A2E, true),
+        ("wipebrow_south", 2, 36, 45, 0x582D52, false),
+        ("wipebrow_south", 4, 36, 44, 0x582D52, false),
+        ("wipebrow_south", 5, 45, 46, 0x815A2E, true),
+        ("read_sit_start_south", 0, 31, 44, 0xAB7E3F, true),
+        ("read_sit_end_south", 2, 31, 44, 0xAB7E3F, true),
+        ("water_east", 0, 40, 44, 0xE7B172, true),
+        ("water_east", 2, 40, 44, 0xE7B172, true),
     ];
     let cases = [
-        ("ride_jump_east", 4, 164),
-        ("ride_jump_north", 4, 48),
-        ("ride_jump_south", 4, 216),
-        ("ride_run_east", 4, 164),
-        ("ride_run_north", 4, 48),
-        ("ride_run_south", 4, 202),
+        ("hammer_east", 6, 212),
+        ("harvest_east", 10, 396),
+        ("read_sit_start_south", 3, 110),
+        ("read_sit_loop_south", 4, 80),
+        ("read_sit_end_south", 3, 110),
+        ("till_east", 5, 162),
+        ("water_east", 4, 123),
+        ("wipebrow_south", 6, 314),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
@@ -88,7 +105,7 @@ fn hayden_run_jump_masks_follow_rider_motion_and_preserve_horse_gear() {
         let mut mask = Vec::new();
         for (case, frames, expected_changed) in cases {
             let asset = format!(
-                "assets/animations/NPCs/Hayden/Sprites/Spring/spr_npc_hayden_specialanimation_spring_{case}.png"
+                "assets/animations/NPCs/Hayden/Sprites/Autumn/spr_npc_hayden_specialanimation_autumn_{case}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(variant.join(&asset)).unwrap().to_rgba8();
@@ -103,17 +120,12 @@ fn hayden_run_jump_masks_follow_rider_motion_and_preserve_horse_gear() {
             for (x, y, p) in before.enumerate_pixels() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
-                // The rider's lowest exposed skin ends at row 35. The complete
-                // lower horse, tail, saddle, boots and East horse head must remain byte-identical.
-                if y >= 36 || (case.ends_with("_east") && x % 80 >= 44) {
-                    assert_eq!(p, q, "horse or gear changed: {id} {case} [{x},{y}]");
-                }
                 mask.push(p != q);
                 if p != q {
                     let index = source
                         .iter()
                         .position(|c| rgba(*c) == p.0)
-                        .expect("horse, gear, hair, clothing or another non-skin color changed");
+                        .expect("hat, hair, clothing or another non-skin color changed");
                     assert_eq!(q.0, rgba(target[index]));
                     per_frame[x as usize / 80] += 1;
                 }

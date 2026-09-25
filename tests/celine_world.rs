@@ -21,7 +21,7 @@ fn celine_world_extends_the_reviewed_portraits_and_preserves_their_choices() {
     let old = read(root.join("palettes/profiles/celine-portraits.json"));
     let world = read(root.join("palettes/profiles/celine-world-trial.json"));
     assert_eq!(old["regions"].as_array().unwrap().len(), 183);
-    assert_eq!(world["regions"].as_array().unwrap().len(), 299);
+    assert_eq!(world["regions"].as_array().unwrap().len(), 304);
     assert_eq!(
         &world["regions"].as_array().unwrap()[..183],
         old["regions"].as_array().unwrap()
@@ -147,10 +147,10 @@ fn celine_world_package_keeps_her_control_and_native_geometry() {
 }
 
 #[test]
-#[ignore = "requires the 299 local animations in extracted/celine-autumn-standard-study"]
+#[ignore = "requires the 304 local animations in extracted/celine-autumn-special-study"]
 fn celine_world_covers_skin_without_crossing_into_hair_or_boots() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/celine-autumn-standard-study");
+    let original = root.join("extracted/celine-autumn-special-study");
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let set = std::env::var_os("FOM_CELINE_WORLD_PRESETS")

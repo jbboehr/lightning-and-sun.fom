@@ -2,42 +2,47 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis Spring reaction and reading corpus in extracted/ryis-autumn-special-study"]
-fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shocked_mouth() {
+#[ignore = "requires the local Ryis Winter action/sleep/kiss corpus in extracted/ryis-autumn-special-study"]
+fn ryis_winter_special_preserves_gloves_sleeves_boots_and_closed_features() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/ryis-autumn-special-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/ryis-world-trial.json"));
-    let cases: [(&str, &[usize]); 6] = [
-        ("shocked_start", &[66]),
-        ("shocked_loop", &[64]),
-        ("shocked_end", &[66]),
-        ("read_sit_start", &[54, 48, 50]),
-        ("read_sit_loop", &[44, 56, 44, 56]),
-        ("read_sit_end", &[54, 44, 54]),
+    let cases: [(&str, &[usize]); 5] = [
+        ("action_east", &[44, 44, 44, 44, 44, 44, 45]),
+        ("action_north", &[24, 24, 24, 24, 24, 24, 26]),
+        ("action_south", &[49, 49, 47, 49, 47, 49, 50]),
+        ("kiss_east", &[44, 47, 51, 51]),
+        ("sleep_east", &[48]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    // These shades occur only on reviewed skin in these six pinned strips.
-    // The blue book and cream pages use separate colors, despite resembling
-    // the Debug Blue skin target. Detached fingers still need their own seeds.
+    // Reviewed Winter skin includes detached fingertips and closed eyelids.
+    // Dark gloves, orange sleeves, covered legs and boots retain their shades.
+    // Short rear hair, black closed eyes and the kissing mouth stay original.
     let skin = [0xB06C57, 0x854D3C, 0x63342A, 0x491F1B];
     // Frame numbers are zero-based; x coordinates here are within the frame.
     let landmarks = [
-        ("shocked_loop", 0, 39, 36, 0x410808, false),
-        ("shocked_loop", 0, 39, 37, 0xC83E37, false),
-        ("shocked_loop", 0, 34, 35, 0xB06C57, true),
-        ("shocked_loop", 0, 33, 35, 0xECC45E, false),
-        ("shocked_loop", 0, 35, 38, 0x491F1B, true),
-        ("read_sit_start", 1, 39, 43, 0xF6E4D7, false),
-        ("read_sit_start", 1, 34, 46, 0xECC45E, false),
-        ("read_sit_start", 1, 35, 47, 0x491F1B, true),
-        ("read_sit_start", 2, 40, 45, 0xC9AF9C, false),
-        ("read_sit_start", 2, 35, 47, 0x491F1B, true),
-        ("read_sit_loop", 0, 34, 45, 0x699CC1, false),
-        ("read_sit_loop", 0, 35, 46, 0x4E7E9F, false),
-        ("read_sit_loop", 0, 36, 47, 0x2E4D69, false),
+        ("action_north", 0, 39, 35, 0x5E423B, false), // short rear hair
+        ("action_north", 0, 35, 35, 0xB06C57, true),  // nearby ear
+        ("action_north", 0, 33, 43, 0x353A50, false), // dark glove
+        ("action_north", 1, 37, 50, 0x0E1E34, false), // moving trouser hem
+        ("action_north", 1, 37, 52, 0x5C413D, false), // boot shading
+        ("action_east", 1, 48, 42, 0x222436, false),  // extended glove shading
+        ("action_east", 1, 48, 43, 0x353A50, false),  // glove beside finger
+        ("action_east", 1, 48, 44, 0x491F1B, true),   // detached fingertip
+        ("action_south", 6, 37, 50, 0x0A2B56, false), // trousers
+        ("action_south", 6, 37, 51, 0x0E1E34, false), // covered lower leg
+        ("action_south", 6, 37, 53, 0x805E54, false), // brown footwear
+        ("sleep_east", 0, 43, 38, 0x222436, false),   // glove at cheek
+        ("sleep_east", 0, 44, 38, 0x491F1B, true),    // finger beside glove
+        ("sleep_east", 0, 42, 40, 0xC16639, false),   // raised orange sleeve
+        ("sleep_east", 0, 38, 36, 0x000000, false),   // closed eye
+        ("kiss_east", 2, 47, 37, 0x000000, false),    // kissing mouth outline
+        ("kiss_east", 2, 46, 37, 0x854D3C, true),     // lip/cheek skin
+        ("kiss_east", 2, 38, 35, 0x000000, false),    // closed eye
+        ("kiss_east", 2, 39, 35, 0xB06C57, true),     // skin beside closed eye
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -71,13 +76,8 @@ fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shock
         });
         let mut changed = 0;
         for (name, counts) in cases {
-            let special = if name.starts_with("read_sit_") {
-                "specialanimation_"
-            } else {
-                ""
-            };
             let asset = format!(
-                "assets/animations/NPCs/Ryis/Sprites/Spring/spr_npc_ryis_{special}spring_{name}_south.png"
+                "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -113,6 +113,6 @@ fn ryis_reactions_cover_isolated_fingers_and_preserve_book_gloves_hair_and_shock
                 }
             }
         }
-        assert_eq!(changed, 700);
+        assert_eq!(changed, 1060);
     }
 }
