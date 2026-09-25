@@ -75,22 +75,41 @@ impl Set {
     pub fn assets(&self) -> Vec<String> {
         self.palettes[0].assets().unwrap()
     }
-    pub fn generate(&mut self, original: &Path, root: &Path) -> Result<Vec<Value>> {
+    pub fn generate(
+        &mut self,
+        original: &Path,
+        root: &Path,
+        allow_source_hash_mismatch: bool,
+    ) -> Result<Vec<Value>> {
         let mut reports = Vec::new();
         for (variant, palette) in self.variants.iter_mut().zip(&self.palettes) {
             variant.directory = root.join(&variant.id);
-            let report = commands::apply_palette(original, palette, &variant.directory)?;
+            let report = commands::apply_palette(
+                original,
+                palette,
+                &variant.directory,
+                allow_source_hash_mismatch,
+            )?;
             reports.push(json!({"id":variant.id,"label":variant.label,"report":report}));
         }
         Ok(reports)
     }
 }
 
-pub fn build(original: &Path, definition: &Path, output: &Path) -> Result<Value> {
+pub fn build(
+    original: &Path,
+    definition: &Path,
+    output: &Path,
+    allow_source_hash_mismatch: bool,
+) -> Result<Value> {
     let output = fresh_output(output, &[original, definition])?;
     let mut set = load(definition)?;
     let work = tempfile::tempdir()?;
-    let reports = set.generate(original, &work.path().join("variants"))?;
+    let reports = set.generate(
+        original,
+        &work.path().join("variants"),
+        allow_source_hash_mismatch,
+    )?;
     let package = toggle::package_variants(original, &set.variants, &work.path().join("package"))?;
     let report = json!({"presets":reports,"package":package});
     let mut outputs = Outputs::new();

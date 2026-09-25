@@ -204,8 +204,11 @@ alone, use its set instead; for example,
 `--presets palettes/sets/landen-portraits-trial.json` or
 `--presets palettes/sets/nora-portraits-trial.json`.
 
-The included palette is tied to the reviewed portrait's original PNG bytes. If
-those change, installation stops until the region definition is reviewed. See
+Palettes check their reviewed source PNG hashes. If a game update changes them,
+generation and installation stop by default. Add `--allow-source-hash-mismatch`
+to try the existing masks against changed artwork. This leaves the recorded
+hashes unchanged, reports each mismatch, and still checks dimensions and seeds.
+Review the resulting recoloring before relying on it. See
 [palette and preview options](docs/TOOLS.md#export-recolor-and-compare) for custom
 colors, exact recipe validation, and changed-pixel previews.
 

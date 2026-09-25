@@ -277,7 +277,7 @@ pub fn build(archive_path: &Path, config_path: &Path, output: &Path) -> Result<V
             );
         }
         let mask = if known.contains(&name) {
-            palette.mask(&name, &bytes, &image)?
+            palette.mask(&name, &bytes, &image, false)?
         } else {
             None
         };

@@ -83,7 +83,12 @@ impl Collection {
         }
         Ok(Self { selected })
     }
-    pub fn generate(&mut self, archive: &Path, root: &Path) -> Result<Value> {
+    pub fn generate(
+        &mut self,
+        archive: &Path,
+        root: &Path,
+        allow_source_hash_mismatch: bool,
+    ) -> Result<Value> {
         let mut reports = Vec::new();
         for selected in &mut self.selected {
             let directory = root.join(&selected.character.id);
@@ -95,9 +100,11 @@ impl Collection {
                 selected.character.label
             );
             commands::export(archive, &assets, &selected.original)?;
-            let presets = selected
-                .set
-                .generate(&selected.original, &directory.join("variants"))?;
+            let presets = selected.set.generate(
+                &selected.original,
+                &directory.join("variants"),
+                allow_source_hash_mismatch,
+            )?;
             reports.push(json!({"id":selected.character.id,"hotkey":selected.character.hotkey,"presets":presets}));
         }
         Ok(json!({"characters":reports}))
@@ -112,11 +119,20 @@ impl Collection {
             .collect()
     }
 }
-pub fn build(archive: &Path, definition: &Path, output: &Path) -> Result<Value> {
+pub fn build(
+    archive: &Path,
+    definition: &Path,
+    output: &Path,
+    allow_source_hash_mismatch: bool,
+) -> Result<Value> {
     let output = fresh_output(output, &[archive, definition])?;
     let mut collection = Collection::load(definition)?;
     let work = tempfile::tempdir()?;
-    let mut report = collection.generate(archive, &work.path().join("characters"))?;
+    let mut report = collection.generate(
+        archive,
+        &work.path().join("characters"),
+        allow_source_hash_mismatch,
+    )?;
     report["package"] =
         toggle::package_characters(&collection.inputs(), &work.path().join("package"))?;
     let mut outputs = Outputs::new();

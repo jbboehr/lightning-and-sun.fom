@@ -1430,3 +1430,144 @@ fn combined_install_verifies_hayden_and_restores_the_whole_archive() {
         );
     }
 }
+
+#[test]
+fn source_hash_override_reaches_every_install_mode_and_keeps_atlas_verification() {
+    for mode in ["palette", "presets", "characters"] {
+        let lab = Lab::new();
+        let root = lab._temp.path();
+        let recipe_path = lab.result.with_extension("palette.json");
+        let mut recipe: serde_json::Value =
+            serde_json::from_slice(&fs::read(&recipe_path).unwrap()).unwrap();
+        recipe["regions"][0]["source_sha256"] = serde_json::json!("0".repeat(64));
+        fs::write(&recipe_path, serde_json::to_vec(&recipe).unwrap()).unwrap();
+        fs::write(
+            root.join("profile.json"),
+            serde_json::to_vec(
+                &serde_json::json!({"source_colors":["#E3A17B"],"regions":recipe["regions"]}),
+            )
+            .unwrap(),
+        )
+        .unwrap();
+        fs::write(root.join("presets.json"), br##"{"profile":"profile.json","presets":[{"id":"blue","label":"Debug Blue","colors":["#9DB9D4"]}]}"##).unwrap();
+        fs::write(
+            root.join("characters.json"),
+            br#"{"characters":[{"id":"adeline","presets":"presets.json"}]}"#,
+        )
+        .unwrap();
+        let definition = match mode {
+            "palette" => recipe_path,
+            "presets" => root.join("presets.json"),
+            _ => root.join("characters.json"),
+        };
+        let before_definition = fs::read(&definition).unwrap();
+        let run = |allow: bool| {
+            let mut command = Command::new(env!("CARGO_BIN_EXE_mistria-palette"));
+            command
+                .arg("install")
+                .arg("--game-dir")
+                .arg(&lab.game)
+                .arg("--momi")
+                .arg(&lab.result)
+                .arg(format!("--{mode}"))
+                .arg(&definition)
+                .env("MISTRIA_MOMI_RUNNER", &lab.runner);
+            if allow {
+                command.arg("--allow-source-hash-mismatch");
+            }
+            command.output().unwrap()
+        };
+        let strict = run(false);
+        assert!(!strict.status.success());
+        assert!(
+            String::from_utf8_lossy(&strict.stderr).contains("Region source checksum mismatch")
+        );
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+        assert!(!lab.game.join(".mistria-palette").exists());
+        // Even with permission to reuse masks, the installer must reject bad atlas pixels.
+        let valid = fs::read(&lab.result).unwrap();
+        let mut atlas = RgbaImage::from_pixel(4, 2, Rgba([227, 161, 123, 255]));
+        image::imageops::replace(
+            &mut atlas,
+            &RgbaImage::from_pixel(4, 1, Rgba([1, 2, 3, 255])),
+            0,
+            1,
+        );
+        fs::write(
+            &lab.result,
+            replace_zip_entry(
+                &valid,
+                "assets/atlases/PortraitsSpringAtlas.png",
+                &png(atlas),
+            ),
+        )
+        .unwrap();
+        let bad = run(true);
+        assert!(
+            !bad.status.success(),
+            "accepted invalid installed pixels in {mode}"
+        );
+        assert!(
+            String::from_utf8_lossy(&bad.stderr).contains("Installed pixels differ"),
+            "{}",
+            String::from_utf8_lossy(&bad.stderr)
+        );
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+        assert!(!lab.game.join(".mistria-palette").exists());
+        fs::write(&lab.result, &valid).unwrap();
+        let allowed = run(true);
+        assert!(
+            allowed.status.success(),
+            "{}",
+            String::from_utf8_lossy(&allowed.stderr)
+        );
+        assert!(String::from_utf8_lossy(&allowed.stderr).contains("allowing source hash mismatch"));
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), valid);
+        assert_eq!(fs::read(&definition).unwrap(), before_definition);
+        assert!(lab.run("uninstall").status.success());
+        assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+    }
+}
+
+#[test]
+fn source_hash_override_reaches_default_install_and_keeps_installed_verification() {
+    let mut lab = Lab::new();
+    let changed = png(RgbaImage::from_pixel(592, 180, Rgba([227, 161, 123, 255])));
+    let metadata = META.replace("frame_size = [2,1]", "frame_size = [296,180]");
+    lab.before = replace_zip_entry(&lab.before, &format!("{SOURCE}.png"), &changed);
+    lab.before = replace_zip_entry(
+        &lab.before,
+        &format!("{SOURCE}.meta.toml"),
+        metadata.as_bytes(),
+    );
+    fs::write(lab.game.join("assets.zip"), &lab.before).unwrap();
+
+    let run = |allow: bool| {
+        let mut command = Command::new(env!("CARGO_BIN_EXE_mistria-palette"));
+        command
+            .arg("install")
+            .arg("--game-dir")
+            .arg(&lab.game)
+            .arg("--momi")
+            .arg(&lab.result)
+            .env("MISTRIA_MOMI_RUNNER", &lab.runner);
+        if allow {
+            command.arg("--allow-source-hash-mismatch");
+        }
+        command.output().unwrap()
+    };
+
+    let strict = run(false);
+    assert!(!strict.status.success());
+    assert!(String::from_utf8_lossy(&strict.stderr).contains("Region source checksum mismatch"));
+
+    // The synthetic MOMI result still contains the old 4x1 source. Permission
+    // to reuse the built-in mask must reach generation, then fail verification.
+    let allowed = run(true);
+    let stderr = String::from_utf8_lossy(&allowed.stderr);
+    assert!(!allowed.status.success());
+    assert!(stderr.contains("allowing source hash mismatch"), "{stderr}");
+    assert!(stderr.contains("Vanilla PNG changed"), "{stderr}");
+    assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+    assert!(!lab.game.join(".mistria-palette").exists());
+}

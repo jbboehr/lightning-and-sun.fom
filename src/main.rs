@@ -34,6 +34,9 @@ enum Command {
         characters: PathBuf,
         #[arg(long)]
         output: PathBuf,
+        /// Use existing masks despite changed source PNG hashes; keep other checks.
+        #[arg(long)]
+        allow_source_hash_mismatch: bool,
     },
     /// Generate a local mask review gallery with exact-frame reuse and component suggestions.
     ReviewBatch {
@@ -59,6 +62,9 @@ enum Command {
         presets: PathBuf,
         #[arg(long)]
         output: PathBuf,
+        /// Use existing masks despite changed source PNG hashes; keep other checks.
+        #[arg(long)]
+        allow_source_hash_mismatch: bool,
     },
     /// Generate and install palette toggles into an explicit, closed game copy.
     Install {
@@ -79,6 +85,9 @@ enum Command {
         /// Current MOMI config/mods/manifest.json; required for a MOMI-modified archive.
         #[arg(long)]
         installed_mods: Option<PathBuf>,
+        /// Use existing masks despite changed source PNG hashes; keep other checks.
+        #[arg(long)]
+        allow_source_hash_mismatch: bool,
     },
     /// Restore the exact archive saved before this tool installed the toggle.
     Uninstall {
@@ -102,6 +111,9 @@ enum Command {
         palette: PathBuf,
         #[arg(long)]
         output: PathBuf,
+        /// Use existing masks despite changed source PNG hashes; keep other checks.
+        #[arg(long)]
+        allow_source_hash_mismatch: bool,
     },
     /// Check filenames, dimensions, alpha, and unchanged metadata.
     Validate {
@@ -112,6 +124,9 @@ enum Command {
         /// Also verify exact palette output, including region restrictions.
         #[arg(long)]
         palette: Option<PathBuf>,
+        /// Check palette output despite changed source PNG hashes; keep other checks.
+        #[arg(long, requires = "palette")]
+        allow_source_hash_mismatch: bool,
     },
     /// Draw labeled original/modified pairs at 4x or 8x nearest-neighbor zoom.
     ContactSheet {
@@ -156,7 +171,8 @@ fn run() -> Result<()> {
             archive,
             characters,
             output,
-        } => characters::build(&archive, &characters, &output)?,
+            allow_source_hash_mismatch,
+        } => characters::build(&archive, &characters, &output, allow_source_hash_mismatch)?,
         Command::ReviewBatch {
             archive,
             config,
@@ -167,7 +183,8 @@ fn run() -> Result<()> {
             original,
             presets,
             output,
-        } => presets::build(&original, &presets, &output)?,
+            allow_source_hash_mismatch,
+        } => presets::build(&original, &presets, &output, allow_source_hash_mismatch)?,
         Command::Install {
             game_dir,
             momi,
@@ -175,6 +192,7 @@ fn run() -> Result<()> {
             presets,
             characters,
             installed_mods,
+            allow_source_hash_mismatch,
         } => installer::install(
             &game_dir,
             momi.as_deref(),
@@ -182,6 +200,7 @@ fn run() -> Result<()> {
             presets.as_deref(),
             characters.as_deref(),
             installed_mods.as_deref(),
+            allow_source_hash_mismatch,
         )?,
         Command::Uninstall { game_dir } => installer::uninstall(&game_dir)?,
         Command::Export {
@@ -193,12 +212,19 @@ fn run() -> Result<()> {
             input,
             palette,
             output,
-        } => commands::apply(&input, &palette, &output)?,
+            allow_source_hash_mismatch,
+        } => commands::apply(&input, &palette, &output, allow_source_hash_mismatch)?,
         Command::Validate {
             original,
             modified,
             palette,
-        } => commands::validate(&original, &modified, palette.as_deref())?,
+            allow_source_hash_mismatch,
+        } => commands::validate(
+            &original,
+            &modified,
+            palette.as_deref(),
+            allow_source_hash_mismatch,
+        )?,
         Command::ContactSheet {
             original,
             modified,

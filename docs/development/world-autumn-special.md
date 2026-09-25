@@ -16,7 +16,8 @@ Autumn garden strips remain outside this batch. Their complete Spring and Summer
 coverage and Ryis's complete Autumn coverage are retained.
 
 F8, F10 and Insert keep their five choices and Vanilla defaults. In-game palette
-selection is unchanged. Character material decisions and focused evidence are in
+selection is unchanged. The subsequent [source hash override](source-hash-override.md)
+is a separate CLI change. Character material decisions and focused evidence are in
 [Hayden](hayden-autumn-special.md), [Ryis](ryis-autumn-special.md) and
 [Celine](celine-autumn-special.md).
 

@@ -158,6 +158,7 @@ pub fn install(
     presets: Option<&Path>,
     characters: Option<&Path>,
     installed_mods: Option<&Path>,
+    allow_source_hash_mismatch: bool,
 ) -> Result<Value> {
     let (game, _lock) = game(path)?;
     let state = game.join(STATE);
@@ -215,7 +216,11 @@ pub fn install(
         for selected in &collection.selected {
             hotkeys.insert(&selected.character.label, &selected.character.hotkey);
         }
-        let report = collection.generate(&build.join("assets.zip"), &build.join("characters"))?;
+        let report = collection.generate(
+            &build.join("assets.zip"),
+            &build.join("characters"),
+            allow_source_hash_mismatch,
+        )?;
         toggle::package_characters(&collection.inputs(), &mods.join("lns_palette"))?;
         report
     } else {
@@ -244,12 +249,17 @@ pub fn install(
         commands::export(&build.join("assets.zip"), &assets, &original)?;
         match &mut preset_set {
             Some(set) => {
-                let reports = set.generate(&original, &modified)?;
+                let reports = set.generate(&original, &modified, allow_source_hash_mismatch)?;
                 toggle::package_variants(&original, &set.variants, &mods.join("lns_palette"))?;
                 json!({"presets": reports})
             }
             None => {
-                let report = commands::apply_palette(&original, &single_palette, &modified)?;
+                let report = commands::apply_palette(
+                    &original,
+                    &single_palette,
+                    &modified,
+                    allow_source_hash_mismatch,
+                )?;
                 toggle::package(&original, &modified, &mods.join("lns_palette"))?;
                 report
             }

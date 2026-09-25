@@ -278,7 +278,26 @@ work or counts. Empty seeds intentionally select no pixels.
 Omitting `regions` retains unrestricted exact-color replacement. If present,
 region entries must cover the exact input PNG set; an empty list, null, duplicate
 assets, stale source hash, mismatched dimensions, or invalid seeds stop before
-output is written. Recipe and region field names are checked for typos.
+output is written by default. Recipe and region field names are checked for typos.
+
+`apply`, `build-presets`, `build-characters`, `install`, and `validate --palette`
+accept `--allow-source-hash-mismatch` to reuse the existing masks after source PNG
+bytes change. Only the source hash comparison is bypassed. Inventory, dimensions,
+seed colors/positions, alpha, metadata, packaging and installed-pixel checks still
+apply where relevant. Each overridden mismatch prints its asset path and expected
+and actual SHA-256 to stderr. Reports retain the actual input hash; the flag never
+updates a profile or persists into later commands. For example:
+
+```sh
+target/release/mistria-palette build-characters \
+  --archive tmp/fields-of-mistria/assets.zip \
+  --characters palettes/sets/characters-trial.json \
+  --output generated/characters-update-review \
+  --allow-source-hash-mismatch
+```
+
+Inspect the resulting art: valid seeds can still select the wrong material after
+artwork changes. `review-batch` keeps its strict reference hash checks.
 
 For custom target colors, edit the values in `rgba_map`. Adding or removing source
 keys changes region connectivity and needs another visual review. After a source

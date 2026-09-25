@@ -88,17 +88,30 @@ impl Palette {
         Ok(())
     }
 
-    pub fn mask(&self, name: &str, bytes: &[u8], image: &RgbaImage) -> Result<Option<Vec<bool>>> {
+    pub fn mask(
+        &self,
+        name: &str,
+        bytes: &[u8],
+        image: &RgbaImage,
+        allow_source_hash_mismatch: bool,
+    ) -> Result<Option<Vec<bool>>> {
         let Some(regions) = &self.regions else {
             return Ok(None);
         };
         let region = regions
             .get(&name.replace('\\', "/"))
             .context("Missing region definition")?;
-        ensure!(
-            digest(bytes) == region.source_sha256,
-            "Region source checksum mismatch: {name}; review the mask against this image"
-        );
+        let actual = digest(bytes);
+        if actual != region.source_sha256 {
+            ensure!(
+                allow_source_hash_mismatch,
+                "Region source checksum mismatch: {name}; review the mask against this image"
+            );
+            eprintln!(
+                "warning: allowing source hash mismatch for {name}: expected {}, actual {actual}; review the generated recoloring",
+                region.source_sha256
+            );
+        }
         ensure!(
             region.size == [image.width(), image.height()],
             "Region dimensions differ: {name}"

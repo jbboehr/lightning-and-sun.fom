@@ -10,13 +10,23 @@ use std::{
     path::Path,
 };
 
-pub fn apply(input: &Path, palette_path: &Path, output: &Path) -> Result<Value> {
+pub fn apply(
+    input: &Path,
+    palette_path: &Path,
+    output: &Path,
+    allow_source_hash_mismatch: bool,
+) -> Result<Value> {
     let output = fresh_output(output, &[input, palette_path])?;
     let palette = palette::load(palette_path)?;
-    apply_palette(input, &palette, &output)
+    apply_palette(input, &palette, &output, allow_source_hash_mismatch)
 }
 
-pub fn apply_palette(input: &Path, palette: &palette::Palette, output: &Path) -> Result<Value> {
+pub fn apply_palette(
+    input: &Path,
+    palette: &palette::Palette,
+    output: &Path,
+    allow_source_hash_mismatch: bool,
+) -> Result<Value> {
     let output = fresh_output(output, &[input])?;
     let (images, metadata) = inventory(input)?;
     palette.check_inventory(&images)?;
@@ -26,7 +36,7 @@ pub fn apply_palette(input: &Path, palette: &palette::Palette, output: &Path) ->
     for (name, path) in images {
         let before = fs::read(path)?;
         let mut image = rgba(&before).with_context(|| name.clone())?;
-        let mask = palette.mask(&name, &before, &image)?;
+        let mask = palette.mask(&name, &before, &image, allow_source_hash_mismatch)?;
         let mut counts = BTreeMap::<String, u64>::new();
         let mut excluded = 0u64;
         for (index, pixel) in image.pixels_mut().enumerate() {
@@ -72,7 +82,12 @@ pub fn apply_palette(input: &Path, palette: &palette::Palette, output: &Path) ->
     Ok(report)
 }
 
-pub fn validate(original: &Path, modified: &Path, palette_path: Option<&Path>) -> Result<Value> {
+pub fn validate(
+    original: &Path,
+    modified: &Path,
+    palette_path: Option<&Path>,
+    allow_source_hash_mismatch: bool,
+) -> Result<Value> {
     let mut report = compare(original, modified)?;
     if let Some(path) = palette_path {
         let palette = palette::load(path)?;
@@ -82,7 +97,7 @@ pub fn validate(original: &Path, modified: &Path, palette_path: Option<&Path>) -
             let bytes = fs::read(path)?;
             let before = rgba(&bytes)?;
             let after = rgba(&fs::read(modified.join(&name))?)?;
-            let mask = palette.mask(&name, &bytes, &before)?;
+            let mask = palette.mask(&name, &bytes, &before, allow_source_hash_mismatch)?;
             for (index, (left, right)) in before.pixels().zip(after.pixels()).enumerate() {
                 let expected = if mask.as_ref().is_none_or(|mask| mask[index]) {
                     palette.mapping.get(&left.0).unwrap_or(&left.0)
