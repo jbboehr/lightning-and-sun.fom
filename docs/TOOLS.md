@@ -137,9 +137,11 @@ The [Winter special batch](development/world-winter-special.md) finishes Hayden'
 Winter folder and adds Celine's Winter blink/sit/eat/drink.
 The [Celine Winter general-action batch](development/world-winter-general.md)
 adds her general actions, sleep and kiss.
-Their totals are now 276, 244 and 350 sources
+The [Winter completion batch](development/world-winter-finish.md) adds Celine's
+remaining reading, sweeping, watering and harvesting animations.
+Their totals are now 276, 244 and 361 sources
 respectively. All three cover their complete Spring and Summer sprite folders;
-all three also cover their complete Autumn folders, and Hayden and Ryis cover Winter.
+all three also cover their complete Autumn and Winter folders.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;

@@ -192,12 +192,9 @@ shocked reactions and seated reading, plus their farming, carpentry, writing and
 household actions. F8 switches Hayden, F10 switches Ryis and Insert switches
 Celine, keeping each character's portraits and these sprites together in their
 supported directions. Hayden's complete Spring riding animations and Celine's
-complete Spring gardening outfit are covered. All three complete Summer sprite
-folders are covered, including Celine's garden outfit and their reading,
-household and tool animations. All three complete Autumn folders are covered,
-including Celine's gardening outfit. Hayden's and Ryis's complete Winter folders
-are included too. Celine's Winter coverage includes idle, walking, blinking,
-sitting, eating, drinking, general actions, sleeping and kissing.
+complete Spring gardening outfit are covered. All three complete Summer, Autumn
+and Winter sprite folders are covered, including Celine's seasonal garden
+outfits and their reading, household and tool animations.
 Their other actions/outfits and the other portrait characters' overworld sprites
 remain original. Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
