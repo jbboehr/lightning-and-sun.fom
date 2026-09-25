@@ -23,10 +23,10 @@ let
     "rustfmt"
   ];
   momiDownload = pkgs.fetchurl {
-    url = "https://github.com/Garethp/Mods-of-Mistria-Installer/releases/download/v0.15.10/ModsOfMistriaInstaller-cli-linux";
-    sha256 = "a0a068c4f0b8f4f85d801fc2aa2b6611f0e172c0d7a629cbec5713d6ab235a12";
+    url = "https://github.com/Garethp/Mods-of-Mistria-Installer/releases/download/v0.16.4/ModsOfMistriaInstaller-cli-linux";
+    sha256 = "0c36b78dd1ee964c604f3b54d9669a962bbbed1078ae07e0be8d7abc9f93895c";
   };
-  momi = pkgs.runCommand "momi-cli-0.15.10" { } ''
+  momi = pkgs.runCommand "momi-cli-0.16.4" { } ''
     install -m755 ${momiDownload} "$out"
   '';
   momiLibraries = pkgs.lib.makeLibraryPath [

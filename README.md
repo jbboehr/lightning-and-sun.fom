@@ -15,7 +15,7 @@ target/release/mistria-palette --help
 
 The resulting binary runs without Python, Pillow, or a virtual environment.
 `nix develop` provides the same Fenix environment in a tracked checkout. On x86_64
-Linux, Nix also supplies MOMI v0.15.10 and its isolated runtime. The built binary
+Linux, Nix also supplies MOMI v0.16.4 and its isolated runtime. The built binary
 uses those Nix store dependencies on this machine.
 
 Close the game, then install or remove the one-portrait toggle:

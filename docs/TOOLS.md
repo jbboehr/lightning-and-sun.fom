@@ -237,7 +237,7 @@ target/release/mistria-palette package-toggle \
   > generated/momi-toggle-report.json
 ```
 
-Install that generated folder as `mods/lns_palette` through MOMI v0.15.10. Remove
+Install that generated folder as `mods/lns_palette` through MOMI v0.16.4. Remove
 the earlier replacement study first so the base portrait is vanilla. This package
 adds separate animations and an F6 hotkey: press F6 again to restore vanilla.
 It accepts one through 282 supported Adeline strips: portraits from the four
@@ -401,7 +401,7 @@ provenance, atlas costs, and verification evidence.
 ## MOMI installation and removal
 
 Download the Linux CLI from the pinned
-[v0.15.10 release](https://github.com/Garethp/Mods-of-Mistria-Installer/releases/tag/v0.15.10).
+[v0.16.4 release](https://github.com/Garethp/Mods-of-Mistria-Installer/releases/tag/v0.16.4).
 The self-contained executable needs system libraries but does not require a .NET
 SDK. For a reproducible NixOS experiment, follow
 [the isolated installation procedure](development/momi-lab.md).
