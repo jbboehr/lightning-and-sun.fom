@@ -123,7 +123,9 @@ Ryis's Autumn general actions, sleep and kiss. The
 Summer garden outfit, Ryis's remaining Autumn specials and Hayden's Autumn
 idle/walk pilot. The [Autumn action batch](development/world-autumn-actions.md)
 adds Hayden's Autumn blink/sit/eat/drink, Celine's regular Autumn idle/walk and
-Ryis's Winter idle/walk. Their totals are now 233, 217 and 288 sources respectively.
+Ryis's Winter idle/walk. The [next Autumn and Winter batch](development/world-autumn-standard.md)
+adds Hayden's Autumn general actions, sleep and kiss, plus Celine's Autumn and
+Ryis's Winter blink/sit/eat/drink. Their totals are now 238, 228 and 299 sources respectively.
 All three cover their complete Spring and Summer sprite folders; Ryis also
 covers his complete Autumn folder.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

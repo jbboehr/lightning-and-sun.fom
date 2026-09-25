@@ -12829,6 +12829,472 @@
           47
         ]
       ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_blink_east.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "ccc189a9a6b17d2b9aeb1934127f28582c65672cba9934db10c6139b78264738",
+      "seeds": [
+        [
+          39,
+          31
+        ],
+        [
+          119,
+          31
+        ],
+        [
+          199,
+          31
+        ],
+        [
+          35,
+          46
+        ],
+        [
+          44,
+          46
+        ],
+        [
+          115,
+          46
+        ],
+        [
+          124,
+          46
+        ],
+        [
+          195,
+          46
+        ],
+        [
+          204,
+          46
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_blink_south.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "7babe182fd8a54a19540d59648c5a363acc327a3e3f5a66e1a7bbbd67758c371",
+      "seeds": [
+        [
+          38,
+          31
+        ],
+        [
+          118,
+          31
+        ],
+        [
+          198,
+          31
+        ],
+        [
+          33,
+          46
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          113,
+          46
+        ],
+        [
+          125,
+          46
+        ],
+        [
+          193,
+          46
+        ],
+        [
+          205,
+          46
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_drink_east.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "94065286633a10a1b056d99a25a5bdc903553c0b4f661d217f464d4fb65b8dd5",
+      "seeds": [
+        [
+          39,
+          32
+        ],
+        [
+          117,
+          32
+        ],
+        [
+          199,
+          32
+        ],
+        [
+          44,
+          35
+        ],
+        [
+          204,
+          35
+        ],
+        [
+          120,
+          40
+        ],
+        [
+          42,
+          42
+        ],
+        [
+          202,
+          42
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_drink_north.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "c88d25df7f7a1c6d873c8e1a8e5bf728600de1d8fbc88be2ace9523cb226a3dc",
+      "seeds": [
+        [
+          35,
+          35
+        ],
+        [
+          195,
+          35
+        ],
+        [
+          115,
+          36
+        ],
+        [
+          34,
+          47
+        ],
+        [
+          114,
+          47
+        ],
+        [
+          194,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_drink_south.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "741655edf93c13afbdd2c4e26c2b69fdf0bac379c72debf8fe3e859af228ac74",
+      "seeds": [
+        [
+          38,
+          32
+        ],
+        [
+          198,
+          32
+        ],
+        [
+          118,
+          33
+        ],
+        [
+          116,
+          40
+        ],
+        [
+          35,
+          42
+        ],
+        [
+          195,
+          42
+        ],
+        [
+          44,
+          47
+        ],
+        [
+          124,
+          47
+        ],
+        [
+          204,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_eat_east.png",
+      "size": [
+        400,
+        80
+      ],
+      "source_sha256": "2f0fd17b9125f7755564527e57116560a83bc1064cf30a9b6712762003175624",
+      "seeds": [
+        [
+          199,
+          30
+        ],
+        [
+          39,
+          32
+        ],
+        [
+          120,
+          32
+        ],
+        [
+          359,
+          32
+        ],
+        [
+          279,
+          33
+        ],
+        [
+          196,
+          34
+        ],
+        [
+          204,
+          34
+        ],
+        [
+          44,
+          35
+        ],
+        [
+          364,
+          35
+        ],
+        [
+          127,
+          40
+        ],
+        [
+          44,
+          42
+        ],
+        [
+          284,
+          43
+        ],
+        [
+          363,
+          44
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_eat_north.png",
+      "size": [
+        240,
+        80
+      ],
+      "source_sha256": "c88d25df7f7a1c6d873c8e1a8e5bf728600de1d8fbc88be2ace9523cb226a3dc",
+      "seeds": [
+        [
+          35,
+          35
+        ],
+        [
+          195,
+          35
+        ],
+        [
+          115,
+          36
+        ],
+        [
+          34,
+          47
+        ],
+        [
+          114,
+          47
+        ],
+        [
+          194,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_eat_south.png",
+      "size": [
+        400,
+        80
+      ],
+      "source_sha256": "7ee800e617d21ee6ba0082f5bf75f4b0c084b3895acfd0dd01e52a619a39e307",
+      "seeds": [
+        [
+          198,
+          31
+        ],
+        [
+          38,
+          32
+        ],
+        [
+          358,
+          32
+        ],
+        [
+          118,
+          33
+        ],
+        [
+          278,
+          33
+        ],
+        [
+          195,
+          34
+        ],
+        [
+          204,
+          34
+        ],
+        [
+          196,
+          40
+        ],
+        [
+          198,
+          40
+        ],
+        [
+          119,
+          41
+        ],
+        [
+          275,
+          43
+        ],
+        [
+          277,
+          43
+        ],
+        [
+          36,
+          47
+        ],
+        [
+          44,
+          47
+        ],
+        [
+          124,
+          47
+        ],
+        [
+          204,
+          47
+        ],
+        [
+          284,
+          47
+        ],
+        [
+          354,
+          47
+        ],
+        [
+          364,
+          47
+        ],
+        [
+          117,
+          49
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_sit_east.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "8de4f40fd9fd20566ae9e08ab6a9c522fe8b57aba60db4b315bc70233959dc2e",
+      "seeds": [
+        [
+          39,
+          32
+        ],
+        [
+          44,
+          35
+        ],
+        [
+          35,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_sit_north.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "826ec8a78efb098effa6b51de3a7312415d77d9c9fc8d20117e6583f8085058e",
+      "seeds": [
+        [
+          35,
+          35
+        ],
+        [
+          34,
+          47
+        ],
+        [
+          44,
+          47
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Winter/spr_npc_ryis_winter_sit_south.png",
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "9e434a8b090b15851b3354e16d93b246154ec073ee90de46bfbefaf739293b70",
+      "seeds": [
+        [
+          38,
+          32
+        ],
+        [
+          34,
+          47
+        ],
+        [
+          44,
+          47
+        ]
+      ]
     }
   ],
   "source_colors": [
