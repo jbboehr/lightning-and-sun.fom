@@ -129,10 +129,11 @@ Ryis's Winter blink/sit/eat/drink. The [Autumn special batch](development/world-
 finishes Hayden's Autumn specials and adds Celine's Autumn and Ryis's Winter
 general actions, sleep and kiss. The [Winter expansion](development/world-winter-expansion.md)
 finishes Ryis's Winter specials and Celine's regular Autumn specials, and starts
-Hayden's Winter idle/walk. Their totals are now 252, 244 and 314 sources
+Hayden's Winter idle/walk. The [Winter action batch](development/world-winter-actions.md)
+adds Hayden's Winter blink/sit/eat/drink and Celine's entire Autumn garden outfit.
+Their totals are now 263, 244 and 328 sources
 respectively. All three cover their complete Spring and Summer sprite folders;
-Hayden and Ryis also cover their complete Autumn folders, and Ryis covers Winter.
-Celine's fourteen Autumn garden strips remain outside the trial.
+all three also cover their complete Autumn folders, and Ryis covers Winter.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;

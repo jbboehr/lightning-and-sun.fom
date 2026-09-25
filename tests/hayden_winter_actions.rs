@@ -2,19 +2,18 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/hayden-winter-actions-study and the local accepted Summer standard baseline"]
-fn hayden_summer_special_masks_preserve_book_tools_and_clothing() {
+#[ignore = "requires extracted/hayden-winter-actions-study and the local accepted Winter expansion baseline"]
+fn hayden_winter_actions_masks_preserve_sleeves_mouth_and_previous_outputs() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/hayden-winter-actions-study");
-    let baseline =
-        root.join("generated/characters-world-seasonal-standard-trial/characters/hayden");
+    let baseline = root.join("generated/characters-world-winter-expansion-trial/characters/hayden");
     let set = root.join("palettes/sets/hayden-world-trial.json");
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
     let profile: Value = serde_json::from_slice(
         &fs::read(root.join("palettes/profiles/hayden-world-trial.json")).unwrap(),
     )
     .unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..208];
+    let prior = &profile["regions"].as_array().unwrap()[..252];
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
@@ -33,63 +32,76 @@ fn hayden_summer_special_masks_preserve_book_tools_and_clothing() {
     );
     let source = [0xE7B172, 0xAB7E3F, 0x815A2E, 0x523C26];
     // Independently reviewed, literal frame-local boundaries. Frames are zero-based.
-    // Tiny fingers and low harvesting forearms change; shirt seams, book pages,
-    // covers, tool heads, handles and swing effects must remain untouched.
+    // Tiny exposed necklines and the raised eating finger change beside preserved
+    // cream cuffs, gold sleeves, coat seams and both red mouth shades.
     let landmarks = [
-        ("hammer_east", 0, 39, 43, 0x815A2E, true),
-        ("hammer_east", 0, 53, 39, 0x85CED4, false),
-        ("hammer_east", 1, 35, 33, 0xAB7E3F, true),
-        ("hammer_east", 1, 37, 33, 0x815A2E, true),
-        ("hammer_east", 1, 38, 44, 0x523C26, false),
-        ("hammer_east", 2, 51, 28, 0xC5E3E4, false),
-        ("hammer_east", 2, 47, 43, 0x815A2E, true),
-        ("harvest_east", 2, 42, 48, 0xE7B172, true),
-        ("harvest_east", 2, 47, 52, 0x815A2E, true),
-        ("harvest_east", 3, 48, 53, 0x815A2E, true),
-        ("harvest_east", 3, 43, 46, 0xEEA440, false),
-        ("harvest_east", 3, 39, 43, 0xDFC6A1, false),
-        ("read_sit_start_south", 0, 32, 43, 0x815A2E, true),
-        ("read_sit_start_south", 0, 36, 43, 0x523C26, false),
-        ("read_sit_start_south", 1, 39, 39, 0xF6E4D7, false),
-        ("read_sit_start_south", 1, 44, 43, 0xAB7E3F, true),
-        ("read_sit_start_south", 2, 46, 44, 0x815A2E, true),
-        ("read_sit_loop_south", 0, 38, 39, 0xE7B172, true),
-        ("read_sit_loop_south", 0, 39, 40, 0xE7B172, true),
-        ("read_sit_loop_south", 0, 34, 39, 0xC9AF9C, false),
-        ("read_sit_loop_south", 0, 33, 40, 0x693F22, false),
-        ("read_sit_loop_south", 0, 34, 41, 0x9A5F1B, false),
-        ("read_sit_loop_south", 2, 42, 38, 0xE7B172, true),
-        ("read_sit_end_south", 0, 46, 44, 0x815A2E, true),
-        ("read_sit_end_south", 0, 35, 38, 0xF6E4D7, false),
-        ("read_sit_end_south", 1, 38, 45, 0x9A5F1B, false),
-        ("read_sit_end_south", 2, 43, 43, 0x523C26, false),
-        ("till_east", 0, 41, 47, 0x815A2E, true),
-        ("till_east", 1, 50, 43, 0x815A2E, true),
-        ("till_east", 1, 51, 47, 0x7C4A53, false),
-        ("till_east", 1, 56, 47, 0xDDEAF6, false),
-        ("water_east", 0, 38, 44, 0x815A2E, true),
-        ("water_east", 0, 47, 39, 0xBE6D44, false),
-        ("water_east", 1, 39, 44, 0x523C26, false),
-        ("water_east", 1, 51, 37, 0xDD9D3E, false),
-        ("water_east", 1, 52, 37, 0xFFF672, false),
-        ("wipebrow_south", 0, 39, 31, 0xE7B172, true),
-        ("wipebrow_south", 0, 40, 35, 0x815A2E, true),
-        ("wipebrow_south", 0, 40, 28, 0x66534A, false),
-        ("wipebrow_south", 1, 43, 35, 0x815A2E, true),
-        ("wipebrow_south", 2, 44, 35, 0x815A2E, true),
-        ("wipebrow_south", 2, 36, 45, 0x523C26, false),
-        ("wipebrow_south", 4, 36, 44, 0x523C26, false),
-        ("wipebrow_south", 5, 45, 46, 0x815A2E, true),
+        ("blink_east", 1, 35, 46, 0x815A2E, true),
+        ("blink_east", 1, 45, 43, 0xC6994D, false),
+        ("blink_east", 1, 36, 38, 0xFFF5DA, false),
+        ("blink_south", 1, 34, 46, 0x815A2E, true),
+        ("blink_south", 1, 37, 42, 0x384C92, false),
+        ("blink_south", 1, 39, 27, 0x66534A, false),
+        ("drink_east", 1, 35, 43, 0xA57333, false),
+        ("drink_east", 1, 36, 43, 0xC6994D, false),
+        ("drink_east", 1, 35, 39, 0xFFF5DA, false),
+        ("drink_north", 1, 31, 44, 0xAB7E3F, true),
+        ("drink_north", 1, 33, 46, 0x815A2E, true),
+        ("drink_north", 1, 46, 39, 0xE5BA5D, false),
+        ("drink_south", 1, 47, 43, 0xFFF5DA, false),
+        ("drink_south", 1, 45, 43, 0xFFF5DA, false),
+        ("drink_south", 1, 43, 40, 0xFFF5DA, false),
+        ("eat_east", 0, 40, 43, 0xA57333, false),
+        ("eat_east", 1, 41, 36, 0x9E2626, false),
+        ("eat_east", 2, 40, 32, 0x410808, false),
+        ("eat_east", 2, 40, 33, 0x9E2626, false),
+        ("eat_east", 2, 38, 38, 0xFFF5DA, false),
+        ("eat_east", 3, 37, 44, 0xC6994D, false),
+        ("eat_north", 1, 31, 44, 0xAB7E3F, true),
+        ("eat_north", 1, 33, 46, 0x815A2E, true),
+        ("eat_north", 1, 46, 38, 0xD8BB9C, false),
+        ("eat_south", 1, 39, 37, 0x9E2626, false),
+        ("eat_south", 2, 38, 32, 0x410808, false),
+        ("eat_south", 2, 38, 33, 0x9E2626, false),
+        ("eat_south", 2, 44, 38, 0xFFF5DA, false),
+        ("eat_south", 3, 37, 43, 0x815A2E, true),
+        ("sit_east", 0, 32, 44, 0xAB7E3F, true),
+        ("sit_east", 0, 35, 43, 0xD8BB9C, false),
+        ("sit_east", 0, 35, 39, 0xD8BB9C, false),
+        ("sit_north", 0, 47, 43, 0xFFF5DA, false),
+        ("sit_north", 0, 33, 46, 0x815A2E, true),
+        ("sit_north", 0, 35, 38, 0xD8BB9C, false),
+        ("sit_south", 0, 47, 43, 0xFFF5DA, false),
+        ("sit_south", 0, 34, 43, 0xFFF5DA, false),
+        ("sit_south", 0, 34, 38, 0xFFF5DA, false),
+        ("blink_east", 1, 41, 40, 0xE7B172, true),
+        ("blink_south", 1, 39, 40, 0xE7B172, true),
+        ("drink_south", 1, 39, 41, 0xE7B172, true),
+        ("eat_east", 4, 41, 40, 0xE7B172, true),
+        ("eat_south", 2, 36, 37, 0xAB7E3F, true),
+        ("eat_south", 2, 40, 39, 0xE7B172, true),
+        ("sit_east", 0, 41, 40, 0xE7B172, true),
+        ("sit_south", 0, 39, 40, 0xE7B172, true),
+        ("drink_north", 1, 35, 43, 0x6E4922, false),
+        ("eat_north", 1, 44, 42, 0x6E4922, false),
+        ("drink_east", 1, 40, 39, 0xE7B172, true),
+        ("eat_east", 2, 44, 36, 0xE7B172, true),
+        ("drink_south", 1, 33, 40, 0xFFF5DA, false),
+        ("sit_north", 0, 47, 44, 0xE7B172, true),
+        ("sit_south", 0, 47, 44, 0xE7B172, true),
+        ("blink_east", 1, 40, 33, 0xE7B172, true),
     ];
     let cases = [
-        ("hammer_east", 6, 236),
-        ("harvest_east", 10, 461),
-        ("read_sit_start_south", 3, 128),
-        ("read_sit_loop_south", 4, 90),
-        ("read_sit_end_south", 3, 128),
-        ("till_east", 5, 192),
-        ("water_east", 4, 136),
-        ("wipebrow_south", 6, 373),
+        ("blink_east", 3, 82),
+        ("blink_south", 3, 106),
+        ("drink_east", 3, 78),
+        ("drink_north", 3, 34),
+        ("drink_south", 3, 114),
+        ("eat_east", 5, 117),
+        ("eat_north", 3, 34),
+        ("eat_south", 5, 192),
+        ("sit_east", 1, 24),
+        ("sit_north", 1, 20),
+        ("sit_south", 1, 36),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
@@ -103,7 +115,7 @@ fn hayden_summer_special_masks_preserve_book_tools_and_clothing() {
         let mut mask = Vec::new();
         for (case, frames, expected_changed) in cases {
             let asset = format!(
-                "assets/animations/NPCs/Hayden/Sprites/Summer/spr_npc_hayden_specialanimation_summer_{case}.png"
+                "assets/animations/NPCs/Hayden/Sprites/Winter/spr_npc_hayden_winter_{case}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(variant.join(&asset)).unwrap().to_rgba8();
@@ -118,6 +130,10 @@ fn hayden_summer_special_masks_preserve_book_tools_and_clothing() {
             for (x, y, p) in before.enumerate_pixels() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
+                // The lowered hand reaches row 48; trousers and boots below stay original.
+                if y >= 49 {
+                    assert_eq!(p, q, "lower clothing changed: {id} {case} [{x},{y}]");
+                }
                 mask.push(p != q);
                 if p != q {
                     let index = source

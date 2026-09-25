@@ -2,11 +2,11 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the 299 local animations in extracted/celine-winter-actions-study"]
-fn celine_reactions_preserve_hair_boots_and_mouths_while_covering_hands() {
+#[ignore = "requires the 328 local animations in extracted/celine-winter-actions-study"]
+fn celine_autumn_garden_cover_hands_and_preserve_braids_tools_and_clothing() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/celine-winter-actions-study");
-    let profile = std::env::var_os("FOM_CELINE_REACTIONS_PROFILE")
+    let profile = std::env::var_os("FOM_CELINE_WINTER_ACTIONS_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/celine-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile).unwrap()).unwrap();
@@ -19,43 +19,68 @@ fn celine_reactions_preserve_hair_boots_and_mouths_while_covering_hands() {
     fs::write(&profile_path, serde_json::to_vec(&profile).unwrap()).unwrap();
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let source = [0xFCD9B3, 0xF0B988, 0xD37A57, 0x672115];
-    // Pin visible hand/leg skin beside identical outline colors on boots and
-    // belts, plus the book's cream pages, brown shading and burgundy binding.
+    // Source-art landmarks distinguish moving wrists, fingers and facial contours
+    // from identical dark braid, belt and footwear colors in the Autumn garden outfit.
     let landmarks = [
-        ("shocked_start_south", 0, 36, 45, 0x672115, true),
-        ("shocked_start_south", 0, 37, 46, 0x672115, false),
-        ("shocked_start_south", 0, 33, 48, 0x672115, true),
-        ("shocked_start_south", 0, 37, 52, 0x672115, false),
-        ("shocked_end_south", 0, 46, 48, 0x672115, true),
-        ("shocked_end_south", 0, 42, 46, 0x672115, false),
-        ("shocked_loop_south", 0, 31, 33, 0xFCD9B3, true),
-        ("shocked_loop_south", 0, 32, 33, 0xD37A57, true),
-        ("shocked_loop_south", 0, 35, 49, 0xFCD9B3, true),
-        ("shocked_loop_south", 0, 33, 49, 0x672115, false),
-        ("shocked_loop_south", 0, 37, 43, 0x672115, false),
-        ("shocked_loop_south", 0, 39, 36, 0x410808, false),
-        ("shocked_loop_south", 0, 39, 37, 0x9E2626, false),
-        ("book_sit_start_south", 0, 36, 44, 0x672115, true),
-        ("book_sit_start_south", 0, 44, 45, 0x672115, true),
-        ("book_sit_start_south", 0, 37, 49, 0x672115, false),
-        ("book_sit_start_south", 1, 35, 47, 0x672115, true),
-        ("book_sit_start_south", 1, 39, 41, 0xF6E4D7, false),
-        ("book_sit_start_south", 1, 37, 41, 0x671D2E, false),
-        ("book_sit_start_south", 2, 44, 47, 0x672115, true),
-        ("book_sit_start_south", 2, 42, 49, 0x672115, false),
-        ("book_sit_loop_south", 0, 44, 36, 0x672115, true),
-        ("book_sit_loop_south", 0, 35, 31, 0x672115, false),
-        ("book_sit_loop_south", 0, 32, 42, 0xF6E4D7, false),
-        ("book_sit_loop_south", 0, 34, 42, 0xC9AF9C, false),
-        ("book_sit_loop_south", 0, 39, 49, 0x9C4D49, false),
-        ("book_sit_loop_south", 1, 36, 36, 0x672115, true),
-        ("book_sit_loop_south", 2, 35, 36, 0x672115, true),
-        ("book_sit_loop_south", 3, 43, 39, 0x672115, true),
-        ("book_sit_end_south", 0, 35, 47, 0x672115, true),
-        ("book_sit_end_south", 0, 37, 49, 0x672115, false),
-        ("book_sit_end_south", 1, 44, 47, 0x672115, true),
-        ("book_sit_end_south", 2, 34, 47, 0x672115, true),
-        ("book_sit_end_south", 2, 37, 49, 0x672115, false),
+        ("idle_south", 0, 43, 44, 0x8686A6, false),
+        ("idle_south", 0, 42, 45, 0x672115, false),
+        ("idle_south", 0, 37, 52, 0x672115, false),
+        ("idle_east", 0, 44, 36, 0x672115, true),
+        ("idle_east", 0, 35, 40, 0x672115, false),
+        ("idle_east", 0, 35, 47, 0x672115, true),
+        ("idle_north", 0, 36, 44, 0x8686A6, false),
+        ("idle_north", 0, 35, 36, 0x672115, false),
+        ("walk_north", 1, 34, 48, 0x672115, true),
+        ("walk_north", 1, 37, 46, 0x000000, false),
+        ("walk_north", 3, 45, 48, 0x672115, true),
+        ("walk_south", 1, 34, 48, 0x672115, true),
+        ("walk_south", 1, 34, 41, 0x672115, false),
+        ("walk_south", 3, 45, 48, 0x672115, true),
+        ("walk_east", 1, 44, 46, 0xB1B1C7, false),
+        ("walk_east", 1, 41, 50, 0xB65932, false),
+        ("walk_east", 1, 39, 51, 0x672115, false),
+        ("walk_east", 1, 42, 46, 0x672115, false),
+        ("walk_east", 3, 36, 48, 0x672115, true),
+        ("blink_east", 1, 44, 35, 0x672115, true),
+        ("blink_east", 1, 35, 40, 0x672115, false),
+        ("blink_east", 1, 35, 47, 0x672115, true),
+        ("blink_south", 1, 36, 35, 0x672115, true),
+        ("blink_south", 1, 43, 44, 0x8686A6, false),
+        ("blink_south", 1, 36, 40, 0x672115, false),
+        ("sit_east", 0, 35, 47, 0x672115, true),
+        ("sit_east", 0, 43, 44, 0x000000, false),
+        ("sit_east", 0, 41, 48, 0x672115, false),
+        ("sit_north", 0, 34, 47, 0x672115, true),
+        ("sit_north", 0, 35, 36, 0x672115, false),
+        ("sit_south", 0, 45, 47, 0x672115, true),
+        ("sit_south", 0, 42, 45, 0x535B8B, false),
+        ("kiss_east", 2, 47, 35, 0x672115, true),
+        ("kiss_east", 2, 36, 46, 0x672115, true),
+        ("kiss_east", 2, 38, 41, 0x672115, false),
+        ("kiss_east", 2, 44, 45, 0x000000, false),
+        ("kiss_east", 1, 36, 48, 0x672115, true),
+        ("harvest_east", 0, 40, 53, 0x672115, true),
+        ("harvest_east", 0, 38, 45, 0x672115, false),
+        ("harvest_east", 0, 43, 50, 0xB65932, false),
+        ("harvest_east", 1, 48, 51, 0x672115, true),
+        ("harvest_east", 1, 42, 52, 0x672115, true),
+        ("harvest_east", 1, 44, 50, 0xB65932, false),
+        ("harvest_east", 3, 51, 52, 0x672115, true),
+        ("harvest_east", 3, 47, 53, 0x672115, true),
+        ("harvest_east", 3, 40, 47, 0x672115, false),
+        ("harvest_east", 3, 41, 50, 0x535B8B, false),
+        ("water_east", 0, 38, 44, 0x33335C, false),
+        ("water_east", 0, 36, 41, 0x000000, false),
+        ("water_east", 0, 46, 44, 0xFFCF36, false),
+        ("water_east", 1, 47, 39, 0x672115, true),
+        ("water_east", 1, 37, 39, 0x672115, false),
+        ("water_east", 1, 43, 52, 0x672115, false),
+        ("water_east", 3, 36, 44, 0x33335C, false),
+        ("water_east", 3, 43, 43, 0xDD9D3E, false),
+        ("water_east", 0, 44, 37, 0x672115, true),
+        ("water_east", 1, 47, 36, 0x672115, true),
+        ("kiss_east", 2, 40, 40, 0x672115, false),
+        ("kiss_east", 2, 42, 40, 0x672115, false),
     ];
     let mut first_selection = Vec::new();
     for (id, targets) in [
@@ -112,20 +137,28 @@ fn celine_reactions_preserve_hair_boots_and_mouths_while_covering_hands() {
         let mut selection = Vec::new();
         let (mut changed, mut protected, mut frames) = (0, 0, 0);
         for (name, count) in [
-            ("shocked_start_south", 62),
-            ("shocked_loop_south", 66),
-            ("shocked_end_south", 62),
-            ("book_sit_start_south", 105),
-            ("book_sit_loop_south", 136),
-            ("book_sit_end_south", 105),
+            ("water_east", 135),
+            ("kiss_east", 163),
+            ("blink_east", 118),
+            ("blink_south", 123),
+            ("idle_east", 36),
+            ("idle_north", 12),
+            ("idle_south", 38),
+            ("sit_east", 34),
+            ("sit_north", 6),
+            ("sit_south", 32),
+            ("walk_east", 146),
+            ("walk_north", 44),
+            ("walk_south", 148),
+            ("harvest_east", 426),
         ] {
-            let prefix = if name.starts_with("book_sit") {
-                "specialanimation_spring"
+            let prefix = if name.starts_with("harvest") || name.starts_with("water") {
+                "specialanimation_autumn_garden"
             } else {
-                "spring"
+                "autumn_garden"
             };
             let asset = format!(
-                "assets/animations/NPCs/Celine/Sprites/Spring/spr_npc_celine_{prefix}_{name}.png"
+                "assets/animations/NPCs/Celine/Sprites/Autumn/spr_npc_celine_{prefix}_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -172,7 +205,7 @@ fn celine_reactions_preserve_hair_boots_and_mouths_while_covering_hands() {
             frames += per_frame.len();
             changed += count;
         }
-        assert_eq!((changed, protected, frames), (536, 36, 13));
+        assert_eq!((changed, protected, frames), (1461, 262, 42));
         if first_selection.is_empty() {
             first_selection = selection;
         } else {
