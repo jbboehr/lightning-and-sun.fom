@@ -1,13 +1,13 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 282 reviewed animations, Hayden's 290,
-Ryis's 258, Reina's 103, Juniper's 132, Celine's 375, March's 181, Balor's 110,
+The combined trial includes Adeline's 282 reviewed animations, Hayden's 296,
+Ryis's 264, Reina's 103, Juniper's 132, Celine's 381, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 11,420 variant strips from 2,855 sources. Caldarus's three
+variants per source give 11,492 variant strips from 2,873 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -133,6 +133,8 @@ The user approved this artwork for commit on 2026-09-25.
 The [Beach swimming batch](world-beach-swim.md) completes all three Beach
 sprite folders: six strips, 24 source frames and twelve native West mirrors.
 The user approved this artwork for commit on 2026-09-25.
+The [Wedding pilot](world-wedding-pilot.md) adds their Wedding idle/walk:
+eighteen strips, 45 source frames and fifteen native West mirrors. The user approved this artwork for commit on 2026-09-25.
 The other portrait batches above still use their original overworld sprites.
 The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
@@ -369,14 +371,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Hayden, Ryis and Celine's bathing/swimming,
-completing their Beach sprite folders alongside complete
-Spring/Summer/Autumn/Winter coverage. It is in
-`generated/characters-world-beach-swim-trial/package`, verified in
-the isolated `tmp/world-beach-swim-playtest` lab with MOMI. It has no
+The latest combined package adds Hayden, Ryis and Celine's Wedding idle/walk,
+alongside their complete Spring/Summer/Autumn/Winter and Beach sprite coverage.
+It is in `generated/characters-world-wedding-pilot-trial/package`, verified in
+the isolated `tmp/world-wedding-pilot-playtest` lab with MOMI. It has no
 preview helper and did not replace the desktop launcher. Use the
-[complete offline review](../../generated/world-beach-swim-preview/index.html)
-to inspect all 24 new source frames and the twelve native West mirrors.
+[complete offline review](../../generated/world-wedding-pilot-preview/index.html)
+to inspect all 45 new source frames and the fifteen native West mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

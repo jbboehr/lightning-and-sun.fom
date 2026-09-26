@@ -15991,6 +15991,266 @@
         80
       ],
       "source_sha256": "1f798c201344bd61be7a14feecbfc173b6cae5a2eb826fedd31d0ed95114aebb"
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_idle_east.png",
+      "seeds": [
+        [
+          39,
+          31
+        ],
+        [
+          44,
+          34
+        ],
+        [
+          34,
+          45
+        ],
+        [
+          45,
+          45
+        ]
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "5d2c5c0c51916fdd4a0368176fb8b1d80440c89ce1096eda2b10bb19a0ee69c5"
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_idle_north.png",
+      "seeds": [
+        [
+          35,
+          34
+        ],
+        [
+          32,
+          45
+        ],
+        [
+          45,
+          45
+        ]
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "6eda0985ebf4584ab9f509ee57b61cfb459e1b9ea67bbd09966a591ba37e1ccd"
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_idle_south.png",
+      "seeds": [
+        [
+          38,
+          31
+        ],
+        [
+          32,
+          45
+        ],
+        [
+          45,
+          45
+        ]
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "source_sha256": "2733d580bd1b3c6225c1a14692c532f9eb8607a90bc7dedeebbd72308f56cd05"
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_walk_east.png",
+      "seeds": [
+        [
+          39,
+          31
+        ],
+        [
+          199,
+          31
+        ],
+        [
+          119,
+          32
+        ],
+        [
+          279,
+          32
+        ],
+        [
+          44,
+          34
+        ],
+        [
+          204,
+          34
+        ],
+        [
+          124,
+          35
+        ],
+        [
+          284,
+          35
+        ],
+        [
+          34,
+          45
+        ],
+        [
+          45,
+          45
+        ],
+        [
+          112,
+          45
+        ],
+        [
+          125,
+          45
+        ],
+        [
+          194,
+          45
+        ],
+        [
+          205,
+          45
+        ],
+        [
+          275,
+          46
+        ],
+        [
+          284,
+          46
+        ]
+      ],
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "a69e8e59d2cc01c40f148efaa2d5b3366659fa42c3da3895750a897a9b379013"
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_walk_north.png",
+      "seeds": [
+        [
+          35,
+          34
+        ],
+        [
+          195,
+          34
+        ],
+        [
+          115,
+          35
+        ],
+        [
+          275,
+          35
+        ],
+        [
+          32,
+          45
+        ],
+        [
+          45,
+          45
+        ],
+        [
+          125,
+          45
+        ],
+        [
+          192,
+          45
+        ],
+        [
+          205,
+          45
+        ],
+        [
+          273,
+          45
+        ],
+        [
+          113,
+          46
+        ],
+        [
+          284,
+          46
+        ]
+      ],
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "2394fef821b78a384a0e11a84019146ac8918efce99cc89ab04debbc1b94c0e9"
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_walk_south.png",
+      "seeds": [
+        [
+          38,
+          31
+        ],
+        [
+          198,
+          31
+        ],
+        [
+          118,
+          32
+        ],
+        [
+          278,
+          32
+        ],
+        [
+          32,
+          45
+        ],
+        [
+          45,
+          45
+        ],
+        [
+          125,
+          45
+        ],
+        [
+          192,
+          45
+        ],
+        [
+          205,
+          45
+        ],
+        [
+          273,
+          45
+        ],
+        [
+          113,
+          46
+        ],
+        [
+          284,
+          46
+        ]
+      ],
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "af9805121d4fa8ff84b646df6d2c182fa98581c9524037523e9a9d215d54542a"
     }
   ],
   "source_colors": [

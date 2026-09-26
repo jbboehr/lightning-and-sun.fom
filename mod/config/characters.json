@@ -582,7 +582,13 @@
       "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_blink_south.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_kiss_east.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_bath_swim_east.png": "Default",
-      "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_bath_swim_south.png": "Default"
+      "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_bath_swim_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_idle_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_idle_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_idle_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_walk_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_walk_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_walk_south.png": "Default"
     }
   },
   {
@@ -847,7 +853,13 @@
       "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_blink_south.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_kiss_east.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_bath_swim_east.png": "Default",
-      "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_bath_swim_south.png": "Default"
+      "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_bath_swim_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_idle_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_idle_north.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_idle_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_walk_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_walk_north.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_walk_south.png": "Default"
     }
   },
   {
@@ -1475,7 +1487,13 @@
       "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_blink_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_kiss_east.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_bath_swim_east.png": "Default",
-      "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_bath_swim_south.png": "Default"
+      "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_bath_swim_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_idle_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_idle_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_idle_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_walk_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_walk_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_walk_south.png": "Default"
     },
     "hotkey": "INSERT",
     "id": "celine",

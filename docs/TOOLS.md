@@ -145,7 +145,9 @@ The [Beach action batch](development/world-beach-actions.md) adds their blinks,
 general actions and kisses.
 The [Beach swimming batch](development/world-beach-swim.md) completes all three
 Beach sprite folders with bathing/swimming animations.
-Their totals are now 290, 258 and 375 sources
+The [Wedding pilot](development/world-wedding-pilot.md) adds their Wedding
+idle and walking animations.
+Their totals are now 296, 264 and 381 sources
 respectively. All three cover their complete Spring and Summer sprite folders;
 all three also cover their complete Autumn and Winter folders.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
