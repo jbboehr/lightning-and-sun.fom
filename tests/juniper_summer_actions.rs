@@ -2,30 +2,34 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/juniper-summer-actions-study and the retained Spring-injured Juniper bundle"]
-fn juniper_summer_world_cover_skin_and_preserve_reviewed_materials() {
+#[ignore = "requires extracted/juniper-summer-actions-study and the retained Summer-pilot Juniper bundle"]
+fn juniper_summer_actions_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/juniper-summer-actions-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/juniper-world-trial.json"));
-    let cases: [(&str, &[usize]); 6] = [
-        ("idle_north", &[19]),
-        ("idle_south", &[62]),
-        ("idle_east", &[51]),
-        ("walk_north", &[19, 17, 19, 11]),
-        ("walk_south", &[62, 56, 62, 57]),
-        ("walk_east", &[51, 53, 51, 51]),
+    let cases: [(&str, &[usize]); 11] = [
+        ("blink_south", &[62, 66, 62]),
+        ("blink_east", &[51, 55, 51]),
+        ("sit_north", &[10]),
+        ("sit_south", &[53]),
+        ("sit_east", &[33]),
+        ("eat_north", &[7, 4, 7]),
+        ("eat_south", &[56, 45, 46, 53, 53]),
+        ("eat_east", &[34, 38, 32, 34, 38]),
+        ("drink_north", &[7, 4, 7]),
+        ("drink_south", &[53, 49, 53]),
+        ("drink_east", &[33, 33, 33]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let skin = [0xEFD89A, 0xE3BF7F, 0xBC8B43, 0x763F21, 0xE8B171];
     // Literal source-material exclusions: circlet and bracers.
     type MaterialCase<'a> = (&'a str, u32, &'a [(u32, u32)]);
     let clothing: &[MaterialCase<'_>] = &[
-        ("idle_north", 0, &[]),
         (
-            "idle_south",
+            "blink_south",
             0,
             &[
                 (38, 33),
@@ -39,35 +43,21 @@ fn juniper_summer_world_cover_skin_and_preserve_reviewed_materials() {
             ],
         ),
         (
-            "idle_east",
-            0,
-            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (34, 45)],
-        ),
-        ("walk_north", 0, &[]),
-        ("walk_north", 1, &[]),
-        ("walk_north", 2, &[]),
-        ("walk_north", 3, &[]),
-        (
-            "walk_south",
-            0,
-            &[
-                (38, 33),
-                (41, 33),
-                (37, 34),
-                (42, 34),
-                (33, 45),
-                (35, 45),
-                (44, 45),
-                (46, 45),
-            ],
-        ),
-        (
-            "walk_south",
+            "blink_south",
             1,
-            &[(38, 34), (41, 34), (37, 35), (42, 35), (33, 46), (44, 45)],
+            &[
+                (38, 33),
+                (41, 33),
+                (37, 34),
+                (42, 34),
+                (33, 45),
+                (35, 45),
+                (44, 45),
+                (46, 45),
+            ],
         ),
         (
-            "walk_south",
+            "blink_south",
             2,
             &[
                 (38, 33),
@@ -81,87 +71,141 @@ fn juniper_summer_world_cover_skin_and_preserve_reviewed_materials() {
             ],
         ),
         (
-            "walk_south",
-            3,
-            &[(38, 34), (41, 34), (37, 35), (42, 35), (35, 45), (46, 46)],
-        ),
-        (
-            "walk_east",
+            "blink_east",
             0,
             &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (34, 45)],
         ),
         (
-            "walk_east",
+            "blink_east",
             1,
-            &[
-                (39, 34),
-                (42, 34),
-                (38, 35),
-                (43, 35),
-                (37, 44),
-                (33, 45),
-                (36, 45),
-                (44, 45),
-                (46, 45),
-            ],
-        ),
-        (
-            "walk_east",
-            2,
             &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (34, 45)],
         ),
         (
-            "walk_east",
+            "blink_east",
+            2,
+            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (34, 45)],
+        ),
+        ("sit_north", 0, &[]),
+        ("sit_south", 0, &[(38, 33), (41, 33), (37, 34), (42, 34)]),
+        (
+            "sit_east",
+            0,
+            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44)],
+        ),
+        ("eat_north", 0, &[]),
+        ("eat_north", 1, &[]),
+        ("eat_north", 2, &[]),
+        ("eat_south", 0, &[(38, 33), (41, 33), (37, 34), (42, 34)]),
+        ("eat_south", 1, &[(38, 34), (41, 34), (37, 35), (42, 35)]),
+        ("eat_south", 2, &[(38, 32), (41, 32)]),
+        ("eat_south", 3, &[(38, 34), (41, 34), (37, 35), (42, 35)]),
+        ("eat_south", 4, &[(38, 33), (41, 33), (37, 34), (42, 34)]),
+        (
+            "eat_east",
+            0,
+            &[(39, 33), (42, 33), (38, 34), (43, 34), (40, 43)],
+        ),
+        ("eat_east", 1, &[(40, 33), (43, 33), (39, 34), (44, 34)]),
+        ("eat_east", 2, &[(39, 32), (42, 32)]),
+        (
+            "eat_east",
             3,
-            &[(39, 34), (42, 34), (38, 35), (43, 35), (35, 46)],
+            &[(39, 34), (42, 34), (38, 35), (43, 35), (40, 44)],
+        ),
+        ("eat_east", 4, &[(39, 33), (42, 33), (38, 34), (43, 34)]),
+        ("drink_north", 0, &[]),
+        ("drink_north", 1, &[]),
+        ("drink_north", 2, &[]),
+        ("drink_south", 0, &[(38, 33), (41, 33), (37, 34), (42, 34)]),
+        (
+            "drink_south",
+            1,
+            &[(38, 34), (41, 34), (37, 35), (42, 35), (35, 43)],
+        ),
+        ("drink_south", 2, &[(38, 33), (41, 33), (37, 34), (42, 34)]),
+        (
+            "drink_east",
+            0,
+            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (40, 44)],
+        ),
+        (
+            "drink_east",
+            1,
+            &[(37, 33), (40, 33), (36, 34), (41, 34), (39, 43), (37, 44)],
+        ),
+        (
+            "drink_east",
+            2,
+            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (40, 44)],
         ),
     ];
     // Zero-based frame numbers and frame-local coordinates.
     let landmarks = [
-        ("idle_north", 0, 33, 45, 0xBC8B43, true), // rear hand edge
-        ("idle_north", 0, 33, 47, 0x763F21, true), // fingers
-        ("idle_north", 0, 37, 52, 0xBC8B43, true), // heel above sandal sole
-        ("idle_north", 0, 37, 51, 0xD6CDF4, false), // sandal strap
-        ("idle_north", 0, 39, 42, 0x9E77B3, false), // hair over back
-        ("idle_south", 0, 38, 33, 0xE3BF7F, false), // circlet corner
-        ("idle_south", 0, 40, 33, 0xD264AF, false), // Summer gemstone
-        ("idle_south", 0, 39, 36, 0xE3BF7F, true), // nose between eyes
-        ("idle_south", 0, 36, 42, 0xBC8B43, true), // bare shoulder
-        ("idle_south", 0, 36, 43, 0xEFD89A, true), // bare upper arm
-        ("idle_south", 0, 36, 44, 0x763F21, true), // exposed underarm shadow
-        ("idle_south", 0, 43, 44, 0x763F21, true), // opposite underarm shadow
-        ("idle_south", 0, 39, 42, 0xE3BF7F, true), // neckline
-        ("idle_south", 0, 39, 44, 0xE3BF7F, true), // midriff above navel
-        ("idle_south", 0, 38, 42, 0xD6CDF4, false), // blouse highlight
-        ("idle_south", 0, 33, 45, 0xBC8B43, false), // bracer below gemstone
-        ("idle_south", 0, 34, 44, 0xD264AF, false), // bracer gemstone
-        ("idle_south", 0, 42, 48, 0xBC8B43, true), // exposed leg through slit
-        ("idle_south", 0, 42, 49, 0x9793DC, false), // sandal wrap within slit
-        ("idle_south", 0, 42, 50, 0xE3BF7F, true), // shin below wrap
-        ("idle_south", 0, 37, 52, 0xBC8B43, true), // bare foot
-        ("idle_east", 0, 37, 42, 0xBC8B43, true),  // side shoulder
-        ("idle_east", 0, 37, 44, 0xBC8B43, false), // cuff corner
-        ("idle_east", 0, 38, 49, 0xBC8B43, true),  // leg above wrap
-        ("idle_east", 0, 38, 50, 0x9793DC, false), // side sandal wrap
-        ("idle_east", 0, 38, 51, 0xBC8B43, true),  // skin between sandal straps
-        ("idle_east", 0, 38, 52, 0x9793DC, false), // lower sandal strap
-        ("walk_north", 1, 35, 44, 0xE3BF7F, true), // swinging upper arm
-        ("walk_north", 1, 37, 51, 0x763F21, true), // raised heel shadow
-        ("walk_north", 3, 37, 54, 0xE3BF7F, true), // stepping heel
-        ("walk_south", 1, 36, 45, 0xBC8B43, true), // moving underarm
-        ("walk_south", 1, 44, 45, 0xE3BF7F, false), // turned bracer
-        ("walk_south", 1, 45, 46, 0xE3BF7F, true), // hand beneath bracer
-        ("walk_south", 1, 37, 52, 0xE3BF7F, true), // stepping foot
-        ("walk_south", 3, 35, 45, 0xE3BF7F, false), // opposite turned bracer
-        ("walk_south", 3, 34, 46, 0xE3BF7F, true), // opposite hand
-        ("walk_south", 3, 41, 49, 0xBC8B43, true), // knee in moving slit
-        ("walk_east", 1, 36, 43, 0xE3BF7F, true),  // moving bare shoulder
-        ("walk_east", 1, 36, 45, 0xBC8B43, false), // swinging cuff corner
-        ("walk_east", 1, 44, 45, 0xBC8B43, false), // far cuff corner
-        ("walk_east", 1, 37, 50, 0x763F21, true),  // raised foot shadow
-        ("walk_east", 3, 35, 46, 0xBC8B43, false), // backward cuff edge
-        ("walk_east", 3, 38, 51, 0xBC8B43, true),  // ankle beside strap
-        ("walk_east", 3, 43, 52, 0xD6CDF4, false), // opposite sandal strap
+        ("blink_south", 1, 37, 35, 0xE3BF7F, true), // closed eyelid skin
+        ("blink_south", 1, 38, 33, 0xE3BF7F, false), // matching circlet corner
+        ("blink_south", 0, 36, 44, 0x763F21, true), // bare underarm shadow
+        ("blink_south", 0, 33, 45, 0xBC8B43, false), // cuff below gem
+        ("blink_south", 0, 42, 50, 0xE3BF7F, true), // shin through skirt slit
+        ("blink_south", 0, 42, 49, 0x9793DC, false), // sandal wrap in slit
+        ("blink_east", 1, 38, 35, 0xE3BF7F, true),  // closed side eyelid
+        ("blink_east", 0, 37, 44, 0xBC8B43, false), // side cuff edge
+        ("blink_east", 0, 38, 51, 0xBC8B43, true),  // ankle between wraps
+        ("sit_north", 0, 34, 47, 0x763F21, true),   // rear fingertips
+        ("sit_north", 0, 39, 42, 0x9E77B3, false),  // hair over back
+        ("sit_south", 0, 36, 42, 0xBC8B43, true),   // bare shoulder
+        ("sit_south", 0, 36, 43, 0xE3BF7F, true),   // upper arm
+        ("sit_south", 0, 39, 44, 0xE3BF7F, true),   // midriff
+        ("sit_south", 0, 35, 44, 0xD264AF, false),  // Summer bracer gem
+        ("sit_south", 0, 37, 49, 0xBC8B43, true),   // foot above sole
+        ("sit_south", 0, 37, 48, 0xD6CDF4, false),  // sandal strap
+        ("sit_east", 0, 37, 44, 0xBC8B43, false),   // side cuff corner
+        ("sit_east", 0, 41, 49, 0xBC8B43, true),    // seated ankle
+        ("sit_east", 0, 44, 47, 0xD6CDF4, false),   // far sandal strap
+        ("eat_north", 1, 34, 47, 0x763F21, true),   // rear finger detail
+        ("eat_south", 0, 36, 43, 0x763F21, true),   // bent upper arm
+        ("eat_south", 1, 39, 40, 0x9E2626, false),  // mouth interior
+        ("eat_south", 1, 37, 43, 0xBC8B43, true),   // moving shoulder
+        ("eat_south", 2, 38, 32, 0xE3BF7F, false),  // shifted circlet corner
+        ("eat_south", 2, 38, 33, 0xB789D5, false),  // eyelid cosmetics
+        ("eat_south", 2, 36, 40, 0x763F21, true),   // lifted hand detail
+        ("eat_south", 2, 37, 35, 0xEFD89A, true),   // cheek beside open mouth
+        ("eat_south", 3, 37, 45, 0xBC8B43, true),   // raised fist edge
+        ("eat_east", 0, 40, 43, 0xBC8B43, false),   // rotated cuff shadow
+        ("eat_east", 0, 39, 43, 0x763F21, true),    // forearm beside cuff
+        ("eat_east", 1, 41, 39, 0x9E2626, false),   // side mouth interior
+        ("eat_east", 1, 45, 42, 0xBC8B43, true),    // extended fingers
+        ("eat_east", 2, 39, 32, 0xE3BF7F, false),   // moving side circlet
+        ("eat_east", 3, 40, 44, 0xBC8B43, false),   // lowering cuff shadow
+        ("drink_north", 0, 46, 45, 0xBC8B43, true), // far raised hand
+        ("drink_south", 0, 35, 42, 0xE8B171, true), // existing arm midtone alias
+        ("drink_south", 1, 36, 40, 0xE8B171, true), // lifted hand alias
+        ("drink_south", 1, 35, 43, 0x763F21, false), // separable rotated bracer edge
+        ("drink_east", 0, 41, 43, 0xE8B171, true),  // hand midtone
+        ("drink_east", 0, 37, 44, 0xBC8B43, false), // cuff left edge
+        ("drink_east", 0, 40, 44, 0xE8B171, false), // separable cuff right edge
+        ("drink_east", 2, 40, 44, 0xE8B171, false), // returning cuff right edge
+        ("drink_east", 1, 40, 40, 0xE8B171, true),  // lifted side hand
+        ("drink_east", 1, 39, 43, 0xBC8B43, false), // raised cuff right edge
+        ("drink_east", 1, 37, 44, 0xBC8B43, false), // raised cuff lower edge
+        ("drink_east", 1, 36, 44, 0xE8B171, true),  // forearm beneath coupled cuff edge
+        ("drink_east", 0, 36, 43, 0x010101, false), // arm outline
+        // Known art exceptions: these bracer corners share a component with
+        // exposed hands or forearm. Keeping full skin coverage also changes them.
+        ("sit_south", 0, 34, 45, 0xE3BF7F, true),
+        ("sit_south", 0, 45, 45, 0xE3BF7F, true),
+        ("eat_south", 0, 36, 45, 0xE3BF7F, true),
+        ("eat_south", 0, 45, 45, 0xE3BF7F, true),
+        ("eat_south", 1, 45, 45, 0xE3BF7F, true),
+        ("eat_south", 1, 37, 46, 0xE3BF7F, true),
+        ("eat_south", 2, 45, 45, 0xE3BF7F, true),
+        ("eat_south", 3, 45, 45, 0xE3BF7F, true),
+        ("eat_south", 4, 34, 45, 0xE3BF7F, true),
+        ("eat_south", 4, 45, 45, 0xE3BF7F, true),
+        ("eat_east", 4, 39, 44, 0xE3BF7F, true),
+        ("drink_south", 0, 45, 45, 0xE3BF7F, true),
+        ("drink_south", 1, 45, 45, 0xE3BF7F, true),
+        ("drink_south", 2, 45, 45, 0xE3BF7F, true),
+        ("drink_east", 1, 36, 43, 0xE8B171, true),
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -239,12 +283,12 @@ fn juniper_summer_world_cover_skin_and_preserve_reviewed_materials() {
                 }
             }
         }
-        assert_eq!(changed, 641);
+        assert_eq!(changed, 1162);
 
-        for r in &profile["regions"].as_array().unwrap()[..173] {
+        for r in &profile["regions"].as_array().unwrap()[..179] {
             let asset = r["asset"].as_str().unwrap();
             for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
-                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-march-spring-injured-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
+                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-reina-juniper-march-summer-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
             }
         }
     }
@@ -252,7 +296,7 @@ fn juniper_summer_world_cover_skin_and_preserve_reviewed_materials() {
     // Practical controls: dropping an finger shadow component, or merging groups
     // and allowing skin selection to cross into a same-shade gold bracer.
     let asset =
-        "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_summer_idle_south.png";
+        "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_summer_blink_south.png";
     let source = temp.path().join("controls-source");
     fs::create_dir_all(source.join(asset).parent().unwrap()).unwrap();
     for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
