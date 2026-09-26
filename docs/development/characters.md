@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
-Ryis's 273, Reina's 141, Juniper's 173, Celine's 390, March's 234, Balor's 110,
+Ryis's 273, Reina's 147, Juniper's 179, Celine's 390, March's 240, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 12,128 variant strips from 3,032 sources. Caldarus's three
+variants per source give 12,200 variant strips from 3,050 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -163,6 +163,8 @@ commit on 2026-09-26.
 The [March injured Spring batch](march-spring-injured.md) adds those fourteen
 strips, with 37 source frames and twelve native West mirrors. This completes
 his Spring folder alongside Reina and Juniper. The user approved this artwork for commit on 2026-09-26.
+The [Summer pilots](reina-juniper-march-summer.md) add six idle/walk strips each:
+45 source frames and fifteen native West mirrors. The user approved this artwork for commit on 2026-09-26.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -401,13 +403,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds March's Spring injured animations, completing
-his Spring sprite folder.
-It is in `generated/characters-march-spring-injured-trial/package`, verified in
-the isolated `tmp/world-spring-injured-playtest` lab with MOMI. It has no
+The latest combined package adds Summer idle/walk animations for Reina, Juniper
+and March.
+It is in `generated/characters-reina-juniper-march-summer-trial/package`, verified in
+the isolated `tmp/world-summer-pilots-playtest` lab with MOMI. It has no
 preview helper and did not replace the desktop launcher. Use the
-[complete offline review](../../generated/march-spring-injured-preview/blue-review/index.html)
-to inspect all 37 new source frames and twelve native West mirrors.
+[complete offline review](../../generated/reina-juniper-march-summer-preview/index.html)
+to inspect all 45 new source frames and fifteen native West mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

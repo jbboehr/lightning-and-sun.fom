@@ -2,51 +2,8 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-fn juniper_world_retains_all_portrait_regions_groups_and_target_roles() {
-    let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let read =
-        |s: &str| -> Value { serde_json::from_slice(&fs::read(root.join(s)).unwrap()).unwrap() };
-    let old = read("palettes/profiles/juniper-portraits.json");
-    let world = read("palettes/profiles/juniper-world-trial.json");
-    assert_eq!(old["regions"].as_array().unwrap().len(), 132);
-    assert_eq!(world["regions"].as_array().unwrap().len(), 179);
-    assert_eq!(
-        &world["regions"].as_array().unwrap()[..132],
-        old["regions"].as_array().unwrap()
-    );
-    assert_eq!(
-        &world["source_colors"].as_array().unwrap()[..12],
-        old["source_colors"].as_array().unwrap()
-    );
-    assert_eq!(
-        &world["color_groups"].as_array().unwrap()[..4],
-        old["color_groups"].as_array().unwrap()
-    );
-    assert_eq!(world["source_colors"][12], "#BC8B43");
-    assert_eq!(world["color_groups"][4], json!(["#BC8B43"]));
-    let old = read("palettes/sets/juniper-portraits-trial.json");
-    let world = read("palettes/sets/juniper-world-trial.json");
-    assert_eq!(world["profile"], "../profiles/juniper-world-trial.json");
-    assert_eq!(world["presets"].as_array().unwrap().len(), 4);
-    for (a, b) in old["presets"]
-        .as_array()
-        .unwrap()
-        .iter()
-        .zip(world["presets"].as_array().unwrap())
-    {
-        assert_eq!(a["id"], b["id"]);
-        assert_eq!(a["label"], b["label"]);
-        assert_eq!(
-            &b["colors"].as_array().unwrap()[..12],
-            a["colors"].as_array().unwrap()
-        );
-        assert_eq!(b["colors"][12], a["colors"][2]);
-    }
-}
-
-#[test]
-#[ignore = "requires extracted/juniper-summer-world-study and the retained Wedding-finish Juniper bundle"]
-fn juniper_world_covers_skin_without_recoloring_shared_jewelry_shades() {
+#[ignore = "requires extracted/juniper-summer-world-study and the retained Spring-injured Juniper bundle"]
+fn juniper_summer_world_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/juniper-summer-world-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
@@ -54,19 +11,19 @@ fn juniper_world_covers_skin_without_recoloring_shared_jewelry_shades() {
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/juniper-world-trial.json"));
     let cases: [(&str, &[usize]); 6] = [
-        ("idle_east", &[41]),
-        ("idle_north", &[11]),
-        ("idle_south", &[50]),
-        ("walk_east", &[41, 46, 41, 37]),
-        ("walk_north", &[11, 9, 11, 8]),
-        ("walk_south", &[50, 48, 50, 42]),
+        ("idle_north", &[19]),
+        ("idle_south", &[62]),
+        ("idle_east", &[51]),
+        ("walk_north", &[19, 17, 19, 11]),
+        ("walk_south", &[62, 56, 62, 57]),
+        ("walk_east", &[51, 53, 51, 51]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    let skin = [0xEFD89A, 0xE3BF7F, 0xBC8B43, 0x763F21];
-    // The circlet, bracers and trailing skirt trim reuse skin shades.
-    // These literal material positions are excluded from the expected skin map.
+    let skin = [0xEFD89A, 0xE3BF7F, 0xBC8B43, 0x763F21, 0xE8B171];
+    // Literal source-material exclusions: circlet and bracers.
     type MaterialCase<'a> = (&'a str, u32, &'a [(u32, u32)]);
     let clothing: &[MaterialCase<'_>] = &[
+        ("idle_north", 0, &[]),
         (
             "idle_south",
             0,
@@ -79,24 +36,17 @@ fn juniper_world_covers_skin_without_recoloring_shared_jewelry_shades() {
                 (35, 45),
                 (44, 45),
                 (46, 45),
-                (41, 47),
             ],
         ),
         (
             "idle_east",
             0,
-            &[
-                (39, 33),
-                (42, 33),
-                (38, 34),
-                (43, 34),
-                (37, 44),
-                (34, 45),
-                (37, 48),
-                (36, 49),
-            ],
+            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (34, 45)],
         ),
-        ("idle_north", 0, &[(37, 49)]),
+        ("walk_north", 0, &[]),
+        ("walk_north", 1, &[]),
+        ("walk_north", 2, &[]),
+        ("walk_north", 3, &[]),
         (
             "walk_south",
             0,
@@ -109,21 +59,12 @@ fn juniper_world_covers_skin_without_recoloring_shared_jewelry_shades() {
                 (35, 45),
                 (44, 45),
                 (46, 45),
-                (41, 47),
             ],
         ),
         (
             "walk_south",
             1,
-            &[
-                (38, 34),
-                (41, 34),
-                (37, 35),
-                (42, 35),
-                (33, 46),
-                (44, 45),
-                (41, 48),
-            ],
+            &[(38, 34), (41, 34), (37, 35), (42, 35), (33, 46), (44, 45)],
         ),
         (
             "walk_south",
@@ -137,35 +78,17 @@ fn juniper_world_covers_skin_without_recoloring_shared_jewelry_shades() {
                 (35, 45),
                 (44, 45),
                 (46, 45),
-                (41, 47),
             ],
         ),
         (
             "walk_south",
             3,
-            &[
-                (38, 34),
-                (41, 34),
-                (37, 35),
-                (42, 35),
-                (35, 45),
-                (46, 46),
-                (41, 48),
-            ],
+            &[(38, 34), (41, 34), (37, 35), (42, 35), (35, 45), (46, 46)],
         ),
         (
             "walk_east",
             0,
-            &[
-                (39, 33),
-                (42, 33),
-                (38, 34),
-                (43, 34),
-                (37, 44),
-                (34, 45),
-                (37, 48),
-                (36, 49),
-            ],
+            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (34, 45)],
         ),
         (
             "walk_east",
@@ -180,80 +103,65 @@ fn juniper_world_covers_skin_without_recoloring_shared_jewelry_shades() {
                 (36, 45),
                 (44, 45),
                 (46, 45),
-                (37, 48),
-                (36, 49),
             ],
         ),
         (
             "walk_east",
             2,
-            &[
-                (39, 33),
-                (42, 33),
-                (38, 34),
-                (43, 34),
-                (37, 44),
-                (34, 45),
-                (37, 48),
-                (36, 49),
-            ],
+            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (34, 45)],
         ),
         (
             "walk_east",
             3,
-            &[
-                (39, 34),
-                (42, 34),
-                (38, 35),
-                (43, 35),
-                (35, 46),
-                (38, 49),
-                (40, 49),
-                (43, 49),
-            ],
+            &[(39, 34), (42, 34), (38, 35), (43, 35), (35, 46)],
         ),
-        ("walk_north", 0, &[(37, 49)]),
-        ("walk_north", 1, &[(36, 48), (38, 49), (45, 49), (44, 50)]),
-        ("walk_north", 2, &[(37, 49)]),
-        ("walk_north", 3, &[(34, 49), (43, 49), (36, 50), (43, 50)]),
     ];
-    // Frame numbers are zero-based; x coordinates are within the frame.
+    // Zero-based frame numbers and frame-local coordinates.
     let landmarks = [
-        ("idle_south", 0, 38, 33, 0xE3BF7F, false), // circlet upper border
-        ("idle_south", 0, 37, 34, 0xBC8B43, false), // circlet side shadow
-        ("idle_south", 0, 38, 34, 0xFFF45D, false), // gold highlight
-        ("idle_south", 0, 39, 34, 0x3CB9D8, false), // gemstone
-        ("idle_south", 0, 39, 36, 0xE3BF7F, true),  // nose bridge
-        ("idle_south", 0, 39, 37, 0xEFD89A, true),  // face highlight
-        ("idle_south", 0, 37, 38, 0xBC8B43, true),  // cheek shadow
-        ("idle_south", 0, 37, 39, 0x763F21, true),  // dark jaw edge
-        ("idle_south", 0, 36, 38, 0x715E8E, false), // hair beside cheek
-        ("idle_south", 0, 39, 40, 0xBC8B43, true),  // neck
-        ("idle_south", 0, 39, 42, 0xBC8B43, true),  // chest shading
-        ("idle_south", 0, 38, 42, 0x646392, false), // bodice edge
-        ("idle_south", 0, 35, 43, 0xBC8B43, true),  // exposed upper arm
-        ("idle_south", 0, 39, 44, 0xBC8B43, true),  // midriff shadow
-        ("idle_south", 0, 33, 45, 0xBC8B43, false), // bracer shadow
-        ("idle_south", 0, 32, 46, 0xEFD89A, true),  // hand below bracer
-        ("idle_south", 0, 33, 47, 0x763F21, true),  // finger detail
-        ("idle_south", 0, 41, 47, 0xBC8B43, false), // gold skirt clasp
-        ("idle_south", 0, 42, 48, 0xBC8B43, true),  // thigh shadow beside trim
-        ("idle_south", 0, 41, 49, 0xEFD89A, true),  // exposed thigh
-        ("idle_south", 0, 38, 53, 0x4C4B74, false), // boot
-        ("idle_east", 0, 37, 44, 0xBC8B43, false),  // side bracer shadow
-        ("idle_east", 0, 34, 47, 0xBC8B43, true),   // side hand shadow
-        ("idle_east", 0, 36, 49, 0x763F21, false),  // trailing skirt point
-        ("idle_north", 0, 33, 45, 0xBC8B43, true),  // rear hand edge
-        ("idle_north", 0, 37, 49, 0xBC8B43, false), // rear hem
-        ("idle_north", 0, 39, 42, 0x9E77B3, false), // hair highlight
+        ("idle_north", 0, 33, 45, 0xBC8B43, true), // rear hand edge
+        ("idle_north", 0, 33, 47, 0x763F21, true), // fingers
+        ("idle_north", 0, 37, 52, 0xBC8B43, true), // heel above sandal sole
+        ("idle_north", 0, 37, 51, 0xD6CDF4, false), // sandal strap
+        ("idle_north", 0, 39, 42, 0x9E77B3, false), // hair over back
+        ("idle_south", 0, 38, 33, 0xE3BF7F, false), // circlet corner
+        ("idle_south", 0, 40, 33, 0xD264AF, false), // Summer gemstone
+        ("idle_south", 0, 39, 36, 0xE3BF7F, true), // nose between eyes
+        ("idle_south", 0, 36, 42, 0xBC8B43, true), // bare shoulder
+        ("idle_south", 0, 36, 43, 0xEFD89A, true), // bare upper arm
+        ("idle_south", 0, 36, 44, 0x763F21, true), // exposed underarm shadow
+        ("idle_south", 0, 43, 44, 0x763F21, true), // opposite underarm shadow
+        ("idle_south", 0, 39, 42, 0xE3BF7F, true), // neckline
+        ("idle_south", 0, 39, 44, 0xE3BF7F, true), // midriff above navel
+        ("idle_south", 0, 38, 42, 0xD6CDF4, false), // blouse highlight
+        ("idle_south", 0, 33, 45, 0xBC8B43, false), // bracer below gemstone
+        ("idle_south", 0, 34, 44, 0xD264AF, false), // bracer gemstone
+        ("idle_south", 0, 42, 48, 0xBC8B43, true), // exposed leg through slit
+        ("idle_south", 0, 42, 49, 0x9793DC, false), // sandal wrap within slit
+        ("idle_south", 0, 42, 50, 0xE3BF7F, true), // shin below wrap
+        ("idle_south", 0, 37, 52, 0xBC8B43, true), // bare foot
+        ("idle_east", 0, 37, 42, 0xBC8B43, true),  // side shoulder
+        ("idle_east", 0, 37, 44, 0xBC8B43, false), // cuff corner
+        ("idle_east", 0, 38, 49, 0xBC8B43, true),  // leg above wrap
+        ("idle_east", 0, 38, 50, 0x9793DC, false), // side sandal wrap
+        ("idle_east", 0, 38, 51, 0xBC8B43, true),  // skin between sandal straps
+        ("idle_east", 0, 38, 52, 0x9793DC, false), // lower sandal strap
+        ("walk_north", 1, 35, 44, 0xE3BF7F, true), // swinging upper arm
+        ("walk_north", 1, 37, 51, 0x763F21, true), // raised heel shadow
+        ("walk_north", 3, 37, 54, 0xE3BF7F, true), // stepping heel
+        ("walk_south", 1, 36, 45, 0xBC8B43, true), // moving underarm
         ("walk_south", 1, 44, 45, 0xE3BF7F, false), // turned bracer
-        ("walk_south", 1, 45, 46, 0xE3BF7F, true),  // turned hand
+        ("walk_south", 1, 45, 46, 0xE3BF7F, true), // hand beneath bracer
+        ("walk_south", 1, 37, 52, 0xE3BF7F, true), // stepping foot
         ("walk_south", 3, 35, 45, 0xE3BF7F, false), // opposite turned bracer
-        ("walk_south", 3, 34, 46, 0xE3BF7F, true),  // opposite turned hand
-        ("walk_north", 1, 38, 49, 0xBC8B43, false), // moving rear hem
-        ("walk_north", 1, 33, 48, 0xBC8B43, true),  // moving hand edge
-        ("walk_east", 3, 40, 49, 0xBC8B43, false),  // folded hem
-        ("walk_east", 3, 39, 50, 0xBC8B43, true),   // leg above boot
+        ("walk_south", 3, 34, 46, 0xE3BF7F, true), // opposite hand
+        ("walk_south", 3, 41, 49, 0xBC8B43, true), // knee in moving slit
+        ("walk_east", 1, 36, 43, 0xE3BF7F, true),  // moving bare shoulder
+        ("walk_east", 1, 36, 45, 0xBC8B43, false), // swinging cuff corner
+        ("walk_east", 1, 44, 45, 0xBC8B43, false), // far cuff corner
+        ("walk_east", 1, 37, 50, 0x763F21, true),  // raised foot shadow
+        ("walk_east", 3, 35, 46, 0xBC8B43, false), // backward cuff edge
+        ("walk_east", 3, 38, 51, 0xBC8B43, true),  // ankle beside strap
+        ("walk_east", 3, 43, 52, 0xD6CDF4, false), // opposite sandal strap
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -283,13 +191,15 @@ fn juniper_world_covers_skin_without_recoloring_shared_jewelry_shades() {
             "{}",
             String::from_utf8_lossy(&result.stderr)
         );
-        let targets = [0, 1, 12, 4].map(|i| {
+        let targets = [0, 1, 12, 4, 13].map(|i| {
             rgba(u32::from_str_radix(&preset["colors"][i].as_str().unwrap()[1..7], 16).unwrap())
         });
         let mut changed = 0;
+
         for (name, counts) in cases {
+            let prefix = "summer";
             let asset = format!(
-                "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_spring_{name}.png"
+                "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_{prefix}_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -329,19 +239,20 @@ fn juniper_world_covers_skin_without_recoloring_shared_jewelry_shades() {
                 }
             }
         }
-        assert_eq!(changed, 496);
-        for r in &profile["regions"].as_array().unwrap()[..132] {
+        assert_eq!(changed, 641);
+
+        for r in &profile["regions"].as_array().unwrap()[..173] {
             let asset = r["asset"].as_str().unwrap();
             for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
-                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-world-wedding-finish-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior portrait output {id} {path}");
+                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-march-spring-injured-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
             }
         }
     }
 
-    // Practical controls: dropping a detached hand, or merging color groups
+    // Practical controls: dropping an finger shadow component, or merging groups
     // and allowing skin selection to cross into a same-shade gold bracer.
     let asset =
-        "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_spring_idle_south.png";
+        "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_summer_idle_south.png";
     let source = temp.path().join("controls-source");
     fs::create_dir_all(source.join(asset).parent().unwrap()).unwrap();
     for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
@@ -399,15 +310,15 @@ fn juniper_world_covers_skin_without_recoloring_shared_jewelry_shades() {
     missing["seeds"]
         .as_array_mut()
         .unwrap()
-        .retain(|s| *s != json!([32, 46]));
+        .retain(|s| *s != json!([33, 47]));
     let omitted = apply_control(
-        "missing-hand",
+        "missing-finger-shadow",
         missing,
         map.clone(),
         profile["color_groups"].clone(),
     );
-    assert_eq!(omitted.get_pixel(32, 46).0, rgba(0xEFD89A));
-    assert_ne!(omitted.get_pixel(32, 46), correct.get_pixel(32, 46));
+    assert_eq!(omitted.get_pixel(33, 47).0, rgba(0x763F21));
+    assert_ne!(omitted.get_pixel(33, 47), correct.get_pixel(33, 47));
     let spilled = apply_control(
         "merged-groups",
         region,

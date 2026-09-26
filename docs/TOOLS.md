@@ -164,7 +164,8 @@ The [next Spring batch](development/reina-juniper-march-finish.md)
 finishes Reina's kitchen work and Juniper's gestures/magic, completing both
 Spring folders. March's gestures/poses cover all normal Spring sprites;
 his [injured animation batch](development/march-spring-injured.md) adds the final
-fourteen strips and completes his Spring folder. Totals are now 141, 173 and 234,
+fourteen strips and completes his Spring folder. The [Summer pilots](development/reina-juniper-march-summer.md)
+add idle and walking sprites in all four directions. Totals are now 147, 179 and 240,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
