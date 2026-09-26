@@ -158,7 +158,9 @@ add blinking, sitting, eating and drinking: eleven more strips each. Their
 [standard Spring completion](development/reina-juniper-march-standard.md) adds
 general actions, sleeping and kissing: five more strips each. The
 [shocked/reading batch](development/reina-juniper-march-reactions.md) adds six
-South-facing strips each. They now have 131, 160 and 209 sources respectively,
+South-facing strips each. The [special-action batch](development/reina-juniper-march-specials.md)
+adds Reina's writing, Juniper's laugh/charm and March's smithing. They now have
+137, 166 and 214 sources respectively,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

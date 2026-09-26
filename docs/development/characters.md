@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
-Ryis's 273, Reina's 131, Juniper's 160, Celine's 390, March's 209, Balor's 110,
+Ryis's 273, Reina's 137, Juniper's 166, Celine's 390, March's 214, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 11,936 variant strips from 2,984 sources. Caldarus's three
+variants per source give 12,004 variant strips from 3,001 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -151,6 +151,10 @@ and 36 native West mirrors. The user approved this artwork for commit on 2026-09
 The [Reina, Juniper and March shocked/reading batch](reina-juniper-march-reactions.md)
 adds eighteen strips and 39 South-facing source frames, including each cycle
 phase. The user approved this artwork for commit on 2026-09-25.
+The [Reina, Juniper and March special-action batch](reina-juniper-march-specials.md)
+adds Reina's standing and seated writing, Juniper's laugh and charm, and March's
+smithing: seventeen strips, 53 source frames and seven native West mirrors.
+The user approved this artwork for commit on 2026-09-26.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -389,13 +393,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Reina, Juniper and March's Spring shocked
-reactions and seated reading alongside their accepted everyday sprites.
-It is in `generated/characters-reina-juniper-march-reactions-trial/package`, verified in
-the isolated `tmp/world-spring-reactions-playtest` lab with MOMI. It has no
+The latest combined package adds Reina's Spring writing, Juniper's laugh/charm
+and March's smithing alongside their accepted everyday sprites.
+It is in `generated/characters-reina-juniper-march-specials-trial/package`, verified in
+the isolated `tmp/world-spring-specials-playtest` lab with MOMI. It has no
 preview helper and did not replace the desktop launcher. Use the
-[complete offline review](../../generated/reina-juniper-march-reactions-preview/index.html)
-to inspect all 39 new source frames. These cycles only face South.
+[complete offline review](../../../generated/reina-juniper-march-specials-preview/index.html)
+to inspect all 53 new source frames and seven native West hammer mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

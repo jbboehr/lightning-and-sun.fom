@@ -1012,7 +1012,13 @@
       "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_specialanimation_spring_read_sit_start_south.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_spring_shocked_loop_south.png": "Default",
-      "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_spring_shocked_start_south.png": "Default"
+      "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_spring_shocked_start_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_specialanimation_spring_write_end_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_specialanimation_spring_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_specialanimation_spring_write_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_specialanimation_spring_write_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_specialanimation_spring_write_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Spring/spr_npc_reina_specialanimation_spring_write_start_south.png": "Default"
     },
     "hotkey": "HOME",
     "id": "reina",
@@ -1179,7 +1185,13 @@
       "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_specialanimation_spring_read_sit_start_south.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_spring_shocked_loop_south.png": "Default",
-      "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_spring_shocked_start_south.png": "Default"
+      "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_spring_shocked_start_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_specialanimation_spring_charm_end_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_specialanimation_spring_charm_loop_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_specialanimation_spring_charm_start_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_specialanimation_spring_laugh_end_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_specialanimation_spring_laugh_loop_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Spring/spr_npc_juniper_specialanimation_spring_laugh_start_south.png": "Default"
     },
     "hotkey": "PAGE_DOWN",
     "id": "juniper",
@@ -1792,7 +1804,12 @@
       "assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_specialanimation_spring_read_sit_start_south.png": "Default",
       "assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_spring_shocked_loop_south.png": "Default",
-      "assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_spring_shocked_start_south.png": "Default"
+      "assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_spring_shocked_start_south.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_specialanimation_spring_hammer_east.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_specialanimation_spring_wipebrow_south.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_specialanimation_spring_work_sit_end_north.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_specialanimation_spring_work_sit_loop_north.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_specialanimation_spring_work_sit_start_north.png": "Default"
     },
     "hotkey": "U",
     "id": "march",
