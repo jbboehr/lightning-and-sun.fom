@@ -2,8 +2,8 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis Beach idle/walk corpus in extracted/ryis-beach-actions-study"]
-fn ryis_beach_skin_covers_bare_limbs_and_preserves_clothing_and_wristbands() {
+#[ignore = "requires the local Ryis Beach blink/action/kiss corpus in extracted/ryis-beach-actions-study"]
+fn ryis_beach_actions_cover_closed_features_and_limbs_without_material_spills() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/ryis-beach-actions-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
@@ -11,49 +11,51 @@ fn ryis_beach_skin_covers_bare_limbs_and_preserves_clothing_and_wristbands() {
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/ryis-world-trial.json"));
     let cases: [(&str, &[usize]); 6] = [
-        ("idle_east", &[91]),
-        ("idle_north", &[79]),
-        ("idle_south", &[102]),
-        ("walk_east", &[91, 94, 91, 88]),
-        ("walk_north", &[79, 70, 79, 71]),
-        ("walk_south", &[102, 94, 102, 93]),
+        ("blink_east", &[95, 99, 95]),
+        ("blink_south", &[106, 110, 106]),
+        ("action_east", &[81, 74, 74, 74, 74, 81, 89]),
+        ("action_north", &[74, 73, 73, 73, 73, 77, 79]),
+        ("action_south", &[93, 94, 94, 94, 94, 93, 102]),
+        ("kiss_east", &[83, 86, 93, 90]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    // Beach exposes chest, back, shoulders, arms, hands, legs and toes.
-    // All four reviewed shades are skin in these strips; the rear hair,
-    // pink tank, blue shorts/sandal straps and dark wristbands are separate.
+    // Actual Beach frames include closed eyelids, exposed chest/back,
+    // gesturing bare arms and hands, legs and toes. Hair, tank, shorts,
+    // sandal straps and wristbands retain their separate material colors.
     let skin = [0xB06C57, 0x854D3C, 0x63342A, 0x491F1B];
     // Frame numbers are zero-based; x coordinates are within the frame.
     let landmarks = [
-        ("idle_south", 0, 38, 31, 0x63342A, true), // forehead under hair
-        ("idle_south", 0, 37, 36, 0xECF0E9, false), // eye white
-        ("idle_south", 0, 39, 41, 0xB06C57, true), // exposed chest
-        ("idle_south", 0, 37, 40, 0xFF948B, false), // tank strap
-        ("idle_south", 0, 39, 44, 0xFF5C64, false), // tank fabric
-        ("idle_south", 0, 34, 44, 0xB06C57, true), // bare forearm
-        ("idle_south", 0, 45, 44, 0x354647, false), // wristband highlight
-        ("idle_south", 0, 44, 44, 0x332727, false), // wristband shadow
-        ("idle_south", 0, 45, 45, 0xB06C57, true), // hand below wristband
-        ("idle_south", 0, 46, 46, 0x491F1B, true), // finger shadow
-        ("idle_south", 0, 38, 47, 0x72B2D9, false), // shorts hem
-        ("idle_south", 0, 38, 49, 0xB06C57, true), // shin
-        ("idle_south", 0, 37, 52, 0x72B2D9, false), // sandal strap
-        ("idle_south", 0, 37, 53, 0xB06C57, true), // exposed toes
-        ("idle_north", 0, 39, 35, 0x5E423B, false), // short rear hair
-        ("idle_north", 0, 35, 35, 0xB06C57, true), // ear beside hair
-        ("idle_north", 0, 39, 41, 0xB06C57, true), // exposed upper back
-        ("idle_north", 0, 39, 44, 0xFF5C64, false), // back of tank
-        ("idle_north", 0, 32, 44, 0x354647, false), // reversed wristband
-        ("idle_north", 0, 32, 45, 0xB06C57, true), // hand below wristband
-        ("idle_east", 0, 44, 45, 0x854D3C, true),  // far hand
-        ("idle_east", 0, 45, 44, 0x354647, false), // far wristband
-        ("idle_east", 0, 38, 50, 0x63342A, true),  // side shin shadow
-        ("idle_east", 0, 40, 53, 0xB06C57, true),  // extended toe
-        ("walk_south", 1, 44, 44, 0x354647, false), // moving wristband
-        ("walk_south", 1, 44, 45, 0x491F1B, true), // adjacent moving hand
-        ("walk_south", 1, 37, 51, 0x6482AA, false), // lifted sandal strap
-        ("walk_south", 1, 37, 52, 0x854D3C, true), // lifted toes
-        ("walk_south", 1, 41, 54, 0xB06C57, true), // planted toes
+        ("blink_south", 1, 38, 35, 0xB06C57, true), // closed eyelid
+        ("blink_south", 1, 37, 36, 0x000000, false), // closed eye line
+        ("blink_south", 1, 39, 41, 0xB06C57, true), // exposed chest
+        ("blink_south", 1, 37, 40, 0xFF948B, false), // tank strap
+        ("blink_south", 1, 45, 44, 0x354647, false), // wristband
+        ("blink_south", 1, 45, 45, 0xB06C57, true), // hand below wristband
+        ("blink_south", 1, 38, 49, 0xB06C57, true), // shin
+        ("blink_south", 1, 37, 52, 0x72B2D9, false), // sandal strap
+        ("blink_south", 1, 37, 53, 0xB06C57, true), // toes
+        ("action_north", 0, 39, 35, 0x5E423B, false), // short rear hair
+        ("action_north", 0, 35, 35, 0xB06C57, true), // ear beside hair
+        ("action_north", 0, 39, 41, 0xB06C57, true), // upper back
+        ("action_north", 0, 39, 44, 0xFF5C64, false), // tank fabric
+        ("action_north", 0, 33, 42, 0x354647, false), // turned wristband
+        ("action_north", 0, 32, 43, 0xB06C57, true), // hand by wristband
+        ("action_north", 0, 46, 40, 0x63342A, true), // raised finger
+        ("action_east", 1, 43, 41, 0xB06C57, true), // upper arm
+        ("action_east", 1, 48, 42, 0xB06C57, true), // extended forearm
+        ("action_east", 1, 48, 44, 0x491F1B, true), // extended finger shadow
+        ("action_east", 1, 41, 40, 0xFF948B, false), // moving tank strap
+        ("action_east", 1, 41, 44, 0xFF5C64, false), // moving tank fabric
+        ("action_east", 1, 43, 50, 0xB06C57, true), // bare leg
+        ("action_east", 1, 43, 52, 0x72B2D9, false), // sandal strap
+        ("action_east", 1, 44, 53, 0xB06C57, true), // extended toe
+        ("kiss_east", 2, 41, 35, 0x000000, false),  // closed eye
+        ("kiss_east", 2, 46, 37, 0x854D3C, true),   // lip/cheek shading
+        ("kiss_east", 2, 47, 37, 0x000000, false),  // kissing mouth outline
+        ("kiss_east", 2, 42, 41, 0xB06C57, true),   // bare chest
+        ("kiss_east", 2, 37, 53, 0xB06C57, true),   // raised foot
+        ("kiss_east", 2, 36, 51, 0x6482AA, false),  // raised sandal strap
+        ("kiss_east", 2, 40, 47, 0x72B2D9, false),  // shorts hem
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -123,12 +125,12 @@ fn ryis_beach_skin_covers_bare_limbs_and_preserves_clothing_and_wristbands() {
                 }
             }
         }
-        assert_eq!(changed, 1326);
+        assert_eq!(changed, 2696);
     }
 
     // Practical controls for the two easy Beach mistakes: dropping a leg
     // component, or broadening the palette into shorts and sandal straps.
-    let asset = "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_idle_south.png";
+    let asset = "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_blink_south.png";
     let source = temp.path().join("controls-source");
     fs::create_dir_all(source.join(asset).parent().unwrap()).unwrap();
     for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {

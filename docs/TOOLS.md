@@ -141,7 +141,9 @@ The [Winter completion batch](development/world-winter-finish.md) adds Celine's
 remaining reading, sweeping, watering and harvesting animations.
 The [Beach pilot](development/world-beach-pilot.md) adds idle and walk animations
 for all three characters.
-Their totals are now 282, 250 and 367 sources
+The [Beach action batch](development/world-beach-actions.md) adds their blinks,
+general actions and kisses.
+Their totals are now 288, 256 and 373 sources
 respectively. All three cover their complete Spring and Summer sprite folders;
 all three also cover their complete Autumn and Winter folders.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

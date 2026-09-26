@@ -574,7 +574,13 @@
       "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_idle_south.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_walk_east.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_walk_north.png": "Default",
-      "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_walk_south.png": "Default"
+      "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_walk_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_action_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_action_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_action_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_blink_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_blink_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Beach/spr_npc_hayden_beach_kiss_east.png": "Default"
     }
   },
   {
@@ -831,7 +837,13 @@
       "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_idle_south.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_walk_east.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_walk_north.png": "Default",
-      "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_walk_south.png": "Default"
+      "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_walk_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_action_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_action_north.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_action_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_blink_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_blink_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_kiss_east.png": "Default"
     }
   },
   {
@@ -1451,7 +1463,13 @@
       "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_idle_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_walk_east.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_walk_north.png": "Default",
-      "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_walk_south.png": "Default"
+      "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_walk_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_action_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_action_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_action_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_blink_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_blink_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_beach_kiss_east.png": "Default"
     },
     "hotkey": "INSERT",
     "id": "celine",
