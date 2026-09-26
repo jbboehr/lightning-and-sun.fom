@@ -1,5 +1,5 @@
 {
-  "description": "Juniper portrait and reviewed Spring idle/walk skin in Debug Blue; cosmetics, hair, clothing, circlet, bracers, skirt trim and other accessories stay original.",
+  "description": "Juniper portraits and reviewed Spring idle, walk, blink, sit, eat and drink skin in Debug Blue; cosmetics, hair, clothing and accessories retain their reviewed material boundaries.",
   "rgba_map": {
     "#EFD89A": "#9DB9D4",
     "#E3BF7F": "#7F9FBD",
@@ -13,7 +13,8 @@
     "#965532": "#445F83",
     "#DFAB68": "#6687AD",
     "#9D5A33": "#445F83",
-    "#BC8B43": "#6687AD"
+    "#BC8B43": "#6687AD",
+    "#E8B171": "#7F9FBD"
   },
   "profile": "../profiles/juniper-world-trial.json"
 }

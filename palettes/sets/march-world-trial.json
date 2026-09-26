@@ -16,7 +16,8 @@
         "#445F83",
         "#6687AD",
         "#7F9FBD",
-        "#6687AD"
+        "#6687AD",
+        "#7F9FBD"
       ],
       "id": "blue",
       "label": "Debug Blue"
@@ -37,7 +38,8 @@
         "#6E4922FF",
         "#B27146FF",
         "#CA9052FF",
-        "#B27146FF"
+        "#B27146FF",
+        "#CA9052FF"
       ],
       "id": "npc_hayden",
       "label": "Hayden palette"
@@ -58,7 +60,8 @@
         "#491F1BFF",
         "#63342AFF",
         "#814A3AFF",
-        "#63342AFF"
+        "#63342AFF",
+        "#814A3AFF"
       ],
       "id": "npc_ryis",
       "label": "Ryis palette"
@@ -79,7 +82,8 @@
         "#624A48FF",
         "#8E746DFF",
         "#A69084FF",
-        "#8E746DFF"
+        "#8E746DFF",
+        "#A69084FF"
       ],
       "id": "npc_seridia",
       "label": "Seridia palette"

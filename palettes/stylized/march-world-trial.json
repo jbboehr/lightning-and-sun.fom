@@ -1,5 +1,5 @@
 {
-  "description": "March portrait shading plus Spring world idle and walking skin in Debug Blue; hair, goggles, clothing and boots stay original.",
+  "description": "March portraits plus Spring world idle, walking, blinking, sitting, eating and drinking skin in Debug Blue; hair, goggles, mouth interiors and clothing stay original.",
   "rgba_map": {
     "#EEDDA5": "#9DB9D4",
     "#E6BD7C": "#7F9FBD",
@@ -15,7 +15,8 @@
     "#B65932": "#445F83",
     "#D0A179": "#6687AD",
     "#E8B271": "#7F9FBD",
-    "#D37A57": "#6687AD"
+    "#D37A57": "#6687AD",
+    "#E8B171": "#7F9FBD"
   },
   "profile": "../profiles/march-world-trial.json"
 }

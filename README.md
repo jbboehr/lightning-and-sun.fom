@@ -197,8 +197,9 @@ and Winter sprite folders are covered, including Celine's seasonal garden
 outfits and their reading, household and tool animations.
 Their complete Beach sprite folders are covered too, including swimming.
 Their complete Wedding sprite folders are also included.
-Reina, Juniper and March also include Spring idle and walking, using Home,
-Page Down and U respectively. Other unlisted overworld animations remain original.
+Reina, Juniper and March also include Spring idle, walking, blinking, sitting,
+eating and drinking, using Home, Page Down and U respectively. Other unlisted
+overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
 alone, use its set instead; for example,
