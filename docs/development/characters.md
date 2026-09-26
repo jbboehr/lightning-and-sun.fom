@@ -1,13 +1,13 @@
 # Independent character palettes
 
-The combined trial includes Adeline's 282 reviewed animations, Hayden's 276,
-Ryis's 244, Reina's 103, Juniper's 132, Celine's 361, March's 181, Balor's 110,
+The combined trial includes Adeline's 282 reviewed animations, Hayden's 282,
+Ryis's 250, Reina's 103, Juniper's 132, Celine's 367, March's 181, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 11,252 variant strips from 2,813 sources. Caldarus's three
+variants per source give 11,324 variant strips from 2,831 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -124,6 +124,9 @@ reading, sweeping, watering and harvesting animations: eleven strips, 51 source
 frames and fourteen native West mirrors. All three pilot characters now cover
 their complete Spring, Summer, Autumn and Winter sprite folders. The user
 approved this batch for commit on 2026-09-25.
+The [Beach pilot](world-beach-pilot.md) adds Hayden, Ryis and Celine idle/walk
+animations: eighteen strips, 45 source frames and fifteen native West mirrors.
+The user approved this batch for commit on 2026-09-25.
 The other portrait batches above still use their original overworld sprites.
 The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
@@ -360,13 +363,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package completes Celine's Winter folder, giving Hayden,
-Ryis and Celine complete Spring/Summer/Autumn/Winter sprite coverage. It is in
-`generated/characters-world-winter-finish-trial/package`, verified in
-the isolated `tmp/world-winter-finish-playtest` lab with MOMI v0.16.4. It has no
+The latest combined package adds Hayden, Ryis and Celine's Beach idle/walk
+alongside complete Spring/Summer/Autumn/Winter sprite coverage. It is in
+`generated/characters-world-beach-pilot-trial/package`, verified in
+the isolated `tmp/world-beach-pilot-playtest` lab with MOMI v0.16.4. It has no
 preview helper and did not replace the desktop launcher. Use the
-[complete offline review](../../generated/celine-winter-finish-preview/blue-review/index.html)
-to inspect all 51 new source frames and the fourteen native West mirrors.
+[complete offline review](../../generated/world-beach-pilot-preview/index.html)
+to inspect all 45 new source frames and the fifteen native West mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,
