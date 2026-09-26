@@ -2,58 +2,45 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the local Ryis Beach idle/walk corpus in extracted/ryis-beach-swim-study"]
-fn ryis_beach_skin_covers_bare_limbs_and_preserves_clothing_and_wristbands() {
+#[ignore = "requires the local Ryis Beach swimming corpus in extracted/ryis-beach-swim-study"]
+fn ryis_beach_swimming_covers_face_edges_and_preserves_water_and_hair() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/ryis-beach-swim-study");
     let profile_path = root.join("palettes/profiles/ryis-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/ryis-world-trial.json"));
-    let cases: [(&str, &[usize]); 6] = [
-        ("idle_east", &[91]),
-        ("idle_north", &[79]),
-        ("idle_south", &[102]),
-        ("walk_east", &[91, 94, 91, 88]),
-        ("walk_north", &[79, 70, 79, 71]),
-        ("walk_south", &[102, 94, 102, 93]),
+    let cases: [(&str, &[usize]); 2] = [
+        ("bath_swim_east", &[38, 38, 36, 36]),
+        ("bath_swim_south", &[41, 41, 39, 39]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    // Beach exposes chest, back, shoulders, arms, hands, legs and toes.
-    // All four reviewed shades are skin in these strips; the rear hair,
-    // pink tank, blue shorts/sandal straps and dark wristbands are separate.
+    // The lower face meets animated water. No body pixels are visible.
+    // All four candidate shades are face skin; hair, eyes, water and foam
+    // retain their original colors, even when touching the selected chin.
     let skin = [0xB06C57, 0x854D3C, 0x63342A, 0x491F1B];
     // Frame numbers are zero-based; x coordinates are within the frame.
     let landmarks = [
-        ("idle_south", 0, 38, 31, 0x63342A, true), // forehead under hair
-        ("idle_south", 0, 37, 36, 0xECF0E9, false), // eye white
-        ("idle_south", 0, 39, 41, 0xB06C57, true), // exposed chest
-        ("idle_south", 0, 37, 40, 0xFF948B, false), // tank strap
-        ("idle_south", 0, 39, 44, 0xFF5C64, false), // tank fabric
-        ("idle_south", 0, 34, 44, 0xB06C57, true), // bare forearm
-        ("idle_south", 0, 45, 44, 0x354647, false), // wristband highlight
-        ("idle_south", 0, 44, 44, 0x332727, false), // wristband shadow
-        ("idle_south", 0, 45, 45, 0xB06C57, true), // hand below wristband
-        ("idle_south", 0, 46, 46, 0x491F1B, true), // finger shadow
-        ("idle_south", 0, 38, 47, 0x72B2D9, false), // shorts hem
-        ("idle_south", 0, 38, 49, 0xB06C57, true), // shin
-        ("idle_south", 0, 37, 52, 0x72B2D9, false), // sandal strap
-        ("idle_south", 0, 37, 53, 0xB06C57, true), // exposed toes
-        ("idle_north", 0, 39, 35, 0x5E423B, false), // short rear hair
-        ("idle_north", 0, 35, 35, 0xB06C57, true), // ear beside hair
-        ("idle_north", 0, 39, 41, 0xB06C57, true), // exposed upper back
-        ("idle_north", 0, 39, 44, 0xFF5C64, false), // back of tank
-        ("idle_north", 0, 32, 44, 0x354647, false), // reversed wristband
-        ("idle_north", 0, 32, 45, 0xB06C57, true), // hand below wristband
-        ("idle_east", 0, 44, 45, 0x854D3C, true),  // far hand
-        ("idle_east", 0, 45, 44, 0x354647, false), // far wristband
-        ("idle_east", 0, 38, 50, 0x63342A, true),  // side shin shadow
-        ("idle_east", 0, 40, 53, 0xB06C57, true),  // extended toe
-        ("walk_south", 1, 44, 44, 0x354647, false), // moving wristband
-        ("walk_south", 1, 44, 45, 0x491F1B, true), // adjacent moving hand
-        ("walk_south", 1, 37, 51, 0x6482AA, false), // lifted sandal strap
-        ("walk_south", 1, 37, 52, 0x854D3C, true), // lifted toes
-        ("walk_south", 1, 41, 54, 0xB06C57, true), // planted toes
+        ("bath_swim_east", 0, 39, 46, 0x63342A, true), // forehead below hair
+        ("bath_swim_east", 0, 40, 43, 0x322724, false), // hair highlight
+        ("bath_swim_east", 0, 37, 49, 0x5E423B, false), // short side hair
+        ("bath_swim_east", 0, 39, 50, 0x000000, false), // pupil
+        ("bath_swim_east", 0, 38, 50, 0xC2B9BE, false), // eye shading
+        ("bath_swim_east", 0, 38, 51, 0xECF0E9, false), // eye white
+        ("bath_swim_east", 0, 40, 50, 0xB06C57, true), // cheek
+        ("bath_swim_east", 0, 43, 52, 0x854D3C, true), // lower cheek shade
+        ("bath_swim_east", 0, 40, 54, 0x63342A, true), // chin at waterline
+        ("bath_swim_east", 0, 40, 55, 0x9DEBFC, false), // foam below chin
+        ("bath_swim_east", 0, 34, 54, 0x328BC9, false), // dark water
+        ("bath_swim_east", 0, 49, 49, 0x9DEBFC, false), // detached splash
+        ("bath_swim_south", 0, 42, 47, 0x63342A, true), // isolated forehead patch
+        ("bath_swim_south", 0, 42, 48, 0x854D3C, true), // same patch below hair
+        ("bath_swim_south", 0, 39, 54, 0x63342A, true), // front chin
+        ("bath_swim_south", 0, 39, 55, 0x9DEBFC, false), // adjacent foam
+        ("bath_swim_south", 0, 33, 53, 0x328BC9, false), // surrounding water
+        ("bath_swim_south", 2, 39, 53, 0xB06C57, true), // bobbing cheek
+        ("bath_swim_south", 2, 39, 54, 0x854D3C, true), // submerged pose lower face
+        ("bath_swim_south", 2, 39, 55, 0x9DEBFC, false), // foam below lowered face
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -123,12 +110,12 @@ fn ryis_beach_skin_covers_bare_limbs_and_preserves_clothing_and_wristbands() {
                 }
             }
         }
-        assert_eq!(changed, 1326);
+        assert_eq!(changed, 308);
     }
 
-    // Practical controls for the two easy Beach mistakes: dropping a leg
-    // component, or broadening the palette into shorts and sandal straps.
-    let asset = "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_idle_south.png";
+    // Practical controls for the two easy Beach mistakes: dropping an isolated forehead
+    // component, or broadening the palette into the surrounding foam.
+    let asset = "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_bath_swim_south.png";
     let source = temp.path().join("controls-source");
     fs::create_dir_all(source.join(asset).parent().unwrap()).unwrap();
     for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
@@ -177,13 +164,13 @@ fn ryis_beach_skin_covers_bare_limbs_and_preserves_clothing_and_wristbands() {
     missing["seeds"]
         .as_array_mut()
         .unwrap()
-        .retain(|s| *s != json!([37, 48]));
-    let omitted = apply_control("missing-shin", missing, map.clone());
-    assert_eq!(omitted.get_pixel(38, 49).0, rgba(0xB06C57));
-    assert_ne!(omitted.get_pixel(38, 49), correct.get_pixel(38, 49));
+        .retain(|s| *s != json!([42, 47]));
+    let omitted = apply_control("missing-forehead", missing, map.clone());
+    assert_eq!(omitted.get_pixel(42, 48).0, rgba(0x854D3C));
+    assert_ne!(omitted.get_pixel(42, 48), correct.get_pixel(42, 48));
     let mut too_broad = map;
-    too_broad.insert("#72B2D9".into(), json!("#FFFFFF"));
-    let spilled = apply_control("clothing-spill", region, too_broad);
-    assert_eq!(correct.get_pixel(37, 52).0, rgba(0x72B2D9));
-    assert_eq!(spilled.get_pixel(37, 52).0, rgba(0xFFFFFF));
+    too_broad.insert("#9DEBFC".into(), json!("#FFFFFF"));
+    let spilled = apply_control("water-spill", region, too_broad);
+    assert_eq!(correct.get_pixel(39, 55).0, rgba(0x9DEBFC));
+    assert_eq!(spilled.get_pixel(39, 55).0, rgba(0xFFFFFF));
 }

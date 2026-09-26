@@ -195,8 +195,7 @@ supported directions. Hayden's complete Spring riding animations and Celine's
 complete Spring gardening outfit are covered. All three complete Summer, Autumn
 and Winter sprite folders are covered, including Celine's seasonal garden
 outfits and their reading, household and tool animations.
-Their Beach idle, walking, blinking, general-action and kissing animations are
-covered too.
+Their complete Beach sprite folders are covered too, including swimming.
 Their other actions/outfits and the other portrait characters' overworld sprites
 remain original. Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

@@ -2,11 +2,11 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires the 299 local animations in extracted/celine-beach-swim-study"]
-fn celine_summer_idle_walk_cover_arms_legs_and_preserve_sandals() {
+#[ignore = "requires the 375 local animations in extracted/celine-beach-swim-study"]
+fn celine_beach_swim_covers_face_contours_and_preserves_water_hair_and_eyes() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/celine-beach-swim-study");
-    let profile = std::env::var_os("FOM_CELINE_SUMMER_EXPANSION_PROFILE")
+    let profile = std::env::var_os("FOM_CELINE_BEACH_SWIM_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/celine-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile).unwrap()).unwrap();
@@ -19,42 +19,31 @@ fn celine_summer_idle_walk_cover_arms_legs_and_preserve_sandals() {
     fs::write(&profile_path, serde_json::to_vec(&profile).unwrap()).unwrap();
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let source = [0xFCD9B3, 0xF0B988, 0xD37A57, 0x672115];
-    // Independent source-art points separate skin at fingertips, calves and toes
-    // from the same brown outlines in hair, belt and sandal straps.
+    // Source-art landmarks distinguish the partly submerged face from identical
+    // dark hair, eye details and the separate water/ripple colors.
     let landmarks = [
-        ("idle_east", 0, 44, 36, 0x672115, true),
-        ("idle_east", 0, 34, 32, 0x672115, false),
-        ("idle_east", 0, 35, 47, 0x672115, true),
-        ("idle_east", 0, 38, 45, 0x672115, false),
-        ("idle_east", 0, 38, 51, 0xD37A57, true),
-        ("idle_east", 0, 38, 52, 0xB65932, false),
-        ("idle_east", 0, 40, 53, 0xFCD9B3, true),
-        ("idle_north", 0, 33, 47, 0x672115, true),
-        ("idle_north", 0, 35, 45, 0x672115, false),
-        ("idle_north", 0, 38, 46, 0x672115, false),
-        ("idle_north", 0, 37, 50, 0xD37A57, true),
-        ("idle_north", 0, 37, 52, 0xB65932, false),
-        ("idle_south", 0, 36, 44, 0x672115, true),
-        ("idle_south", 0, 42, 45, 0x672115, false),
-        ("idle_south", 0, 39, 41, 0xF5F5F5, false),
-        ("idle_south", 0, 37, 53, 0xFCD9B3, true),
-        ("walk_east", 1, 41, 50, 0x672115, true),
-        ("walk_east", 1, 39, 51, 0x672115, true),
-        ("walk_east", 1, 42, 46, 0x672115, false),
-        ("walk_east", 1, 41, 53, 0xB65932, false),
-        ("walk_east", 3, 36, 48, 0x672115, true),
-        ("walk_east", 3, 35, 44, 0x672115, false),
-        ("walk_east", 3, 34, 45, 0x672115, false),
-        ("walk_east", 3, 36, 52, 0xFCD9B3, true),
-        ("walk_north", 1, 34, 48, 0x672115, true),
-        ("walk_north", 1, 33, 46, 0x672115, false),
-        ("walk_north", 1, 44, 46, 0x672115, true),
-        ("walk_north", 3, 45, 48, 0x672115, true),
-        ("walk_north", 3, 46, 46, 0x672115, false),
-        ("walk_south", 1, 34, 48, 0x672115, true),
-        ("walk_south", 1, 37, 46, 0x672115, false),
-        ("walk_south", 3, 45, 48, 0x672115, true),
-        ("walk_south", 3, 42, 46, 0x672115, false),
+        ("bath_swim_east", 0, 44, 51, 0x672115, true),
+        ("bath_swim_east", 0, 34, 47, 0x672115, false),
+        ("bath_swim_east", 0, 48, 59, 0x9DEBFC, false),
+        ("bath_swim_east", 0, 33, 55, 0x328BC9, false),
+        ("bath_swim_east", 0, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_east", 1, 36, 52, 0xFCD9B3, true),
+        ("bath_swim_east", 1, 39, 51, 0x000000, false),
+        ("bath_swim_east", 1, 38, 50, 0xC2B9BE, false),
+        ("bath_swim_east", 1, 38, 43, 0xB65932, false),
+        ("bath_swim_east", 2, 44, 53, 0x672115, true),
+        ("bath_swim_east", 2, 41, 54, 0xFCD9B3, true),
+        ("bath_swim_east", 2, 47, 58, 0x9DEBFC, false),
+        ("bath_swim_east", 3, 37, 54, 0x672115, true),
+        ("bath_swim_east", 3, 43, 60, 0x9DEBFC, false),
+        ("bath_swim_south", 0, 36, 51, 0x672115, true),
+        ("bath_swim_south", 1, 40, 54, 0xF0B988, true),
+        ("bath_swim_south", 1, 38, 51, 0x000000, false),
+        ("bath_swim_south", 2, 43, 54, 0x672115, true),
+        ("bath_swim_south", 2, 35, 53, 0x672115, true),
+        ("bath_swim_south", 3, 39, 54, 0xFCD9B3, true),
+        ("bath_swim_south", 3, 34, 54, 0xB65932, false),
+        ("bath_swim_south", 3, 35, 61, 0x9DEBFC, false),
     ];
     let mut first_selection = Vec::new();
     for (id, targets) in [
@@ -110,17 +99,10 @@ fn celine_summer_idle_walk_cover_arms_legs_and_preserve_sandals() {
         );
         let mut selection = Vec::new();
         let (mut changed, mut protected, mut frames) = (0, 0, 0);
-        for (name, count) in [
-            ("idle_east", 61),
-            ("idle_north", 26),
-            ("idle_south", 70),
-            ("walk_east", 249),
-            ("walk_north", 90),
-            ("walk_south", 262),
-        ] {
-            let prefix = "summer";
+        for (name, count) in [("bath_swim_east", 98), ("bath_swim_south", 92)] {
+            let prefix = "beach";
             let asset = format!(
-                "assets/animations/NPCs/Celine/Sprites/Summer/spr_npc_celine_{prefix}_{name}.png"
+                "assets/animations/NPCs/Celine/Sprites/Beach/spr_npc_celine_{prefix}_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -167,7 +149,7 @@ fn celine_summer_idle_walk_cover_arms_legs_and_preserve_sandals() {
             frames += per_frame.len();
             changed += count;
         }
-        assert_eq!((changed, protected, frames), (758, 115, 15));
+        assert_eq!((changed, protected, frames), (190, 12, 8));
         if first_selection.is_empty() {
             first_selection = selection;
         } else {

@@ -15891,6 +15891,106 @@
         80
       ],
       "source_sha256": "972899c878a9c5f0b4f50713acdd0b2cfb92fc397e98013f82b2ede007b0d1da"
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_bath_swim_east.png",
+      "seeds": [
+        [
+          39,
+          46
+        ],
+        [
+          119,
+          46
+        ],
+        [
+          43,
+          47
+        ],
+        [
+          123,
+          47
+        ],
+        [
+          199,
+          47
+        ],
+        [
+          279,
+          47
+        ],
+        [
+          203,
+          48
+        ],
+        [
+          283,
+          48
+        ],
+        [
+          44,
+          49
+        ],
+        [
+          124,
+          49
+        ],
+        [
+          204,
+          50
+        ],
+        [
+          284,
+          50
+        ]
+      ],
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "305a7c657e9355c12d1f3d40080a1e8a6aa8563e3459bc3ef14b5ce11f1aa93f"
+    },
+    {
+      "asset": "assets/animations/NPCs/Ryis/Sprites/Beach/spr_npc_ryis_beach_bath_swim_south.png",
+      "seeds": [
+        [
+          38,
+          46
+        ],
+        [
+          118,
+          46
+        ],
+        [
+          42,
+          47
+        ],
+        [
+          122,
+          47
+        ],
+        [
+          198,
+          47
+        ],
+        [
+          278,
+          47
+        ],
+        [
+          202,
+          48
+        ],
+        [
+          282,
+          48
+        ]
+      ],
+      "size": [
+        320,
+        80
+      ],
+      "source_sha256": "1f798c201344bd61be7a14feecbfc173b6cae5a2eb826fedd31d0ed95114aebb"
     }
   ],
   "source_colors": [
