@@ -9,7 +9,7 @@ fn juniper_world_retains_all_portrait_regions_groups_and_target_roles() {
     let old = read("palettes/profiles/juniper-portraits.json");
     let world = read("palettes/profiles/juniper-world-trial.json");
     assert_eq!(old["regions"].as_array().unwrap().len(), 132);
-    assert_eq!(world["regions"].as_array().unwrap().len(), 149);
+    assert_eq!(world["regions"].as_array().unwrap().len(), 154);
     assert_eq!(
         &world["regions"].as_array().unwrap()[..132],
         old["regions"].as_array().unwrap()
@@ -45,10 +45,10 @@ fn juniper_world_retains_all_portrait_regions_groups_and_target_roles() {
 }
 
 #[test]
-#[ignore = "requires extracted/juniper-spring-actions-study and the retained Wedding-finish Juniper bundle"]
+#[ignore = "requires extracted/juniper-spring-standard-study and the retained Wedding-finish Juniper bundle"]
 fn juniper_world_covers_skin_without_recoloring_shared_jewelry_shades() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/juniper-spring-actions-study");
+    let original = root.join("extracted/juniper-spring-standard-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);

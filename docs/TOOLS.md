@@ -154,8 +154,10 @@ respectively. All three cover their complete Spring and Summer sprite folders;
 all three also cover their complete Autumn, Winter, Beach and Wedding folders.
 The [Reina, Juniper and March world pilots](development/reina-juniper-march-world.md)
 add six Spring idle/walk strips each. Their [Spring actions](development/reina-juniper-march-actions.md)
-add blinking, sitting, eating and drinking: eleven more strips each. They now
-have 120, 149 and 198 sources respectively, using their extended
+add blinking, sitting, eating and drinking: eleven more strips each. Their
+[standard Spring completion](development/reina-juniper-march-standard.md) adds
+general actions, sleeping and kissing: five more strips each. They now have
+125, 154 and 203 sources respectively, using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
