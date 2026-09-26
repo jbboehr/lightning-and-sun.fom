@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
-Ryis's 273, Reina's 103, Juniper's 132, Celine's 390, March's 181, Balor's 110,
+Ryis's 273, Reina's 109, Juniper's 138, Celine's 390, March's 187, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 11,600 variant strips from 2,900 sources. Caldarus's three
+variants per source give 11,672 variant strips from 2,918 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -138,6 +138,12 @@ eighteen strips, 45 source frames and fifteen native West mirrors. The user appr
 The [Wedding completion batch](world-wedding-finish.md) adds their remaining
 blinks, sitting, general actions and kisses: 27 strips, 102 source frames and
 45 native West mirrors. All three Wedding sprite folders are complete. The user approved this artwork for commit on 2026-09-25.
+The [Reina, Juniper and March pilots](reina-juniper-march-world.md) add six Spring
+idle/walk strips each: eighteen strips, 45 source frames and fifteen native West
+mirrors. The user approved this artwork for commit on 2026-09-25. Their portrait-only definitions remain
+available; the combined selection uses their extended world sets.
+Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
+are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
 The small embarrassed-expression art
 follow-up remains deferred in [Hayden portraits](hayden-portraits.md).
@@ -374,13 +380,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package completes Hayden, Ryis and Celine's Wedding
-sprite coverage, alongside their complete Spring/Summer/Autumn/Winter and Beach folders.
-It is in `generated/characters-world-wedding-finish-trial/package`, verified in
-the isolated `tmp/world-wedding-finish-playtest` lab with MOMI. It has no
+The latest combined package adds Reina, Juniper and March's first Spring idle/walk
+sprites alongside the accepted Hayden, Ryis and Celine coverage.
+It is in `generated/characters-reina-juniper-march-world-trial/package`, verified in
+the isolated `tmp/world-next-pilots-playtest` lab with MOMI. It has no
 preview helper and did not replace the desktop launcher. Use the
-[complete offline review](../../generated/world-wedding-finish-preview/index.html)
-to inspect all 102 new source frames and the 45 native West mirrors.
+[complete offline review](../../generated/reina-juniper-march-world-preview/index.html)
+to inspect all 45 new source frames and the fifteen native West mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

@@ -1,0 +1,17 @@
+{
+  "description": "Reina portraits and reviewed Spring idle/walk skin in Debug Blue; hair, blouse, jacket folds, belt, shorts, shoes, jewelry, blush and mouth interiors stay original.",
+  "rgba_map": {
+    "#B36644": "#9DB9D4",
+    "#9E512F": "#7F9FBD",
+    "#7F382B": "#6687AD",
+    "#541C1E": "#445F83",
+    "#AD5F3C": "#7F9FBD",
+    "#A95835": "#7F9FBD",
+    "#CB815C": "#9DB9D4",
+    "#B36844": "#9DB9D4",
+    "#8E4538": "#7F9FBD",
+    "#712922": "#6687AD",
+    "#571D1F": "#445F83"
+  },
+  "profile": "../profiles/reina-world-trial.json"
+}

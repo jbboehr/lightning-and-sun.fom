@@ -152,6 +152,10 @@ remaining blinks, sitting, general actions and kisses.
 Their totals are now 305, 273 and 390 sources
 respectively. All three cover their complete Spring and Summer sprite folders;
 all three also cover their complete Autumn, Winter, Beach and Wedding folders.
+The [Reina, Juniper and March world pilots](development/reina-juniper-march-world.md)
+add six Spring idle/walk strips each. They now have 109, 138 and 187 sources
+respectively, using their extended `*-world-trial.json` sets. Their portrait-only
+sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;
