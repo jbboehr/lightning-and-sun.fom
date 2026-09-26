@@ -68,9 +68,9 @@ laugh loop frame 1, and the complete gallery shows the affected laugh strips in 
 
 ## Offline review and verification
 
-The [five-choice summary](../../../generated/juniper-spring-specials-preview/summary.png)
+The [five-choice summary](../../generated/juniper-spring-specials-preview/summary.png)
 shows laugh loop frame 1, charm start frame 2 and charm loop frame 3. The
-[complete Vanilla/Debug Blue gallery](../../../generated/juniper-spring-specials-preview/blue-review/index.html)
+[complete Vanilla/Debug Blue gallery](../../generated/juniper-spring-specials-preview/blue-review/index.html)
 covers all fourteen cases across six detail pages, at most four cases per
 page, with enlarged face details. It contains no invented West mirrors.
 

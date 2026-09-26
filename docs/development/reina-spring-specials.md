@@ -41,9 +41,9 @@ using source material grids and ignored all-target sheets.
 | Seated-writing loop | 48, 48, 50, 49 |
 | Seated-writing end | 45, 54 |
 
-- [Five-choice summary](../../../generated/reina-spring-specials-preview/summary.png):
+- [Five-choice summary](../../generated/reina-spring-specials-preview/summary.png):
   first-frame standing/seated start and loop samples.
-- [Complete Vanilla/Blue review](../../../generated/reina-spring-specials-preview/blue-review/index.html):
+- [Complete Vanilla/Blue review](../../generated/reina-spring-specials-preview/blue-review/index.html):
   all 16 cases and 32 views across two pages of eight cases.
 
 The preview directory is about 258 KiB. Previews bind to the final standalone

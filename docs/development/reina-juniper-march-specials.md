@@ -48,9 +48,9 @@ bindings. Evidence: `tmp/world-spring-specials-package-{red,checks}.log`.
 
 ## Offline review
 
-- [Compact five-choice summary](../../../generated/reina-juniper-march-specials-preview/summary.png):
+- [Compact five-choice summary](../../generated/reina-juniper-march-specials-preview/summary.png):
   samples of writing, charm and brow-wiping.
-- [Complete Vanilla/Debug Blue review](../../../generated/reina-juniper-march-specials-preview/index.html):
+- [Complete Vanilla/Debug Blue review](../../generated/reina-juniper-march-specials-preview/index.html):
   all 53 source frames and seven native West hammer mirrors, grouped by character.
 
 Each character also has a separate five-choice summary. These static images
