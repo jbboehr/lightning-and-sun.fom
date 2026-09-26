@@ -588,7 +588,16 @@
       "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_idle_south.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_walk_east.png": "Default",
       "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_walk_north.png": "Default",
-      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_walk_south.png": "Default"
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_walk_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_action_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_action_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_action_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_blink_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_blink_south.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_kiss_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_sit_east.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_sit_north.png": "Default",
+      "assets/animations/NPCs/Hayden/Sprites/Wedding/spr_npc_hayden_wedding_sit_south.png": "Default"
     }
   },
   {
@@ -859,7 +868,16 @@
       "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_idle_south.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_walk_east.png": "Default",
       "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_walk_north.png": "Default",
-      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_walk_south.png": "Default"
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_walk_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_action_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_action_north.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_action_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_blink_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_blink_south.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_kiss_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_sit_east.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_sit_north.png": "Default",
+      "assets/animations/NPCs/Ryis/Sprites/Wedding/spr_npc_ryis_wedding_sit_south.png": "Default"
     }
   },
   {
@@ -1493,7 +1511,16 @@
       "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_idle_south.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_walk_east.png": "Default",
       "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_walk_north.png": "Default",
-      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_walk_south.png": "Default"
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_walk_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_action_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_action_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_action_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_blink_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_blink_south.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_kiss_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_sit_east.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_sit_north.png": "Default",
+      "assets/animations/NPCs/Celine/Sprites/Wedding/spr_npc_celine_wedding_sit_south.png": "Default"
     },
     "hotkey": "INSERT",
     "id": "celine",

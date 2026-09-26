@@ -147,9 +147,11 @@ The [Beach swimming batch](development/world-beach-swim.md) completes all three
 Beach sprite folders with bathing/swimming animations.
 The [Wedding pilot](development/world-wedding-pilot.md) adds their Wedding
 idle and walking animations.
-Their totals are now 296, 264 and 381 sources
+The [Wedding completion batch](development/world-wedding-finish.md) adds their
+remaining blinks, sitting, general actions and kisses.
+Their totals are now 305, 273 and 390 sources
 respectively. All three cover their complete Spring and Summer sprite folders;
-all three also cover their complete Autumn and Winter folders.
+all three also cover their complete Autumn, Winter, Beach and Wedding folders.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;
