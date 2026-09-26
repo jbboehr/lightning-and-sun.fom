@@ -7,80 +7,24 @@ fn read(path: impl AsRef<Path>) -> Value {
 }
 
 #[test]
-fn march_world_preserves_portrait_regions_and_palette_roles() {
+fn march_spring_reactions_adds_six_pinned_regions_without_new_colors() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let old = read(root.join("palettes/profiles/march-portraits.json"));
-    let world = read(root.join("palettes/profiles/march-world-trial.json"));
-    assert_eq!(world["regions"].as_array().unwrap().len(), 209);
-    assert_eq!(
-        &world["regions"].as_array().unwrap()[..181],
-        old["regions"].as_array().unwrap()
-    );
-    assert_eq!(
-        &world["source_colors"].as_array().unwrap()[..13],
-        old["source_colors"].as_array().unwrap()
-    );
-    assert_eq!(
-        &world["color_groups"].as_array().unwrap()[..4],
-        old["color_groups"].as_array().unwrap()
-    );
-    assert_eq!(
-        &world["source_colors"].as_array().unwrap()[13..15],
-        &[json!("#E8B271"), json!("#D37A57")]
-    );
-    assert_eq!(
-        &world["color_groups"].as_array().unwrap()[4..6],
-        &[json!(["#E8B271"]), json!(["#D37A57"])]
-    );
-    let old_set = read(root.join("palettes/sets/march-portraits-trial.json"));
-    let new_set = read(root.join("palettes/sets/march-world-trial.json"));
-    assert_eq!(new_set["profile"], "../profiles/march-world-trial.json");
-    assert_eq!(new_set["presets"].as_array().unwrap().len(), 4);
-    for (old, new) in old_set["presets"]
-        .as_array()
-        .unwrap()
-        .iter()
-        .zip(new_set["presets"].as_array().unwrap())
-    {
-        assert_eq!(old["id"], new["id"]);
-        assert_eq!(old["label"], new["label"]);
-        assert_eq!(
-            &new["colors"].as_array().unwrap()[..13],
-            old["colors"].as_array().unwrap()
-        );
-        assert_eq!(
-            &new["colors"].as_array().unwrap()[13..15],
-            &[old["colors"][1].clone(), old["colors"][2].clone()]
-        );
-    }
-    let style = read(root.join("palettes/stylized/march-world-trial.json"));
-    let old_style = read(root.join("palettes/stylized/march-portraits.json"));
-    for (source, target) in old_style["rgba_map"].as_object().unwrap() {
-        assert_eq!(&style["rgba_map"][source], target);
-    }
-    for (i, source) in world["source_colors"]
-        .as_array()
-        .unwrap()
-        .iter()
-        .enumerate()
-    {
-        assert_eq!(
-            style["rgba_map"][source.as_str().unwrap()],
-            new_set["presets"][0]["colors"][i]
-        );
-    }
+    let p = read(root.join("palettes/profiles/march-world-trial.json"));
+    assert_eq!(p["regions"].as_array().unwrap().len(), 209);
+    assert_eq!(p["source_colors"].as_array().unwrap().len(), 16);
+    assert_eq!(p["color_groups"].as_array().unwrap().len(), 7);
     let expected: Vec<_> = [
-        "idle_east",
-        "idle_north",
-        "idle_south",
-        "walk_east",
-        "walk_north",
-        "walk_south",
+        "read_sit_end_south",
+        "read_sit_loop_south",
+        "read_sit_start_south",
+        "shocked_end_south",
+        "shocked_loop_south",
+        "shocked_start_south",
     ]
     .iter()
-    .map(|name| json!(asset(name)))
+    .map(|n| json!(asset(n)))
     .collect();
-    let actual: Vec<_> = world["regions"].as_array().unwrap()[181..187]
+    let actual: Vec<_> = p["regions"].as_array().unwrap()[203..209]
         .iter()
         .map(|r| r["asset"].clone())
         .collect();
@@ -88,7 +32,12 @@ fn march_world_preserves_portrait_regions_and_palette_roles() {
 }
 
 fn asset(name: &str) -> String {
-    format!("assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_spring_{name}.png")
+    let prefix = if name.starts_with("read_sit") {
+        "specialanimation_spring"
+    } else {
+        "spring"
+    };
+    format!("assets/animations/NPCs/March/Sprites/Spring/spr_npc_march_{prefix}_{name}.png")
 }
 fn rgba(color: u32) -> [u8; 4] {
     [(color >> 16) as u8, (color >> 8) as u8, color as u8, 255]
@@ -98,46 +47,54 @@ fn color(value: &Value) -> u32 {
 }
 
 #[test]
-#[ignore = "requires 209 local animations in extracted/march-spring-reactions-study and the accepted portrait output baseline"]
-fn march_world_skin_materials_and_existing_portraits_are_preserved() {
+#[ignore = "requires 209 local animations in extracted/march-spring-reactions-study and the accepted earlier output baseline"]
+fn march_spring_reactions_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/march-spring-reactions-study");
-    let baseline = root.join("generated/characters-world-wedding-finish-trial/characters/march");
-    let profile_path = std::env::var_os("FOM_MARCH_WORLD_PROFILE")
+    let baseline =
+        root.join("generated/characters-reina-juniper-march-standard-trial/characters/march");
+    let profile_path = std::env::var_os("FOM_MARCH_SPRING_REACTIONS_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/march-world-trial.json"));
-    let set_path = std::env::var_os("FOM_MARCH_WORLD_SET")
+    let set_path = std::env::var_os("FOM_MARCH_SPRING_REACTIONS_SET")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/march-world-trial.json"));
     let profile = read(&profile_path);
     let set = read(&set_path);
     let temp = tempfile::tempdir().unwrap();
-    // Coordinates were chosen from the source artwork: face ramp, nape,
-    // moving fingertips, goggles, green cuffs, hair, apron and black eye.
+    // Independently observed source points separate the small book-holding
+    // fingertips from pages/cover, and shocked hands from cuffs and mouth.
     let landmarks = [
-        ("idle_south", 0, 39, 38, 0xEEDDA5, true),
-        ("idle_south", 0, 38, 38, 0xE8B271, true),
-        ("idle_south", 0, 37, 38, 0xD37A57, true),
-        ("idle_south", 0, 36, 38, 0x7D3B14, true),
-        ("idle_south", 0, 33, 47, 0x7D3B14, true),
-        ("idle_south", 0, 39, 40, 0xD37A57, true),
-        ("idle_south", 0, 39, 30, 0xA83837, false),
-        ("idle_south", 0, 39, 43, 0xD0EDB4, false),
-        ("idle_south", 0, 39, 49, 0x36373A, false),
-        ("idle_south", 0, 38, 37, 0x000000, false),
-        ("idle_east", 0, 37, 37, 0xD37A57, true),
-        ("idle_east", 0, 34, 38, 0x6F8893, false),
-        ("idle_north", 0, 39, 40, 0xD37A57, true),
-        ("idle_north", 0, 33, 47, 0x7D3B14, true),
-        ("idle_north", 0, 40, 35, 0x6F8893, false),
-        ("walk_east", 1, 32, 46, 0xEEDDA5, true),
-        ("walk_east", 1, 33, 47, 0x7D3B14, true),
-        ("walk_east", 1, 45, 46, 0xEEDDA5, true),
-        ("walk_east", 1, 43, 44, 0x8EAE81, false),
-        ("walk_north", 3, 33, 47, 0x7D3B14, true),
-        ("walk_north", 3, 46, 48, 0xD37A57, true),
-        ("walk_south", 1, 33, 48, 0xD37A57, true),
-        ("walk_south", 1, 44, 46, 0x7D3B14, true),
+        ("read_sit_start_south", 2, 34, 46, 0xEEDDA5, true),
+        ("read_sit_start_south", 2, 35, 47, 0x7D3B14, true),
+        ("read_sit_start_south", 2, 44, 47, 0x7D3B14, true),
+        ("read_sit_start_south", 2, 38, 42, 0xF6E4D7, false),
+        ("read_sit_start_south", 2, 38, 43, 0xC9AF9C, false),
+        ("read_sit_start_south", 2, 36, 44, 0xB67C6F, false),
+        ("read_sit_start_south", 2, 39, 46, 0x855053, false),
+        ("read_sit_start_south", 2, 37, 46, 0x422628, false),
+        ("read_sit_start_south", 2, 33, 42, 0x855053, false),
+        ("read_sit_loop_south", 0, 39, 42, 0xEEDDA5, true),
+        ("read_sit_loop_south", 0, 38, 38, 0xD37A57, true),
+        ("read_sit_loop_south", 0, 39, 38, 0xE8B271, true),
+        ("read_sit_loop_south", 0, 37, 38, 0x7D3B14, true),
+        ("read_sit_loop_south", 0, 44, 44, 0xF6E4D7, false),
+        ("read_sit_loop_south", 0, 33, 44, 0xB67C6F, false),
+        ("read_sit_loop_south", 0, 35, 38, 0x4F626B, false),
+        ("read_sit_loop_south", 2, 39, 42, 0xEEDDA5, true),
+        ("read_sit_loop_south", 2, 40, 47, 0x855053, false),
+        ("read_sit_end_south", 0, 34, 46, 0xEEDDA5, true),
+        ("read_sit_end_south", 0, 35, 47, 0x7D3B14, true),
+        ("shocked_loop_south", 0, 30, 34, 0xE8B271, true),
+        ("shocked_loop_south", 0, 31, 33, 0xEEDDA5, true),
+        ("shocked_loop_south", 0, 36, 36, 0x7D3B14, true),
+        ("shocked_loop_south", 0, 32, 38, 0xD37A57, true),
+        ("shocked_loop_south", 0, 39, 36, 0x410808, false),
+        ("shocked_loop_south", 0, 40, 37, 0x9E2626, false),
+        ("shocked_loop_south", 0, 36, 24, 0xA83837, false),
+        ("shocked_loop_south", 0, 34, 38, 0x8EAE81, false),
+        ("shocked_start_south", 0, 33, 48, 0x7D3B14, true),
+        ("shocked_end_south", 0, 33, 48, 0x7D3B14, true),
     ];
     let skin = [0xEEDDA5, 0xE8B271, 0xD37A57, 0x7D3B14];
     let mut first_selection = None;
@@ -149,7 +106,7 @@ fn march_world_skin_materials_and_existing_portraits_are_preserved() {
             format!("{:x}", Sha256::digest(fs::read(original.join(a)).unwrap()))
         );
     }
-    for r in profile["regions"].as_array().unwrap().iter().take(181) {
+    for r in profile["regions"].as_array().unwrap().iter().take(203) {
         let a = r["asset"].as_str().unwrap();
         for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
             assert_eq!(
@@ -196,22 +153,19 @@ fn march_world_skin_materials_and_existing_portraits_are_preserved() {
         let targets = [0, 13, 14, 10].map(|i| color(&preset["colors"][i]));
         let mut selection = vec![];
         let mut changed = 0;
-        for name in [
-            "idle_east",
-            "idle_north",
-            "idle_south",
-            "walk_east",
-            "walk_north",
-            "walk_south",
+        for (name, frames) in [
+            ("read_sit_end_south", 3),
+            ("read_sit_loop_south", 4),
+            ("read_sit_start_south", 3),
+            ("shocked_end_south", 1),
+            ("shocked_loop_south", 1),
+            ("shocked_start_south", 1),
         ] {
             let a = asset(name);
             let before = image::open(original.join(&a)).unwrap().to_rgba8();
             let after = image::open(output.join(&a)).unwrap().to_rgba8();
             assert_eq!(before.dimensions(), after.dimensions());
-            assert_eq!(
-                before.dimensions(),
-                (if name.starts_with("idle") { 80 } else { 320 }, 80)
-            );
+            assert_eq!(before.dimensions(), (frames * 80, 80));
             let meta = a.replace(".png", ".meta.toml");
             let bytes = fs::read(original.join(&meta)).unwrap();
             assert_eq!(bytes, fs::read(output.join(&meta)).unwrap());
@@ -265,13 +219,13 @@ fn march_world_skin_materials_and_existing_portraits_are_preserved() {
             }
             assert!(counts.iter().all(|n| *n > 0));
         }
-        assert_eq!(changed, 536);
+        assert_eq!(changed, 506);
         if let Some(first) = &first_selection {
             assert_eq!(first, &selection);
         } else {
             first_selection = Some(selection);
         }
-        for r in profile["regions"].as_array().unwrap().iter().take(181) {
+        for r in profile["regions"].as_array().unwrap().iter().take(203) {
             let a = r["asset"].as_str().unwrap();
             for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
                 assert_eq!(
@@ -283,5 +237,5 @@ fn march_world_skin_materials_and_existing_portraits_are_preserved() {
             }
         }
     }
-    assert_eq!(prior_files, 1810);
+    assert_eq!(prior_files, 2030);
 }

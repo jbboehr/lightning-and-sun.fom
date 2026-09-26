@@ -198,9 +198,9 @@ outfits and their reading, household and tool animations.
 Their complete Beach sprite folders are covered too, including swimming.
 Their complete Wedding sprite folders are also included.
 Reina, Juniper and March also include Spring idle, walking, blinking, sitting,
-eating, drinking, general actions, sleeping and kissing. Home, Page Down and U
-cycle their palettes respectively. Other unlisted overworld animations remain
-original.
+eating, drinking, general actions, sleeping, kissing, shocked reactions and
+seated reading. Home, Page Down and U cycle their palettes respectively.
+Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
 alone, use its set instead; for example,
