@@ -7,23 +7,32 @@ fn read(path: impl AsRef<Path>) -> Value {
 }
 
 #[test]
-fn march_spring_specials_adds_five_pinned_regions_without_new_colors() {
+fn march_spring_injured_adds_fourteen_pinned_regions_without_new_colors() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let p = read(root.join("palettes/profiles/march-world-trial.json"));
     assert_eq!(p["regions"].as_array().unwrap().len(), 234);
     assert_eq!(p["source_colors"].as_array().unwrap().len(), 16);
     assert_eq!(p["color_groups"].as_array().unwrap().len(), 7);
     let expected: Vec<_> = [
-        "hammer_east",
-        "wipebrow_south",
-        "work_sit_end_north",
-        "work_sit_loop_north",
-        "work_sit_start_north",
+        "hurt_action_south",
+        "hurt_blink_east",
+        "hurt_blink_south",
+        "hurt_idle_east",
+        "hurt_idle_north",
+        "hurt_idle_south",
+        "hurt_sit_blink_east",
+        "hurt_sit_blink_south",
+        "hurt_sit_east",
+        "hurt_sit_north",
+        "hurt_sit_south",
+        "hurt_walk_east",
+        "hurt_walk_north",
+        "hurt_walk_south",
     ]
     .iter()
     .map(|n| json!(asset(n)))
     .collect();
-    let actual: Vec<_> = p["regions"].as_array().unwrap()[209..214]
+    let actual: Vec<_> = p["regions"].as_array().unwrap()[220..234]
         .iter()
         .map(|r| r["asset"].clone())
         .collect();
@@ -43,54 +52,62 @@ fn color(value: &Value) -> u32 {
 
 #[test]
 #[ignore = "requires 234 local animations in extracted/march-spring-injured-study and the accepted earlier output baseline"]
-fn march_spring_specials_cover_moving_skin_and_preserve_materials() {
+fn march_spring_injured_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/march-spring-injured-study");
     let baseline =
-        root.join("generated/characters-reina-juniper-march-reactions-trial/characters/march");
-    let profile_path = std::env::var_os("FOM_MARCH_SPRING_SPECIALS_PROFILE")
+        root.join("generated/characters-reina-juniper-march-finish-trial/characters/march");
+    let profile_path = std::env::var_os("FOM_MARCH_SPRING_INJURED_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/march-world-trial.json"));
-    let set_path = std::env::var_os("FOM_MARCH_SPRING_SPECIALS_SET")
+    let set_path = std::env::var_os("FOM_MARCH_SPRING_INJURED_SET")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/march-world-trial.json"));
     let profile = read(&profile_path);
     let set = read(&set_path);
     let temp = tempfile::tempdir().unwrap();
-    // Source-art points distinguish the moving grips from wood/metal/effects,
-    // and the tiny rear-neck opening from the hair above and shirt below.
+    // Source-art landmarks separate the cradled and hanging hands from
+    // nearby sleeve folds, hair, apron and seated leg materials.
     let landmarks = [
-        ("hammer_east", 0, 42, 46, 0xEEDDA5, true),
-        ("hammer_east", 0, 43, 47, 0x7D3B14, true),
-        ("hammer_east", 0, 45, 45, 0xE3B57F, false),
-        ("hammer_east", 0, 47, 45, 0xBB8151, false),
-        ("hammer_east", 0, 48, 45, 0x936244, false),
-        ("hammer_east", 0, 55, 44, 0x6099A8, false),
-        ("hammer_east", 1, 33, 36, 0xEEDDA5, true),
-        ("hammer_east", 1, 35, 36, 0x7D3B14, true),
-        ("hammer_east", 1, 36, 39, 0xD37A57, true),
-        ("hammer_east", 1, 34, 34, 0xBB8151, false),
-        ("hammer_east", 1, 39, 27, 0xC5E3E4, false),
-        ("hammer_east", 3, 45, 45, 0xEEDDA5, true),
-        ("hammer_east", 3, 50, 44, 0xD37A57, true),
-        ("hammer_east", 3, 45, 47, 0xF8FF79, false),
-        ("hammer_east", 6, 47, 46, 0xE8B271, true),
-        ("hammer_east", 6, 41, 44, 0xD0EDB4, false),
-        ("wipebrow_south", 1, 41, 34, 0xD37A57, true),
-        ("wipebrow_south", 1, 43, 34, 0xEEDDA5, true),
-        ("wipebrow_south", 1, 42, 36, 0x7D3B14, true),
-        ("wipebrow_south", 1, 32, 47, 0xEEDDA5, true),
-        ("wipebrow_south", 1, 41, 40, 0x9E2626, false),
-        ("wipebrow_south", 1, 38, 35, 0x6F8893, false),
-        ("wipebrow_south", 5, 45, 46, 0xEEDDA5, true),
-        ("wipebrow_south", 5, 32, 47, 0xEEDDA5, true),
-        ("work_sit_loop_north", 0, 39, 39, 0xD37A57, true),
-        ("work_sit_loop_north", 6, 40, 39, 0xD37A57, true),
-        ("work_sit_loop_north", 0, 38, 37, 0xA83837, false),
-        ("work_sit_start_north", 0, 34, 41, 0x7D3B14, true),
-        ("work_sit_start_north", 0, 33, 43, 0xE8B271, true),
-        ("work_sit_end_north", 1, 46, 41, 0xD37A57, true),
-        ("work_sit_end_north", 1, 40, 42, 0xD0EDB4, false),
+        ("hurt_action_south", 0, 41, 44, 0x7D3B14, true),
+        ("hurt_action_south", 0, 42, 44, 0xEEDDA5, true),
+        ("hurt_action_south", 0, 44, 44, 0x58715C, false),
+        ("hurt_action_south", 0, 42, 46, 0xD37A57, true),
+        ("hurt_action_south", 3, 44, 44, 0xD37A57, true),
+        ("hurt_action_south", 3, 45, 46, 0x7D3B14, true),
+        ("hurt_action_south", 3, 43, 44, 0x58715C, false),
+        ("hurt_action_south", 3, 39, 45, 0x6F8893, false),
+        ("hurt_idle_east", 0, 43, 41, 0x7D3B14, true),
+        ("hurt_idle_east", 0, 42, 42, 0xEEDDA5, true),
+        ("hurt_idle_east", 0, 44, 45, 0xE8B271, true),
+        ("hurt_idle_east", 0, 40, 44, 0x8EAE81, false),
+        ("hurt_idle_east", 0, 38, 34, 0x6F8893, false),
+        ("hurt_idle_north", 0, 39, 40, 0xD37A57, true),
+        ("hurt_idle_north", 0, 36, 41, 0x7D3B14, true),
+        ("hurt_idle_north", 0, 34, 47, 0x7D3B14, true),
+        ("hurt_idle_north", 0, 43, 42, 0x58715C, false),
+        ("hurt_idle_north", 0, 38, 38, 0xA83837, false),
+        ("hurt_idle_south", 0, 42, 41, 0x7D3B14, true),
+        ("hurt_idle_south", 0, 46, 45, 0xD37A57, true),
+        ("hurt_idle_south", 0, 45, 47, 0x7D3B14, true),
+        ("hurt_idle_south", 0, 40, 46, 0x4F626B, false),
+        ("hurt_blink_east", 1, 40, 36, 0xEEDDA5, true),
+        ("hurt_blink_south", 1, 39, 36, 0xEEDDA5, true),
+        ("hurt_sit_blink_east", 1, 40, 36, 0xEEDDA5, true),
+        ("hurt_sit_blink_south", 1, 39, 36, 0xEEDDA5, true),
+        ("hurt_sit_east", 0, 43, 41, 0x7D3B14, true),
+        ("hurt_sit_east", 0, 42, 46, 0x612934, false),
+        ("hurt_sit_north", 0, 34, 47, 0x7D3B14, true),
+        ("hurt_sit_north", 0, 35, 46, 0xE8B271, true),
+        ("hurt_sit_north", 0, 43, 44, 0x58715C, false),
+        ("hurt_sit_south", 0, 45, 47, 0x7D3B14, true),
+        ("hurt_sit_south", 0, 45, 46, 0xE8B271, true),
+        ("hurt_walk_east", 2, 45, 46, 0xE8B271, true),
+        ("hurt_walk_north", 1, 39, 41, 0xD37A57, true),
+        ("hurt_walk_north", 1, 34, 48, 0x7D3B14, true),
+        ("hurt_walk_south", 3, 42, 42, 0x7D3B14, true),
+        ("hurt_walk_south", 3, 45, 48, 0x7D3B14, true),
+        ("hurt_walk_south", 3, 41, 52, 0xC2B9BE, false),
     ];
     let skin = [0xEEDDA5, 0xE8B271, 0xD37A57, 0x7D3B14];
     let mut first_selection = None;
@@ -102,7 +119,7 @@ fn march_spring_specials_cover_moving_skin_and_preserve_materials() {
             format!("{:x}", Sha256::digest(fs::read(original.join(a)).unwrap()))
         );
     }
-    for r in profile["regions"].as_array().unwrap().iter().take(209) {
+    for r in profile["regions"].as_array().unwrap().iter().take(220) {
         let a = r["asset"].as_str().unwrap();
         for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
             assert_eq!(
@@ -150,11 +167,20 @@ fn march_spring_specials_cover_moving_skin_and_preserve_materials() {
         let mut selection = vec![];
         let mut changed = 0;
         for (name, frames) in [
-            ("hammer_east", 7),
-            ("wipebrow_south", 6),
-            ("work_sit_end_north", 2),
-            ("work_sit_loop_north", 7),
-            ("work_sit_start_north", 1),
+            ("hurt_action_south", 7),
+            ("hurt_blink_east", 3),
+            ("hurt_blink_south", 3),
+            ("hurt_idle_east", 1),
+            ("hurt_idle_north", 1),
+            ("hurt_idle_south", 1),
+            ("hurt_sit_blink_east", 3),
+            ("hurt_sit_blink_south", 3),
+            ("hurt_sit_east", 1),
+            ("hurt_sit_north", 1),
+            ("hurt_sit_south", 1),
+            ("hurt_walk_east", 4),
+            ("hurt_walk_north", 4),
+            ("hurt_walk_south", 4),
         ] {
             let a = asset(name);
             let before = image::open(original.join(&a)).unwrap().to_rgba8();
@@ -169,17 +195,10 @@ fn march_spring_specials_cover_moving_skin_and_preserve_materials() {
                 parsed["asset_properties"]["atlas"].as_str(),
                 Some("Default")
             );
-            if name.starts_with("work_sit") {
-                assert_eq!(
-                    parsed["asset_properties"]["offset"]["horizontal"].as_str(),
-                    Some("Middle")
-                );
-            } else {
-                assert_eq!(
-                    parsed["asset_properties"]["offset"]["horizontal"].as_float(),
-                    Some(40.0)
-                );
-            }
+            assert_eq!(
+                parsed["asset_properties"]["offset"]["horizontal"].as_float(),
+                Some(40.0)
+            );
             assert_eq!(
                 parsed["asset_properties"]["offset"]["vertical"].as_float(),
                 Some(54.0)
@@ -208,7 +227,7 @@ fn march_spring_specials_cover_moving_skin_and_preserve_materials() {
             for (x, y, p) in before.enumerate_pixels() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
-                // All four observed skin shades are skin in these five strips.
+                // All four observed skin shades are skin in these fourteen strips.
                 // Checking this independent inventory catches omitted tiny components.
                 let index = skin.iter().position(|c| rgba(*c) == p.0);
                 let expected = index.map_or(p.0, |i| rgba(targets[i]));
@@ -221,13 +240,13 @@ fn march_spring_specials_cover_moving_skin_and_preserve_materials() {
             }
             assert!(counts.iter().all(|n| *n > 0));
         }
-        assert_eq!(changed, 605);
+        assert_eq!(changed, 1448);
         if let Some(first) = &first_selection {
             assert_eq!(first, &selection);
         } else {
             first_selection = Some(selection);
         }
-        for r in profile["regions"].as_array().unwrap().iter().take(209) {
+        for r in profile["regions"].as_array().unwrap().iter().take(220) {
             let a = r["asset"].as_str().unwrap();
             for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
                 assert_eq!(
@@ -239,5 +258,5 @@ fn march_spring_specials_cover_moving_skin_and_preserve_materials() {
             }
         }
     }
-    assert_eq!(prior_files, 2090);
+    assert_eq!(prior_files, 2200);
 }
