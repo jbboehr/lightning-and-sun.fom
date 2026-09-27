@@ -166,7 +166,8 @@ Spring folders. March's gestures/poses cover all normal Spring sprites;
 his [injured animation batch](development/march-spring-injured.md) adds the final
 fourteen strips and completes his Spring folder. The [Summer pilots](development/reina-juniper-march-summer.md)
 add idle and walking sprites in all four directions. The [Summer actions](development/reina-juniper-march-summer-actions.md)
-add blinking, sitting, eating and drinking. Totals are now 158, 190 and 251,
+add blinking, sitting, eating and drinking. The [Summer standard batch](development/reina-juniper-march-summer-standard.md)
+adds general actions, sleeping and kissing. Totals are now 163, 195 and 256,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
