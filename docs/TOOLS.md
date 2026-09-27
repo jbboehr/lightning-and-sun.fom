@@ -176,7 +176,8 @@ adds the final fourteen strips and completes his Summer folder too.
 The [Autumn pilots](development/reina-juniper-march-autumn.md) add six idle/walk
 strips each, with native West mirroring. The [Autumn everyday actions](development/reina-juniper-march-autumn-actions.md)
 add eleven blink/sit/eat/drink strips each. The [Autumn general actions](development/reina-juniper-march-autumn-standard.md)
-add actions, sleeping and kissing. Totals are now 198, 228 and 300,
+add actions, sleeping and kissing. The [Autumn reading batch](development/reina-juniper-march-autumn-reading.md)
+adds all three seated-reading phases. Totals are now 201, 231 and 303,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

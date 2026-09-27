@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
-Ryis's 273, Reina's 198, Juniper's 228, Celine's 390, March's 300, Balor's 110,
+Ryis's 273, Reina's 201, Juniper's 231, Celine's 390, March's 303, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 12,840 variant strips from 3,210 sources. Caldarus's three
+variants per source give 12,876 variant strips from 3,219 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -194,6 +194,9 @@ blink/sit/eat/drink strips each: 93 source frames and 36 native West mirrors.
 The user approved this artwork for commit on 2026-09-27.
 The [Autumn general actions](reina-juniper-march-autumn-standard.md) add five
 action/sleep/kiss strips each: 78 source frames and 36 native West mirrors.
+The user approved this artwork for commit on 2026-09-27.
+The [Autumn reading batch](reina-juniper-march-autumn-reading.md) adds three
+seated-reading phases each: all 30 South-facing source frames.
 The user approved this artwork for commit on 2026-09-27.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
@@ -433,12 +436,12 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Reina, Juniper and March's Autumn general actions,
-sleeping and kissing. It is in `generated/characters-reina-juniper-march-autumn-standard-trial/package`.
-It is verified with MOMI in the isolated `tmp/world-autumn-standard-playtest` lab. It has no
+The latest combined package adds Reina, Juniper and March's Autumn seated reading.
+It is in `generated/characters-reina-juniper-march-autumn-reading-trial/package`.
+It is verified with MOMI in the isolated `tmp/world-autumn-reading-playtest` lab. It has no
 preview helper and did not replace the desktop launcher. Use the
-[complete offline review](../../generated/reina-juniper-march-autumn-standard-preview/index.html)
-to inspect all 78 new source frames and 36 native West mirrors.
+[complete offline review](../../generated/reina-juniper-march-autumn-reading-preview/index.html)
+to inspect all 30 new source frames.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,
