@@ -174,7 +174,8 @@ finishes Reina's kitchen work and Juniper's magic and gestures, completing both
 Summer folders. [March's Summer injured batch](development/march-summer-injured.md)
 adds the final fourteen strips and completes his Summer folder too.
 The [Autumn pilots](development/reina-juniper-march-autumn.md) add six idle/walk
-strips each, with native West mirroring. Totals are now 182, 212 and 284,
+strips each, with native West mirroring. The [Autumn everyday actions](development/reina-juniper-march-autumn-actions.md)
+add eleven blink/sit/eat/drink strips each. Totals are now 193, 223 and 295,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
