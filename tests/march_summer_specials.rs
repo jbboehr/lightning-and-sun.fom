@@ -7,23 +7,23 @@ fn read(path: impl AsRef<Path>) -> Value {
 }
 
 #[test]
-fn march_summer_standard_adds_five_pinned_regions_without_new_colors() {
+fn march_summer_specials_adds_five_pinned_regions_without_new_colors() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let p = read(root.join("palettes/profiles/march-world-trial.json"));
     assert_eq!(p["regions"].as_array().unwrap().len(), 264);
     assert_eq!(p["source_colors"].as_array().unwrap().len(), 16);
     assert_eq!(p["color_groups"].as_array().unwrap().len(), 7);
     let expected: Vec<_> = [
-        "action_east",
-        "action_north",
-        "action_south",
-        "kiss_east",
-        "sleep_east",
+        "hammer_east",
+        "wipebrow_south",
+        "work_sit_end_north",
+        "work_sit_loop_north",
+        "work_sit_start_north",
     ]
     .iter()
     .map(|n| json!(asset(n)))
     .collect();
-    let actual: Vec<_> = p["regions"].as_array().unwrap()[251..256]
+    let actual: Vec<_> = p["regions"].as_array().unwrap()[259..264]
         .iter()
         .map(|r| r["asset"].clone())
         .collect();
@@ -31,7 +31,7 @@ fn march_summer_standard_adds_five_pinned_regions_without_new_colors() {
 }
 
 fn asset(name: &str) -> String {
-    let prefix = "summer";
+    let prefix = "specialanimation_summer";
     format!("assets/animations/NPCs/March/Sprites/Summer/spr_npc_march_{prefix}_{name}.png")
 }
 fn rgba(color: u32) -> [u8; 4] {
@@ -43,58 +43,59 @@ fn color(value: &Value) -> u32 {
 
 #[test]
 #[ignore = "requires 264 local animations in extracted/march-summer-specials-study and the accepted earlier output baseline"]
-fn march_summer_standard_cover_moving_skin_and_preserve_materials() {
+fn march_summer_specials_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/march-summer-specials-study");
     let baseline =
-        root.join("generated/characters-reina-juniper-march-summer-actions-trial/characters/march");
-    let profile_path = std::env::var_os("FOM_MARCH_SUMMER_STANDARD_PROFILE")
+        root.join("generated/characters-reina-juniper-march-summer-reading-trial/characters/march");
+    let profile_path = std::env::var_os("FOM_MARCH_SUMMER_SPECIALS_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/march-world-trial.json"));
-    let set_path = std::env::var_os("FOM_MARCH_SUMMER_STANDARD_SET")
+    let set_path = std::env::var_os("FOM_MARCH_SUMMER_SPECIALS_SET")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/march-world-trial.json"));
     let profile = read(&profile_path);
     let set = read(&set_path);
     let temp = tempfile::tempdir().unwrap();
-    // Source-art landmarks distinguish extended fingertips, the sleeping hand
-    // and kissing face/hand edges from closed eyes and brown apron straps.
+    // Source-art points distinguish the moving grips from wood/metal/effects,
+    // and the tiny rear-neck opening from the hair above and shirt below.
     let landmarks = [
-        ("action_east", 1, 48, 45, 0x7D3B14, true),
-        ("action_east", 1, 49, 44, 0xEEDDA5, true),
-        ("action_east", 1, 42, 41, 0x402A24, false),
-        ("action_east", 1, 44, 45, 0x94715E, false),
-        ("action_east", 1, 38, 51, 0xE8B271, true),
-        ("action_east", 2, 45, 46, 0x7D3B14, true),
-        ("action_east", 2, 43, 45, 0xD37A57, true),
-        ("action_east", 2, 41, 46, 0x402A24, false),
-        ("action_north", 1, 44, 39, 0xE8B271, true),
-        ("action_north", 1, 35, 46, 0x7D3B14, true),
-        ("action_north", 1, 39, 40, 0x94715E, false),
-        ("action_north", 1, 37, 50, 0xE8B271, true),
-        ("action_north", 2, 45, 40, 0x7D3B14, true),
-        ("action_north", 2, 44, 39, 0xD37A57, true),
-        ("action_south", 1, 45, 46, 0x7D3B14, true),
-        ("action_south", 1, 35, 47, 0x7D3B14, true),
-        ("action_south", 1, 37, 41, 0x402A24, false),
-        ("action_south", 1, 39, 45, 0x94715E, false),
-        ("action_south", 2, 38, 47, 0x7D3B14, true),
-        ("action_south", 2, 38, 45, 0xE8B271, true),
-        ("action_south", 2, 43, 43, 0x402A24, false),
-        ("kiss_east", 2, 36, 46, 0x7D3B14, true),
-        ("kiss_east", 2, 47, 37, 0x7D3B14, true),
-        ("kiss_east", 2, 43, 36, 0xEEDDA5, true),
-        ("kiss_east", 2, 40, 42, 0x94715E, false),
-        ("kiss_east", 2, 39, 41, 0x402A24, false),
-        ("kiss_east", 3, 36, 48, 0x7D3B14, true),
-        ("kiss_east", 3, 38, 51, 0xEEDDA5, true),
-        ("sleep_east", 0, 44, 39, 0x7D3B14, true),
-        ("sleep_east", 0, 39, 43, 0x7D3B14, true),
-        ("sleep_east", 0, 40, 41, 0xD37A57, true),
-        ("sleep_east", 0, 42, 42, 0xE8B271, true),
-        ("sleep_east", 0, 38, 37, 0x0, false),
-        ("sleep_east", 0, 38, 42, 0x94715E, false),
-        ("sleep_east", 0, 40, 46, 0x402A24, false),
+        ("work_sit_loop_north", 0, 35, 38, 0xD37A57, true),
+        ("work_sit_loop_north", 0, 36, 41, 0xE8B271, true),
+        ("work_sit_loop_north", 0, 37, 41, 0x4F626B, false),
+        ("wipebrow_south", 5, 38, 51, 0xEEDDA5, true),
+        ("hammer_east", 1, 37, 51, 0xD37A57, true),
+        ("hammer_east", 0, 42, 46, 0xEEDDA5, true),
+        ("hammer_east", 0, 43, 47, 0x7D3B14, true),
+        ("hammer_east", 0, 45, 45, 0xE3B57F, false),
+        ("hammer_east", 0, 47, 45, 0xBB8151, false),
+        ("hammer_east", 0, 48, 45, 0x936244, false),
+        ("hammer_east", 0, 55, 44, 0x6099A8, false),
+        ("hammer_east", 1, 33, 36, 0xEEDDA5, true),
+        ("hammer_east", 1, 35, 36, 0x7D3B14, true),
+        ("hammer_east", 1, 36, 39, 0xD37A57, true),
+        ("hammer_east", 1, 34, 34, 0xBB8151, false),
+        ("hammer_east", 1, 39, 27, 0xC5E3E4, false),
+        ("hammer_east", 3, 45, 45, 0xEEDDA5, true),
+        ("hammer_east", 3, 50, 44, 0xD37A57, true),
+        ("hammer_east", 3, 45, 47, 0xF8FF79, false),
+        ("hammer_east", 6, 47, 46, 0xE8B271, true),
+        ("hammer_east", 6, 41, 44, 0x94715E, false),
+        ("wipebrow_south", 1, 41, 34, 0xD37A57, true),
+        ("wipebrow_south", 1, 43, 34, 0xEEDDA5, true),
+        ("wipebrow_south", 1, 42, 36, 0x7D3B14, true),
+        ("wipebrow_south", 1, 32, 47, 0xEEDDA5, true),
+        ("wipebrow_south", 1, 41, 40, 0x9E2626, false),
+        ("wipebrow_south", 1, 38, 35, 0xD37A57, true),
+        ("wipebrow_south", 5, 45, 46, 0xEEDDA5, true),
+        ("wipebrow_south", 5, 32, 47, 0xEEDDA5, true),
+        ("work_sit_loop_north", 0, 39, 39, 0xD37A57, true),
+        ("work_sit_loop_north", 6, 40, 39, 0xD37A57, true),
+        ("work_sit_loop_north", 0, 38, 37, 0x612934, false),
+        ("work_sit_start_north", 0, 34, 41, 0x7D3B14, true),
+        ("work_sit_start_north", 0, 33, 43, 0xE8B271, true),
+        ("work_sit_end_north", 1, 46, 41, 0xD37A57, true),
+        ("work_sit_end_north", 1, 40, 42, 0x9DAEB7, false),
     ];
     let skin = [0xEEDDA5, 0xE8B271, 0xD37A57, 0x7D3B14];
     let mut first_selection = None;
@@ -106,7 +107,7 @@ fn march_summer_standard_cover_moving_skin_and_preserve_materials() {
             format!("{:x}", Sha256::digest(fs::read(original.join(a)).unwrap()))
         );
     }
-    for r in profile["regions"].as_array().unwrap().iter().take(251) {
+    for r in profile["regions"].as_array().unwrap().iter().take(259) {
         let a = r["asset"].as_str().unwrap();
         for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
             assert_eq!(
@@ -154,11 +155,11 @@ fn march_summer_standard_cover_moving_skin_and_preserve_materials() {
         let mut selection = vec![];
         let mut changed = 0;
         for (name, frames) in [
-            ("action_east", 7),
-            ("action_north", 7),
-            ("action_south", 7),
-            ("kiss_east", 4),
-            ("sleep_east", 1),
+            ("hammer_east", 7),
+            ("wipebrow_south", 6),
+            ("work_sit_end_north", 2),
+            ("work_sit_loop_north", 7),
+            ("work_sit_start_north", 1),
         ] {
             let a = asset(name);
             let before = image::open(original.join(&a)).unwrap().to_rgba8();
@@ -173,10 +174,17 @@ fn march_summer_standard_cover_moving_skin_and_preserve_materials() {
                 parsed["asset_properties"]["atlas"].as_str(),
                 Some("Default")
             );
-            assert_eq!(
-                parsed["asset_properties"]["offset"]["horizontal"].as_str(),
-                Some("Middle")
-            );
+            if name.starts_with("work_sit") {
+                assert_eq!(
+                    parsed["asset_properties"]["offset"]["horizontal"].as_str(),
+                    Some("Middle")
+                );
+            } else {
+                assert_eq!(
+                    parsed["asset_properties"]["offset"]["horizontal"].as_float(),
+                    Some(40.0)
+                );
+            }
             assert_eq!(
                 parsed["asset_properties"]["offset"]["vertical"].as_float(),
                 Some(54.0)
@@ -218,13 +226,13 @@ fn march_summer_standard_cover_moving_skin_and_preserve_materials() {
             }
             assert!(counts.iter().all(|n| *n > 0));
         }
-        assert_eq!(changed, 1216);
+        assert_eq!(changed, 894);
         if let Some(first) = &first_selection {
             assert_eq!(first, &selection);
         } else {
             first_selection = Some(selection);
         }
-        for r in profile["regions"].as_array().unwrap().iter().take(251) {
+        for r in profile["regions"].as_array().unwrap().iter().take(259) {
             let a = r["asset"].as_str().unwrap();
             for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
                 assert_eq!(
@@ -236,5 +244,5 @@ fn march_summer_standard_cover_moving_skin_and_preserve_materials() {
             }
         }
     }
-    assert_eq!(prior_files, 2510);
+    assert_eq!(prior_files, 2590);
 }

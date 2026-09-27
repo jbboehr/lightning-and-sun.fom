@@ -2,8 +2,8 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/juniper-summer-specials-study and the retained Summer-standard Juniper bundle"]
-fn juniper_summer_reading_cover_skin_and_preserve_reviewed_materials() {
+#[ignore = "requires extracted/juniper-summer-specials-study and the retained Summer-reading Juniper bundle"]
+fn juniper_summer_specials_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/juniper-summer-specials-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
@@ -11,9 +11,9 @@ fn juniper_summer_reading_cover_skin_and_preserve_reviewed_materials() {
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/juniper-world-trial.json"));
     let cases: [(&str, &[usize]); 3] = [
-        ("read_sit_start_south", &[50, 24, 34]),
-        ("read_sit_loop_south", &[24, 28, 24, 28]),
-        ("read_sit_end_south", &[38, 20, 50]),
+        ("laugh_start_south", &[66]),
+        ("laugh_loop_south", &[70, 67]),
+        ("laugh_end_south", &[70, 66]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let skin = [0xEFD89A, 0xE3BF7F, 0xBC8B43, 0x763F21, 0xE8B171];
@@ -21,92 +21,85 @@ fn juniper_summer_reading_cover_skin_and_preserve_reviewed_materials() {
     type MaterialCase<'a> = (&'a str, u32, &'a [(u32, u32)]);
     let clothing: &[MaterialCase<'_>] = &[
         (
-            "read_sit_start_south",
+            "laugh_start_south",
             0,
-            &[(38, 33), (41, 33), (37, 34), (42, 34)],
+            &[
+                (38, 34),
+                (41, 34),
+                (37, 35),
+                (42, 35),
+                (34, 45),
+                (35, 45),
+                (44, 46),
+                (46, 46),
+            ],
         ),
         (
-            "read_sit_start_south",
-            1,
-            &[(38, 34), (41, 34), (37, 35), (42, 35), (34, 45), (45, 45)],
-        ),
-        (
-            "read_sit_start_south",
-            2,
-            &[(38, 34), (41, 34), (37, 35), (42, 35)],
-        ),
-        (
-            "read_sit_loop_south",
+            "laugh_loop_south",
             0,
-            &[(39, 33), (42, 33), (38, 34), (43, 34)],
+            &[(38, 32), (41, 32), (37, 33), (42, 33)],
         ),
         (
-            "read_sit_loop_south",
+            "laugh_loop_south",
             1,
-            &[(38, 34), (41, 34), (37, 35), (42, 35)],
+            &[(38, 32), (41, 32), (37, 33), (42, 33)],
         ),
         (
-            "read_sit_loop_south",
-            2,
-            &[(37, 33), (40, 33), (36, 34), (41, 34)],
-        ),
-        (
-            "read_sit_loop_south",
-            3,
-            &[(38, 34), (41, 34), (37, 35), (42, 35)],
-        ),
-        (
-            "read_sit_end_south",
+            "laugh_end_south",
             0,
-            &[(38, 34), (41, 34), (37, 35), (42, 35)],
+            &[(38, 32), (41, 32), (37, 33), (42, 33)],
         ),
         (
-            "read_sit_end_south",
+            "laugh_end_south",
             1,
-            &[(38, 34), (41, 34), (37, 35), (42, 35), (34, 45), (45, 45)],
-        ),
-        (
-            "read_sit_end_south",
-            2,
-            &[(38, 33), (41, 33), (37, 34), (42, 34)],
+            &[
+                (38, 34),
+                (41, 34),
+                (37, 35),
+                (42, 35),
+                (34, 45),
+                (35, 45),
+                (44, 46),
+                (46, 46),
+            ],
         ),
     ];
     // Zero-based frame numbers and frame-local coordinates.
     let landmarks = [
-        ("read_sit_start_south", 0, 38, 33, 0xE3BF7F, false), // circlet corner
-        ("read_sit_start_south", 0, 36, 42, 0xBC8B43, true),  // bare shoulder
-        ("read_sit_start_south", 0, 39, 42, 0xE3BF7F, true),  // chest through blouse
-        ("read_sit_start_south", 0, 38, 42, 0xD6CDF4, false), // blouse edge
-        ("read_sit_start_south", 0, 33, 46, 0xE3BF7F, true),  // hand below coupled bracer
-        ("read_sit_start_south", 0, 34, 47, 0x763F21, true),  // seated fingertips
-        ("read_sit_start_south", 0, 42, 47, 0xE3BF7F, true),  // shin through skirt slit
-        ("read_sit_start_south", 0, 42, 46, 0x9793DC, false), // sandal strap through slit
-        ("read_sit_start_south", 1, 34, 45, 0xBC8B43, false), // separable bracer beside book
-        ("read_sit_start_south", 1, 45, 45, 0xBC8B43, false), // opposite bracer beside book
-        ("read_sit_start_south", 1, 34, 46, 0xEFD89A, true),  // hand under bracer
-        ("read_sit_start_south", 1, 35, 47, 0x763F21, true),  // hand detail
-        ("read_sit_start_south", 1, 38, 41, 0xC9AF9C, false), // warm page shadow
-        ("read_sit_start_south", 1, 39, 41, 0xF6E4D7, false), // pale page
-        ("read_sit_start_south", 1, 37, 41, 0xBF54A3, false), // book binding
-        ("read_sit_start_south", 2, 39, 41, 0xBC8B43, true),  // neck over opening book
-        ("read_sit_start_south", 2, 34, 46, 0xEFD89A, true),  // fingers beside open cover
-        ("read_sit_loop_south", 0, 39, 33, 0xE3BF7F, false),  // tilted circlet
-        ("read_sit_loop_south", 0, 39, 42, 0xE3BF7F, true),   // chest above pages
-        ("read_sit_loop_south", 0, 43, 42, 0xBC8B43, true),   // shoulder peeking past book
-        ("read_sit_loop_south", 0, 32, 42, 0xF6E4D7, false),  // raised page corner
-        ("read_sit_loop_south", 1, 39, 43, 0xE3BF7F, true),   // chest with book level
-        ("read_sit_loop_south", 2, 41, 38, 0xBC8B43, true),   // opposite tilted cheek
-        ("read_sit_loop_south", 2, 36, 42, 0xBC8B43, true),   // opposite shoulder
-        ("read_sit_loop_south", 2, 46, 44, 0xF174B3, false),  // pink book cover
-        ("read_sit_end_south", 0, 35, 47, 0x763F21, true),    // fingers while closing book
-        ("read_sit_end_south", 1, 44, 47, 0x763F21, true),    // opposite fingers
-        ("read_sit_end_south", 1, 45, 45, 0xBC8B43, false),   // returned bracer edge
-        ("read_sit_end_south", 2, 39, 44, 0xE3BF7F, true),    // visible midriff after book closes
-        ("read_sit_end_south", 2, 41, 45, 0xE3BF7F, true),    // midriff above skirt
-        // Known art exceptions: these two bracer corners share a component
-        // with the hand. Keeping full skin coverage also changes the corners.
-        ("read_sit_start_south", 0, 34, 45, 0xE3BF7F, true),
-        ("read_sit_end_south", 2, 34, 45, 0xE3BF7F, true),
+        ("laugh_start_south", 0, 38, 34, 0xE3BF7F, false), // circlet corner
+        ("laugh_start_south", 0, 37, 35, 0xBC8B43, false), // circlet side
+        ("laugh_start_south", 0, 32, 43, 0xEFD89A, true),  // raised fingers
+        ("laugh_start_south", 0, 34, 43, 0x763F21, true),  // hand shadow adjoining coupled cuff
+        ("laugh_start_south", 0, 36, 43, 0xEFD89A, true),  // upper arm adjoining coupled cuff
+        ("laugh_start_south", 0, 34, 45, 0xBC8B43, false), // separable raised cuff bottom
+        ("laugh_start_south", 0, 35, 45, 0xBC8B43, false), // separable raised cuff inner bottom
+        ("laugh_start_south", 0, 35, 44, 0xFFF45D, false), // gold cuff center
+        ("laugh_start_south", 0, 39, 43, 0xE3BF7F, true),  // neckline
+        ("laugh_start_south", 0, 38, 43, 0xD6CDF4, false), // blouse beside neckline
+        ("laugh_start_south", 0, 44, 46, 0xBC8B43, false), // far cuff outer corner
+        ("laugh_start_south", 0, 46, 46, 0xBC8B43, false), // far cuff inner corner
+        ("laugh_start_south", 0, 46, 48, 0x763F21, true),  // far finger shadow
+        ("laugh_start_south", 0, 39, 46, 0xEFD89A, true),  // midriff
+        ("laugh_loop_south", 0, 38, 32, 0xE3BF7F, false),  // shifted circlet
+        ("laugh_loop_south", 0, 37, 41, 0xEFD89A, true),   // lifted wrist
+        ("laugh_loop_south", 0, 37, 42, 0x6C6287, false),  // Summer blouse where Spring had cuff
+        ("laugh_loop_south", 0, 34, 42, 0xEFD89A, true),   // bent bare forearm
+        ("laugh_loop_south", 0, 44, 42, 0x763F21, true),   // far bent upper arm
+        ("laugh_loop_south", 0, 46, 43, 0xBC8B43, true),   // bare elbow, no Summer cuff
+        ("laugh_loop_south", 0, 45, 44, 0xEFD89A, true),   // forearm down from elbow
+        ("laugh_loop_south", 0, 45, 46, 0xBC8B43, true),   // hand touching waist
+        ("laugh_loop_south", 1, 37, 40, 0xEFD89A, true),   // bouncing wrist
+        ("laugh_loop_south", 1, 46, 42, 0xBC8B43, true),   // bouncing elbow
+        ("laugh_loop_south", 1, 42, 48, 0xBC8B43, true),   // shin through Summer skirt
+        ("laugh_end_south", 0, 46, 43, 0xBC8B43, true),    // elbow as laugh settles
+        ("laugh_end_south", 1, 35, 45, 0xBC8B43, false),   // returning cuff bottom
+        ("laugh_end_south", 1, 45, 47, 0xEFD89A, true),    // returning far hand
+        // Known art exceptions: these edges beside the gold cuff share a
+        // component with hand/upper-arm pixels immediately above them.
+        ("laugh_start_south", 0, 34, 44, 0x763F21, true),
+        ("laugh_start_south", 0, 36, 44, 0xE3BF7F, true),
+        ("laugh_end_south", 1, 34, 44, 0x763F21, true),
+        ("laugh_end_south", 1, 36, 44, 0xE3BF7F, true),
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -184,19 +177,19 @@ fn juniper_summer_reading_cover_skin_and_preserve_reviewed_materials() {
                 }
             }
         }
-        assert_eq!(changed, 320);
+        assert_eq!(changed, 339);
 
-        for r in &profile["regions"].as_array().unwrap()[..195] {
+        for r in &profile["regions"].as_array().unwrap()[..198] {
             let asset = r["asset"].as_str().unwrap();
             for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
-                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-reina-juniper-march-summer-standard-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
+                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-reina-juniper-march-summer-reading-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
             }
         }
     }
 
     // Practical controls: dropping a finger shadow component, or merging groups
     // and allowing skin selection to cross into a same-shade gold bracer.
-    let asset = "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_read_sit_start_south.png";
+    let asset = "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_laugh_start_south.png";
     let source = temp.path().join("controls-source");
     fs::create_dir_all(source.join(asset).parent().unwrap()).unwrap();
     for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
@@ -254,21 +247,21 @@ fn juniper_summer_reading_cover_skin_and_preserve_reviewed_materials() {
     missing["seeds"]
         .as_array_mut()
         .unwrap()
-        .retain(|s| *s != json!([115, 47]));
+        .retain(|s| *s != json!([46, 48]));
     let omitted = apply_control(
         "missing-finger-shadow",
         missing,
         map.clone(),
         profile["color_groups"].clone(),
     );
-    assert_eq!(omitted.get_pixel(115, 47).0, rgba(0x763F21));
-    assert_ne!(omitted.get_pixel(115, 47), correct.get_pixel(115, 47));
+    assert_eq!(omitted.get_pixel(46, 48).0, rgba(0x763F21));
+    assert_ne!(omitted.get_pixel(46, 48), correct.get_pixel(46, 48));
     let spilled = apply_control(
         "merged-groups",
         region,
         map,
         json!([profile["source_colors"]]),
     );
-    assert_eq!(correct.get_pixel(114, 45).0, rgba(0xBC8B43));
-    assert_eq!(spilled.get_pixel(114, 45).0, rgba(0x6687AD));
+    assert_eq!(correct.get_pixel(46, 46).0, rgba(0xBC8B43));
+    assert_eq!(spilled.get_pixel(46, 46).0, rgba(0x6687AD));
 }

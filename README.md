@@ -201,7 +201,8 @@ Reina, Juniper and March's complete Spring sprite folders are covered, including
 Reina's kitchen work, Juniper's spell casting and gestures, and March's smithing
 and injured animations. Their Summer idle, walking, blinking, sitting, eating,
 drinking, general actions, sleeping, kissing and seated-reading sprites are
-included too, in their supported directions.
+included too, along with Reina's writing, Juniper's laugh and March's smithing,
+in their supported directions.
 Home, Page Down and U cycle their palettes respectively.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
