@@ -169,7 +169,9 @@ add idle and walking sprites in all four directions. The [Summer actions](develo
 add blinking, sitting, eating and drinking. The [Summer standard batch](development/reina-juniper-march-summer-standard.md)
 adds general actions, sleeping and kissing. The [Summer reading batch](development/reina-juniper-march-summer-reading.md)
 adds all three seated-reading phases. The [Summer special actions](development/reina-juniper-march-summer-specials.md)
-add Reina's writing, Juniper's laugh and March's smithing. Totals are now 172, 201 and 264,
+add Reina's writing, Juniper's laugh and March's smithing. The [Summer completion batch](development/reina-juniper-summer-finish.md)
+finishes Reina's kitchen work and Juniper's magic and gestures, completing both
+Summer folders. Totals are now 176, 206 and 264,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

@@ -1053,7 +1053,11 @@
       "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_write_sit_end_south.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_write_sit_loop_south.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_write_sit_start_south.png": "Default",
-      "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_write_start_south.png": "Default"
+      "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_write_start_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_chop_north.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_polish_end_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_polish_loop_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_polish_start_east.png": "Default"
     },
     "hotkey": "HOME",
     "id": "reina",
@@ -1261,7 +1265,12 @@
       "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_read_sit_start_south.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_laugh_end_south.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_laugh_loop_south.png": "Default",
-      "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_laugh_start_south.png": "Default"
+      "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_laugh_start_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_hair_flip_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_snooze_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_spell_cast_end_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_spell_cast_loop_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_spell_cast_start_south.png": "Default"
     },
     "hotkey": "PAGE_DOWN",
     "id": "juniper",
