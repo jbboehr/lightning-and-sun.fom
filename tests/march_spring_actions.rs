@@ -10,7 +10,7 @@ fn read(path: impl AsRef<Path>) -> Value {
 fn march_spring_actions_append_only_the_drink_midtone_role() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let profile = read(root.join("palettes/profiles/march-world-trial.json"));
-    assert_eq!(profile["regions"].as_array().unwrap().len(), 264);
+    assert_eq!(profile["regions"].as_array().unwrap().len(), 278);
     assert_eq!(profile["source_colors"].as_array().unwrap().len(), 16);
     assert_eq!(profile["source_colors"][15], "#E8B171");
     assert_eq!(profile["color_groups"].as_array().unwrap().len(), 7);
@@ -56,10 +56,10 @@ fn color(value: &Value) -> u32 {
 }
 
 #[test]
-#[ignore = "requires 264 local animations in extracted/march-summer-specials-study and the accepted portrait output baseline"]
+#[ignore = "requires 278 local animations in extracted/march-summer-injured-study and the accepted portrait output baseline"]
 fn march_spring_actions_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/march-summer-specials-study");
+    let original = root.join("extracted/march-summer-injured-study");
     let baseline =
         root.join("generated/characters-reina-juniper-march-world-trial/characters/march");
     let profile_path = std::env::var_os("FOM_MARCH_SPRING_ACTIONS_PROFILE")

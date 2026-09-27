@@ -171,7 +171,9 @@ adds general actions, sleeping and kissing. The [Summer reading batch](developme
 adds all three seated-reading phases. The [Summer special actions](development/reina-juniper-march-summer-specials.md)
 add Reina's writing, Juniper's laugh and March's smithing. The [Summer completion batch](development/reina-juniper-summer-finish.md)
 finishes Reina's kitchen work and Juniper's magic and gestures, completing both
-Summer folders. Totals are now 176, 206 and 264,
+Summer folders. [March's Summer injured batch](development/march-summer-injured.md)
+adds the final fourteen strips and completes his Summer folder too.
+Totals are now 176, 206 and 278,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

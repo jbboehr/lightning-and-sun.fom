@@ -199,10 +199,8 @@ Their complete Beach sprite folders are covered too, including swimming.
 Their complete Wedding sprite folders are also included.
 Reina, Juniper and March's complete Spring sprite folders are covered, including
 Reina's kitchen work, Juniper's spell casting and gestures, and March's smithing
-and injured animations. Reina and Juniper's complete Summer sprite folders are
-also covered. March's Summer idle, walking, blinking, sitting, eating, drinking,
-general actions, sleeping, kissing, seated reading and smithing are included in
-their supported directions; his Summer injured animations remain original.
+and injured animations. Their complete Summer sprite folders are also covered,
+including March's injured idle, walking, seated poses, blinking and action.
 Home, Page Down and U cycle their palettes respectively.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
