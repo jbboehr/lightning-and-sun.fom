@@ -15,7 +15,9 @@
     "#9D5A33": "#445F83",
     "#BC8B43": "#6687AD",
     "#E8B171": "#7F9FBD",
-    "#F1E791": "#9DB9D4"
+    "#F1E791": "#9DB9D4",
+    "#B58E45": "#6687AD",
+    "#E0B572": "#7F9FBD"
   },
   "profile": "../profiles/juniper-world-trial.json"
 }

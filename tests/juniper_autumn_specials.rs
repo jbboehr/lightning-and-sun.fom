@@ -2,7 +2,7 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-fn juniper_autumn_highlight_alias_preserves_every_previous_palette_role() {
+fn juniper_autumn_laugh_aliases_preserve_every_previous_palette_role() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let read =
         |s: &str| -> Value { serde_json::from_slice(&fs::read(root.join(s)).unwrap()).unwrap() };
@@ -49,151 +49,100 @@ fn juniper_autumn_highlight_alias_preserves_every_previous_palette_role() {
 }
 
 #[test]
-#[ignore = "requires extracted/juniper-autumn-specials-study and the retained Summer-injured Juniper bundle"]
-fn juniper_autumn_world_cover_skin_and_preserve_reviewed_materials() {
+#[ignore = "requires extracted/juniper-autumn-specials-study and the retained Autumn-reading Juniper bundle"]
+fn juniper_autumn_specials_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/juniper-autumn-specials-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/juniper-world-trial.json"));
-    let cases: [(&str, &[usize]); 6] = [
-        ("idle_north", &[12]),
-        ("idle_south", &[44]),
-        ("idle_east", &[37]),
-        ("walk_north", &[12, 6, 12, 7]),
-        ("walk_south", &[44, 39, 44, 39]),
-        ("walk_east", &[37, 40, 37, 33]),
+    let cases: [(&str, &[usize]); 3] = [
+        ("laugh_start_south", &[50]),
+        ("laugh_loop_south", &[43, 39]),
+        ("laugh_end_south", &[43, 50]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
-    let skin = [0xEFD89A, 0xE3BF7F, 0xBC8B43, 0x763F21, 0xE8B171, 0xF1E791];
+    let skin = [
+        0xEFD89A, 0xE3BF7F, 0xBC8B43, 0x763F21, 0xE8B171, 0xF1E791, 0xB58E45, 0xE0B572,
+    ];
     // Literal source-material exclusions: circlet and bracers.
     type MaterialCase<'a> = (&'a str, u32, &'a [(u32, u32)]);
     let clothing: &[MaterialCase<'_>] = &[
-        ("idle_north", 0, &[(33, 45), (46, 45)]),
         (
-            "idle_south",
+            "laugh_start_south",
             0,
-            &[(38, 33), (41, 33), (37, 34), (42, 34), (33, 45), (46, 45)],
+            &[(38, 34), (41, 34), (37, 35), (42, 35), (46, 46)],
         ),
         (
-            "idle_east",
+            "laugh_loop_south",
             0,
-            &[(39, 33), (42, 33), (38, 34), (43, 34), (34, 45)],
-        ),
-        ("walk_north", 0, &[(33, 45), (46, 45)]),
-        ("walk_north", 1, &[(33, 46)]),
-        ("walk_north", 2, &[(33, 45), (46, 45)]),
-        ("walk_north", 3, &[(46, 46)]),
-        (
-            "walk_south",
-            0,
-            &[(38, 33), (41, 33), (37, 34), (42, 34), (33, 45), (46, 45)],
+            &[(38, 32), (41, 32), (37, 33), (42, 33)],
         ),
         (
-            "walk_south",
+            "laugh_loop_south",
             1,
-            &[
-                (38, 34),
-                (41, 34),
-                (37, 35),
-                (42, 35),
-                (33, 46),
-                (45, 46),
-                (46, 46),
-            ],
+            &[(38, 32), (41, 32), (37, 33), (42, 33)],
         ),
         (
-            "walk_south",
-            2,
-            &[(38, 33), (41, 33), (37, 34), (42, 34), (33, 45), (46, 45)],
-        ),
-        (
-            "walk_south",
-            3,
-            &[
-                (38, 34),
-                (41, 34),
-                (37, 35),
-                (42, 35),
-                (33, 46),
-                (34, 46),
-                (46, 46),
-            ],
-        ),
-        (
-            "walk_east",
+            "laugh_end_south",
             0,
-            &[(39, 33), (42, 33), (38, 34), (43, 34), (34, 45)],
+            &[(38, 32), (41, 32), (37, 33), (42, 33)],
         ),
         (
-            "walk_east",
+            "laugh_end_south",
             1,
-            &[(39, 34), (42, 34), (38, 35), (43, 35), (46, 45)],
-        ),
-        (
-            "walk_east",
-            2,
-            &[(39, 33), (42, 33), (38, 34), (43, 34), (34, 45)],
-        ),
-        (
-            "walk_east",
-            3,
-            &[(39, 34), (42, 34), (38, 35), (43, 35), (35, 46)],
+            &[(38, 34), (41, 34), (37, 35), (42, 35), (46, 46)],
         ),
     ];
     // Zero-based frame numbers and frame-local coordinates.
     let landmarks = [
-        ("idle_north", 0, 33, 45, 0xBC8B43, false), // warm cuff border above hand
-        ("idle_north", 0, 46, 45, 0xBC8B43, false), // matching far cuff behind hair
-        ("idle_north", 0, 34, 45, 0xF8F960, false), // Autumn gold cuff
-        ("idle_north", 0, 33, 47, 0x763F21, true),  // fingers
-        ("idle_north", 0, 37, 52, 0x3A2B5B, false), // Autumn boot replaces Summer skin
-        ("idle_north", 0, 39, 42, 0x9E77B3, false), // hair over back
-        ("idle_south", 0, 38, 33, 0xE3BF7F, false), // circlet corner
-        ("idle_south", 0, 40, 33, 0xCA3561, false), // Autumn gemstone
-        ("idle_south", 0, 39, 36, 0xE3BF7F, true),  // nose between eyes
-        ("idle_south", 0, 35, 36, 0xEFD89A, true),  // ear
-        ("idle_south", 0, 37, 36, 0xC2B9BE, false), // eye cosmetics
-        ("idle_south", 0, 36, 42, 0x1C1627, false), // covered upper arm
-        ("idle_south", 0, 38, 42, 0x675F91, false), // blouse beside neckline
-        ("idle_south", 0, 39, 42, 0xBC8B43, true),  // neckline shadow
-        ("idle_south", 0, 40, 42, 0xE3BF7F, true),  // neckline light
-        ("idle_south", 0, 39, 44, 0xBC8B43, true),  // upper midriff shadow
-        ("idle_south", 0, 38, 45, 0xE3BF7F, true),  // exposed waist next to new highlight
-        ("idle_south", 0, 39, 45, 0xF1E791, true),  // new highlight alias
-        ("idle_south", 0, 40, 45, 0xF1E791, true),  // second alias pixel
-        ("idle_south", 0, 39, 46, 0xCA3561, false), // red fabric below waist
-        ("idle_south", 0, 45, 45, 0xF8F960, false), // far gold cuff
-        ("idle_south", 0, 46, 47, 0x763F21, true),  // far fingers below cuff
-        ("idle_east", 0, 34, 45, 0xBC8B43, false),  // side cuff border
-        ("idle_east", 0, 35, 45, 0xFFF45D, false),  // side gold cuff
-        ("idle_east", 0, 44, 45, 0xFBCC5A, false),  // shaded gold cuff
-        ("idle_east", 0, 44, 46, 0xE3BF7F, true),   // hand below shaded cuff
-        ("idle_east", 0, 34, 47, 0xBC8B43, true),   // hand outline below near cuff
-        ("idle_east", 0, 40, 45, 0xEFD89A, true), // existing highlight in equivalent waist geometry
-        ("idle_east", 0, 40, 44, 0xBC8B43, true), // waist shadow
-        ("idle_east", 0, 39, 52, 0x3D3C66, false), // boot
-        ("walk_north", 1, 33, 46, 0xBC8B43, false), // swinging cuff
-        ("walk_north", 1, 33, 47, 0xEFD89A, true), // swinging hand
-        ("walk_north", 3, 46, 46, 0xBC8B43, false), // opposite cuff
-        ("walk_north", 3, 33, 47, 0x763F21, true), // far finger visible below hair
-        ("walk_south", 1, 45, 46, 0xE3BF7F, false), // turned cuff uses a skin-matching color
-        ("walk_south", 1, 46, 47, 0x763F21, true), // hand below turned cuff
-        ("walk_south", 3, 34, 46, 0xE3BF7F, false), // opposite turned cuff
-        ("walk_south", 3, 33, 47, 0x763F21, true), // opposite hand shadow
-        ("walk_east", 1, 46, 45, 0xBC8B43, false), // far moving cuff border
-        ("walk_east", 1, 32, 46, 0xEFD89A, true), // reaching fingertips
-        ("walk_east", 3, 35, 46, 0xBC8B43, false), // backward cuff edge
-        ("walk_east", 3, 35, 47, 0xEFD89A, true), // backward hand
-        ("walk_south", 0, 39, 45, 0xF1E791, true), // new highlight throughout walk
-        ("walk_south", 0, 40, 45, 0xF1E791, true), // new highlight throughout walk
-        ("walk_south", 1, 39, 46, 0xF1E791, true), // new highlight throughout walk
-        ("walk_south", 1, 40, 46, 0xF1E791, true), // new highlight throughout walk
-        ("walk_south", 2, 39, 45, 0xF1E791, true), // new highlight throughout walk
-        ("walk_south", 2, 40, 45, 0xF1E791, true), // new highlight throughout walk
-        ("walk_south", 3, 39, 46, 0xF1E791, true), // new highlight throughout walk
-        ("walk_south", 3, 40, 46, 0xF1E791, true), // new highlight throughout walk
+        ("laugh_start_south", 0, 38, 34, 0xE3BF7F, false), // circlet corner
+        ("laugh_start_south", 0, 40, 34, 0xCA3561, false), // circlet gemstone
+        ("laugh_start_south", 0, 37, 37, 0x8D80C7, false), // eye cosmetics
+        ("laugh_start_south", 0, 37, 36, 0xE3BF7F, true),  // skin above closed eyelid
+        ("laugh_start_south", 0, 39, 43, 0xB58E45, true),  // new keyhole shadow alias
+        ("laugh_start_south", 0, 40, 43, 0xE0B572, true),  // new keyhole midtone alias
+        ("laugh_start_south", 0, 39, 45, 0xB58E45, true),  // midriff upper shadow alias
+        ("laugh_start_south", 0, 37, 46, 0xB58E45, true),  // midriff side shadow alias
+        ("laugh_start_south", 0, 38, 46, 0xE0B572, true),  // midriff midtone alias
+        ("laugh_start_south", 0, 39, 46, 0xF1E791, true), // established highlight between new aliases
+        ("laugh_start_south", 0, 32, 43, 0xEFD89A, true), // lifted hand highlight
+        ("laugh_start_south", 0, 34, 43, 0x763F21, true), // lifted finger shadow
+        ("laugh_start_south", 0, 34, 45, 0xCA3561, false), // wrist gemstone
+        ("laugh_start_south", 0, 46, 46, 0xBC8B43, false), // opposite cuff border
+        ("laugh_start_south", 0, 45, 46, 0xF8F960, false), // opposite cuff gold
+        ("laugh_start_south", 0, 46, 48, 0x763F21, true), // fingers below cuff
+        ("laugh_loop_south", 0, 38, 32, 0xE3BF7F, false), // raised circlet
+        ("laugh_loop_south", 0, 39, 36, 0x000000, false), // open mouth interior
+        ("laugh_loop_south", 0, 41, 38, 0xEFD89A, true),  // cheek next to mouth
+        ("laugh_loop_south", 0, 37, 39, 0x763F21, true),  // raised fingertip
+        ("laugh_loop_south", 0, 37, 41, 0xEFD89A, true),  // hand above cuff
+        ("laugh_loop_south", 0, 38, 41, 0xBC8B43, true),  // hand outline beside wrist
+        ("laugh_loop_south", 0, 36, 41, 0xCA3561, false), // wrist gemstone
+        ("laugh_loop_south", 0, 36, 42, 0xF8F960, false), // cuff below raised hand
+        ("laugh_loop_south", 0, 39, 43, 0xB58E45, true),  // keyhole shadow through loop
+        ("laugh_loop_south", 0, 40, 43, 0xE0B572, true),  // keyhole midtone through loop
+        ("laugh_loop_south", 0, 41, 46, 0xE0B572, true),  // opposite midriff alias
+        ("laugh_loop_south", 0, 45, 46, 0xBC8B43, true),  // far hand outline beside cuff
+        ("laugh_loop_south", 0, 46, 45, 0xF8F960, false), // far cuff gold
+        ("laugh_loop_south", 1, 37, 34, 0x8D80C7, false), // eyelid cosmetics during bob
+        ("laugh_loop_south", 1, 39, 37, 0x000000, false), // mouth interior during bob
+        ("laugh_loop_south", 1, 37, 38, 0x763F21, true),  // fingertip during bob
+        ("laugh_loop_south", 1, 36, 41, 0xF8F960, false), // moving cuff gold
+        ("laugh_loop_south", 1, 39, 42, 0xB58E45, true),  // shifted keyhole shadow
+        ("laugh_loop_south", 1, 40, 42, 0xE0B572, true),  // shifted keyhole midtone
+        ("laugh_loop_south", 1, 42, 45, 0xB58E45, true),  // shifted midriff shadow
+        ("laugh_loop_south", 1, 41, 45, 0xE0B572, true),  // shifted midriff midtone
+        ("laugh_end_south", 0, 37, 39, 0x763F21, true),   // finger as laugh ends
+        ("laugh_end_south", 0, 39, 43, 0xB58E45, true),   // keyhole alias as laugh ends
+        ("laugh_end_south", 0, 40, 43, 0xE0B572, true),   // paired keyhole alias
+        ("laugh_end_south", 0, 39, 47, 0xCA3561, false),  // skirt below midriff
+        ("laugh_end_south", 1, 38, 34, 0xE3BF7F, false),  // restored circlet
+        ("laugh_end_south", 1, 46, 46, 0xBC8B43, false),  // restored cuff border
+        ("laugh_end_south", 1, 39, 43, 0xB58E45, true),   // restored keyhole shadow
+        ("laugh_end_south", 1, 40, 43, 0xE0B572, true),   // restored keyhole midtone
+        ("laugh_end_south", 1, 39, 46, 0xF1E791, true),   // restored midriff highlight
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -223,7 +172,7 @@ fn juniper_autumn_world_cover_skin_and_preserve_reviewed_materials() {
             "{}",
             String::from_utf8_lossy(&result.stderr)
         );
-        let targets = [0, 1, 12, 4, 13, 14].map(|i| {
+        let targets = [0, 1, 12, 4, 13, 14, 15, 16].map(|i| {
             rgba(u32::from_str_radix(&preset["colors"][i].as_str().unwrap()[1..7], 16).unwrap())
         });
         let mut changed = 0;
@@ -231,7 +180,7 @@ fn juniper_autumn_world_cover_skin_and_preserve_reviewed_materials() {
         for (name, counts) in cases {
             let prefix = "autumn";
             let asset = format!(
-                "assets/animations/NPCs/Juniper/Sprites/Autumn/spr_npc_juniper_{prefix}_{name}.png"
+                "assets/animations/NPCs/Juniper/Sprites/Autumn/spr_npc_juniper_specialanimation_{prefix}_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -271,20 +220,19 @@ fn juniper_autumn_world_cover_skin_and_preserve_reviewed_materials() {
                 }
             }
         }
-        assert_eq!(changed, 443);
+        assert_eq!(changed, 225);
 
-        for r in &profile["regions"].as_array().unwrap()[..206] {
+        for r in &profile["regions"].as_array().unwrap()[..231] {
             let asset = r["asset"].as_str().unwrap();
             for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
-                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-march-summer-injured-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
+                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-reina-juniper-march-autumn-reading-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
             }
         }
     }
 
-    // Practical controls: dropping an finger shadow component, or merging groups
+    // Practical controls: dropping a finger shadow component, or merging groups
     // and allowing skin selection to cross into a same-shade gold bracer.
-    let asset =
-        "assets/animations/NPCs/Juniper/Sprites/Autumn/spr_npc_juniper_autumn_idle_south.png";
+    let asset = "assets/animations/NPCs/Juniper/Sprites/Autumn/spr_npc_juniper_specialanimation_autumn_laugh_start_south.png";
     let source = temp.path().join("controls-source");
     fs::create_dir_all(source.join(asset).parent().unwrap()).unwrap();
     for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
@@ -342,34 +290,42 @@ fn juniper_autumn_world_cover_skin_and_preserve_reviewed_materials() {
     missing["seeds"]
         .as_array_mut()
         .unwrap()
-        .retain(|s| *s != json!([33, 47]));
+        .retain(|s| *s != json!([46, 48]));
     let omitted = apply_control(
         "missing-finger-shadow",
         missing,
         map.clone(),
         profile["color_groups"].clone(),
     );
-    assert_eq!(omitted.get_pixel(33, 47).0, rgba(0x763F21));
-    assert_ne!(omitted.get_pixel(33, 47), correct.get_pixel(33, 47));
-    let mut missing_alias = region.clone();
-    missing_alias["seeds"]
-        .as_array_mut()
-        .unwrap()
-        .retain(|s| *s != json!([39, 45]));
-    let omitted_alias = apply_control(
-        "missing-midriff-highlight",
-        missing_alias,
-        map.clone(),
-        profile["color_groups"].clone(),
-    );
-    assert_eq!(omitted_alias.get_pixel(39, 45).0, rgba(0xF1E791));
-    assert_ne!(omitted_alias.get_pixel(39, 45), correct.get_pixel(39, 45));
+    assert_eq!(omitted.get_pixel(46, 48).0, rgba(0x763F21));
+    assert_ne!(omitted.get_pixel(46, 48), correct.get_pixel(46, 48));
+    for (id, point, color) in [
+        ("missing-keyhole-shadow", [39, 43], 0xB58E45),
+        ("missing-keyhole-midtone", [40, 43], 0xE0B572),
+    ] {
+        let mut missing_alias = region.clone();
+        missing_alias["seeds"]
+            .as_array_mut()
+            .unwrap()
+            .retain(|s| *s != json!(point));
+        let omitted = apply_control(
+            id,
+            missing_alias,
+            map.clone(),
+            profile["color_groups"].clone(),
+        );
+        assert_eq!(omitted.get_pixel(point[0], point[1]).0, rgba(color));
+        assert_ne!(
+            omitted.get_pixel(point[0], point[1]),
+            correct.get_pixel(point[0], point[1])
+        );
+    }
     let spilled = apply_control(
         "merged-groups",
         region,
         map,
         json!([profile["source_colors"]]),
     );
-    assert_eq!(correct.get_pixel(33, 45).0, rgba(0xBC8B43));
-    assert_eq!(spilled.get_pixel(33, 45).0, rgba(0x6687AD));
+    assert_eq!(correct.get_pixel(46, 46).0, rgba(0xBC8B43));
+    assert_eq!(spilled.get_pixel(46, 46).0, rgba(0x6687AD));
 }

@@ -12,10 +12,12 @@ fn juniper_drink_alias_appends_a_midtone_role_without_changing_prior_roles() {
     colors.extend([json!("#BC8B43"), json!("#E8B171")]);
     // Autumn midriff highlight; previous source roles retain their indices.
     colors.push(json!("#F1E791"));
+    colors.extend([json!("#B58E45"), json!("#E0B572")]);
     assert_eq!(world["source_colors"], json!(colors));
     let mut groups = portrait["color_groups"].as_array().unwrap().clone();
     groups.extend([json!(["#BC8B43"]), json!(["#E8B171"])]);
     groups.push(json!(["#F1E791"]));
+    groups.extend([json!(["#B58E45"]), json!(["#E0B572"])]);
     assert_eq!(world["color_groups"], json!(groups));
     let old = read("palettes/sets/juniper-portraits-trial.json");
     let set = read("palettes/sets/juniper-world-trial.json");
@@ -30,6 +32,7 @@ fn juniper_drink_alias_appends_a_midtone_role_without_changing_prior_roles() {
         let mut colors = a["colors"].as_array().unwrap().clone();
         colors.extend([a["colors"][2].clone(), a["colors"][1].clone()]);
         colors.push(a["colors"][0].clone());
+        colors.extend([a["colors"][2].clone(), a["colors"][1].clone()]);
         expected["colors"] = json!(colors);
         assert_eq!(*b, expected);
     }
@@ -37,6 +40,8 @@ fn juniper_drink_alias_appends_a_midtone_role_without_changing_prior_roles() {
     expected["#BC8B43"] = expected["#D2AB66"].clone();
     expected["#E8B171"] = expected["#E3BF7F"].clone();
     expected["#F1E791"] = expected["#EFD89A"].clone();
+    expected["#B58E45"] = expected["#BC8B43"].clone();
+    expected["#E0B572"] = expected["#E3BF7F"].clone();
     assert_eq!(
         read("palettes/stylized/juniper-world-trial.json")["rgba_map"],
         expected
@@ -44,10 +49,10 @@ fn juniper_drink_alias_appends_a_midtone_role_without_changing_prior_roles() {
 }
 
 #[test]
-#[ignore = "requires extracted/juniper-autumn-reading-study and the retained first-world Juniper bundle"]
+#[ignore = "requires extracted/juniper-autumn-specials-study and the retained first-world Juniper bundle"]
 fn juniper_spring_actions_cover_raised_arms_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/juniper-autumn-reading-study");
+    let original = root.join("extracted/juniper-autumn-specials-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);

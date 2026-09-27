@@ -203,7 +203,8 @@ and injured animations. Their complete Summer sprite folders are also covered,
 including March's injured idle, walking, seated poses, blinking and action.
 Autumn idle, walking, blinking, sitting, eating and drinking sprites are included
 in their supported directions, along with general actions, sleeping, kissing
-and all three seated-reading phases.
+and all three seated-reading phases. Reina's standing and seated writing,
+Juniper's laugh, and March's seated work, hammering and brow-wiping are included.
 Other Autumn actions remain original.
 Home, Page Down and U cycle their palettes respectively.
 Other unlisted overworld animations remain original.
