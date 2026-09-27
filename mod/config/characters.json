@@ -1057,7 +1057,13 @@
       "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_chop_north.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_polish_end_east.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_polish_loop_east.png": "Default",
-      "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_polish_start_east.png": "Default"
+      "assets/animations/NPCs/Reina/Sprites/Summer/spr_npc_reina_specialanimation_summer_polish_start_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Autumn/spr_npc_reina_autumn_idle_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Autumn/spr_npc_reina_autumn_idle_north.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Autumn/spr_npc_reina_autumn_idle_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Autumn/spr_npc_reina_autumn_walk_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Autumn/spr_npc_reina_autumn_walk_north.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Autumn/spr_npc_reina_autumn_walk_south.png": "Default"
     },
     "hotkey": "HOME",
     "id": "reina",
@@ -1270,7 +1276,13 @@
       "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_snooze_south.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_spell_cast_end_south.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_spell_cast_loop_south.png": "Default",
-      "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_spell_cast_start_south.png": "Default"
+      "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_spell_cast_start_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Autumn/spr_npc_juniper_autumn_idle_east.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Autumn/spr_npc_juniper_autumn_idle_north.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Autumn/spr_npc_juniper_autumn_idle_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Autumn/spr_npc_juniper_autumn_walk_east.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Autumn/spr_npc_juniper_autumn_walk_north.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Autumn/spr_npc_juniper_autumn_walk_south.png": "Default"
     },
     "hotkey": "PAGE_DOWN",
     "id": "juniper",
@@ -1952,7 +1964,13 @@
       "assets/animations/NPCs/March/Sprites/Summer/spr_npc_march_specialanimation_summer_hurt_sit_south.png": "Default",
       "assets/animations/NPCs/March/Sprites/Summer/spr_npc_march_specialanimation_summer_hurt_walk_east.png": "Default",
       "assets/animations/NPCs/March/Sprites/Summer/spr_npc_march_specialanimation_summer_hurt_walk_north.png": "Default",
-      "assets/animations/NPCs/March/Sprites/Summer/spr_npc_march_specialanimation_summer_hurt_walk_south.png": "Default"
+      "assets/animations/NPCs/March/Sprites/Summer/spr_npc_march_specialanimation_summer_hurt_walk_south.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Autumn/spr_npc_march_autumn_idle_east.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Autumn/spr_npc_march_autumn_idle_north.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Autumn/spr_npc_march_autumn_idle_south.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Autumn/spr_npc_march_autumn_walk_east.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Autumn/spr_npc_march_autumn_walk_north.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Autumn/spr_npc_march_autumn_walk_south.png": "Default"
     },
     "hotkey": "U",
     "id": "march",

@@ -173,7 +173,8 @@ add Reina's writing, Juniper's laugh and March's smithing. The [Summer completio
 finishes Reina's kitchen work and Juniper's magic and gestures, completing both
 Summer folders. [March's Summer injured batch](development/march-summer-injured.md)
 adds the final fourteen strips and completes his Summer folder too.
-Totals are now 176, 206 and 278,
+The [Autumn pilots](development/reina-juniper-march-autumn.md) add six idle/walk
+strips each, with native West mirroring. Totals are now 182, 212 and 284,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
