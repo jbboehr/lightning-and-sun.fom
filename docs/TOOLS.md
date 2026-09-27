@@ -167,7 +167,8 @@ his [injured animation batch](development/march-spring-injured.md) adds the fina
 fourteen strips and completes his Spring folder. The [Summer pilots](development/reina-juniper-march-summer.md)
 add idle and walking sprites in all four directions. The [Summer actions](development/reina-juniper-march-summer-actions.md)
 add blinking, sitting, eating and drinking. The [Summer standard batch](development/reina-juniper-march-summer-standard.md)
-adds general actions, sleeping and kissing. Totals are now 163, 195 and 256,
+adds general actions, sleeping and kissing. The [Summer reading batch](development/reina-juniper-march-summer-reading.md)
+adds all three seated-reading phases. Totals are now 166, 198 and 259,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

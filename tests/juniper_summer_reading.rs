@@ -2,166 +2,111 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/juniper-summer-reading-study and the retained Spring-injured Juniper bundle"]
-fn juniper_summer_world_cover_skin_and_preserve_reviewed_materials() {
+#[ignore = "requires extracted/juniper-summer-reading-study and the retained Summer-standard Juniper bundle"]
+fn juniper_summer_reading_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/juniper-summer-reading-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/juniper-world-trial.json"));
-    let cases: [(&str, &[usize]); 6] = [
-        ("idle_north", &[19]),
-        ("idle_south", &[62]),
-        ("idle_east", &[51]),
-        ("walk_north", &[19, 17, 19, 11]),
-        ("walk_south", &[62, 56, 62, 57]),
-        ("walk_east", &[51, 53, 51, 51]),
+    let cases: [(&str, &[usize]); 3] = [
+        ("read_sit_start_south", &[50, 24, 34]),
+        ("read_sit_loop_south", &[24, 28, 24, 28]),
+        ("read_sit_end_south", &[38, 20, 50]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let skin = [0xEFD89A, 0xE3BF7F, 0xBC8B43, 0x763F21, 0xE8B171];
     // Literal source-material exclusions: circlet and bracers.
     type MaterialCase<'a> = (&'a str, u32, &'a [(u32, u32)]);
     let clothing: &[MaterialCase<'_>] = &[
-        ("idle_north", 0, &[]),
         (
-            "idle_south",
+            "read_sit_start_south",
             0,
-            &[
-                (38, 33),
-                (41, 33),
-                (37, 34),
-                (42, 34),
-                (33, 45),
-                (35, 45),
-                (44, 45),
-                (46, 45),
-            ],
+            &[(38, 33), (41, 33), (37, 34), (42, 34)],
         ),
         (
-            "idle_east",
-            0,
-            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (34, 45)],
-        ),
-        ("walk_north", 0, &[]),
-        ("walk_north", 1, &[]),
-        ("walk_north", 2, &[]),
-        ("walk_north", 3, &[]),
-        (
-            "walk_south",
-            0,
-            &[
-                (38, 33),
-                (41, 33),
-                (37, 34),
-                (42, 34),
-                (33, 45),
-                (35, 45),
-                (44, 45),
-                (46, 45),
-            ],
-        ),
-        (
-            "walk_south",
+            "read_sit_start_south",
             1,
-            &[(38, 34), (41, 34), (37, 35), (42, 35), (33, 46), (44, 45)],
+            &[(38, 34), (41, 34), (37, 35), (42, 35), (34, 45), (45, 45)],
         ),
         (
-            "walk_south",
+            "read_sit_start_south",
             2,
-            &[
-                (38, 33),
-                (41, 33),
-                (37, 34),
-                (42, 34),
-                (33, 45),
-                (35, 45),
-                (44, 45),
-                (46, 45),
-            ],
+            &[(38, 34), (41, 34), (37, 35), (42, 35)],
         ),
         (
-            "walk_south",
-            3,
-            &[(38, 34), (41, 34), (37, 35), (42, 35), (35, 45), (46, 46)],
-        ),
-        (
-            "walk_east",
+            "read_sit_loop_south",
             0,
-            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (34, 45)],
+            &[(39, 33), (42, 33), (38, 34), (43, 34)],
         ),
         (
-            "walk_east",
+            "read_sit_loop_south",
             1,
-            &[
-                (39, 34),
-                (42, 34),
-                (38, 35),
-                (43, 35),
-                (37, 44),
-                (33, 45),
-                (36, 45),
-                (44, 45),
-                (46, 45),
-            ],
+            &[(38, 34), (41, 34), (37, 35), (42, 35)],
         ),
         (
-            "walk_east",
+            "read_sit_loop_south",
             2,
-            &[(39, 33), (42, 33), (38, 34), (43, 34), (37, 44), (34, 45)],
+            &[(37, 33), (40, 33), (36, 34), (41, 34)],
         ),
         (
-            "walk_east",
+            "read_sit_loop_south",
             3,
-            &[(39, 34), (42, 34), (38, 35), (43, 35), (35, 46)],
+            &[(38, 34), (41, 34), (37, 35), (42, 35)],
+        ),
+        (
+            "read_sit_end_south",
+            0,
+            &[(38, 34), (41, 34), (37, 35), (42, 35)],
+        ),
+        (
+            "read_sit_end_south",
+            1,
+            &[(38, 34), (41, 34), (37, 35), (42, 35), (34, 45), (45, 45)],
+        ),
+        (
+            "read_sit_end_south",
+            2,
+            &[(38, 33), (41, 33), (37, 34), (42, 34)],
         ),
     ];
     // Zero-based frame numbers and frame-local coordinates.
     let landmarks = [
-        ("idle_north", 0, 33, 45, 0xBC8B43, true), // rear hand edge
-        ("idle_north", 0, 33, 47, 0x763F21, true), // fingers
-        ("idle_north", 0, 37, 52, 0xBC8B43, true), // heel above sandal sole
-        ("idle_north", 0, 37, 51, 0xD6CDF4, false), // sandal strap
-        ("idle_north", 0, 39, 42, 0x9E77B3, false), // hair over back
-        ("idle_south", 0, 38, 33, 0xE3BF7F, false), // circlet corner
-        ("idle_south", 0, 40, 33, 0xD264AF, false), // Summer gemstone
-        ("idle_south", 0, 39, 36, 0xE3BF7F, true), // nose between eyes
-        ("idle_south", 0, 36, 42, 0xBC8B43, true), // bare shoulder
-        ("idle_south", 0, 36, 43, 0xEFD89A, true), // bare upper arm
-        ("idle_south", 0, 36, 44, 0x763F21, true), // exposed underarm shadow
-        ("idle_south", 0, 43, 44, 0x763F21, true), // opposite underarm shadow
-        ("idle_south", 0, 39, 42, 0xE3BF7F, true), // neckline
-        ("idle_south", 0, 39, 44, 0xE3BF7F, true), // midriff above navel
-        ("idle_south", 0, 38, 42, 0xD6CDF4, false), // blouse highlight
-        ("idle_south", 0, 33, 45, 0xBC8B43, false), // bracer below gemstone
-        ("idle_south", 0, 34, 44, 0xD264AF, false), // bracer gemstone
-        ("idle_south", 0, 42, 48, 0xBC8B43, true), // exposed leg through slit
-        ("idle_south", 0, 42, 49, 0x9793DC, false), // sandal wrap within slit
-        ("idle_south", 0, 42, 50, 0xE3BF7F, true), // shin below wrap
-        ("idle_south", 0, 37, 52, 0xBC8B43, true), // bare foot
-        ("idle_east", 0, 37, 42, 0xBC8B43, true),  // side shoulder
-        ("idle_east", 0, 37, 44, 0xBC8B43, false), // cuff corner
-        ("idle_east", 0, 38, 49, 0xBC8B43, true),  // leg above wrap
-        ("idle_east", 0, 38, 50, 0x9793DC, false), // side sandal wrap
-        ("idle_east", 0, 38, 51, 0xBC8B43, true),  // skin between sandal straps
-        ("idle_east", 0, 38, 52, 0x9793DC, false), // lower sandal strap
-        ("walk_north", 1, 35, 44, 0xE3BF7F, true), // swinging upper arm
-        ("walk_north", 1, 37, 51, 0x763F21, true), // raised heel shadow
-        ("walk_north", 3, 37, 54, 0xE3BF7F, true), // stepping heel
-        ("walk_south", 1, 36, 45, 0xBC8B43, true), // moving underarm
-        ("walk_south", 1, 44, 45, 0xE3BF7F, false), // turned bracer
-        ("walk_south", 1, 45, 46, 0xE3BF7F, true), // hand beneath bracer
-        ("walk_south", 1, 37, 52, 0xE3BF7F, true), // stepping foot
-        ("walk_south", 3, 35, 45, 0xE3BF7F, false), // opposite turned bracer
-        ("walk_south", 3, 34, 46, 0xE3BF7F, true), // opposite hand
-        ("walk_south", 3, 41, 49, 0xBC8B43, true), // knee in moving slit
-        ("walk_east", 1, 36, 43, 0xE3BF7F, true),  // moving bare shoulder
-        ("walk_east", 1, 36, 45, 0xBC8B43, false), // swinging cuff corner
-        ("walk_east", 1, 44, 45, 0xBC8B43, false), // far cuff corner
-        ("walk_east", 1, 37, 50, 0x763F21, true),  // raised foot shadow
-        ("walk_east", 3, 35, 46, 0xBC8B43, false), // backward cuff edge
-        ("walk_east", 3, 38, 51, 0xBC8B43, true),  // ankle beside strap
-        ("walk_east", 3, 43, 52, 0xD6CDF4, false), // opposite sandal strap
+        ("read_sit_start_south", 0, 38, 33, 0xE3BF7F, false), // circlet corner
+        ("read_sit_start_south", 0, 36, 42, 0xBC8B43, true),  // bare shoulder
+        ("read_sit_start_south", 0, 39, 42, 0xE3BF7F, true),  // chest through blouse
+        ("read_sit_start_south", 0, 38, 42, 0xD6CDF4, false), // blouse edge
+        ("read_sit_start_south", 0, 33, 46, 0xE3BF7F, true),  // hand below coupled bracer
+        ("read_sit_start_south", 0, 34, 47, 0x763F21, true),  // seated fingertips
+        ("read_sit_start_south", 0, 42, 47, 0xE3BF7F, true),  // shin through skirt slit
+        ("read_sit_start_south", 0, 42, 46, 0x9793DC, false), // sandal strap through slit
+        ("read_sit_start_south", 1, 34, 45, 0xBC8B43, false), // separable bracer beside book
+        ("read_sit_start_south", 1, 45, 45, 0xBC8B43, false), // opposite bracer beside book
+        ("read_sit_start_south", 1, 34, 46, 0xEFD89A, true),  // hand under bracer
+        ("read_sit_start_south", 1, 35, 47, 0x763F21, true),  // hand detail
+        ("read_sit_start_south", 1, 38, 41, 0xC9AF9C, false), // warm page shadow
+        ("read_sit_start_south", 1, 39, 41, 0xF6E4D7, false), // pale page
+        ("read_sit_start_south", 1, 37, 41, 0xBF54A3, false), // book binding
+        ("read_sit_start_south", 2, 39, 41, 0xBC8B43, true),  // neck over opening book
+        ("read_sit_start_south", 2, 34, 46, 0xEFD89A, true),  // fingers beside open cover
+        ("read_sit_loop_south", 0, 39, 33, 0xE3BF7F, false),  // tilted circlet
+        ("read_sit_loop_south", 0, 39, 42, 0xE3BF7F, true),   // chest above pages
+        ("read_sit_loop_south", 0, 43, 42, 0xBC8B43, true),   // shoulder peeking past book
+        ("read_sit_loop_south", 0, 32, 42, 0xF6E4D7, false),  // raised page corner
+        ("read_sit_loop_south", 1, 39, 43, 0xE3BF7F, true),   // chest with book level
+        ("read_sit_loop_south", 2, 41, 38, 0xBC8B43, true),   // opposite tilted cheek
+        ("read_sit_loop_south", 2, 36, 42, 0xBC8B43, true),   // opposite shoulder
+        ("read_sit_loop_south", 2, 46, 44, 0xF174B3, false),  // pink book cover
+        ("read_sit_end_south", 0, 35, 47, 0x763F21, true),    // fingers while closing book
+        ("read_sit_end_south", 1, 44, 47, 0x763F21, true),    // opposite fingers
+        ("read_sit_end_south", 1, 45, 45, 0xBC8B43, false),   // returned bracer edge
+        ("read_sit_end_south", 2, 39, 44, 0xE3BF7F, true),    // visible midriff after book closes
+        ("read_sit_end_south", 2, 41, 45, 0xE3BF7F, true),    // midriff above skirt
+        // Known art exceptions: these two bracer corners share a component
+        // with the hand. Keeping full skin coverage also changes the corners.
+        ("read_sit_start_south", 0, 34, 45, 0xE3BF7F, true),
+        ("read_sit_end_south", 2, 34, 45, 0xE3BF7F, true),
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -197,7 +142,7 @@ fn juniper_summer_world_cover_skin_and_preserve_reviewed_materials() {
         let mut changed = 0;
 
         for (name, counts) in cases {
-            let prefix = "summer";
+            let prefix = "specialanimation_summer";
             let asset = format!(
                 "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_{prefix}_{name}.png"
             );
@@ -239,20 +184,19 @@ fn juniper_summer_world_cover_skin_and_preserve_reviewed_materials() {
                 }
             }
         }
-        assert_eq!(changed, 641);
+        assert_eq!(changed, 320);
 
-        for r in &profile["regions"].as_array().unwrap()[..173] {
+        for r in &profile["regions"].as_array().unwrap()[..195] {
             let asset = r["asset"].as_str().unwrap();
             for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
-                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-march-spring-injured-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
+                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-reina-juniper-march-summer-standard-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
             }
         }
     }
 
-    // Practical controls: dropping an finger shadow component, or merging groups
+    // Practical controls: dropping a finger shadow component, or merging groups
     // and allowing skin selection to cross into a same-shade gold bracer.
-    let asset =
-        "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_summer_idle_south.png";
+    let asset = "assets/animations/NPCs/Juniper/Sprites/Summer/spr_npc_juniper_specialanimation_summer_read_sit_start_south.png";
     let source = temp.path().join("controls-source");
     fs::create_dir_all(source.join(asset).parent().unwrap()).unwrap();
     for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
@@ -310,21 +254,21 @@ fn juniper_summer_world_cover_skin_and_preserve_reviewed_materials() {
     missing["seeds"]
         .as_array_mut()
         .unwrap()
-        .retain(|s| *s != json!([33, 47]));
+        .retain(|s| *s != json!([115, 47]));
     let omitted = apply_control(
         "missing-finger-shadow",
         missing,
         map.clone(),
         profile["color_groups"].clone(),
     );
-    assert_eq!(omitted.get_pixel(33, 47).0, rgba(0x763F21));
-    assert_ne!(omitted.get_pixel(33, 47), correct.get_pixel(33, 47));
+    assert_eq!(omitted.get_pixel(115, 47).0, rgba(0x763F21));
+    assert_ne!(omitted.get_pixel(115, 47), correct.get_pixel(115, 47));
     let spilled = apply_control(
         "merged-groups",
         region,
         map,
         json!([profile["source_colors"]]),
     );
-    assert_eq!(correct.get_pixel(33, 45).0, rgba(0xBC8B43));
-    assert_eq!(spilled.get_pixel(33, 45).0, rgba(0x6687AD));
+    assert_eq!(correct.get_pixel(114, 45).0, rgba(0xBC8B43));
+    assert_eq!(spilled.get_pixel(114, 45).0, rgba(0x6687AD));
 }
