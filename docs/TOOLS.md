@@ -184,7 +184,8 @@ Autumn sprite folders. [March’s Autumn poses](development/march-autumn-poses.m
 add three standing strips plus the native West mirror. [March’s Autumn injured batch](development/march-autumn-injured.md)
 adds the final fourteen strips, completing his Autumn folder. The [Winter pilots](development/reina-juniper-march-winter.md)
 add six idle/walk strips each. The [Winter seated and blinking batch](development/reina-juniper-march-winter-actions.md)
-adds eleven strips each for blinking, sitting, eating and drinking. Totals are now 228, 256 and 342,
+adds eleven strips each for blinking, sitting, eating and drinking. The [next Winter batch](development/reina-juniper-march-winter-standard.md)
+adds general actions, sleeping and kissing. Totals are now 233, 261 and 347,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

@@ -1109,7 +1109,12 @@
       "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_winter_eat_south.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_winter_sit_east.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_winter_sit_north.png": "Default",
-      "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_winter_sit_south.png": "Default"
+      "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_winter_sit_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_winter_action_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_winter_action_north.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_winter_action_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_winter_kiss_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_winter_sleep_east.png": "Default"
     },
     "hotkey": "HOME",
     "id": "reina",
@@ -1372,7 +1377,12 @@
       "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_eat_south.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_sit_east.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_sit_north.png": "Default",
-      "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_sit_south.png": "Default"
+      "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_sit_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_action_east.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_action_north.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_action_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_kiss_east.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_sleep_east.png": "Default"
     },
     "hotkey": "PAGE_DOWN",
     "id": "juniper",
@@ -2118,7 +2128,12 @@
       "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_winter_eat_south.png": "Default",
       "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_winter_sit_east.png": "Default",
       "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_winter_sit_north.png": "Default",
-      "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_winter_sit_south.png": "Default"
+      "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_winter_sit_south.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_winter_action_east.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_winter_action_north.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_winter_action_south.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_winter_kiss_east.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_winter_sleep_east.png": "Default"
     },
     "hotkey": "U",
     "id": "march",
