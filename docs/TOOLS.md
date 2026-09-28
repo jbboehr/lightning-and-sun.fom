@@ -183,7 +183,8 @@ adds Reina's chopping/polishing and Juniper's magic/gestures, completing their
 Autumn sprite folders. [March’s Autumn poses](development/march-autumn-poses.md)
 add three standing strips plus the native West mirror. [March’s Autumn injured batch](development/march-autumn-injured.md)
 adds the final fourteen strips, completing his Autumn folder. The [Winter pilots](development/reina-juniper-march-winter.md)
-add six idle/walk strips each. Totals are now 217, 245 and 331,
+add six idle/walk strips each. The [Winter seated and blinking batch](development/reina-juniper-march-winter-actions.md)
+adds eleven strips each for blinking, sitting, eating and drinking. Totals are now 228, 256 and 342,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
