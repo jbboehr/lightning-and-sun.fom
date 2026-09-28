@@ -202,7 +202,8 @@ are covered. This includes Reina's kitchen work and writing, Juniper's spell
 casting and gestures, and March's smithing, standing poses and injured
 animations: idle, walking, seated poses, blinking and action.
 Their Winter idle, walking, blinking, sitting, eating, drinking, general actions,
-sleeping and kissing sprites are also covered in their native directions.
+sleeping, kissing and seated reading sprites are also covered in their native
+directions.
 Home, Page Down and U cycle their palettes respectively.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth

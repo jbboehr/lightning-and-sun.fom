@@ -185,7 +185,8 @@ add three standing strips plus the native West mirror. [March’s Autumn injured
 adds the final fourteen strips, completing his Autumn folder. The [Winter pilots](development/reina-juniper-march-winter.md)
 add six idle/walk strips each. The [Winter seated and blinking batch](development/reina-juniper-march-winter-actions.md)
 adds eleven strips each for blinking, sitting, eating and drinking. The [next Winter batch](development/reina-juniper-march-winter-standard.md)
-adds general actions, sleeping and kissing. Totals are now 233, 261 and 347,
+adds general actions, sleeping and kissing. [Winter seated reading](development/reina-juniper-march-winter-reading.md)
+adds each character's start, loop and end strips. Totals are now 236, 264 and 350,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

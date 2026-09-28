@@ -2,21 +2,18 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/juniper-winter-reading-study and the retained Autumn-injured Juniper bundle"]
-fn juniper_winter_world_cover_skin_and_preserve_reviewed_materials() {
+#[ignore = "requires extracted/juniper-winter-reading-study and the retained Winter-standard Juniper bundle"]
+fn juniper_winter_reading_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/juniper-winter-reading-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/juniper-world-trial.json"));
-    let cases: [(&str, &[usize]); 6] = [
-        ("idle_north", &[0]),
-        ("idle_south", &[22]),
-        ("idle_east", &[19]),
-        ("walk_north", &[0, 0, 0, 0]),
-        ("walk_south", &[22, 21, 22, 21]),
-        ("walk_east", &[19, 19, 19, 19]),
+    let cases: [(&str, &[usize]); 3] = [
+        ("read_sit_start_south", &[22, 16, 22]),
+        ("read_sit_loop_south", &[18, 26, 18, 26]),
+        ("read_sit_end_south", &[26, 12, 22]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let skin = [
@@ -25,9 +22,8 @@ fn juniper_winter_world_cover_skin_and_preserve_reviewed_materials() {
     // Literal source-material exclusions: circlet and bracers.
     type MaterialCase<'a> = (&'a str, u32, &'a [(u32, u32)]);
     let clothing: &[MaterialCase<'_>] = &[
-        ("idle_north", 0, &[(33, 45), (46, 45)]),
         (
-            "idle_south",
+            "read_sit_start_south",
             0,
             &[
                 (38, 33),
@@ -36,210 +32,134 @@ fn juniper_winter_world_cover_skin_and_preserve_reviewed_materials() {
                 (42, 34),
                 (35, 40),
                 (44, 40),
-                (33, 45),
-                (46, 45),
-            ],
-        ),
-        (
-            "idle_east",
-            0,
-            &[
-                (39, 33),
-                (42, 33),
-                (38, 34),
-                (43, 34),
-                (36, 40),
-                (44, 40),
-                (36, 43),
                 (34, 45),
-                (44, 45),
-            ],
-        ),
-        ("walk_north", 0, &[(33, 45), (46, 45)]),
-        ("walk_north", 1, &[(33, 46)]),
-        ("walk_north", 2, &[(33, 45), (46, 45)]),
-        ("walk_north", 3, &[(46, 46)]),
-        (
-            "walk_south",
-            0,
-            &[
-                (38, 33),
-                (41, 33),
-                (37, 34),
-                (42, 34),
-                (35, 40),
-                (44, 40),
-                (33, 45),
-                (46, 45),
-            ],
-        ),
-        (
-            "walk_south",
-            1,
-            &[
-                (38, 34),
-                (41, 34),
-                (37, 35),
-                (42, 35),
-                (35, 41),
-                (44, 41),
-                (33, 46),
-                (44, 45),
-                (44, 46),
-                (45, 46),
-            ],
-        ),
-        (
-            "walk_south",
-            2,
-            &[
-                (38, 33),
-                (41, 33),
-                (37, 34),
-                (42, 34),
-                (35, 40),
-                (44, 40),
-                (33, 45),
-                (46, 45),
-            ],
-        ),
-        (
-            "walk_south",
-            3,
-            &[
-                (38, 34),
-                (41, 34),
-                (37, 35),
-                (42, 35),
-                (35, 41),
-                (44, 41),
-                (35, 45),
-                (34, 46),
-                (35, 46),
-                (46, 46),
-            ],
-        ),
-        (
-            "walk_east",
-            0,
-            &[
-                (39, 33),
-                (42, 33),
-                (38, 34),
-                (43, 34),
-                (36, 40),
-                (44, 40),
-                (36, 43),
-                (34, 45),
-                (44, 45),
-            ],
-        ),
-        (
-            "walk_east",
-            1,
-            &[
-                (39, 34),
-                (42, 34),
-                (38, 35),
-                (43, 35),
-                (36, 41),
-                (44, 41),
-                (33, 45),
-                (35, 45),
-                (44, 45),
                 (45, 45),
-                (46, 45),
             ],
         ),
         (
-            "walk_east",
+            "read_sit_start_south",
+            1,
+            &[
+                (38, 34),
+                (41, 34),
+                (37, 35),
+                (42, 35),
+                (35, 41),
+                (44, 41),
+                (34, 45),
+                (45, 45),
+            ],
+        ),
+        (
+            "read_sit_start_south",
+            2,
+            &[(38, 34), (41, 34), (37, 35), (42, 35)],
+        ),
+        (
+            "read_sit_loop_south",
+            0,
+            &[(39, 33), (42, 33), (38, 34), (43, 34), (35, 40), (44, 40)],
+        ),
+        (
+            "read_sit_loop_south",
+            1,
+            &[(38, 34), (41, 34), (37, 35), (42, 35), (35, 41), (44, 41)],
+        ),
+        (
+            "read_sit_loop_south",
+            2,
+            &[(37, 33), (40, 33), (36, 34), (41, 34), (35, 40), (44, 40)],
+        ),
+        (
+            "read_sit_loop_south",
+            3,
+            &[(38, 34), (41, 34), (37, 35), (42, 35), (35, 41), (44, 41)],
+        ),
+        (
+            "read_sit_end_south",
+            0,
+            &[(38, 34), (41, 34), (37, 35), (42, 35)],
+        ),
+        (
+            "read_sit_end_south",
+            1,
+            &[
+                (38, 34),
+                (41, 34),
+                (37, 35),
+                (42, 35),
+                (35, 41),
+                (44, 41),
+                (34, 45),
+                (45, 45),
+            ],
+        ),
+        (
+            "read_sit_end_south",
             2,
             &[
-                (39, 33),
-                (42, 33),
-                (38, 34),
-                (43, 34),
-                (36, 40),
-                (44, 40),
-                (36, 43),
-                (34, 45),
-                (44, 45),
-            ],
-        ),
-        (
-            "walk_east",
-            3,
-            &[
-                (39, 34),
+                (38, 33),
+                (41, 33),
+                (37, 34),
                 (42, 34),
-                (38, 35),
-                (43, 35),
-                (36, 41),
-                (44, 41),
-                (35, 46),
-                (44, 46),
+                (35, 40),
+                (44, 40),
+                (34, 45),
+                (45, 45),
             ],
         ),
     ];
     // Zero-based frame numbers and frame-local coordinates.
     let landmarks = [
-        ("idle_north", 0, 33, 45, 0xBC8B43, false), // cuff edge, no exposed skin
-        ("idle_north", 0, 46, 45, 0xBC8B43, false), // opposite cuff edge
-        ("idle_north", 0, 32, 46, 0xDD426C, false), // glove
-        ("idle_south", 0, 38, 33, 0xE3BF7F, false), // circlet corner
-        ("idle_south", 0, 37, 34, 0xBC8B43, false), // circlet border
-        ("idle_south", 0, 40, 33, 0x3CB9D8, false), // blue circlet gem
-        ("idle_south", 0, 37, 36, 0xC2B9BE, false), // eye detail
-        ("idle_south", 0, 35, 36, 0xEFD89A, true),  // ear beside hair
-        ("idle_south", 0, 39, 36, 0xE3BF7F, true),  // nose
-        ("idle_south", 0, 37, 39, 0x763F21, true),  // cheek shadow
-        ("idle_south", 0, 39, 40, 0xBC8B43, true),  // chin
-        ("idle_south", 0, 35, 40, 0xBC8B43, false), // shoulder decoration
-        ("idle_south", 0, 44, 40, 0xBC8B43, false), // opposite shoulder decoration
-        ("idle_south", 0, 39, 42, 0x645049, false), // warm bodice detail
-        ("idle_south", 0, 39, 43, 0x836C64, false), // warm bodice highlight
-        ("idle_south", 0, 37, 47, 0x645049, false), // leg clothing
-        ("idle_south", 0, 37, 48, 0x836C64, false), // leg clothing highlight
-        ("idle_south", 0, 33, 45, 0xBC8B43, false), // cuff border
-        ("idle_south", 0, 33, 47, 0x60285E, false), // glove shadow
-        ("idle_east", 0, 39, 33, 0xE3BF7F, false),  // circlet corner
-        ("idle_east", 0, 38, 34, 0xBC8B43, false),  // circlet border
-        ("idle_east", 0, 36, 36, 0xEFD89A, true),   // ear
-        ("idle_east", 0, 43, 36, 0xA59DA2, false),  // far eye
-        ("idle_east", 0, 43, 38, 0xE3BF7F, true),   // face at silhouette
-        ("idle_east", 0, 38, 39, 0x763F21, true),   // jaw shadow
-        ("idle_east", 0, 36, 40, 0xBC8B43, false),  // shoulder decoration
-        ("idle_east", 0, 36, 43, 0xBC8B43, false),  // upper cuff border
-        ("idle_east", 0, 44, 45, 0xBC8B43, false),  // opposite cuff border
-        ("walk_north", 0, 33, 45, 0xBC8B43, false), // near cuff
-        ("walk_north", 1, 33, 46, 0xBC8B43, false), // moving near cuff
-        ("walk_north", 2, 46, 45, 0xBC8B43, false), // far cuff
-        ("walk_north", 3, 46, 46, 0xBC8B43, false), // moving far cuff
-        ("walk_south", 0, 35, 36, 0xEFD89A, true),  // ear
-        ("walk_south", 0, 35, 40, 0xBC8B43, false), // shoulder trim
-        ("walk_south", 1, 35, 37, 0xEFD89A, true),  // moving ear
-        ("walk_south", 1, 42, 40, 0x763F21, true),  // moving cheek shadow
-        ("walk_south", 1, 35, 41, 0xBC8B43, false), // shifted shoulder trim
-        ("walk_south", 1, 44, 45, 0xBC8B43, false), // raised cuff corner
-        ("walk_south", 1, 44, 46, 0xBC8B43, false), // raised cuff underside
-        ("walk_south", 2, 44, 36, 0xEFD89A, true),  // opposite ear
-        ("walk_south", 2, 44, 40, 0xBC8B43, false), // opposite shoulder trim
-        ("walk_south", 3, 37, 40, 0x763F21, true),  // opposite cheek shadow
-        ("walk_south", 3, 35, 45, 0xBC8B43, false), // opposite raised cuff
-        ("walk_south", 3, 34, 46, 0xBC8B43, false), // opposite cuff underside
-        ("walk_east", 0, 38, 39, 0x763F21, true),   // jaw
-        ("walk_east", 0, 36, 43, 0xBC8B43, false),  // upper cuff
-        ("walk_east", 1, 36, 37, 0xEFD89A, true),   // moving ear
-        ("walk_east", 1, 38, 40, 0x763F21, true),   // moving jaw
-        ("walk_east", 1, 44, 45, 0x763F21, false),  // same dark shade in cuff
-        ("walk_east", 1, 46, 45, 0x763F21, false),  // opposite cuff corner
-        ("walk_east", 1, 45, 45, 0xBC8B43, false),  // cuff between dark corners
-        ("walk_east", 1, 35, 45, 0xBC8B43, false),  // near cuff corner
-        ("walk_east", 2, 43, 38, 0xE3BF7F, true),   // outer face
-        ("walk_east", 2, 44, 45, 0xBC8B43, false),  // far cuff
-        ("walk_east", 3, 36, 37, 0xEFD89A, true),   // final ear
-        ("walk_east", 3, 35, 46, 0xBC8B43, false),  // final near cuff
-        ("walk_east", 3, 44, 46, 0xBC8B43, false),  // final far cuff
+        ("read_sit_start_south", 0, 38, 33, 0xE3BF7F, false), // circlet corner
+        ("read_sit_start_south", 0, 40, 33, 0x3CB9D8, false), // cyan gemstone
+        ("read_sit_start_south", 0, 35, 36, 0xEFD89A, true),  // exposed ear
+        ("read_sit_start_south", 0, 37, 39, 0x763F21, true),  // cheek shadow
+        ("read_sit_start_south", 0, 39, 40, 0xBC8B43, true),  // chin
+        ("read_sit_start_south", 0, 35, 40, 0xBC8B43, false), // shoulder decoration
+        ("read_sit_start_south", 0, 34, 45, 0xBC8B43, false), // cuff above glove
+        ("read_sit_start_south", 0, 34, 46, 0x8A2C5F, false), // covered hand
+        ("read_sit_start_south", 0, 39, 42, 0x645049, false), // warm bodice
+        ("read_sit_start_south", 1, 37, 36, 0xE3BF7F, true),  // skin above closed eye
+        ("read_sit_start_south", 1, 37, 37, 0xFC639B, false), // cosmetics
+        ("read_sit_start_south", 1, 38, 39, 0xE3BF7F, true),  // cheek above raised book
+        ("read_sit_start_south", 1, 38, 41, 0xC9AF9C, false), // warm page shadow
+        ("read_sit_start_south", 1, 39, 41, 0xF6E4D7, false), // page highlight
+        ("read_sit_start_south", 1, 37, 43, 0xBF54A3, false), // book cover
+        ("read_sit_start_south", 1, 45, 45, 0xBC8B43, false), // opposite cuff
+        ("read_sit_start_south", 2, 35, 40, 0xF6E4D7, false), // raised page beside face
+        ("read_sit_start_south", 2, 37, 40, 0x763F21, true),  // jaw beside page
+        ("read_sit_start_south", 2, 39, 41, 0xBC8B43, true),  // chin above pages
+        ("read_sit_start_south", 2, 45, 46, 0x8A2C5F, false), // small glove beyond book
+        ("read_sit_loop_south", 0, 39, 33, 0xE3BF7F, false),  // turned circlet corner
+        ("read_sit_loop_south", 0, 36, 36, 0xEFD89A, true),   // turned ear
+        ("read_sit_loop_south", 0, 38, 39, 0x763F21, true),   // turned jaw
+        ("read_sit_loop_south", 0, 40, 40, 0xBC8B43, true),   // small chin beside hair
+        ("read_sit_loop_south", 0, 35, 40, 0xBC8B43, false),  // shoulder decoration
+        ("read_sit_loop_south", 0, 32, 42, 0xF6E4D7, false),  // wide left page
+        ("read_sit_loop_south", 0, 38, 46, 0xC9AF9C, false),  // page fold
+        ("read_sit_loop_south", 1, 37, 36, 0xE3BF7F, true),   // blink skin
+        ("read_sit_loop_south", 1, 37, 37, 0xFC639B, false),  // blink cosmetics
+        ("read_sit_loop_south", 1, 39, 41, 0xBC8B43, true),   // chin above book
+        ("read_sit_loop_south", 1, 44, 41, 0xBC8B43, false),  // shoulder corner
+        ("read_sit_loop_south", 1, 39, 46, 0xF6E4D7, false),  // central page highlight
+        ("read_sit_loop_south", 2, 43, 36, 0xEFD89A, true),   // opposite exposed ear
+        ("read_sit_loop_south", 2, 41, 39, 0x763F21, true),   // opposite cheek shadow
+        ("read_sit_loop_south", 2, 40, 33, 0xE3BF7F, false),  // opposite circlet edge
+        ("read_sit_loop_south", 2, 45, 42, 0xC9AF9C, false),  // lifted right page
+        ("read_sit_loop_south", 3, 39, 40, 0xE3BF7F, true),   // returning lower face
+        ("read_sit_loop_south", 3, 40, 47, 0xC9AF9C, false),  // returning page fold
+        ("read_sit_end_south", 0, 37, 36, 0xE3BF7F, true),    // skin above closed eye
+        ("read_sit_end_south", 0, 35, 40, 0xF6E4D7, false),   // closing page beside face
+        ("read_sit_end_south", 0, 45, 46, 0x8A2C5F, false),   // covered opposite hand
+        ("read_sit_end_south", 1, 37, 36, 0xFC639B, false),   // cosmetics above open eye
+        ("read_sit_end_south", 1, 35, 37, 0xEFD89A, true),    // ear above book
+        ("read_sit_end_south", 1, 45, 45, 0xBC8B43, false),   // closing cuff corner
+        ("read_sit_end_south", 1, 38, 47, 0x9F3E7B, false),   // book binding
+        ("read_sit_end_south", 2, 34, 45, 0xBC8B43, false),   // restored cuff
+        ("read_sit_end_south", 2, 33, 46, 0x8A2C5F, false),   // restored glove
+        ("read_sit_end_south", 2, 37, 39, 0x763F21, true),    // restored jaw
+        ("read_sit_end_south", 2, 39, 43, 0x836C64, false),   // warm clothing
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -273,28 +193,11 @@ fn juniper_winter_world_cover_skin_and_preserve_reviewed_materials() {
             rgba(u32::from_str_radix(&preset["colors"][i].as_str().unwrap()[1..7], 16).unwrap())
         });
         let mut changed = 0;
-        for name in ["idle_north", "walk_north"] {
-            let asset = format!(
-                "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_{name}.png"
-            );
-            assert_eq!(
-                fs::read(original.join(&asset)).unwrap(),
-                fs::read(output.join(&asset)).unwrap(),
-                "covered North art must remain byte-identical"
-            );
-            let region = profile["regions"]
-                .as_array()
-                .unwrap()
-                .iter()
-                .find(|r| r["asset"] == asset)
-                .unwrap();
-            assert_eq!(region["seeds"], json!([]));
-        }
 
         for (name, counts) in cases {
             let prefix = "winter";
             let asset = format!(
-                "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_{prefix}_{name}.png"
+                "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_{prefix}_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -334,19 +237,18 @@ fn juniper_winter_world_cover_skin_and_preserve_reviewed_materials() {
                 }
             }
         }
-        assert_eq!(changed, 203);
+        assert_eq!(changed, 208);
 
-        for r in &profile["regions"].as_array().unwrap()[..239] {
+        for r in &profile["regions"].as_array().unwrap()[..261] {
             let asset = r["asset"].as_str().unwrap();
             for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
-                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-march-autumn-injured-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
+                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-reina-juniper-march-winter-standard-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
             }
         }
     }
 
     // Practical controls: missing cheek/ear components and unrestricted color matching.
-    let asset =
-        "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_winter_idle_south.png";
+    let asset = "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_winter_read_sit_start_south.png";
     let source = temp.path().join("controls-source");
     fs::create_dir_all(source.join(asset).parent().unwrap()).unwrap();
     for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
@@ -427,7 +329,7 @@ fn juniper_winter_world_cover_skin_and_preserve_reviewed_materials() {
     for (point, source, target) in [
         ([38, 33], 0xE3BF7F, 0x7F9FBD), // circlet
         ([35, 40], 0xBC8B43, 0x6687AD), // shoulder decoration
-        ([33, 45], 0xBC8B43, 0x6687AD), // glove cuff
+        ([34, 45], 0xBC8B43, 0x6687AD), // glove cuff
     ] {
         assert_eq!(correct.get_pixel(point[0], point[1]).0, rgba(source));
         assert_eq!(spilled.get_pixel(point[0], point[1]).0, rgba(target));
