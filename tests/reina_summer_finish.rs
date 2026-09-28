@@ -2,10 +2,10 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/reina-autumn-specials-study and the local accepted Reina world baseline"]
+#[ignore = "requires extracted/reina-autumn-finish-study and the local accepted Reina world baseline"]
 fn reina_summer_finish_covers_skin_and_preserves_kitchen_tools_and_outfit() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/reina-autumn-specials-study");
+    let original = root.join("extracted/reina-autumn-finish-study");
     let baseline = root
         .join("generated/characters-reina-juniper-march-summer-specials-trial/characters/reina");
     let set = std::env::var_os("FOM_REINA_SUMMER_FINISH_PRESETS")

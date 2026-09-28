@@ -49,10 +49,10 @@ fn juniper_drink_alias_appends_a_midtone_role_without_changing_prior_roles() {
 }
 
 #[test]
-#[ignore = "requires extracted/juniper-autumn-specials-study and the retained first-world Juniper bundle"]
+#[ignore = "requires extracted/juniper-autumn-finish-study and the retained first-world Juniper bundle"]
 fn juniper_spring_actions_cover_raised_arms_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/juniper-autumn-specials-study");
+    let original = root.join("extracted/juniper-autumn-finish-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);

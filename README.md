@@ -205,7 +205,8 @@ Autumn idle, walking, blinking, sitting, eating and drinking sprites are include
 in their supported directions, along with general actions, sleeping, kissing
 and all three seated-reading phases. Reina's standing and seated writing,
 Juniper's laugh, and March's seated work, hammering and brow-wiping are included.
-Other Autumn actions remain original.
+Reina's chopping and polishing and Juniper's spell casting, hair flip and snooze
+complete both of their Autumn sprite folders. March's other Autumn actions remain original.
 Home, Page Down and U cycle their palettes respectively.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth

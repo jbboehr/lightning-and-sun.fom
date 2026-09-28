@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
-Ryis's 273, Reina's 207, Juniper's 234, Celine's 390, March's 308, Balor's 110,
+Ryis's 273, Reina's 211, Juniper's 239, Celine's 390, March's 308, Balor's 110,
 Valen's 92, Eiland's 78, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 12,932 variant strips from 3,233 sources. Caldarus's three
+variants per source give 12,968 variant strips from 3,242 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -201,6 +201,10 @@ The user approved this artwork for commit on 2026-09-27.
 The [Autumn special actions](reina-juniper-march-autumn-specials.md) add Reina's
 writing, Juniper's laugh and March's smithing: 44 source frames and seven native
 West hammer mirrors. The user approved this artwork for commit on 2026-09-27.
+The [Autumn completion batch](reina-juniper-autumn-finish.md) adds Reina's
+chopping and polishing and Juniper's spell casting, hair flip and snooze: nine
+strips, 51 source frames and nine native West mirrors. Both Autumn folders are
+complete. The user approved this artwork for commit on 2026-09-27.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -439,12 +443,12 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Reina's Autumn writing, Juniper's laugh and March's smithing.
-It is in `generated/characters-reina-juniper-march-autumn-specials-trial/package`.
-It is verified with MOMI in the isolated `tmp/world-autumn-specials-playtest` lab. It has no
+The latest combined package completes Reina and Juniper's Autumn sprite folders.
+It is in `generated/characters-reina-juniper-autumn-finish-trial/package`.
+It is verified with MOMI in the isolated `tmp/world-autumn-finish-playtest` lab. It has no
 preview helper and did not replace the desktop launcher. Use the
-[complete offline review](../../generated/reina-juniper-march-autumn-specials-preview/index.html)
-to inspect all 44 new source frames and seven native West hammer mirrors.
+[complete offline review](../../generated/reina-juniper-autumn-finish-preview/index.html)
+to inspect all 51 new source frames and nine native West polishing mirrors.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,
