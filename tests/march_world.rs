@@ -11,7 +11,7 @@ fn march_world_preserves_portrait_regions_and_palette_roles() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let old = read(root.join("palettes/profiles/march-portraits.json"));
     let world = read(root.join("palettes/profiles/march-world-trial.json"));
-    assert_eq!(world["regions"].as_array().unwrap().len(), 311);
+    assert_eq!(world["regions"].as_array().unwrap().len(), 325);
     assert_eq!(
         &world["regions"].as_array().unwrap()[..181],
         old["regions"].as_array().unwrap()
@@ -98,10 +98,10 @@ fn color(value: &Value) -> u32 {
 }
 
 #[test]
-#[ignore = "requires 311 local animations in extracted/march-autumn-poses-study and the accepted portrait output baseline"]
+#[ignore = "requires 325 local animations in extracted/march-autumn-injured-study and the accepted portrait output baseline"]
 fn march_world_skin_materials_and_existing_portraits_are_preserved() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/march-autumn-poses-study");
+    let original = root.join("extracted/march-autumn-injured-study");
     let baseline = root.join("generated/characters-world-wedding-finish-trial/characters/march");
     let profile_path = std::env::var_os("FOM_MARCH_WORLD_PROFILE")
         .map(std::path::PathBuf::from)

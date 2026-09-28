@@ -197,18 +197,10 @@ and Winter sprite folders are covered, including Celine's seasonal garden
 outfits and their reading, household and tool animations.
 Their complete Beach sprite folders are covered too, including swimming.
 Their complete Wedding sprite folders are also included.
-Reina, Juniper and March's complete Spring sprite folders are covered, including
-Reina's kitchen work, Juniper's spell casting and gestures, and March's smithing
-and injured animations. Their complete Summer sprite folders are also covered,
-including March's injured idle, walking, seated poses, blinking and action.
-Autumn idle, walking, blinking, sitting, eating and drinking sprites are included
-in their supported directions, along with general actions, sleeping, kissing
-and all three seated-reading phases. Reina's standing and seated writing,
-Juniper's laugh, and March's seated work, hammering and brow-wiping are included.
-Reina's chopping and polishing and Juniper's spell casting, hair flip and snooze
-complete both of their Autumn sprite folders. March's Autumn standing poses are
-also covered in North, South, East and mirrored West. His Autumn injured animations
-remain original.
+Reina, Juniper and March's complete Spring, Summer and Autumn sprite folders
+are covered. This includes Reina's kitchen work and writing, Juniper's spell
+casting and gestures, and March's smithing, standing poses and injured
+animations: idle, walking, seated poses, blinking and action.
 Home, Page Down and U cycle their palettes respectively.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth

@@ -10,7 +10,7 @@ fn read(path: impl AsRef<Path>) -> Value {
 fn march_summer_world_adds_six_pinned_regions_without_new_colors() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let p = read(root.join("palettes/profiles/march-world-trial.json"));
-    assert_eq!(p["regions"].as_array().unwrap().len(), 311);
+    assert_eq!(p["regions"].as_array().unwrap().len(), 325);
     assert_eq!(p["source_colors"].as_array().unwrap().len(), 16);
     assert_eq!(p["color_groups"].as_array().unwrap().len(), 7);
     let expected: Vec<_> = [
@@ -43,10 +43,10 @@ fn color(value: &Value) -> u32 {
 }
 
 #[test]
-#[ignore = "requires 311 local animations in extracted/march-autumn-poses-study and the accepted earlier output baseline"]
+#[ignore = "requires 325 local animations in extracted/march-autumn-injured-study and the accepted earlier output baseline"]
 fn march_summer_world_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/march-autumn-poses-study");
+    let original = root.join("extracted/march-autumn-injured-study");
     let baseline = root.join("generated/characters-march-spring-injured-trial/characters/march");
     let profile_path = std::env::var_os("FOM_MARCH_SUMMER_WORLD_PROFILE")
         .map(std::path::PathBuf::from)
