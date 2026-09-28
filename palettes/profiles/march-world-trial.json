@@ -1897,6 +1897,24 @@
       "seeds": [[33,41],[34,41],[45,41],[46,41]],
       "size": [80,80],
       "source_sha256": "01d199a4e72d1d269ada388cc730b0b953f96a05dbbb56b5912b07ea8274952e"
+    },
+    {
+      "asset": "assets/animations/NPCs/March/Sprites/Autumn/spr_npc_march_specialanimation_autumn_pose_east.png",
+      "seeds": [[36,36],[37,36],[40,36],[44,37],[37,38],[38,38],[39,38],[43,38],[39,39],[40,39],[40,40],[40,41],[40,42],[34,43],[44,43],[34,44],[36,44],[45,44],[35,45],[36,45],[44,45]],
+      "size": [80,80],
+      "source_sha256": "20fccf67bb1278854d92c67c45ec6a73e1051a6fe3c1b32f1267a9a41784c60b"
+    },
+    {
+      "asset": "assets/animations/NPCs/March/Sprites/Autumn/spr_npc_march_specialanimation_autumn_pose_north.png",
+      "seeds": [[33,43],[45,43],[33,44],[35,44],[44,44],[46,44],[34,45],[35,45],[44,45],[45,45]],
+      "size": [80,80],
+      "source_sha256": "2a79c882662bcc67cb61a99ed9e844a5db87adb30512fa2f851855aea8caedaf"
+    },
+    {
+      "asset": "assets/animations/NPCs/March/Sprites/Autumn/spr_npc_march_specialanimation_autumn_pose_south.png",
+      "seeds": [[35,36],[36,36],[39,36],[43,36],[44,36],[36,38],[37,38],[38,38],[41,38],[42,38],[43,38],[37,39],[38,39],[39,39],[41,39],[42,39],[39,40],[39,41],[39,42],[33,43],[45,43],[33,44],[35,44],[44,44],[46,44],[34,45],[35,45],[44,45],[45,45]],
+      "size": [80,80],
+      "source_sha256": "99bb4ffaf446fc589c1c5b3c685eee2ea7b0fbdc4203bed4976b15e06b620454"
     }
   ]
 }

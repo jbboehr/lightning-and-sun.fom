@@ -180,7 +180,8 @@ add actions, sleeping and kissing. The [Autumn reading batch](development/reina-
 adds all three seated-reading phases. The [Autumn special actions](development/reina-juniper-march-autumn-specials.md)
 add Reina's writing, Juniper's laugh and March's smithing. The [Autumn completion batch](development/reina-juniper-autumn-finish.md)
 adds Reina's chopping/polishing and Juniper's magic/gestures, completing their
-Autumn sprite folders. Totals are now 211, 239 and 308,
+Autumn sprite folders. [March’s Autumn poses](development/march-autumn-poses.md)
+add three standing strips plus the native West mirror. Totals are now 211, 239 and 311,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
