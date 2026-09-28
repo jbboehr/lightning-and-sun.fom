@@ -2,8 +2,8 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/juniper-winter-specials-study and the retained Winter-standard Juniper bundle"]
-fn juniper_winter_reading_cover_skin_and_preserve_reviewed_materials() {
+#[ignore = "requires extracted/juniper-winter-specials-study and the retained Winter-reading Juniper bundle"]
+fn juniper_winter_specials_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/juniper-winter-specials-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
@@ -11,9 +11,9 @@ fn juniper_winter_reading_cover_skin_and_preserve_reviewed_materials() {
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/juniper-world-trial.json"));
     let cases: [(&str, &[usize]); 3] = [
-        ("read_sit_start_south", &[22, 16, 22]),
-        ("read_sit_loop_south", &[18, 26, 18, 26]),
-        ("read_sit_end_south", &[26, 12, 22]),
+        ("laugh_start_south", &[26]),
+        ("laugh_loop_south", &[21, 17]),
+        ("laugh_end_south", &[21, 26]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let skin = [
@@ -23,21 +23,36 @@ fn juniper_winter_reading_cover_skin_and_preserve_reviewed_materials() {
     type MaterialCase<'a> = (&'a str, u32, &'a [(u32, u32)]);
     let clothing: &[MaterialCase<'_>] = &[
         (
-            "read_sit_start_south",
+            "laugh_start_south",
             0,
             &[
-                (38, 33),
-                (41, 33),
-                (37, 34),
-                (42, 34),
-                (35, 40),
-                (44, 40),
-                (34, 45),
-                (45, 45),
+                (38, 34),
+                (41, 34),
+                (37, 35),
+                (42, 35),
+                (35, 41),
+                (44, 41),
+                (35, 45),
+                (46, 46),
             ],
         ),
         (
-            "read_sit_start_south",
+            "laugh_loop_south",
+            0,
+            &[(38, 32), (41, 32), (37, 33), (42, 33), (44, 41), (46, 44)],
+        ),
+        (
+            "laugh_loop_south",
+            1,
+            &[(38, 32), (41, 32), (37, 33), (42, 33), (44, 40), (46, 43)],
+        ),
+        (
+            "laugh_end_south",
+            0,
+            &[(38, 32), (41, 32), (37, 33), (42, 33), (44, 41), (46, 44)],
+        ),
+        (
+            "laugh_end_south",
             1,
             &[
                 (38, 34),
@@ -46,120 +61,55 @@ fn juniper_winter_reading_cover_skin_and_preserve_reviewed_materials() {
                 (42, 35),
                 (35, 41),
                 (44, 41),
-                (34, 45),
-                (45, 45),
-            ],
-        ),
-        (
-            "read_sit_start_south",
-            2,
-            &[(38, 34), (41, 34), (37, 35), (42, 35)],
-        ),
-        (
-            "read_sit_loop_south",
-            0,
-            &[(39, 33), (42, 33), (38, 34), (43, 34), (35, 40), (44, 40)],
-        ),
-        (
-            "read_sit_loop_south",
-            1,
-            &[(38, 34), (41, 34), (37, 35), (42, 35), (35, 41), (44, 41)],
-        ),
-        (
-            "read_sit_loop_south",
-            2,
-            &[(37, 33), (40, 33), (36, 34), (41, 34), (35, 40), (44, 40)],
-        ),
-        (
-            "read_sit_loop_south",
-            3,
-            &[(38, 34), (41, 34), (37, 35), (42, 35), (35, 41), (44, 41)],
-        ),
-        (
-            "read_sit_end_south",
-            0,
-            &[(38, 34), (41, 34), (37, 35), (42, 35)],
-        ),
-        (
-            "read_sit_end_south",
-            1,
-            &[
-                (38, 34),
-                (41, 34),
-                (37, 35),
-                (42, 35),
-                (35, 41),
-                (44, 41),
-                (34, 45),
-                (45, 45),
-            ],
-        ),
-        (
-            "read_sit_end_south",
-            2,
-            &[
-                (38, 33),
-                (41, 33),
-                (37, 34),
-                (42, 34),
-                (35, 40),
-                (44, 40),
-                (34, 45),
-                (45, 45),
+                (35, 45),
+                (46, 46),
             ],
         ),
     ];
     // Zero-based frame numbers and frame-local coordinates.
     let landmarks = [
-        ("read_sit_start_south", 0, 38, 33, 0xE3BF7F, false), // circlet corner
-        ("read_sit_start_south", 0, 40, 33, 0x3CB9D8, false), // cyan gemstone
-        ("read_sit_start_south", 0, 35, 36, 0xEFD89A, true),  // exposed ear
-        ("read_sit_start_south", 0, 37, 39, 0x763F21, true),  // cheek shadow
-        ("read_sit_start_south", 0, 39, 40, 0xBC8B43, true),  // chin
-        ("read_sit_start_south", 0, 35, 40, 0xBC8B43, false), // shoulder decoration
-        ("read_sit_start_south", 0, 34, 45, 0xBC8B43, false), // cuff above glove
-        ("read_sit_start_south", 0, 34, 46, 0x8A2C5F, false), // covered hand
-        ("read_sit_start_south", 0, 39, 42, 0x645049, false), // warm bodice
-        ("read_sit_start_south", 1, 37, 36, 0xE3BF7F, true),  // skin above closed eye
-        ("read_sit_start_south", 1, 37, 37, 0xFC639B, false), // cosmetics
-        ("read_sit_start_south", 1, 38, 39, 0xE3BF7F, true),  // cheek above raised book
-        ("read_sit_start_south", 1, 38, 41, 0xC9AF9C, false), // warm page shadow
-        ("read_sit_start_south", 1, 39, 41, 0xF6E4D7, false), // page highlight
-        ("read_sit_start_south", 1, 37, 43, 0xBF54A3, false), // book cover
-        ("read_sit_start_south", 1, 45, 45, 0xBC8B43, false), // opposite cuff
-        ("read_sit_start_south", 2, 35, 40, 0xF6E4D7, false), // raised page beside face
-        ("read_sit_start_south", 2, 37, 40, 0x763F21, true),  // jaw beside page
-        ("read_sit_start_south", 2, 39, 41, 0xBC8B43, true),  // chin above pages
-        ("read_sit_start_south", 2, 45, 46, 0x8A2C5F, false), // small glove beyond book
-        ("read_sit_loop_south", 0, 39, 33, 0xE3BF7F, false),  // turned circlet corner
-        ("read_sit_loop_south", 0, 36, 36, 0xEFD89A, true),   // turned ear
-        ("read_sit_loop_south", 0, 38, 39, 0x763F21, true),   // turned jaw
-        ("read_sit_loop_south", 0, 40, 40, 0xBC8B43, true),   // small chin beside hair
-        ("read_sit_loop_south", 0, 35, 40, 0xBC8B43, false),  // shoulder decoration
-        ("read_sit_loop_south", 0, 32, 42, 0xF6E4D7, false),  // wide left page
-        ("read_sit_loop_south", 0, 38, 46, 0xC9AF9C, false),  // page fold
-        ("read_sit_loop_south", 1, 37, 36, 0xE3BF7F, true),   // blink skin
-        ("read_sit_loop_south", 1, 37, 37, 0xFC639B, false),  // blink cosmetics
-        ("read_sit_loop_south", 1, 39, 41, 0xBC8B43, true),   // chin above book
-        ("read_sit_loop_south", 1, 44, 41, 0xBC8B43, false),  // shoulder corner
-        ("read_sit_loop_south", 1, 39, 46, 0xF6E4D7, false),  // central page highlight
-        ("read_sit_loop_south", 2, 43, 36, 0xEFD89A, true),   // opposite exposed ear
-        ("read_sit_loop_south", 2, 41, 39, 0x763F21, true),   // opposite cheek shadow
-        ("read_sit_loop_south", 2, 40, 33, 0xE3BF7F, false),  // opposite circlet edge
-        ("read_sit_loop_south", 2, 45, 42, 0xC9AF9C, false),  // lifted right page
-        ("read_sit_loop_south", 3, 39, 40, 0xE3BF7F, true),   // returning lower face
-        ("read_sit_loop_south", 3, 40, 47, 0xC9AF9C, false),  // returning page fold
-        ("read_sit_end_south", 0, 37, 36, 0xE3BF7F, true),    // skin above closed eye
-        ("read_sit_end_south", 0, 35, 40, 0xF6E4D7, false),   // closing page beside face
-        ("read_sit_end_south", 0, 45, 46, 0x8A2C5F, false),   // covered opposite hand
-        ("read_sit_end_south", 1, 37, 36, 0xFC639B, false),   // cosmetics above open eye
-        ("read_sit_end_south", 1, 35, 37, 0xEFD89A, true),    // ear above book
-        ("read_sit_end_south", 1, 45, 45, 0xBC8B43, false),   // closing cuff corner
-        ("read_sit_end_south", 1, 38, 47, 0x9F3E7B, false),   // book binding
-        ("read_sit_end_south", 2, 34, 45, 0xBC8B43, false),   // restored cuff
-        ("read_sit_end_south", 2, 33, 46, 0x8A2C5F, false),   // restored glove
-        ("read_sit_end_south", 2, 37, 39, 0x763F21, true),    // restored jaw
-        ("read_sit_end_south", 2, 39, 43, 0x836C64, false),   // warm clothing
+        ("laugh_start_south", 0, 38, 34, 0xE3BF7F, false), // circlet corner
+        ("laugh_start_south", 0, 40, 34, 0x3CB9D8, false), // cyan gemstone
+        ("laugh_start_south", 0, 37, 36, 0xE3BF7F, true),  // skin above closed eye
+        ("laugh_start_south", 0, 37, 37, 0xFC639B, false), // cosmetics
+        ("laugh_start_south", 0, 35, 37, 0xEFD89A, true),  // exposed ear
+        ("laugh_start_south", 0, 37, 40, 0x763F21, true),  // cheek shadow
+        ("laugh_start_south", 0, 39, 41, 0xBC8B43, true),  // chin
+        ("laugh_start_south", 0, 35, 41, 0xBC8B43, false), // shoulder decoration
+        ("laugh_start_south", 0, 35, 45, 0xBC8B43, false), // raised cuff
+        ("laugh_start_south", 0, 46, 46, 0xBC8B43, false), // opposite cuff
+        ("laugh_start_south", 0, 32, 43, 0xDD426C, false), // pink glove
+        ("laugh_start_south", 0, 39, 43, 0x645049, false), // warm bodice
+        ("laugh_loop_south", 0, 38, 32, 0xE3BF7F, false),  // raised circlet
+        ("laugh_loop_south", 0, 37, 34, 0xFC639B, false),  // raised cosmetics
+        ("laugh_loop_south", 0, 37, 36, 0xEFD89A, true),   // cheek above glove
+        ("laugh_loop_south", 0, 35, 37, 0xEFD89A, true),   // raised ear
+        ("laugh_loop_south", 0, 41, 38, 0xEFD89A, true),   // opposite cheek
+        ("laugh_loop_south", 0, 42, 40, 0x763F21, true),   // jaw shadow beside glove
+        ("laugh_loop_south", 0, 40, 41, 0xBC8B43, true),   // chin beside glove
+        ("laugh_loop_south", 0, 38, 39, 0xDD426C, false),  // glove in front of mouth
+        ("laugh_loop_south", 0, 37, 39, 0x60285E, false),  // glove shadow
+        ("laugh_loop_south", 0, 36, 41, 0x3CB9D8, false),  // raised wrist gemstone
+        ("laugh_loop_south", 0, 44, 41, 0xBC8B43, false),  // opposite shoulder decoration
+        ("laugh_loop_south", 0, 46, 44, 0xBC8B43, false),  // opposite cuff
+        ("laugh_loop_south", 1, 35, 36, 0xEFD89A, true),   // lowered ear
+        ("laugh_loop_south", 1, 37, 36, 0xEFD89A, true),   // small cheek above glove
+        ("laugh_loop_south", 1, 41, 38, 0xE3BF7F, true),   // opposite lower face
+        ("laugh_loop_south", 1, 42, 39, 0x763F21, true),   // lowered jaw shadow
+        ("laugh_loop_south", 1, 38, 38, 0xDD426C, false),  // moving glove in front of mouth
+        ("laugh_loop_south", 1, 37, 39, 0x8A2C5F, false),  // glove underside
+        ("laugh_loop_south", 1, 44, 40, 0xBC8B43, false),  // lowered shoulder decoration
+        ("laugh_loop_south", 1, 46, 43, 0xBC8B43, false),  // lowered cuff
+        ("laugh_end_south", 0, 38, 37, 0xEFD89A, true),    // cheek while glove remains raised
+        ("laugh_end_south", 0, 42, 40, 0x763F21, true),    // returning jaw
+        ("laugh_end_south", 0, 39, 39, 0xDD426C, false),   // returning glove
+        ("laugh_end_south", 0, 46, 44, 0xBC8B43, false),   // returning cuff
+        ("laugh_end_south", 1, 37, 36, 0xE3BF7F, true),    // restored closed-eye skin
+        ("laugh_end_south", 1, 35, 37, 0xEFD89A, true),    // restored ear
+        ("laugh_end_south", 1, 37, 37, 0xFC639B, false),   // restored cosmetics
+        ("laugh_end_south", 1, 35, 45, 0xBC8B43, false),   // restored cuff
+        ("laugh_end_south", 1, 46, 47, 0xDD426C, false),   // opposite glove
+        ("laugh_end_south", 1, 39, 44, 0x836C64, false),   // warm clothing
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -237,18 +187,18 @@ fn juniper_winter_reading_cover_skin_and_preserve_reviewed_materials() {
                 }
             }
         }
-        assert_eq!(changed, 208);
+        assert_eq!(changed, 111);
 
-        for r in &profile["regions"].as_array().unwrap()[..261] {
+        for r in &profile["regions"].as_array().unwrap()[..264] {
             let asset = r["asset"].as_str().unwrap();
             for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
-                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-reina-juniper-march-winter-standard-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
+                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-reina-juniper-march-winter-reading-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
             }
         }
     }
 
     // Practical controls: missing cheek/ear components and unrestricted color matching.
-    let asset = "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_winter_read_sit_start_south.png";
+    let asset = "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_winter_laugh_start_south.png";
     let source = temp.path().join("controls-source");
     fs::create_dir_all(source.join(asset).parent().unwrap()).unwrap();
     for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
@@ -305,8 +255,8 @@ fn juniper_winter_reading_cover_skin_and_preserve_reviewed_materials() {
         profile["color_groups"].clone(),
     );
     for (id, point, color) in [
-        ("missing-cheek-shadow", [37, 39], 0x763F21),
-        ("missing-ear", [35, 36], 0xEFD89A),
+        ("missing-cheek-shadow", [37, 40], 0x763F21),
+        ("missing-ear", [35, 37], 0xEFD89A),
     ] {
         let mut missing = region.clone();
         missing["seeds"]
@@ -327,9 +277,9 @@ fn juniper_winter_reading_cover_skin_and_preserve_reviewed_materials() {
         profile["color_groups"].clone(),
     );
     for (point, source, target) in [
-        ([38, 33], 0xE3BF7F, 0x7F9FBD), // circlet
-        ([35, 40], 0xBC8B43, 0x6687AD), // shoulder decoration
-        ([34, 45], 0xBC8B43, 0x6687AD), // glove cuff
+        ([38, 34], 0xE3BF7F, 0x7F9FBD), // circlet
+        ([35, 41], 0xBC8B43, 0x6687AD), // shoulder decoration
+        ([35, 45], 0xBC8B43, 0x6687AD), // glove cuff
     ] {
         assert_eq!(correct.get_pixel(point[0], point[1]).0, rgba(source));
         assert_eq!(spilled.get_pixel(point[0], point[1]).0, rgba(target));
