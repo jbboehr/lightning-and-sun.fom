@@ -2,10 +2,10 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/juniper-beach-finish-study and the retained Winter-specials Juniper bundle"]
+#[ignore = "requires extracted/juniper-wedding-pilot-study and the retained Winter-specials Juniper bundle"]
 fn juniper_winter_finish_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/juniper-beach-finish-study");
+    let original = root.join("extracted/juniper-wedding-pilot-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
