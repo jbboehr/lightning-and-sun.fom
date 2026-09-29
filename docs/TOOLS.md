@@ -196,7 +196,9 @@ add six more strips each. [Beach bathing/swimming](development/reina-juniper-mar
 adds East/South strips and finishes March's Beach folder. [Beach completion](development/reina-juniper-beach-finish.md)
 adds Reina's seated poses and Juniper's special swimming/spell strips, finishing
 their Beach folders too. The [Wedding idle/walk pilot](development/reina-juniper-march-wedding-pilot.md)
-adds six strips each. Totals are now 269, 296 and 389,
+adds six strips each. [Wedding completion](development/reina-juniper-march-wedding-finish.md)
+adds blinking, seated poses, general actions and kissing, finishing all three
+Wedding folders. Totals are now 278, 305 and 398,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

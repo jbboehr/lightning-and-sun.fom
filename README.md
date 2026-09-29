@@ -204,7 +204,8 @@ animations: idle, walking, seated poses, blinking and action.
 Their complete Beach sprite folders are also included in their native directions,
 including swimming, Reina's seated poses and Juniper's special swimming/spell
 animations.
-Their Wedding idle and walking sprites are also included in every native direction.
+Their complete Wedding sprite folders are also included: idle, walking,
+blinking, seated poses, general actions and kissing in their native directions.
 Home, Page Down and U cycle their palettes respectively.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
