@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
-Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 116,
-Valen's 98, Eiland's 84, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
+Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 127,
+Valen's 109, Eiland's 95, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 13,932 variant strips from 3,483 sources. Caldarus's three
+variants per source give 14,064 variant strips from 3,516 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -255,6 +255,9 @@ three Wedding folders. The user approved the offline artwork on 2026-09-29.
 The [Balor, Valen and Eiland Spring pilots](balor-valen-eiland-world.md) add six
 idle/walk strips each: 45 source frames and fifteen native West mirrors.
 The user approved the offline artwork on 2026-09-29.
+Their [Spring everyday actions](balor-valen-eiland-spring-actions.md) add eleven
+strips each for blinking, sitting, eating and drinking: 93 source frames plus
+36 native West mirrors. The user approved the offline artwork on 2026-09-29.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -493,12 +496,14 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Spring idle/walk sprites for Balor, Valen and Eiland.
-It is in `generated/characters-balor-valen-eiland-world-trial/package`.
-It is verified with MOMI in the isolated `tmp/bve-world-189d426-playtest` lab.
+The latest combined package adds Spring blinking, sitting, eating and drinking
+for Balor, Valen and Eiland. It is in
+`generated/characters-balor-valen-eiland-spring-actions-trial/package`.
+It is verified with MOMI in the isolated `tmp/bve-spring-actions-55450c5-playtest` lab.
 It has no preview helper and did not replace the desktop launcher. Use the
-[complete offline review](../../generated/balor-valen-eiland-world-preview/index.html)
-to inspect all 45 source frames and fifteen native West mirrors.
+[complete offline review](../../generated/balor-valen-eiland-spring-actions-preview/index.html)
+to inspect all 93 source frames and 36 native West mirrors. This combined index
+links all three character galleries; their separate folders are part of the same review.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

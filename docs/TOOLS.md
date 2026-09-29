@@ -202,7 +202,8 @@ Wedding folders. Totals are now 278, 305 and 398,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 The [Balor, Valen and Eiland Spring pilots](development/balor-valen-eiland-world.md)
-add six idle/walk strips each, bringing their totals to 116, 98 and 84 sources.
+add six idle/walk strips each. Their [Spring everyday actions](development/balor-valen-eiland-spring-actions.md)
+add eleven blink/sit/eat/drink strips each, bringing their totals to 127, 109 and 95 sources.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
