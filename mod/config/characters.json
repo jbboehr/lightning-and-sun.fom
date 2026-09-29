@@ -2390,7 +2390,13 @@
       "assets/animations/NPCs/Balor/Portraits/Winter/spr_portrait_balor_winter_sly.png": "PortraitsWinter",
       "assets/animations/NPCs/Balor/Portraits/Winter/spr_portrait_balor_winter_think.png": "PortraitsWinter",
       "assets/animations/NPCs/Balor/Portraits/Winter/spr_portrait_balor_winter_ugh.png": "PortraitsWinter",
-      "assets/animations/NPCs/Balor/Portraits/Winter/spr_portrait_balor_winter_wink.png": "PortraitsWinter"
+      "assets/animations/NPCs/Balor/Portraits/Winter/spr_portrait_balor_winter_wink.png": "PortraitsWinter",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_idle_north.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_idle_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_idle_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_walk_north.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_walk_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_walk_east.png": "Default"
     },
     "hotkey": "I",
     "id": "balor",
@@ -2489,7 +2495,13 @@
       "assets/animations/NPCs/Valen/Portraits/Winter/spr_portrait_valen_winter_think_blush.png": "PortraitsWinter",
       "assets/animations/NPCs/Valen/Portraits/Winter/spr_portrait_valen_winter_think_smile.png": "PortraitsWinter",
       "assets/animations/NPCs/Valen/Portraits/Winter/spr_portrait_valen_winter_ugh.png": "PortraitsWinter",
-      "assets/animations/NPCs/Valen/Portraits/Winter/spr_portrait_valen_winter_wink.png": "PortraitsWinter"
+      "assets/animations/NPCs/Valen/Portraits/Winter/spr_portrait_valen_winter_wink.png": "PortraitsWinter",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_idle_north.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_idle_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_idle_east.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_walk_north.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_walk_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_walk_east.png": "Default"
     },
     "hotkey": "O",
     "id": "valen",
@@ -2574,7 +2586,13 @@
       "assets/animations/NPCs/Eiland/Portraits/Winter/spr_portrait_eiland_winter_surprised.png": "PortraitsWinter",
       "assets/animations/NPCs/Eiland/Portraits/Winter/spr_portrait_eiland_winter_think.png": "PortraitsWinter",
       "assets/animations/NPCs/Eiland/Portraits/Winter/spr_portrait_eiland_winter_ugh.png": "PortraitsWinter",
-      "assets/animations/NPCs/Eiland/Portraits/Winter/spr_portrait_eiland_winter_wink.png": "PortraitsWinter"
+      "assets/animations/NPCs/Eiland/Portraits/Winter/spr_portrait_eiland_winter_wink.png": "PortraitsWinter",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_idle_north.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_idle_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_idle_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_walk_north.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_walk_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_walk_east.png": "Default"
     },
     "hotkey": "J",
     "id": "eiland",

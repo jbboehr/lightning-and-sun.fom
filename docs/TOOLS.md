@@ -201,6 +201,10 @@ adds blinking, seated poses, general actions and kissing, finishing all three
 Wedding folders. Totals are now 278, 305 and 398,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
+The [Balor, Valen and Eiland Spring pilots](development/balor-valen-eiland-world.md)
+add six idle/walk strips each, bringing their totals to 116, 98 and 84 sources.
+The combined collection uses their new `*-world-trial.json` sets; their
+portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;
