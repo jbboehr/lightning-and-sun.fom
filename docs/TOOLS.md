@@ -189,7 +189,8 @@ adds general actions, sleeping and kissing. [Winter seated reading](development/
 adds each character's start, loop and end strips. [Winter specials](development/reina-juniper-march-winter-specials.md)
 add Reina's writing, Juniper's laugh and March's smithing. [Winter completion](development/reina-juniper-winter-finish.md)
 adds Reina's kitchen work and Juniper's magic/gestures, completing their Winter
-sprite folders. Totals are now 246, 272 and 355,
+sprite folders. [March's Winter injured animations](development/march-winter-injured.md)
+add his final fourteen Winter strips. Totals are now 246, 272 and 369,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
