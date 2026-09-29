@@ -7,23 +7,17 @@ fn read(path: impl AsRef<Path>) -> Value {
 }
 
 #[test]
-fn march_summer_specials_adds_five_pinned_regions_without_new_colors() {
+fn march_beach_swim_adds_two_pinned_regions_without_new_colors() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let p = read(root.join("palettes/profiles/march-world-trial.json"));
     assert_eq!(p["regions"].as_array().unwrap().len(), 383);
     assert_eq!(p["source_colors"].as_array().unwrap().len(), 16);
     assert_eq!(p["color_groups"].as_array().unwrap().len(), 7);
-    let expected: Vec<_> = [
-        "hammer_east",
-        "wipebrow_south",
-        "work_sit_end_north",
-        "work_sit_loop_north",
-        "work_sit_start_north",
-    ]
-    .iter()
-    .map(|n| json!(asset(n)))
-    .collect();
-    let actual: Vec<_> = p["regions"].as_array().unwrap()[259..264]
+    let expected: Vec<_> = ["bath_swim_east", "bath_swim_south"]
+        .iter()
+        .map(|n| json!(asset(n)))
+        .collect();
+    let actual: Vec<_> = p["regions"].as_array().unwrap()[381..383]
         .iter()
         .map(|r| r["asset"].clone())
         .collect();
@@ -31,8 +25,8 @@ fn march_summer_specials_adds_five_pinned_regions_without_new_colors() {
 }
 
 fn asset(name: &str) -> String {
-    let prefix = "specialanimation_summer";
-    format!("assets/animations/NPCs/March/Sprites/Summer/spr_npc_march_{prefix}_{name}.png")
+    let prefix = "beach";
+    format!("assets/animations/NPCs/March/Sprites/Beach/spr_npc_march_{prefix}_{name}.png")
 }
 fn rgba(color: u32) -> [u8; 4] {
     [(color >> 16) as u8, (color >> 8) as u8, color as u8, 255]
@@ -43,59 +37,50 @@ fn color(value: &Value) -> u32 {
 
 #[test]
 #[ignore = "requires 383 local animations in extracted/march-beach-swim-study and the accepted earlier output baseline"]
-fn march_summer_specials_cover_moving_skin_and_preserve_materials() {
+fn march_beach_swim_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/march-beach-swim-study");
     let baseline =
-        root.join("generated/characters-reina-juniper-march-summer-reading-trial/characters/march");
-    let profile_path = std::env::var_os("FOM_MARCH_SUMMER_SPECIALS_PROFILE")
+        root.join("generated/characters-reina-juniper-march-beach-actions-trial/characters/march");
+    let profile_path = std::env::var_os("FOM_MARCH_BEACH_SWIM_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/march-world-trial.json"));
-    let set_path = std::env::var_os("FOM_MARCH_SUMMER_SPECIALS_SET")
+    let set_path = std::env::var_os("FOM_MARCH_BEACH_SWIM_SET")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/march-world-trial.json"));
     let profile = read(&profile_path);
     let set = read(&set_path);
     let temp = tempfile::tempdir().unwrap();
-    // Source-art points distinguish the moving grips from wood/metal/effects,
-    // and the tiny rear-neck opening from the hair above and shirt below.
+    // Literal source-art landmarks distinguish the exposed face and jaw from
+    // hair, eye details, the moving waterline, foam and detached droplets.
     let landmarks = [
-        ("work_sit_loop_north", 0, 35, 38, 0xD37A57, true),
-        ("work_sit_loop_north", 0, 36, 41, 0xE8B271, true),
-        ("work_sit_loop_north", 0, 37, 41, 0x4F626B, false),
-        ("wipebrow_south", 5, 38, 51, 0xEEDDA5, true),
-        ("hammer_east", 1, 37, 51, 0xD37A57, true),
-        ("hammer_east", 0, 42, 46, 0xEEDDA5, true),
-        ("hammer_east", 0, 43, 47, 0x7D3B14, true),
-        ("hammer_east", 0, 45, 45, 0xE3B57F, false),
-        ("hammer_east", 0, 47, 45, 0xBB8151, false),
-        ("hammer_east", 0, 48, 45, 0x936244, false),
-        ("hammer_east", 0, 55, 44, 0x6099A8, false),
-        ("hammer_east", 1, 33, 36, 0xEEDDA5, true),
-        ("hammer_east", 1, 35, 36, 0x7D3B14, true),
-        ("hammer_east", 1, 36, 39, 0xD37A57, true),
-        ("hammer_east", 1, 34, 34, 0xBB8151, false),
-        ("hammer_east", 1, 39, 27, 0xC5E3E4, false),
-        ("hammer_east", 3, 45, 45, 0xEEDDA5, true),
-        ("hammer_east", 3, 50, 44, 0xD37A57, true),
-        ("hammer_east", 3, 45, 47, 0xF8FF79, false),
-        ("hammer_east", 6, 47, 46, 0xE8B271, true),
-        ("hammer_east", 6, 41, 44, 0x94715E, false),
-        ("wipebrow_south", 1, 41, 34, 0xD37A57, true),
-        ("wipebrow_south", 1, 43, 34, 0xEEDDA5, true),
-        ("wipebrow_south", 1, 42, 36, 0x7D3B14, true),
-        ("wipebrow_south", 1, 32, 47, 0xEEDDA5, true),
-        ("wipebrow_south", 1, 41, 40, 0x9E2626, false),
-        ("wipebrow_south", 1, 38, 35, 0xD37A57, true),
-        ("wipebrow_south", 5, 45, 46, 0xEEDDA5, true),
-        ("wipebrow_south", 5, 32, 47, 0xEEDDA5, true),
-        ("work_sit_loop_north", 0, 39, 39, 0xD37A57, true),
-        ("work_sit_loop_north", 6, 40, 39, 0xD37A57, true),
-        ("work_sit_loop_north", 0, 38, 37, 0x612934, false),
-        ("work_sit_start_north", 0, 34, 41, 0x7D3B14, true),
-        ("work_sit_start_north", 0, 33, 43, 0xE8B271, true),
-        ("work_sit_end_north", 1, 46, 41, 0xD37A57, true),
-        ("work_sit_end_north", 1, 40, 42, 0x9DAEB7, false),
+        ("bath_swim_east", 0, 37, 52, 0x7D3B14, true),
+        ("bath_swim_east", 0, 38, 52, 0xD37A57, true),
+        ("bath_swim_east", 0, 40, 52, 0xEEDDA5, true),
+        ("bath_swim_east", 0, 40, 54, 0xD37A57, true),
+        ("bath_swim_east", 0, 38, 50, 0xC2B9BE, false),
+        ("bath_swim_east", 0, 38, 47, 0x612934, false),
+        ("bath_swim_east", 0, 33, 55, 0x328BC9, false),
+        ("bath_swim_east", 0, 40, 56, 0x9DEBFC, false),
+        ("bath_swim_east", 0, 48, 59, 0x9DEBFC, false),
+        ("bath_swim_east", 1, 37, 52, 0x7D3B14, true),
+        ("bath_swim_east", 1, 40, 56, 0x9DEBFC, false),
+        ("bath_swim_east", 2, 37, 53, 0x7D3B14, true),
+        ("bath_swim_east", 2, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_east", 3, 37, 53, 0x7D3B14, true),
+        ("bath_swim_east", 3, 48, 58, 0x9DEBFC, false),
+        ("bath_swim_south", 0, 35, 50, 0xEEDDA5, true),
+        ("bath_swim_south", 0, 36, 52, 0x7D3B14, true),
+        ("bath_swim_south", 0, 37, 52, 0xD37A57, true),
+        ("bath_swim_south", 0, 37, 53, 0x7D3B14, true),
+        ("bath_swim_south", 0, 35, 62, 0x9DEBFC, false),
+        ("bath_swim_south", 0, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_south", 1, 36, 52, 0x7D3B14, true),
+        ("bath_swim_south", 1, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_south", 2, 37, 54, 0x7D3B14, true),
+        ("bath_swim_south", 2, 31, 56, 0x9DEBFC, false),
+        ("bath_swim_south", 3, 37, 54, 0x7D3B14, true),
+        ("bath_swim_south", 3, 49, 57, 0x9DEBFC, false),
     ];
     let skin = [0xEEDDA5, 0xE8B271, 0xD37A57, 0x7D3B14];
     let mut first_selection = None;
@@ -107,13 +92,13 @@ fn march_summer_specials_cover_moving_skin_and_preserve_materials() {
             format!("{:x}", Sha256::digest(fs::read(original.join(a)).unwrap()))
         );
     }
-    for r in profile["regions"].as_array().unwrap().iter().take(259) {
+    for r in profile["regions"].as_array().unwrap().iter().take(381) {
         let a = r["asset"].as_str().unwrap();
         for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
             assert_eq!(
                 fs::read(original.join(&file)).unwrap(),
                 fs::read(baseline.join("original").join(&file)).unwrap(),
-                "portrait source {file}"
+                "previous source {file}"
             );
             prior_files += 1;
         }
@@ -154,13 +139,7 @@ fn march_summer_specials_cover_moving_skin_and_preserve_materials() {
         let targets = [0, 13, 14, 10].map(|i| color(&preset["colors"][i]));
         let mut selection = vec![];
         let mut changed = 0;
-        for (name, frames) in [
-            ("hammer_east", 7),
-            ("wipebrow_south", 6),
-            ("work_sit_end_north", 2),
-            ("work_sit_loop_north", 7),
-            ("work_sit_start_north", 1),
-        ] {
+        for (name, frames) in [("bath_swim_east", 4), ("bath_swim_south", 4)] {
             let a = asset(name);
             let before = image::open(original.join(&a)).unwrap().to_rgba8();
             let after = image::open(output.join(&a)).unwrap().to_rgba8();
@@ -174,17 +153,10 @@ fn march_summer_specials_cover_moving_skin_and_preserve_materials() {
                 parsed["asset_properties"]["atlas"].as_str(),
                 Some("Default")
             );
-            if name.starts_with("work_sit") {
-                assert_eq!(
-                    parsed["asset_properties"]["offset"]["horizontal"].as_str(),
-                    Some("Middle")
-                );
-            } else {
-                assert_eq!(
-                    parsed["asset_properties"]["offset"]["horizontal"].as_float(),
-                    Some(40.0)
-                );
-            }
+            assert_eq!(
+                parsed["asset_properties"]["offset"]["horizontal"].as_str(),
+                Some("Middle")
+            );
             assert_eq!(
                 parsed["asset_properties"]["offset"]["vertical"].as_float(),
                 Some(54.0)
@@ -213,7 +185,7 @@ fn march_summer_specials_cover_moving_skin_and_preserve_materials() {
             for (x, y, p) in before.enumerate_pixels() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
-                // All four observed skin shades are skin in these five strips.
+                // All four observed skin shades are skin in these two strips.
                 // Checking this independent inventory catches omitted tiny components.
                 let index = skin.iter().position(|c| rgba(*c) == p.0);
                 let expected = index.map_or(p.0, |i| rgba(targets[i]));
@@ -224,25 +196,30 @@ fn march_summer_specials_cover_moving_skin_and_preserve_materials() {
                     changed += 1;
                 }
             }
-            assert!(counts.iter().all(|n| *n > 0));
+            let expected_counts: &[usize] = match name {
+                "bath_swim_east" => &[27, 27, 25, 25],
+                "bath_swim_south" => &[31, 31, 29, 29],
+                _ => unreachable!(),
+            };
+            assert_eq!(counts, expected_counts, "skin inventory {name}");
         }
-        assert_eq!(changed, 894);
+        assert_eq!(changed, 224);
         if let Some(first) = &first_selection {
             assert_eq!(first, &selection);
         } else {
             first_selection = Some(selection);
         }
-        for r in profile["regions"].as_array().unwrap().iter().take(259) {
+        for r in profile["regions"].as_array().unwrap().iter().take(381) {
             let a = r["asset"].as_str().unwrap();
             for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
                 assert_eq!(
                     fs::read(output.join(&file)).unwrap(),
                     fs::read(baseline.join("variants").join(id).join(&file)).unwrap(),
-                    "portrait changed {id} {file}"
+                    "previous output changed {id} {file}"
                 );
                 prior_files += 1;
             }
         }
     }
-    assert_eq!(prior_files, 2590);
+    assert_eq!(prior_files, 3810);
 }

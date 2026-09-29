@@ -2,114 +2,64 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/juniper-beach-swim-study and the retained Winter-reading Juniper bundle"]
-fn juniper_winter_specials_cover_skin_and_preserve_reviewed_materials() {
+#[ignore = "requires extracted/juniper-beach-swim-study and the retained Beach-actions Juniper bundle"]
+fn juniper_beach_swim_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/juniper-beach-swim-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
     let set = read(&root.join("palettes/sets/juniper-world-trial.json"));
-    let cases: [(&str, &[usize]); 3] = [
-        ("laugh_start_south", &[26]),
-        ("laugh_loop_south", &[21, 17]),
-        ("laugh_end_south", &[21, 26]),
+    let cases: [(&str, &[usize]); 2] = [
+        ("bath_swim_east", &[29, 29, 24, 24]),
+        ("bath_swim_south", &[32, 32, 26, 26]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let skin = [
         0xEFD89A, 0xE3BF7F, 0xBC8B43, 0x763F21, 0xE8B171, 0xF1E791, 0xB58E45, 0xE0B572,
     ];
-    // Literal source-material exclusions: circlet and bracers.
-    type MaterialCase<'a> = (&'a str, u32, &'a [(u32, u32)]);
-    let clothing: &[MaterialCase<'_>] = &[
-        (
-            "laugh_start_south",
-            0,
-            &[
-                (38, 34),
-                (41, 34),
-                (37, 35),
-                (42, 35),
-                (35, 41),
-                (44, 41),
-                (35, 45),
-                (46, 46),
-            ],
-        ),
-        (
-            "laugh_loop_south",
-            0,
-            &[(38, 32), (41, 32), (37, 33), (42, 33), (44, 41), (46, 44)],
-        ),
-        (
-            "laugh_loop_south",
-            1,
-            &[(38, 32), (41, 32), (37, 33), (42, 33), (44, 40), (46, 43)],
-        ),
-        (
-            "laugh_end_south",
-            0,
-            &[(38, 32), (41, 32), (37, 33), (42, 33), (44, 41), (46, 44)],
-        ),
-        (
-            "laugh_end_south",
-            1,
-            &[
-                (38, 34),
-                (41, 34),
-                (37, 35),
-                (42, 35),
-                (35, 41),
-                (44, 41),
-                (35, 45),
-                (46, 46),
-            ],
-        ),
-    ];
+    // The waterline covers the body and wrists. All matching shades here are skin;
+    // hair, eyes, hair tie, water and foam use distinct colors.
     // Zero-based frame numbers and frame-local coordinates.
     let landmarks = [
-        ("laugh_start_south", 0, 38, 34, 0xE3BF7F, false), // circlet corner
-        ("laugh_start_south", 0, 40, 34, 0x3CB9D8, false), // cyan gemstone
-        ("laugh_start_south", 0, 37, 36, 0xE3BF7F, true),  // skin above closed eye
-        ("laugh_start_south", 0, 37, 37, 0xFC639B, false), // cosmetics
-        ("laugh_start_south", 0, 35, 37, 0xEFD89A, true),  // exposed ear
-        ("laugh_start_south", 0, 37, 40, 0x763F21, true),  // cheek shadow
-        ("laugh_start_south", 0, 39, 41, 0xBC8B43, true),  // chin
-        ("laugh_start_south", 0, 35, 41, 0xBC8B43, false), // shoulder decoration
-        ("laugh_start_south", 0, 35, 45, 0xBC8B43, false), // raised cuff
-        ("laugh_start_south", 0, 46, 46, 0xBC8B43, false), // opposite cuff
-        ("laugh_start_south", 0, 32, 43, 0xDD426C, false), // pink glove
-        ("laugh_start_south", 0, 39, 43, 0x645049, false), // warm bodice
-        ("laugh_loop_south", 0, 38, 32, 0xE3BF7F, false),  // raised circlet
-        ("laugh_loop_south", 0, 37, 34, 0xFC639B, false),  // raised cosmetics
-        ("laugh_loop_south", 0, 37, 36, 0xEFD89A, true),   // cheek above glove
-        ("laugh_loop_south", 0, 35, 37, 0xEFD89A, true),   // raised ear
-        ("laugh_loop_south", 0, 41, 38, 0xEFD89A, true),   // opposite cheek
-        ("laugh_loop_south", 0, 42, 40, 0x763F21, true),   // jaw shadow beside glove
-        ("laugh_loop_south", 0, 40, 41, 0xBC8B43, true),   // chin beside glove
-        ("laugh_loop_south", 0, 38, 39, 0xDD426C, false),  // glove in front of mouth
-        ("laugh_loop_south", 0, 37, 39, 0x60285E, false),  // glove shadow
-        ("laugh_loop_south", 0, 36, 41, 0x3CB9D8, false),  // raised wrist gemstone
-        ("laugh_loop_south", 0, 44, 41, 0xBC8B43, false),  // opposite shoulder decoration
-        ("laugh_loop_south", 0, 46, 44, 0xBC8B43, false),  // opposite cuff
-        ("laugh_loop_south", 1, 35, 36, 0xEFD89A, true),   // lowered ear
-        ("laugh_loop_south", 1, 37, 36, 0xEFD89A, true),   // small cheek above glove
-        ("laugh_loop_south", 1, 41, 38, 0xE3BF7F, true),   // opposite lower face
-        ("laugh_loop_south", 1, 42, 39, 0x763F21, true),   // lowered jaw shadow
-        ("laugh_loop_south", 1, 38, 38, 0xDD426C, false),  // moving glove in front of mouth
-        ("laugh_loop_south", 1, 37, 39, 0x8A2C5F, false),  // glove underside
-        ("laugh_loop_south", 1, 44, 40, 0xBC8B43, false),  // lowered shoulder decoration
-        ("laugh_loop_south", 1, 46, 43, 0xBC8B43, false),  // lowered cuff
-        ("laugh_end_south", 0, 38, 37, 0xEFD89A, true),    // cheek while glove remains raised
-        ("laugh_end_south", 0, 42, 40, 0x763F21, true),    // returning jaw
-        ("laugh_end_south", 0, 39, 39, 0xDD426C, false),   // returning glove
-        ("laugh_end_south", 0, 46, 44, 0xBC8B43, false),   // returning cuff
-        ("laugh_end_south", 1, 37, 36, 0xE3BF7F, true),    // restored closed-eye skin
-        ("laugh_end_south", 1, 35, 37, 0xEFD89A, true),    // restored ear
-        ("laugh_end_south", 1, 37, 37, 0xFC639B, false),   // restored cosmetics
-        ("laugh_end_south", 1, 35, 45, 0xBC8B43, false),   // restored cuff
-        ("laugh_end_south", 1, 46, 47, 0xDD426C, false),   // opposite glove
-        ("laugh_end_south", 1, 39, 44, 0x836C64, false),   // warm clothing
+        ("bath_swim_east", 0, 39, 48, 0xBC8B43, true), // forehead below hair
+        ("bath_swim_east", 0, 40, 49, 0xEFD89A, true), // face highlight
+        ("bath_swim_east", 0, 36, 51, 0xEFD89A, true), // ear beside water
+        ("bath_swim_east", 0, 38, 54, 0x763F21, true), // jaw at waterline
+        ("bath_swim_east", 0, 40, 54, 0xE3BF7F, true), // lower face above foam
+        ("bath_swim_east", 0, 40, 55, 0x9DEBFC, false), // touching foam
+        ("bath_swim_east", 0, 34, 54, 0x328BC9, false), // dark surrounding water
+        ("bath_swim_east", 0, 49, 49, 0x9DEBFC, false), // detached splash
+        ("bath_swim_east", 0, 35, 42, 0xDF8D4B, false), // warm hair tie
+        ("bath_swim_east", 0, 36, 42, 0xFFD565, false), // gold hair tie highlight
+        ("bath_swim_east", 0, 37, 51, 0x5A3668, false), // side hair
+        ("bath_swim_east", 0, 38, 51, 0xC2B9BE, false), // shaded eye white
+        ("bath_swim_east", 0, 38, 52, 0xECF0E9, false), // eye white
+        ("bath_swim_east", 0, 39, 51, 0x000000, false), // pupil
+        ("bath_swim_east", 1, 43, 53, 0xE3BF7F, true), // opposite cheek
+        ("bath_swim_east", 1, 40, 55, 0x9DEBFC, false), // animated foam
+        ("bath_swim_east", 2, 39, 49, 0xBC8B43, true), // lowered forehead
+        ("bath_swim_east", 2, 36, 52, 0xEFD89A, true), // lowered ear
+        ("bath_swim_east", 2, 43, 54, 0xE3BF7F, true), // lowest cheek at waterline
+        ("bath_swim_east", 2, 48, 53, 0x9DEBFC, false), // raised splash beyond head
+        ("bath_swim_east", 2, 43, 59, 0x9DEBFC, false), // detached lower foam
+        ("bath_swim_east", 3, 40, 54, 0xEFD89A, true), // bobbing face remains covered
+        ("bath_swim_south", 0, 38, 48, 0xBC8B43, true), // isolated forehead shade
+        ("bath_swim_south", 0, 35, 51, 0xEFD89A, true), // left ear
+        ("bath_swim_south", 0, 44, 51, 0xEFD89A, true), // right ear
+        ("bath_swim_south", 0, 37, 54, 0x763F21, true), // left jaw at waterline
+        ("bath_swim_south", 0, 42, 54, 0x763F21, true), // right jaw at waterline
+        ("bath_swim_south", 0, 39, 54, 0xE3BF7F, true), // chin above foam
+        ("bath_swim_south", 0, 39, 55, 0x9DEBFC, false), // adjacent foam
+        ("bath_swim_south", 0, 46, 51, 0x328BC9, false), // water beside head
+        ("bath_swim_south", 0, 30, 59, 0x9DEBFC, false), // detached left splash
+        ("bath_swim_south", 1, 42, 53, 0xBC8B43, true), // shaded cheek in second pose
+        ("bath_swim_south", 2, 38, 49, 0xBC8B43, true), // lowered forehead
+        ("bath_swim_south", 2, 44, 52, 0xEFD89A, true), // lowered opposite ear
+        ("bath_swim_south", 2, 39, 54, 0xEFD89A, true), // cheek against higher waterline
+        ("bath_swim_south", 2, 39, 55, 0x9DEBFC, false), // foam touching cheek
+        ("bath_swim_south", 2, 33, 59, 0x9DEBFC, false), // curved detached wake
+        ("bath_swim_south", 3, 42, 54, 0xBC8B43, true), // final shaded cheek
     ];
     let temp = tempfile::tempdir().unwrap();
     for preset in set["presets"].as_array().unwrap() {
@@ -145,9 +95,9 @@ fn juniper_winter_specials_cover_skin_and_preserve_reviewed_materials() {
         let mut changed = 0;
 
         for (name, counts) in cases {
-            let prefix = "winter";
+            let prefix = "beach";
             let asset = format!(
-                "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_{prefix}_{name}.png"
+                "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_{prefix}_{name}.png"
             );
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(output.join(&asset)).unwrap().to_rgba8();
@@ -161,11 +111,7 @@ fn juniper_winter_specials_cover_skin_and_preserve_reviewed_materials() {
             let mut actual = vec![0; counts.len()];
             for (x, y, pixel) in before.enumerate_pixels() {
                 let expected = match skin.iter().position(|c| rgba(*c) == pixel.0) {
-                    Some(i)
-                        if !clothing.iter().any(|(case, f, pts)| {
-                            *case == name && *f == x / 80 && pts.contains(&(x % 80, y))
-                        }) =>
-                    {
+                    Some(i) => {
                         actual[x as usize / 80] += 1;
                         targets[i]
                     }
@@ -187,18 +133,19 @@ fn juniper_winter_specials_cover_skin_and_preserve_reviewed_materials() {
                 }
             }
         }
-        assert_eq!(changed, 111);
+        assert_eq!(changed, 222);
 
-        for r in &profile["regions"].as_array().unwrap()[..264] {
+        for r in &profile["regions"].as_array().unwrap()[..284] {
             let asset = r["asset"].as_str().unwrap();
             for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
-                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-reina-juniper-march-winter-reading-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
+                assert_eq!(fs::read(output.join(&path)).unwrap(),fs::read(root.join(format!("generated/characters-reina-juniper-march-beach-actions-trial/characters/juniper/variants/{id}/{path}"))).unwrap(),"prior reviewed output {id} {path}");
             }
         }
     }
 
-    // Practical controls: missing cheek/ear components and unrestricted color matching.
-    let asset = "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_winter_laugh_start_south.png";
+    // Practical controls: missing forehead/ear/jaw components and an accidental foam palette entry.
+    let asset =
+        "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_bath_swim_south.png";
     let source = temp.path().join("controls-source");
     fs::create_dir_all(source.join(asset).parent().unwrap()).unwrap();
     for path in [asset.to_owned(), asset.replace(".png", ".meta.toml")] {
@@ -255,8 +202,9 @@ fn juniper_winter_specials_cover_skin_and_preserve_reviewed_materials() {
         profile["color_groups"].clone(),
     );
     for (id, point, color) in [
-        ("missing-cheek-shadow", [37, 40], 0x763F21),
-        ("missing-ear", [35, 37], 0xEFD89A),
+        ("missing-forehead", [38, 48], 0xBC8B43),
+        ("missing-ear", [35, 51], 0xEFD89A),
+        ("missing-jaw", [37, 54], 0x763F21),
     ] {
         let mut missing = region.clone();
         missing["seeds"]
@@ -270,18 +218,16 @@ fn juniper_winter_specials_cover_skin_and_preserve_reviewed_materials() {
             correct.get_pixel(point[0], point[1])
         );
     }
-    let spilled = apply_control(
-        "unrestricted-colors",
-        Value::Null,
-        map,
-        profile["color_groups"].clone(),
-    );
-    for (point, source, target) in [
-        ([38, 34], 0xE3BF7F, 0x7F9FBD), // circlet
-        ([35, 41], 0xBC8B43, 0x6687AD), // shoulder decoration
-        ([35, 45], 0xBC8B43, 0x6687AD), // glove cuff
-    ] {
-        assert_eq!(correct.get_pixel(point[0], point[1]).0, rgba(source));
-        assert_eq!(spilled.get_pixel(point[0], point[1]).0, rgba(target));
+    let mut too_broad = map;
+    too_broad.insert("#9DEBFC".into(), json!("#FFFFFF"));
+    let mut broad_groups = profile["color_groups"].clone();
+    broad_groups
+        .as_array_mut()
+        .unwrap()
+        .push(json!(["#9DEBFC"]));
+    let spilled = apply_control("water-spill", Value::Null, too_broad, broad_groups);
+    for point in [[39, 55], [30, 59]] {
+        assert_eq!(correct.get_pixel(point[0], point[1]).0, rgba(0x9DEBFC));
+        assert_eq!(spilled.get_pixel(point[0], point[1]).0, rgba(0xFFFFFF));
     }
 }

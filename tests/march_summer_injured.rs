@@ -10,7 +10,7 @@ fn read(path: impl AsRef<Path>) -> Value {
 fn march_summer_injured_adds_fourteen_pinned_regions_without_new_colors() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let p = read(root.join("palettes/profiles/march-world-trial.json"));
-    assert_eq!(p["regions"].as_array().unwrap().len(), 381);
+    assert_eq!(p["regions"].as_array().unwrap().len(), 383);
     assert_eq!(p["source_colors"].as_array().unwrap().len(), 16);
     assert_eq!(p["color_groups"].as_array().unwrap().len(), 7);
     let expected: Vec<_> = [
@@ -51,10 +51,10 @@ fn color(value: &Value) -> u32 {
 }
 
 #[test]
-#[ignore = "requires 381 local animations in extracted/march-beach-actions-study and the accepted earlier output baseline"]
+#[ignore = "requires 383 local animations in extracted/march-beach-swim-study and the accepted earlier output baseline"]
 fn march_summer_injured_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/march-beach-actions-study");
+    let original = root.join("extracted/march-beach-swim-study");
     let baseline =
         root.join("generated/characters-reina-juniper-summer-finish-trial/characters/march");
     let profile_path = std::env::var_os("FOM_MARCH_SUMMER_INJURED_PROFILE")

@@ -3,11 +3,12 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires extracted/reina-beach-swim-study and the local accepted Reina world baseline"]
-fn reina_autumn_world_covers_skin_and_preserves_outfit_materials() {
+fn reina_beach_swim_covers_face_and_preserves_water() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/reina-beach-swim-study");
-    let baseline = root.join("generated/characters-march-summer-injured-trial/characters/reina");
-    let set = std::env::var_os("FOM_REINA_AUTUMN_WORLD_PRESETS")
+    let baseline =
+        root.join("generated/characters-reina-juniper-march-beach-actions-trial/characters/reina");
+    let set = std::env::var_os("FOM_REINA_BEACH_SWIM_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/reina-world-trial.json"));
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
@@ -15,13 +16,13 @@ fn reina_autumn_world_covers_skin_and_preserves_outfit_materials() {
         &fs::read(root.join("palettes/profiles/reina-world-trial.json")).unwrap(),
     )
     .unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..176];
+    let prior = &profile["regions"].as_array().unwrap()[..258];
     let candidate_path = set
         .parent()
         .unwrap()
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
-    assert_eq!(&candidate["regions"].as_array().unwrap()[..176], prior);
+    assert_eq!(&candidate["regions"].as_array().unwrap()[..258], prior);
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
@@ -39,87 +40,74 @@ fn reina_autumn_world_covers_skin_and_preserves_outfit_materials() {
         String::from_utf8_lossy(&result.stderr)
     );
     let source = [0xB36844, 0x8E4538, 0x712922, 0x571D1F];
-    // Literal landmarks distinguish face, neck and hands from the checkered
-    // shirt, trousers, gold trim and boots. Four boot-sole pairs reuse skin brown.
+    // Fresh literal landmarks distinguish the bobbing face and submerged jaw
+    // boundary from hair, eyes, the waterline and disconnected splash droplets.
     let landmarks = [
-        ("idle_east", 0, 40, 35, 0xB36844, true),
-        ("idle_east", 0, 40, 42, 0x8E4538, true),
-        ("idle_east", 0, 34, 45, 0x712922, true),
-        ("idle_east", 0, 35, 46, 0xB36844, true),
-        ("idle_east", 0, 40, 41, 0xD2962F, false),
-        ("idle_east", 0, 40, 43, 0x3C3431, false),
-        ("idle_east", 0, 40, 44, 0x271F1D, false),
-        ("idle_east", 0, 38, 46, 0x271F1D, false),
-        ("idle_east", 0, 38, 49, 0x524642, false),
-        ("idle_east", 0, 38, 52, 0xA35E36, false),
-        ("idle_east", 0, 39, 52, 0xD2962F, false),
-        ("idle_east", 0, 39, 53, 0xA13761, false),
-        ("idle_east", 0, 40, 30, 0x63413B, false),
-        ("idle_north", 0, 39, 40, 0x712922, true),
-        ("idle_north", 0, 34, 45, 0xB36844, true),
-        ("idle_north", 0, 45, 45, 0xB36844, true),
-        ("idle_north", 0, 33, 47, 0x571D1F, true),
-        ("idle_north", 0, 46, 47, 0x571D1F, true),
-        ("idle_north", 0, 39, 41, 0xA2345F, false),
-        ("idle_north", 0, 39, 42, 0x4C041F, false),
-        ("idle_north", 0, 39, 43, 0x701839, false),
-        ("idle_north", 0, 39, 46, 0x3C3431, false),
-        ("idle_north", 0, 37, 52, 0xA35E36, false),
-        ("idle_south", 0, 38, 33, 0x712922, true),
-        ("idle_south", 0, 39, 35, 0xB36844, true),
-        ("idle_south", 0, 36, 38, 0x571D1F, true),
-        ("idle_south", 0, 39, 42, 0x8E4538, true),
-        ("idle_south", 0, 34, 45, 0xB36844, true),
-        ("idle_south", 0, 45, 45, 0xB36844, true),
-        ("idle_south", 0, 39, 41, 0xD2962F, false),
-        ("idle_south", 0, 36, 44, 0x4C041F, false),
-        ("idle_south", 0, 39, 43, 0x3C3431, false),
-        ("idle_south", 0, 39, 44, 0x271F1D, false),
-        ("idle_south", 0, 37, 49, 0x524642, false),
-        ("idle_south", 0, 38, 50, 0x70645F, false),
-        ("idle_south", 0, 37, 51, 0x4C041F, false),
-        ("idle_south", 0, 37, 52, 0xA35E36, false),
-        ("idle_south", 0, 37, 53, 0xA13761, false),
-        ("walk_east", 1, 40, 36, 0xB36844, true),
-        ("walk_east", 1, 40, 43, 0x8E4538, true),
-        ("walk_east", 1, 32, 46, 0xB36844, true),
-        ("walk_east", 1, 47, 46, 0xB36844, true),
-        ("walk_east", 1, 36, 45, 0xA2345F, false),
-        ("walk_east", 1, 42, 51, 0xD2962F, false),
-        ("walk_east", 3, 36, 47, 0xB36844, true),
-        ("walk_east", 3, 44, 46, 0x8E4538, true),
-        ("walk_east", 3, 36, 52, 0x581831, false),
-        ("walk_east", 3, 37, 52, 0xD2962F, false),
-        ("walk_north", 1, 39, 41, 0x712922, true),
-        ("walk_north", 1, 34, 47, 0xB36844, true),
-        ("walk_north", 1, 46, 47, 0x571D1F, true),
-        ("walk_north", 1, 37, 50, 0x581831, false),
-        ("walk_north", 1, 37, 51, 0x8E4538, false),
-        ("walk_north", 1, 38, 51, 0x8E4538, false),
-        ("walk_north", 1, 37, 52, 0x581831, false),
-        ("walk_north", 3, 39, 41, 0x712922, true),
-        ("walk_north", 3, 33, 47, 0x571D1F, true),
-        ("walk_north", 3, 45, 47, 0xB36844, true),
-        ("walk_north", 3, 41, 51, 0x8E4538, false),
-        ("walk_north", 3, 42, 51, 0x8E4538, false),
-        ("walk_south", 1, 39, 43, 0x8E4538, true),
-        ("walk_south", 1, 34, 47, 0xB36844, true),
-        ("walk_south", 1, 46, 47, 0x571D1F, true),
-        ("walk_south", 1, 37, 51, 0x8E4538, false),
-        ("walk_south", 1, 38, 51, 0x8E4538, false),
-        ("walk_south", 3, 39, 43, 0x8E4538, true),
-        ("walk_south", 3, 33, 47, 0x571D1F, true),
-        ("walk_south", 3, 45, 47, 0xB36844, true),
-        ("walk_south", 3, 41, 51, 0x8E4538, false),
-        ("walk_south", 3, 42, 51, 0x8E4538, false),
+        ("bath_swim_east", 0, 40, 50, 0xB36844, true),
+        ("bath_swim_east", 0, 39, 53, 0x8E4538, true),
+        ("bath_swim_east", 0, 38, 54, 0x571D1F, true),
+        ("bath_swim_east", 0, 40, 44, 0x63413B, false),
+        ("bath_swim_east", 0, 37, 51, 0x712922, true),
+        ("bath_swim_east", 0, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_east", 0, 35, 56, 0x328BC9, false),
+        ("bath_swim_east", 1, 40, 50, 0xB36844, true),
+        ("bath_swim_east", 1, 39, 53, 0x8E4538, true),
+        ("bath_swim_east", 1, 38, 54, 0x571D1F, true),
+        ("bath_swim_east", 1, 40, 44, 0x63413B, false),
+        ("bath_swim_east", 1, 37, 51, 0x712922, true),
+        ("bath_swim_east", 1, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_east", 1, 35, 56, 0x328BC9, false),
+        ("bath_swim_east", 2, 40, 51, 0xB36844, true),
+        ("bath_swim_east", 2, 39, 54, 0x8E4538, true),
+        ("bath_swim_east", 2, 38, 54, 0x712922, true),
+        ("bath_swim_east", 2, 40, 45, 0x63413B, false),
+        ("bath_swim_east", 2, 37, 52, 0x712922, true),
+        ("bath_swim_east", 2, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_east", 2, 35, 56, 0x328BC9, false),
+        ("bath_swim_east", 3, 40, 51, 0xB36844, true),
+        ("bath_swim_east", 3, 39, 54, 0x8E4538, true),
+        ("bath_swim_east", 3, 38, 54, 0x712922, true),
+        ("bath_swim_east", 3, 40, 45, 0x63413B, false),
+        ("bath_swim_east", 3, 37, 52, 0x712922, true),
+        ("bath_swim_east", 3, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_east", 3, 35, 56, 0x328BC9, false),
+        ("bath_swim_south", 0, 40, 50, 0xB36844, true),
+        ("bath_swim_south", 0, 39, 53, 0xB36844, true),
+        ("bath_swim_south", 0, 38, 54, 0x712922, true),
+        ("bath_swim_south", 0, 40, 44, 0x63413B, false),
+        ("bath_swim_south", 0, 37, 51, 0xECF0E9, false),
+        ("bath_swim_south", 0, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_south", 0, 35, 56, 0x328BC9, false),
+        ("bath_swim_south", 1, 40, 50, 0xB36844, true),
+        ("bath_swim_south", 1, 39, 53, 0xB36844, true),
+        ("bath_swim_south", 1, 38, 54, 0x712922, true),
+        ("bath_swim_south", 1, 40, 44, 0x63413B, false),
+        ("bath_swim_south", 1, 37, 51, 0xECF0E9, false),
+        ("bath_swim_south", 1, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_south", 1, 35, 56, 0x328BC9, false),
+        ("bath_swim_south", 2, 40, 51, 0xB36844, true),
+        ("bath_swim_south", 2, 39, 54, 0xB36844, true),
+        ("bath_swim_south", 2, 38, 54, 0x8E4538, true),
+        ("bath_swim_south", 2, 40, 45, 0x63413B, false),
+        ("bath_swim_south", 2, 37, 52, 0xECF0E9, false),
+        ("bath_swim_south", 2, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_south", 2, 35, 56, 0x328BC9, false),
+        ("bath_swim_south", 3, 40, 51, 0xB36844, true),
+        ("bath_swim_south", 3, 39, 54, 0xB36844, true),
+        ("bath_swim_south", 3, 38, 54, 0x8E4538, true),
+        ("bath_swim_south", 3, 40, 45, 0x63413B, false),
+        ("bath_swim_south", 3, 37, 52, 0xECF0E9, false),
+        ("bath_swim_south", 3, 40, 55, 0x9DEBFC, false),
+        ("bath_swim_south", 3, 35, 56, 0x328BC9, false),
+        ("bath_swim_east", 0, 48, 59, 0x9DEBFC, false),
+        ("bath_swim_east", 2, 47, 57, 0x9DEBFC, false),
+        ("bath_swim_south", 0, 30, 59, 0x9DEBFC, false),
+        ("bath_swim_south", 2, 35, 60, 0x9DEBFC, false),
+        ("bath_swim_south", 0, 39, 54, 0x8E4538, true),
     ];
-    let cases: [(&str, &[usize]); 6] = [
-        ("idle_east", &[46]),
-        ("idle_north", &[17]),
-        ("idle_south", &[54]),
-        ("walk_east", &[46, 48, 46, 45]),
-        ("walk_north", &[17, 13, 17, 13]),
-        ("walk_south", &[54, 50, 54, 50]),
+    let cases: [(&str, &[usize]); 2] = [
+        ("bath_swim_east", &[30, 30, 25, 25]),
+        ("bath_swim_south", &[34, 34, 28, 28]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
@@ -132,13 +120,9 @@ fn reina_autumn_world_covers_skin_and_preserves_outfit_materials() {
         let variant = output.join("variants").join(id);
         let mut mask = Vec::new();
         for (case, expected_per_frame) in cases {
-            let boot_soles: &[[u32; 2]] = match case {
-                "walk_north" | "walk_south" => &[[117, 51], [118, 51], [281, 51], [282, 51]],
-                _ => &[],
-            };
             let frames = expected_per_frame.len() as u32;
-            let prefix = "spr_npc_reina_autumn";
-            let asset = format!("assets/animations/NPCs/Reina/Sprites/Autumn/{prefix}_{case}.png");
+            let prefix = "spr_npc_reina_beach";
+            let asset = format!("assets/animations/NPCs/Reina/Sprites/Beach/{prefix}_{case}.png");
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(variant.join(&asset)).unwrap().to_rgba8();
             assert_eq!(before.dimensions(), (80 * frames, 80));
@@ -152,21 +136,20 @@ fn reina_autumn_world_covers_skin_and_preserves_outfit_materials() {
             for (x, y, p) in before.enumerate_pixels() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
-                // The inspected boot soles are the only clothing reuse of the
-                // world skin ramp. Check all other pixels for omissions and spills.
+                // All four reviewed world shades are skin in these Beach strips.
+                // Independently guard every omitted skin pixel and non-skin material.
                 let expected = source
                     .iter()
                     .position(|c| rgba(*c) == p.0)
-                    .filter(|_| !boot_soles.contains(&[x, y]))
                     .map_or(p.0, |i| rgba(target[i]));
                 assert_eq!(
                     q.0, expected,
-                    "Reina Autumn material mismatch: {id} {case} [{x},{y}]"
+                    "Reina Beach material mismatch: {id} {case} [{x},{y}]"
                 );
                 mask.push(p != q);
                 if p != q {
                     let index = source.iter().position(|c| rgba(*c) == p.0).expect(
-                        "hair, checkered shirt, trousers, boots or another non-skin color changed",
+                        "hair, water, splash droplets, eyes or another non-skin color changed",
                     );
                     assert_eq!(q.0, rgba(target[index]));
                     per_frame[x as usize / 80] += 1;
