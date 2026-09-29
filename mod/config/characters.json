@@ -1127,7 +1127,13 @@
       "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_specialanimation_winter_chop_north.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_specialanimation_winter_polish_end_east.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_specialanimation_winter_polish_loop_east.png": "Default",
-      "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_specialanimation_winter_polish_start_east.png": "Default"
+      "assets/animations/NPCs/Reina/Sprites/Winter/spr_npc_reina_specialanimation_winter_polish_start_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_idle_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_idle_north.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_idle_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_walk_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_walk_north.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_walk_south.png": "Default"
     },
     "hotkey": "HOME",
     "id": "reina",
@@ -1406,7 +1412,13 @@
       "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_winter_snooze_south.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_winter_spell_cast_end_south.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_winter_spell_cast_loop_south.png": "Default",
-      "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_winter_spell_cast_start_south.png": "Default"
+      "assets/animations/NPCs/Juniper/Sprites/Winter/spr_npc_juniper_specialanimation_winter_spell_cast_start_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_idle_east.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_idle_north.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_idle_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_walk_east.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_walk_north.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_walk_south.png": "Default"
     },
     "hotkey": "PAGE_DOWN",
     "id": "juniper",
@@ -2179,7 +2191,13 @@
       "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_specialanimation_winter_hurt_sit_south.png": "Default",
       "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_specialanimation_winter_hurt_walk_east.png": "Default",
       "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_specialanimation_winter_hurt_walk_north.png": "Default",
-      "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_specialanimation_winter_hurt_walk_south.png": "Default"
+      "assets/animations/NPCs/March/Sprites/Winter/spr_npc_march_specialanimation_winter_hurt_walk_south.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Beach/spr_npc_march_beach_idle_east.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Beach/spr_npc_march_beach_idle_north.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Beach/spr_npc_march_beach_idle_south.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Beach/spr_npc_march_beach_walk_east.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Beach/spr_npc_march_beach_walk_north.png": "Default",
+      "assets/animations/NPCs/March/Sprites/Beach/spr_npc_march_beach_walk_south.png": "Default"
     },
     "hotkey": "U",
     "id": "march",

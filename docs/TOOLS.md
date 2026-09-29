@@ -190,7 +190,8 @@ adds each character's start, loop and end strips. [Winter specials](development/
 add Reina's writing, Juniper's laugh and March's smithing. [Winter completion](development/reina-juniper-winter-finish.md)
 adds Reina's kitchen work and Juniper's magic/gestures, completing their Winter
 sprite folders. [March's Winter injured animations](development/march-winter-injured.md)
-add his final fourteen Winter strips. Totals are now 246, 272 and 369,
+add his final fourteen Winter strips. The [Beach idle/walk pilot](development/reina-juniper-march-beach-pilot.md)
+starts their Beach outfits. Totals are now 252, 278 and 375,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
