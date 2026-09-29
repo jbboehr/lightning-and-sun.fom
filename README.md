@@ -207,8 +207,9 @@ animations.
 Their complete Wedding sprite folders are also included: idle, walking,
 blinking, seated poses, general actions and kissing in their native directions.
 Home, Page Down and U cycle their palettes respectively.
-Balor, Valen and Eiland's Spring idle, walking, blinking, sitting, eating and
-drinking sprites are included in their native directions. I, O and J cycle their
+Balor, Valen and Eiland's Spring idle, walking, blinking, sitting, eating,
+drinking, general-action, sleeping and kissing sprites are included in their
+native directions. I, O and J cycle their
 palettes respectively, keeping their portraits and supported overworld sprites together.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth

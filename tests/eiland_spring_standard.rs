@@ -19,15 +19,15 @@ fn color(value: &Value) -> u32 {
 
 #[test]
 #[ignore = "requires 100 local animations in extracted/eiland-spring-standard-study and the accepted earlier output baseline"]
-fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
+fn eiland_spring_standard_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/eiland-spring-standard-study");
     let baseline =
-        root.join("generated/characters-balor-valen-eiland-world-trial/characters/eiland");
-    let profile_path = std::env::var_os("FOM_EILAND_SPRING_ACTIONS_PROFILE")
+        root.join("generated/characters-balor-valen-eiland-spring-actions-trial/characters/eiland");
+    let profile_path = std::env::var_os("FOM_EILAND_SPRING_STANDARD_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/eiland-world-trial.json"));
-    let set_path = std::env::var_os("FOM_EILAND_SPRING_ACTIONS_SET")
+    let set_path = std::env::var_os("FOM_EILAND_SPRING_STANDARD_SET")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/eiland-world-trial.json"));
     let profile = read(&profile_path);
@@ -37,57 +37,64 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
     let set = read(&set_path);
     let temp = tempfile::tempdir().unwrap();
     // Literal source-art landmarks distinguish moving fingers and fine face shading
-    // from gold trim, uniform, eye details and true red mouth interiors.
+    // from gold trim, uniform, eye details and actual black mouth/eye details.
+    // At North action [34,44], the Summer source exposes the full hand;
+    // Spring leaves its upper edge visible beside the cape. Keep that skin mapped.
     let landmarks = [
-        ("blink_east", 1, 40, 35, 0xE9A980, true),
-        ("blink_east", 1, 40, 33, 0x9C5241, true),
-        ("blink_east", 1, 38, 39, 0x7D3B14, true),
-        ("blink_east", 1, 35, 47, 0x7D3B14, true),
-        ("blink_east", 1, 43, 43, 0xBA6A4C, false),
-        ("blink_east", 1, 40, 46, 0xBA6A4C, false),
-        ("blink_south", 1, 42, 39, 0x7D3B14, true),
-        ("blink_south", 1, 42, 48, 0xBA6A4C, false),
-        ("sit_east", 0, 35, 47, 0x7D3B14, true),
-        ("sit_east", 0, 38, 44, 0xBA6A4C, false),
-        ("sit_east", 0, 38, 45, 0x6A3126, false),
-        ("sit_south", 0, 34, 46, 0xDE8F5D, true),
-        ("sit_south", 0, 45, 47, 0x7D3B14, true),
-        ("sit_south", 0, 43, 47, 0xBA6A4C, false),
-        ("sit_north", 0, 39, 44, 0xC1BDC8, false),
-        ("sit_north", 0, 39, 46, 0x473C52, false),
-        ("drink_east", 0, 40, 42, 0xE9A980, true),
-        ("drink_east", 0, 39, 43, 0xBA6A4C, true),
-        ("drink_east", 1, 40, 40, 0xDE8F5D, true),
-        ("drink_east", 1, 40, 42, 0xBA6A4C, true),
-        ("drink_east", 1, 39, 43, 0xBA6A4C, true),
-        ("drink_east", 1, 41, 43, 0xDB5C81, false),
-        ("drink_south", 1, 35, 40, 0xE9A980, true),
-        ("drink_south", 1, 34, 42, 0xBA6A4C, true),
-        ("drink_south", 1, 35, 43, 0x7D3B14, true),
-        ("drink_south", 1, 43, 45, 0xBA6A4C, false),
-        ("drink_north", 0, 46, 42, 0xBA6A4C, true),
-        ("drink_north", 1, 44, 41, 0xBA6A4C, true),
-        ("drink_north", 1, 35, 44, 0xF4F4F4, false),
-        ("eat_east", 0, 43, 42, 0xE9A980, true),
-        ("eat_east", 0, 38, 44, 0xBA6A4C, false),
-        ("eat_east", 1, 44, 40, 0xBA6A4C, true),
-        ("eat_east", 1, 45, 42, 0xBA6A4C, true),
-        ("eat_east", 1, 40, 43, 0x7D3B14, false),
-        ("eat_east", 2, 41, 36, 0x9E2626, false),
-        ("eat_east", 2, 43, 39, 0xE9A980, true),
-        ("eat_east", 3, 44, 43, 0xDE8F5D, true),
-        ("eat_east", 4, 43, 44, 0xDE8F5D, true),
-        ("eat_south", 0, 37, 46, 0xDE8F5D, true),
-        ("eat_south", 1, 37, 44, 0xDE8F5D, false),
-        ("eat_south", 1, 36, 49, 0xBA6A4C, true),
-        ("eat_south", 2, 38, 40, 0xBA6A4C, true),
-        ("eat_south", 2, 40, 36, 0x9E2626, false),
-        ("eat_south", 3, 35, 43, 0x7D3B14, true),
-        ("eat_south", 4, 34, 47, 0x7D3B14, true),
-        ("eat_north", 1, 45, 42, 0xBA6A4C, true),
-        ("eat_north", 1, 35, 45, 0xF4F4F4, false),
-        ("blink_east", 0, 38, 36, 0xC2B9BE, false),
-        ("blink_east", 0, 37, 36, 0x6C2859, false),
+        ("action_east", 0, 41, 34, 0x9C5241, true),
+        ("action_east", 0, 40, 47, 0xE9A980, true),
+        ("action_east", 0, 40, 48, 0x7D3B14, true),
+        ("action_east", 0, 35, 47, 0xBA6A4C, false),
+        ("action_east", 0, 44, 47, 0xBA6A4C, false),
+        ("action_east", 1, 48, 43, 0xE9A980, true),
+        ("action_east", 1, 49, 43, 0xDE8F5D, true),
+        ("action_east", 1, 49, 45, 0xBA6A4C, true),
+        ("action_east", 1, 48, 45, 0x7D3B14, true),
+        ("action_east", 1, 40, 45, 0xBA6A4C, false),
+        ("action_east", 1, 36, 49, 0xBA6A4C, false),
+        ("action_east", 1, 42, 46, 0xBA6A4C, false),
+        ("action_east", 2, 44, 46, 0xBA6A4C, true),
+        ("action_east", 2, 45, 46, 0x7D3B14, true),
+        ("action_east", 2, 42, 46, 0xBA6A4C, false),
+        ("action_east", 6, 45, 46, 0xDE8F5D, true),
+        ("action_north", 0, 33, 43, 0xBA6A4C, true),
+        ("action_north", 1, 45, 41, 0xBA6A4C, true),
+        ("action_north", 1, 34, 44, 0xBA6A4C, true),
+        ("action_north", 2, 44, 39, 0xBA6A4C, true),
+        ("action_north", 2, 45, 40, 0x7D3B14, true),
+        ("action_north", 2, 34, 44, 0xBA6A4C, true),
+        ("action_north", 5, 46, 42, 0xBA6A4C, true),
+        ("action_north", 6, 32, 46, 0xE9A980, true),
+        ("action_south", 0, 45, 46, 0xBA6A4C, true),
+        ("action_south", 0, 33, 48, 0xBA6A4C, true),
+        ("action_south", 0, 37, 46, 0xBA6A4C, false),
+        ("action_south", 1, 44, 45, 0xBA6A4C, true),
+        ("action_south", 1, 45, 46, 0x7D3B14, true),
+        ("action_south", 1, 44, 49, 0xBA6A4C, false),
+        ("action_south", 2, 37, 47, 0xBA6A4C, true),
+        ("action_south", 2, 35, 47, 0xBA6A4C, false),
+        ("action_south", 4, 44, 50, 0xBA6A4C, false),
+        ("action_south", 6, 46, 47, 0x7D3B14, true),
+        ("kiss_east", 0, 34, 48, 0xBA6A4C, true),
+        ("kiss_east", 0, 42, 46, 0xBA6A4C, false),
+        ("kiss_east", 1, 41, 40, 0xDE8F5D, true),
+        ("kiss_east", 1, 43, 46, 0xBA6A4C, false),
+        ("kiss_east", 2, 43, 40, 0xBA6A4C, true),
+        ("kiss_east", 2, 35, 46, 0xBA6A4C, true),
+        ("kiss_east", 2, 37, 43, 0xBA6A4C, false),
+        ("kiss_east", 2, 36, 49, 0xBA6A4C, false),
+        ("kiss_east", 3, 42, 38, 0xE9A980, true),
+        ("sleep_east", 0, 40, 33, 0x9C5241, true),
+        ("sleep_east", 0, 44, 39, 0x7D3B14, true),
+        ("sleep_east", 0, 43, 41, 0xE9A980, true),
+        ("sleep_east", 0, 36, 45, 0xBA6A4C, false),
+        ("sleep_east", 0, 38, 45, 0xBA6A4C, false),
+        ("sleep_east", 0, 38, 46, 0x6A3126, false),
+        ("sleep_east", 0, 37, 36, 0x6C2859, false),
+        ("sleep_east", 0, 38, 37, 0x000000, false),
+        ("action_east", 1, 40, 41, 0x927D96, false),
+        ("action_north", 1, 39, 43, 0xC1BDC8, false),
+        ("action_east", 0, 39, 37, 0xECF0E9, false),
     ];
     let skin = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x9C5241, 0x7D3B14];
     let mut first_selection = None;
@@ -99,7 +106,7 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
             format!("{:x}", Sha256::digest(fs::read(original.join(a)).unwrap()))
         );
     }
-    for r in profile["regions"].as_array().unwrap().iter().take(84) {
+    for r in profile["regions"].as_array().unwrap().iter().take(95) {
         let a = r["asset"].as_str().unwrap();
         for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
             assert_eq!(
@@ -147,17 +154,11 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
         let mut selection = vec![];
         let mut changed = 0;
         for (name, frames) in [
-            ("blink_east", 3),
-            ("blink_south", 3),
-            ("drink_east", 3),
-            ("drink_north", 3),
-            ("drink_south", 3),
-            ("eat_east", 5),
-            ("eat_north", 3),
-            ("eat_south", 5),
-            ("sit_east", 1),
-            ("sit_north", 1),
-            ("sit_south", 1),
+            ("action_east", 7),
+            ("action_north", 7),
+            ("action_south", 7),
+            ("kiss_east", 4),
+            ("sleep_east", 1),
         ] {
             let a = asset(name);
             let before = image::open(original.join(&a)).unwrap().to_rgba8();
@@ -204,7 +205,7 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
             for (x, y, p) in before.enumerate_pixels() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
-                // Observed skin colors have 86 explicit uniform/gold-trim pixels excluded.
+                // Observed skin colors have 95 explicit uniform/gold-trim pixels excluded.
                 // This independent inventory catches omitted tiny components.
                 let index = skin
                     .iter()
@@ -219,28 +220,22 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
                 }
             }
             let expected_counts: &[usize] = match name {
-                "blink_east" => &[33, 40, 33],
-                "blink_south" => &[39, 46, 39],
-                "drink_east" => &[34, 40, 34],
-                "drink_north" => &[2, 3, 2],
-                "drink_south" => &[36, 45, 36],
-                "eat_east" => &[29, 36, 24, 35, 29],
-                "eat_north" => &[2, 3, 2],
-                "eat_south" => &[35, 37, 30, 46, 34],
-                "sit_east" => &[30],
-                "sit_north" => &[0],
-                "sit_south" => &[34],
+                "action_east" => &[31, 32, 31, 32, 31, 31, 32],
+                "action_north" => &[7, 2, 4, 2, 4, 5, 4],
+                "action_south" => &[36, 35, 35, 35, 35, 36, 38],
+                "kiss_east" => &[31, 35, 39, 39],
+                "sleep_east" => &[37],
                 _ => unreachable!(),
             };
             assert_eq!(counts, expected_counts, "skin inventory {name}");
         }
-        assert_eq!(changed, 868);
+        assert_eq!(changed, 679);
         if let Some(first) = &first_selection {
             assert_eq!(first, &selection);
         } else {
             first_selection = Some(selection);
         }
-        for r in profile["regions"].as_array().unwrap().iter().take(84) {
+        for r in profile["regions"].as_array().unwrap().iter().take(95) {
             let a = r["asset"].as_str().unwrap();
             for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
                 assert_eq!(
@@ -252,14 +247,76 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
             }
         }
     }
-    assert_eq!(prior_files, 840);
+    assert_eq!(prior_files, 950);
 }
 
 // Independent source-grid inventory: shared gold-trim and uniform pixels.
 fn is_trim(name: &str, frame: u32, x: u32, y: u32) -> bool {
     let points: &[(u32, u32)] = match (name, frame) {
-        ("blink_east", 0) => &[(43, 43), (38, 45), (40, 46), (41, 46), (43, 46)],
-        ("blink_south", 0) => &[
+        ("action_east", 0) => &[(35, 47), (44, 47)],
+        ("action_east", 5) => &[(35, 47), (44, 47)],
+        ("action_east", 1) => &[(40, 45), (42, 46), (43, 46), (45, 46), (37, 47), (36, 49)],
+        ("action_east", 3) => &[(40, 45), (42, 46), (43, 46), (45, 46), (37, 47), (36, 49)],
+        ("action_east", 2) => &[(40, 45), (42, 46), (37, 47), (36, 49)],
+        ("action_east", 4) => &[(40, 45), (42, 46), (37, 47), (36, 49)],
+        ("action_east", 6) => &[(38, 45), (40, 46), (41, 46), (43, 46)],
+        ("action_south", 0) => &[
+            (37, 46),
+            (42, 46),
+            (39, 47),
+            (40, 47),
+            (43, 47),
+            (42, 48),
+            (42, 49),
+        ],
+        ("action_south", 5) => &[
+            (37, 46),
+            (42, 46),
+            (39, 47),
+            (40, 47),
+            (43, 47),
+            (42, 48),
+            (42, 49),
+        ],
+        ("action_south", 1) => &[
+            (42, 45),
+            (39, 46),
+            (40, 46),
+            (43, 46),
+            (42, 47),
+            (42, 48),
+            (44, 49),
+            (44, 50),
+        ],
+        ("action_south", 3) => &[
+            (42, 45),
+            (39, 46),
+            (40, 46),
+            (43, 46),
+            (42, 47),
+            (42, 48),
+            (44, 49),
+            (44, 50),
+        ],
+        ("action_south", 2) => &[
+            (42, 45),
+            (43, 46),
+            (35, 47),
+            (42, 47),
+            (42, 48),
+            (44, 49),
+            (44, 50),
+        ],
+        ("action_south", 4) => &[
+            (42, 45),
+            (43, 46),
+            (35, 47),
+            (42, 47),
+            (42, 48),
+            (44, 49),
+            (44, 50),
+        ],
+        ("action_south", 6) => &[
             (37, 45),
             (42, 45),
             (39, 46),
@@ -268,39 +325,11 @@ fn is_trim(name: &str, frame: u32, x: u32, y: u32) -> bool {
             (42, 47),
             (42, 48),
         ],
-        ("drink_south", 0) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("blink_east", 1) => &[(43, 43), (38, 45), (40, 46), (41, 46), (43, 46)],
-        ("blink_south", 1) => &[
-            (37, 45),
-            (42, 45),
-            (39, 46),
-            (40, 46),
-            (43, 46),
-            (42, 47),
-            (42, 48),
-        ],
-        ("drink_south", 1) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("blink_east", 2) => &[(43, 43), (38, 45), (40, 46), (41, 46), (43, 46)],
-        ("blink_south", 2) => &[
-            (37, 45),
-            (42, 45),
-            (39, 46),
-            (40, 46),
-            (43, 46),
-            (42, 47),
-            (42, 48),
-        ],
-        ("drink_south", 2) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("sit_east", 0) => &[(38, 44)],
-        ("sit_south", 0) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("eat_east", 0) => &[(38, 44), (39, 44)],
-        ("eat_east", 1) => &[(38, 44), (39, 44), (40, 43)],
-        ("eat_east", 2) => &[(38, 44), (39, 44)],
-        ("eat_south", 0) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("eat_south", 2) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("eat_south", 4) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("eat_south", 1) => &[(37, 44), (42, 45), (43, 46), (43, 47)],
-        ("eat_south", 3) => &[(42, 45), (43, 46), (43, 47)],
+        ("kiss_east", 0) => &[(42, 46)],
+        ("kiss_east", 1) => &[(39, 46), (43, 46)],
+        ("kiss_east", 3) => &[(39, 46), (43, 46)],
+        ("kiss_east", 2) => &[(37, 43), (39, 45), (44, 45), (41, 46), (42, 46), (36, 49)],
+        ("sleep_east", 0) => &[(36, 45), (38, 45), (40, 46), (41, 46), (43, 46)],
         _ => &[],
     };
     points.contains(&(x, y))
