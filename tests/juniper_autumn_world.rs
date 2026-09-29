@@ -49,10 +49,10 @@ fn juniper_autumn_highlight_alias_preserves_every_previous_palette_role() {
 }
 
 #[test]
-#[ignore = "requires extracted/juniper-winter-specials-study and the retained Summer-injured Juniper bundle"]
+#[ignore = "requires extracted/juniper-winter-finish-study and the retained Summer-injured Juniper bundle"]
 fn juniper_autumn_world_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/juniper-winter-specials-study");
+    let original = root.join("extracted/juniper-winter-finish-study");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
