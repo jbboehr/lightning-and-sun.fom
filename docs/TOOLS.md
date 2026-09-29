@@ -193,7 +193,9 @@ sprite folders. [March's Winter injured animations](development/march-winter-inj
 add his final fourteen Winter strips. The [Beach idle/walk pilot](development/reina-juniper-march-beach-pilot.md)
 starts their Beach outfits. [Beach blinks, actions and kissing](development/reina-juniper-march-beach-actions.md)
 add six more strips each. [Beach bathing/swimming](development/reina-juniper-march-beach-swim.md)
-adds East/South strips and finishes March's Beach folder. Totals are now 260, 286 and 383,
+adds East/South strips and finishes March's Beach folder. [Beach completion](development/reina-juniper-beach-finish.md)
+adds Reina's seated poses and Juniper's special swimming/spell strips, finishing
+their Beach folders too. Totals are now 263, 290 and 383,
 using their extended
 `*-world-trial.json` sets. Their portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

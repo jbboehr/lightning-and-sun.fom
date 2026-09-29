@@ -3,12 +3,12 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires extracted/reina-beach-finish-study and the local accepted Reina world baseline"]
-fn reina_beach_swim_covers_face_and_preserves_water() {
+fn reina_beach_finish_covers_seated_skin_and_preserves_outfit_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/reina-beach-finish-study");
     let baseline =
-        root.join("generated/characters-reina-juniper-march-beach-actions-trial/characters/reina");
-    let set = std::env::var_os("FOM_REINA_BEACH_SWIM_PRESETS")
+        root.join("generated/characters-reina-juniper-march-beach-swim-trial/characters/reina");
+    let set = std::env::var_os("FOM_REINA_BEACH_FINISH_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/reina-world-trial.json"));
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
@@ -16,13 +16,13 @@ fn reina_beach_swim_covers_face_and_preserves_water() {
         &fs::read(root.join("palettes/profiles/reina-world-trial.json")).unwrap(),
     )
     .unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..258];
+    let prior = &profile["regions"].as_array().unwrap()[..260];
     let candidate_path = set
         .parent()
         .unwrap()
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
-    assert_eq!(&candidate["regions"].as_array().unwrap()[..258], prior);
+    assert_eq!(&candidate["regions"].as_array().unwrap()[..260], prior);
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("bundle");
     let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
@@ -40,74 +40,57 @@ fn reina_beach_swim_covers_face_and_preserves_water() {
         String::from_utf8_lossy(&result.stderr)
     );
     let source = [0xB36844, 0x8E4538, 0x712922, 0x571D1F];
-    // Fresh literal landmarks distinguish the bobbing face and submerged jaw
-    // boundary from hair, eyes, the waterline and disconnected splash droplets.
+    // Fresh literal landmarks distinguish the seated back, arms, hands and
+    // folded legs from all three swimsuit shades, sandal straps and hair.
     let landmarks = [
-        ("bath_swim_east", 0, 40, 50, 0xB36844, true),
-        ("bath_swim_east", 0, 39, 53, 0x8E4538, true),
-        ("bath_swim_east", 0, 38, 54, 0x571D1F, true),
-        ("bath_swim_east", 0, 40, 44, 0x63413B, false),
-        ("bath_swim_east", 0, 37, 51, 0x712922, true),
-        ("bath_swim_east", 0, 40, 55, 0x9DEBFC, false),
-        ("bath_swim_east", 0, 35, 56, 0x328BC9, false),
-        ("bath_swim_east", 1, 40, 50, 0xB36844, true),
-        ("bath_swim_east", 1, 39, 53, 0x8E4538, true),
-        ("bath_swim_east", 1, 38, 54, 0x571D1F, true),
-        ("bath_swim_east", 1, 40, 44, 0x63413B, false),
-        ("bath_swim_east", 1, 37, 51, 0x712922, true),
-        ("bath_swim_east", 1, 40, 55, 0x9DEBFC, false),
-        ("bath_swim_east", 1, 35, 56, 0x328BC9, false),
-        ("bath_swim_east", 2, 40, 51, 0xB36844, true),
-        ("bath_swim_east", 2, 39, 54, 0x8E4538, true),
-        ("bath_swim_east", 2, 38, 54, 0x712922, true),
-        ("bath_swim_east", 2, 40, 45, 0x63413B, false),
-        ("bath_swim_east", 2, 37, 52, 0x712922, true),
-        ("bath_swim_east", 2, 40, 55, 0x9DEBFC, false),
-        ("bath_swim_east", 2, 35, 56, 0x328BC9, false),
-        ("bath_swim_east", 3, 40, 51, 0xB36844, true),
-        ("bath_swim_east", 3, 39, 54, 0x8E4538, true),
-        ("bath_swim_east", 3, 38, 54, 0x712922, true),
-        ("bath_swim_east", 3, 40, 45, 0x63413B, false),
-        ("bath_swim_east", 3, 37, 52, 0x712922, true),
-        ("bath_swim_east", 3, 40, 55, 0x9DEBFC, false),
-        ("bath_swim_east", 3, 35, 56, 0x328BC9, false),
-        ("bath_swim_south", 0, 40, 50, 0xB36844, true),
-        ("bath_swim_south", 0, 39, 53, 0xB36844, true),
-        ("bath_swim_south", 0, 38, 54, 0x712922, true),
-        ("bath_swim_south", 0, 40, 44, 0x63413B, false),
-        ("bath_swim_south", 0, 37, 51, 0xECF0E9, false),
-        ("bath_swim_south", 0, 40, 55, 0x9DEBFC, false),
-        ("bath_swim_south", 0, 35, 56, 0x328BC9, false),
-        ("bath_swim_south", 1, 40, 50, 0xB36844, true),
-        ("bath_swim_south", 1, 39, 53, 0xB36844, true),
-        ("bath_swim_south", 1, 38, 54, 0x712922, true),
-        ("bath_swim_south", 1, 40, 44, 0x63413B, false),
-        ("bath_swim_south", 1, 37, 51, 0xECF0E9, false),
-        ("bath_swim_south", 1, 40, 55, 0x9DEBFC, false),
-        ("bath_swim_south", 1, 35, 56, 0x328BC9, false),
-        ("bath_swim_south", 2, 40, 51, 0xB36844, true),
-        ("bath_swim_south", 2, 39, 54, 0xB36844, true),
-        ("bath_swim_south", 2, 38, 54, 0x8E4538, true),
-        ("bath_swim_south", 2, 40, 45, 0x63413B, false),
-        ("bath_swim_south", 2, 37, 52, 0xECF0E9, false),
-        ("bath_swim_south", 2, 40, 55, 0x9DEBFC, false),
-        ("bath_swim_south", 2, 35, 56, 0x328BC9, false),
-        ("bath_swim_south", 3, 40, 51, 0xB36844, true),
-        ("bath_swim_south", 3, 39, 54, 0xB36844, true),
-        ("bath_swim_south", 3, 38, 54, 0x8E4538, true),
-        ("bath_swim_south", 3, 40, 45, 0x63413B, false),
-        ("bath_swim_south", 3, 37, 52, 0xECF0E9, false),
-        ("bath_swim_south", 3, 40, 55, 0x9DEBFC, false),
-        ("bath_swim_south", 3, 35, 56, 0x328BC9, false),
-        ("bath_swim_east", 0, 48, 59, 0x9DEBFC, false),
-        ("bath_swim_east", 2, 47, 57, 0x9DEBFC, false),
-        ("bath_swim_south", 0, 30, 59, 0x9DEBFC, false),
-        ("bath_swim_south", 2, 35, 60, 0x9DEBFC, false),
-        ("bath_swim_south", 0, 39, 54, 0x8E4538, true),
+        ("sit_east", 0, 40, 30, 0x63413B, false),
+        ("sit_east", 0, 39, 36, 0x000000, false),
+        ("sit_east", 0, 39, 40, 0x000000, false),
+        ("sit_east", 0, 39, 41, 0xB36844, true),
+        ("sit_east", 0, 38, 42, 0x30792E, false),
+        ("sit_east", 0, 39, 43, 0x9EF671, false),
+        ("sit_east", 0, 39, 45, 0x9EF671, false),
+        ("sit_east", 0, 39, 46, 0x30792E, false),
+        ("sit_east", 0, 35, 46, 0xB36844, true),
+        ("sit_east", 0, 35, 47, 0x571D1F, true),
+        ("sit_east", 0, 40, 48, 0x000000, false),
+        ("sit_north", 0, 40, 30, 0x63413B, false),
+        ("sit_north", 0, 39, 36, 0x452929, false),
+        ("sit_north", 0, 39, 40, 0x712922, true),
+        ("sit_north", 0, 39, 41, 0x47C744, false),
+        ("sit_north", 0, 38, 42, 0xB36844, true),
+        ("sit_north", 0, 39, 43, 0x9EF671, false),
+        ("sit_north", 0, 39, 45, 0xB36844, true),
+        ("sit_north", 0, 39, 46, 0x9EF671, false),
+        ("sit_north", 0, 35, 46, 0x8E4538, true),
+        ("sit_north", 0, 35, 47, 0x8E4538, true),
+        ("sit_north", 0, 40, 48, 0x000000, false),
+        ("sit_south", 0, 40, 30, 0x63413B, false),
+        ("sit_south", 0, 39, 36, 0xB36844, true),
+        ("sit_south", 0, 39, 40, 0x712922, true),
+        ("sit_south", 0, 39, 41, 0x8E4538, true),
+        ("sit_south", 0, 38, 42, 0x47C744, false),
+        ("sit_south", 0, 39, 43, 0x47C744, false),
+        ("sit_south", 0, 39, 45, 0xB36844, true),
+        ("sit_south", 0, 39, 46, 0x9EF671, false),
+        ("sit_south", 0, 35, 46, 0x8E4538, true),
+        ("sit_south", 0, 35, 47, 0x8E4538, true),
+        ("sit_south", 0, 40, 48, 0x000000, false),
+        ("sit_south", 0, 38, 49, 0xF5897F, false),
+        ("sit_south", 0, 38, 50, 0xB36844, true),
+        ("sit_east", 0, 42, 48, 0xF5897F, false),
+        ("sit_east", 0, 43, 48, 0x000000, false),
+        ("sit_east", 0, 45, 47, 0x000000, false),
+        ("sit_north", 0, 39, 42, 0xB36844, true),
+        ("sit_north", 0, 39, 44, 0x9EF671, false),
+        ("sit_south", 0, 39, 48, 0x000000, false),
+        ("sit_south", 0, 38, 43, 0x9EF671, false),
+        ("sit_east", 0, 41, 48, 0xBE5B52, false),
     ];
-    let cases: [(&str, &[usize]); 2] = [
-        ("bath_swim_east", &[30, 30, 25, 25]),
-        ("bath_swim_south", &[34, 34, 28, 28]),
+    let cases: [(&str, &[usize]); 3] = [
+        ("sit_east", &[63]),
+        ("sit_north", &[37]),
+        ("sit_south", &[80]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
@@ -149,7 +132,7 @@ fn reina_beach_swim_covers_face_and_preserves_water() {
                 mask.push(p != q);
                 if p != q {
                     let index = source.iter().position(|c| rgba(*c) == p.0).expect(
-                        "hair, water, splash droplets, eyes or another non-skin color changed",
+                        "hair, green swimsuit, coral sandal straps, eyes or another non-skin color changed",
                     );
                     assert_eq!(q.0, rgba(target[index]));
                     per_frame[x as usize / 80] += 1;

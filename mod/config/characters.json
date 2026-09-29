@@ -1141,7 +1141,10 @@
       "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_blink_south.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_kiss_east.png": "Default",
       "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_bath_swim_east.png": "Default",
-      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_bath_swim_south.png": "Default"
+      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_bath_swim_south.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_sit_east.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_sit_north.png": "Default",
+      "assets/animations/NPCs/Reina/Sprites/Beach/spr_npc_reina_beach_sit_south.png": "Default"
     },
     "hotkey": "HOME",
     "id": "reina",
@@ -1434,7 +1437,11 @@
       "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_blink_south.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_kiss_east.png": "Default",
       "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_bath_swim_east.png": "Default",
-      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_bath_swim_south.png": "Default"
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_beach_bath_swim_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_specialanimation_beach_swim_idle_east.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_specialanimation_beach_swim_idle_north.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_specialanimation_beach_swim_idle_south.png": "Default",
+      "assets/animations/NPCs/Juniper/Sprites/Beach/spr_npc_juniper_specialanimation_beach_swim_spell_cast_south.png": "Default"
     },
     "hotkey": "PAGE_DOWN",
     "id": "juniper",
