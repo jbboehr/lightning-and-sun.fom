@@ -2412,7 +2412,13 @@
       "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_action_north.png": "Default",
       "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_action_south.png": "Default",
       "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_kiss_east.png": "Default",
-      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_sleep_east.png": "Default"
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_sleep_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_specialanimation_spring_read_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_specialanimation_spring_read_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_specialanimation_spring_read_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_shocked_end_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_shocked_loop_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_spring_shocked_start_south.png": "Default"
     },
     "hotkey": "I",
     "id": "balor",
@@ -2533,7 +2539,13 @@
       "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_action_north.png": "Default",
       "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_action_south.png": "Default",
       "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_kiss_east.png": "Default",
-      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_sleep_east.png": "Default"
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_sleep_east.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_read_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_read_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_read_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_shocked_end_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_shocked_loop_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_spring_shocked_start_south.png": "Default"
     },
     "hotkey": "O",
     "id": "valen",
@@ -2640,7 +2652,13 @@
       "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_action_north.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_action_south.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_kiss_east.png": "Default",
-      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_sleep_east.png": "Default"
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_sleep_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_read_sit_end_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_read_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_read_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_shocked_end_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_shocked_loop_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_spring_shocked_start_south.png": "Default"
     },
     "hotkey": "J",
     "id": "eiland",

@@ -209,7 +209,8 @@ blinking, seated poses, general actions and kissing in their native directions.
 Home, Page Down and U cycle their palettes respectively.
 Balor, Valen and Eiland's Spring idle, walking, blinking, sitting, eating,
 drinking, general-action, sleeping and kissing sprites are included in their
-native directions. I, O and J cycle their
+native directions, along with Spring shocked reactions and seated reading.
+I, O and J cycle their
 palettes respectively, keeping their portraits and supported overworld sprites together.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth

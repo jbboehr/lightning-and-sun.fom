@@ -7,7 +7,11 @@ fn read(path: impl AsRef<Path>) -> Value {
 }
 
 fn asset(name: &str) -> String {
-    let prefix = "spring";
+    let prefix = if name.starts_with("read_sit") {
+        "specialanimation_spring"
+    } else {
+        "spring"
+    };
     format!("assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_{prefix}_{name}.png")
 }
 fn rgba(color: u32) -> [u8; 4] {
@@ -19,15 +23,15 @@ fn color(value: &Value) -> u32 {
 
 #[test]
 #[ignore = "requires 106 local animations in extracted/eiland-spring-reactions-study and the accepted earlier output baseline"]
-fn eiland_spring_standard_cover_moving_skin_and_preserve_materials() {
+fn eiland_spring_reactions_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/eiland-spring-reactions-study");
-    let baseline =
-        root.join("generated/characters-balor-valen-eiland-spring-actions-trial/characters/eiland");
-    let profile_path = std::env::var_os("FOM_EILAND_SPRING_STANDARD_PROFILE")
+    let baseline = root
+        .join("generated/characters-balor-valen-eiland-spring-standard-trial/characters/eiland");
+    let profile_path = std::env::var_os("FOM_EILAND_SPRING_REACTIONS_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/eiland-world-trial.json"));
-    let set_path = std::env::var_os("FOM_EILAND_SPRING_STANDARD_SET")
+    let set_path = std::env::var_os("FOM_EILAND_SPRING_REACTIONS_SET")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/eiland-world-trial.json"));
     let profile = read(&profile_path);
@@ -37,64 +41,55 @@ fn eiland_spring_standard_cover_moving_skin_and_preserve_materials() {
     let set = read(&set_path);
     let temp = tempfile::tempdir().unwrap();
     // Literal source-art landmarks distinguish moving fingers and fine face shading
-    // from gold trim, uniform, eye details and actual black mouth/eye details.
-    // At North action [34,44], the Summer source exposes the full hand;
-    // Spring leaves its upper edge visible beside the cape. Keep that skin mapped.
+    // from gold trim, uniform, eye details book covers/pages and red mouth/eye details.
     let landmarks = [
-        ("action_east", 0, 41, 34, 0x9C5241, true),
-        ("action_east", 0, 40, 47, 0xE9A980, true),
-        ("action_east", 0, 40, 48, 0x7D3B14, true),
-        ("action_east", 0, 35, 47, 0xBA6A4C, false),
-        ("action_east", 0, 44, 47, 0xBA6A4C, false),
-        ("action_east", 1, 48, 43, 0xE9A980, true),
-        ("action_east", 1, 49, 43, 0xDE8F5D, true),
-        ("action_east", 1, 49, 45, 0xBA6A4C, true),
-        ("action_east", 1, 48, 45, 0x7D3B14, true),
-        ("action_east", 1, 40, 45, 0xBA6A4C, false),
-        ("action_east", 1, 36, 49, 0xBA6A4C, false),
-        ("action_east", 1, 42, 46, 0xBA6A4C, false),
-        ("action_east", 2, 44, 46, 0xBA6A4C, true),
-        ("action_east", 2, 45, 46, 0x7D3B14, true),
-        ("action_east", 2, 42, 46, 0xBA6A4C, false),
-        ("action_east", 6, 45, 46, 0xDE8F5D, true),
-        ("action_north", 0, 33, 43, 0xBA6A4C, true),
-        ("action_north", 1, 45, 41, 0xBA6A4C, true),
-        ("action_north", 1, 34, 44, 0xBA6A4C, true),
-        ("action_north", 2, 44, 39, 0xBA6A4C, true),
-        ("action_north", 2, 45, 40, 0x7D3B14, true),
-        ("action_north", 2, 34, 44, 0xBA6A4C, true),
-        ("action_north", 5, 46, 42, 0xBA6A4C, true),
-        ("action_north", 6, 32, 46, 0xE9A980, true),
-        ("action_south", 0, 45, 46, 0xBA6A4C, true),
-        ("action_south", 0, 33, 48, 0xBA6A4C, true),
-        ("action_south", 0, 37, 46, 0xBA6A4C, false),
-        ("action_south", 1, 44, 45, 0xBA6A4C, true),
-        ("action_south", 1, 45, 46, 0x7D3B14, true),
-        ("action_south", 1, 44, 49, 0xBA6A4C, false),
-        ("action_south", 2, 37, 47, 0xBA6A4C, true),
-        ("action_south", 2, 35, 47, 0xBA6A4C, false),
-        ("action_south", 4, 44, 50, 0xBA6A4C, false),
-        ("action_south", 6, 46, 47, 0x7D3B14, true),
-        ("kiss_east", 0, 34, 48, 0xBA6A4C, true),
-        ("kiss_east", 0, 42, 46, 0xBA6A4C, false),
-        ("kiss_east", 1, 41, 40, 0xDE8F5D, true),
-        ("kiss_east", 1, 43, 46, 0xBA6A4C, false),
-        ("kiss_east", 2, 43, 40, 0xBA6A4C, true),
-        ("kiss_east", 2, 35, 46, 0xBA6A4C, true),
-        ("kiss_east", 2, 37, 43, 0xBA6A4C, false),
-        ("kiss_east", 2, 36, 49, 0xBA6A4C, false),
-        ("kiss_east", 3, 42, 38, 0xE9A980, true),
-        ("sleep_east", 0, 40, 33, 0x9C5241, true),
-        ("sleep_east", 0, 44, 39, 0x7D3B14, true),
-        ("sleep_east", 0, 43, 41, 0xE9A980, true),
-        ("sleep_east", 0, 36, 45, 0xBA6A4C, false),
-        ("sleep_east", 0, 38, 45, 0xBA6A4C, false),
-        ("sleep_east", 0, 38, 46, 0x6A3126, false),
-        ("sleep_east", 0, 37, 36, 0x6C2859, false),
-        ("sleep_east", 0, 38, 37, 0x000000, false),
-        ("action_east", 1, 40, 41, 0x927D96, false),
-        ("action_north", 1, 39, 43, 0xC1BDC8, false),
-        ("action_east", 0, 39, 37, 0xECF0E9, false),
+        ("read_sit_start_south", 0, 40, 33, 0x9C5241, true),
+        ("read_sit_start_south", 0, 33, 46, 0xDE8F5D, true),
+        ("read_sit_start_south", 0, 34, 47, 0x7D3B14, true),
+        ("read_sit_start_south", 0, 37, 44, 0xBA6A4C, false),
+        ("read_sit_start_south", 0, 43, 47, 0xBA6A4C, false),
+        ("read_sit_start_south", 1, 34, 46, 0xE9A980, true),
+        ("read_sit_start_south", 1, 35, 47, 0x7D3B14, true),
+        ("read_sit_start_south", 1, 44, 47, 0x7D3B14, true),
+        ("read_sit_start_south", 1, 40, 43, 0xF6E4D7, false),
+        ("read_sit_start_south", 1, 37, 42, 0x7BACB5, false),
+        ("read_sit_start_south", 2, 34, 46, 0xE9A980, true),
+        ("read_sit_start_south", 2, 44, 47, 0x7D3B14, true),
+        ("read_sit_start_south", 2, 39, 41, 0xBA6A4C, true),
+        ("read_sit_start_south", 2, 40, 44, 0xC9AF9C, false),
+        ("read_sit_start_south", 2, 38, 45, 0x5D878E, false),
+        ("read_sit_loop_south", 0, 40, 33, 0x9C5241, true),
+        ("read_sit_loop_south", 0, 38, 39, 0x7D3B14, true),
+        ("read_sit_loop_south", 0, 32, 44, 0xABD4CF, false),
+        ("read_sit_loop_south", 0, 40, 46, 0x5D878E, false),
+        ("read_sit_loop_south", 1, 39, 41, 0xBA6A4C, true),
+        ("read_sit_loop_south", 1, 40, 44, 0xFFFFFF, false),
+        ("read_sit_loop_south", 2, 38, 33, 0x9C5241, true),
+        ("read_sit_loop_south", 2, 41, 39, 0x7D3B14, true),
+        ("read_sit_loop_south", 2, 39, 44, 0x000000, false),
+        ("read_sit_loop_south", 3, 40, 38, 0xE9A980, true),
+        ("read_sit_end_south", 0, 34, 46, 0xE9A980, true),
+        ("read_sit_end_south", 0, 45, 47, 0xE9A980, true),
+        ("read_sit_end_south", 0, 39, 41, 0xBA6A4C, true),
+        ("read_sit_end_south", 0, 40, 43, 0xF6E4D7, false),
+        ("read_sit_end_south", 1, 38, 39, 0xDE8F5D, true),
+        ("read_sit_end_south", 1, 40, 43, 0xF6E4D7, false),
+        ("read_sit_end_south", 2, 34, 47, 0x7D3B14, true),
+        ("read_sit_end_south", 2, 43, 45, 0xBA6A4C, false),
+        ("shocked_start_south", 0, 32, 47, 0xE9A980, true),
+        ("shocked_start_south", 0, 39, 47, 0xBA6A4C, false),
+        ("shocked_end_south", 0, 46, 48, 0x7D3B14, true),
+        ("shocked_end_south", 0, 42, 49, 0xBA6A4C, false),
+        ("shocked_loop_south", 0, 32, 33, 0xBA6A4C, true),
+        ("shocked_loop_south", 0, 30, 34, 0xDE8F5D, true),
+        ("shocked_loop_south", 0, 48, 35, 0xE9A980, true),
+        ("shocked_loop_south", 0, 39, 31, 0x9C5241, true),
+        ("shocked_loop_south", 0, 39, 36, 0x410808, false),
+        ("shocked_loop_south", 0, 39, 37, 0x9E2626, false),
+        ("shocked_loop_south", 0, 37, 43, 0xBA6A4C, false),
+        ("shocked_loop_south", 0, 44, 46, 0xBA6A4C, false),
+        ("shocked_loop_south", 0, 37, 35, 0xECF0E9, false),
+        ("shocked_loop_south", 0, 33, 38, 0xEDE0EF, false),
     ];
     let skin = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x9C5241, 0x7D3B14];
     let mut first_selection = None;
@@ -106,7 +101,7 @@ fn eiland_spring_standard_cover_moving_skin_and_preserve_materials() {
             format!("{:x}", Sha256::digest(fs::read(original.join(a)).unwrap()))
         );
     }
-    for r in profile["regions"].as_array().unwrap().iter().take(95) {
+    for r in profile["regions"].as_array().unwrap().iter().take(100) {
         let a = r["asset"].as_str().unwrap();
         for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
             assert_eq!(
@@ -154,11 +149,12 @@ fn eiland_spring_standard_cover_moving_skin_and_preserve_materials() {
         let mut selection = vec![];
         let mut changed = 0;
         for (name, frames) in [
-            ("action_east", 7),
-            ("action_north", 7),
-            ("action_south", 7),
-            ("kiss_east", 4),
-            ("sleep_east", 1),
+            ("read_sit_end_south", 3),
+            ("read_sit_loop_south", 4),
+            ("read_sit_start_south", 3),
+            ("shocked_end_south", 1),
+            ("shocked_loop_south", 1),
+            ("shocked_start_south", 1),
         ] {
             let a = asset(name);
             let before = image::open(original.join(&a)).unwrap().to_rgba8();
@@ -205,7 +201,7 @@ fn eiland_spring_standard_cover_moving_skin_and_preserve_materials() {
             for (x, y, p) in before.enumerate_pixels() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
-                // Observed skin colors have 95 explicit uniform/gold-trim pixels excluded.
+                // Observed skin colors have 32 explicit uniform/gold-trim pixels excluded.
                 // This independent inventory catches omitted tiny components.
                 let index = skin
                     .iter()
@@ -220,22 +216,23 @@ fn eiland_spring_standard_cover_moving_skin_and_preserve_materials() {
                 }
             }
             let expected_counts: &[usize] = match name {
-                "action_east" => &[31, 32, 31, 32, 31, 31, 32],
-                "action_north" => &[7, 2, 4, 2, 4, 5, 4],
-                "action_south" => &[36, 35, 35, 35, 35, 36, 38],
-                "kiss_east" => &[31, 35, 39, 39],
-                "sleep_east" => &[37],
+                "read_sit_end_south" => &[40, 25, 31],
+                "read_sit_loop_south" => &[26, 34, 26, 34],
+                "read_sit_start_south" => &[31, 32, 33],
+                "shocked_end_south" => &[46],
+                "shocked_loop_south" => &[43],
+                "shocked_start_south" => &[46],
                 _ => unreachable!(),
             };
             assert_eq!(counts, expected_counts, "skin inventory {name}");
         }
-        assert_eq!(changed, 679);
+        assert_eq!(changed, 447);
         if let Some(first) = &first_selection {
             assert_eq!(first, &selection);
         } else {
             first_selection = Some(selection);
         }
-        for r in profile["regions"].as_array().unwrap().iter().take(95) {
+        for r in profile["regions"].as_array().unwrap().iter().take(100) {
             let a = r["asset"].as_str().unwrap();
             for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
                 assert_eq!(
@@ -247,20 +244,15 @@ fn eiland_spring_standard_cover_moving_skin_and_preserve_materials() {
             }
         }
     }
-    assert_eq!(prior_files, 950);
+    assert_eq!(prior_files, 1000);
 }
 
 // Independent source-grid inventory: shared gold-trim and uniform pixels.
 fn is_trim(name: &str, frame: u32, x: u32, y: u32) -> bool {
     let points: &[(u32, u32)] = match (name, frame) {
-        ("action_east", 0) => &[(35, 47), (44, 47)],
-        ("action_east", 5) => &[(35, 47), (44, 47)],
-        ("action_east", 1) => &[(40, 45), (42, 46), (43, 46), (45, 46), (37, 47), (36, 49)],
-        ("action_east", 3) => &[(40, 45), (42, 46), (43, 46), (45, 46), (37, 47), (36, 49)],
-        ("action_east", 2) => &[(40, 45), (42, 46), (37, 47), (36, 49)],
-        ("action_east", 4) => &[(40, 45), (42, 46), (37, 47), (36, 49)],
-        ("action_east", 6) => &[(38, 45), (40, 46), (41, 46), (43, 46)],
-        ("action_south", 0) => &[
+        ("read_sit_start_south", 0) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
+        ("read_sit_end_south", 2) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
+        ("shocked_start_south", 0) => &[
             (37, 46),
             (42, 46),
             (39, 47),
@@ -269,7 +261,7 @@ fn is_trim(name: &str, frame: u32, x: u32, y: u32) -> bool {
             (42, 48),
             (42, 49),
         ],
-        ("action_south", 5) => &[
+        ("shocked_end_south", 0) => &[
             (37, 46),
             (42, 46),
             (39, 47),
@@ -278,58 +270,16 @@ fn is_trim(name: &str, frame: u32, x: u32, y: u32) -> bool {
             (42, 48),
             (42, 49),
         ],
-        ("action_south", 1) => &[
-            (42, 45),
-            (39, 46),
-            (40, 46),
-            (43, 46),
-            (42, 47),
-            (42, 48),
-            (44, 49),
-            (44, 50),
-        ],
-        ("action_south", 3) => &[
-            (42, 45),
-            (39, 46),
-            (40, 46),
-            (43, 46),
-            (42, 47),
-            (42, 48),
-            (44, 49),
-            (44, 50),
-        ],
-        ("action_south", 2) => &[
+        ("shocked_loop_south", 0) => &[
+            (37, 43),
+            (42, 43),
+            (39, 44),
+            (40, 44),
+            (43, 44),
             (42, 45),
             (43, 46),
-            (35, 47),
-            (42, 47),
-            (42, 48),
-            (44, 49),
-            (44, 50),
+            (44, 46),
         ],
-        ("action_south", 4) => &[
-            (42, 45),
-            (43, 46),
-            (35, 47),
-            (42, 47),
-            (42, 48),
-            (44, 49),
-            (44, 50),
-        ],
-        ("action_south", 6) => &[
-            (37, 45),
-            (42, 45),
-            (39, 46),
-            (40, 46),
-            (43, 46),
-            (42, 47),
-            (42, 48),
-        ],
-        ("kiss_east", 0) => &[(42, 46)],
-        ("kiss_east", 1) => &[(39, 46), (43, 46)],
-        ("kiss_east", 3) => &[(39, 46), (43, 46)],
-        ("kiss_east", 2) => &[(37, 43), (39, 45), (44, 45), (41, 46), (42, 46), (36, 49)],
-        ("sleep_east", 0) => &[(36, 45), (38, 45), (40, 46), (41, 46), (43, 46)],
         _ => &[],
     };
     points.contains(&(x, y))

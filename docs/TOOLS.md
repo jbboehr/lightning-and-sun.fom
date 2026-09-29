@@ -204,7 +204,8 @@ using their extended
 The [Balor, Valen and Eiland Spring pilots](development/balor-valen-eiland-world.md)
 add six idle/walk strips each. Their [Spring everyday actions](development/balor-valen-eiland-spring-actions.md)
 add eleven blink/sit/eat/drink strips each. Their [Spring standard actions](development/balor-valen-eiland-spring-standard.md)
-add general actions, sleeping and kissing, bringing their totals to 132, 114 and 100 sources.
+add general actions, sleeping and kissing. Their [Spring reactions and reading](development/balor-valen-eiland-spring-reactions.md)
+add six strips each, bringing their totals to 138, 120 and 106 sources.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
