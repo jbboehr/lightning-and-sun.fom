@@ -2,10 +2,10 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/valen-summer-finish-study and the retained portrait Valen bundle"]
+#[ignore = "requires extracted/valen-autumn-world-study and the retained portrait Valen bundle"]
 fn valen_spring_world_covers_skin_and_preserves_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/valen-summer-finish-study");
+    let original = root.join("extracted/valen-autumn-world-study");
     let profile_path = root.join("palettes/profiles/valen-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);
@@ -266,7 +266,7 @@ fn valen_world_extends_portrait_roles_without_changing_them() {
     let old = read("palettes/profiles/valen-portraits.json");
     let profile = read("palettes/profiles/valen-world-trial.json");
     assert_eq!(old["regions"].as_array().unwrap().len(), 92);
-    assert_eq!(profile["regions"].as_array().unwrap().len(), 166);
+    assert_eq!(profile["regions"].as_array().unwrap().len(), 172);
     assert_eq!(
         &profile["regions"].as_array().unwrap()[..92],
         old["regions"].as_array().unwrap()

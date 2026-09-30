@@ -3,27 +3,27 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires extracted/eiland-summer-magnify-study and the local accepted Eiland world baseline"]
-fn eiland_summer_writing_covers_skin_and_preserves_materials() {
+fn eiland_summer_magnify_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/eiland-summer-magnify-study");
     let baseline = root.join(
-        "generated/characters-balor-autumn-valen-writing-eiland-standard-trial/characters/eiland",
+        "generated/characters-balor-autumn-actions-valen-heal-eiland-writing-trial/characters/eiland",
     );
-    let set = std::env::var_os("FOM_EILAND_SUMMER_WRITING_PRESETS")
+    let set = std::env::var_os("FOM_EILAND_SUMMER_MAGNIFY_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/eiland-world-trial.json"));
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
-    let profile_path = std::env::var_os("FOM_EILAND_SUMMER_WRITING_PROFILE")
+    let profile_path = std::env::var_os("FOM_EILAND_SUMMER_MAGNIFY_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/eiland-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile_path).unwrap()).unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..147];
+    let prior = &profile["regions"].as_array().unwrap()[..156];
     let candidate_path = set
         .parent()
         .unwrap()
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
-    assert_eq!(&candidate["regions"].as_array().unwrap()[..147], prior);
+    assert_eq!(&candidate["regions"].as_array().unwrap()[..156], prior);
     assert_eq!(candidate["regions"].as_array().unwrap().len(), 162);
     assert_eq!(candidate["source_colors"], profile["source_colors"]);
     assert_eq!(candidate["color_groups"], profile["color_groups"]);
@@ -44,101 +44,93 @@ fn eiland_summer_writing_covers_skin_and_preserves_materials() {
         String::from_utf8_lossy(&result.stderr)
     );
     let source = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x9C5241, 0x7D3B14];
-    // Literal source-grid landmarks cover skin and protected materials independently
-    // of recipe seeds. Per-frame counts guard moving and briefly exposed skin.
+    // Literal source-grid landmarks distinguish skin from protected materials.
+    // Per-frame counts guard moving and briefly exposed skin.
     let landmarks = [
-        ("read_sit_end_south", 0, 46, 46, 0x000000, false),
-        ("read_sit_end_south", 0, 37, 44, 0x405F70, false),
-        ("read_sit_end_south", 0, 44, 45, 0x5D878E, false),
-        ("read_sit_end_south", 0, 37, 35, 0x6C2859, false),
-        ("read_sit_end_south", 0, 35, 44, 0x7BACB5, false),
-        ("read_sit_end_south", 0, 35, 47, 0x7D3B14, true),
-        ("read_sit_end_south", 0, 41, 50, 0x927D96, false),
-        ("read_sit_end_south", 0, 40, 34, 0x9C5241, true),
-        ("read_sit_end_south", 0, 38, 33, 0xA54E7F, false),
-        ("read_sit_end_south", 0, 42, 45, 0xABD4CF, false),
-        ("read_sit_end_south", 0, 39, 41, 0xBA6A4C, true),
-        ("read_sit_end_south", 0, 42, 49, 0xC1BDC8, false),
-        ("read_sit_end_south", 0, 38, 44, 0xC9AF9C, false),
-        ("read_sit_end_south", 0, 40, 40, 0xDE8F5D, true),
-        ("read_sit_end_south", 0, 36, 33, 0xE797AC, false),
-        ("read_sit_end_south", 0, 34, 47, 0xE9A980, true),
-        ("read_sit_end_south", 0, 38, 42, 0xF6E4D7, false),
-        ("read_sit_end_south", 0, 41, 33, 0xFCDAE0, false),
-        ("read_sit_end_south", 0, 43, 32, 0xFFFFFF, false),
-        ("write_loop_south", 0, 45, 47, 0x000000, false),
-        ("write_loop_south", 0, 41, 40, 0x533061, false),
-        ("write_loop_south", 0, 43, 46, 0x57342B, false),
-        ("write_loop_south", 0, 37, 36, 0x6C2859, false),
-        ("write_loop_south", 0, 41, 41, 0x724E80, false),
-        ("write_loop_south", 0, 42, 50, 0x756279, false),
-        ("write_loop_south", 0, 39, 40, 0x7D3B14, true),
-        ("write_loop_south", 0, 37, 53, 0x927D96, false),
-        ("write_loop_south", 0, 41, 33, 0x9C5241, true),
-        ("write_loop_south", 0, 39, 32, 0xA54E7F, false),
-        ("write_loop_south", 0, 43, 36, 0xA59DA2, false),
-        ("write_loop_south", 0, 43, 45, 0xB28159, false),
-        ("write_loop_south", 0, 36, 46, 0xBA6A4C, true),
-        ("write_loop_south", 0, 36, 44, 0xBBB5C7, false),
-        ("write_loop_south", 0, 37, 52, 0xC1BDC8, false),
-        ("write_loop_south", 0, 38, 36, 0xC2B9BE, false),
-        ("write_loop_south", 0, 39, 47, 0xC3D1DD, false),
-        ("write_loop_south", 0, 39, 43, 0xD36A0E, false),
-        ("write_loop_south", 0, 41, 43, 0xDA8B36, false),
-        ("write_loop_south", 0, 42, 42, 0xDB5C81, false),
-        ("write_loop_south", 0, 41, 47, 0xDE8F5D, true),
-        ("write_loop_south", 0, 37, 32, 0xE797AC, false),
-        ("write_loop_south", 0, 42, 47, 0xE9A980, true),
-        ("write_loop_south", 0, 43, 37, 0xECF0E9, false),
-        ("write_loop_south", 0, 41, 51, 0xEDE0EF, false),
-        ("write_loop_south", 0, 41, 45, 0xF5F5F5, false),
-        ("write_loop_south", 0, 38, 43, 0xF9AB6C, false),
-        ("write_loop_south", 0, 41, 42, 0xF9C94D, false),
-        ("write_loop_south", 0, 39, 45, 0xFAB680, false),
-        ("write_loop_south", 0, 42, 32, 0xFCDAE0, false),
-        ("write_loop_south", 0, 39, 44, 0xFFD8D1, false),
-        ("write_loop_south", 0, 44, 31, 0xFFFFFF, false),
-        ("write_start_south", 0, 42, 48, 0x000000, false),
-        ("write_start_south", 0, 39, 47, 0x533061, false),
-        ("write_start_south", 0, 34, 49, 0x663409, false),
-        ("write_start_south", 0, 36, 37, 0x6C2859, false),
-        ("write_start_south", 0, 37, 45, 0x724E80, false),
-        ("write_start_south", 0, 42, 51, 0x756279, false),
-        ("write_start_south", 0, 42, 40, 0x7D3B14, true),
-        ("write_start_south", 0, 38, 51, 0x927D96, false),
-        ("write_start_south", 0, 40, 34, 0x9C5241, true),
-        ("write_start_south", 0, 42, 44, 0xA54E7F, false),
-        ("write_start_south", 0, 44, 48, 0xB28159, false),
-        ("write_start_south", 0, 38, 46, 0xB475BA, false),
-        ("write_start_south", 0, 39, 41, 0xBA6A4C, true),
-        ("write_start_south", 0, 44, 45, 0xBBB5C7, false),
-        ("write_start_south", 0, 42, 52, 0xC1BDC8, false),
-        ("write_start_south", 0, 42, 49, 0xC3D1DD, false),
-        ("write_start_south", 0, 35, 46, 0xD36A0E, false),
-        ("write_start_south", 0, 38, 44, 0xDA8B36, false),
-        ("write_start_south", 0, 36, 44, 0xDB5C81, false),
-        ("write_start_south", 0, 39, 42, 0xDE8F5D, true),
-        ("write_start_south", 0, 36, 33, 0xE797AC, false),
-        ("write_start_south", 0, 40, 37, 0xE9A980, true),
-        ("write_start_south", 0, 41, 52, 0xEDE0EF, false),
-        ("write_start_south", 0, 44, 47, 0xF5F5F5, false),
-        ("write_start_south", 0, 34, 46, 0xF9AB6C, false),
-        ("write_start_south", 0, 41, 45, 0xF9C94D, false),
-        ("write_start_south", 0, 35, 48, 0xFAB680, false),
-        ("write_start_south", 0, 41, 33, 0xFCDAE0, false),
-        ("write_start_south", 0, 34, 48, 0xFFD8D1, false),
-        ("write_start_south", 0, 43, 32, 0xFFFFFF, false),
+        ("magnify_end_east", 0, 45, 47, 0x000000, false),
+        ("magnify_end_east", 0, 39, 37, 0x488DE1, false),
+        ("magnify_end_east", 0, 41, 46, 0x533061, false),
+        ("magnify_end_east", 0, 39, 33, 0x6C2859, false),
+        ("magnify_end_east", 0, 37, 45, 0x724E80, false),
+        ("magnify_end_east", 0, 39, 38, 0x74D2FF, false),
+        ("magnify_end_east", 0, 41, 50, 0x756279, false),
+        ("magnify_end_east", 0, 41, 49, 0x927D96, false),
+        ("magnify_end_east", 0, 41, 33, 0x9C5241, true),
+        ("magnify_end_east", 0, 43, 43, 0xA54E7F, false),
+        ("magnify_end_east", 0, 36, 45, 0xB475BA, false),
+        ("magnify_end_east", 0, 38, 44, 0xBA6A4C, true),
+        ("magnify_end_east", 0, 44, 44, 0xBBB5C7, false),
+        ("magnify_end_east", 0, 36, 37, 0xBE6D44, false),
+        ("magnify_end_east", 0, 38, 52, 0xC1BDC8, false),
+        ("magnify_end_east", 0, 42, 35, 0xC2B9BE, false),
+        ("magnify_end_east", 0, 39, 48, 0xDA8B36, false),
+        ("magnify_end_east", 0, 43, 42, 0xDB5C81, false),
+        ("magnify_end_east", 0, 39, 43, 0xDE8F5D, true),
+        ("magnify_end_east", 0, 37, 32, 0xE797AC, false),
+        ("magnify_end_east", 0, 39, 42, 0xE9A980, true),
+        ("magnify_end_east", 0, 43, 37, 0xECF0E9, false),
+        ("magnify_end_east", 0, 42, 51, 0xEDE0EF, false),
+        ("magnify_end_east", 0, 41, 45, 0xF9C94D, false),
+        ("magnify_end_east", 0, 42, 32, 0xFCDAE0, false),
+        ("magnify_end_east", 0, 38, 40, 0xFFCF36, false),
+        ("magnify_end_east", 0, 37, 36, 0xFFF672, false),
+        ("magnify_end_east", 0, 36, 32, 0xFFFFFF, false),
+        ("magnify_loop_south", 0, 34, 47, 0x000000, false),
+        ("magnify_loop_south", 0, 40, 39, 0x488DE1, false),
+        ("magnify_loop_south", 0, 42, 47, 0x533061, false),
+        ("magnify_loop_south", 0, 36, 36, 0x6C2859, false),
+        ("magnify_loop_south", 0, 42, 46, 0x724E80, false),
+        ("magnify_loop_south", 0, 40, 38, 0x74D2FF, false),
+        ("magnify_loop_south", 0, 42, 51, 0x756279, false),
+        ("magnify_loop_south", 0, 34, 46, 0x7D3B14, true),
+        ("magnify_loop_south", 0, 38, 51, 0x927D96, false),
+        ("magnify_loop_south", 0, 40, 34, 0x9C5241, true),
+        ("magnify_loop_south", 0, 37, 44, 0xA54E7F, false),
+        ("magnify_loop_south", 0, 38, 46, 0xB475BA, false),
+        ("magnify_loop_south", 0, 39, 41, 0xBA6A4C, true),
+        ("magnify_loop_south", 0, 42, 44, 0xBBB5C7, false),
+        ("magnify_loop_south", 0, 42, 52, 0xC1BDC8, false),
+        ("magnify_loop_south", 0, 38, 49, 0xDA8B36, false),
+        ("magnify_loop_south", 0, 37, 43, 0xDB5C81, false),
+        ("magnify_loop_south", 0, 34, 45, 0xDE8F5D, true),
+        ("magnify_loop_south", 0, 38, 32, 0xE797AC, false),
+        ("magnify_loop_south", 0, 33, 45, 0xE9A980, true),
+        ("magnify_loop_south", 0, 38, 52, 0xEDE0EF, false),
+        ("magnify_loop_south", 0, 39, 46, 0xF9C94D, false),
+        ("magnify_loop_south", 0, 41, 33, 0xFCDAE0, false),
+        ("magnify_loop_south", 0, 42, 40, 0xFFCF36, false),
+        ("magnify_loop_south", 0, 39, 37, 0xFFF672, false),
+        ("magnify_loop_south", 0, 35, 33, 0xFFFFFF, false),
+        ("magnify_start_south", 0, 35, 48, 0x000000, false),
+        ("magnify_start_south", 0, 41, 47, 0x533061, false),
+        ("magnify_start_south", 0, 36, 37, 0x6C2859, false),
+        ("magnify_start_south", 0, 37, 45, 0x724E80, false),
+        ("magnify_start_south", 0, 42, 51, 0x756279, false),
+        ("magnify_start_south", 0, 42, 40, 0x7D3B14, true),
+        ("magnify_start_south", 0, 38, 51, 0x927D96, false),
+        ("magnify_start_south", 0, 40, 34, 0x9C5241, true),
+        ("magnify_start_south", 0, 37, 44, 0xA54E7F, false),
+        ("magnify_start_south", 0, 38, 46, 0xB475BA, false),
+        ("magnify_start_south", 0, 40, 41, 0xBA6A4C, true),
+        ("magnify_start_south", 0, 44, 44, 0xBBB5C7, false),
+        ("magnify_start_south", 0, 42, 52, 0xC1BDC8, false),
+        ("magnify_start_south", 0, 41, 44, 0xDA8B36, false),
+        ("magnify_start_south", 0, 43, 43, 0xDB5C81, false),
+        ("magnify_start_south", 0, 40, 42, 0xDE8F5D, true),
+        ("magnify_start_south", 0, 36, 33, 0xE797AC, false),
+        ("magnify_start_south", 0, 35, 46, 0xE9A980, true),
+        ("magnify_start_south", 0, 38, 52, 0xEDE0EF, false),
+        ("magnify_start_south", 0, 41, 45, 0xF9C94D, false),
+        ("magnify_start_south", 0, 41, 33, 0xFCDAE0, false),
+        ("magnify_start_south", 0, 43, 32, 0xFFFFFF, false),
     ];
     let cases: &[(&str, &[usize])] = &[
-        ("read_sit_end_south", &[40, 25, 35]),
-        ("read_sit_loop_south", &[27, 36, 27, 36]),
-        ("read_sit_start_south", &[35, 32, 33]),
-        ("write_end_south", &[33, 36]),
-        ("write_loop_south", &[38, 40, 39, 39]),
-        ("write_sit_end_south", &[33, 36]),
-        ("write_sit_loop_south", &[37, 39, 38, 38]),
-        ("write_sit_start_south", &[36, 33]),
-        ("write_start_south", &[36, 33]),
+        ("magnify_end_east", &[22, 34]),
+        ("magnify_end_south", &[43, 43]),
+        ("magnify_loop_east", &[35]),
+        ("magnify_loop_south", &[25]),
+        ("magnify_start_east", &[42, 28, 28]),
+        ("magnify_start_south", &[48, 51, 45]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;

@@ -2,10 +2,10 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/balor-autumn-actions-study and the local accepted Balor portrait baseline"]
+#[ignore = "requires extracted/balor-autumn-standard-study and the local accepted Balor portrait baseline"]
 fn balor_world_covers_skin_and_preserves_outfit_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/balor-autumn-actions-study");
+    let original = root.join("extracted/balor-autumn-standard-study");
     let baseline =
         root.join("generated/characters-reina-juniper-march-wedding-finish-trial/characters/balor");
     let set = std::env::var_os("FOM_BALOR_WORLD_PRESETS")
@@ -23,7 +23,7 @@ fn balor_world_covers_skin_and_preserves_outfit_materials() {
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
     assert_eq!(&candidate["regions"].as_array().unwrap()[..110], prior);
-    assert_eq!(candidate["regions"].as_array().unwrap().len(), 190);
+    assert_eq!(candidate["regions"].as_array().unwrap().len(), 195);
     assert_eq!(
         &candidate["source_colors"].as_array().unwrap()[..7],
         profile["source_colors"].as_array().unwrap()

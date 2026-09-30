@@ -229,6 +229,10 @@ The [Autumn actions and Summer healing/writing batch](development/balor-autumn-a
 adds Balor's Autumn blink/sit/eat/drink, finishes Valen's Summer healing, and
 adds Eiland's Summer reading/writing. Their totals are 190, 166 and 156 sources,
 with 81 new review cases.
+The [Autumn actions and Summer magnifying-glass batch](development/balor-valen-autumn-eiland-summer-magnify.md)
+adds Balor's Autumn general actions/sleep/kiss, Valen's Autumn idle/walk, and
+Eiland's Summer magnifying-glass cycles. Their totals are 195, 172 and 162 sources,
+with 76 new review cases. Valen's covered North-facing Autumn sprites stay unchanged.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

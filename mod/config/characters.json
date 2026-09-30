@@ -2470,7 +2470,12 @@
       "assets/animations/NPCs/Balor/Sprites/Autumn/spr_npc_balor_autumn_eat_south.png": "Default",
       "assets/animations/NPCs/Balor/Sprites/Autumn/spr_npc_balor_autumn_sit_east.png": "Default",
       "assets/animations/NPCs/Balor/Sprites/Autumn/spr_npc_balor_autumn_sit_north.png": "Default",
-      "assets/animations/NPCs/Balor/Sprites/Autumn/spr_npc_balor_autumn_sit_south.png": "Default"
+      "assets/animations/NPCs/Balor/Sprites/Autumn/spr_npc_balor_autumn_sit_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Autumn/spr_npc_balor_autumn_action_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Autumn/spr_npc_balor_autumn_action_north.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Autumn/spr_npc_balor_autumn_action_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Autumn/spr_npc_balor_autumn_kiss_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Autumn/spr_npc_balor_autumn_sleep_east.png": "Default"
     },
     "hotkey": "I",
     "id": "balor",
@@ -2643,7 +2648,13 @@
       "assets/animations/NPCs/Valen/Sprites/Summer/spr_npc_valen_specialanimation_summer_write_start_south.png": "Default",
       "assets/animations/NPCs/Valen/Sprites/Summer/spr_npc_valen_specialanimation_summer_heal_end_east.png": "Default",
       "assets/animations/NPCs/Valen/Sprites/Summer/spr_npc_valen_specialanimation_summer_heal_loop_east.png": "Default",
-      "assets/animations/NPCs/Valen/Sprites/Summer/spr_npc_valen_specialanimation_summer_heal_start_east.png": "Default"
+      "assets/animations/NPCs/Valen/Sprites/Summer/spr_npc_valen_specialanimation_summer_heal_start_east.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Autumn/spr_npc_valen_autumn_idle_east.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Autumn/spr_npc_valen_autumn_idle_north.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Autumn/spr_npc_valen_autumn_idle_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Autumn/spr_npc_valen_autumn_walk_east.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Autumn/spr_npc_valen_autumn_walk_north.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Autumn/spr_npc_valen_autumn_walk_south.png": "Default"
     },
     "hotkey": "O",
     "id": "valen",
@@ -2806,7 +2817,13 @@
       "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_write_sit_end_south.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_write_sit_loop_south.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_write_sit_start_south.png": "Default",
-      "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_write_start_south.png": "Default"
+      "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_write_start_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_magnify_end_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_magnify_end_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_magnify_loop_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_magnify_loop_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_magnify_start_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Summer/spr_npc_eiland_specialanimation_summer_magnify_start_south.png": "Default"
     },
     "hotkey": "J",
     "id": "eiland",
