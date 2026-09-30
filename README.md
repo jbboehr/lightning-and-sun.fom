@@ -210,6 +210,9 @@ Home, Page Down and U cycle their palettes respectively.
 Balor, Valen and Eiland's Spring idle, walking, blinking, sitting, eating,
 drinking, general-action, sleeping and kissing sprites are included in their
 native directions, along with Spring shocked reactions and seated reading.
+Balor also includes his Spring coin, gem, hair-flip and jump animations,
+completing that sprite folder. Valen and Eiland also include standing and
+seated writing.
 I, O and J cycle their
 palettes respectively, keeping their portraits and supported overworld sprites together.
 Other unlisted overworld animations remain original.
