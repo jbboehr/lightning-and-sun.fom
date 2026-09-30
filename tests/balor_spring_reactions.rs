@@ -2,10 +2,10 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/balor-summer-standard-study and the local accepted Balor world baseline"]
+#[ignore = "requires extracted/balor-summer-finish-study and the local accepted Balor world baseline"]
 fn balor_spring_reactions_cover_skin_and_preserve_book() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/balor-summer-standard-study");
+    let original = root.join("extracted/balor-summer-finish-study");
     let baseline =
         root.join("generated/characters-balor-valen-eiland-spring-standard-trial/characters/balor");
     let set = std::env::var_os("FOM_BALOR_SPRING_REACTIONS_PRESETS")
@@ -23,7 +23,7 @@ fn balor_spring_reactions_cover_skin_and_preserve_book() {
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
     assert_eq!(&candidate["regions"].as_array().unwrap()[..132], prior);
-    assert_eq!(candidate["regions"].as_array().unwrap().len(), 166);
+    assert_eq!(candidate["regions"].as_array().unwrap().len(), 173);
     assert_eq!(candidate["source_colors"], profile["source_colors"]);
     assert_eq!(candidate["color_groups"], profile["color_groups"]);
     let temp = tempfile::tempdir().unwrap();

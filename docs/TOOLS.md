@@ -217,6 +217,10 @@ all three Spring sprite folders are complete.
 The [Summer expansion](development/balor-valen-eiland-summer-expansion.md)
 adds Balor's general actions, sleep and kiss; Valen's everyday actions; and
 Eiland's idle/walk pilot. Their totals are 166, 149 and 131 sources.
+The [Summer finish and actions](development/balor-summer-finish-valen-eiland-actions.md) finishes Balor's
+Summer folder with reading, coin flip and gem inspection, adds Valen's general
+actions/sleep/kiss and Eiland's blink/sit/eat/drink. Their totals are now 173,
+154 and 142 sources; the complete offline review covers all 123 cases.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

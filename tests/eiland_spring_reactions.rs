@@ -22,10 +22,10 @@ fn color(value: &Value) -> u32 {
 }
 
 #[test]
-#[ignore = "requires 131 local animations in extracted/eiland-summer-world-study and the accepted earlier output baseline"]
+#[ignore = "requires 142 local animations in extracted/eiland-summer-actions-study and the accepted earlier output baseline"]
 fn eiland_spring_reactions_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/eiland-summer-world-study");
+    let original = root.join("extracted/eiland-summer-actions-study");
     let baseline = root
         .join("generated/characters-balor-valen-eiland-spring-standard-trial/characters/eiland");
     let profile_path = std::env::var_os("FOM_EILAND_SPRING_REACTIONS_PROFILE")
@@ -35,7 +35,7 @@ fn eiland_spring_reactions_cover_moving_skin_and_preserve_materials() {
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/eiland-world-trial.json"));
     let profile = read(&profile_path);
-    assert_eq!(profile["regions"].as_array().unwrap().len(), 131);
+    assert_eq!(profile["regions"].as_array().unwrap().len(), 142);
     assert_eq!(profile["source_colors"].as_array().unwrap().len(), 12);
     assert_eq!(profile["color_groups"].as_array().unwrap().len(), 7);
     let set = read(&set_path);
