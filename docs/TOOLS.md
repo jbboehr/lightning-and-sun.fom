@@ -210,6 +210,10 @@ finish Balor's Spring folder and add standing/seated writing for Valen and Eilan
 bringing their totals to 144, 126 and 112 sources. The [next world batch](development/balor-summer-valen-heal-eiland-magnify.md)
 adds Balor's Summer idle/walk, Valen's remaining Spring healing/charm and Eiland's
 Spring magnifying-glass sprites, bringing their totals to 150, 132 and 118 sources.
+The [Summer actions and Spring finale](development/balor-valen-summer-eiland-spring-finish.md)
+adds Balor's Summer blink/sit/eat/drink, Valen's Summer idle/walk and Eiland's
+remaining Spring princely-pose/tool sprites. Their totals are 161, 138 and 125 sources;
+all three Spring sprite folders are complete.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
-Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 150,
-Valen's 132, Eiland's 118, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
+Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 161,
+Valen's 138, Eiland's 125, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 14,340 variant strips from 3,585 sources. Caldarus's three
+variants per source give 14,436 variant strips from 3,609 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -274,6 +274,11 @@ adds six strips each: Balor's Summer idle/walk, Valen's remaining Spring healing
 and charm cycles, and Eiland's Spring magnifying-glass cycle. All 42 source
 frames and 17 native West mirrors are included in the offline review. Valen's
 Spring folder is complete; the user approved the offline artwork on 2026-09-29.
+The [Summer actions and Spring finale](balor-valen-summer-eiland-spring-finish.md)
+adds Balor's Summer blink/sit/eat/drink, Valen's Summer idle/walk and Eiland's
+remaining Spring princely-pose/tool sprites. All 87 source frames and 46 native
+West mirrors are included in the offline review. Eiland's Spring folder is
+complete; the user approved the offline artwork on 2026-09-29.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -512,13 +517,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Balor's Summer idle/walk, Valen's Spring
-healing/charm and Eiland's Spring magnifying-glass sprites. It is in
-`generated/characters-balor-summer-valen-heal-eiland-magnify-trial/package`.
-It is verified with MOMI in the isolated `tmp/bve-summer-heal-magnify-5d672e3-playtest` lab.
+The latest combined package adds Balor's Summer blink/sit/eat/drink, Valen's Summer
+idle/walk and Eiland's remaining Spring princely-pose/tool sprites. It is in
+`generated/characters-balor-valen-summer-eiland-spring-finish-trial/package`.
+It is verified with MOMI in the isolated `tmp/bve-summer-actions-spring-finish-7117091-playtest` lab.
 It has no preview helper and did not replace the desktop launcher. Use the
-[complete offline review](../../generated/balor-summer-valen-heal-eiland-magnify-preview/index.html)
-to inspect all 42 source frames and 17 native West mirrors. This combined index
+[complete offline review](../../generated/balor-valen-summer-eiland-spring-finish-preview/index.html)
+to inspect all 87 source frames and 46 native West mirrors. This combined index
 links all three character galleries; their separate folders are part of the same review.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
