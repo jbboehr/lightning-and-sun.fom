@@ -3,27 +3,27 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires extracted/valen-autumn-actions-study and the local accepted Valen world baseline"]
-fn valen_autumn_world_covers_skin_and_preserves_materials() {
+fn valen_autumn_actions_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/valen-autumn-actions-study");
     let baseline = root.join(
-        "generated/characters-balor-autumn-actions-valen-heal-eiland-writing-trial/characters/valen",
+        "generated/characters-balor-valen-autumn-eiland-summer-magnify-trial/characters/valen",
     );
-    let set = std::env::var_os("FOM_VALEN_AUTUMN_WORLD_PRESETS")
+    let set = std::env::var_os("FOM_VALEN_AUTUMN_ACTIONS_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/valen-world-trial.json"));
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
-    let profile_path = std::env::var_os("FOM_VALEN_AUTUMN_WORLD_PROFILE")
+    let profile_path = std::env::var_os("FOM_VALEN_AUTUMN_ACTIONS_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/valen-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile_path).unwrap()).unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..166];
+    let prior = &profile["regions"].as_array().unwrap()[..172];
     let candidate_path = set
         .parent()
         .unwrap()
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
-    assert_eq!(&candidate["regions"].as_array().unwrap()[..166], prior);
+    assert_eq!(&candidate["regions"].as_array().unwrap()[..172], prior);
     assert_eq!(candidate["regions"].as_array().unwrap().len(), 183);
     assert_eq!(candidate["source_colors"], profile["source_colors"]);
     assert_eq!(candidate["color_groups"], profile["color_groups"]);
@@ -44,87 +44,120 @@ fn valen_autumn_world_covers_skin_and_preserves_materials() {
         String::from_utf8_lossy(&result.stderr)
     );
     let source = [0xFBD3A7, 0xEFA67A, 0xC37555, 0x762E21];
-    // Literal source-grid landmarks distinguish skin from protected materials.
-    // Per-frame counts guard moving and briefly exposed skin.
+    // Reviewed landmarks distinguish moving skin from protected materials.
+    // Literal per-frame counts guard brief and occluded skin exposure.
     let landmarks = [
-        ("idle_east", 0, 35, 48, 0x000000, false),
-        ("idle_east", 0, 37, 44, 0x23263D, false),
-        ("idle_east", 0, 40, 44, 0x393E6C, false),
-        ("idle_east", 0, 38, 53, 0x57516F, false),
-        ("idle_east", 0, 35, 44, 0x5C62A9, false),
-        ("idle_east", 0, 38, 45, 0x61514D, false),
-        ("idle_east", 0, 39, 27, 0x6D4C12, false),
-        ("idle_east", 0, 35, 35, 0x6E578A, false),
-        ("idle_east", 0, 35, 47, 0x762E21, true),
-        ("idle_east", 0, 42, 53, 0x837CA0, false),
-        ("idle_east", 0, 40, 45, 0x8F8073, false),
-        ("idle_east", 0, 35, 33, 0xA385B9, false),
-        ("idle_east", 0, 43, 35, 0xA59DA2, false),
-        ("idle_east", 0, 39, 29, 0xBD8E19, false),
-        ("idle_east", 0, 38, 48, 0xC0B8A2, false),
-        ("idle_east", 0, 39, 35, 0xC2B9BE, false),
-        ("idle_east", 0, 38, 28, 0xC2D5E4, false),
-        ("idle_east", 0, 34, 45, 0xC37555, true),
-        ("idle_east", 0, 35, 32, 0xD6C1DD, false),
-        ("idle_east", 0, 38, 37, 0xECF0E9, false),
-        ("idle_east", 0, 41, 41, 0xEFA67A, true),
-        ("idle_east", 0, 42, 47, 0xF4F3EB, false),
-        ("idle_east", 0, 36, 32, 0xF5F5F5, false),
-        ("idle_east", 0, 36, 46, 0xFBD3A7, true),
-        ("walk_east", 0, 35, 48, 0x000000, false),
-        ("walk_east", 0, 37, 44, 0x23263D, false),
-        ("walk_east", 0, 40, 44, 0x393E6C, false),
-        ("walk_east", 0, 38, 53, 0x57516F, false),
-        ("walk_east", 0, 35, 44, 0x5C62A9, false),
-        ("walk_east", 0, 38, 45, 0x61514D, false),
-        ("walk_east", 0, 39, 27, 0x6D4C12, false),
-        ("walk_east", 0, 35, 35, 0x6E578A, false),
-        ("walk_east", 0, 35, 47, 0x762E21, true),
-        ("walk_east", 0, 42, 53, 0x837CA0, false),
-        ("walk_east", 0, 40, 45, 0x8F8073, false),
-        ("walk_east", 0, 35, 33, 0xA385B9, false),
-        ("walk_east", 0, 43, 35, 0xA59DA2, false),
-        ("walk_east", 0, 39, 29, 0xBD8E19, false),
-        ("walk_east", 0, 38, 48, 0xC0B8A2, false),
-        ("walk_east", 0, 39, 35, 0xC2B9BE, false),
-        ("walk_east", 0, 38, 28, 0xC2D5E4, false),
-        ("walk_east", 0, 34, 45, 0xC37555, true),
-        ("walk_east", 0, 35, 32, 0xD6C1DD, false),
-        ("walk_east", 0, 38, 37, 0xECF0E9, false),
-        ("walk_east", 0, 41, 41, 0xEFA67A, true),
-        ("walk_east", 0, 42, 47, 0xF4F3EB, false),
-        ("walk_east", 0, 36, 32, 0xF5F5F5, false),
-        ("walk_east", 0, 36, 46, 0xFBD3A7, true),
-        ("walk_south", 0, 40, 48, 0x000000, false),
-        ("walk_south", 0, 37, 44, 0x23263D, false),
-        ("walk_south", 0, 38, 44, 0x393E6C, false),
-        ("walk_south", 0, 34, 44, 0x5C62A9, false),
-        ("walk_south", 0, 44, 43, 0x61514D, false),
-        ("walk_south", 0, 41, 27, 0x6D4C12, false),
-        ("walk_south", 0, 45, 35, 0x6E578A, false),
-        ("walk_south", 0, 46, 47, 0x762E21, true),
-        ("walk_south", 0, 41, 53, 0x837CA0, false),
-        ("walk_south", 0, 41, 45, 0x8F8073, false),
-        ("walk_south", 0, 34, 32, 0xA385B9, false),
-        ("walk_south", 0, 35, 29, 0xBD8E19, false),
-        ("walk_south", 0, 39, 47, 0xC0B8A2, false),
-        ("walk_south", 0, 41, 35, 0xC2B9BE, false),
-        ("walk_south", 0, 37, 28, 0xC2D5E4, false),
-        ("walk_south", 0, 33, 45, 0xC37555, true),
-        ("walk_south", 0, 44, 31, 0xD6C1DD, false),
-        ("walk_south", 0, 37, 37, 0xECF0E9, false),
-        ("walk_south", 0, 40, 41, 0xEFA67A, true),
-        ("walk_south", 0, 41, 47, 0xF4F3EB, false),
-        ("walk_south", 0, 36, 32, 0xF5F5F5, false),
-        ("walk_south", 0, 47, 46, 0xFBD3A7, true),
+        ("drink_north", 0, 46, 42, 0xC37555, true),
+        ("drink_north", 2, 46, 42, 0xC37555, true),
+        ("eat_north", 0, 46, 42, 0xC37555, true),
+        ("eat_north", 2, 46, 42, 0xC37555, true),
+        ("blink_east", 0, 35, 48, 0x000000, false),
+        ("blink_east", 0, 37, 44, 0x23263D, false),
+        ("blink_east", 0, 40, 44, 0x393E6C, false),
+        ("blink_east", 0, 38, 53, 0x57516F, false),
+        ("blink_east", 0, 35, 44, 0x5C62A9, false),
+        ("blink_east", 0, 38, 45, 0x61514D, false),
+        ("blink_east", 0, 39, 27, 0x6D4C12, false),
+        ("blink_east", 0, 35, 35, 0x6E578A, false),
+        ("blink_east", 0, 35, 47, 0x762E21, true),
+        ("blink_east", 0, 42, 53, 0x837CA0, false),
+        ("blink_east", 0, 40, 45, 0x8F8073, false),
+        ("blink_east", 0, 35, 33, 0xA385B9, false),
+        ("blink_east", 0, 43, 36, 0xA59DA2, false),
+        ("blink_east", 0, 39, 29, 0xBD8E19, false),
+        ("blink_east", 0, 38, 48, 0xC0B8A2, false),
+        ("blink_east", 0, 38, 36, 0xC2B9BE, false),
+        ("blink_east", 0, 38, 28, 0xC2D5E4, false),
+        ("blink_east", 0, 34, 45, 0xC37555, true),
+        ("blink_east", 0, 35, 32, 0xD6C1DD, false),
+        ("blink_east", 0, 43, 37, 0xECF0E9, false),
+        ("blink_east", 0, 41, 41, 0xEFA67A, true),
+        ("blink_east", 0, 42, 47, 0xF4F3EB, false),
+        ("blink_east", 0, 36, 32, 0xF5F5F5, false),
+        ("blink_east", 0, 36, 46, 0xFBD3A7, true),
+        ("blink_east", 1, 35, 47, 0x762E21, true),
+        ("blink_east", 1, 34, 45, 0xC37555, true),
+        ("blink_east", 1, 41, 41, 0xEFA67A, true),
+        ("blink_east", 1, 36, 46, 0xFBD3A7, true),
+        ("blink_south", 1, 46, 47, 0x762E21, true),
+        ("blink_south", 1, 33, 45, 0xC37555, true),
+        ("blink_south", 1, 40, 41, 0xEFA67A, true),
+        ("blink_south", 1, 47, 46, 0xFBD3A7, true),
+        ("drink_east", 1, 40, 42, 0xC37555, true),
+        ("drink_east", 1, 40, 41, 0xEFA67A, true),
+        ("drink_east", 1, 39, 41, 0xFBD3A7, true),
+        ("drink_north", 1, 45, 41, 0xC37555, true),
+        ("drink_south", 1, 45, 47, 0x762E21, true),
+        ("drink_south", 1, 39, 41, 0xC37555, true),
+        ("drink_south", 1, 45, 46, 0xEFA67A, true),
+        ("drink_south", 1, 35, 41, 0xFBD3A7, true),
+        ("eat_east", 0, 37, 45, 0x000000, false),
+        ("eat_east", 0, 41, 42, 0x23263D, false),
+        ("eat_east", 0, 39, 43, 0x393E6C, false),
+        ("eat_east", 0, 41, 49, 0x57516F, false),
+        ("eat_east", 0, 40, 43, 0x5C62A9, false),
+        ("eat_east", 0, 39, 42, 0x61514D, false),
+        ("eat_east", 0, 39, 27, 0x6D4C12, false),
+        ("eat_east", 0, 35, 35, 0x6E578A, false),
+        ("eat_east", 0, 37, 38, 0x762E21, true),
+        ("eat_east", 0, 42, 49, 0x837CA0, false),
+        ("eat_east", 0, 44, 46, 0x8F8073, false),
+        ("eat_east", 0, 35, 33, 0xA385B9, false),
+        ("eat_east", 0, 43, 35, 0xA59DA2, false),
+        ("eat_east", 0, 39, 29, 0xBD8E19, false),
+        ("eat_east", 0, 38, 46, 0xC0B8A2, false),
+        ("eat_east", 0, 39, 35, 0xC2B9BE, false),
+        ("eat_east", 0, 38, 28, 0xC2D5E4, false),
+        ("eat_east", 0, 41, 40, 0xC37555, true),
+        ("eat_east", 0, 35, 32, 0xD6C1DD, false),
+        ("eat_east", 0, 38, 37, 0xECF0E9, false),
+        ("eat_east", 0, 42, 43, 0xEFA67A, true),
+        ("eat_east", 0, 40, 46, 0xF4F3EB, false),
+        ("eat_east", 0, 36, 32, 0xF5F5F5, false),
+        ("eat_east", 0, 43, 43, 0xFBD3A7, true),
+        ("eat_east", 1, 46, 42, 0x762E21, true),
+        ("eat_east", 1, 45, 42, 0xC37555, true),
+        ("eat_east", 1, 45, 41, 0xFBD3A7, true),
+        ("eat_north", 1, 45, 41, 0xC37555, true),
+        ("eat_south", 1, 42, 40, 0x762E21, true),
+        ("eat_south", 1, 39, 41, 0xC37555, true),
+        ("eat_south", 1, 46, 46, 0xEFA67A, true),
+        ("eat_south", 1, 37, 48, 0xFBD3A7, true),
+        ("sit_south", 0, 36, 47, 0x000000, false),
+        ("sit_south", 0, 37, 44, 0x23263D, false),
+        ("sit_south", 0, 38, 44, 0x393E6C, false),
+        ("sit_south", 0, 39, 43, 0x5C62A9, false),
+        ("sit_south", 0, 35, 43, 0x61514D, false),
+        ("sit_south", 0, 41, 27, 0x6D4C12, false),
+        ("sit_south", 0, 45, 35, 0x6E578A, false),
+        ("sit_south", 0, 45, 47, 0x762E21, true),
+        ("sit_south", 0, 41, 50, 0x837CA0, false),
+        ("sit_south", 0, 45, 43, 0x8F8073, false),
+        ("sit_south", 0, 34, 32, 0xA385B9, false),
+        ("sit_south", 0, 35, 29, 0xBD8E19, false),
+        ("sit_south", 0, 39, 46, 0xC0B8A2, false),
+        ("sit_south", 0, 41, 35, 0xC2B9BE, false),
+        ("sit_south", 0, 37, 28, 0xC2D5E4, false),
+        ("sit_south", 0, 40, 40, 0xC37555, true),
+        ("sit_south", 0, 44, 31, 0xD6C1DD, false),
+        ("sit_south", 0, 37, 37, 0xECF0E9, false),
+        ("sit_south", 0, 44, 46, 0xEFA67A, true),
+        ("sit_south", 0, 41, 46, 0xF4F3EB, false),
+        ("sit_south", 0, 36, 32, 0xF5F5F5, false),
+        ("sit_south", 0, 44, 36, 0xFBD3A7, true),
     ];
     let cases: &[(&str, &[usize])] = &[
-        ("idle_east", &[41]),
-        ("idle_north", &[0]),
-        ("idle_south", &[51]),
-        ("walk_east", &[41, 47, 41, 40]),
-        ("walk_north", &[0, 0, 0, 0]),
-        ("walk_south", &[51, 49, 51, 49]),
+        ("blink_east", &[44, 54, 44]),
+        ("blink_south", &[54, 63, 54]),
+        ("drink_east", &[37, 51, 37]),
+        ("drink_north", &[1, 2, 1]),
+        ("drink_south", &[48, 56, 48]),
+        ("eat_east", &[37, 42, 46, 45, 39]),
+        ("eat_north", &[1, 2, 1]),
+        ("eat_south", &[50, 55, 51, 63, 47]),
+        ("sit_east", &[38]),
+        ("sit_north", &[0]),
+        ("sit_south", &[47]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
@@ -174,10 +207,9 @@ fn valen_autumn_world_covers_skin_and_preserves_materials() {
                     per_frame[x as usize / 80] += 1;
                 }
             }
-            if case.ends_with("_north") {
-                // The Autumn coat covers her hands from behind; no skin is visible.
-                assert!(expected_per_frame.iter().all(|n| *n == 0));
-                let region = profile["regions"]
+            if case == "sit_north" {
+                assert!(per_frame.iter().all(|n| *n == 0));
+                let region = candidate["regions"]
                     .as_array()
                     .unwrap()
                     .iter()
@@ -187,7 +219,7 @@ fn valen_autumn_world_covers_skin_and_preserves_materials() {
                 assert_eq!(
                     fs::read(original.join(&asset)).unwrap(),
                     fs::read(variant.join(&asset)).unwrap(),
-                    "covered North-facing sprite must remain byte-identical"
+                    "covered North PNG must remain byte-identical"
                 );
             } else {
                 assert!(per_frame.iter().all(|n| *n > 0), "empty frame in {case}");

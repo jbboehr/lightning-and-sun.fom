@@ -3,27 +3,27 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires extracted/balor-autumn-finish-study and the local accepted Balor world baseline"]
-fn balor_autumn_actions_covers_skin_and_preserves_materials() {
+fn balor_autumn_finish_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/balor-autumn-finish-study");
     let baseline = root.join(
-        "generated/characters-balor-autumn-valen-writing-eiland-standard-trial/characters/balor",
+        "generated/characters-balor-valen-autumn-eiland-summer-magnify-trial/characters/balor",
     );
-    let set = std::env::var_os("FOM_BALOR_AUTUMN_ACTIONS_PRESETS")
+    let set = std::env::var_os("FOM_BALOR_AUTUMN_FINISH_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/balor-world-trial.json"));
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
-    let profile_path = std::env::var_os("FOM_BALOR_AUTUMN_ACTIONS_PROFILE")
+    let profile_path = std::env::var_os("FOM_BALOR_AUTUMN_FINISH_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/balor-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile_path).unwrap()).unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..179];
+    let prior = &profile["regions"].as_array().unwrap()[..195];
     let candidate_path = set
         .parent()
         .unwrap()
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
-    assert_eq!(&candidate["regions"].as_array().unwrap()[..179], prior);
+    assert_eq!(&candidate["regions"].as_array().unwrap()[..195], prior);
     assert_eq!(candidate["regions"].as_array().unwrap().len(), 201);
     assert_eq!(candidate["source_colors"], profile["source_colors"]);
     assert_eq!(candidate["color_groups"], profile["color_groups"]);
@@ -44,84 +44,89 @@ fn balor_autumn_actions_covers_skin_and_preserves_materials() {
         String::from_utf8_lossy(&result.stderr)
     );
     let source = [0xFCD9B3, 0xF0B988, 0xD37A57, 0x672115];
-    // Literal source-grid landmarks cover skin and protected materials independently
-    // of recipe seeds. Per-frame counts guard moving and briefly exposed skin.
+    // Reviewed landmarks distinguish moving skin from protected materials.
+    // Literal per-frame counts guard brief and occluded skin exposure.
     let landmarks = [
-        ("blink_east", 0, 34, 48, 0x000000, false),
-        ("blink_east", 0, 39, 50, 0x262C49, false),
-        ("blink_east", 0, 36, 40, 0x281846, false),
-        ("blink_east", 0, 38, 43, 0x380F1C, false),
-        ("blink_east", 0, 42, 48, 0x3A4863, false),
-        ("blink_east", 0, 41, 33, 0x4A3D66, false),
-        ("blink_east", 0, 38, 47, 0x51303E, false),
-        ("blink_east", 0, 43, 41, 0x561635, false),
-        ("blink_east", 0, 35, 46, 0x672115, true),
-        ("blink_east", 0, 40, 42, 0x67243B, false),
-        ("blink_east", 0, 42, 45, 0x686589, false),
-        ("blink_east", 0, 41, 40, 0x6F5A54, false),
-        ("blink_east", 0, 37, 47, 0x815065, false),
-        ("blink_east", 0, 41, 30, 0x9B83B7, false),
-        ("blink_east", 0, 40, 41, 0xA19085, false),
-        ("blink_east", 0, 43, 36, 0xA59DA2, false),
-        ("blink_east", 0, 38, 36, 0xC2B9BE, false),
-        ("blink_east", 0, 34, 46, 0xD37A57, true),
-        ("blink_east", 0, 41, 46, 0xECF0E9, false),
-        ("blink_east", 0, 45, 45, 0xF0B988, true),
-        ("blink_east", 0, 35, 45, 0xFCD9B3, true),
-        ("eat_east", 0, 43, 46, 0x000000, false),
-        ("eat_east", 0, 40, 47, 0x262C49, false),
-        ("eat_east", 0, 37, 40, 0x281846, false),
-        ("eat_east", 0, 39, 44, 0x380F1C, false),
-        ("eat_east", 0, 44, 49, 0x3A4863, false),
-        ("eat_east", 0, 39, 34, 0x4A3D66, false),
-        ("eat_east", 0, 38, 47, 0x51303E, false),
-        ("eat_east", 0, 39, 42, 0x561635, false),
-        ("eat_east", 0, 38, 39, 0x672115, true),
-        ("eat_east", 0, 38, 42, 0x67243B, false),
-        ("eat_east", 0, 42, 48, 0x686589, false),
-        ("eat_east", 0, 40, 43, 0x6F5A54, false),
-        ("eat_east", 0, 37, 48, 0x815065, false),
-        ("eat_east", 0, 41, 31, 0x9B83B7, false),
-        ("eat_east", 0, 41, 42, 0xA19085, false),
-        ("eat_east", 0, 43, 36, 0xA59DA2, false),
-        ("eat_east", 0, 38, 36, 0xC2B9BE, false),
-        ("eat_east", 0, 41, 40, 0xD37A57, true),
-        ("eat_east", 0, 40, 45, 0xECF0E9, false),
-        ("eat_east", 0, 44, 42, 0xF0B988, true),
-        ("eat_east", 0, 42, 43, 0xFCD9B3, true),
-        ("sit_south", 0, 33, 48, 0x000000, false),
-        ("sit_south", 0, 42, 48, 0x262C49, false),
-        ("sit_south", 0, 43, 40, 0x281846, false),
-        ("sit_south", 0, 36, 44, 0x380F1C, false),
-        ("sit_south", 0, 42, 47, 0x3A4863, false),
-        ("sit_south", 0, 40, 33, 0x4A3D66, false),
-        ("sit_south", 0, 42, 46, 0x51303E, false),
-        ("sit_south", 0, 42, 42, 0x561635, false),
-        ("sit_south", 0, 45, 47, 0x672115, true),
-        ("sit_south", 0, 37, 43, 0x67243B, false),
-        ("sit_south", 0, 41, 45, 0x686589, false),
-        ("sit_south", 0, 42, 41, 0x6F5A54, false),
-        ("sit_south", 0, 41, 46, 0x815065, false),
-        ("sit_south", 0, 40, 31, 0x9B83B7, false),
-        ("sit_south", 0, 40, 42, 0xA19085, false),
-        ("sit_south", 0, 42, 36, 0xC2B9BE, false),
-        ("sit_south", 0, 40, 40, 0xD37A57, true),
-        ("sit_south", 0, 40, 46, 0xECF0E9, false),
-        ("sit_south", 0, 35, 46, 0xF0B988, true),
-        ("sit_south", 0, 40, 37, 0xFCD9B3, true),
+        ("inspect_gem_end_south", 0, 35, 47, 0x000000, false),
+        ("inspect_gem_end_south", 0, 42, 50, 0x262C49, false),
+        ("inspect_gem_end_south", 0, 35, 40, 0x281846, false),
+        ("inspect_gem_end_south", 0, 38, 44, 0x380F1C, false),
+        ("inspect_gem_end_south", 0, 42, 48, 0x3A4863, false),
+        ("inspect_gem_end_south", 0, 38, 34, 0x4A3D66, false),
+        ("inspect_gem_end_south", 0, 36, 48, 0x51303E, false),
+        ("inspect_gem_end_south", 0, 43, 43, 0x561635, false),
+        ("inspect_gem_end_south", 0, 46, 43, 0x672115, true),
+        ("inspect_gem_end_south", 0, 38, 43, 0x67243B, false),
+        ("inspect_gem_end_south", 0, 41, 46, 0x686589, false),
+        ("inspect_gem_end_south", 0, 35, 42, 0x6F5A54, false),
+        ("inspect_gem_end_south", 0, 35, 48, 0x815065, false),
+        ("inspect_gem_end_south", 0, 40, 31, 0x9B83B7, false),
+        ("inspect_gem_end_south", 0, 40, 42, 0xA19085, false),
+        ("inspect_gem_end_south", 0, 40, 40, 0xD37A57, true),
+        ("inspect_gem_end_south", 0, 40, 47, 0xECF0E9, false),
+        ("inspect_gem_end_south", 0, 47, 41, 0xF0B988, true),
+        ("inspect_gem_end_south", 0, 36, 44, 0xFCD9B3, true),
+        ("inspect_gem_end_south", 1, 34, 46, 0x672115, true),
+        ("inspect_gem_end_south", 1, 35, 44, 0xD37A57, true),
+        ("inspect_gem_end_south", 1, 34, 45, 0xFCD9B3, true),
+        ("inspect_gem_loop_south", 1, 49, 43, 0xD37A57, true),
+        ("inspect_gem_loop_south", 1, 48, 44, 0xF0B988, true),
+        ("inspect_gem_loop_south", 1, 37, 41, 0xFCD9B3, true),
+        ("inspect_gem_start_south", 1, 33, 46, 0x672115, true),
+        ("inspect_gem_start_south", 1, 44, 44, 0xD37A57, true),
+        ("inspect_gem_start_south", 1, 44, 45, 0xF0B988, true),
+        ("inspect_gem_start_south", 1, 34, 45, 0xFCD9B3, true),
+        ("read_sit_end_south", 0, 44, 46, 0x000000, false),
+        ("read_sit_end_south", 0, 41, 50, 0x262C49, false),
+        ("read_sit_end_south", 0, 42, 30, 0x281846, false),
+        ("read_sit_end_south", 0, 38, 51, 0x3A4863, false),
+        ("read_sit_end_south", 0, 38, 35, 0x4A3D66, false),
+        ("read_sit_end_south", 0, 37, 45, 0x606C76, false),
+        ("read_sit_end_south", 0, 35, 47, 0x672115, true),
+        ("read_sit_end_south", 0, 41, 34, 0x686589, false),
+        ("read_sit_end_south", 0, 38, 46, 0x98A2A6, false),
+        ("read_sit_end_south", 0, 40, 32, 0x9B83B7, false),
+        ("read_sit_end_south", 0, 38, 44, 0xC9AF9C, false),
+        ("read_sit_end_south", 0, 39, 41, 0xD37A57, true),
+        ("read_sit_end_south", 0, 42, 38, 0xECF0E9, false),
+        ("read_sit_end_south", 0, 40, 40, 0xF0B988, true),
+        ("read_sit_end_south", 0, 38, 42, 0xF6E4D7, false),
+        ("read_sit_end_south", 0, 34, 47, 0xFCD9B3, true),
+        ("read_sit_end_south", 1, 44, 47, 0x672115, true),
+        ("read_sit_end_south", 1, 45, 46, 0xFCD9B3, true),
+        ("read_sit_loop_south", 1, 42, 40, 0x672115, true),
+        ("read_sit_loop_south", 1, 39, 41, 0xD37A57, true),
+        ("read_sit_loop_south", 1, 40, 40, 0xF0B988, true),
+        ("read_sit_start_south", 0, 45, 47, 0x000000, false),
+        ("read_sit_start_south", 0, 42, 48, 0x262C49, false),
+        ("read_sit_start_south", 0, 43, 40, 0x281846, false),
+        ("read_sit_start_south", 0, 37, 44, 0x380F1C, false),
+        ("read_sit_start_south", 0, 42, 47, 0x3A4863, false),
+        ("read_sit_start_south", 0, 40, 33, 0x4A3D66, false),
+        ("read_sit_start_south", 0, 42, 46, 0x51303E, false),
+        ("read_sit_start_south", 0, 42, 42, 0x561635, false),
+        ("read_sit_start_south", 0, 34, 47, 0x672115, true),
+        ("read_sit_start_south", 0, 37, 43, 0x67243B, false),
+        ("read_sit_start_south", 0, 41, 45, 0x686589, false),
+        ("read_sit_start_south", 0, 42, 41, 0x6F5A54, false),
+        ("read_sit_start_south", 0, 41, 46, 0x815065, false),
+        ("read_sit_start_south", 0, 40, 31, 0x9B83B7, false),
+        ("read_sit_start_south", 0, 39, 42, 0xA19085, false),
+        ("read_sit_start_south", 0, 42, 36, 0xC2B9BE, false),
+        ("read_sit_start_south", 0, 40, 40, 0xD37A57, true),
+        ("read_sit_start_south", 0, 40, 46, 0xECF0E9, false),
+        ("read_sit_start_south", 0, 35, 46, 0xF0B988, true),
+        ("read_sit_start_south", 0, 40, 37, 0xFCD9B3, true),
+        ("read_sit_start_south", 1, 44, 47, 0x672115, true),
+        ("read_sit_start_south", 1, 45, 46, 0xFCD9B3, true),
     ];
     let cases: &[(&str, &[usize])] = &[
-        ("blink_east", &[36, 40, 36]),
-        ("blink_south", &[45, 49, 45]),
-        ("drink_east", &[29, 35, 29]),
-        ("drink_north", &[6, 5, 6]),
-        ("drink_south", &[38, 41, 38]),
-        ("eat_east", &[27, 30, 25, 29, 26]),
-        ("eat_north", &[6, 5, 6]),
-        ("eat_south", &[40, 39, 38, 46, 39]),
-        ("sit_east", &[28]),
-        ("sit_north", &[8]),
-        ("sit_south", &[39]),
+        ("inspect_gem_end_south", &[47, 47, 44, 48]),
+        ("inspect_gem_loop_south", &[35, 35, 35, 35, 35, 35, 35]),
+        ("inspect_gem_start_south", &[48, 44, 47, 47]),
+        ("read_sit_end_south", &[31, 27, 34]),
+        ("read_sit_loop_south", &[21, 31, 21, 31]),
+        ("read_sit_start_south", &[34, 27, 31]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
@@ -136,7 +141,7 @@ fn balor_autumn_actions_covers_skin_and_preserves_materials() {
         let mut mask = Vec::new();
         for &(case, expected_per_frame) in cases {
             let frames = expected_per_frame.len() as u32;
-            let prefix = "spr_npc_balor_autumn";
+            let prefix = "spr_npc_balor_specialanimation_autumn";
             let asset = format!("assets/animations/NPCs/Balor/Sprites/Autumn/{prefix}_{case}.png");
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(variant.join(&asset)).unwrap().to_rgba8();

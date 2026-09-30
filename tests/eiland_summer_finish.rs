@@ -3,27 +3,27 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires extracted/eiland-summer-finish-study and the local accepted Eiland world baseline"]
-fn eiland_summer_magnify_covers_skin_and_preserves_materials() {
+fn eiland_summer_finish_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/eiland-summer-finish-study");
     let baseline = root.join(
-        "generated/characters-balor-autumn-actions-valen-heal-eiland-writing-trial/characters/eiland",
+        "generated/characters-balor-valen-autumn-eiland-summer-magnify-trial/characters/eiland",
     );
-    let set = std::env::var_os("FOM_EILAND_SUMMER_MAGNIFY_PRESETS")
+    let set = std::env::var_os("FOM_EILAND_SUMMER_FINISH_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/eiland-world-trial.json"));
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
-    let profile_path = std::env::var_os("FOM_EILAND_SUMMER_MAGNIFY_PROFILE")
+    let profile_path = std::env::var_os("FOM_EILAND_SUMMER_FINISH_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/eiland-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile_path).unwrap()).unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..156];
+    let prior = &profile["regions"].as_array().unwrap()[..162];
     let candidate_path = set
         .parent()
         .unwrap()
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
-    assert_eq!(&candidate["regions"].as_array().unwrap()[..156], prior);
+    assert_eq!(&candidate["regions"].as_array().unwrap()[..162], prior);
     assert_eq!(candidate["regions"].as_array().unwrap().len(), 166);
     assert_eq!(candidate["source_colors"], profile["source_colors"]);
     assert_eq!(candidate["color_groups"], profile["color_groups"]);
@@ -44,93 +44,113 @@ fn eiland_summer_magnify_covers_skin_and_preserves_materials() {
         String::from_utf8_lossy(&result.stderr)
     );
     let source = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x9C5241, 0x7D3B14];
-    // Literal source-grid landmarks distinguish skin from protected materials.
-    // Per-frame counts guard moving and briefly exposed skin.
+    // Reviewed landmarks distinguish moving skin from protected materials.
+    // Literal per-frame counts guard brief and occluded skin exposure.
     let landmarks = [
-        ("magnify_end_east", 0, 45, 47, 0x000000, false),
-        ("magnify_end_east", 0, 39, 37, 0x488DE1, false),
-        ("magnify_end_east", 0, 41, 46, 0x533061, false),
-        ("magnify_end_east", 0, 39, 33, 0x6C2859, false),
-        ("magnify_end_east", 0, 37, 45, 0x724E80, false),
-        ("magnify_end_east", 0, 39, 38, 0x74D2FF, false),
-        ("magnify_end_east", 0, 41, 50, 0x756279, false),
-        ("magnify_end_east", 0, 41, 49, 0x927D96, false),
-        ("magnify_end_east", 0, 41, 33, 0x9C5241, true),
-        ("magnify_end_east", 0, 43, 43, 0xA54E7F, false),
-        ("magnify_end_east", 0, 36, 45, 0xB475BA, false),
-        ("magnify_end_east", 0, 38, 44, 0xBA6A4C, true),
-        ("magnify_end_east", 0, 44, 44, 0xBBB5C7, false),
-        ("magnify_end_east", 0, 36, 37, 0xBE6D44, false),
-        ("magnify_end_east", 0, 38, 52, 0xC1BDC8, false),
-        ("magnify_end_east", 0, 42, 35, 0xC2B9BE, false),
-        ("magnify_end_east", 0, 39, 48, 0xDA8B36, false),
-        ("magnify_end_east", 0, 43, 42, 0xDB5C81, false),
-        ("magnify_end_east", 0, 39, 43, 0xDE8F5D, true),
-        ("magnify_end_east", 0, 37, 32, 0xE797AC, false),
-        ("magnify_end_east", 0, 39, 42, 0xE9A980, true),
-        ("magnify_end_east", 0, 43, 37, 0xECF0E9, false),
-        ("magnify_end_east", 0, 42, 51, 0xEDE0EF, false),
-        ("magnify_end_east", 0, 41, 45, 0xF9C94D, false),
-        ("magnify_end_east", 0, 42, 32, 0xFCDAE0, false),
-        ("magnify_end_east", 0, 38, 40, 0xFFCF36, false),
-        ("magnify_end_east", 0, 37, 36, 0xFFF672, false),
-        ("magnify_end_east", 0, 36, 32, 0xFFFFFF, false),
-        ("magnify_loop_south", 0, 34, 47, 0x000000, false),
-        ("magnify_loop_south", 0, 40, 39, 0x488DE1, false),
-        ("magnify_loop_south", 0, 42, 47, 0x533061, false),
-        ("magnify_loop_south", 0, 36, 36, 0x6C2859, false),
-        ("magnify_loop_south", 0, 42, 46, 0x724E80, false),
-        ("magnify_loop_south", 0, 40, 38, 0x74D2FF, false),
-        ("magnify_loop_south", 0, 42, 51, 0x756279, false),
-        ("magnify_loop_south", 0, 34, 46, 0x7D3B14, true),
-        ("magnify_loop_south", 0, 38, 51, 0x927D96, false),
-        ("magnify_loop_south", 0, 40, 34, 0x9C5241, true),
-        ("magnify_loop_south", 0, 37, 44, 0xA54E7F, false),
-        ("magnify_loop_south", 0, 38, 46, 0xB475BA, false),
-        ("magnify_loop_south", 0, 39, 41, 0xBA6A4C, true),
-        ("magnify_loop_south", 0, 42, 44, 0xBBB5C7, false),
-        ("magnify_loop_south", 0, 42, 52, 0xC1BDC8, false),
-        ("magnify_loop_south", 0, 38, 49, 0xDA8B36, false),
-        ("magnify_loop_south", 0, 37, 43, 0xDB5C81, false),
-        ("magnify_loop_south", 0, 34, 45, 0xDE8F5D, true),
-        ("magnify_loop_south", 0, 38, 32, 0xE797AC, false),
-        ("magnify_loop_south", 0, 33, 45, 0xE9A980, true),
-        ("magnify_loop_south", 0, 38, 52, 0xEDE0EF, false),
-        ("magnify_loop_south", 0, 39, 46, 0xF9C94D, false),
-        ("magnify_loop_south", 0, 41, 33, 0xFCDAE0, false),
-        ("magnify_loop_south", 0, 42, 40, 0xFFCF36, false),
-        ("magnify_loop_south", 0, 39, 37, 0xFFF672, false),
-        ("magnify_loop_south", 0, 35, 33, 0xFFFFFF, false),
-        ("magnify_start_south", 0, 35, 48, 0x000000, false),
-        ("magnify_start_south", 0, 41, 47, 0x533061, false),
-        ("magnify_start_south", 0, 36, 37, 0x6C2859, false),
-        ("magnify_start_south", 0, 37, 45, 0x724E80, false),
-        ("magnify_start_south", 0, 42, 51, 0x756279, false),
-        ("magnify_start_south", 0, 42, 40, 0x7D3B14, true),
-        ("magnify_start_south", 0, 38, 51, 0x927D96, false),
-        ("magnify_start_south", 0, 40, 34, 0x9C5241, true),
-        ("magnify_start_south", 0, 37, 44, 0xA54E7F, false),
-        ("magnify_start_south", 0, 38, 46, 0xB475BA, false),
-        ("magnify_start_south", 0, 40, 41, 0xBA6A4C, true),
-        ("magnify_start_south", 0, 44, 44, 0xBBB5C7, false),
-        ("magnify_start_south", 0, 42, 52, 0xC1BDC8, false),
-        ("magnify_start_south", 0, 41, 44, 0xDA8B36, false),
-        ("magnify_start_south", 0, 43, 43, 0xDB5C81, false),
-        ("magnify_start_south", 0, 40, 42, 0xDE8F5D, true),
-        ("magnify_start_south", 0, 36, 33, 0xE797AC, false),
-        ("magnify_start_south", 0, 35, 46, 0xE9A980, true),
-        ("magnify_start_south", 0, 38, 52, 0xEDE0EF, false),
-        ("magnify_start_south", 0, 41, 45, 0xF9C94D, false),
-        ("magnify_start_south", 0, 41, 33, 0xFCDAE0, false),
-        ("magnify_start_south", 0, 43, 32, 0xFFFFFF, false),
+        ("axe_east", 0, 44, 48, 0x000000, false),
+        ("axe_east", 0, 43, 26, 0x255894, false),
+        ("axe_east", 0, 43, 27, 0x3E80BA, false),
+        ("axe_east", 0, 41, 46, 0x533061, false),
+        ("axe_east", 0, 41, 28, 0x58A8E1, false),
+        ("axe_east", 0, 42, 29, 0x623B31, false),
+        ("axe_east", 0, 36, 35, 0x6C2859, false),
+        ("axe_east", 0, 40, 43, 0x724E80, false),
+        ("axe_east", 0, 41, 50, 0x756279, false),
+        ("axe_east", 0, 41, 36, 0x7D3B14, true),
+        ("axe_east", 0, 44, 28, 0x853317, false),
+        ("axe_east", 0, 42, 30, 0x8E6146, false),
+        ("axe_east", 0, 41, 49, 0x927D96, false),
+        ("axe_east", 0, 42, 27, 0x95D9F9, false),
+        ("axe_east", 0, 39, 33, 0x9C5241, true),
+        ("axe_east", 0, 38, 41, 0xA54E7F, false),
+        ("axe_east", 0, 39, 45, 0xB475BA, false),
+        ("axe_east", 0, 42, 32, 0xB88C54, false),
+        ("axe_east", 0, 37, 38, 0xBA6A4C, true),
+        ("axe_east", 0, 43, 41, 0xBBB5C7, false),
+        ("axe_east", 0, 48, 27, 0xBEF9FD, false),
+        ("axe_east", 0, 38, 52, 0xC1BDC8, false),
+        ("axe_east", 0, 45, 26, 0xC4633D, false),
+        ("axe_east", 0, 41, 43, 0xDA8B36, false),
+        ("axe_east", 0, 38, 40, 0xDB5C81, false),
+        ("axe_east", 0, 40, 41, 0xDE8F5D, true),
+        ("axe_east", 0, 36, 32, 0xE797AC, false),
+        ("axe_east", 0, 41, 27, 0xE9A482, false),
+        ("axe_east", 0, 35, 37, 0xE9A980, true),
+        ("axe_east", 0, 39, 52, 0xEDE0EF, false),
+        ("axe_east", 0, 40, 45, 0xF9C94D, false),
+        ("axe_east", 0, 45, 31, 0xFCDAE0, false),
+        ("axe_east", 0, 37, 32, 0xFFFFFF, false),
+        ("axe_east", 1, 45, 42, 0x7D3B14, true),
+        ("axe_east", 1, 52, 44, 0xBA6A4C, true),
+        ("axe_east", 1, 53, 44, 0xDE8F5D, true),
+        ("axe_east", 1, 49, 41, 0xE9A980, true),
+        ("brush_east", 1, 48, 45, 0x7D3B14, true),
+        ("brush_east", 1, 45, 44, 0xBA6A4C, true),
+        ("brush_east", 1, 46, 44, 0xDE8F5D, true),
+        ("brush_east", 1, 47, 44, 0xE9A980, true),
+        ("pickaxe_east", 0, 44, 48, 0x000000, false),
+        ("pickaxe_east", 0, 41, 46, 0x533061, false),
+        ("pickaxe_east", 0, 36, 35, 0x6C2859, false),
+        ("pickaxe_east", 0, 40, 43, 0x724E80, false),
+        ("pickaxe_east", 0, 41, 50, 0x756279, false),
+        ("pickaxe_east", 0, 41, 36, 0x7D3B14, true),
+        ("pickaxe_east", 0, 41, 49, 0x927D96, false),
+        ("pickaxe_east", 0, 40, 33, 0x9C5241, true),
+        ("pickaxe_east", 0, 38, 41, 0xA54E7F, false),
+        ("pickaxe_east", 0, 39, 45, 0xB475BA, false),
+        ("pickaxe_east", 0, 42, 36, 0xBA6A4C, true),
+        ("pickaxe_east", 0, 43, 41, 0xBBB5C7, false),
+        ("pickaxe_east", 0, 41, 23, 0xBE6D44, false),
+        ("pickaxe_east", 0, 38, 52, 0xC1BDC8, false),
+        ("pickaxe_east", 0, 41, 43, 0xDA8B36, false),
+        ("pickaxe_east", 0, 38, 40, 0xDB5C81, false),
+        ("pickaxe_east", 0, 40, 41, 0xDE8F5D, true),
+        ("pickaxe_east", 0, 34, 32, 0xE797AC, false),
+        ("pickaxe_east", 0, 35, 37, 0xE9A980, true),
+        ("pickaxe_east", 0, 39, 52, 0xEDE0EF, false),
+        ("pickaxe_east", 0, 40, 45, 0xF9C94D, false),
+        ("pickaxe_east", 0, 41, 32, 0xFCDAE0, false),
+        ("pickaxe_east", 0, 50, 25, 0xFFCF36, false),
+        ("pickaxe_east", 0, 44, 23, 0xFFF672, false),
+        ("pickaxe_east", 0, 50, 24, 0xFFFFFF, false),
+        ("pickaxe_east", 1, 45, 42, 0x7D3B14, true),
+        ("pickaxe_east", 1, 52, 44, 0xBA6A4C, true),
+        ("pickaxe_east", 1, 49, 42, 0xDE8F5D, true),
+        ("pickaxe_east", 1, 49, 41, 0xE9A980, true),
+        ("trowel_east", 0, 36, 49, 0x000000, false),
+        ("trowel_east", 0, 43, 45, 0x533061, false),
+        ("trowel_east", 0, 37, 43, 0x6C2859, false),
+        ("trowel_east", 0, 44, 52, 0x70797D, false),
+        ("trowel_east", 0, 41, 48, 0x724E80, false),
+        ("trowel_east", 0, 40, 53, 0x7D3B14, true),
+        ("trowel_east", 0, 42, 38, 0x9C5241, true),
+        ("trowel_east", 0, 43, 53, 0x9EB0BB, false),
+        ("trowel_east", 0, 39, 46, 0xA54E7F, false),
+        ("trowel_east", 0, 42, 49, 0xB475BA, false),
+        ("trowel_east", 0, 40, 50, 0xBA6A4C, true),
+        ("trowel_east", 0, 39, 49, 0xBBB5C7, false),
+        ("trowel_east", 0, 40, 40, 0xC2B9BE, false),
+        ("trowel_east", 0, 45, 53, 0xC5CECF, false),
+        ("trowel_east", 0, 42, 47, 0xDA8B36, false),
+        ("trowel_east", 0, 38, 48, 0xDB5C81, false),
+        ("trowel_east", 0, 43, 44, 0xDE8F5D, true),
+        ("trowel_east", 0, 47, 41, 0xE797AC, false),
+        ("trowel_east", 0, 42, 43, 0xE9A980, true),
+        ("trowel_east", 0, 39, 42, 0xECF0E9, false),
+        ("trowel_east", 0, 38, 49, 0xEDE0EF, false),
+        ("trowel_east", 0, 43, 49, 0xF9C94D, false),
+        ("trowel_east", 0, 47, 40, 0xFCDAE0, false),
+        ("trowel_east", 0, 45, 36, 0xFFFFFF, false),
+        ("trowel_east", 1, 42, 52, 0x7D3B14, true),
+        ("trowel_east", 1, 43, 45, 0xBA6A4C, true),
+        ("trowel_east", 1, 43, 44, 0xDE8F5D, true),
+        ("trowel_east", 1, 43, 43, 0xE9A980, true),
     ];
     let cases: &[(&str, &[usize])] = &[
-        ("magnify_end_east", &[22, 34]),
-        ("magnify_end_south", &[43, 43]),
-        ("magnify_loop_east", &[35]),
-        ("magnify_loop_south", &[25]),
-        ("magnify_start_east", &[42, 28, 28]),
-        ("magnify_start_south", &[48, 51, 45]),
+        ("axe_east", &[22, 51, 49, 41, 39, 22]),
+        ("brush_east", &[37, 38, 36, 38, 36, 37, 38]),
+        ("pickaxe_east", &[23, 50, 48, 40, 39, 23]),
+        ("trowel_east", &[44, 38, 36, 36, 36, 36, 36, 36, 38, 44]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
