@@ -221,6 +221,10 @@ The [Summer finish and actions](development/balor-summer-finish-valen-eiland-act
 Summer folder with reading, coin flip and gem inspection, adds Valen's general
 actions/sleep/kiss and Eiland's blink/sit/eat/drink. Their totals are now 173,
 154 and 142 sources; the complete offline review covers all 123 cases.
+The [Autumn pilot and Summer actions](development/balor-autumn-valen-writing-eiland-standard.md) adds
+Balor's Autumn idle/walk, Valen's Summer reading/writing and Eiland's Summer
+general actions/sleep/kiss. Their totals are 179, 163 and 147 sources, with
+84 new review cases.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
