@@ -215,8 +215,9 @@ completing that sprite folder. Valen and Eiland also include standing and
 seated writing.
 Valen's healing and charm animations complete her Spring sprite folder.
 Eiland's magnifying-glass, princely-pose and tool animations complete his Spring
-sprite folder. Balor and Valen include Summer idle and walking sprites;
-Balor also includes Summer blinking, sitting, eating and drinking.
+sprite folder. All three include Summer idle and walking sprites. Balor and
+Valen also include Summer blinking, sitting, eating and drinking; Balor includes
+Summer general actions, sleeping and kissing too.
 I, O and J cycle their
 palettes respectively, keeping their portraits and supported overworld sprites together.
 Other unlisted overworld animations remain original.
