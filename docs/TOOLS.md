@@ -207,7 +207,9 @@ add eleven blink/sit/eat/drink strips each. Their [Spring standard actions](deve
 add general actions, sleeping and kissing. Their [Spring reactions and reading](development/balor-valen-eiland-spring-reactions.md)
 add six strips each. Their [Spring gestures and writing](development/balor-valen-eiland-spring-specials.md)
 finish Balor's Spring folder and add standing/seated writing for Valen and Eiland,
-bringing their totals to 144, 126 and 112 sources.
+bringing their totals to 144, 126 and 112 sources. The [next world batch](development/balor-summer-valen-heal-eiland-magnify.md)
+adds Balor's Summer idle/walk, Valen's remaining Spring healing/charm and Eiland's
+Spring magnifying-glass sprites, bringing their totals to 150, 132 and 118 sources.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

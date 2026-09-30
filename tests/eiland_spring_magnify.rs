@@ -7,7 +7,7 @@ fn read(path: impl AsRef<Path>) -> Value {
 }
 
 fn asset(name: &str) -> String {
-    let prefix = "spring";
+    let prefix = "specialanimation_spring";
     format!("assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_{prefix}_{name}.png")
 }
 fn rgba(color: u32) -> [u8; 4] {
@@ -19,15 +19,15 @@ fn color(value: &Value) -> u32 {
 
 #[test]
 #[ignore = "requires 118 local animations in extracted/eiland-spring-magnify-study and the accepted earlier output baseline"]
-fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
+fn eiland_spring_magnify_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/eiland-spring-magnify-study");
-    let baseline =
-        root.join("generated/characters-balor-valen-eiland-world-trial/characters/eiland");
-    let profile_path = std::env::var_os("FOM_EILAND_SPRING_ACTIONS_PROFILE")
+    let baseline = root
+        .join("generated/characters-balor-valen-eiland-spring-specials-trial/characters/eiland");
+    let profile_path = std::env::var_os("FOM_EILAND_SPRING_MAGNIFY_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/eiland-world-trial.json"));
-    let set_path = std::env::var_os("FOM_EILAND_SPRING_ACTIONS_SET")
+    let set_path = std::env::var_os("FOM_EILAND_SPRING_MAGNIFY_SET")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/eiland-world-trial.json"));
     let profile = read(&profile_path);
@@ -37,57 +37,85 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
     let set = read(&set_path);
     let temp = tempfile::tempdir().unwrap();
     // Literal source-art landmarks distinguish moving fingers and fine face shading
-    // from gold trim, uniform, eye details and true red mouth interiors.
+    // from gold trim, uniform, eye details, magnifier rim, lens and handle.
     let landmarks = [
-        ("blink_east", 1, 40, 35, 0xE9A980, true),
-        ("blink_east", 1, 40, 33, 0x9C5241, true),
-        ("blink_east", 1, 38, 39, 0x7D3B14, true),
-        ("blink_east", 1, 35, 47, 0x7D3B14, true),
-        ("blink_east", 1, 43, 43, 0xBA6A4C, false),
-        ("blink_east", 1, 40, 46, 0xBA6A4C, false),
-        ("blink_south", 1, 42, 39, 0x7D3B14, true),
-        ("blink_south", 1, 42, 48, 0xBA6A4C, false),
-        ("sit_east", 0, 35, 47, 0x7D3B14, true),
-        ("sit_east", 0, 38, 44, 0xBA6A4C, false),
-        ("sit_east", 0, 38, 45, 0x6A3126, false),
-        ("sit_south", 0, 34, 46, 0xDE8F5D, true),
-        ("sit_south", 0, 45, 47, 0x7D3B14, true),
-        ("sit_south", 0, 43, 47, 0xBA6A4C, false),
-        ("sit_north", 0, 39, 44, 0xC1BDC8, false),
-        ("sit_north", 0, 39, 46, 0x473C52, false),
-        ("drink_east", 0, 40, 42, 0xE9A980, true),
-        ("drink_east", 0, 39, 43, 0xBA6A4C, true),
-        ("drink_east", 1, 40, 40, 0xDE8F5D, true),
-        ("drink_east", 1, 40, 42, 0xBA6A4C, true),
-        ("drink_east", 1, 39, 43, 0xBA6A4C, true),
-        ("drink_east", 1, 41, 43, 0xDB5C81, false),
-        ("drink_south", 1, 35, 40, 0xE9A980, true),
-        ("drink_south", 1, 34, 42, 0xBA6A4C, true),
-        ("drink_south", 1, 35, 43, 0x7D3B14, true),
-        ("drink_south", 1, 43, 45, 0xBA6A4C, false),
-        ("drink_north", 0, 46, 42, 0xBA6A4C, true),
-        ("drink_north", 1, 44, 41, 0xBA6A4C, true),
-        ("drink_north", 1, 35, 44, 0xF4F4F4, false),
-        ("eat_east", 0, 43, 42, 0xE9A980, true),
-        ("eat_east", 0, 38, 44, 0xBA6A4C, false),
-        ("eat_east", 1, 44, 40, 0xBA6A4C, true),
-        ("eat_east", 1, 45, 42, 0xBA6A4C, true),
-        ("eat_east", 1, 40, 43, 0x7D3B14, false),
-        ("eat_east", 2, 41, 36, 0x9E2626, false),
-        ("eat_east", 2, 43, 39, 0xE9A980, true),
-        ("eat_east", 3, 44, 43, 0xDE8F5D, true),
-        ("eat_east", 4, 43, 44, 0xDE8F5D, true),
-        ("eat_south", 0, 37, 46, 0xDE8F5D, true),
-        ("eat_south", 1, 37, 44, 0xDE8F5D, false),
-        ("eat_south", 1, 36, 49, 0xBA6A4C, true),
-        ("eat_south", 2, 38, 40, 0xBA6A4C, true),
-        ("eat_south", 2, 40, 36, 0x9E2626, false),
-        ("eat_south", 3, 35, 43, 0x7D3B14, true),
-        ("eat_south", 4, 34, 47, 0x7D3B14, true),
-        ("eat_north", 1, 45, 42, 0xBA6A4C, true),
-        ("eat_north", 1, 35, 45, 0xF4F4F4, false),
-        ("blink_east", 0, 38, 36, 0xC2B9BE, false),
-        ("blink_east", 0, 37, 36, 0x6C2859, false),
+        ("magnify_start_south", 0, 39, 34, 0x9C5241, true),
+        ("magnify_start_south", 0, 39, 35, 0xBA6A4C, true),
+        ("magnify_start_south", 0, 33, 46, 0xE9A980, true),
+        ("magnify_start_south", 0, 34, 47, 0x7D3B14, true),
+        ("magnify_start_south", 0, 44, 46, 0xBA6A4C, true),
+        ("magnify_start_south", 0, 37, 46, 0xBA6A4C, false),
+        ("magnify_start_south", 0, 42, 47, 0xBA6A4C, false),
+        ("magnify_start_south", 0, 39, 30, 0xE797AC, false),
+        ("magnify_start_south", 1, 45, 41, 0xDE8F5D, true),
+        ("magnify_start_south", 1, 46, 42, 0xE9A980, true),
+        ("magnify_start_south", 1, 46, 43, 0xDE8F5D, true),
+        ("magnify_start_south", 1, 45, 35, 0xBE6D44, false),
+        ("magnify_start_south", 1, 46, 35, 0xFFF672, false),
+        ("magnify_start_south", 1, 47, 37, 0x488DE1, false),
+        ("magnify_start_south", 1, 42, 48, 0xBA6A4C, false),
+        ("magnify_start_south", 2, 42, 43, 0xE9A980, true),
+        ("magnify_start_south", 2, 42, 45, 0xBA6A4C, true),
+        ("magnify_start_south", 2, 43, 45, 0xE9A980, true),
+        ("magnify_start_south", 2, 33, 47, 0x7D3B14, true),
+        ("magnify_start_south", 2, 42, 37, 0xBE6D44, false),
+        ("magnify_start_south", 2, 43, 37, 0xFFF672, false),
+        ("magnify_start_south", 2, 43, 39, 0xFFFFFF, false),
+        ("magnify_start_south", 2, 42, 48, 0xBA6A4C, false),
+        ("magnify_loop_south", 0, 40, 42, 0xE9A980, true),
+        ("magnify_loop_south", 0, 41, 42, 0xDE8F5D, true),
+        ("magnify_loop_south", 0, 40, 44, 0xBA6A4C, true),
+        ("magnify_loop_south", 0, 34, 46, 0x7D3B14, true),
+        ("magnify_loop_south", 0, 41, 41, 0xFFCF36, false),
+        ("magnify_loop_south", 0, 40, 39, 0x488DE1, false),
+        ("magnify_loop_south", 0, 42, 39, 0x74D2FF, false),
+        ("magnify_loop_south", 0, 37, 45, 0xBA6A4C, false),
+        ("magnify_loop_south", 0, 42, 46, 0xBA6A4C, false),
+        ("magnify_end_south", 0, 46, 42, 0xDE8F5D, true),
+        ("magnify_end_south", 0, 33, 46, 0x7D3B14, true),
+        ("magnify_end_south", 0, 45, 34, 0xBE6D44, false),
+        ("magnify_end_south", 0, 46, 34, 0xFFF672, false),
+        ("magnify_end_south", 0, 42, 47, 0xBA6A4C, false),
+        ("magnify_end_south", 1, 44, 45, 0xBA6A4C, true),
+        ("magnify_end_south", 1, 33, 47, 0x7D3B14, true),
+        ("magnify_end_south", 1, 37, 45, 0xBA6A4C, false),
+        ("magnify_end_south", 1, 37, 36, 0xECF0E9, false),
+        ("magnify_start_east", 0, 36, 46, 0xBA6A4C, true),
+        ("magnify_start_east", 0, 45, 47, 0xDE8F5D, true),
+        ("magnify_start_east", 0, 40, 41, 0xBA6A4C, true),
+        ("magnify_start_east", 0, 43, 44, 0xDE8F5D, false),
+        ("magnify_start_east", 0, 38, 46, 0xBA6A4C, false),
+        ("magnify_start_east", 0, 43, 46, 0xBA6A4C, false),
+        ("magnify_start_east", 1, 38, 41, 0xDE8F5D, true),
+        ("magnify_start_east", 1, 39, 42, 0xE9A980, true),
+        ("magnify_start_east", 1, 39, 43, 0xDE8F5D, true),
+        ("magnify_start_east", 1, 37, 35, 0xBE6D44, false),
+        ("magnify_start_east", 1, 38, 35, 0xFFF672, false),
+        ("magnify_start_east", 1, 40, 37, 0x000000, false),
+        ("magnify_start_east", 1, 40, 46, 0xBA6A4C, false),
+        ("magnify_start_east", 2, 42, 45, 0xBA6A4C, true),
+        ("magnify_start_east", 2, 45, 46, 0xDE8F5D, true),
+        ("magnify_start_east", 2, 40, 33, 0x9C5241, true),
+        ("magnify_start_east", 2, 40, 37, 0x000000, false),
+        ("magnify_start_east", 2, 41, 37, 0xBE6D44, false),
+        ("magnify_start_east", 2, 43, 46, 0xBA6A4C, false),
+        ("magnify_loop_east", 0, 44, 42, 0xBA6A4C, true),
+        ("magnify_loop_east", 0, 46, 42, 0xBA6A4C, true),
+        ("magnify_loop_east", 0, 46, 43, 0xDE8F5D, true),
+        ("magnify_loop_east", 0, 45, 44, 0xDE8F5D, true),
+        ("magnify_loop_east", 0, 44, 36, 0xBE6D44, false),
+        ("magnify_loop_east", 0, 45, 36, 0xFFF672, false),
+        ("magnify_loop_east", 0, 46, 38, 0x488DE1, false),
+        ("magnify_loop_east", 0, 38, 45, 0xBA6A4C, false),
+        ("magnify_end_east", 0, 39, 43, 0xDE8F5D, true),
+        ("magnify_end_east", 0, 45, 46, 0xDE8F5D, true),
+        ("magnify_end_east", 0, 36, 36, 0xBE6D44, false),
+        ("magnify_end_east", 0, 40, 46, 0xBA6A4C, false),
+        ("magnify_end_east", 1, 35, 45, 0xE9A980, true),
+        ("magnify_end_east", 1, 36, 45, 0xBA6A4C, true),
+        ("magnify_end_east", 1, 45, 46, 0xDE8F5D, true),
+        ("magnify_end_east", 1, 43, 36, 0xECF0E9, false),
+        ("magnify_end_east", 1, 38, 45, 0xBA6A4C, false),
     ];
     let skin = [0xE9A980, 0xDE8F5D, 0xBA6A4C, 0x9C5241, 0x7D3B14];
     let mut first_selection = None;
@@ -99,7 +127,7 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
             format!("{:x}", Sha256::digest(fs::read(original.join(a)).unwrap()))
         );
     }
-    for r in profile["regions"].as_array().unwrap().iter().take(84) {
+    for r in profile["regions"].as_array().unwrap().iter().take(112) {
         let a = r["asset"].as_str().unwrap();
         for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
             assert_eq!(
@@ -147,17 +175,12 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
         let mut selection = vec![];
         let mut changed = 0;
         for (name, frames) in [
-            ("blink_east", 3),
-            ("blink_south", 3),
-            ("drink_east", 3),
-            ("drink_north", 3),
-            ("drink_south", 3),
-            ("eat_east", 5),
-            ("eat_north", 3),
-            ("eat_south", 5),
-            ("sit_east", 1),
-            ("sit_north", 1),
-            ("sit_south", 1),
+            ("magnify_end_east", 2),
+            ("magnify_end_south", 2),
+            ("magnify_loop_east", 1),
+            ("magnify_loop_south", 1),
+            ("magnify_start_east", 3),
+            ("magnify_start_south", 3),
         ] {
             let a = asset(name);
             let before = image::open(original.join(&a)).unwrap().to_rgba8();
@@ -204,7 +227,7 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
             for (x, y, p) in before.enumerate_pixels() {
                 let q = after.get_pixel(x, y);
                 assert_eq!(p[3], q[3]);
-                // Observed skin colors have 86 explicit uniform/gold-trim pixels excluded.
+                // Observed skin colors have 54 explicit uniform/gold-trim pixels excluded.
                 // This independent inventory catches omitted tiny components.
                 let index = skin
                     .iter()
@@ -219,28 +242,23 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
                 }
             }
             let expected_counts: &[usize] = match name {
-                "blink_east" => &[33, 40, 33],
-                "blink_south" => &[39, 46, 39],
-                "drink_east" => &[34, 40, 34],
-                "drink_north" => &[2, 3, 2],
-                "drink_south" => &[36, 45, 36],
-                "eat_east" => &[29, 36, 24, 35, 29],
-                "eat_north" => &[2, 3, 2],
-                "eat_south" => &[35, 37, 30, 46, 34],
-                "sit_east" => &[30],
-                "sit_north" => &[0],
-                "sit_south" => &[34],
+                "magnify_end_east" => &[17, 29],
+                "magnify_end_south" => &[38, 33],
+                "magnify_loop_east" => &[28],
+                "magnify_loop_south" => &[25],
+                "magnify_start_east" => &[37, 23, 24],
+                "magnify_start_south" => &[42, 45, 37],
                 _ => unreachable!(),
             };
             assert_eq!(counts, expected_counts, "skin inventory {name}");
         }
-        assert_eq!(changed, 868);
+        assert_eq!(changed, 378);
         if let Some(first) = &first_selection {
             assert_eq!(first, &selection);
         } else {
             first_selection = Some(selection);
         }
-        for r in profile["regions"].as_array().unwrap().iter().take(84) {
+        for r in profile["regions"].as_array().unwrap().iter().take(112) {
             let a = r["asset"].as_str().unwrap();
             for file in [a.to_owned(), a.replace(".png", ".meta.toml")] {
                 assert_eq!(
@@ -252,14 +270,17 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
             }
         }
     }
-    assert_eq!(prior_files, 840);
+    assert_eq!(prior_files, 1120);
 }
 
 // Independent source-grid inventory: shared gold-trim and uniform pixels.
+// East start [43,44] is an isolated DE8F5D chest-trim shade; the remaining
+// exclusions are BA6A4C belt/cape trim beside the separately visible hands.
 fn is_trim(name: &str, frame: u32, x: u32, y: u32) -> bool {
     let points: &[(u32, u32)] = match (name, frame) {
-        ("blink_east", 0) => &[(43, 43), (38, 45), (40, 46), (41, 46), (43, 46)],
-        ("blink_south", 0) => &[
+        ("magnify_end_east", 0) => &[(40, 46), (41, 46), (43, 46)],
+        ("magnify_end_east", 1) => &[(38, 45), (40, 46), (41, 46), (43, 46)],
+        ("magnify_end_south", 0) => &[
             (37, 45),
             (42, 45),
             (39, 46),
@@ -268,9 +289,7 @@ fn is_trim(name: &str, frame: u32, x: u32, y: u32) -> bool {
             (42, 47),
             (42, 48),
         ],
-        ("drink_south", 0) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("blink_east", 1) => &[(43, 43), (38, 45), (40, 46), (41, 46), (43, 46)],
-        ("blink_south", 1) => &[
+        ("magnify_end_south", 1) => &[
             (37, 45),
             (42, 45),
             (39, 46),
@@ -279,9 +298,13 @@ fn is_trim(name: &str, frame: u32, x: u32, y: u32) -> bool {
             (42, 47),
             (42, 48),
         ],
-        ("drink_south", 1) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("blink_east", 2) => &[(43, 43), (38, 45), (40, 46), (41, 46), (43, 46)],
-        ("blink_south", 2) => &[
+        ("magnify_loop_east", 0) => &[(38, 45), (40, 46), (41, 46), (43, 46)],
+        ("magnify_loop_south", 0) => &[(37, 45), (39, 46), (40, 46), (42, 46), (42, 47), (42, 48)],
+        ("magnify_start_east", 0) => &[(43, 44), (38, 46), (43, 46)],
+        ("magnify_start_east", 1) => &[(40, 46), (41, 46), (43, 46)],
+        ("magnify_start_east", 2) => &[(43, 46)],
+        ("magnify_start_south", 0) => &[(37, 46), (42, 46), (42, 47), (42, 48)],
+        ("magnify_start_south", 1) => &[
             (37, 45),
             (42, 45),
             (39, 46),
@@ -290,17 +313,7 @@ fn is_trim(name: &str, frame: u32, x: u32, y: u32) -> bool {
             (42, 47),
             (42, 48),
         ],
-        ("drink_south", 2) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("sit_east", 0) => &[(38, 44)],
-        ("sit_south", 0) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("eat_east", 0) => &[(38, 44), (39, 44)],
-        ("eat_east", 1) => &[(38, 44), (39, 44), (40, 43)],
-        ("eat_east", 2) => &[(38, 44), (39, 44)],
-        ("eat_south", 0) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("eat_south", 2) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("eat_south", 4) => &[(37, 44), (42, 44), (43, 45), (43, 46), (43, 47)],
-        ("eat_south", 1) => &[(37, 44), (42, 45), (43, 46), (43, 47)],
-        ("eat_south", 3) => &[(42, 45), (43, 46), (43, 47)],
+        ("magnify_start_south", 2) => &[(37, 45), (39, 46), (40, 46), (42, 47), (42, 48)],
         _ => &[],
     };
     points.contains(&(x, y))

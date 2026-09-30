@@ -213,6 +213,9 @@ native directions, along with Spring shocked reactions and seated reading.
 Balor also includes his Spring coin, gem, hair-flip and jump animations,
 completing that sprite folder. Valen and Eiland also include standing and
 seated writing.
+Valen's healing and charm animations complete her Spring sprite folder.
+Eiland also includes Spring magnifying-glass animations, and Balor includes
+Summer idle and walking sprites.
 I, O and J cycle their
 palettes respectively, keeping their portraits and supported overworld sprites together.
 Other unlisted overworld animations remain original.

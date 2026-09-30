@@ -2424,7 +2424,13 @@
       "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_specialanimation_spring_inspect_gem_end_south.png": "Default",
       "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_specialanimation_spring_inspect_gem_loop_south.png": "Default",
       "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_specialanimation_spring_inspect_gem_start_south.png": "Default",
-      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_specialanimation_spring_jump_east.png": "Default"
+      "assets/animations/NPCs/Balor/Sprites/Spring/spr_npc_balor_specialanimation_spring_jump_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Summer/spr_npc_balor_summer_idle_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Summer/spr_npc_balor_summer_idle_north.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Summer/spr_npc_balor_summer_idle_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Summer/spr_npc_balor_summer_walk_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Summer/spr_npc_balor_summer_walk_north.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Summer/spr_npc_balor_summer_walk_south.png": "Default"
     },
     "hotkey": "I",
     "id": "balor",
@@ -2557,7 +2563,13 @@
       "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_write_sit_end_south.png": "Default",
       "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_write_sit_loop_south.png": "Default",
       "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_write_sit_start_south.png": "Default",
-      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_write_start_south.png": "Default"
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_write_start_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_charm_end_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_charm_loop_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_charm_start_south.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_heal_end_east.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_heal_loop_east.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Spring/spr_npc_valen_specialanimation_spring_heal_start_east.png": "Default"
     },
     "hotkey": "O",
     "id": "valen",
@@ -2676,7 +2688,13 @@
       "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_write_sit_end_south.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_write_sit_loop_south.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_write_sit_start_south.png": "Default",
-      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_write_start_south.png": "Default"
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_write_start_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_magnify_end_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_magnify_end_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_magnify_loop_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_magnify_loop_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_magnify_start_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Spring/spr_npc_eiland_specialanimation_spring_magnify_start_south.png": "Default"
     },
     "hotkey": "J",
     "id": "eiland",
