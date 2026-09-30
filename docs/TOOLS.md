@@ -225,6 +225,10 @@ The [Autumn pilot and Summer actions](development/balor-autumn-valen-writing-eil
 Balor's Autumn idle/walk, Valen's Summer reading/writing and Eiland's Summer
 general actions/sleep/kiss. Their totals are 179, 163 and 147 sources, with
 84 new review cases.
+The [Autumn actions and Summer healing/writing batch](development/balor-autumn-actions-valen-heal-eiland-writing.md)
+adds Balor's Autumn blink/sit/eat/drink, finishes Valen's Summer healing, and
+adds Eiland's Summer reading/writing. Their totals are 190, 166 and 156 sources,
+with 81 new review cases.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
