@@ -293,7 +293,11 @@ The [Eiland Winter completion batch](development/slice-010.md) adds his four
 remaining tool animations, completing Winter at 248 total sources. Its review
 covers 58 cases, including the full tool swings and all native West mirrors.
 Shared-color clothing stays original; historical pixel tests remain unchanged.
-Its numbered outputs use `generated/slice-010-review/` and `generated/slice-010-build/`;
+The [Eiland Beach movement batch](development/slice-011.md) adds six idle/walk
+strips, bringing him to 254 sources. The review includes all 15 source frames
+and five native West mirrors. Swimwear and trim stay original; historical pixel
+tests remain unchanged.
+Its numbered outputs use `generated/slice-011-review/` and `generated/slice-011-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

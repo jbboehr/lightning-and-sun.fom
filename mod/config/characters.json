@@ -3061,7 +3061,13 @@
       "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_axe_east.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_brush_east.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_pickaxe_east.png": "Default",
-      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_trowel_east.png": "Default"
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_trowel_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_idle_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_idle_north.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_idle_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_walk_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_walk_north.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_walk_south.png": "Default"
     },
     "hotkey": "J",
     "id": "eiland",
