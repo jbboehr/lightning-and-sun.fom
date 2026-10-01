@@ -234,8 +234,9 @@ hand pixel in the first Winter north-facing action frame.
 Eiland's complete Summer, Autumn and Winter sprite folders are included, with
 reading, standing/seated writing, magnifying-glass, axe, pickaxe, brush and trowel
 animations alongside the standard movements and actions. His Winter gloves and
-gold clothing details stay original. His Beach standing, walking, blinking,
-general actions and kissing are also included, with swimwear and trim preserved.
+gold clothing details stay original. His complete Beach sprite folder is also
+included, with swimming alongside standing, walking, blinking, general actions
+and kissing. Swimwear, trim and water effects stay original.
 I, O and J cycle their
 palettes respectively, keeping their portraits and supported overworld sprites together.
 Other unlisted overworld animations remain original.

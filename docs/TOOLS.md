@@ -301,7 +301,11 @@ The [Eiland Beach action batch](development/slice-012.md) adds six action/blink/
 strips, bringing him to 260 sources. The review includes all 31 source frames
 and 14 native West mirrors. Sixteen shared-color swimwear trim pixels stay
 original. Historical pixel tests remain unchanged.
-Its numbered outputs use `generated/slice-012-review/` and `generated/slice-012-build/`;
+The [Eiland Beach completion batch](development/slice-013.md) adds his two swimming
+strips, completing all 14 Beach strips at 262 total sources. The review includes
+all eight source frames and four native West mirrors, including the full water
+effects. Historical pixel tests remain unchanged.
+Its numbered outputs use `generated/slice-013-review/` and `generated/slice-013-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
