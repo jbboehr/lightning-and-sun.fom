@@ -237,6 +237,10 @@ The [Autumn reading/actions and Summer tools batch](development/balor-autumn-fin
 finishes Balor's Autumn and Eiland's Summer folders, and adds Valen's Autumn
 blink/sit/eat/drink. Their totals are 201, 183 and 166 sources, with 126 new review
 cases. Valen's North sitting stays unchanged; eating/drinking retain tiny hand masks.
+The [Winter and Autumn movement/actions batch](development/balor-winter-valen-standard-eiland-autumn.md)
+adds Balor's Winter idle/walk, Valen's Autumn action/sleep/kiss, and Eiland's
+Autumn idle/walk. Their totals are 207, 188 and 172 sources, with 78 review cases.
+Eiland's shared-color clothing and Balor's covered North views remain unchanged.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

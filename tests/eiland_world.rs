@@ -10,7 +10,7 @@ fn read(path: impl AsRef<Path>) -> Value {
 fn eiland_world_adds_six_pinned_regions_with_isolated_world_aliases() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let p = read(root.join("palettes/profiles/eiland-world-trial.json"));
-    assert_eq!(p["regions"].as_array().unwrap().len(), 166);
+    assert_eq!(p["regions"].as_array().unwrap().len(), 172);
     assert_eq!(p["source_colors"].as_array().unwrap().len(), 12);
     assert_eq!(p["color_groups"].as_array().unwrap().len(), 7);
     let expected: Vec<_> = [
@@ -100,10 +100,10 @@ fn color(value: &Value) -> u32 {
 }
 
 #[test]
-#[ignore = "requires 166 local animations in extracted/eiland-summer-finish-study and the accepted earlier output baseline"]
+#[ignore = "requires 172 local animations in extracted/eiland-autumn-world-study and the accepted earlier output baseline"]
 fn eiland_world_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/eiland-summer-finish-study");
+    let original = root.join("extracted/eiland-autumn-world-study");
     let baseline = root
         .join("generated/characters-reina-juniper-march-wedding-finish-trial/characters/eiland");
     let profile_path = std::env::var_os("FOM_EILAND_WORLD_PROFILE")
