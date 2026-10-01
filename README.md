@@ -231,12 +231,10 @@ Her covered north-facing seasonal idle, walk and sitting sprites remain original
 eating and drinking recolor the tiny
 visible hand details. Her selected palette also covers the single exposed
 hand pixel in the first Winter north-facing action frame.
-Eiland's complete Summer and Autumn sprite folders are included, with reading,
-writing, magnifying-glass, axe, pickaxe, brush and trowel animations alongside
-the standard movements and actions. His Winter idle, walking, blinking,
-sitting, eating, drinking, general-action, sleeping, kissing, seated-reading,
-standing/seated-writing and magnifying-glass animations are also included.
-His Winter gloves and gold clothing details stay original.
+Eiland's complete Summer, Autumn and Winter sprite folders are included, with
+reading, standing/seated writing, magnifying-glass, axe, pickaxe, brush and trowel
+animations alongside the standard movements and actions. His Winter gloves and
+gold clothing details stay original.
 I, O and J cycle their
 palettes respectively, keeping their portraits and supported overworld sprites together.
 Other unlisted overworld animations remain original.

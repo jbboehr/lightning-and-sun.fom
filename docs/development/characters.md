@@ -2,12 +2,12 @@
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
 Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 262,
-Valen's 257, Eiland's 244, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
+Valen's 257, Eiland's 248, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 15,792 variant strips from 3,948 sources. Caldarus's three
+variants per source give 15,808 variant strips from 3,952 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -375,6 +375,12 @@ in the offline review; the user approved the artwork for commit on 2026-09-30. E
 coat and gold-trim pixels remain original. Valen's adult inventory is complete;
 her separate Children folders remain future work. Historical pixel tests retain
 their stable corpus paths and baselines.
+The [Eiland Winter completion batch](slice-010.md) adds axe, pickaxe, brush and
+trowel animations, completing all 41 Winter strips. All 29 source frames and
+29 native West mirrors appear in the offline review; the user approved the
+artwork for commit on 2026-10-01. Full 80×80 views include tool swings and effects. Eiland's 153 shared-color
+coat and gold-trim pixels remain original. Historical pixel tests retain their
+stable corpus paths and baselines.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -613,14 +619,14 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package finishes Valen's Wedding folder and adds Eiland's
-Winter seated-writing and magnifying-glass cycles. It is in
-`generated/build/package` (a shortcut to `generated/slice-009-build/package`).
-It is verified with MOMI in the isolated `tmp/slice-009-playtest` lab.
+The latest combined package finishes Eiland's Winter folder with axe, pickaxe,
+brush and trowel animations. It is in
+`generated/build/package` (a shortcut to `generated/slice-010-build/package`).
+It is verified with MOMI in the isolated `tmp/slice-010-playtest` lab.
 It has no preview helper and did not replace the desktop launcher. Use the
 [complete offline review](../../generated/review/index.html)
-to inspect all 54 source frames and 21 native West mirrors. This combined index
-links both character galleries; their separate folders are part of the same review.
+to inspect all 29 source frames and 29 native West mirrors. This slice has one
+Eiland gallery, including all four tools and their full swing effects.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

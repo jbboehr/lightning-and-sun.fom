@@ -289,7 +289,11 @@ finishes Valen's Wedding folder and adds Eiland's Winter seated-writing and
 magnifying-glass cycles. Their totals are 257 and 244 sources, with 75 review
 cases. Eiland's shared-color clothing stays original; historical pixel tests
 remain unchanged.
-Its numbered outputs use `generated/slice-009-review/` and `generated/slice-009-build/`;
+The [Eiland Winter completion batch](development/slice-010.md) adds his four
+remaining tool animations, completing Winter at 248 total sources. Its review
+covers 58 cases, including the full tool swings and all native West mirrors.
+Shared-color clothing stays original; historical pixel tests remain unchanged.
+Its numbered outputs use `generated/slice-010-review/` and `generated/slice-010-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

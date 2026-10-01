@@ -3057,7 +3057,11 @@
       "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_magnify_start_south.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_write_sit_end_south.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_write_sit_loop_south.png": "Default",
-      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_write_sit_start_south.png": "Default"
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_write_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_axe_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_brush_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_pickaxe_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_specialanimation_winter_trowel_east.png": "Default"
     },
     "hotkey": "J",
     "id": "eiland",
