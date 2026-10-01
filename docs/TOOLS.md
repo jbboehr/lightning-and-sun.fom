@@ -264,7 +264,11 @@ adds Balor's Beach idle/walk, Valen's Winter actions/sleep/kiss, and Eiland's
 Autumn seated writing and magnifying-glass cycles. Their totals are 235, 219 and
 203 sources, with 84 review cases. Existing pixel tests stay unchanged; only the
 central coverage totals advance.
-Its numbered outputs use `generated/slice-003-review/` and `generated/slice-003-build/`;
+The [Beach actions, Winter studies and Autumn tools batch](development/slice-004.md)
+adds Balor's Beach actions/blinks/sitting/kissing and completes Valen's Winter
+reading/writing/healing and Eiland's Autumn tools. Their totals are 244, 228 and
+207 sources, with 137 review cases. Historical pixel tests remain unchanged.
+Its numbered outputs use `generated/slice-004-review/` and `generated/slice-004-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
