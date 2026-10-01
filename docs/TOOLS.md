@@ -272,7 +272,11 @@ The [Beach completion and seasonal movement batch](development/slice-005.md)
 finishes Balor's Beach folder with swimming and hair flipping, and starts Valen's
 Beach and Eiland's Winter idle/walk. Their totals are 247, 234 and 213 sources,
 with 57 review cases. Historical pixel tests remain unchanged.
-Its numbered outputs use `generated/slice-005-review/` and `generated/slice-005-build/`;
+The [Wedding movement, Beach and Winter action batch](development/slice-006.md)
+adds Balor's Wedding idle/walk, Valen's Beach blinks/actions/kissing and Eiland's
+Winter blinking/sitting/eating/drinking. Their totals are 253, 240 and 224 sources,
+with 108 review cases. Historical pixel tests remain unchanged.
+Its numbered outputs use `generated/slice-006-review/` and `generated/slice-006-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
