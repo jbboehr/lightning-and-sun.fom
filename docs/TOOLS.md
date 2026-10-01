@@ -259,7 +259,12 @@ The [Winter completion and Autumn reading/writing batch](development/slice-002.m
 finishes Balor's Winter folder, adds Valen's Winter blink/sit/eat/drink, and
 adds Eiland's Autumn seated reading and standing writing. Their totals are
 229, 214 and 194 sources, with 86 review cases.
-Its numbered outputs use `generated/slice-002-review/` and `generated/slice-002-build/`;
+The [Beach movement, Winter actions and Autumn studies batch](development/slice-003.md)
+adds Balor's Beach idle/walk, Valen's Winter actions/sleep/kiss, and Eiland's
+Autumn seated writing and magnifying-glass cycles. Their totals are 235, 219 and
+203 sources, with 84 review cases. Existing pixel tests stay unchanged; only the
+central coverage totals advance.
+Its numbered outputs use `generated/slice-003-review/` and `generated/slice-003-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
