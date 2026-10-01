@@ -2,10 +2,10 @@ use serde_json::{Value, json};
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/valen-autumn-finish-study and the retained Spring-everyday Valen bundle"]
+#[ignore = "requires extracted/valen-winter-world-study and the retained Spring-everyday Valen bundle"]
 fn valen_spring_standard_covers_skin_and_preserves_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/valen-autumn-finish-study");
+    let original = root.join("extracted/valen-winter-world-study");
     let profile_path = root.join("palettes/profiles/valen-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);

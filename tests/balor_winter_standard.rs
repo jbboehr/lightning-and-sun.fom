@@ -3,27 +3,27 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires extracted/balor-winter-standard-study and the local accepted Balor world baseline"]
-fn balor_winter_actions_covers_skin_and_preserves_materials() {
+fn balor_winter_standard_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/balor-winter-standard-study");
     let baseline = root.join(
-        "generated/characters-balor-winter-valen-standard-eiland-autumn-trial/characters/balor",
+        "generated/characters-balor-winter-actions-valen-finish-eiland-autumn-actions-trial/characters/balor",
     );
-    let set = std::env::var_os("FOM_BALOR_WINTER_ACTIONS_PRESETS")
+    let set = std::env::var_os("FOM_BALOR_WINTER_STANDARD_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/balor-world-trial.json"));
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
-    let profile_path = std::env::var_os("FOM_BALOR_WINTER_ACTIONS_PROFILE")
+    let profile_path = std::env::var_os("FOM_BALOR_WINTER_STANDARD_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/balor-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile_path).unwrap()).unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..207];
+    let prior = &profile["regions"].as_array().unwrap()[..218];
     let candidate_path = set
         .parent()
         .unwrap()
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
-    assert_eq!(&candidate["regions"].as_array().unwrap()[..207], prior);
+    assert_eq!(&candidate["regions"].as_array().unwrap()[..218], prior);
     assert_eq!(candidate["regions"].as_array().unwrap().len(), 223);
     assert_eq!(candidate["source_colors"], profile["source_colors"]);
     assert_eq!(candidate["color_groups"], profile["color_groups"]);
@@ -47,84 +47,75 @@ fn balor_winter_actions_covers_skin_and_preserves_materials() {
     // Reviewed landmarks distinguish moving skin from protected materials.
     // Literal per-frame counts guard brief and occluded skin exposure.
     let landmarks = [
-        ("blink_east", 0, 44, 48, 0x000000, false),
-        ("blink_east", 0, 42, 43, 0x1A1F31, false),
-        ("blink_east", 0, 38, 50, 0x262C49, false),
-        ("blink_east", 0, 36, 38, 0x281846, false),
-        ("blink_east", 0, 39, 49, 0x343F52, false),
-        ("blink_east", 0, 41, 33, 0x4A3D66, false),
-        ("blink_east", 0, 44, 44, 0x5F534D, false),
-        ("blink_east", 0, 42, 47, 0x627390, false),
-        ("blink_east", 0, 41, 40, 0x672115, true),
-        ("blink_east", 0, 38, 32, 0x686589, false),
-        ("blink_east", 0, 35, 44, 0x877E6D, false),
-        ("blink_east", 0, 41, 44, 0x893F61, false),
-        ("blink_east", 0, 41, 30, 0x9B83B7, false),
-        ("blink_east", 0, 43, 36, 0xA59DA2, false),
-        ("blink_east", 0, 38, 36, 0xC2B9BE, false),
-        ("blink_east", 0, 44, 45, 0xC6BEAF, false),
-        ("blink_east", 0, 39, 38, 0xD37A57, true),
-        ("blink_east", 0, 39, 37, 0xF0B988, true),
-        ("blink_east", 0, 36, 45, 0xF8F0E2, false),
-        ("blink_east", 0, 40, 37, 0xFCD9B3, true),
-        ("blink_east", 1, 41, 40, 0x672115, true),
-        ("blink_south", 1, 40, 40, 0x672115, true),
-        ("drink_south", 1, 39, 42, 0x672115, true),
-        ("drink_south", 1, 39, 41, 0xD37A57, true),
-        ("drink_south", 1, 40, 40, 0xF0B988, true),
-        ("eat_east", 0, 37, 46, 0x000000, false),
-        ("eat_east", 0, 44, 46, 0x1A1F31, false),
-        ("eat_east", 0, 44, 48, 0x262C49, false),
-        ("eat_east", 0, 37, 40, 0x281846, false),
-        ("eat_east", 0, 41, 48, 0x343F52, false),
-        ("eat_east", 0, 39, 34, 0x4A3D66, false),
-        ("eat_east", 0, 43, 45, 0x627390, false),
-        ("eat_east", 0, 38, 39, 0x672115, true),
-        ("eat_east", 0, 38, 33, 0x686589, false),
-        ("eat_east", 0, 38, 45, 0x877E6D, false),
-        ("eat_east", 0, 41, 31, 0x9B83B7, false),
-        ("eat_east", 0, 43, 36, 0xA59DA2, false),
-        ("eat_east", 0, 38, 36, 0xC2B9BE, false),
-        ("eat_east", 0, 39, 44, 0xC6BEAF, false),
-        ("eat_east", 0, 41, 40, 0xD37A57, true),
-        ("eat_east", 0, 43, 37, 0xECF0E9, false),
-        ("eat_east", 0, 43, 38, 0xF0B988, true),
-        ("eat_east", 0, 42, 43, 0xF8F0E2, false),
-        ("eat_east", 0, 40, 38, 0xFCD9B3, true),
-        ("eat_south", 1, 39, 42, 0x672115, true),
-        ("eat_south", 1, 39, 41, 0xD37A57, true),
-        ("sit_south", 0, 47, 47, 0x000000, false),
-        ("sit_south", 0, 36, 44, 0x1A1F31, false),
-        ("sit_south", 0, 42, 48, 0x262C49, false),
-        ("sit_south", 0, 43, 40, 0x281846, false),
-        ("sit_south", 0, 39, 47, 0x343F52, false),
-        ("sit_south", 0, 40, 33, 0x4A3D66, false),
-        ("sit_south", 0, 43, 45, 0x5F534D, false),
-        ("sit_south", 0, 42, 43, 0x627390, false),
-        ("sit_south", 0, 40, 41, 0x672115, true),
-        ("sit_south", 0, 41, 33, 0x686589, false),
-        ("sit_south", 0, 45, 45, 0x877E6D, false),
-        ("sit_south", 0, 40, 31, 0x9B83B7, false),
-        ("sit_south", 0, 42, 36, 0xC2B9BE, false),
-        ("sit_south", 0, 33, 46, 0xC6BEAF, false),
-        ("sit_south", 0, 40, 40, 0xD37A57, true),
-        ("sit_south", 0, 42, 37, 0xECF0E9, false),
-        ("sit_south", 0, 38, 38, 0xF0B988, true),
-        ("sit_south", 0, 45, 46, 0xF8F0E2, false),
-        ("sit_south", 0, 40, 37, 0xFCD9B3, true),
+        ("action_east", 0, 40, 48, 0x000000, false),
+        ("action_east", 0, 37, 45, 0x1A1F31, false),
+        ("action_east", 0, 39, 50, 0x262C49, false),
+        ("action_east", 0, 38, 40, 0x281846, false),
+        ("action_east", 0, 39, 51, 0x343F52, false),
+        ("action_east", 0, 40, 34, 0x4A3D66, false),
+        ("action_east", 0, 39, 49, 0x627390, false),
+        ("action_east", 0, 42, 41, 0x672115, true),
+        ("action_east", 0, 39, 33, 0x686589, false),
+        ("action_east", 0, 44, 45, 0x877E6D, false),
+        ("action_east", 0, 42, 45, 0x893F61, false),
+        ("action_east", 0, 42, 31, 0x9B83B7, false),
+        ("action_east", 0, 44, 36, 0xA59DA2, false),
+        ("action_east", 0, 39, 36, 0xC2B9BE, false),
+        ("action_east", 0, 43, 46, 0xC6BEAF, false),
+        ("action_east", 0, 42, 40, 0xD37A57, true),
+        ("action_east", 0, 44, 37, 0xECF0E9, false),
+        ("action_east", 0, 44, 38, 0xF0B988, true),
+        ("action_east", 0, 41, 46, 0xF8F0E2, false),
+        ("action_east", 0, 41, 38, 0xFCD9B3, true),
+        ("action_east", 1, 44, 40, 0x672115, true),
+        ("action_south", 0, 45, 47, 0x000000, false),
+        ("action_south", 0, 39, 44, 0x1A1F31, false),
+        ("action_south", 0, 41, 51, 0x262C49, false),
+        ("action_south", 0, 43, 40, 0x281846, false),
+        ("action_south", 0, 36, 49, 0x343F52, false),
+        ("action_south", 0, 40, 33, 0x4A3D66, false),
+        ("action_south", 0, 44, 45, 0x5F534D, false),
+        ("action_south", 0, 37, 49, 0x627390, false),
+        ("action_south", 0, 40, 41, 0x672115, true),
+        ("action_south", 0, 41, 33, 0x686589, false),
+        ("action_south", 0, 37, 46, 0x877E6D, false),
+        ("action_south", 0, 40, 45, 0x893F61, false),
+        ("action_south", 0, 40, 31, 0x9B83B7, false),
+        ("action_south", 0, 42, 36, 0xC2B9BE, false),
+        ("action_south", 0, 41, 46, 0xC6BEAF, false),
+        ("action_south", 0, 40, 40, 0xD37A57, true),
+        ("action_south", 0, 42, 37, 0xECF0E9, false),
+        ("action_south", 0, 38, 38, 0xF0B988, true),
+        ("action_south", 0, 35, 46, 0xF8F0E2, false),
+        ("action_south", 0, 40, 37, 0xFCD9B3, true),
+        ("action_south", 1, 40, 40, 0x672115, true),
+        ("kiss_east", 1, 42, 41, 0x672115, true),
+        ("kiss_east", 1, 42, 40, 0xD37A57, true),
+        ("sleep_east", 0, 36, 48, 0x000000, false),
+        ("sleep_east", 0, 36, 45, 0x1A1F31, false),
+        ("sleep_east", 0, 39, 50, 0x262C49, false),
+        ("sleep_east", 0, 36, 37, 0x281846, false),
+        ("sleep_east", 0, 39, 49, 0x343F52, false),
+        ("sleep_east", 0, 42, 33, 0x4A3D66, false),
+        ("sleep_east", 0, 43, 45, 0x5F534D, false),
+        ("sleep_east", 0, 42, 47, 0x627390, false),
+        ("sleep_east", 0, 38, 38, 0x672115, true),
+        ("sleep_east", 0, 39, 32, 0x686589, false),
+        ("sleep_east", 0, 42, 41, 0x877E6D, false),
+        ("sleep_east", 0, 41, 44, 0x893F61, false),
+        ("sleep_east", 0, 41, 30, 0x9B83B7, false),
+        ("sleep_east", 0, 39, 45, 0xC6BEAF, false),
+        ("sleep_east", 0, 38, 37, 0xD37A57, true),
+        ("sleep_east", 0, 40, 35, 0xF0B988, true),
+        ("sleep_east", 0, 44, 39, 0xF8F0E2, false),
+        ("sleep_east", 0, 41, 36, 0xFCD9B3, true),
     ];
     let cases: &[(&str, &[usize])] = &[
-        ("blink_east", &[25, 29, 25]),
-        ("blink_south", &[29, 33, 29]),
-        ("drink_east", &[21, 29, 21]),
-        ("drink_north", &[0, 0, 0]),
-        ("drink_south", &[27, 31, 27]),
-        ("eat_east", &[21, 19, 18, 23, 23]),
-        ("eat_north", &[0, 0, 0]),
-        ("eat_south", &[27, 27, 23, 33, 27]),
-        ("sit_east", &[23]),
-        ("sit_north", &[0]),
-        ("sit_south", &[27]),
+        ("action_east", &[23, 23, 23, 23, 23, 23, 23]),
+        ("action_north", &[0, 0, 0, 0, 0, 0, 0]),
+        ("action_south", &[27, 27, 27, 27, 27, 27, 27]),
+        ("kiss_east", &[23, 25, 29, 29]),
+        ("sleep_east", &[23]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;

@@ -250,6 +250,11 @@ adds Balor's Winter and Eiland's Autumn blink/sit/eat/drink, and completes Valen
 Autumn folder with reading, writing and healing. Their totals are 218, 197 and
 183 sources, with 116 review cases. Balor's covered North views and Eiland's
 shared-color clothing details stay original.
+The [next Winter movement and seasonal action batch](development/slice-001.md)
+adds Balor's Winter and Eiland's Autumn general actions/sleep/kiss, plus Valen's
+Winter idle/walk. Their totals are 223, 203 and 188 sources, with 96 review cases.
+Its numbered outputs use `generated/slice-001-review/` and `generated/slice-001-build/`;
+the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

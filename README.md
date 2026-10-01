@@ -217,15 +217,17 @@ Valen's healing and charm animations complete her Spring sprite folder.
 Eiland's magnifying-glass, princely-pose and tool animations complete his Spring
 sprite folder. Balor's complete Summer and Autumn sprite folders are included,
 including seated reading and gem inspection, plus Winter idle, walking,
-blinking, sitting, eating and drinking. His Winter gloves stay original.
+blinking, sitting, eating, drinking, general actions, sleeping and kissing.
+His Winter gloves stay original.
 Valen's complete Summer and Autumn sprite folders are included, with reading,
-writing and healing alongside the standard movements and actions.
+writing and healing alongside the standard movements and actions, plus Winter
+idle and walking.
 Her covered north-facing idle, walk and sitting sprites remain original;
 eating and drinking recolor the tiny
 visible hand details.
 Eiland's complete Summer sprite folder is included, with reading, writing,
 magnifying-glass, axe, pickaxe, brush and trowel animations, plus Autumn idle,
-walking, blinking, sitting, eating and drinking.
+walking, blinking, sitting, eating, drinking, general actions, sleeping and kissing.
 I, O and J cycle their
 palettes respectively, keeping their portraits and supported overworld sprites together.
 Other unlisted overworld animations remain original.
