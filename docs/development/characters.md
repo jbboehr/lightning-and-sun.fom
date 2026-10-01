@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
-Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 244,
-Valen's 228, Eiland's 207, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
+Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 247,
+Valen's 234, Eiland's 213, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 15,456 variant strips from 3,864 sources. Caldarus's three
+variants per source give 15,516 variant strips from 3,879 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -343,6 +343,11 @@ and Eiland's Autumn folders are complete. All 87 source frames and 50 native
 West mirrors appear in the offline review; the user approved the artwork on 2026-09-30.
 Eiland's 33 shared-color clothing pixels remain original. Historical pixel tests
 retain their stable corpus paths and baselines.
+The [Beach completion and seasonal movement batch](slice-005.md) adds three
+Balor swimming/hair-flip strips, six Valen Beach idle/walk strips and six Eiland
+Winter idle/walk strips. Balor's Beach folder is complete. All 43 source frames
+and 14 native West mirrors appear in the offline review; the user approved the
+artwork on 2026-09-30. Historical pixel tests retain their stable corpus paths and baselines.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -581,13 +586,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Balor's Beach actions/blinks/sitting/kissing,
-Valen's Winter reading/writing/healing and Eiland's Autumn tools. It is in
-`generated/build/package` (a shortcut to `generated/slice-004-build/package`).
-It is verified with MOMI in the isolated `tmp/slice-004-playtest` lab.
+The latest combined package adds Balor's Beach swimming/hair flip, Valen's Beach
+idle/walk and Eiland's Winter idle/walk. It is in
+`generated/build/package` (a shortcut to `generated/slice-005-build/package`).
+It is verified with MOMI in the isolated `tmp/slice-005-playtest` lab.
 It has no preview helper and did not replace the desktop launcher. Use the
 [complete offline review](../../generated/review/index.html)
-to inspect all 87 source frames and 50 native West mirrors. This combined index
+to inspect all 43 source frames and 14 native West mirrors. This combined index
 links all three character galleries; their separate folders are part of the same review.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
