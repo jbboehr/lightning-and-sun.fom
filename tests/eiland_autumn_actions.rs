@@ -2,10 +2,10 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/eiland-autumn-standard-study and the local accepted Eiland world baseline"]
+#[ignore = "requires extracted/eiland-autumn-writing-study and the local accepted Eiland world baseline"]
 fn eiland_autumn_actions_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/eiland-autumn-standard-study");
+    let original = root.join("extracted/eiland-autumn-writing-study");
     let baseline = root.join(
         "generated/characters-balor-winter-valen-standard-eiland-autumn-trial/characters/eiland",
     );
@@ -24,7 +24,7 @@ fn eiland_autumn_actions_covers_skin_and_preserves_materials() {
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
     assert_eq!(&candidate["regions"].as_array().unwrap()[..172], prior);
-    assert_eq!(candidate["regions"].as_array().unwrap().len(), 188);
+    assert_eq!(candidate["regions"].as_array().unwrap().len(), 194);
     assert_eq!(candidate["source_colors"], profile["source_colors"]);
     assert_eq!(candidate["color_groups"], profile["color_groups"]);
     let temp = tempfile::tempdir().unwrap();

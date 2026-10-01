@@ -1,13 +1,13 @@
 # Independent character palettes
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
-Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 223,
-Valen's 203, Eiland's 188, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
+Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 229,
+Valen's 214, Eiland's 194, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 15,196 variant strips from 3,799 sources. Caldarus's three
+variants per source give 15,288 variant strips from 3,822 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -323,6 +323,12 @@ five Eiland Autumn general-action/sleep/kiss strips. All 67 source frames and
 29 native West mirrors appear in the offline review; the user approved the artwork on 2026-09-30.
 Balor's seven North action frames and Valen's five North idle/walk frames remain
 unchanged. Eiland's 34 shared-color clothing pixels remain original.
+The [Winter completion and Autumn reading/writing batch](slice-002.md) adds six
+Balor Winter reading/gem-inspection strips, eleven Valen Winter blink/sit/eat/drink
+strips and six Eiland Autumn reading/writing strips. Balor's Winter folder is complete.
+All 74 source frames and 12 native West mirrors appear in the offline review;
+the user approved the artwork on 2026-09-30. Valen's North sitting and Eiland's nine shared-color
+clothing pixels remain unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -561,13 +567,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Balor's Winter and Eiland's Autumn general
-actions/sleep/kiss, plus Valen's Winter idle/walk. It is in
-`generated/build/package` (a shortcut to `generated/slice-001-build/package`).
-It is verified with MOMI in the isolated `tmp/slice-001-playtest` lab.
+The latest combined package finishes Balor's Winter reading/gem inspection,
+adds Valen's Winter blink/sit/eat/drink and Eiland's Autumn reading/writing. It is in
+`generated/build/package` (a shortcut to `generated/slice-002-build/package`).
+It is verified with MOMI in the isolated `tmp/slice-002-playtest` lab.
 It has no preview helper and did not replace the desktop launcher. Use the
 [complete offline review](../../generated/review/index.html)
-to inspect all 67 source frames and 29 native West mirrors. This combined index
+to inspect all 74 source frames and 12 native West mirrors. This combined index
 links all three character galleries; their separate folders are part of the same review.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,

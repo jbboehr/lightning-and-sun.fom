@@ -253,7 +253,11 @@ shared-color clothing details stay original.
 The [next Winter movement and seasonal action batch](development/slice-001.md)
 adds Balor's Winter and Eiland's Autumn general actions/sleep/kiss, plus Valen's
 Winter idle/walk. Their totals are 223, 203 and 188 sources, with 96 review cases.
-Its numbered outputs use `generated/slice-001-review/` and `generated/slice-001-build/`;
+The [Winter completion and Autumn reading/writing batch](development/slice-002.md)
+finishes Balor's Winter folder, adds Valen's Winter blink/sit/eat/drink, and
+adds Eiland's Autumn seated reading and standing writing. Their totals are
+229, 214 and 194 sources, with 86 review cases.
+Its numbered outputs use `generated/slice-002-review/` and `generated/slice-002-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

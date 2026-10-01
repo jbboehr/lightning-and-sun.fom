@@ -3,27 +3,25 @@ use std::{fs, path::Path, process::Command};
 
 #[test]
 #[ignore = "requires extracted/balor-winter-finish-study and the local accepted Balor world baseline"]
-fn balor_winter_world_covers_skin_and_preserves_materials() {
+fn balor_winter_finish_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/balor-winter-finish-study");
-    let baseline = root.join(
-        "generated/characters-balor-autumn-finish-valen-actions-eiland-summer-finish-trial/characters/balor",
-    );
-    let set = std::env::var_os("FOM_BALOR_WINTER_WORLD_PRESETS")
+    let baseline = root.join("generated/slice-001-build/characters/balor");
+    let set = std::env::var_os("FOM_BALOR_WINTER_FINISH_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/balor-world-trial.json"));
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
-    let profile_path = std::env::var_os("FOM_BALOR_WINTER_WORLD_PROFILE")
+    let profile_path = std::env::var_os("FOM_BALOR_WINTER_FINISH_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/balor-world-trial.json"));
     let profile: Value = serde_json::from_slice(&fs::read(profile_path).unwrap()).unwrap();
-    let prior = &profile["regions"].as_array().unwrap()[..201];
+    let prior = &profile["regions"].as_array().unwrap()[..223];
     let candidate_path = set
         .parent()
         .unwrap()
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
-    assert_eq!(&candidate["regions"].as_array().unwrap()[..201], prior);
+    assert_eq!(&candidate["regions"].as_array().unwrap()[..223], prior);
     assert_eq!(candidate["regions"].as_array().unwrap().len(), 229);
     assert_eq!(candidate["source_colors"], profile["source_colors"]);
     assert_eq!(candidate["color_groups"], profile["color_groups"]);
@@ -47,79 +45,73 @@ fn balor_winter_world_covers_skin_and_preserves_materials() {
     // Reviewed landmarks distinguish moving skin from protected materials.
     // Literal per-frame counts guard brief and occluded skin exposure.
     let landmarks = [
-        ("idle_east", 0, 44, 48, 0x000000, false),
-        ("idle_east", 0, 42, 43, 0x1A1F31, false),
-        ("idle_east", 0, 38, 50, 0x262C49, false),
-        ("idle_east", 0, 36, 38, 0x281846, false),
-        ("idle_east", 0, 39, 49, 0x343F52, false),
-        ("idle_east", 0, 39, 33, 0x4A3D66, false),
-        ("idle_east", 0, 44, 44, 0x5F534D, false),
-        ("idle_east", 0, 42, 47, 0x627390, false),
-        ("idle_east", 0, 41, 40, 0x672115, true),
-        ("idle_east", 0, 38, 32, 0x686589, false),
-        ("idle_east", 0, 35, 44, 0x877E6D, false),
-        ("idle_east", 0, 41, 44, 0x893F61, false),
-        ("idle_east", 0, 41, 30, 0x9B83B7, false),
-        ("idle_east", 0, 43, 35, 0xA59DA2, false),
-        ("idle_east", 0, 38, 35, 0xC2B9BE, false),
-        ("idle_east", 0, 44, 45, 0xC6BEAF, false),
-        ("idle_east", 0, 39, 38, 0xD37A57, true),
-        ("idle_east", 0, 43, 36, 0xECF0E9, false),
-        ("idle_east", 0, 43, 37, 0xF0B988, true),
-        ("idle_east", 0, 36, 45, 0xF8F0E2, false),
-        ("idle_east", 0, 40, 37, 0xFCD9B3, true),
-        ("walk_east", 0, 44, 48, 0x000000, false),
-        ("walk_east", 0, 42, 43, 0x1A1F31, false),
-        ("walk_east", 0, 38, 50, 0x262C49, false),
-        ("walk_east", 0, 36, 38, 0x281846, false),
-        ("walk_east", 0, 39, 49, 0x343F52, false),
-        ("walk_east", 0, 39, 33, 0x4A3D66, false),
-        ("walk_east", 0, 44, 44, 0x5F534D, false),
-        ("walk_east", 0, 42, 47, 0x627390, false),
-        ("walk_east", 0, 41, 40, 0x672115, true),
-        ("walk_east", 0, 38, 32, 0x686589, false),
-        ("walk_east", 0, 35, 44, 0x877E6D, false),
-        ("walk_east", 0, 41, 44, 0x893F61, false),
-        ("walk_east", 0, 41, 30, 0x9B83B7, false),
-        ("walk_east", 0, 43, 35, 0xA59DA2, false),
-        ("walk_east", 0, 38, 35, 0xC2B9BE, false),
-        ("walk_east", 0, 44, 45, 0xC6BEAF, false),
-        ("walk_east", 0, 39, 38, 0xD37A57, true),
-        ("walk_east", 0, 43, 36, 0xECF0E9, false),
-        ("walk_east", 0, 43, 37, 0xF0B988, true),
-        ("walk_east", 0, 36, 45, 0xF8F0E2, false),
-        ("walk_east", 0, 40, 37, 0xFCD9B3, true),
-        ("walk_east", 1, 41, 41, 0x672115, true),
-        ("walk_east", 1, 41, 40, 0xD37A57, true),
-        ("walk_south", 0, 47, 47, 0x000000, false),
-        ("walk_south", 0, 39, 43, 0x1A1F31, false),
-        ("walk_south", 0, 41, 50, 0x262C49, false),
-        ("walk_south", 0, 44, 38, 0x281846, false),
-        ("walk_south", 0, 40, 48, 0x343F52, false),
-        ("walk_south", 0, 40, 32, 0x4A3D66, false),
-        ("walk_south", 0, 37, 48, 0x627390, false),
-        ("walk_south", 0, 40, 40, 0x672115, true),
-        ("walk_south", 0, 41, 32, 0x686589, false),
-        ("walk_south", 0, 42, 45, 0x877E6D, false),
-        ("walk_south", 0, 40, 44, 0x893F61, false),
-        ("walk_south", 0, 40, 30, 0x9B83B7, false),
-        ("walk_south", 0, 42, 35, 0xC2B9BE, false),
-        ("walk_south", 0, 38, 45, 0xC6BEAF, false),
-        ("walk_south", 0, 38, 38, 0xD37A57, true),
-        ("walk_south", 0, 42, 36, 0xECF0E9, false),
-        ("walk_south", 0, 38, 37, 0xF0B988, true),
-        ("walk_south", 0, 47, 45, 0xF8F0E2, false),
-        ("walk_south", 0, 40, 36, 0xFCD9B3, true),
-        ("walk_south", 1, 40, 41, 0x672115, true),
-        ("walk_south", 1, 40, 40, 0xD37A57, true),
+        ("inspect_gem_end_south", 0, 37, 45, 0x000000, false),
+        ("inspect_gem_end_south", 0, 41, 44, 0x1A1F31, false),
+        ("inspect_gem_end_south", 0, 41, 51, 0x262C49, false),
+        ("inspect_gem_end_south", 0, 35, 40, 0x281846, false),
+        ("inspect_gem_end_south", 0, 36, 49, 0x343F52, false),
+        ("inspect_gem_end_south", 0, 38, 34, 0x4A3D66, false),
+        ("inspect_gem_end_south", 0, 37, 49, 0x627390, false),
+        ("inspect_gem_end_south", 0, 40, 41, 0x672115, true),
+        ("inspect_gem_end_south", 0, 41, 33, 0x686589, false),
+        ("inspect_gem_end_south", 0, 36, 45, 0x877E6D, false),
+        ("inspect_gem_end_south", 0, 40, 45, 0x893F61, false),
+        ("inspect_gem_end_south", 0, 40, 31, 0x9B83B7, false),
+        ("inspect_gem_end_south", 0, 38, 46, 0xC6BEAF, false),
+        ("inspect_gem_end_south", 0, 40, 40, 0xD37A57, true),
+        ("inspect_gem_end_south", 0, 42, 36, 0xF0B988, true),
+        ("inspect_gem_end_south", 0, 36, 44, 0xF8F0E2, false),
+        ("inspect_gem_end_south", 0, 39, 37, 0xFCD9B3, true),
+        ("inspect_gem_end_south", 1, 40, 40, 0x672115, true),
+        ("inspect_gem_start_south", 1, 40, 40, 0x672115, true),
+        ("read_sit_end_south", 0, 44, 46, 0x000000, false),
+        ("read_sit_end_south", 0, 41, 50, 0x262C49, false),
+        ("read_sit_end_south", 0, 42, 30, 0x281846, false),
+        ("read_sit_end_south", 0, 38, 51, 0x343F52, false),
+        ("read_sit_end_south", 0, 38, 35, 0x4A3D66, false),
+        ("read_sit_end_south", 0, 37, 45, 0x606C76, false),
+        ("read_sit_end_south", 0, 42, 40, 0x672115, true),
+        ("read_sit_end_south", 0, 41, 34, 0x686589, false),
+        ("read_sit_end_south", 0, 44, 47, 0x877E6D, false),
+        ("read_sit_end_south", 0, 38, 46, 0x98A2A6, false),
+        ("read_sit_end_south", 0, 40, 32, 0x9B83B7, false),
+        ("read_sit_end_south", 0, 38, 44, 0xC9AF9C, false),
+        ("read_sit_end_south", 0, 39, 41, 0xD37A57, true),
+        ("read_sit_end_south", 0, 42, 38, 0xECF0E9, false),
+        ("read_sit_end_south", 0, 40, 40, 0xF0B988, true),
+        ("read_sit_end_south", 0, 38, 42, 0xF6E4D7, false),
+        ("read_sit_end_south", 0, 34, 47, 0xF8F0E2, false),
+        ("read_sit_end_south", 0, 40, 38, 0xFCD9B3, true),
+        ("read_sit_loop_south", 1, 39, 42, 0x672115, true),
+        ("read_sit_loop_south", 1, 39, 41, 0xD37A57, true),
+        ("read_sit_loop_south", 1, 40, 40, 0xF0B988, true),
+        ("read_sit_start_south", 0, 43, 47, 0x000000, false),
+        ("read_sit_start_south", 0, 37, 44, 0x1A1F31, false),
+        ("read_sit_start_south", 0, 42, 48, 0x262C49, false),
+        ("read_sit_start_south", 0, 43, 40, 0x281846, false),
+        ("read_sit_start_south", 0, 39, 47, 0x343F52, false),
+        ("read_sit_start_south", 0, 40, 33, 0x4A3D66, false),
+        ("read_sit_start_south", 0, 43, 45, 0x5F534D, false),
+        ("read_sit_start_south", 0, 42, 43, 0x627390, false),
+        ("read_sit_start_south", 0, 40, 41, 0x672115, true),
+        ("read_sit_start_south", 0, 41, 33, 0x686589, false),
+        ("read_sit_start_south", 0, 44, 45, 0x877E6D, false),
+        ("read_sit_start_south", 0, 40, 31, 0x9B83B7, false),
+        ("read_sit_start_south", 0, 42, 36, 0xC2B9BE, false),
+        ("read_sit_start_south", 0, 38, 46, 0xC6BEAF, false),
+        ("read_sit_start_south", 0, 40, 40, 0xD37A57, true),
+        ("read_sit_start_south", 0, 42, 37, 0xECF0E9, false),
+        ("read_sit_start_south", 0, 38, 38, 0xF0B988, true),
+        ("read_sit_start_south", 0, 35, 46, 0xF8F0E2, false),
+        ("read_sit_start_south", 0, 40, 37, 0xFCD9B3, true),
     ];
     let cases: &[(&str, &[usize])] = &[
-        ("idle_east", &[23]),
-        ("idle_north", &[0]),
-        ("idle_south", &[27]),
-        ("walk_east", &[23, 22, 23, 23]),
-        ("walk_north", &[0, 0, 0, 0]),
-        ("walk_south", &[27, 27, 27, 27]),
+        ("inspect_gem_end_south", &[33, 33, 33, 33]),
+        ("inspect_gem_loop_south", &[21, 21, 21, 21, 21, 21, 21]),
+        ("inspect_gem_start_south", &[33, 33, 33, 33]),
+        ("read_sit_end_south", &[25, 19, 27]),
+        ("read_sit_loop_south", &[23, 33, 23, 33]),
+        ("read_sit_start_south", &[27, 19, 25]),
     ];
     let rgba = |c: u32| [(c >> 16) as u8, (c >> 8) as u8, c as u8, 255];
     let mut common_mask = None;
@@ -134,7 +126,7 @@ fn balor_winter_world_covers_skin_and_preserves_materials() {
         let mut mask = Vec::new();
         for &(case, expected_per_frame) in cases {
             let frames = expected_per_frame.len() as u32;
-            let prefix = "spr_npc_balor_winter";
+            let prefix = "spr_npc_balor_specialanimation_winter";
             let asset = format!("assets/animations/NPCs/Balor/Sprites/Winter/{prefix}_{case}.png");
             let before = image::open(original.join(&asset)).unwrap().to_rgba8();
             let after = image::open(variant.join(&asset)).unwrap().to_rgba8();
@@ -169,23 +161,7 @@ fn balor_winter_world_covers_skin_and_preserves_materials() {
                     per_frame[x as usize / 80] += 1;
                 }
             }
-            if case.ends_with("_north") {
-                assert!(per_frame.iter().all(|n| *n == 0));
-                let region = candidate["regions"]
-                    .as_array()
-                    .unwrap()
-                    .iter()
-                    .find(|r| r["asset"] == asset)
-                    .unwrap();
-                assert!(region["seeds"].as_array().unwrap().is_empty());
-                assert_eq!(
-                    fs::read(original.join(&asset)).unwrap(),
-                    fs::read(variant.join(&asset)).unwrap(),
-                    "covered North PNG must remain byte-identical"
-                );
-            } else {
-                assert!(per_frame.iter().all(|n| *n > 0), "empty frame in {case}");
-            }
+            assert!(per_frame.iter().all(|n| *n > 0), "empty frame in {case}");
             assert_eq!(per_frame, expected_per_frame, "{case}");
             for &(name, frame, x, y, color, skin) in &landmarks {
                 if name != case {
