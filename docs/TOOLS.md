@@ -6,6 +6,10 @@ an earlier export or leave stale images from a previous preset.
 
 For authoring masks across characters and outfits, see the
 [batch review gallery workflow](development/batch-review.md).
+The latest completed slice is available at
+[generated/review/index.html](../generated/review/index.html), with its compact
+[summary](../generated/review/summary.png). `generated/build/` points to the
+matching combined build. These are local shortcuts, updated after each slice.
 
 ## Build with Nix and Fenix
 
@@ -241,6 +245,11 @@ The [Winter and Autumn movement/actions batch](development/balor-winter-valen-st
 adds Balor's Winter idle/walk, Valen's Autumn action/sleep/kiss, and Eiland's
 Autumn idle/walk. Their totals are 207, 188 and 172 sources, with 78 review cases.
 Eiland's shared-color clothing and Balor's covered North views remain unchanged.
+The [Winter actions and Autumn completion batch](development/balor-winter-actions-valen-finish-eiland-autumn-actions.md)
+adds Balor's Winter and Eiland's Autumn blink/sit/eat/drink, and completes Valen's
+Autumn folder with reading, writing and healing. Their totals are 218, 197 and
+183 sources, with 116 review cases. Balor's covered North views and Eiland's
+shared-color clothing details stay original.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

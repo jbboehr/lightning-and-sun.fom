@@ -16,6 +16,16 @@ Split the review into small pages by character and outfit instead of a single
 long page. Include every expression and frame; produce focused natural-palette
 comparisons when a reported issue needs them.
 
+Use short output names for new slices: `generated/slice-001-review/` and
+`generated/slice-001-build/`, incrementing the number for each new slice. Put
+character and outfit details in the gallery title and development notes.
+After validating a slice, update the relative symlinks `generated/review` and
+`generated/build` to its combined gallery and build. Share
+`generated/review/summary.png` and `generated/review/index.html` with the user;
+these fixed paths should always open the latest completed review. Keep historical
+output paths referenced by regression tests intact. The existing long-named
+outputs remain available through these shortcuts until the next slice.
+
 Verify the complete review against the current registry and animation metadata,
 including every frame in both review palettes; check that cropping hides no visible
 art. Generate sheets from the actual current bundle, preserve nearest-neighbor
