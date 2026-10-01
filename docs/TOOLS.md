@@ -280,7 +280,11 @@ The [Wedding and Beach completion, Winter action batch](development/slice-007.md
 finishes Balor's Wedding folder and Valen's Beach folder, and adds Eiland's Winter
 general actions/sleep/kiss. Their totals are 262, 242 and 229 sources, with
 99 review cases. Historical pixel tests remain unchanged.
-Its numbered outputs use `generated/slice-007-review/` and `generated/slice-007-build/`;
+The [Wedding movement and Winter reading/writing batch](development/slice-008.md)
+adds Valen's Wedding idle/walk and Eiland's Winter seated-reading/standing-writing
+cycles. Their totals are 248 and 235 sources, with 38 review cases. Eiland's
+shared-color clothing stays original; historical pixel tests remain unchanged.
+Its numbered outputs use `generated/slice-008-review/` and `generated/slice-008-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
