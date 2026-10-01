@@ -2,12 +2,12 @@
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
 Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 262,
-Valen's 257, Eiland's 254, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
+Valen's 257, Eiland's 260, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 15,832 variant strips from 3,958 sources. Caldarus's three
+variants per source give 15,856 variant strips from 3,964 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -386,6 +386,11 @@ All 15 source frames and five native West mirrors appear in the offline review,
 approved by the user for commit on 2026-10-01. Exposed torso, arms and legs use the existing
 skin ramp; swimwear and trim remain original. Historical pixel tests retain
 their stable corpus paths and baselines.
+The [Eiland Beach action batch](slice-012.md) adds six action/blink/kiss strips.
+All 31 source frames and 14 native West mirrors appear in the offline review,
+approved by the user for commit on 2026-10-01. Sixteen swimwear trim pixels sharing a skin
+shadow remain original. Historical pixel tests retain their stable corpus
+paths and baselines.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -624,12 +629,12 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Eiland's Beach standing and walking animations.
-It is in `generated/build/package` (a shortcut to `generated/slice-011-build/package`).
-It is verified with MOMI in the isolated `tmp/slice-011-playtest` lab.
+The latest combined package adds Eiland's Beach actions, blinking and kissing.
+It is in `generated/build/package` (a shortcut to `generated/slice-012-build/package`).
+It is verified with MOMI in the isolated `tmp/slice-012-playtest` lab.
 It has no preview helper and did not replace the desktop launcher. Use the
 [complete offline review](../../generated/review/index.html)
-to inspect all 15 source frames and five native West mirrors. This slice has one
+to inspect all 31 source frames and 14 native West mirrors. This slice has one
 Eiland gallery, covering all six strips.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,

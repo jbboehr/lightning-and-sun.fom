@@ -20,7 +20,7 @@ fn tracked_character_profiles_match_reviewed_coverage() {
         ("march", 398),
         ("balor", 262),
         ("valen", 257),
-        ("eiland", 254),
+        ("eiland", 260),
         ("olric", 36),
         ("landen", 32),
         ("nora", 32),
