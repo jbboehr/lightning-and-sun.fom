@@ -284,7 +284,12 @@ The [Wedding movement and Winter reading/writing batch](development/slice-008.md
 adds Valen's Wedding idle/walk and Eiland's Winter seated-reading/standing-writing
 cycles. Their totals are 248 and 235 sources, with 38 review cases. Eiland's
 shared-color clothing stays original; historical pixel tests remain unchanged.
-Its numbered outputs use `generated/slice-008-review/` and `generated/slice-008-build/`;
+The [Wedding completion and Winter studies batch](development/slice-009.md)
+finishes Valen's Wedding folder and adds Eiland's Winter seated-writing and
+magnifying-glass cycles. Their totals are 257 and 244 sources, with 75 review
+cases. Eiland's shared-color clothing stays original; historical pixel tests
+remain unchanged.
+Its numbered outputs use `generated/slice-009-review/` and `generated/slice-009-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
