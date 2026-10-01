@@ -5,6 +5,10 @@ It groups identical decoded frames, reuses approved masks, and suggests matching
 color-connected regions for other frames. This replaces the per-slice temporary
 authoring scripts with a reusable Rust command and a small browser editor.
 
+Follow the [stable test corpus workflow](testing.md) when expanding character
+coverage. Refresh local corpus links and the central coverage count instead of
+rewriting historical tests for each slice.
+
 This is an authoring tool for the maintainer or coding agent. Keep the compact
 user-facing overview, and also provide a complete offline visual review for
 each new batch. The user should not need to launch the game or edit components

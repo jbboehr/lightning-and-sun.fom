@@ -2,10 +2,10 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/hayden-wedding-finish-study and the local accepted Beach swim baseline"]
+#[ignore = "requires extracted/test-corpus/hayden and the local accepted Beach swim baseline"]
 fn hayden_wedding_masks_cover_faces_and_hands_and_preserve_suit_and_shoes() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/hayden-wedding-finish-study");
+    let original = root.join("extracted/test-corpus/hayden");
     let baseline = root.join("generated/characters-world-beach-swim-trial/characters/hayden");
     let set = std::env::var_os("FOM_HAYDEN_WEDDING_PRESETS")
         .map(std::path::PathBuf::from)

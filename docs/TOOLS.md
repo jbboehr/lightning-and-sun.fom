@@ -6,6 +6,8 @@ an earlier export or leave stale images from a previous preset.
 
 For authoring masks across characters and outfits, see the
 [batch review gallery workflow](development/batch-review.md).
+Use the [stable local test corpora](development/testing.md) when adding coverage;
+historical pixel tests keep their inputs at fixed paths and retain accepted baselines.
 The latest completed slice is available at
 [generated/review/index.html](../generated/review/index.html), with its compact
 [summary](../generated/review/summary.png). `generated/build/` points to the

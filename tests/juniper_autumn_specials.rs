@@ -49,10 +49,10 @@ fn juniper_autumn_laugh_aliases_preserve_every_previous_palette_role() {
 }
 
 #[test]
-#[ignore = "requires extracted/juniper-wedding-finish-study and the retained Autumn-reading Juniper bundle"]
+#[ignore = "requires extracted/test-corpus/juniper and the retained Autumn-reading Juniper bundle"]
 fn juniper_autumn_specials_cover_skin_and_preserve_reviewed_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/juniper-wedding-finish-study");
+    let original = root.join("extracted/test-corpus/juniper");
     let profile_path = root.join("palettes/profiles/juniper-world-trial.json");
     let read = |p: &Path| -> Value { serde_json::from_slice(&fs::read(p).unwrap()).unwrap() };
     let profile = read(&profile_path);

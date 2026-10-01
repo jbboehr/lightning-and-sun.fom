@@ -9,6 +9,9 @@ calendar-rollover checks; [beach coverage](beach-portraits.md) records the later
 
 ## Repeatable automated checks
 
+See [stable local test corpora](testing.md) for current artwork-test setup and
+the central profile coverage check. The port results below are historical.
+
 ```sh
 nix-shell --pure --run 'cargo fmt --check && cargo clippy --locked --all-targets -- -D warnings && cargo test --locked && cargo build --locked --release'
 ```

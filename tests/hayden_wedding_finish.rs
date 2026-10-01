@@ -2,10 +2,10 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/hayden-wedding-finish-study and the local accepted Wedding pilot baseline"]
+#[ignore = "requires extracted/test-corpus/hayden and the local accepted Wedding pilot baseline"]
 fn hayden_remaining_wedding_masks_preserve_materials_in_blinks_sitting_actions_and_kisses() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/hayden-wedding-finish-study");
+    let original = root.join("extracted/test-corpus/hayden");
     let baseline = root.join("generated/characters-world-wedding-pilot-trial/characters/hayden");
     let set = std::env::var_os("FOM_HAYDEN_WEDDING_FINISH_PRESETS")
         .map(std::path::PathBuf::from)

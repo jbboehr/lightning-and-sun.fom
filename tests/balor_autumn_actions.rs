@@ -2,10 +2,10 @@ use serde_json::Value;
 use std::{fs, path::Path, process::Command};
 
 #[test]
-#[ignore = "requires extracted/balor-winter-finish-study and the local accepted Balor world baseline"]
+#[ignore = "requires extracted/test-corpus/balor and the local accepted Balor world baseline"]
 fn balor_autumn_actions_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let original = root.join("extracted/balor-winter-finish-study");
+    let original = root.join("extracted/test-corpus/balor");
     let baseline = root.join(
         "generated/characters-balor-autumn-valen-writing-eiland-standard-trial/characters/balor",
     );
@@ -24,7 +24,6 @@ fn balor_autumn_actions_covers_skin_and_preserves_materials() {
         .join(presets["profile"].as_str().unwrap());
     let candidate: Value = serde_json::from_slice(&fs::read(candidate_path).unwrap()).unwrap();
     assert_eq!(&candidate["regions"].as_array().unwrap()[..179], prior);
-    assert_eq!(candidate["regions"].as_array().unwrap().len(), 229);
     assert_eq!(candidate["source_colors"], profile["source_colors"]);
     assert_eq!(candidate["color_groups"], profile["color_groups"]);
     let temp = tempfile::tempdir().unwrap();
