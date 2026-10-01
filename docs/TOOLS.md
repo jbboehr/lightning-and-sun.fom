@@ -276,7 +276,11 @@ The [Wedding movement, Beach and Winter action batch](development/slice-006.md)
 adds Balor's Wedding idle/walk, Valen's Beach blinks/actions/kissing and Eiland's
 Winter blinking/sitting/eating/drinking. Their totals are 253, 240 and 224 sources,
 with 108 review cases. Historical pixel tests remain unchanged.
-Its numbered outputs use `generated/slice-006-review/` and `generated/slice-006-build/`;
+The [Wedding and Beach completion, Winter action batch](development/slice-007.md)
+finishes Balor's Wedding folder and Valen's Beach folder, and adds Eiland's Winter
+general actions/sleep/kiss. Their totals are 262, 242 and 229 sources, with
+99 review cases. Historical pixel tests remain unchanged.
+Its numbered outputs use `generated/slice-007-review/` and `generated/slice-007-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

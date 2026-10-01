@@ -2533,7 +2533,16 @@
       "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_idle_south.png": "Default",
       "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_walk_east.png": "Default",
       "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_walk_north.png": "Default",
-      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_walk_south.png": "Default"
+      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_walk_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_action_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_action_north.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_action_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_blink_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_blink_south.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_kiss_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_sit_east.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_sit_north.png": "Default",
+      "assets/animations/NPCs/Balor/Sprites/Wedding/spr_npc_balor_wedding_sit_south.png": "Default"
     },
     "hotkey": "I",
     "id": "balor",
@@ -2780,7 +2789,9 @@
       "assets/animations/NPCs/Valen/Sprites/Beach/spr_npc_valen_beach_action_south.png": "Default",
       "assets/animations/NPCs/Valen/Sprites/Beach/spr_npc_valen_beach_blink_east.png": "Default",
       "assets/animations/NPCs/Valen/Sprites/Beach/spr_npc_valen_beach_blink_south.png": "Default",
-      "assets/animations/NPCs/Valen/Sprites/Beach/spr_npc_valen_beach_kiss_east.png": "Default"
+      "assets/animations/NPCs/Valen/Sprites/Beach/spr_npc_valen_beach_kiss_east.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Beach/spr_npc_valen_beach_bath_swim_east.png": "Default",
+      "assets/animations/NPCs/Valen/Sprites/Beach/spr_npc_valen_beach_bath_swim_south.png": "Default"
     },
     "hotkey": "O",
     "id": "valen",
@@ -3011,7 +3022,12 @@
       "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_winter_eat_south.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_winter_sit_east.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_winter_sit_north.png": "Default",
-      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_winter_sit_south.png": "Default"
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_winter_sit_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_winter_action_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_winter_action_north.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_winter_action_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_winter_kiss_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Winter/spr_npc_eiland_winter_sleep_east.png": "Default"
     },
     "hotkey": "J",
     "id": "eiland",
