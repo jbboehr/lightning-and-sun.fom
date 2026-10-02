@@ -2,12 +2,12 @@
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
 Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 262,
-Valen's 257, Eiland's 268, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
+Valen's 257, Eiland's 277, Olric's 36, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 15,888 variant strips from 3,972 sources. Caldarus's three
+variants per source give 15,924 variant strips from 3,981 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -401,6 +401,12 @@ All 15 source frames and five native West mirrors appear in the offline review,
 approved by the user for commit on 2026-10-01. Ninety-two gold-trim pixels sharing a skin shade
 remain original; the north-facing strips have no exposed skin and stay unchanged.
 Historical pixel tests retain their stable corpus paths and baselines.
+The [Eiland Wedding completion batch](slice-015.md) adds his remaining nine
+action/blink/sit/kiss strips. All 34 source frames and 15 native West mirrors
+appear in the offline review, approved for commit on 2026-10-01. Clothing details
+sharing four skin shades remain original; the north-facing artwork is unchanged.
+All adult Eiland assets are now included; separate Children assets remain future
+work. Historical pixel tests retain their stable corpus paths and baselines.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -639,13 +645,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Eiland's Wedding standing and walking animations.
-It is in `generated/build/package` (a shortcut to `generated/slice-014-build/package`).
-It is verified with MOMI in the isolated `tmp/slice-014-playtest` lab.
+The latest combined package completes Eiland's Wedding sprite folder.
+It is in `generated/build/package` (a shortcut to `generated/slice-015-build/package`).
+It is verified with MOMI in the isolated `tmp/slice-015-playtest` lab.
 It has no preview helper and did not replace the desktop launcher. Use the
 [complete offline review](../../generated/review/index.html)
-to inspect all 15 source frames and five native West mirrors. This slice has one
-Eiland gallery, covering all six strips including the unchanged north-facing views.
+to inspect all 34 source frames and 15 native West mirrors. This slice has one
+Eiland gallery, covering all nine strips including the unchanged north-facing views.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

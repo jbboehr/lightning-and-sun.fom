@@ -309,7 +309,11 @@ The [Eiland Wedding movement batch](development/slice-014.md) adds six idle/walk
 strips, bringing him to 268 sources. The review includes all 15 source frames
 and five native West mirrors. Gold trim stays original, and the north-facing
 strips retain their original bytes. Historical pixel tests remain unchanged.
-Its numbered outputs use `generated/slice-014-review/` and `generated/slice-014-build/`;
+The [Eiland Wedding completion batch](development/slice-015.md) adds the nine
+remaining action/blink/sit/kiss strips, completing his adult inventory at 277
+sources. The review includes all 34 source frames and 15 native West mirrors.
+Shared-color clothing details and the north-facing artwork remain original.
+Its numbered outputs use `generated/slice-015-review/` and `generated/slice-015-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

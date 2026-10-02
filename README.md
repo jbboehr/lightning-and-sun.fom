@@ -236,9 +236,10 @@ reading, standing/seated writing, magnifying-glass, axe, pickaxe, brush and trow
 animations alongside the standard movements and actions. His Winter gloves and
 gold clothing details stay original. His complete Beach sprite folder is also
 included, with swimming alongside standing, walking, blinking, general actions
-and kissing. Swimwear, trim and water effects stay original. His Wedding
-standing and walking animations are also included. Their gold trim and gloves
-stay original; north-facing views have no exposed skin and remain unchanged.
+and kissing. Swimwear, trim and water effects stay original. His complete Wedding
+sprite folder is included, with actions, blinking, sitting and kissing alongside
+standing and walking. Gold trim and gloves stay original; north-facing views
+have no exposed skin and remain unchanged.
 I, O and J cycle their
 palettes respectively, keeping their portraits and supported overworld sprites together.
 Other unlisted overworld animations remain original.
