@@ -305,7 +305,11 @@ The [Eiland Beach completion batch](development/slice-013.md) adds his two swimm
 strips, completing all 14 Beach strips at 262 total sources. The review includes
 all eight source frames and four native West mirrors, including the full water
 effects. Historical pixel tests remain unchanged.
-Its numbered outputs use `generated/slice-013-review/` and `generated/slice-013-build/`;
+The [Eiland Wedding movement batch](development/slice-014.md) adds six idle/walk
+strips, bringing him to 268 sources. The review includes all 15 source frames
+and five native West mirrors. Gold trim stays original, and the north-facing
+strips retain their original bytes. Historical pixel tests remain unchanged.
+Its numbered outputs use `generated/slice-014-review/` and `generated/slice-014-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

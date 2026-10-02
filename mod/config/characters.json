@@ -3075,7 +3075,13 @@
       "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_blink_south.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_kiss_east.png": "Default",
       "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_bath_swim_east.png": "Default",
-      "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_bath_swim_south.png": "Default"
+      "assets/animations/NPCs/Eiland/Sprites/Beach/spr_npc_eiland_beach_bath_swim_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Wedding/spr_npc_eiland_wedding_idle_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Wedding/spr_npc_eiland_wedding_idle_north.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Wedding/spr_npc_eiland_wedding_idle_south.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Wedding/spr_npc_eiland_wedding_walk_east.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Wedding/spr_npc_eiland_wedding_walk_north.png": "Default",
+      "assets/animations/NPCs/Eiland/Sprites/Wedding/spr_npc_eiland_wedding_walk_south.png": "Default"
     },
     "hotkey": "J",
     "id": "eiland",
