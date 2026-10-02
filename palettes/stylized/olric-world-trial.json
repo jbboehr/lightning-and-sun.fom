@@ -1,0 +1,18 @@
+{
+  "description": "Olric portraits and Spring idle/walk skin in Debug Blue; hair, eyes, gloves, clothing and boots remain original.",
+  "profile": "../profiles/olric-world-trial.json",
+  "rgba_map": {
+    "#F2DBA7": "#9DB9D4",
+    "#DDA966": "#7F9FBD",
+    "#C37B43": "#6687AD",
+    "#B7672F": "#445F83",
+    "#813E16": "#445F83",
+    "#E5C586": "#9DB9D4",
+    "#B65932": "#445F83",
+    "#CB884E": "#6687AD",
+    "#F2D7A7": "#9DB9D4",
+    "#E4BD7C": "#7F9FBD",
+    "#C4854C": "#6687AD",
+    "#684810": "#445F83"
+  }
+}

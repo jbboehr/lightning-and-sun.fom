@@ -10,7 +10,7 @@
     {"id": "balor", "presets": "balor-world-trial.json"},
     {"id": "valen", "presets": "valen-world-trial.json"},
     {"id": "eiland", "presets": "eiland-world-trial.json"},
-    {"id": "olric", "presets": "olric-portraits-trial.json"},
+    {"id": "olric", "presets": "olric-world-trial.json"},
     {"id": "landen", "presets": "landen-portraits-trial.json"},
     {"id": "nora", "presets": "nora-portraits-trial.json"},
     {"id": "holt", "presets": "holt-portraits-trial.json"},

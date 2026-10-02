@@ -313,7 +313,11 @@ The [Eiland Wedding completion batch](development/slice-015.md) adds the nine
 remaining action/blink/sit/kiss strips, completing his adult inventory at 277
 sources. The review includes all 34 source frames and 15 native West mirrors.
 Shared-color clothing details and the north-facing artwork remain original.
-Its numbered outputs use `generated/slice-015-review/` and `generated/slice-015-build/`;
+The [Olric Spring movement pilot](development/slice-016.md) adds six normal
+idle/walk strips alongside his 36 unchanged portraits. The collection now uses
+`olric-world-trial.json`; his portrait-only set remains available. K retains its
+existing choices. The review includes all 15 source frames and five West mirrors.
+Its numbered outputs use `generated/slice-016-review/` and `generated/slice-016-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

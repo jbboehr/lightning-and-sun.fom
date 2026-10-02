@@ -3133,7 +3133,13 @@
       "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_sad.png": "PortraitsWinter",
       "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_think.png": "PortraitsWinter",
       "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_ugh.png": "PortraitsWinter",
-      "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_wink.png": "PortraitsWinter"
+      "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_wink.png": "PortraitsWinter",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_idle_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_idle_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_idle_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_walk_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_walk_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_walk_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
