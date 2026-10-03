@@ -443,7 +443,11 @@ The [Olric Winter lifting slice](development/slice-045.md) adds lifting
 start/loop/end and squatting: four strips and 20 South-facing frames. The full
 review covers every frame. Weights, gloves, mouth interiors and clothing stay
 original; earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-045-review/` and `generated/slice-045-build/`;
+The [Olric Winter writing and sweeping slice](development/slice-046.md) adds
+six start/loop/end strips and 23 South-facing frames. The full review covers
+every frame. Broom, dust, clipboard, pencil, gloves and clothing stay original;
+earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-046-review/` and `generated/slice-046-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

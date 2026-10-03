@@ -276,7 +276,8 @@ original colors. Winter hammer, pickaxe, tongs and polishing are also included,
 along with wiping his brow and drinking a potion. Tools, swing effects, cloth
 and the potion bottle retain their original colors. Winter lifting and squatting
 are also included; weights and mouth interiors keep their original colors.
-Unlisted Winter sprites remain original.
+Winter writing and sweeping are included, preserving the clipboard, pencil,
+broom and dust. Winter bunny-ear sprites remain original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
