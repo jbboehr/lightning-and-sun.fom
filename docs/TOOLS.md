@@ -413,7 +413,12 @@ The [Olric Autumn writing and sweeping slice](development/slice-038.md) adds six
 start/loop/end strips and 23 South-facing frames. The full review covers every
 frame. Skin recolors while gloves, broom, dust, clipboard and pencil stay
 original. Earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-038-review/` and `generated/slice-038-build/`;
+The [Olric Autumn bunny-ear slice](development/slice-039.md) adds standing,
+blinking and walking: eight strips, 21 source frames and eight native West
+mirrors. The full review covers all 29 cases and completes the Autumn folder.
+Skin recolors while the accessory, gloves and clothing stay original.
+Earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-039-review/` and `generated/slice-039-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

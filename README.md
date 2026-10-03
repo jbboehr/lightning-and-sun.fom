@@ -268,7 +268,8 @@ swing effects, cloth, the potion bottle, gloves and boots keep their original
 colors.
 Autumn writing and sweeping are included too, with the clipboard, pencil,
 broom and dust retaining their original colors.
-Unlisted Autumn and Winter sprites remain original.
+Autumn bunny-ear standing, blinking and walking complete the Autumn folder;
+the bunny-ear accessory keeps its original colors. Winter sprites remain original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
