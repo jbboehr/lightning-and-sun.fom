@@ -253,9 +253,10 @@ the ear accessory keeps its original colors. His normal Summer standing,
 walking, blinking, sitting, eating, drinking and general-action sprites are
 included, with the exposed arms and lower legs recolored. The extra arm shade in
 the drinking animation follows the selected palette too. Summer hammer,
-pickaxe and tongs animations are also included; tools and swing effects retain
-their original colors. Summer bunny-ear variants and other unlisted seasonal
-sprites remain original.
+pickaxe, tongs and polishing animations are also included, along with wiping
+his brow and drinking a potion. Tools, swing effects, cloth and the potion bottle
+retain their original colors. Summer bunny-ear variants and other unlisted
+seasonal sprites remain original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

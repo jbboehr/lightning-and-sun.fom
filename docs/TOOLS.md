@@ -366,7 +366,12 @@ pickaxe and tongs strips: 17 source frames and 17 native West mirrors. All 34
 cases appear in the full review. Exposed skin recolors while gloves, clothing,
 tools and swing effects stay original. Earlier artwork and K choices remain
 unchanged.
-Its numbered outputs use `generated/slice-027-review/` and `generated/slice-027-build/`;
+The [Olric Summer polishing slice](development/slice-028.md) adds polishing,
+wiping his brow and drinking a potion: five strips, 21 source frames and nine
+native West mirrors. All 30 cases appear in the full review. Exposed skin
+recolors while the cloth, potion bottle, gloves and clothing stay original.
+Earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-028-review/` and `generated/slice-028-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

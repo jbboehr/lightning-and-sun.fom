@@ -21,7 +21,7 @@ fn tracked_character_profiles_match_reviewed_coverage() {
         ("balor", 262),
         ("valen", 257),
         ("eiland", 277),
-        ("olric", 112),
+        ("olric", 117),
         ("landen", 32),
         ("nora", 32),
         ("holt", 32),

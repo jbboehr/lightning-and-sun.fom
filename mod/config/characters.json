@@ -3209,7 +3209,12 @@
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_pickaxe_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_tongs_end_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_tongs_loop_east.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_tongs_start_east.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_tongs_start_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_drink_potion_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_polish_end_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_polish_loop_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_polish_start_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_wipebrow_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
