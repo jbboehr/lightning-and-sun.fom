@@ -279,11 +279,14 @@ are also included; weights and mouth interiors keep their original colors.
 Winter writing and sweeping are included, preserving the clipboard, pencil,
 broom and dust. Winter bunny-ear standing, blinking and walking complete
 his seasonal sprites; the bunny-ear accessory keeps its original colors.
+Landen's Spring standing and walking sprites are included too. L keeps them
+and his portraits on the same palette; hair, eyes, scarf, clothing and shoes
+retain their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
 alone, use its set instead; for example,
-`--presets palettes/sets/landen-portraits-trial.json` or
+`--presets palettes/sets/landen-world-trial.json` or
 `--presets palettes/sets/nora-portraits-trial.json`.
 
 Palettes check their reviewed source PNG hashes. If a game update changes them,

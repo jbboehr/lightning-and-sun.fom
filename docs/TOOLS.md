@@ -452,7 +452,11 @@ blinking and walking: eight strips, 21 source frames and eight native West
 mirrors. The full review covers all 29 cases. The accessory, gloves and clothing
 stay original. This completes Olric's 231 portrait/world source strips in the
 verified archive; earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-047-review/` and `generated/slice-047-build/`;
+The [Landen Spring movement pilot](development/slice-048.md) adds six standing
+and walking strips, with 15 source frames and five native West mirrors.
+The full review covers all 20 cases. Shoes share skin colors but stay original,
+along with hair, scarf and clothing. Existing portraits and L choices are unchanged.
+Its numbered outputs use `generated/slice-048-review/` and `generated/slice-048-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
