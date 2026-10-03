@@ -250,9 +250,9 @@ K keeps these sprites and his portraits on the same palette. Hair, eyes, gloves,
 clothing, held objects, dust and swing effects stay original.
 His Spring bunny-ear standing, walking and blinking sprites are included too;
 the ear accessory keeps its original colors. His normal Summer standing,
-walking, blinking, sitting, eating and drinking sprites are included, with the
-exposed arms and lower legs recolored. The extra arm shade in the drinking
-animation follows the selected palette too. Summer bunny-ear variants and other
+walking, blinking, sitting, eating, drinking and general-action sprites are
+included, with the exposed arms and lower legs recolored. The extra arm shade in
+the drinking animation follows the selected palette too. Summer bunny-ear variants and other
 unlisted seasonal sprites remain original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth

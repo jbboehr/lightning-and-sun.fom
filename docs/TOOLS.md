@@ -356,7 +356,12 @@ eating and drinking: nine strips, 25 source frames and nine native West mirrors.
 The full review includes all 34 cases. An extra drinking-arm shade follows the
 existing midtone target; gloves, apple and clothing stay original. Earlier
 artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-025-review/` and `generated/slice-025-build/`;
+The [Olric Summer general-actions slice](development/slice-026.md) adds three
+directional strips: 21 source frames and seven native West mirrors. All 28
+cases appear in the full review. Moving arms and exposed lower legs recolor;
+gloves, clothing, hair and eyes stay original. Earlier artwork and K choices
+remain unchanged.
+Its numbered outputs use `generated/slice-026-review/` and `generated/slice-026-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
