@@ -3218,7 +3218,13 @@
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_lift_end_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_lift_loop_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_lift_start_south.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_squat_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_squat_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_sweep_end_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_sweep_loop_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_sweep_start_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_write_end_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_specialanimation_summer_write_start_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
