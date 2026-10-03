@@ -346,7 +346,12 @@ blinking and walking in the accessory outfit, completing all 51 Spring strips.
 All 21 source frames and eight native West mirrors appear in the full review;
 the ear accessory, gloves, hair, eyes and clothing stay original.
 Existing artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-023-review/` and `generated/slice-023-build/`;
+The [Olric Summer standing, walking and blinking slice](development/slice-024.md)
+adds eight strips with 21 source frames and eight native West mirrors. The full
+review covers all frames, including the exposed skin above his socks; gloves,
+shirt, shorts, socks and shoes stay original. Existing artwork and K choices
+remain unchanged.
+Its numbered outputs use `generated/slice-024-review/` and `generated/slice-024-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
