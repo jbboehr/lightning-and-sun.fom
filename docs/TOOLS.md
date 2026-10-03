@@ -393,7 +393,11 @@ The [Olric Autumn seated-action slice](development/slice-033.md) adds nine sitti
 eating and drinking strips. The full review includes 25 source frames and nine
 native West mirrors. Face, ears and neck recolor while gloves, apple and clothing
 stay original. Earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-033-review/` and `generated/slice-033-build/`;
+The [Olric Autumn general-actions slice](development/slice-034.md) adds three
+directional strips. The full review includes 21 source frames and seven native
+West mirrors. Face, ears and neck recolor while gloves and clothing stay
+original. Earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-034-review/` and `generated/slice-034-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
