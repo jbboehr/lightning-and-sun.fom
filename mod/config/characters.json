@@ -3252,7 +3252,12 @@
       "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_sit_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_action_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_action_north.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_action_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_action_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_hammer_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_pickaxe_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_tongs_end_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_tongs_loop_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_tongs_start_east.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
