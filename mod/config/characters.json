@@ -3156,7 +3156,12 @@
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_action_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_shocked_loop_south.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_shocked_start_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_shocked_start_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_hammer_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_pickaxe_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_tongs_end_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_tongs_loop_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_tongs_start_east.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",

@@ -243,9 +243,9 @@ have no exposed skin and remain unchanged.
 I, O and J cycle their
 palettes respectively, keeping their portraits and supported overworld sprites together.
 Olric's normal Spring standing, walking, blinking, sitting, eating, drinking,
-generic actions and shocked reaction are included too. K keeps these sprites and
-his portraits on the same palette. Hair, eyes, gloves, clothing, boots and his
-apple stay original.
+generic actions, shocked reaction, hammer, pickaxe and tongs animations are
+included too. K keeps these sprites and his portraits on the same palette.
+Hair, eyes, gloves, clothing, boots, tools, swing effects and his apple stay original.
 His bunny-ear overworld variants and other animations
 remain original.
 Other unlisted overworld animations remain original.

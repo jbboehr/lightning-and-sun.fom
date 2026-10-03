@@ -325,7 +325,11 @@ The [Olric Spring reactions slice](development/slice-018.md) adds three directio
 action strips and the shocked start/loop/end sequence. Its full review covers all
 24 source frames and seven native West mirrors. Existing artwork and K choices
 remain unchanged.
-Its numbered outputs use `generated/slice-018-review/` and `generated/slice-018-build/`;
+The [Olric Spring tools slice](development/slice-019.md) adds hammer, pickaxe and
+the tongs start/loop/end sequence. The full review includes all 17 source frames
+and 17 West mirrors, with wider crops preserving the tools and swing effects.
+Existing artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-019-review/` and `generated/slice-019-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
