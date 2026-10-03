@@ -439,7 +439,11 @@ brow-wiping and potion-drinking: five strips, 21 source frames and nine native
 West mirrors. The full review covers all 30 cases. Cloth, held objects, the
 potion bottle, gloves and clothing stay original; earlier artwork and K choices
 remain unchanged.
-Its numbered outputs use `generated/slice-044-review/` and `generated/slice-044-build/`;
+The [Olric Winter lifting slice](development/slice-045.md) adds lifting
+start/loop/end and squatting: four strips and 20 South-facing frames. The full
+review covers every frame. Weights, gloves, mouth interiors and clothing stay
+original; earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-045-review/` and `generated/slice-045-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
