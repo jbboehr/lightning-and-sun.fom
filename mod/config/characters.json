@@ -3232,7 +3232,15 @@
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_bunny_ears_idle_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_bunny_ears_walk_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_bunny_ears_walk_north.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_bunny_ears_walk_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_bunny_ears_walk_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_blink_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_blink_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_idle_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_idle_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_idle_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_walk_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_walk_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_walk_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
