@@ -447,7 +447,12 @@ The [Olric Winter writing and sweeping slice](development/slice-046.md) adds
 six start/loop/end strips and 23 South-facing frames. The full review covers
 every frame. Broom, dust, clipboard, pencil, gloves and clothing stay original;
 earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-046-review/` and `generated/slice-046-build/`;
+The [Olric Winter bunny-ear slice](development/slice-047.md) adds standing,
+blinking and walking: eight strips, 21 source frames and eight native West
+mirrors. The full review covers all 29 cases. The accessory, gloves and clothing
+stay original. This completes Olric's 231 portrait/world source strips in the
+verified archive; earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-047-review/` and `generated/slice-047-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
