@@ -248,8 +248,9 @@ pickaxe, tongs and polishing animations are also included, along with wiping
 his brow, drinking a potion, lifting weights, squatting, writing and sweeping.
 K keeps these sprites and his portraits on the same palette. Hair, eyes, gloves,
 clothing, held objects, dust and swing effects stay original.
-His bunny-ear overworld variants and other animations
-remain original.
+His Spring bunny-ear standing, walking and blinking sprites are included too;
+the ear accessory keeps its original colors. His overworld sprites for other
+seasons remain original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

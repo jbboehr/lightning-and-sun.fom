@@ -341,7 +341,12 @@ The [Olric Spring writing and sweeping slice](development/slice-022.md) adds
 both start/loop/end sequences. All 23 South-facing frames appear in the full
 review; wider crops preserve the broom and dust. The clipboard, pencil and
 gloves also stay original. Existing artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-022-review/` and `generated/slice-022-build/`;
+The [Olric Spring bunny-ear slice](development/slice-023.md) adds standing,
+blinking and walking in the accessory outfit, completing all 51 Spring strips.
+All 21 source frames and eight native West mirrors appear in the full review;
+the ear accessory, gloves, hair, eyes and clothing stay original.
+Existing artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-023-review/` and `generated/slice-023-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

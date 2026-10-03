@@ -3176,7 +3176,15 @@
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_sweep_start_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_write_end_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_write_loop_south.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_write_start_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_write_start_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_bunny_ears_blink_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_bunny_ears_blink_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_bunny_ears_idle_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_bunny_ears_idle_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_bunny_ears_idle_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_bunny_ears_walk_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_bunny_ears_walk_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_spring_bunny_ears_walk_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
