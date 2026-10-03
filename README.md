@@ -286,7 +286,8 @@ eyes, scarf, clothing, shoes, the apple, mouth interiors, hammer and swing
 effects retain their original colors. His complete Summer sprites also follow
 the palette, including exposed knees and moving hands in general actions and
 the hammer swing. The shirt, shorts, socks, shoes, apple, hammer and swing
-effects keep their original colors.
+effects keep their original colors. His Autumn standing and walking also follow
+the palette, preserving the purple shirt, trousers and shoes.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
