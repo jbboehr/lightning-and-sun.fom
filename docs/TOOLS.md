@@ -480,7 +480,12 @@ blinking, sitting, eating and drinking strips. The complete review covers 31
 source frames and 12 native West mirrors. Eyelids, moving hands and exposed
 knees follow the palette; clothing, socks, shoes and the apple stay original.
 Earlier artwork and L choices remain unchanged.
-Its numbered outputs use `generated/slice-053-review/` and `generated/slice-053-build/`;
+The [Landen Summer completion slice](development/slice-054.md) adds three
+directional general actions and the hammer strip, completing all 21 Summer
+sprites. The complete review covers 28 source frames and 14 native West
+mirrors. Clothing, socks, shoes, hammer and swing effects stay original;
+earlier artwork and L choices remain unchanged.
+Its numbered outputs use `generated/slice-054-review/` and `generated/slice-054-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
