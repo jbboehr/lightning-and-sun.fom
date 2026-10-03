@@ -2,12 +2,12 @@
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
 Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 262,
-Valen's 257, Eiland's 277, Olric's 53, Landen's 32, Nora's 32, Holt's 32,
+Valen's 257, Eiland's 277, Olric's 59, Landen's 32, Nora's 32, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 15,992 variant strips from 3,998 sources. Caldarus's three
+variants per source give 16,016 variant strips from 4,004 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -418,6 +418,11 @@ and drinking strips. All 31 source frames and 12 West mirrors appear in the
 offline review, approved for commit on 2026-10-02. It reuses the four world shades;
 gloves, apple, hair, eyes and clothing remain original. The earlier 42 sources
 and all historical material tests remain unchanged.
+The [Olric Spring reactions slice](slice-018.md) adds three directional actions
+and the shocked start/loop/end sequence. All 24 source frames and seven West
+mirrors appear in the offline review, approved for commit on 2026-10-02. The four
+world shades cover moving arms, face and neck; gloves, hair, eyes, clothing and
+the mouth interior stay original. All earlier 53 sources remain unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -656,14 +661,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Olric's normal Spring blinking, sitting,
-eating and drinking.
-It is in `generated/build/package` (a shortcut to `generated/slice-017-build/package`).
-It is verified with MOMI in the isolated `tmp/slice-017-playtest` lab.
+The latest combined package adds Olric's normal Spring actions and shocked reaction.
+It is in `generated/build/package` (a shortcut to `generated/slice-018-build/package`).
+It is verified with MOMI in the isolated `tmp/slice-018-playtest` lab.
 It has no preview helper and did not replace the desktop launcher. Use the
 [complete offline review](../../generated/review/index.html)
-to inspect all 31 source frames and 12 native West mirrors. This slice has one
-Olric gallery covering all 11 strips, with full character views and enlarged details.
+to inspect all 24 source frames and seven native West mirrors. This slice has one
+Olric gallery covering all six strips, with full character views and enlarged details.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

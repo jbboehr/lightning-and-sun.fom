@@ -321,7 +321,11 @@ The [Olric Spring actions slice](development/slice-017.md) adds 11 normal
 blinking, sitting, eating and drinking strips. Its full review includes all
 31 source frames and 12 native West mirrors; the sample summary retains all five
 palette choices. Earlier artwork and the K control remain unchanged.
-Its numbered outputs use `generated/slice-017-review/` and `generated/slice-017-build/`;
+The [Olric Spring reactions slice](development/slice-018.md) adds three directional
+action strips and the shocked start/loop/end sequence. Its full review covers all
+24 source frames and seven native West mirrors. Existing artwork and K choices
+remain unchanged.
+Its numbered outputs use `generated/slice-018-review/` and `generated/slice-018-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
