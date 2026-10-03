@@ -283,7 +283,9 @@ Landen's Spring standing, walking, blinking, sitting, eating, drinking, general
 actions, shocked reaction and hammer animation are included too, completing
 his Spring sprites. L keeps them and his portraits on the same palette; hair,
 eyes, scarf, clothing, shoes, the apple, mouth interiors, hammer and swing
-effects retain their original colors.
+effects retain their original colors. His Summer standing and walking also
+follow the palette, including exposed knees; the shirt, shorts, socks and
+shoes keep their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

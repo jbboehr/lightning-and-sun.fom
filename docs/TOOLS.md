@@ -470,7 +470,12 @@ The [Landen Spring hammer slice](development/slice-051.md) completes his Spring
 folder with seven source frames and seven native West mirrors. The hammer,
 swing effects and shared-color shoes stay original. Earlier artwork and L
 choices remain unchanged.
-Its numbered outputs use `generated/slice-051-review/` and `generated/slice-051-build/`;
+The [Landen Summer movement slice](development/slice-052.md) adds six standing
+and walking strips. The complete review covers 15 source frames and five native
+West mirrors. Exposed knees follow the palette along with face and hands;
+clothing, socks and shoes stay original. Earlier artwork and L choices remain
+unchanged.
+Its numbered outputs use `generated/slice-052-review/` and `generated/slice-052-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
