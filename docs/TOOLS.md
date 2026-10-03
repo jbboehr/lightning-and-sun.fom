@@ -466,7 +466,11 @@ adds six strips. The complete review covers 24 source frames and seven native
 West mirrors, including every stage of the shocked reaction. Shoes, scarf,
 clothing and mouth interiors stay original; earlier artwork and L choices
 remain unchanged.
-Its numbered outputs use `generated/slice-050-review/` and `generated/slice-050-build/`;
+The [Landen Spring hammer slice](development/slice-051.md) completes his Spring
+folder with seven source frames and seven native West mirrors. The hammer,
+swing effects and shared-color shoes stay original. Earlier artwork and L
+choices remain unchanged.
+Its numbered outputs use `generated/slice-051-review/` and `generated/slice-051-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

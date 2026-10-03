@@ -280,9 +280,10 @@ Winter writing and sweeping are included, preserving the clipboard, pencil,
 broom and dust. Winter bunny-ear standing, blinking and walking complete
 his seasonal sprites; the bunny-ear accessory keeps its original colors.
 Landen's Spring standing, walking, blinking, sitting, eating, drinking, general
-actions and shocked reaction are included too. L keeps them and his portraits
-on the same palette; hair, eyes, scarf, clothing, shoes, the apple and mouth
-interiors retain their original colors.
+actions, shocked reaction and hammer animation are included too, completing
+his Spring sprites. L keeps them and his portraits on the same palette; hair,
+eyes, scarf, clothing, shoes, the apple, mouth interiors, hammer and swing
+effects retain their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
