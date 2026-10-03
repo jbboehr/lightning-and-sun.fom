@@ -409,7 +409,11 @@ The [Olric Autumn lifting slice](development/slice-037.md) adds lifting and
 squatting: four strips and 20 South-facing frames. All frames appear in the full
 review. Skin recolors while weights, gloves, clothing and mouth interior stay
 original. Earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-037-review/` and `generated/slice-037-build/`;
+The [Olric Autumn writing and sweeping slice](development/slice-038.md) adds six
+start/loop/end strips and 23 South-facing frames. The full review covers every
+frame. Skin recolors while gloves, broom, dust, clipboard and pencil stay
+original. Earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-038-review/` and `generated/slice-038-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

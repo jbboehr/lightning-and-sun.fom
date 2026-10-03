@@ -266,6 +266,8 @@ Autumn hammer, pickaxe and tongs are included too, along with polishing, wiping
 his brow, drinking a potion, lifting weights and squatting. Tools, weights,
 swing effects, cloth, the potion bottle, gloves and boots keep their original
 colors.
+Autumn writing and sweeping are included too, with the clipboard, pencil,
+broom and dust retaining their original colors.
 Unlisted Autumn and Winter sprites remain original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
