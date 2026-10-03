@@ -3280,7 +3280,15 @@
       "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_bunny_ears_idle_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_bunny_ears_walk_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_bunny_ears_walk_north.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_bunny_ears_walk_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_autumn_bunny_ears_walk_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_blink_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_blink_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_idle_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_idle_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_idle_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_walk_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_walk_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_walk_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
