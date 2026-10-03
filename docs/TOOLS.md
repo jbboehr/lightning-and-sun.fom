@@ -371,7 +371,11 @@ wiping his brow and drinking a potion: five strips, 21 source frames and nine
 native West mirrors. All 30 cases appear in the full review. Exposed skin
 recolors while the cloth, potion bottle, gloves and clothing stay original.
 Earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-028-review/` and `generated/slice-028-build/`;
+The [Olric Summer lifting slice](development/slice-029.md) adds lifting and
+squatting: four strips and 20 South-facing frames. All frames appear in the full
+review. Exposed skin recolors while weights, gloves, clothing and mouth interior
+stay original. Earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-029-review/` and `generated/slice-029-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
