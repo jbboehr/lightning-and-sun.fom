@@ -361,7 +361,12 @@ directional strips: 21 source frames and seven native West mirrors. All 28
 cases appear in the full review. Moving arms and exposed lower legs recolor;
 gloves, clothing, hair and eyes stay original. Earlier artwork and K choices
 remain unchanged.
-Its numbered outputs use `generated/slice-026-review/` and `generated/slice-026-build/`;
+The [Olric Summer tools slice](development/slice-027.md) adds five hammer,
+pickaxe and tongs strips: 17 source frames and 17 native West mirrors. All 34
+cases appear in the full review. Exposed skin recolors while gloves, clothing,
+tools and swing effects stay original. Earlier artwork and K choices remain
+unchanged.
+Its numbered outputs use `generated/slice-027-review/` and `generated/slice-027-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
