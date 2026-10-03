@@ -475,7 +475,12 @@ and walking strips. The complete review covers 15 source frames and five native
 West mirrors. Exposed knees follow the palette along with face and hands;
 clothing, socks and shoes stay original. Earlier artwork and L choices remain
 unchanged.
-Its numbered outputs use `generated/slice-052-review/` and `generated/slice-052-build/`;
+The [Landen Summer seated-actions slice](development/slice-053.md) adds eleven
+blinking, sitting, eating and drinking strips. The complete review covers 31
+source frames and 12 native West mirrors. Eyelids, moving hands and exposed
+knees follow the palette; clothing, socks, shoes and the apple stay original.
+Earlier artwork and L choices remain unchanged.
+Its numbered outputs use `generated/slice-053-review/` and `generated/slice-053-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
