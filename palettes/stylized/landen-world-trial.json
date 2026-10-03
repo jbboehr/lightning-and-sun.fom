@@ -1,5 +1,5 @@
 {
-  "description": "Landen portraits and Spring standing/walking skin in Debug Blue; hair, eyes, scarf, clothing and shoes remain original.",
+  "description": "Landen portraits and reviewed overworld skin in Debug Blue; hair, eyes, scarf, clothing, shoes and props remain original.",
   "profile": "../profiles/landen-world-trial.json",
   "rgba_map": {
     "#9F6250": "#9DB9D4",

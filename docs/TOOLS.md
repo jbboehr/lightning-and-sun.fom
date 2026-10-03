@@ -456,7 +456,12 @@ The [Landen Spring movement pilot](development/slice-048.md) adds six standing
 and walking strips, with 15 source frames and five native West mirrors.
 The full review covers all 20 cases. Shoes share skin colors but stay original,
 along with hair, scarf and clothing. Existing portraits and L choices are unchanged.
-Its numbered outputs use `generated/slice-048-review/` and `generated/slice-048-build/`;
+The [Landen Spring seated-actions slice](development/slice-049.md) adds 11
+blinking, sitting, eating and drinking strips. The complete review covers 31
+source frames and 12 native West mirrors. Shoes, scarf, clothing and the apple
+stay original; the lowered hand in the eating animation follows the palette.
+Earlier artwork and L choices remain unchanged.
+Its numbered outputs use `generated/slice-049-review/` and `generated/slice-049-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
