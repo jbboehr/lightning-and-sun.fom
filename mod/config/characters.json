@@ -3297,7 +3297,10 @@
       "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_eat_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_sit_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_sit_north.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_sit_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_sit_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_action_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_action_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_action_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",

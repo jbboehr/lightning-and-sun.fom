@@ -426,7 +426,11 @@ The [Olric Winter seated-action slice](development/slice-041.md) adds nine sitti
 eating and drinking strips. The full review covers 25 source frames and nine
 native West mirrors. Skin recolors while the apple, gloves and clothing stay
 original. Earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-041-review/` and `generated/slice-041-build/`;
+The [Olric Winter general-actions slice](development/slice-042.md) adds three
+directional strips. The full review covers 21 source frames and seven native
+West mirrors. Skin recolors while gloves and clothing stay original. Earlier
+artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-042-review/` and `generated/slice-042-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
