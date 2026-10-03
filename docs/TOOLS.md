@@ -461,7 +461,12 @@ blinking, sitting, eating and drinking strips. The complete review covers 31
 source frames and 12 native West mirrors. Shoes, scarf, clothing and the apple
 stay original; the lowered hand in the eating animation follows the palette.
 Earlier artwork and L choices remain unchanged.
-Its numbered outputs use `generated/slice-049-review/` and `generated/slice-049-build/`;
+The [Landen Spring actions and shocked-reaction slice](development/slice-050.md)
+adds six strips. The complete review covers 24 source frames and seven native
+West mirrors, including every stage of the shocked reaction. Shoes, scarf,
+clothing and mouth interiors stay original; earlier artwork and L choices
+remain unchanged.
+Its numbered outputs use `generated/slice-050-review/` and `generated/slice-050-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

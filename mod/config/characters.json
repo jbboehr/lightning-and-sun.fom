@@ -3384,7 +3384,13 @@
       "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_eat_south.png": "Default",
       "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_sit_east.png": "Default",
       "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_sit_north.png": "Default",
-      "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_sit_south.png": "Default"
+      "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_sit_south.png": "Default",
+      "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_action_east.png": "Default",
+      "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_action_north.png": "Default",
+      "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_action_south.png": "Default",
+      "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_shocked_end_south.png": "Default",
+      "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_shocked_loop_south.png": "Default",
+      "assets/animations/NPCs/Landen/Sprites/Spring/spr_npc_landen_spring_shocked_start_south.png": "Default"
     },
     "hotkey": "L",
     "id": "landen",
