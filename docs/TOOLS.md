@@ -422,7 +422,11 @@ The [Olric Winter standing, walking and blinking slice](development/slice-040.md
 adds eight strips, 21 source frames and eight native West mirrors. All 29 cases
 appear in the full review. Skin recolors while the red shirt, gray gloves,
 trousers and boots stay original. Earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-040-review/` and `generated/slice-040-build/`;
+The [Olric Winter seated-action slice](development/slice-041.md) adds nine sitting,
+eating and drinking strips. The full review covers 25 source frames and nine
+native West mirrors. Skin recolors while the apple, gloves and clothing stay
+original. Earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-041-review/` and `generated/slice-041-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

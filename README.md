@@ -270,9 +270,9 @@ Autumn writing and sweeping are included too, with the clipboard, pencil,
 broom and dust retaining their original colors.
 Autumn bunny-ear standing, blinking and walking complete the Autumn folder;
 the bunny-ear accessory keeps its original colors.
-Winter standing, walking and blinking are also included. The red shirt, gray
-gloves, trousers and boots keep their original colors. Unlisted Winter sprites
-remain original.
+Winter standing, walking, blinking, sitting, eating and drinking are also
+included. The red shirt, gray gloves, apple, trousers and boots keep their
+original colors. Unlisted Winter sprites remain original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
