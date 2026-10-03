@@ -493,7 +493,12 @@ The [Landen Autumn seated-actions slice](development/slice-056.md) adds eleven
 blinking, sitting, eating and drinking strips. The complete review covers 31
 source frames and 12 native West mirrors. Clothing, trousers, shoes and the
 apple stay original; earlier artwork and L choices remain unchanged.
-Its numbered outputs use `generated/slice-056-review/` and `generated/slice-056-build/`;
+The [Landen Autumn completion slice](development/slice-057.md) adds the three
+directional general actions and hammer strip, completing all 21 Autumn sprites.
+The complete review covers 28 source frames and 14 native West mirrors.
+Clothing, trousers, shoes, hammer and swing effects stay original; earlier
+artwork and L choices remain unchanged.
+Its numbered outputs use `generated/slice-057-review/` and `generated/slice-057-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

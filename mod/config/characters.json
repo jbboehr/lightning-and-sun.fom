@@ -3429,7 +3429,11 @@
       "assets/animations/NPCs/Landen/Sprites/Autumn/spr_npc_landen_autumn_eat_south.png": "Default",
       "assets/animations/NPCs/Landen/Sprites/Autumn/spr_npc_landen_autumn_sit_east.png": "Default",
       "assets/animations/NPCs/Landen/Sprites/Autumn/spr_npc_landen_autumn_sit_north.png": "Default",
-      "assets/animations/NPCs/Landen/Sprites/Autumn/spr_npc_landen_autumn_sit_south.png": "Default"
+      "assets/animations/NPCs/Landen/Sprites/Autumn/spr_npc_landen_autumn_sit_south.png": "Default",
+      "assets/animations/NPCs/Landen/Sprites/Autumn/spr_npc_landen_autumn_action_east.png": "Default",
+      "assets/animations/NPCs/Landen/Sprites/Autumn/spr_npc_landen_autumn_action_north.png": "Default",
+      "assets/animations/NPCs/Landen/Sprites/Autumn/spr_npc_landen_autumn_action_south.png": "Default",
+      "assets/animations/NPCs/Landen/Sprites/Autumn/spr_npc_landen_specialanimation_autumn_hammer_east.png": "Default"
     },
     "hotkey": "L",
     "id": "landen",
