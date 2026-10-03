@@ -3161,7 +3161,12 @@
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_pickaxe_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_tongs_end_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_tongs_loop_east.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_tongs_start_east.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_tongs_start_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_drink_potion_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_polish_end_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_polish_loop_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_polish_start_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_wipebrow_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",

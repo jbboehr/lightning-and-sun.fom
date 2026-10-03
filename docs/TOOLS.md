@@ -329,7 +329,11 @@ The [Olric Spring tools slice](development/slice-019.md) adds hammer, pickaxe an
 the tongs start/loop/end sequence. The full review includes all 17 source frames
 and 17 West mirrors, with wider crops preserving the tools and swing effects.
 Existing artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-019-review/` and `generated/slice-019-build/`;
+The [Olric Spring polishing slice](development/slice-020.md) adds polishing,
+wiping his brow and drinking a potion. All 21 source frames and nine West
+mirrors appear in the full review; the cloth, bottle and gloves stay original.
+Existing artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-020-review/` and `generated/slice-020-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
