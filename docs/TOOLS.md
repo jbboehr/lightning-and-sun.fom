@@ -405,7 +405,11 @@ The [Olric Autumn polishing slice](development/slice-036.md) adds polishing,
 wiping his brow and drinking a potion: five strips and 30 cases including native
 West mirrors. Skin recolors while the cloth, potion bottle, gloves and clothing
 stay original. Earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-036-review/` and `generated/slice-036-build/`;
+The [Olric Autumn lifting slice](development/slice-037.md) adds lifting and
+squatting: four strips and 20 South-facing frames. All frames appear in the full
+review. Skin recolors while weights, gloves, clothing and mouth interior stay
+original. Earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-037-review/` and `generated/slice-037-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

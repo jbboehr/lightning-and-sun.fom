@@ -3262,7 +3262,11 @@
       "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_polish_end_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_polish_loop_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_polish_start_east.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_wipebrow_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_wipebrow_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_lift_end_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_lift_loop_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_lift_start_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Autumn/spr_npc_olric_specialanimation_autumn_squat_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
