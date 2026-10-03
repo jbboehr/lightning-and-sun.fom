@@ -351,7 +351,12 @@ adds eight strips with 21 source frames and eight native West mirrors. The full
 review covers all frames, including the exposed skin above his socks; gloves,
 shirt, shorts, socks and shoes stay original. Existing artwork and K choices
 remain unchanged.
-Its numbered outputs use `generated/slice-024-review/` and `generated/slice-024-build/`;
+The [Olric Summer seated-actions slice](development/slice-025.md) adds sitting,
+eating and drinking: nine strips, 25 source frames and nine native West mirrors.
+The full review includes all 34 cases. An extra drinking-arm shade follows the
+existing midtone target; gloves, apple and clothing stay original. Earlier
+artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-025-review/` and `generated/slice-025-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

@@ -3192,7 +3192,16 @@
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_idle_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_walk_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_walk_north.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_walk_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_walk_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_drink_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_drink_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_drink_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_eat_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_eat_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_eat_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_sit_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_sit_north.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Summer/spr_npc_olric_summer_sit_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
