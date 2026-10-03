@@ -259,8 +259,9 @@ Tools, weights, swing effects, dust, cloth, the potion bottle, clipboard and
 pencil retain their original colors.
 Summer bunny-ear standing, blinking and walking are also included, with the
 accessory retaining its original colors. Olric's Spring and Summer sprites are
-now covered. Autumn standing, walking and blinking are also included, with the
-brown gloves, shirt, trousers and boots retaining their original colors.
+now covered. Autumn standing, walking, blinking, sitting, eating and drinking
+are also included, with the brown gloves, apple and clothing retaining their
+original colors.
 Unlisted Autumn and Winter sprites remain original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
