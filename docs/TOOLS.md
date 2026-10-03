@@ -430,7 +430,11 @@ The [Olric Winter general-actions slice](development/slice-042.md) adds three
 directional strips. The full review covers 21 source frames and seven native
 West mirrors. Skin recolors while gloves and clothing stay original. Earlier
 artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-042-review/` and `generated/slice-042-build/`;
+The [Olric Winter tools slice](development/slice-043.md) adds hammer, pickaxe and
+the tongs start/loop/end sequence. Its five strips provide 17 source frames and
+17 native West mirrors. The full review includes every tool and swing-effect
+pixel. Earlier artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-043-review/` and `generated/slice-043-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

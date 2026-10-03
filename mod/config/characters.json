@@ -3300,7 +3300,12 @@
       "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_sit_south.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_action_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_action_north.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_action_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_winter_action_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_hammer_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_pickaxe_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_tongs_end_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_tongs_loop_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_tongs_start_east.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
