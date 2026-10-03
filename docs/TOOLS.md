@@ -489,7 +489,11 @@ The [Landen Autumn movement slice](development/slice-055.md) adds six standing
 and walking strips. The complete review covers 15 source frames and five native
 West mirrors. Hair, clothing, trousers and shoes stay original; earlier artwork
 and L choices remain unchanged.
-Its numbered outputs use `generated/slice-055-review/` and `generated/slice-055-build/`;
+The [Landen Autumn seated-actions slice](development/slice-056.md) adds eleven
+blinking, sitting, eating and drinking strips. The complete review covers 31
+source frames and 12 native West mirrors. Clothing, trousers, shoes and the
+apple stay original; earlier artwork and L choices remain unchanged.
+Its numbered outputs use `generated/slice-056-review/` and `generated/slice-056-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
