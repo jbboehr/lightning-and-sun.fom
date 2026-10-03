@@ -333,7 +333,11 @@ The [Olric Spring polishing slice](development/slice-020.md) adds polishing,
 wiping his brow and drinking a potion. All 21 source frames and nine West
 mirrors appear in the full review; the cloth, bottle and gloves stay original.
 Existing artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-020-review/` and `generated/slice-020-build/`;
+The [Olric Spring lifting slice](development/slice-021.md) adds lifting
+start/loop/end and squatting. All 20 South-facing frames appear in the full
+review; the weights, gloves and mouth interior stay original.
+Existing artwork and K choices remain unchanged.
+Its numbered outputs use `generated/slice-021-review/` and `generated/slice-021-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

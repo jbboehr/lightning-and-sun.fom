@@ -3166,7 +3166,11 @@
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_polish_end_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_polish_loop_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_polish_start_east.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_wipebrow_south.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_wipebrow_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_lift_end_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_lift_loop_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_lift_start_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Spring/spr_npc_olric_specialanimation_spring_squat_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",
