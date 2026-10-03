@@ -317,7 +317,11 @@ The [Olric Spring movement pilot](development/slice-016.md) adds six normal
 idle/walk strips alongside his 36 unchanged portraits. The collection now uses
 `olric-world-trial.json`; his portrait-only set remains available. K retains its
 existing choices. The review includes all 15 source frames and five West mirrors.
-Its numbered outputs use `generated/slice-016-review/` and `generated/slice-016-build/`;
+The [Olric Spring actions slice](development/slice-017.md) adds 11 normal
+blinking, sitting, eating and drinking strips. Its full review includes all
+31 source frames and 12 native West mirrors; the sample summary retains all five
+palette choices. Earlier artwork and the K control remain unchanged.
+Its numbered outputs use `generated/slice-017-review/` and `generated/slice-017-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
