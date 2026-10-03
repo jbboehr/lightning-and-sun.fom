@@ -380,7 +380,12 @@ strips and 23 South-facing frames. All frames appear in the full review,
 including the sweeping extremes and dust. Skin recolors while the broom,
 clipboard, pencil, gloves and clothing stay original. Earlier artwork and K
 choices remain unchanged.
-Its numbered outputs use `generated/slice-030-review/` and `generated/slice-030-build/`;
+The [Olric Summer bunny-ear slice](development/slice-031.md) adds eight standing,
+blinking and walking strips, completing his Summer folder. The full review
+includes 21 source frames and eight native West mirrors. Skin recolors while
+the accessory, gloves and clothing stay original. Earlier artwork and K choices
+remain unchanged.
+Its numbered outputs use `generated/slice-031-review/` and `generated/slice-031-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

@@ -257,7 +257,9 @@ pickaxe, tongs and polishing animations are also included, along with wiping
 his brow, drinking a potion, lifting weights, squatting, writing and sweeping.
 Tools, weights, swing effects, dust, cloth, the potion bottle, clipboard and
 pencil retain their original colors.
-Summer bunny-ear variants and other unlisted seasonal sprites remain original.
+Summer bunny-ear standing, blinking and walking are also included, with the
+accessory retaining its original colors. Olric's Spring and Summer sprites are
+now covered; unlisted Autumn and Winter sprites remain original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
