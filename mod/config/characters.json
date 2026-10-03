@@ -3305,7 +3305,12 @@
       "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_pickaxe_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_tongs_end_east.png": "Default",
       "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_tongs_loop_east.png": "Default",
-      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_tongs_start_east.png": "Default"
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_tongs_start_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_drink_potion_south.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_polish_end_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_polish_loop_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_polish_start_east.png": "Default",
+      "assets/animations/NPCs/Olric/Sprites/Winter/spr_npc_olric_specialanimation_winter_wipebrow_south.png": "Default"
     },
     "hotkey": "K",
     "id": "olric",

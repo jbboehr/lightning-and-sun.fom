@@ -434,7 +434,12 @@ The [Olric Winter tools slice](development/slice-043.md) adds hammer, pickaxe an
 the tongs start/loop/end sequence. Its five strips provide 17 source frames and
 17 native West mirrors. The full review includes every tool and swing-effect
 pixel. Earlier artwork and K choices remain unchanged.
-Its numbered outputs use `generated/slice-043-review/` and `generated/slice-043-build/`;
+The [Olric Winter polishing slice](development/slice-044.md) adds polishing,
+brow-wiping and potion-drinking: five strips, 21 source frames and nine native
+West mirrors. The full review covers all 30 cases. Cloth, held objects, the
+potion bottle, gloves and clothing stay original; earlier artwork and K choices
+remain unchanged.
+Its numbered outputs use `generated/slice-044-review/` and `generated/slice-044-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
