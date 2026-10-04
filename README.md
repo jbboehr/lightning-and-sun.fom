@@ -298,6 +298,8 @@ tapping and sweeping. N keeps her world sprites and portraits on the same
 palette. Face, ears, neck, eyelids, moving hands and exposed ankles change;
 blonde hair, eyes, pale blouse, blue overalls, shoes, mouth interiors, writing
 tools, broom and dust retain their original colors.
+Her Summer standing and walking sprites also follow the palette; the blue shirt,
+purple apron, pale trousers and shoes retain their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
