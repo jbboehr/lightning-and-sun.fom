@@ -506,7 +506,13 @@ The [Landen Winter seated-actions slice](development/slice-059.md) adds eleven
 blinking, sitting, eating and drinking strips. The complete review covers 31
 source frames and 12 native West mirrors. Coat, scarf, trousers, shoes and the
 apple stay original; earlier artwork and L choices remain unchanged.
-Its numbered outputs use `generated/slice-059-review/` and `generated/slice-059-build/`;
+The [Landen Winter completion slice](development/slice-060.md) adds the three
+directional general actions and hammer strip, completing all 21 Winter sprites.
+The complete review covers 28 source frames and 14 native West mirrors.
+Coat, scarf, trousers, shoes, hammer and swing effects stay original; earlier
+artwork and L choices remain unchanged. All 119 Landen portraits and world
+sprites are now covered; his four separate UI icons remain original.
+Its numbered outputs use `generated/slice-060-review/` and `generated/slice-060-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
