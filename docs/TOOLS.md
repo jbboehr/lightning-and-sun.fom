@@ -522,7 +522,12 @@ blinking, sitting, eating and drinking strips. The complete review covers 31
 source frames and 12 native West mirrors. Eyelids, moving hands and exposed
 ankles follow the palette; hair, clothing, shoes and mouth interiors stay
 original. Her earlier artwork and N choices remain unchanged.
-Its numbered outputs use `generated/slice-062-review/` and `generated/slice-062-build/`;
+The [Nora Spring actions and shocked-reaction slice](development/slice-063.md)
+adds six strips. The complete review covers 24 source frames and seven native
+West mirrors, including every stage of the shocked reaction. Moving hands and
+exposed ankles follow the palette; hair, clothing, shoes and mouth interiors
+stay original. Her earlier artwork and N choices remain unchanged.
+Its numbered outputs use `generated/slice-063-review/` and `generated/slice-063-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
