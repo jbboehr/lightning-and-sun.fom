@@ -517,7 +517,12 @@ and walking strips. The complete review covers 15 source frames and five native
 West mirrors. Face, ears, neck, hands and exposed ankles follow the palette;
 hair, eyes, blouse, overalls and shoes stay original. Her accepted portraits and
 N choices remain unchanged.
-Its numbered outputs use `generated/slice-061-review/` and `generated/slice-061-build/`;
+The [Nora Spring seated-actions slice](development/slice-062.md) adds eleven
+blinking, sitting, eating and drinking strips. The complete review covers 31
+source frames and 12 native West mirrors. Eyelids, moving hands and exposed
+ankles follow the palette; hair, clothing, shoes and mouth interiors stay
+original. Her earlier artwork and N choices remain unchanged.
+Its numbered outputs use `generated/slice-062-review/` and `generated/slice-062-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
