@@ -570,7 +570,12 @@ strips, completing her 29-strip Summer folder. The complete review covers all
 17 South-facing frames. Moving hands and exposed ankles follow the palette;
 hair, clothing, shoes, broom and dust stay original. Her earlier artwork and
 N choices remain unchanged.
-Its numbered outputs use `generated/slice-072-review/` and `generated/slice-072-build/`;
+The [Nora Autumn movement pilot](development/slice-073.md) adds six standing
+and walking strips. The complete review covers 15 source frames and five native
+West mirrors. Moving hands and exposed ankles follow the palette; hair, blue
+shirt, pale apron, purple trousers and shoes stay original. Her earlier artwork
+and N choices remain unchanged.
+Its numbered outputs use `generated/slice-073-review/` and `generated/slice-073-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
