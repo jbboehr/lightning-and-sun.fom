@@ -532,7 +532,11 @@ start/loop/end strips. The complete review covers eight source frames and eight
 native West mirrors. Moving hands and exposed ankles follow the palette; hair,
 clothing, shoes and writing tools stay original. Her earlier artwork and N
 choices remain unchanged.
-Its numbered outputs use `generated/slice-064-review/` and `generated/slice-064-build/`;
+The [Nora Spring tapping slice](development/slice-065.md) adds three
+start/loop/end strips. The complete review covers all five South-facing frames.
+Moving hands and exposed ankles follow the palette; hair, clothing, shoes,
+board and pen stay original. Her earlier artwork and N choices remain unchanged.
+Its numbered outputs use `generated/slice-065-review/` and `generated/slice-065-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
