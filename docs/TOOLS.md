@@ -512,7 +512,12 @@ The complete review covers 28 source frames and 14 native West mirrors.
 Coat, scarf, trousers, shoes, hammer and swing effects stay original; earlier
 artwork and L choices remain unchanged. All 119 Landen portraits and world
 sprites are now covered; his four separate UI icons remain original.
-Its numbered outputs use `generated/slice-060-review/` and `generated/slice-060-build/`;
+The [Nora Spring movement pilot](development/slice-061.md) adds six standing
+and walking strips. The complete review covers 15 source frames and five native
+West mirrors. Face, ears, neck, hands and exposed ankles follow the palette;
+hair, eyes, blouse, overalls and shoes stay original. Her accepted portraits and
+N choices remain unchanged.
+Its numbered outputs use `generated/slice-061-review/` and `generated/slice-061-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

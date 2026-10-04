@@ -2,12 +2,12 @@
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
 Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 262,
-Valen's 257, Eiland's 277, Olric's 231, Landen's 119, Nora's 32, Holt's 32,
+Valen's 257, Eiland's 277, Olric's 231, Landen's 119, Nora's 38, Holt's 32,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 17,052 variant strips from 4,263 sources. Caldarus's three
+variants per source give 17,076 variant strips from 4,269 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -621,6 +621,11 @@ review covers 28 source frames and 14 native West mirrors, approved by the user 
 All earlier 115 sources and historical material tests remain unchanged. The
 archive inventory confirms coverage of all 119 Landen portraits and world
 sprites; four separately named UI icons remain original.
+The [Nora Spring movement pilot](slice-061.md) adds six standing and walking
+strips. The full review covers 15 source frames and five native West mirrors,
+approved by the user on 2026-10-03. Face, ears, neck, hands and exposed ankles follow
+the palette; blonde hair, eyes, blouse, overalls and shoes stay original. All
+32 accepted portraits and historical material tests remain unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -859,15 +864,14 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Landen's Winter general actions and hammer,
-completing his Winter sprites.
-It is in `generated/build/package` (a shortcut to `generated/slice-060-build/package`).
-It is verified with MOMI in the isolated `tmp/slice-060-playtest` lab.
+The latest combined package adds Nora's Spring standing and walking.
+It is in `generated/build/package` (a shortcut to `generated/slice-061-build/package`).
+It is verified with MOMI in the isolated `tmp/slice-061-playtest` lab.
 It has no preview helper and did not replace the desktop launcher. Use the
 [complete offline review](../../generated/review/index.html)
-to inspect all 42 cases. This slice has one Landen gallery covering every
-action and hammer frame and native West mirror, with full character views
-(including the swing effects) and enlarged details.
+to inspect all 20 cases. This slice has one Nora gallery covering every
+standing and walking frame and native West mirror, with full character views
+and enlarged face, hand and ankle details.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

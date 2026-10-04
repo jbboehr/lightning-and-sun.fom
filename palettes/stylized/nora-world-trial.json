@@ -1,0 +1,19 @@
+{
+  "description": "Nora portraits and Spring standing/walking skin in Debug Blue; hair, eyes, blouse, overalls and shoes remain original.",
+  "profile": "../profiles/nora-world-trial.json",
+  "rgba_map": {
+    "#FCDEBE": "#9DB9D4",
+    "#EFA67A": "#7F9FBD",
+    "#B65932": "#6687AD",
+    "#762E21": "#445F83",
+    "#D37249": "#6687AD",
+    "#F4BF94": "#7F9FBD",
+    "#F5BB90": "#7F9FBD",
+    "#B35A35": "#6687AD",
+    "#FCB0B6": "#9D93CB",
+    "#E6687A": "#8F5788",
+    "#FCD9B3": "#9DB9D4",
+    "#F0B988": "#7F9FBD",
+    "#D37A57": "#6687AD"
+  }
+}
