@@ -565,7 +565,12 @@ The [Nora Summer tapping slice](development/slice-071.md) adds three start/loop/
 strips. The complete review covers all five South-facing frames. Moving hands
 and exposed ankles follow the palette; hair, clothing, shoes, board and pen
 stay original. Her earlier artwork and N choices remain unchanged.
-Its numbered outputs use `generated/slice-071-review/` and `generated/slice-071-build/`;
+The [Nora Summer sweeping slice](development/slice-072.md) adds three start/loop/end
+strips, completing her 29-strip Summer folder. The complete review covers all
+17 South-facing frames. Moving hands and exposed ankles follow the palette;
+hair, clothing, shoes, broom and dust stay original. Her earlier artwork and
+N choices remain unchanged.
+Its numbered outputs use `generated/slice-072-review/` and `generated/slice-072-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
