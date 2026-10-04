@@ -527,7 +527,12 @@ adds six strips. The complete review covers 24 source frames and seven native
 West mirrors, including every stage of the shocked reaction. Moving hands and
 exposed ankles follow the palette; hair, clothing, shoes and mouth interiors
 stay original. Her earlier artwork and N choices remain unchanged.
-Its numbered outputs use `generated/slice-063-review/` and `generated/slice-063-build/`;
+The [Nora Spring seated-writing slice](development/slice-064.md) adds three
+start/loop/end strips. The complete review covers eight source frames and eight
+native West mirrors. Moving hands and exposed ankles follow the palette; hair,
+clothing, shoes and writing tools stay original. Her earlier artwork and N
+choices remain unchanged.
+Its numbered outputs use `generated/slice-064-review/` and `generated/slice-064-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

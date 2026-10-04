@@ -3516,7 +3516,10 @@
       "assets/animations/NPCs/Nora/Sprites/Spring/spr_npc_nora_spring_action_south.png": "Default",
       "assets/animations/NPCs/Nora/Sprites/Spring/spr_npc_nora_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Nora/Sprites/Spring/spr_npc_nora_spring_shocked_loop_south.png": "Default",
-      "assets/animations/NPCs/Nora/Sprites/Spring/spr_npc_nora_spring_shocked_start_south.png": "Default"
+      "assets/animations/NPCs/Nora/Sprites/Spring/spr_npc_nora_spring_shocked_start_south.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Spring/spr_npc_nora_specialanimation_spring_write_sit_end_east.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Spring/spr_npc_nora_specialanimation_spring_write_sit_loop_east.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Spring/spr_npc_nora_specialanimation_spring_write_sit_start_east.png": "Default"
     },
     "hotkey": "N",
     "id": "nora",
