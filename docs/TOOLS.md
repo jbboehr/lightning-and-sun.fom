@@ -498,7 +498,11 @@ directional general actions and hammer strip, completing all 21 Autumn sprites.
 The complete review covers 28 source frames and 14 native West mirrors.
 Clothing, trousers, shoes, hammer and swing effects stay original; earlier
 artwork and L choices remain unchanged.
-Its numbered outputs use `generated/slice-057-review/` and `generated/slice-057-build/`;
+The [Landen Winter movement slice](development/slice-058.md) adds six standing
+and walking strips. The complete review covers 15 source frames and five native
+West mirrors. Hair, coat, scarf, trousers and shoes stay original; earlier
+artwork and L choices remain unchanged.
+Its numbered outputs use `generated/slice-058-review/` and `generated/slice-058-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

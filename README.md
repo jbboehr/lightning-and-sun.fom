@@ -289,7 +289,8 @@ the hammer swing. The shirt, shorts, socks, shoes, apple, hammer and swing
 effects keep their original colors. His complete Autumn sprites also follow
 the palette, including eyelids and moving hands in general actions and the
 hammer swing. The purple shirt, trousers, shoes, apple, hammer and swing
-effects keep their original colors.
+effects keep their original colors. His Winter standing and walking also follow
+the palette, preserving the coat, scarf, trousers and shoes.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
