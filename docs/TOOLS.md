@@ -551,7 +551,12 @@ blinking, sitting, eating and drinking strips. The complete review covers 31
 source frames and twelve native West mirrors. Raised hands and exposed ankles
 follow the palette; hair, clothing, shoes and mouth interiors stay original.
 Her earlier artwork and N choices remain unchanged.
-Its numbered outputs use `generated/slice-068-review/` and `generated/slice-068-build/`;
+The [Nora Summer general-action slice](development/slice-069.md) adds three
+North/South/East strips. The complete review covers 21 source frames and seven
+native West mirrors. Raised hands and exposed ankles follow the palette;
+hair, clothing and shoes stay original. Her earlier artwork and N choices
+remain unchanged.
+Its numbered outputs use `generated/slice-069-review/` and `generated/slice-069-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

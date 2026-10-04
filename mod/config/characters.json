@@ -3542,7 +3542,10 @@
       "assets/animations/NPCs/Nora/Sprites/Summer/spr_npc_nora_summer_eat_south.png": "Default",
       "assets/animations/NPCs/Nora/Sprites/Summer/spr_npc_nora_summer_sit_east.png": "Default",
       "assets/animations/NPCs/Nora/Sprites/Summer/spr_npc_nora_summer_sit_north.png": "Default",
-      "assets/animations/NPCs/Nora/Sprites/Summer/spr_npc_nora_summer_sit_south.png": "Default"
+      "assets/animations/NPCs/Nora/Sprites/Summer/spr_npc_nora_summer_sit_south.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Summer/spr_npc_nora_summer_action_east.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Summer/spr_npc_nora_summer_action_north.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Summer/spr_npc_nora_summer_action_south.png": "Default"
     },
     "hotkey": "N",
     "id": "nora",
