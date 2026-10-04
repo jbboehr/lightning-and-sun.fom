@@ -536,7 +536,12 @@ The [Nora Spring tapping slice](development/slice-065.md) adds three
 start/loop/end strips. The complete review covers all five South-facing frames.
 Moving hands and exposed ankles follow the palette; hair, clothing, shoes,
 board and pen stay original. Her earlier artwork and N choices remain unchanged.
-Its numbered outputs use `generated/slice-065-review/` and `generated/slice-065-build/`;
+The [Nora Spring sweeping slice](development/slice-066.md) adds three
+start/loop/end strips, completing her 32-strip Spring folder. The complete
+review covers all 17 South-facing frames. Moving hands and exposed ankles
+follow the palette; hair, clothing, shoes, broom and dust stay original.
+Her earlier artwork and N choices remain unchanged.
+Its numbered outputs use `generated/slice-066-review/` and `generated/slice-066-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

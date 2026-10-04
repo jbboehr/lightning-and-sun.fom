@@ -293,11 +293,11 @@ effects keep their original colors. His complete Winter sprites also follow
 the palette, including eyelids and moving hands in general actions and the
 hammer swing. The coat, scarf, trousers, shoes, apple, hammer and swing
 effects keep their original colors.
-Nora's Spring standing, walking, blinking, sitting, eating, drinking, general
-actions, shocked reaction, seated writing and tapping are included too. N keeps
-her world sprites and portraits on the same palette. Face, ears, neck, eyelids,
-moving hands and exposed ankles change; blonde hair, eyes, pale blouse, blue overalls, shoes,
-mouth interiors and writing tools retain their original colors.
+Nora's complete Spring sprites are included too, including seated writing,
+tapping and sweeping. N keeps her world sprites and portraits on the same
+palette. Face, ears, neck, eyelids, moving hands and exposed ankles change;
+blonde hair, eyes, pale blouse, blue overalls, shoes, mouth interiors, writing
+tools, broom and dust retain their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
