@@ -502,7 +502,11 @@ The [Landen Winter movement slice](development/slice-058.md) adds six standing
 and walking strips. The complete review covers 15 source frames and five native
 West mirrors. Hair, coat, scarf, trousers and shoes stay original; earlier
 artwork and L choices remain unchanged.
-Its numbered outputs use `generated/slice-058-review/` and `generated/slice-058-build/`;
+The [Landen Winter seated-actions slice](development/slice-059.md) adds eleven
+blinking, sitting, eating and drinking strips. The complete review covers 31
+source frames and 12 native West mirrors. Coat, scarf, trousers, shoes and the
+apple stay original; earlier artwork and L choices remain unchanged.
+Its numbered outputs use `generated/slice-059-review/` and `generated/slice-059-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
