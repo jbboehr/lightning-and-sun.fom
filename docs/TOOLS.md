@@ -610,7 +610,12 @@ blinking, sitting, eating and drinking strips. The complete review covers all
 31 source frames and twelve native West mirrors. Eyelids and raised hands
 follow the palette; hair, clothing, boots, earrings and mouth interiors stay
 original. Her earlier artwork and N choices remain unchanged.
-Its numbered outputs use `generated/slice-080-review/` and `generated/slice-080-build/`;
+The [Nora Winter general-action slice](development/slice-081.md) adds three
+North/South/East strips. The complete review covers all 21 source frames and
+seven native West mirrors. Moving and raised hands follow the palette; hair,
+clothing, boots and earrings stay original. Her earlier artwork and N choices
+remain unchanged.
+Its numbered outputs use `generated/slice-081-review/` and `generated/slice-081-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
