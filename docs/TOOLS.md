@@ -615,7 +615,12 @@ North/South/East strips. The complete review covers all 21 source frames and
 seven native West mirrors. Moving and raised hands follow the palette; hair,
 clothing, boots and earrings stay original. Her earlier artwork and N choices
 remain unchanged.
-Its numbered outputs use `generated/slice-081-review/` and `generated/slice-081-build/`;
+The [Nora Winter seated-writing slice](development/slice-082.md) adds the start,
+loop and end stages. The complete review covers all eight source frames and
+eight native West mirrors. Moving hands follow the palette; hair, clothing,
+boots, earrings, board and pen stay original. Her earlier artwork and N choices
+remain unchanged.
+Its numbered outputs use `generated/slice-082-review/` and `generated/slice-082-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

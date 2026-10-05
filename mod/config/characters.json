@@ -3603,7 +3603,10 @@
       "assets/animations/NPCs/Nora/Sprites/Winter/spr_npc_nora_winter_sit_south.png": "Default",
       "assets/animations/NPCs/Nora/Sprites/Winter/spr_npc_nora_winter_action_east.png": "Default",
       "assets/animations/NPCs/Nora/Sprites/Winter/spr_npc_nora_winter_action_north.png": "Default",
-      "assets/animations/NPCs/Nora/Sprites/Winter/spr_npc_nora_winter_action_south.png": "Default"
+      "assets/animations/NPCs/Nora/Sprites/Winter/spr_npc_nora_winter_action_south.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Winter/spr_npc_nora_specialanimation_winter_write_sit_end_east.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Winter/spr_npc_nora_specialanimation_winter_write_sit_loop_east.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Winter/spr_npc_nora_specialanimation_winter_write_sit_start_east.png": "Default"
     },
     "hotkey": "N",
     "id": "nora",
