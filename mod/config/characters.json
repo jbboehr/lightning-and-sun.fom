@@ -3577,7 +3577,10 @@
       "assets/animations/NPCs/Nora/Sprites/Autumn/spr_npc_nora_autumn_action_south.png": "Default",
       "assets/animations/NPCs/Nora/Sprites/Autumn/spr_npc_nora_specialanimation_autumn_write_sit_end_east.png": "Default",
       "assets/animations/NPCs/Nora/Sprites/Autumn/spr_npc_nora_specialanimation_autumn_write_sit_loop_east.png": "Default",
-      "assets/animations/NPCs/Nora/Sprites/Autumn/spr_npc_nora_specialanimation_autumn_write_sit_start_east.png": "Default"
+      "assets/animations/NPCs/Nora/Sprites/Autumn/spr_npc_nora_specialanimation_autumn_write_sit_start_east.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Autumn/spr_npc_nora_specialanimation_autumn_tap_end_south.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Autumn/spr_npc_nora_specialanimation_autumn_tap_loop_south.png": "Default",
+      "assets/animations/NPCs/Nora/Sprites/Autumn/spr_npc_nora_specialanimation_autumn_tap_start_south.png": "Default"
     },
     "hotkey": "N",
     "id": "nora",
