@@ -595,7 +595,12 @@ end stages. The complete review covers all five source frames; this sequence
 has no West mirrors. Hands and exposed ankles follow the palette; hair,
 clothing, shoes, board and pen stay original. Her earlier artwork and N choices
 remain unchanged.
-Its numbered outputs use `generated/slice-077-review/` and `generated/slice-077-build/`;
+The [Nora Autumn sweeping slice](development/slice-078.md) adds the start, loop
+and end stages, completing her 29-strip Autumn sprite folder. The complete
+review covers all 17 source frames; this sequence has no West mirrors. Hands
+and exposed ankles follow the palette; hair, clothing, shoes, broom and dust
+stay original. Her earlier artwork and N choices remain unchanged.
+Its numbered outputs use `generated/slice-078-review/` and `generated/slice-078-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
