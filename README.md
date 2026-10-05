@@ -304,6 +304,9 @@ mouth interiors, writing tools, broom and dust retain their original colors.
 Her complete Autumn sprites also follow the palette, including seated writing,
 tapping and sweeping. The blue shirt, pale apron, purple trousers, shoes,
 blonde hair, mouth interiors, writing tools, broom and dust stay original.
+Her Winter standing and walking sprites follow the palette too. Face, ears,
+neck and hands change; blonde hair, eyes, blue scarf, pale coat, purple skirt,
+brown boots and pink earrings stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

@@ -600,7 +600,12 @@ and end stages, completing her 29-strip Autumn sprite folder. The complete
 review covers all 17 source frames; this sequence has no West mirrors. Hands
 and exposed ankles follow the palette; hair, clothing, shoes, broom and dust
 stay original. Her earlier artwork and N choices remain unchanged.
-Its numbered outputs use `generated/slice-078-review/` and `generated/slice-078-build/`;
+The [Nora Winter movement pilot](development/slice-079.md) adds six standing
+and walking strips. The complete review covers all 15 source frames and five
+native West mirrors. Face, neck and hands follow the palette; blonde hair,
+eyes, scarf, coat, skirt, boots and pink earrings stay original. Her earlier
+artwork and N choices remain unchanged.
+Its numbered outputs use `generated/slice-079-review/` and `generated/slice-079-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
