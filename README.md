@@ -301,9 +301,10 @@ tools, broom and dust retain their original colors.
 Her complete Summer sprites also follow the palette, including seated writing,
 tapping and sweeping. The blue shirt, purple apron, pale trousers, shoes,
 mouth interiors, writing tools, broom and dust retain their original colors.
-Her Autumn standing, walking, blinking, sitting, eating, drinking and
-general-action sprites also follow the palette. The blue shirt, pale apron,
-purple trousers, shoes, blonde hair and mouth interiors stay original.
+Her Autumn standing, walking, blinking, sitting, eating, drinking,
+general-action and seated-writing sprites also follow the palette. The blue
+shirt, pale apron, purple trousers, shoes, blonde hair, mouth interiors and
+writing tools stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

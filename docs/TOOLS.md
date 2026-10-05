@@ -585,7 +585,12 @@ North/South/East strips. The complete review covers 21 source frames and seven
 native West mirrors. Moving hands and exposed ankles follow the palette;
 hair, blue shirt, pale apron, purple trousers and shoes stay original.
 Her earlier artwork and N choices remain unchanged.
-Its numbered outputs use `generated/slice-075-review/` and `generated/slice-075-build/`;
+The [Nora Autumn seated-writing slice](development/slice-076.md) adds the start,
+loop and end stages. The complete review covers eight source frames and eight
+native West mirrors. Moving hands and exposed ankles follow the palette;
+hair, clothing, shoes, board and pen stay original. Her earlier artwork and N
+choices remain unchanged.
+Its numbered outputs use `generated/slice-076-review/` and `generated/slice-076-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
