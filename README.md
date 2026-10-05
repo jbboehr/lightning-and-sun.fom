@@ -308,9 +308,9 @@ Her Winter standing, walking, blinking, sitting, eating and drinking sprites
 follow the palette too. Face, ears, neck, eyelids and hands change; blonde hair,
 eyes, blue scarf, pale coat, purple skirt, brown boots, pink earrings and mouth
 interiors stay original.
-Winter general actions and seated writing follow the palette too, including
-the moving and raised hands. Hair, clothing, boots, earrings, board and pen
-keep their original colors.
+Winter general actions, seated writing and tapping follow the palette too,
+including the moving and raised hands. Hair, clothing, boots, earrings, board
+and pen keep their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
