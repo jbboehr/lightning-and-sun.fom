@@ -575,7 +575,12 @@ and walking strips. The complete review covers 15 source frames and five native
 West mirrors. Moving hands and exposed ankles follow the palette; hair, blue
 shirt, pale apron, purple trousers and shoes stay original. Her earlier artwork
 and N choices remain unchanged.
-Its numbered outputs use `generated/slice-073-review/` and `generated/slice-073-build/`;
+The [Nora Autumn seated-actions slice](development/slice-074.md) adds eleven
+blinking, sitting, eating and drinking strips. The complete review covers
+31 source frames and twelve native West mirrors. Eyelids, raised hands and
+exposed ankles follow the palette; hair, clothing, shoes and mouth interiors
+stay original. Her earlier artwork and N choices remain unchanged.
+Its numbered outputs use `generated/slice-074-review/` and `generated/slice-074-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
