@@ -655,7 +655,11 @@ The [Holt Spring whittling batch](development/slice-089.md) adds one strip.
 The complete review covers all nine source frames and nine native West mirrors.
 Face and moving hands change; hair, moustache, clothing, boots, wood, chips and
 knife remain original. Prior artwork and H choices stay unchanged.
-Its numbered outputs use `generated/slice-089-review/` and `generated/slice-089-build/`;
+The [Holt Spring sweeping batch](development/slice-090.md) adds three strips,
+completing all 30 Spring sprites. The complete review covers all 12 South-facing
+frames. Face and moving hands change; hair, moustache, clothing, boots, broom
+and dust remain original. Prior artwork and H choices stay unchanged.
+Its numbered outputs use `generated/slice-090-review/` and `generated/slice-090-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

@@ -318,6 +318,7 @@ mouth interiors retain their original colors. His Spring general actions and
 shocked reaction now follow the palette as well, including raised fingers.
 Spring standing writing also follows the palette; his board and pen stay original.
 Spring whittling follows the palette too; the wood, chips and knife stay original.
+Sweeping completes his Spring sprites; the broom and dust stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
