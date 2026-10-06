@@ -635,7 +635,13 @@ and walking strips. The complete review covers all 15 source frames and five
 native West mirrors. Face, neck and hands follow the palette; hair, moustache,
 scarf, shirt, apron and boots stay original. His portrait artwork and H choices
 remain unchanged. The collection now uses `holt-world-trial.json`.
-Its numbered outputs use `generated/slice-085-review/` and `generated/slice-085-build/`;
+The [Holt Spring seated-action batch](development/slice-086.md) adds eleven
+blinking, sitting, eating and drinking strips. The complete review covers all
+31 source frames and 12 native West mirrors. Eyelids and moving hands change,
+including the lowered hand overlapping a boot during eating; hair, moustache,
+clothing, boots and mouth interiors remain original. Prior artwork and H choices
+stay unchanged.
+Its numbered outputs use `generated/slice-086-review/` and `generated/slice-086-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

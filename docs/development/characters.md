@@ -2,12 +2,12 @@
 
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
 Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 262,
-Valen's 257, Eiland's 277, Olric's 231, Landen's 119, Nora's 151, Holt's 38,
+Valen's 257, Eiland's 277, Olric's 231, Landen's 119, Nora's 151, Holt's 49,
 Josephine's 32, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 17,552 variant strips from 4,388 sources. Caldarus's three
+variants per source give 17,596 variant strips from 4,399 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -752,6 +752,12 @@ mirrors, approved by the user on 2026-10-05. Face, neck and hands follow the pal
 hair, moustache, eyes, scarf, shirt, apron and boots stay original. All 32
 portraits retain their prior pixels, masks, mappings and historical tests.
 The combined collection uses `holt-world-trial.json`; H choices are unchanged.
+The [Holt Spring blinking and seated-action batch](slice-086.md) adds eleven
+strips. Its full review covers 31 source frames and 12 native West mirrors,
+approved by the user on 2026-10-05. Face, neck, eyelids and moving hands follow the palette,
+including the lowered hand overlapping a boot while eating. Hair, moustache,
+clothing, boots and mouth interiors stay original. All earlier 38 sources,
+target mappings, palette choices and historical material tests stay unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -990,12 +996,12 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Holt's Spring standing and walking sprites.
-It is in `generated/build/package` (a shortcut to `generated/slice-085-build/package`).
-It is verified with MOMI in the isolated `tmp/slice-085-playtest` lab.
+The latest combined package adds Holt's Spring blinking and seated actions.
+It is in `generated/build/package` (a shortcut to `generated/slice-086-build/package`).
+It is verified with MOMI in the isolated `tmp/slice-086-playtest` lab.
 It has no preview helper and did not replace the desktop launcher. Use the
 [complete offline review](../../generated/review/index.html)
-to inspect all 20 cases. This slice has one Holt gallery covering every
+to inspect all 43 cases. This slice has one Holt gallery covering every
 frame and native West mirror, with full character views and enlarged face,
 hand and boot details.
 
