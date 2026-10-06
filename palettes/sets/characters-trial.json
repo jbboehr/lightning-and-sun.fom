@@ -13,7 +13,7 @@
     {"id": "olric", "presets": "olric-world-trial.json"},
     {"id": "landen", "presets": "landen-world-trial.json"},
     {"id": "nora", "presets": "nora-world-trial.json"},
-    {"id": "holt", "presets": "holt-portraits-trial.json"},
+    {"id": "holt", "presets": "holt-world-trial.json"},
     {"id": "josephine", "presets": "josephine-portraits-trial.json"},
     {"id": "darcy", "presets": "darcy-portraits-trial.json"},
     {"id": "dell", "presets": "dell-portraits-trial.json"},

@@ -311,6 +311,9 @@ interiors stay original.
 Winter general actions, seated writing, tapping and sweeping follow the palette
 too, completing her four seasonal sprite folders. Moving hands change; hair,
 clothing, boots, earrings, board, pen, broom and dust keep their original colors.
+Holt’s Spring standing and walking sprites now follow his selected palette too.
+Face, ears, neck and hands change; ginger hair, moustache, eyes, orange scarf,
+green shirt, blue apron and boots retain their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
