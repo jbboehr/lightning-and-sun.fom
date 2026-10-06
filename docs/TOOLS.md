@@ -651,7 +651,11 @@ writing strips. The complete review covers all eight South-facing frames.
 Face and moving hands change, including the lowered hand under the board; hair,
 moustache, clothing, boots, board and pen remain original. Prior artwork and
 H choices stay unchanged.
-Its numbered outputs use `generated/slice-088-review/` and `generated/slice-088-build/`;
+The [Holt Spring whittling batch](development/slice-089.md) adds one strip.
+The complete review covers all nine source frames and nine native West mirrors.
+Face and moving hands change; hair, moustache, clothing, boots, wood, chips and
+knife remain original. Prior artwork and H choices stay unchanged.
+Its numbered outputs use `generated/slice-089-review/` and `generated/slice-089-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
