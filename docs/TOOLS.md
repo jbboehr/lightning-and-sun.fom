@@ -641,7 +641,12 @@ blinking, sitting, eating and drinking strips. The complete review covers all
 including the lowered hand overlapping a boot during eating; hair, moustache,
 clothing, boots and mouth interiors remain original. Prior artwork and H choices
 stay unchanged.
-Its numbered outputs use `generated/slice-086-review/` and `generated/slice-086-build/`;
+The [Holt Spring action and reaction batch](development/slice-087.md) adds six
+general-action and shocked-reaction strips. The complete review covers all
+24 source frames and seven native West mirrors, including every shocked stage.
+Face and raised hands change; hair, moustache, clothing, boots and mouth
+interiors remain original. Prior artwork and H choices stay unchanged.
+Its numbered outputs use `generated/slice-087-review/` and `generated/slice-087-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
