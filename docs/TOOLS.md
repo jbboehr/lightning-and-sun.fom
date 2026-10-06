@@ -625,7 +625,12 @@ and end stages. The complete review covers all five South-facing frames; this
 native sequence has no West mirrors. Moving hands follow the palette; hair,
 clothing, boots, earrings, board and pen stay original. Her earlier artwork
 and N choices remain unchanged.
-Its numbered outputs use `generated/slice-083-review/` and `generated/slice-083-build/`;
+The [Nora Winter completion slice](development/slice-084.md) adds sweeping
+start, loop and end, completing all four seasonal sprite folders. The full
+review covers all 17 South-facing frames. Moving hands follow the palette;
+hair, clothing, boots, earrings, broom and dust stay original. Her earlier
+artwork and N choices remain unchanged.
+Its numbered outputs use `generated/slice-084-review/` and `generated/slice-084-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
