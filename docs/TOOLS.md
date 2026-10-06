@@ -646,7 +646,12 @@ general-action and shocked-reaction strips. The complete review covers all
 24 source frames and seven native West mirrors, including every shocked stage.
 Face and raised hands change; hair, moustache, clothing, boots and mouth
 interiors remain original. Prior artwork and H choices stay unchanged.
-Its numbered outputs use `generated/slice-087-review/` and `generated/slice-087-build/`;
+The [Holt Spring writing batch](development/slice-088.md) adds three standing
+writing strips. The complete review covers all eight South-facing frames.
+Face and moving hands change, including the lowered hand under the board; hair,
+moustache, clothing, boots, board and pen remain original. Prior artwork and
+H choices stay unchanged.
+Its numbered outputs use `generated/slice-088-review/` and `generated/slice-088-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

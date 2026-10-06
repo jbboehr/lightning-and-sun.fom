@@ -3674,7 +3674,10 @@
       "assets/animations/NPCs/Holt/Sprites/Spring/spr_npc_holt_spring_action_south.png": "Default",
       "assets/animations/NPCs/Holt/Sprites/Spring/spr_npc_holt_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Holt/Sprites/Spring/spr_npc_holt_spring_shocked_loop_south.png": "Default",
-      "assets/animations/NPCs/Holt/Sprites/Spring/spr_npc_holt_spring_shocked_start_south.png": "Default"
+      "assets/animations/NPCs/Holt/Sprites/Spring/spr_npc_holt_spring_shocked_start_south.png": "Default",
+      "assets/animations/NPCs/Holt/Sprites/Spring/spr_npc_holt_specialanimation_spring_write_end_south.png": "Default",
+      "assets/animations/NPCs/Holt/Sprites/Spring/spr_npc_holt_specialanimation_spring_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Holt/Sprites/Spring/spr_npc_holt_specialanimation_spring_write_start_south.png": "Default"
     },
     "hotkey": "H",
     "id": "holt",
