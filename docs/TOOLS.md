@@ -723,7 +723,11 @@ blinking, sitting, eating and drinking strips. Its full review covers 31 source
 frames and twelve native West mirrors. Skin follows the palette, including
 eyelids and lowered hands; hair, moustache, clothing, boots and mouth interiors
 stay original.
-Its numbered outputs use `generated/slice-104-review/` and `generated/slice-104-build/`;
+The [Holt Winter general-action batch](development/slice-105.md) adds three strips.
+Its full review covers 21 source frames and seven native West mirrors. Face,
+ears, neck and hands follow the palette; hair, moustache, orange plaid shirt,
+scarf, apron, trousers and boots stay original.
+Its numbered outputs use `generated/slice-105-review/` and `generated/slice-105-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
