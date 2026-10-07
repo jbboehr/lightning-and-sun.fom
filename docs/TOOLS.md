@@ -673,7 +673,12 @@ seven-frame strips. The complete review covers 21 source frames and seven native
 West mirrors. Face, nose edge, forearms and moving hands change; hair, moustache,
 eye detail, pink shirt, green apron and footwear remain original. Prior artwork
 and H choices stay unchanged.
-Its numbered outputs use `generated/slice-093-review/` and `generated/slice-093-build/`;
+The [Holt Summer writing batch](development/slice-094.md) adds three standing
+start/loop/end strips. The complete review covers all eight South-facing frames.
+Face, forearms and moving hands change, including the lowered hand under the board;
+hair, moustache, clothing, footwear, board and pen remain original. Prior artwork
+and H choices stay unchanged.
+Its numbered outputs use `generated/slice-094-review/` and `generated/slice-094-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
