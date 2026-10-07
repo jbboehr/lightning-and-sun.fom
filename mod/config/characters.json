@@ -3732,7 +3732,10 @@
       "assets/animations/NPCs/Holt/Sprites/Autumn/spr_npc_holt_specialanimation_autumn_write_end_south.png": "Default",
       "assets/animations/NPCs/Holt/Sprites/Autumn/spr_npc_holt_specialanimation_autumn_write_loop_south.png": "Default",
       "assets/animations/NPCs/Holt/Sprites/Autumn/spr_npc_holt_specialanimation_autumn_write_start_south.png": "Default",
-      "assets/animations/NPCs/Holt/Sprites/Autumn/spr_npc_holt_specialanimation_autumn_whittle_east.png": "Default"
+      "assets/animations/NPCs/Holt/Sprites/Autumn/spr_npc_holt_specialanimation_autumn_whittle_east.png": "Default",
+      "assets/animations/NPCs/Holt/Sprites/Autumn/spr_npc_holt_specialanimation_autumn_sweep_end_south.png": "Default",
+      "assets/animations/NPCs/Holt/Sprites/Autumn/spr_npc_holt_specialanimation_autumn_sweep_loop_south.png": "Default",
+      "assets/animations/NPCs/Holt/Sprites/Autumn/spr_npc_holt_specialanimation_autumn_sweep_start_south.png": "Default"
     },
     "hotkey": "H",
     "id": "holt",

@@ -710,7 +710,11 @@ The [Holt Autumn whittling batch](development/slice-101.md) adds one strip.
 Its full review covers nine source frames and nine native West mirrors. Face and
 moving hands follow the palette; hair, moustache, clothing, boots, wood, flying
 chips and knife stay original.
-Its numbered outputs use `generated/slice-101-review/` and `generated/slice-101-build/`;
+The [Holt Autumn sweeping batch](development/slice-102.md) adds three start/loop/end
+strips, completing all 27 Autumn sprites. Its full review covers twelve
+South-facing frames. Face and moving hands follow the palette; hair, moustache,
+green shirt, brown apron, pink trim, boots, broom and dust stay original.
+Its numbered outputs use `generated/slice-102-review/` and `generated/slice-102-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

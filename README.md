@@ -332,6 +332,7 @@ lowered hands beside the boots; mouth interiors remain original.
 Autumn general actions also follow the palette, including raised hands and fingers.
 Autumn standing writing follows the palette too; his board and pen stay original.
 Autumn whittling follows the palette too; the wood, flying chips and knife stay original.
+Sweeping completes his Autumn sprites; the broom and dust stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
