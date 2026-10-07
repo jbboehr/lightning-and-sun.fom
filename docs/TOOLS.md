@@ -692,7 +692,13 @@ walking strips. Its full review covers 15 source frames and five native West
 mirrors. Face, neck and hands change, including three dark hand contours; hair,
 moustache, green shirt, brown apron, pink trim and boots stay original. Prior
 artwork and H choices stay unchanged.
-Its numbered outputs use `generated/slice-097-review/` and `generated/slice-097-build/`;
+The [Holt Autumn seated-action batch](development/slice-098.md) adds eleven
+blinking, sitting, eating and drinking strips. Its complete review covers 31
+source frames and 12 native West mirrors. Eyelids and moving hands follow the
+palette, including the lowered hand beside a boot and three dark hand contours;
+hair, moustache, clothing, boots and mouth interiors remain original. Prior
+artwork and H choices stay unchanged.
+Its numbered outputs use `generated/slice-098-review/` and `generated/slice-098-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
