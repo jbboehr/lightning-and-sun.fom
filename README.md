@@ -323,6 +323,7 @@ His Summer standing, walking, blinking, sitting, eating, drinking and general
 action sprites also follow the palette, including raised hands and bare forearms;
 the pink shirt, green apron, footwear and mouth interiors stay original.
 Summer standing writing also follows the palette; his board and pen stay original.
+Summer whittling follows the palette too; the wood, flying chips and knife stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

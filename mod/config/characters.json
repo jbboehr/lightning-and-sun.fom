@@ -3704,7 +3704,8 @@
       "assets/animations/NPCs/Holt/Sprites/Summer/spr_npc_holt_summer_action_south.png": "Default",
       "assets/animations/NPCs/Holt/Sprites/Summer/spr_npc_holt_specialanimation_summer_write_end_south.png": "Default",
       "assets/animations/NPCs/Holt/Sprites/Summer/spr_npc_holt_specialanimation_summer_write_loop_south.png": "Default",
-      "assets/animations/NPCs/Holt/Sprites/Summer/spr_npc_holt_specialanimation_summer_write_start_south.png": "Default"
+      "assets/animations/NPCs/Holt/Sprites/Summer/spr_npc_holt_specialanimation_summer_write_start_south.png": "Default",
+      "assets/animations/NPCs/Holt/Sprites/Summer/spr_npc_holt_specialanimation_summer_whittle_east.png": "Default"
     },
     "hotkey": "H",
     "id": "holt",
