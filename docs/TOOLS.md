@@ -682,7 +682,12 @@ The [Holt Summer whittling batch](development/slice-095.md) adds one strip.
 The complete review covers nine source frames and nine native West mirrors.
 Face, forearms and moving hands change; hair, moustache, clothing, footwear, wood,
 flying chips and knife remain original. Prior artwork and H choices stay unchanged.
-Its numbered outputs use `generated/slice-095-review/` and `generated/slice-095-build/`;
+The [Holt Summer sweeping batch](development/slice-096.md) adds three start/loop/end
+strips, completing all 27 Summer sprites. Its full review covers 12 South-facing
+frames. Face and moving hands change, including ten dark gripping-hand contours;
+hair, moustache, shirt creases, apron, footwear, broom and dust remain original.
+Prior artwork and H choices stay unchanged.
+Its numbered outputs use `generated/slice-096-review/` and `generated/slice-096-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
