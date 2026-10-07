@@ -335,6 +335,8 @@ Autumn whittling follows the palette too; the wood, flying chips and knife stay 
 Sweeping completes his Autumn sprites; the broom and dust stay original.
 His Winter standing and walking sprites also follow the palette; the orange plaid
 shirt, scarf, apron, trousers and boots retain their original colors.
+Winter blinking, sitting, eating and drinking follow the palette too, including
+the lowered hand beside the boots; mouth interiors remain original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

@@ -718,7 +718,12 @@ The [Holt Winter movement batch](development/slice-103.md) adds six standing and
 walking strips. Its full review covers 15 source frames and five native West
 mirrors. Face, neck and hands follow the palette; ginger hair, moustache, orange
 plaid shirt, scarf, apron, trousers and boots stay original.
-Its numbered outputs use `generated/slice-103-review/` and `generated/slice-103-build/`;
+The [Holt Winter blinking and seated batch](development/slice-104.md) adds eleven
+blinking, sitting, eating and drinking strips. Its full review covers 31 source
+frames and twelve native West mirrors. Skin follows the palette, including
+eyelids and lowered hands; hair, moustache, clothing, boots and mouth interiors
+stay original.
+Its numbered outputs use `generated/slice-104-review/` and `generated/slice-104-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
