@@ -714,7 +714,11 @@ The [Holt Autumn sweeping batch](development/slice-102.md) adds three start/loop
 strips, completing all 27 Autumn sprites. Its full review covers twelve
 South-facing frames. Face and moving hands follow the palette; hair, moustache,
 green shirt, brown apron, pink trim, boots, broom and dust stay original.
-Its numbered outputs use `generated/slice-102-review/` and `generated/slice-102-build/`;
+The [Holt Winter movement batch](development/slice-103.md) adds six standing and
+walking strips. Its full review covers 15 source frames and five native West
+mirrors. Face, neck and hands follow the palette; ginger hair, moustache, orange
+plaid shirt, scarf, apron, trousers and boots stay original.
+Its numbered outputs use `generated/slice-103-review/` and `generated/slice-103-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
