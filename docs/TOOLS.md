@@ -698,7 +698,11 @@ source frames and 12 native West mirrors. Eyelids and moving hands follow the
 palette, including the lowered hand beside a boot and three dark hand contours;
 hair, moustache, clothing, boots and mouth interiors remain original. Prior
 artwork and H choices stay unchanged.
-Its numbered outputs use `generated/slice-098-review/` and `generated/slice-098-build/`;
+The [Holt Autumn general-action batch](development/slice-099.md) adds three strips.
+Its complete review covers 21 source frames and seven native West mirrors.
+Face and moving hands follow the palette, including one dark hand contour;
+hair, moustache, green shirt, brown apron, pink trim and boots stay original.
+Its numbered outputs use `generated/slice-099-review/` and `generated/slice-099-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

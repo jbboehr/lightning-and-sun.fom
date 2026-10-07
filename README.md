@@ -329,6 +329,7 @@ His Autumn standing and walking sprites also follow the palette; the green shirt
 brown apron, pink trim and boots retain their original colors.
 Autumn blinking, sitting, eating and drinking follow the palette too, including
 lowered hands beside the boots; mouth interiors remain original.
+Autumn general actions also follow the palette, including raised hands and fingers.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
