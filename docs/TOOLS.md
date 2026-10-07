@@ -668,7 +668,12 @@ blinking, sitting, eating and drinking strips. The complete review covers 31
 source frames and 12 native West mirrors. Skin changes include the lowered hand
 overlapping a shoe and ten dark hand contours; hair, moustache, clothing, footwear
 and mouth interiors remain original. Prior artwork and H choices stay unchanged.
-Its numbered outputs use `generated/slice-092-review/` and `generated/slice-092-build/`;
+The [Holt Summer general-action batch](development/slice-093.md) adds three
+seven-frame strips. The complete review covers 21 source frames and seven native
+West mirrors. Face, nose edge, forearms and moving hands change; hair, moustache,
+eye detail, pink shirt, green apron and footwear remain original. Prior artwork
+and H choices stay unchanged.
+Its numbered outputs use `generated/slice-093-review/` and `generated/slice-093-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
