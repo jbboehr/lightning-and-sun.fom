@@ -663,7 +663,12 @@ The [Holt Summer movement batch](development/slice-091.md) adds six standing
 and walking strips. The complete review covers 15 source frames and five native
 West mirrors. Face, forearms and moving hands change; hair, moustache, pink shirt,
 green apron and footwear remain original. Prior artwork and H choices stay unchanged.
-Its numbered outputs use `generated/slice-091-review/` and `generated/slice-091-build/`;
+The [Holt Summer seated-action batch](development/slice-092.md) adds eleven
+blinking, sitting, eating and drinking strips. The complete review covers 31
+source frames and 12 native West mirrors. Skin changes include the lowered hand
+overlapping a shoe and ten dark hand contours; hair, moustache, clothing, footwear
+and mouth interiors remain original. Prior artwork and H choices stay unchanged.
+Its numbered outputs use `generated/slice-092-review/` and `generated/slice-092-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
