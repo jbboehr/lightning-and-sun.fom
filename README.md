@@ -339,6 +339,7 @@ Winter blinking, sitting, eating and drinking follow the palette too, including
 the lowered hand beside the boots; mouth interiors remain original.
 Winter general actions also follow the palette; moving hands change while the
 orange sleeves and moustache keep their original colors.
+Winter standing writing also follows the palette; his board and pen stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

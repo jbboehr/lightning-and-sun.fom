@@ -727,7 +727,11 @@ The [Holt Winter general-action batch](development/slice-105.md) adds three stri
 Its full review covers 21 source frames and seven native West mirrors. Face,
 ears, neck and hands follow the palette; hair, moustache, orange plaid shirt,
 scarf, apron, trousers and boots stay original.
-Its numbered outputs use `generated/slice-105-review/` and `generated/slice-105-build/`;
+The [Holt Winter writing batch](development/slice-106.md) adds three standing
+start/loop/end strips. Its full review covers all eight South-facing frames.
+Face, ears, neck and hands follow the palette; hair, moustache, clothing, boots,
+board and pen stay original.
+Its numbered outputs use `generated/slice-106-review/` and `generated/slice-106-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
