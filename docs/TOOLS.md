@@ -687,7 +687,12 @@ strips, completing all 27 Summer sprites. Its full review covers 12 South-facing
 frames. Face and moving hands change, including ten dark gripping-hand contours;
 hair, moustache, shirt creases, apron, footwear, broom and dust remain original.
 Prior artwork and H choices stay unchanged.
-Its numbered outputs use `generated/slice-096-review/` and `generated/slice-096-build/`;
+The [Holt Autumn movement batch](development/slice-097.md) adds six standing and
+walking strips. Its full review covers 15 source frames and five native West
+mirrors. Face, neck and hands change, including three dark hand contours; hair,
+moustache, green shirt, brown apron, pink trim and boots stay original. Prior
+artwork and H choices stay unchanged.
+Its numbered outputs use `generated/slice-097-review/` and `generated/slice-097-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

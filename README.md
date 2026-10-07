@@ -325,6 +325,8 @@ the pink shirt, green apron, footwear and mouth interiors stay original.
 Summer standing writing also follows the palette; his board and pen stay original.
 Summer whittling follows the palette too; the wood, flying chips and knife stay original.
 Sweeping completes his Summer sprites; the broom and dust stay original.
+His Autumn standing and walking sprites also follow the palette; the green shirt,
+brown apron, pink trim and boots retain their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
