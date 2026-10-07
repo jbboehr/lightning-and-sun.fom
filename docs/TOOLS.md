@@ -706,7 +706,11 @@ The [Holt Autumn writing batch](development/slice-100.md) adds three standing
 start/loop/end strips. Its full review covers all eight South-facing frames.
 Face and moving hands follow the palette, including the lowered hand under the
 board; hair, moustache, clothing, boots, board and pen stay original.
-Its numbered outputs use `generated/slice-100-review/` and `generated/slice-100-build/`;
+The [Holt Autumn whittling batch](development/slice-101.md) adds one strip.
+Its full review covers nine source frames and nine native West mirrors. Face and
+moving hands follow the palette; hair, moustache, clothing, boots, wood, flying
+chips and knife stay original.
+Its numbered outputs use `generated/slice-101-review/` and `generated/slice-101-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
