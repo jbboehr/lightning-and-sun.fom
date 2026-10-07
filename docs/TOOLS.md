@@ -659,7 +659,11 @@ The [Holt Spring sweeping batch](development/slice-090.md) adds three strips,
 completing all 30 Spring sprites. The complete review covers all 12 South-facing
 frames. Face and moving hands change; hair, moustache, clothing, boots, broom
 and dust remain original. Prior artwork and H choices stay unchanged.
-Its numbered outputs use `generated/slice-090-review/` and `generated/slice-090-build/`;
+The [Holt Summer movement batch](development/slice-091.md) adds six standing
+and walking strips. The complete review covers 15 source frames and five native
+West mirrors. Face, forearms and moving hands change; hair, moustache, pink shirt,
+green apron and footwear remain original. Prior artwork and H choices stay unchanged.
+Its numbered outputs use `generated/slice-091-review/` and `generated/slice-091-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
