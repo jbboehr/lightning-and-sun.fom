@@ -766,7 +766,11 @@ floating musical notes stay original.
 The [Josephine Spring chopping batch](development/slice-115.md) adds one strip.
 Its full review covers all twenty North-facing frames. Exposed hands and ankles
 follow the palette; the knife, food particles, hair and clothing stay original.
-Its numbered outputs use `generated/slice-115-review/` and `generated/slice-115-build/`;
+The [Josephine Spring sweeping batch](development/slice-116.md) adds three
+start/loop/end strips, completing her Spring outfit. Its full review covers
+all fifteen South-facing frames. Skin follows the palette while the broom,
+dust, hair and clothing stay original.
+Its numbered outputs use `generated/slice-116-review/` and `generated/slice-116-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

@@ -350,7 +350,8 @@ Her Spring general actions and shocked reaction also follow the palette,
 including the raised hands and exposed ankles. Her Spring writing animations
 also follow the palette, while the writing board and pen stay original.
 Spring polishing, singing and chopping follow the palette too. Their cloth,
-blue glass, musical notes, knife and food stay original.
+blue glass, musical notes, knife and food stay original. Sweeping completes
+her Spring outfit, preserving the broom and dust.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
