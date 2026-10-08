@@ -759,7 +759,11 @@ The [Josephine Spring polishing batch](development/slice-113.md) adds three
 start/loop/end strips. Its full review covers nine source frames and nine native
 West mirrors. Exposed hands and ankles follow the palette; the polishing cloth
 and glass stay original.
-Its numbered outputs use `generated/slice-113-review/` and `generated/slice-113-build/`;
+The [Josephine Spring singing batch](development/slice-114.md) adds three
+start/loop/end strips. Its full review covers all fourteen South-facing frames.
+Both moving hands and exposed ankles follow the palette; mouth interiors and
+floating musical notes stay original.
+Its numbered outputs use `generated/slice-114-review/` and `generated/slice-114-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
