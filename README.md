@@ -343,8 +343,9 @@ Winter standing writing also follows the palette; his board and pen stay origina
 Winter whittling follows the palette too; wood, flying chips and the knife stay original.
 Sweeping completes his Winter sprites and all four seasonal sprite folders;
 his broom and dust stay original.
-Josephine’s Spring standing and walking also follow her selected palette, including
-her hands and exposed ankles; hair, earrings, shawl, skirt and shoes stay original.
+Josephine’s Spring standing, walking, blinking, sitting, eating and drinking follow
+her selected palette, including eyelids, hands and exposed ankles. Her hair,
+earrings, clothing, shoes and mouth interiors stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

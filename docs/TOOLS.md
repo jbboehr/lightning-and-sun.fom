@@ -743,7 +743,11 @@ The [Josephine Spring movement pilot](development/slice-109.md) adds six standin
 and walking strips. Its full review covers fifteen source frames and five native
 West mirrors. Face, neck, hands and exposed ankles follow the palette; hair,
 eyes, earrings, orange shawl, pink skirt and shoes stay original.
-Its numbered outputs use `generated/slice-109-review/` and `generated/slice-109-build/`;
+The [Josephine Spring blinking and seated-action batch](development/slice-110.md)
+adds eleven strips. Its full review covers 31 source frames and twelve native
+West mirrors. Eyelids and moving hands follow the palette; hair, earrings,
+clothing, shoes and mouth interiors stay original.
+Its numbered outputs use `generated/slice-110-review/` and `generated/slice-110-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
