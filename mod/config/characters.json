@@ -3824,7 +3824,10 @@
       "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_action_south.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_shocked_loop_south.png": "Default",
-      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_shocked_start_south.png": "Default"
+      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_shocked_start_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_specialanimation_spring_write_end_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_specialanimation_spring_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_specialanimation_spring_write_start_south.png": "Default"
     },
     "hotkey": "P",
     "id": "josephine",

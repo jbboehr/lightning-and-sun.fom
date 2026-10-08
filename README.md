@@ -347,7 +347,8 @@ Josephine’s Spring standing, walking, blinking, sitting, eating and drinking f
 her selected palette, including eyelids, hands and exposed ankles. Her hair,
 earrings, clothing, shoes and mouth interiors stay original.
 Her Spring general actions and shocked reaction also follow the palette,
-including the raised hands and exposed ankles.
+including the raised hands and exposed ankles. Her Spring writing animations
+also follow the palette, while the writing board and pen stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
