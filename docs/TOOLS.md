@@ -747,7 +747,11 @@ The [Josephine Spring blinking and seated-action batch](development/slice-110.md
 adds eleven strips. Its full review covers 31 source frames and twelve native
 West mirrors. Eyelids and moving hands follow the palette; hair, earrings,
 clothing, shoes and mouth interiors stay original.
-Its numbered outputs use `generated/slice-110-review/` and `generated/slice-110-build/`;
+The [Josephine Spring general-action and reaction batch](development/slice-111.md)
+adds six strips. Its full review covers 24 source frames and seven native West
+mirrors. Raised hands and ankles follow the palette; hair, clothing, shoes
+and mouth interiors stay original.
+Its numbered outputs use `generated/slice-111-review/` and `generated/slice-111-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
