@@ -731,7 +731,11 @@ The [Holt Winter writing batch](development/slice-106.md) adds three standing
 start/loop/end strips. Its full review covers all eight South-facing frames.
 Face, ears, neck and hands follow the palette; hair, moustache, clothing, boots,
 board and pen stay original.
-Its numbered outputs use `generated/slice-106-review/` and `generated/slice-106-build/`;
+The [Holt Winter whittling batch](development/slice-107.md) adds one strip.
+Its full review covers nine source frames and nine native West mirrors. Skin
+follows the palette; hair, moustache, clothing, boots, wood, chips and knife
+stay original.
+Its numbered outputs use `generated/slice-107-review/` and `generated/slice-107-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
