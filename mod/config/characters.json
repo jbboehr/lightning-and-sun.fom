@@ -3759,7 +3759,10 @@
       "assets/animations/NPCs/Holt/Sprites/Winter/spr_npc_holt_specialanimation_winter_write_end_south.png": "Default",
       "assets/animations/NPCs/Holt/Sprites/Winter/spr_npc_holt_specialanimation_winter_write_loop_south.png": "Default",
       "assets/animations/NPCs/Holt/Sprites/Winter/spr_npc_holt_specialanimation_winter_write_start_south.png": "Default",
-      "assets/animations/NPCs/Holt/Sprites/Winter/spr_npc_holt_specialanimation_winter_whittle_east.png": "Default"
+      "assets/animations/NPCs/Holt/Sprites/Winter/spr_npc_holt_specialanimation_winter_whittle_east.png": "Default",
+      "assets/animations/NPCs/Holt/Sprites/Winter/spr_npc_holt_specialanimation_winter_sweep_end_south.png": "Default",
+      "assets/animations/NPCs/Holt/Sprites/Winter/spr_npc_holt_specialanimation_winter_sweep_loop_south.png": "Default",
+      "assets/animations/NPCs/Holt/Sprites/Winter/spr_npc_holt_specialanimation_winter_sweep_start_south.png": "Default"
     },
     "hotkey": "H",
     "id": "holt",

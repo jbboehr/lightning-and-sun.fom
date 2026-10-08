@@ -735,7 +735,11 @@ The [Holt Winter whittling batch](development/slice-107.md) adds one strip.
 Its full review covers nine source frames and nine native West mirrors. Skin
 follows the palette; hair, moustache, clothing, boots, wood, chips and knife
 stay original.
-Its numbered outputs use `generated/slice-107-review/` and `generated/slice-107-build/`;
+The [Holt Winter sweeping batch](development/slice-108.md) adds three start/loop/end
+strips, completing his four seasonal sprite folders. Its full review covers
+all twelve South-facing frames. Skin follows the palette; hair, moustache,
+clothing, boots, broom and dust stay original.
+Its numbered outputs use `generated/slice-108-review/` and `generated/slice-108-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
