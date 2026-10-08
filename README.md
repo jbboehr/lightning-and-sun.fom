@@ -352,8 +352,9 @@ also follow the palette, while the writing board and pen stay original.
 Spring polishing, singing and chopping follow the palette too. Their cloth,
 blue glass, musical notes, knife and food stay original. Sweeping completes
 her Spring outfit, preserving the broom and dust. Summer standing, walking,
-blinking, sitting, eating and drinking also follow her palette. Cream and peach
-clothing, the pink flower, yellow shoes and mouth interiors stay original.
+blinking, sitting, eating, drinking and general actions also follow her palette.
+Cream and peach clothing, the pink flower, yellow shoes and mouth interiors
+stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

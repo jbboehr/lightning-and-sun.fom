@@ -778,7 +778,11 @@ The [Josephine Summer blinking and seated batch](development/slice-118.md) adds
 eleven strips. Its full review covers 31 source frames and twelve native West
 mirrors: 43 cases. Eyelids, moving hands and exposed ankles follow the palette;
 hair, eye details, earrings, flower, clothing, shoes and mouth interiors stay original.
-Its numbered outputs use `generated/slice-118-review/` and `generated/slice-118-build/`;
+The [Josephine Summer general-action batch](development/slice-119.md) adds three
+strips. Its full review covers 21 source frames and seven native West mirrors:
+28 cases. Moving hands and exposed ankles follow the palette; hair, eyes,
+earrings, flower, clothing and shoes stay original.
+Its numbered outputs use `generated/slice-119-review/` and `generated/slice-119-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
