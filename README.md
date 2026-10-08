@@ -351,7 +351,9 @@ including the raised hands and exposed ankles. Her Spring writing animations
 also follow the palette, while the writing board and pen stay original.
 Spring polishing, singing and chopping follow the palette too. Their cloth,
 blue glass, musical notes, knife and food stay original. Sweeping completes
-her Spring outfit, preserving the broom and dust.
+her Spring outfit, preserving the broom and dust. Summer standing and walking
+also follow her palette, preserving the cream and peach clothing, pink flower
+and yellow shoes.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

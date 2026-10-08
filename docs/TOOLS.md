@@ -770,7 +770,11 @@ The [Josephine Spring sweeping batch](development/slice-116.md) adds three
 start/loop/end strips, completing her Spring outfit. Its full review covers
 all fifteen South-facing frames. Skin follows the palette while the broom,
 dust, hair and clothing stay original.
-Its numbered outputs use `generated/slice-116-review/` and `generated/slice-116-build/`;
+The [Josephine Summer movement batch](development/slice-117.md) adds six idle/walk
+strips. Its full review covers fifteen source frames and five native West
+mirrors: twenty cases. Face, exposed arms and ankles follow the palette while
+clothing, flower, hair, eyes, earrings and shoes stay original.
+Its numbered outputs use `generated/slice-117-review/` and `generated/slice-117-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
