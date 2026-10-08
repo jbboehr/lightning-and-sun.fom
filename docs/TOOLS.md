@@ -739,7 +739,11 @@ The [Holt Winter sweeping batch](development/slice-108.md) adds three start/loop
 strips, completing his four seasonal sprite folders. Its full review covers
 all twelve South-facing frames. Skin follows the palette; hair, moustache,
 clothing, boots, broom and dust stay original.
-Its numbered outputs use `generated/slice-108-review/` and `generated/slice-108-build/`;
+The [Josephine Spring movement pilot](development/slice-109.md) adds six standing
+and walking strips. Its full review covers fifteen source frames and five native
+West mirrors. Face, neck, hands and exposed ankles follow the palette; hair,
+eyes, earrings, orange shawl, pink skirt and shoes stay original.
+Its numbered outputs use `generated/slice-109-review/` and `generated/slice-109-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

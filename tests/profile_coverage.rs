@@ -25,7 +25,7 @@ fn tracked_character_profiles_match_reviewed_coverage() {
         ("landen", 119),
         ("nora", 151),
         ("holt", 143),
-        ("josephine", 32),
+        ("josephine", 38),
         ("darcy", 32),
         ("dell", 32),
         ("elsie", 36),

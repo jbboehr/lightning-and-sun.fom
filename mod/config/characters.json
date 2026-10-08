@@ -3801,7 +3801,13 @@
       "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_sad.png": "PortraitsMisc",
       "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_think.png": "PortraitsMisc",
       "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_ugh.png": "PortraitsMisc",
-      "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_wink.png": "PortraitsMisc"
+      "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_wink.png": "PortraitsMisc",
+      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_idle_east.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_idle_north.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_idle_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_walk_east.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_walk_north.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Spring/spr_npc_josephine_spring_walk_south.png": "Default"
     },
     "hotkey": "P",
     "id": "josephine",
