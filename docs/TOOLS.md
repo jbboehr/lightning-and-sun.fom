@@ -815,7 +815,11 @@ The [Josephine Autumn general-action batch](development/slice-127.md) adds three
 strips. Its full review covers 21 source frames plus seven native West mirrors:
 28 cases. Face, neck, moving hands and exposed ankles follow the palette;
 hair, eyes, blue earrings, orange clothing and shoes stay original.
-Its numbered outputs use `generated/slice-127-review/` and `generated/slice-127-build/`;
+The [Josephine Autumn writing batch](development/slice-128.md) adds three
+start/loop/end strips. Its full review covers all eight South-facing frames.
+Both hands and exposed ankles follow the palette; the board, pen, hair,
+blue earrings, orange clothing and shoes stay original.
+Its numbered outputs use `generated/slice-128-review/` and `generated/slice-128-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

@@ -365,6 +365,8 @@ Autumn blinking, sitting, eating and drinking also follow the palette, including
 eyelids and moving hands, while mouth interiors stay original.
 Her Autumn general-action gestures now follow the palette too, preserving the
 orange outfit, shoes and blue earrings.
+Autumn writing also follows the palette, including both hands and exposed
+ankles, while the board and pen stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
