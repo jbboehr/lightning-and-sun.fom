@@ -3899,7 +3899,8 @@
       "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_specialanimation_autumn_polish_start_east.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_specialanimation_autumn_sing_end_south.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_specialanimation_autumn_sing_loop_south.png": "Default",
-      "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_specialanimation_autumn_sing_start_south.png": "Default"
+      "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_specialanimation_autumn_sing_start_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_specialanimation_autumn_chop_north.png": "Default"
     },
     "hotkey": "P",
     "id": "josephine",

@@ -827,7 +827,11 @@ The [Josephine Autumn singing batch](development/slice-130.md) adds three
 start/loop/end strips. Its full review covers all fourteen South-facing frames.
 Moving hands and exposed ankles follow the palette; mouth interiors, musical
 notes, hair, blue earrings, orange clothing and shoes stay original.
-Its numbered outputs use `generated/slice-130-review/` and `generated/slice-130-build/`;
+The [Josephine Autumn chopping batch](development/slice-131.md) adds one strip.
+Its full review covers all twenty North-facing frames. The exposed neck, moving
+hands and ankles follow the palette; hair, clothing, shoes, knife and food
+particles stay original.
+Its numbered outputs use `generated/slice-131-review/` and `generated/slice-131-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
