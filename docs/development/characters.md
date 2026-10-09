@@ -3,11 +3,11 @@
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
 Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 262,
 Valen's 257, Eiland's 277, Olric's 231, Landen's 119, Nora's 151, Holt's 143,
-Josephine's 98, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
+Josephine's 101, Darcy's 32, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 18,236 variant strips from 4,559 sources. Caldarus's three
+variants per source give 18,248 variant strips from 4,562 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -969,6 +969,12 @@ user approved the artwork on 2026-10-08. Visible hands and ankles follow the pal
 cream and peach clothing, shoes, knife and food particles stay original.
 All earlier 97 sources, mappings, choices and historical material tests remain
 unchanged.
+The [Josephine Summer sweeping batch](slice-124.md) adds three start/loop/end
+strips and completes her Summer world folder, bringing her total to 101 sources.
+Its full review covers all fifteen South-facing frames; the user approved the
+artwork on 2026-10-08. Skin follows the palette while hair, clothing, broom wood, bristles and
+dust stay original. All earlier 98 sources, mappings, choices and historical
+material tests remain unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -1207,13 +1213,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Josephine's Summer chopping animation. It is in
-`generated/build/package` (a shortcut to `generated/slice-123-build/package`).
-MOMI installation passed in the isolated `tmp/slice-123-playtest` lab.
+The latest combined package completes Josephine's Summer folder with sweeping. It is in
+`generated/build/package` (a shortcut to `generated/slice-124-build/package`).
+MOMI installation passed in the isolated `tmp/slice-124-playtest` lab.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline review](../../generated/review/index.html) to inspect all twenty
-frames. This slice has one Josephine gallery covering every chopping frame, with
-full views including the knife and food particles and enlarged hand and ankle details.
+[complete offline review](../../generated/review/index.html) to inspect all fifteen
+frames. This slice has one Josephine gallery covering every sweeping stage, with
+full views including the broom and dust and enlarged face, hand and ankle details.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

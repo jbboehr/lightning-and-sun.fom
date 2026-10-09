@@ -798,7 +798,11 @@ The [Josephine Summer chopping batch](development/slice-123.md) adds one
 North-facing strip. Its full review covers all twenty frames. Visible hands and
 ankles follow the palette; hair, cream and peach clothing, shoes, knife and food
 particles stay original.
-Its numbered outputs use `generated/slice-123-review/` and `generated/slice-123-build/`;
+The [Josephine Summer sweeping batch](development/slice-124.md) adds three
+start/loop/end strips and completes her Summer world folder. Its full review
+covers all fifteen South-facing frames. Skin follows the palette; hair,
+clothing, broom wood, bristles and dust stay original.
+Its numbered outputs use `generated/slice-124-review/` and `generated/slice-124-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
