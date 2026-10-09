@@ -3870,7 +3870,13 @@
       "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_chop_north.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_sweep_end_south.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_sweep_loop_south.png": "Default",
-      "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_sweep_start_south.png": "Default"
+      "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_sweep_start_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_autumn_idle_east.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_autumn_idle_north.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_autumn_idle_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_autumn_walk_east.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_autumn_walk_north.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Autumn/spr_npc_josephine_autumn_walk_south.png": "Default"
     },
     "hotkey": "P",
     "id": "josephine",

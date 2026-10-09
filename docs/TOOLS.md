@@ -802,7 +802,11 @@ The [Josephine Summer sweeping batch](development/slice-124.md) adds three
 start/loop/end strips and completes her Summer world folder. Its full review
 covers all fifteen South-facing frames. Skin follows the palette; hair,
 clothing, broom wood, bristles and dust stay original.
-Its numbered outputs use `generated/slice-124-review/` and `generated/slice-124-build/`;
+The [Josephine Autumn movement batch](development/slice-125.md) adds six standing
+and walking strips. Its full review covers fifteen source frames plus five
+native West mirrors: twenty cases. Exposed skin and ankles follow the palette;
+hair, eyes, blue earrings, orange clothing and shoes stay original.
+Its numbered outputs use `generated/slice-125-review/` and `generated/slice-125-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
