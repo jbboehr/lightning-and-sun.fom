@@ -794,7 +794,11 @@ The [Josephine Summer singing batch](development/slice-122.md) adds three
 start/loop/end strips. Its full review covers all fourteen South-facing frames,
 including the floating notes. Both hands and exposed ankles follow the palette;
 mouth interiors, musical notes, hair, clothing and shoes stay original.
-Its numbered outputs use `generated/slice-122-review/` and `generated/slice-122-build/`;
+The [Josephine Summer chopping batch](development/slice-123.md) adds one
+North-facing strip. Its full review covers all twenty frames. Visible hands and
+ankles follow the palette; hair, cream and peach clothing, shoes, knife and food
+particles stay original.
+Its numbered outputs use `generated/slice-123-review/` and `generated/slice-123-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

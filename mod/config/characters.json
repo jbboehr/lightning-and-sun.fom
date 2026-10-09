@@ -3866,7 +3866,8 @@
       "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_polish_start_east.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_sing_end_south.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_sing_loop_south.png": "Default",
-      "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_sing_start_south.png": "Default"
+      "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_sing_start_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Summer/spr_npc_josephine_specialanimation_summer_chop_north.png": "Default"
     },
     "hotkey": "P",
     "id": "josephine",
