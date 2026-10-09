@@ -354,7 +354,8 @@ blue glass, musical notes, knife and food stay original. Sweeping completes
 her Spring outfit, preserving the broom and dust. Summer standing, walking,
 blinking, sitting, eating, drinking and general actions also follow her palette.
 Cream and peach clothing, the pink flower, yellow shoes and mouth interiors
-stay original.
+stay original. Summer standing writing also follows the palette, preserving
+the writing board and pen.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

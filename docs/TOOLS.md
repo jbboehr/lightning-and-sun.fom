@@ -782,7 +782,11 @@ The [Josephine Summer general-action batch](development/slice-119.md) adds three
 strips. Its full review covers 21 source frames and seven native West mirrors:
 28 cases. Moving hands and exposed ankles follow the palette; hair, eyes,
 earrings, flower, clothing and shoes stay original.
-Its numbered outputs use `generated/slice-119-review/` and `generated/slice-119-build/`;
+The [Josephine Summer writing batch](development/slice-120.md) adds three
+start/loop/end strips. Its full review covers all eight South-facing frames.
+Both hands and exposed ankles follow the palette; the board, pen, hair, clothing
+and shoes stay original.
+Its numbered outputs use `generated/slice-120-review/` and `generated/slice-120-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
