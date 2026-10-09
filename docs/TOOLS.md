@@ -823,7 +823,11 @@ The [Josephine Autumn polishing batch](development/slice-129.md) adds three
 start/loop/end strips. Its full review covers nine source frames plus nine
 native West mirrors: 18 cases. Exposed hands and ankles follow the palette;
 the cloth, glass, hair, blue earrings, orange clothing and shoes stay original.
-Its numbered outputs use `generated/slice-129-review/` and `generated/slice-129-build/`;
+The [Josephine Autumn singing batch](development/slice-130.md) adds three
+start/loop/end strips. Its full review covers all fourteen South-facing frames.
+Moving hands and exposed ankles follow the palette; mouth interiors, musical
+notes, hair, blue earrings, orange clothing and shoes stay original.
+Its numbered outputs use `generated/slice-130-review/` and `generated/slice-130-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

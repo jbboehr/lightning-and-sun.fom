@@ -367,7 +367,8 @@ Her Autumn general-action gestures now follow the palette too, preserving the
 orange outfit, shoes and blue earrings.
 Autumn writing also follows the palette, including both hands and exposed
 ankles, while the board and pen stay original. Autumn polishing follows the
-palette too; the cloth and blue glass stay original.
+palette too; the cloth and blue glass stay original. Autumn singing also follows
+the palette, preserving mouth interiors and the floating musical notes.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
