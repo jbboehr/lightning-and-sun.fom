@@ -786,7 +786,11 @@ The [Josephine Summer writing batch](development/slice-120.md) adds three
 start/loop/end strips. Its full review covers all eight South-facing frames.
 Both hands and exposed ankles follow the palette; the board, pen, hair, clothing
 and shoes stay original.
-Its numbered outputs use `generated/slice-120-review/` and `generated/slice-120-build/`;
+The [Josephine Summer polishing batch](development/slice-121.md) adds three
+start/loop/end strips. Its full review covers nine source frames and nine native
+West mirrors: eighteen cases. Exposed hands and ankles follow the palette; the
+blue cloth and glass, hair, clothing and shoes stay original.
+Its numbered outputs use `generated/slice-121-review/` and `generated/slice-121-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
