@@ -356,7 +356,8 @@ blinking, sitting, eating, drinking and general actions also follow her palette.
 Cream and peach clothing, the pink flower, yellow shoes and mouth interiors
 stay original. Summer standing writing also follows the palette, preserving
 the writing board and pen. Summer polishing follows the palette too; the cloth
-and blue glass stay original.
+and blue glass stay original. Summer singing also follows the palette, preserving
+mouth interiors and the floating musical notes.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

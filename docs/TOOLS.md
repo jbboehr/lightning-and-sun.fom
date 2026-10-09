@@ -790,7 +790,11 @@ The [Josephine Summer polishing batch](development/slice-121.md) adds three
 start/loop/end strips. Its full review covers nine source frames and nine native
 West mirrors: eighteen cases. Exposed hands and ankles follow the palette; the
 blue cloth and glass, hair, clothing and shoes stay original.
-Its numbered outputs use `generated/slice-121-review/` and `generated/slice-121-build/`;
+The [Josephine Summer singing batch](development/slice-122.md) adds three
+start/loop/end strips. Its full review covers all fourteen South-facing frames,
+including the floating notes. Both hands and exposed ankles follow the palette;
+mouth interiors, musical notes, hair, clothing and shoes stay original.
+Its numbered outputs use `generated/slice-122-review/` and `generated/slice-122-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
