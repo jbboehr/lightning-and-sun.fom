@@ -806,7 +806,12 @@ The [Josephine Autumn movement batch](development/slice-125.md) adds six standin
 and walking strips. Its full review covers fifteen source frames plus five
 native West mirrors: twenty cases. Exposed skin and ankles follow the palette;
 hair, eyes, blue earrings, orange clothing and shoes stay original.
-Its numbered outputs use `generated/slice-125-review/` and `generated/slice-125-build/`;
+The [Josephine Autumn blinking and seated batch](development/slice-126.md) adds
+eleven blinking, sitting, eating and drinking strips. Its full review covers
+31 source frames plus twelve native West mirrors: 43 cases. Eyelids, hands and
+exposed ankles follow the palette; lashes, mouth interiors, hair, blue earrings,
+orange clothing and shoes stay original.
+Its numbered outputs use `generated/slice-126-review/` and `generated/slice-126-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

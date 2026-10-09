@@ -361,6 +361,8 @@ mouth interiors and the floating musical notes. Summer chopping follows the
 palette too, preserving the knife and food particles. Sweeping completes her
 Summer outfit, preserving the broom and dust. Autumn standing and walking also
 follow her palette, preserving the orange outfit, shoes and blue earrings.
+Autumn blinking, sitting, eating and drinking also follow the palette, including
+eyelids and moving hands, while mouth interiors stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
