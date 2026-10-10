@@ -3920,7 +3920,10 @@
       "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_winter_eat_south.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_winter_sit_east.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_winter_sit_north.png": "Default",
-      "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_winter_sit_south.png": "Default"
+      "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_winter_sit_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_winter_action_east.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_winter_action_north.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_winter_action_south.png": "Default"
     },
     "hotkey": "P",
     "id": "josephine",
