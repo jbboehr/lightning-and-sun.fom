@@ -879,7 +879,12 @@ strips: fourteen source frames and four native West mirrors. The full review
 includes all eighteen cases. Face, eyelids, neck and hands follow the palette;
 hair, lashes, clothing, boots and mouth interiors stay original. Native seated
 status, frame timing and eating’s final-frame hold remain unchanged.
-Its numbered outputs use `generated/slice-142-review/` and `generated/slice-142-build/`;
+The [Darcy Spring general-action batch](development/slice-143.md) adds three
+strips, completing her fifteen Spring world strips. Its full review covers all
+twenty-one source frames and seven native West mirrors. Face, neck and moving
+hands follow the palette; hair, eyes, clothing and boots stay original.
+Native frame timing and the final-frame hold remain unchanged.
+Its numbered outputs use `generated/slice-143-review/` and `generated/slice-143-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

@@ -382,9 +382,9 @@ Winter singing recolors her face and hands while preserving mouth interiors
 and floating musical notes. Winter chopping recolors exposed hands while
 preserving the knife, food particles and outfit. Winter sweeping also follows
 her palette, preserving the broom and dust. Her four seasonal world sets are
-now covered. Darcy’s Spring standing, walking, blinking, sitting and eating
-sprites also follow her palette, with gray hair, eyes, red and teal clothing,
-boots and mouth interiors preserved.
+now covered. Darcy’s full Spring world set also follows her palette: standing,
+walking, blinking, sitting, eating and general actions. Gray hair, eyes, red and
+teal clothing, boots and mouth interiors retain their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
