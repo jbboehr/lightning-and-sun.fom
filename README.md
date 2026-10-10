@@ -384,7 +384,9 @@ preserving the knife, food particles and outfit. Winter sweeping also follows
 her palette, preserving the broom and dust. Her four seasonal world sets are
 now covered. Darcy’s full Spring world set also follows her palette: standing,
 walking, blinking, sitting, eating and general actions. Gray hair, eyes, red and
-teal clothing, boots and mouth interiors retain their original colors.
+teal clothing, boots and mouth interiors retain their original colors. Her
+Summer standing and walking sprites follow the palette too; the green blouse,
+coral outfit and cream footwear retain their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

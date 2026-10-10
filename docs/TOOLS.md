@@ -884,7 +884,12 @@ strips, completing her fifteen Spring world strips. Its full review covers all
 twenty-one source frames and seven native West mirrors. Face, neck and moving
 hands follow the palette; hair, eyes, clothing and boots stay original.
 Native frame timing and the final-frame hold remain unchanged.
-Its numbered outputs use `generated/slice-143-review/` and `generated/slice-143-build/`;
+The [Darcy Summer standing/walking batch](development/slice-144.md) adds six
+strips: fifteen source frames and five native West mirrors. The full review
+includes all twenty cases. Face, front neck, exposed arms and hands follow the
+palette; the green collar at the back, coral clothing and cream footwear stay
+original. Prior Spring and portrait masks and palette choices remain unchanged.
+Its numbered outputs use `generated/slice-144-review/` and `generated/slice-144-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
