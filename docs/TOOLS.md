@@ -929,7 +929,13 @@ includes all eighteen cases. Eyelids, face and exposed hands follow the
 palette; hair, lashes, eye details, raspberry scarf, cream coat, white cuffs,
 mint clothing, dark boots and mouth interiors stay original. Native timing,
 seated status and the eating hold are preserved.
-Its numbered outputs use `generated/slice-151-review/` and `generated/slice-151-build/`;
+The [Darcy Winter general-action batch](development/slice-152.md) adds the
+three remaining strips, completing her world set for the verified archive.
+Twenty-one source frames and seven native West mirrors give twenty-eight
+review cases. Face, ears and exposed hands follow the palette; hair, eye
+details, scarf, cream coat, white cuffs, mint clothing and boots stay original.
+Native timing, the final-frame hold and speaking-pause behavior are preserved.
+Its numbered outputs use `generated/slice-152-review/` and `generated/slice-152-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
