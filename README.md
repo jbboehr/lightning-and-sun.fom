@@ -376,6 +376,7 @@ her palette; the pink outfit, gold earrings, dark leggings and boots stay origin
 Winter blinking, sitting, eating and drinking also follow the palette, including
 eyelids and moving hands, while mouth interiors stay original. Winter general
 actions also follow her palette, including extended hands; the outfit stays original.
+Winter writing also follows the palette, preserving the board and pen.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
