@@ -864,7 +864,12 @@ The [Josephine Winter chopping batch](development/slice-139.md) adds one strip.
 Its full review covers all twenty North-facing frames, including four with no
 exposed skin. Visible hands follow the palette; hair, earrings, clothing, boots,
 knife and food particles stay original.
-Its numbered outputs use `generated/slice-139-review/` and `generated/slice-139-build/`;
+The [Josephine Winter sweeping batch](development/slice-140.md) adds three
+start/loop/end strips, completing her seasonal world coverage. Its full review
+covers all fifteen South-facing frames. Face and moving hands follow the
+palette; hair, eyes, earrings, pink clothing, dark leggings, boots, broom and
+dust stay original.
+Its numbered outputs use `generated/slice-140-review/` and `generated/slice-140-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
