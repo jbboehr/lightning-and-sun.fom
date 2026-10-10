@@ -917,7 +917,13 @@ frames and seven native West mirrors. Face, exposed neck and moving hands
 follow the palette; hair, eye details, tan coat, white cuffs, teal clothing
 and dark boots stay original. Native timing and the final-frame hold are
 preserved.
-Its numbered outputs use `generated/slice-149-review/` and `generated/slice-149-build/`;
+The [Darcy Winter standing/walking batch](development/slice-150.md) adds six
+strips: fifteen source frames and five native West mirrors. The full review
+includes all twenty cases. Face and hands follow the palette; gray hair, eye
+details, raspberry scarf, cream coat, white cuffs, mint clothing and dark
+boots stay original. The scarf covers the rear neck. Prior artwork and
+native animation timing remain unchanged.
+Its numbered outputs use `generated/slice-150-review/` and `generated/slice-150-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
