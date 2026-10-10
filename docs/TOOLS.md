@@ -894,7 +894,13 @@ strips: fourteen source frames and four native West mirrors. The full review
 includes all eighteen cases. Eyelids, exposed arms and moving hands follow the
 palette; lashes, mouth interiors, the green collar and cream footwear stay
 original. Native timing, seated status and eating’s final-frame hold are preserved.
-Its numbered outputs use `generated/slice-145-review/` and `generated/slice-145-build/`;
+The [Darcy Summer general-action batch](development/slice-146.md) adds three
+strips, completing her fifteen Summer world strips. The full review covers
+twenty-one source frames and seven native West mirrors. Face, front neck,
+arms and moving hands follow the palette; hair, eyes, the green collar, coral
+clothing and cream footwear stay original. Native timing and the final-frame
+hold are preserved.
+Its numbered outputs use `generated/slice-146-review/` and `generated/slice-146-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
