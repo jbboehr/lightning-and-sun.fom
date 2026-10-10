@@ -840,7 +840,11 @@ The [Josephine Winter movement batch](development/slice-133.md) adds six standin
 and walking strips. Its full review covers fifteen source frames and five native
 West mirrors. The face, neck and hands follow the palette; hair, eyes, gold
 earrings, pink clothing, dark leggings and boots stay original.
-Its numbered outputs use `generated/slice-133-review/` and `generated/slice-133-build/`;
+The [Josephine Winter blinking and seated batch](development/slice-134.md) adds
+eleven strips. Its full review covers 31 source frames and twelve native West
+mirrors. Eyelids and moving hands follow the palette; lashes, mouth interiors,
+pink clothing, dark leggings and boots stay original.
+Its numbered outputs use `generated/slice-134-review/` and `generated/slice-134-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

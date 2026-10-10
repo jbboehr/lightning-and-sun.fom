@@ -373,6 +373,8 @@ chopping follows the palette too, including exposed neck, hands and ankles;
 the knife and food particles stay original. Sweeping completes her Autumn
 sprites, preserving the broom and dust. Winter standing and walking also follow
 her palette; the pink outfit, gold earrings, dark leggings and boots stay original.
+Winter blinking, sitting, eating and drinking also follow the palette, including
+eyelids and moving hands, while mouth interiors stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
