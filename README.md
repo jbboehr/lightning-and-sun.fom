@@ -370,7 +370,9 @@ ankles, while the board and pen stay original. Autumn polishing follows the
 palette too; the cloth and blue glass stay original. Autumn singing also follows
 the palette, preserving mouth interiors and the floating musical notes. Autumn
 chopping follows the palette too, including exposed neck, hands and ankles;
-the knife and food particles stay original.
+the knife and food particles stay original. Sweeping completes her Autumn
+sprites, preserving the broom and dust. Winter standing and walking also follow
+her palette; the pink outfit, gold earrings, dark leggings and boots stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

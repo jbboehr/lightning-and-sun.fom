@@ -831,7 +831,16 @@ The [Josephine Autumn chopping batch](development/slice-131.md) adds one strip.
 Its full review covers all twenty North-facing frames. The exposed neck, moving
 hands and ankles follow the palette; hair, clothing, shoes, knife and food
 particles stay original.
-Its numbered outputs use `generated/slice-131-review/` and `generated/slice-131-build/`;
+The [Josephine Autumn sweeping batch](development/slice-132.md) adds three
+start/loop/end strips, completing her Autumn world folder. Its full review
+covers all fifteen South-facing frames. The face, moving hands and exposed
+ankles follow the palette; hair, earrings, clothing, shoes, broom and dust
+stay original.
+The [Josephine Winter movement batch](development/slice-133.md) adds six standing
+and walking strips. Its full review covers fifteen source frames and five native
+West mirrors. The face, neck and hands follow the palette; hair, eyes, gold
+earrings, pink clothing, dark leggings and boots stay original.
+Its numbered outputs use `generated/slice-133-review/` and `generated/slice-133-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
