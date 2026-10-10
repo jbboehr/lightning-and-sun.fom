@@ -4026,7 +4026,13 @@
       "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_idle_south.png": "Default",
       "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_walk_east.png": "Default",
       "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_walk_north.png": "Default",
-      "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_walk_south.png": "Default"
+      "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_walk_south.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_blink_east.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_blink_south.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_eat_south.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_sit_east.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_sit_north.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Winter/spr_npc_darcy_winter_sit_south.png": "Default"
     },
     "hotkey": "B",
     "id": "darcy",

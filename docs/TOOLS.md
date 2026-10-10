@@ -923,7 +923,13 @@ includes all twenty cases. Face and hands follow the palette; gray hair, eye
 details, raspberry scarf, cream coat, white cuffs, mint clothing and dark
 boots stay original. The scarf covers the rear neck. Prior artwork and
 native animation timing remain unchanged.
-Its numbered outputs use `generated/slice-150-review/` and `generated/slice-150-build/`;
+The [Darcy Winter blinking/seated batch](development/slice-151.md) adds six
+strips: fourteen source frames and four native West mirrors. The full review
+includes all eighteen cases. Eyelids, face and exposed hands follow the
+palette; hair, lashes, eye details, raspberry scarf, cream coat, white cuffs,
+mint clothing, dark boots and mouth interiors stay original. Native timing,
+seated status and the eating hold are preserved.
+Its numbered outputs use `generated/slice-151-review/` and `generated/slice-151-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
