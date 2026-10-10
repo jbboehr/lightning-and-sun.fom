@@ -900,7 +900,12 @@ twenty-one source frames and seven native West mirrors. Face, front neck,
 arms and moving hands follow the palette; hair, eyes, the green collar, coral
 clothing and cream footwear stay original. Native timing and the final-frame
 hold are preserved.
-Its numbered outputs use `generated/slice-146-review/` and `generated/slice-146-build/`;
+The [Darcy Autumn standing/walking batch](development/slice-147.md) adds six
+strips: fifteen source frames and five native West mirrors. The full review
+includes all twenty cases. Face, exposed neck and hands follow the palette;
+gray hair, eye details, tan coat, white cuffs, teal clothing and dark boots
+stay original. Prior Spring, Summer and portrait masks remain unchanged.
+Its numbered outputs use `generated/slice-147-review/` and `generated/slice-147-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
