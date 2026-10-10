@@ -379,7 +379,8 @@ actions also follow her palette, including extended hands; the outfit stays orig
 Winter writing also follows the palette, preserving the board and pen. Winter
 polishing follows it too; the cloth and glass retain their original colors.
 Winter singing recolors her face and hands while preserving mouth interiors
-and floating musical notes.
+and floating musical notes. Winter chopping recolors exposed hands while
+preserving the knife, food particles and outfit.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

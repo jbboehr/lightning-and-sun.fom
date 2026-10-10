@@ -860,7 +860,11 @@ The [Josephine Winter singing batch](development/slice-138.md) adds three
 start/loop/end strips. Its full review covers all fourteen South-facing frames,
 including every floating note. Face and moving hands follow the palette; mouth
 interiors, notes, pink clothing, dark leggings and boots stay original.
-Its numbered outputs use `generated/slice-138-review/` and `generated/slice-138-build/`;
+The [Josephine Winter chopping batch](development/slice-139.md) adds one strip.
+Its full review covers all twenty North-facing frames, including four with no
+exposed skin. Visible hands follow the palette; hair, earrings, clothing, boots,
+knife and food particles stay original.
+Its numbered outputs use `generated/slice-139-review/` and `generated/slice-139-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
