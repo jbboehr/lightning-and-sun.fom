@@ -889,7 +889,12 @@ strips: fifteen source frames and five native West mirrors. The full review
 includes all twenty cases. Face, front neck, exposed arms and hands follow the
 palette; the green collar at the back, coral clothing and cream footwear stay
 original. Prior Spring and portrait masks and palette choices remain unchanged.
-Its numbered outputs use `generated/slice-144-review/` and `generated/slice-144-build/`;
+The [Darcy Summer blinking/seated batch](development/slice-145.md) adds six
+strips: fourteen source frames and four native West mirrors. The full review
+includes all eighteen cases. Eyelids, exposed arms and moving hands follow the
+palette; lashes, mouth interiors, the green collar and cream footwear stay
+original. Native timing, seated status and eating’s final-frame hold are preserved.
+Its numbered outputs use `generated/slice-145-review/` and `generated/slice-145-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
