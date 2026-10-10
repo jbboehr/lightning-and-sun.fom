@@ -905,7 +905,13 @@ strips: fifteen source frames and five native West mirrors. The full review
 includes all twenty cases. Face, exposed neck and hands follow the palette;
 gray hair, eye details, tan coat, white cuffs, teal clothing and dark boots
 stay original. Prior Spring, Summer and portrait masks remain unchanged.
-Its numbered outputs use `generated/slice-147-review/` and `generated/slice-147-build/`;
+The [Darcy Autumn blinking/seated batch](development/slice-148.md) adds six
+strips: fourteen source frames and four native West mirrors. The full review
+includes all eighteen cases. Eyelids, face, exposed neck and moving hands
+follow the palette; hair, lashes, eye details, tan coat, white cuffs, teal
+clothing, dark boots and mouth interiors stay original. Native timing, seated
+status and the eating hold are preserved.
+Its numbered outputs use `generated/slice-148-review/` and `generated/slice-148-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
