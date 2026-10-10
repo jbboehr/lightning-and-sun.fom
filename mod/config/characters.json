@@ -3981,7 +3981,13 @@
       "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_idle_south.png": "Default",
       "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_walk_east.png": "Default",
       "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_walk_north.png": "Default",
-      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_walk_south.png": "Default"
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_walk_south.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_blink_east.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_blink_south.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_eat_south.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_sit_east.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_sit_north.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_sit_south.png": "Default"
     },
     "hotkey": "B",
     "id": "darcy",

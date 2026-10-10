@@ -3,11 +3,11 @@
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
 Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 262,
 Valen's 257, Eiland's 277, Olric's 231, Landen's 119, Nora's 151, Holt's 143,
-Josephine's 167, Darcy's 38, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
+Josephine's 167, Darcy's 44, Dell's 32, Elsie's 36, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 18,536 variant strips from 4,634 sources. Caldarus's three
+variants per source give 18,560 variant strips from 4,640 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -1080,6 +1080,13 @@ dark leggings and boots stay original. Three world skin roles are appended;
 all ten portrait roles, 32 portrait masks and existing targets stay unchanged.
 Only Darcy switches to her new world set in the collection. Her portrait-only
 recipes and historical material test remain available and unchanged.
+The [Darcy Spring blinking/seated batch](slice-142.md) adds six strips,
+bringing her total to 44 sources. Its full review covers fourteen source frames
+and four native West mirrors; the user approved the artwork on 2026-10-09.
+Face, eyelids, neck and hands follow the palette. Hair, lashes, eye detail, red and teal clothing,
+boots and mouth interiors stay original. Seated status, animation timing and
+eating's final-frame hold are preserved. Prior regions, colors and mappings
+remain unchanged, as do the historical pixel tests.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -1318,11 +1325,11 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Darcy's Spring standing and walking animations.
-It is in `generated/build/package` (a shortcut to `generated/slice-141-build/package`).
-MOMI installation passed in the isolated `tmp/slice-141-playtest` lab.
+The latest combined package adds Darcy's Spring blinking, sitting and eating animations.
+It is in `generated/build/package` (a shortcut to `generated/slice-142-build/package`).
+MOMI installation passed in the isolated `tmp/slice-142-playtest` lab.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline review](../../../generated/review/index.html) to inspect all twenty
+[complete offline review](../../../generated/review/index.html) to inspect all eighteen
 cases. This slice has one Darcy gallery with full views and enlarged face,
 hand and clothing details. Every source frame and native West mirror is included.
 

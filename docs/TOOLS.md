@@ -874,7 +874,12 @@ world coverage with six strips: fifteen source frames and five native West
 mirrors. The full review includes all twenty cases. Her new world set retains
 the 32 portrait masks and palette choices; the portrait-only recipes stay
 available. Face, ears, neck and hands change; hair, eyes and clothing stay original.
-Its numbered outputs use `generated/slice-141-review/` and `generated/slice-141-build/`;
+The [Darcy Spring blinking/seated batch](development/slice-142.md) adds six
+strips: fourteen source frames and four native West mirrors. The full review
+includes all eighteen cases. Face, eyelids, neck and hands follow the palette;
+hair, lashes, clothing, boots and mouth interiors stay original. Native seated
+status, frame timing and eating’s final-frame hold remain unchanged.
+Its numbered outputs use `generated/slice-142-review/` and `generated/slice-142-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
