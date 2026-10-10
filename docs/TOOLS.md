@@ -852,7 +852,11 @@ The [Josephine Winter writing batch](development/slice-136.md) adds three
 start/loop/end strips. Its full review covers all eight South-facing frames.
 Both hands and the face follow the palette; the pen, board, pink clothing,
 dark leggings and boots stay original.
-Its numbered outputs use `generated/slice-136-review/` and `generated/slice-136-build/`;
+The [Josephine Winter polishing batch](development/slice-137.md) adds three
+start/loop/end strips. Its full review covers nine source frames and nine native
+West mirrors. Exposed hands and the face follow the palette; the blue cloth and
+glass, pink clothing, dark leggings and boots stay original.
+Its numbered outputs use `generated/slice-137-review/` and `generated/slice-137-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
