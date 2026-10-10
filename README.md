@@ -387,9 +387,9 @@ walking, blinking, sitting, eating and general actions. Gray hair, eyes, red and
 teal clothing, boots and mouth interiors retain their original colors. Her
 full Summer world set follows the palette too, including general actions;
 the green blouse, coral outfit, cream footwear and mouth interiors retain
-their original colors. Her Autumn standing, walking, blinking, sitting and
-eating sprites also follow the palette, preserving the tan coat, white cuffs,
-teal outfit, dark boots and mouth interiors.
+their original colors. Her full Autumn world set follows the palette too,
+including general actions, while preserving the tan coat, white cuffs, teal
+outfit, dark boots and mouth interiors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

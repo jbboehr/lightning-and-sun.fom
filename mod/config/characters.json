@@ -4017,7 +4017,10 @@
       "assets/animations/NPCs/Darcy/Sprites/Autumn/spr_npc_darcy_autumn_eat_south.png": "Default",
       "assets/animations/NPCs/Darcy/Sprites/Autumn/spr_npc_darcy_autumn_sit_east.png": "Default",
       "assets/animations/NPCs/Darcy/Sprites/Autumn/spr_npc_darcy_autumn_sit_north.png": "Default",
-      "assets/animations/NPCs/Darcy/Sprites/Autumn/spr_npc_darcy_autumn_sit_south.png": "Default"
+      "assets/animations/NPCs/Darcy/Sprites/Autumn/spr_npc_darcy_autumn_sit_south.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Autumn/spr_npc_darcy_autumn_action_east.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Autumn/spr_npc_darcy_autumn_action_north.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Autumn/spr_npc_darcy_autumn_action_south.png": "Default"
     },
     "hotkey": "B",
     "id": "darcy",

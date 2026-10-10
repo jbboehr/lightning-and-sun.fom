@@ -911,7 +911,13 @@ includes all eighteen cases. Eyelids, face, exposed neck and moving hands
 follow the palette; hair, lashes, eye details, tan coat, white cuffs, teal
 clothing, dark boots and mouth interiors stay original. Native timing, seated
 status and the eating hold are preserved.
-Its numbered outputs use `generated/slice-148-review/` and `generated/slice-148-build/`;
+The [Darcy Autumn general-action batch](development/slice-149.md) completes
+her fifteen Autumn world strips. Its full review covers twenty-one source
+frames and seven native West mirrors. Face, exposed neck and moving hands
+follow the palette; hair, eye details, tan coat, white cuffs, teal clothing
+and dark boots stay original. Native timing and the final-frame hold are
+preserved.
+Its numbered outputs use `generated/slice-149-review/` and `generated/slice-149-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
