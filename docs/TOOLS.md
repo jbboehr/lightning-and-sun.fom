@@ -856,7 +856,11 @@ The [Josephine Winter polishing batch](development/slice-137.md) adds three
 start/loop/end strips. Its full review covers nine source frames and nine native
 West mirrors. Exposed hands and the face follow the palette; the blue cloth and
 glass, pink clothing, dark leggings and boots stay original.
-Its numbered outputs use `generated/slice-137-review/` and `generated/slice-137-build/`;
+The [Josephine Winter singing batch](development/slice-138.md) adds three
+start/loop/end strips. Its full review covers all fourteen South-facing frames,
+including every floating note. Face and moving hands follow the palette; mouth
+interiors, notes, pink clothing, dark leggings and boots stay original.
+Its numbered outputs use `generated/slice-138-review/` and `generated/slice-138-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

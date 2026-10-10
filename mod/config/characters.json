@@ -3929,7 +3929,10 @@
       "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_specialanimation_winter_write_start_south.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_specialanimation_winter_polish_end_east.png": "Default",
       "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_specialanimation_winter_polish_loop_east.png": "Default",
-      "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_specialanimation_winter_polish_start_east.png": "Default"
+      "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_specialanimation_winter_polish_start_east.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_specialanimation_winter_sing_end_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_specialanimation_winter_sing_loop_south.png": "Default",
+      "assets/animations/NPCs/Josephine/Sprites/Winter/spr_npc_josephine_specialanimation_winter_sing_start_south.png": "Default"
     },
     "hotkey": "P",
     "id": "josephine",
