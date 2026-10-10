@@ -15,7 +15,7 @@
     {"id": "nora", "presets": "nora-world-trial.json"},
     {"id": "holt", "presets": "holt-world-trial.json"},
     {"id": "josephine", "presets": "josephine-world-trial.json"},
-    {"id": "darcy", "presets": "darcy-portraits-trial.json"},
+    {"id": "darcy", "presets": "darcy-world-trial.json"},
     {"id": "dell", "presets": "dell-portraits-trial.json"},
     {"id": "elsie", "presets": "elsie-portraits-trial.json"},
     {"id": "errol", "presets": "errol-portraits-trial.json"},

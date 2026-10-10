@@ -869,7 +869,12 @@ start/loop/end strips, completing her seasonal world coverage. Its full review
 covers all fifteen South-facing frames. Face and moving hands follow the
 palette; hair, eyes, earrings, pink clothing, dark leggings, boots, broom and
 dust stay original.
-Its numbered outputs use `generated/slice-140-review/` and `generated/slice-140-build/`;
+The [Darcy Spring standing/walking batch](development/slice-141.md) starts her
+world coverage with six strips: fifteen source frames and five native West
+mirrors. The full review includes all twenty cases. Her new world set retains
+the 32 portrait masks and palette choices; the portrait-only recipes stay
+available. Face, ears, neck and hands change; hair, eyes and clothing stay original.
+Its numbered outputs use `generated/slice-141-review/` and `generated/slice-141-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

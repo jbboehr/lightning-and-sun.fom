@@ -3975,7 +3975,13 @@
       "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_sad.png": "PortraitsMisc",
       "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_think.png": "PortraitsMisc",
       "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_ugh.png": "PortraitsMisc",
-      "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_wink.png": "PortraitsMisc"
+      "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_wink.png": "PortraitsMisc",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_idle_east.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_idle_north.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_idle_south.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_walk_east.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_walk_north.png": "Default",
+      "assets/animations/NPCs/Darcy/Sprites/Spring/spr_npc_darcy_spring_walk_south.png": "Default"
     },
     "hotkey": "B",
     "id": "darcy",
