@@ -935,7 +935,14 @@ Twenty-one source frames and seven native West mirrors give twenty-eight
 review cases. Face, ears and exposed hands follow the palette; hair, eye
 details, scarf, cream coat, white cuffs, mint clothing and boots stay original.
 Native timing, the final-frame hold and speaking-pause behavior are preserved.
-Its numbered outputs use `generated/slice-152-review/` and `generated/slice-152-build/`;
+The [Dell Spring standing/walking batch](development/slice-153.md) adds six
+strips: fifteen source frames and five native West mirrors. The full review
+includes all twenty cases. Face, ears, neck, hands and exposed ankles follow
+the palette; blonde hair, eye details, ribbon, pink shirt, blue overalls and
+red boots stay original. Four separate world-color groups distinguish skin
+from matching hair colors. Dell now uses `dell-world-trial.json` in the
+collection; her portrait recipes and their output remain unchanged.
+Its numbered outputs use `generated/slice-153-review/` and `generated/slice-153-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

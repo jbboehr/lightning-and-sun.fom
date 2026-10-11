@@ -1,0 +1,22 @@
+{
+  "description": "Dell portraits and Spring standing/walking skin in Debug Blue; blonde hair, eyes and clothing remain original.",
+  "profile": "../profiles/dell-world-trial.json",
+  "rgba_map": {
+    "#F5C88E": "#9DB9D4",
+    "#DD905B": "#7F9FBD",
+    "#A8571C": "#6687AD",
+    "#691B03": "#445F83",
+    "#91390E": "#445F83",
+    "#9D4428": "#6687AD",
+    "#B15634": "#6687AD",
+    "#ECAA71": "#7F9FBD",
+    "#FFDEB4": "#9DB9D4",
+    "#EC9871": "#7F9FBD",
+    "#DB9150": "#7F9FBD",
+    "#770C1D": "#445F83",
+    "#ECC889": "#9DB9D4",
+    "#DF8D4B": "#7F9FBD",
+    "#B65932": "#6687AD",
+    "#762E21": "#445F83"
+  }
+}
