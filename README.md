@@ -404,9 +404,10 @@ follows the selected palette, including head scratching and swinging a stick.
 Faces, eyelids, raised hands and exposed limbs change; connected edges of closed
 eyes follow the skin. Other blonde hair, mouth interiors, the blue shirt, brown
 overalls, pale rolled cuffs, red shoes, stick and motion trail stay original.
-Her Autumn standing and walking sprites also follow the palette, including her
-face and exposed hands; the blonde hair, ribbon, eyes, blue coat, red outfit and
-brown boots keep their original colors.
+Her Autumn standing, walking, blinking and sitting sprites also follow the
+palette, including her face, eyelids and exposed hands. Three connected dark
+temple pixels follow the closed side-facing eye; other blonde hair, lashes,
+ribbon, eye details, blue coat, red outfit and brown boots stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

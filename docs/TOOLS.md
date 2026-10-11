@@ -1012,7 +1012,13 @@ cases. Faces and exposed hands follow the palette; blonde hair, ribbon, eyes,
 blue coat, red outfit and brown boots stay original. Native frame metadata,
 walking duration and cycle configuration are preserved. All previous regions
 and target mappings are unchanged.
-Its numbered outputs use `generated/slice-164-review/` and `generated/slice-164-build/`;
+The [Dell Autumn blinking/sitting batch](development/slice-165.md) adds five
+strips. Nine source frames plus four native West mirrors give thirteen review
+cases. Faces, eyelids and exposed hands follow the palette, including three
+dark temple pixels connected to the closed East eye. Other hair, lashes,
+ribbon, clothing and boots stay original. Native blink durations and seated
+status are preserved. All previous regions and target mappings are unchanged.
+Its numbered outputs use `generated/slice-165-review/` and `generated/slice-165-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
