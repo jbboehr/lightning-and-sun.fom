@@ -993,7 +993,13 @@ The open-mouth eating frame uses its own taller face bounds; connected edges
 of closed eyes follow the skin. Other hair, mouth interiors, clothing, cuffs
 and shoes stay original. Native seated status, timing and final-frame holds
 are preserved. All previous regions and target mappings are unchanged.
-Its numbered outputs use `generated/slice-161-review/` and `generated/slice-161-build/`;
+The [Dell Summer general-action batch](development/slice-162.md) adds three
+strips: twenty-one source frames plus seven native West mirrors, giving
+twenty-eight review cases. Faces, necks, moving hands, arms and exposed legs
+follow the palette; blonde hair, eyebrow edges, ribbon, eye details, blue shirt,
+brown overalls, pale cuffs and shoes stay original. Native timing and final-frame
+holds are preserved. All previous regions and target mappings are unchanged.
+Its numbered outputs use `generated/slice-162-review/` and `generated/slice-162-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

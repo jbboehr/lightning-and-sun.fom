@@ -27,7 +27,7 @@ fn tracked_character_profiles_match_reviewed_coverage() {
         ("holt", 143),
         ("josephine", 167),
         ("darcy", 92),
-        ("dell", 82),
+        ("dell", 85),
         ("elsie", 36),
         ("errol", 36),
         ("hemlock", 32),
