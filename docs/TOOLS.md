@@ -954,7 +954,14 @@ review includes all thirty cases. Moving faces, eyelids, hands and exposed
 ankles follow the palette, including connected dark temple edges in closed-eye
 East poses. Other hair, eye details, mouth interiors, clothing and boots stay
 original. Native timing, seated status and final-frame holds are preserved.
-Its numbered outputs use `generated/slice-155-review/` and `generated/slice-155-build/`;
+The [Dell Spring general actions/shocked batch](development/slice-156.md) adds six
+strips: twenty-four source frames and seven native West mirrors. The full review
+includes all thirty-one cases. Faces, closed eyelids, moving hands and exposed
+ankles follow the palette; blonde hair, eyebrow edges, eye details, mouth
+interiors, clothing and boots stay original. Native action timing and holds,
+and the shocked start/loop/end sequence, are preserved. Previous regions and
+target mappings are unchanged.
+Its numbered outputs use `generated/slice-156-review/` and `generated/slice-156-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
