@@ -399,11 +399,11 @@ her face, eyelids, neck, hands and exposed ankles. Closed
 side-facing eyes include their connected dark temple edges; mouth interiors
 retain their original colors.
 Her other blonde hair, hair ribbon, pink shirt, blue overalls, red boots, stick
-and motion trail retain their original colors. Her Summer standing, walking,
-blinking, sitting, eating, drinking and general-action sprites follow the palette
-too, including eyelids, raised hands, exposed arms and legs. Connected edges of
-closed eyes follow the skin; other blonde hair, mouth interiors, the blue shirt, brown
-overalls, pale rolled cuffs and red shoes stay original.
+and motion trail retain their original colors. Her full Summer sprite set also
+follows the selected palette, including head scratching and swinging a stick.
+Faces, eyelids, raised hands and exposed limbs change; connected edges of closed
+eyes follow the skin. Other blonde hair, mouth interiors, the blue shirt, brown
+overalls, pale rolled cuffs, red shoes, stick and motion trail stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

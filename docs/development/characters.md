@@ -1241,6 +1241,15 @@ legs follow the palette. Blonde hair, eyebrow edges, ribbon, eye details, blue
 shirt, brown overalls, pale cuffs and shoes stay original. Native timing and
 final-frame holds are preserved. All previous regions, roles and mappings remain
 unchanged.
+The [Dell Summer scratching/stick batch](slice-163.md) adds four strips,
+completing all 24 Summer world strips and bringing her total to 89 sources:
+32 portraits and 57 world strips. Eleven source frames and seven native West
+mirrors give eighteen review cases; the user approved the artwork on 2026-10-11. Faces,
+eyelids, moving hands, arms and exposed legs follow the palette. Blonde hair,
+eye details, ribbon, blue shirt, brown overalls, pale cuffs, shoes, stick and
+motion trail stay original. The scratch start/loop/end sequence and seven-frame
+swing retain native timing. All previous regions, roles and mappings remain
+unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -1479,11 +1488,12 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Dell's Summer general-action sprites.
-It is in `generated/build/package` (a shortcut to `generated/slice-162-build/package`).
-MOMI installation passed in the isolated `tmp/slice-162-playtest` lab.
+The latest combined package completes Dell's Summer sprites with head scratching
+and swinging a stick.
+It is in `generated/build/package` (a shortcut to `generated/slice-163-build/package`).
+MOMI installation passed in the isolated `tmp/slice-163-playtest` lab.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline review](../../../generated/review/index.html) to inspect all twenty-eight
+[complete offline review](../../../generated/review/index.html) to inspect all eighteen
 cases. This slice has one Dell gallery with full views and enlarged face,
 hand and clothing details. Every source frame and native West mirror is included.
 

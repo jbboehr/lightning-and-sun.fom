@@ -4127,7 +4127,11 @@
       "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_eat_south.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_action_east.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_action_north.png": "Default",
-      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_action_south.png": "Default"
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_action_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_specialanimation_summer_scratch_head_start_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_specialanimation_summer_scratch_head_loop_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_specialanimation_summer_scratch_head_end_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_specialanimation_summer_swing_stick_east.png": "Default"
     },
     "hotkey": "Y",
     "id": "dell",

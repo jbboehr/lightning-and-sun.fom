@@ -999,7 +999,14 @@ twenty-eight review cases. Faces, necks, moving hands, arms and exposed legs
 follow the palette; blonde hair, eyebrow edges, ribbon, eye details, blue shirt,
 brown overalls, pale cuffs and shoes stay original. Native timing and final-frame
 holds are preserved. All previous regions and target mappings are unchanged.
-Its numbered outputs use `generated/slice-162-review/` and `generated/slice-162-build/`;
+The [Dell Summer scratching/stick batch](development/slice-163.md) adds four
+strips, completing all 24 Summer world strips. Eleven source frames plus seven
+native West mirrors give eighteen review cases. Faces, eyelids, moving hands,
+arms and exposed legs follow the palette; blonde hair, clothing, cuffs, shoes,
+stick and motion trail stay original. The scratching start/loop/end sequence
+and seven-frame swing retain native metadata and timing. All previous regions
+and target mappings are unchanged.
+Its numbered outputs use `generated/slice-163-review/` and `generated/slice-163-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
