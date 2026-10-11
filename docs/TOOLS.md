@@ -1006,7 +1006,13 @@ arms and exposed legs follow the palette; blonde hair, clothing, cuffs, shoes,
 stick and motion trail stay original. The scratching start/loop/end sequence
 and seven-frame swing retain native metadata and timing. All previous regions
 and target mappings are unchanged.
-Its numbered outputs use `generated/slice-163-review/` and `generated/slice-163-build/`;
+The [Dell Autumn standing/walking batch](development/slice-164.md) adds six
+strips. Fifteen source frames plus five native West mirrors give twenty review
+cases. Faces and exposed hands follow the palette; blonde hair, ribbon, eyes,
+blue coat, red outfit and brown boots stay original. Native frame metadata,
+walking duration and cycle configuration are preserved. All previous regions
+and target mappings are unchanged.
+Its numbered outputs use `generated/slice-164-review/` and `generated/slice-164-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
