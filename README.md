@@ -399,7 +399,9 @@ her face, eyelids, neck, hands and exposed ankles. Closed
 side-facing eyes include their connected dark temple edges; mouth interiors
 retain their original colors.
 Her other blonde hair, hair ribbon, pink shirt, blue overalls, red boots, stick
-and motion trail retain their original colors.
+and motion trail retain their original colors. Her Summer standing and walking
+sprites follow the palette too, including exposed arms and legs. The blue shirt,
+brown overalls, pale rolled cuffs, red shoes and blonde hair stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

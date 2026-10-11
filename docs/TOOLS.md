@@ -974,7 +974,12 @@ exposed ankles follow the palette; blonde hair, eye details, clothing, boots,
 stick and motion trail stay original. The stretch start/loop/end sequence and
 seven-frame swing retain native metadata and timing. Previous regions and
 target mappings are unchanged.
-Its numbered outputs use `generated/slice-158-review/` and `generated/slice-158-build/`;
+The [Dell Summer standing/walking batch](development/slice-159.md) adds six
+strips: fifteen source frames plus five native West mirrors, giving twenty
+review cases. Faces, exposed arms, hands and legs follow the palette; blonde
+hair, eye details, ribbon, blue shirt, brown overalls, pale cuffs and red shoes
+stay original. All previous regions and target mappings are unchanged.
+Its numbered outputs use `generated/slice-159-review/` and `generated/slice-159-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

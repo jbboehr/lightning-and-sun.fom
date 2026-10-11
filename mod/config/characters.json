@@ -4107,7 +4107,13 @@
       "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_stretch_start_south.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_stretch_loop_south.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_stretch_end_south.png": "Default",
-      "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_swing_stick_east.png": "Default"
+      "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_swing_stick_east.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_idle_east.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_idle_north.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_idle_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_walk_east.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_walk_north.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Summer/spr_npc_dell_summer_walk_south.png": "Default"
     },
     "hotkey": "Y",
     "id": "dell",
