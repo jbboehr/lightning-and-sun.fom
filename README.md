@@ -392,9 +392,11 @@ including general actions, while preserving the tan coat, white cuffs, teal
 outfit, dark boots and mouth interiors. Her full Winter world set follows the
 palette too, including general actions, while preserving the scarf, cream
 coat, white cuffs, mint outfit, dark boots and mouth interiors.
-Dell’s Spring standing and walking sprites also follow her selected palette,
-including her face, neck, hands and exposed ankles. Her blonde hair, hair ribbon,
-pink shirt, blue overalls and red boots retain their original colors.
+Dell’s Spring standing, walking, blinking and sitting sprites also follow her
+selected palette, including her face, eyelids, neck, hands and exposed ankles.
+The closed side-facing blink includes the connected dark edge at her temple.
+Her other blonde hair, hair ribbon, pink shirt, blue overalls and red boots
+retain their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

@@ -942,7 +942,13 @@ the palette; blonde hair, eye details, ribbon, pink shirt, blue overalls and
 red boots stay original. Four separate world-color groups distinguish skin
 from matching hair colors. Dell now uses `dell-world-trial.json` in the
 collection; her portrait recipes and their output remain unchanged.
-Its numbered outputs use `generated/slice-153-review/` and `generated/slice-153-build/`;
+The [Dell Spring blinking/sitting batch](development/slice-154.md) adds five
+strips: nine source frames and four native West mirrors. The full review
+includes all thirteen cases. Face, eyelids, hands and exposed ankles follow
+the palette, including the closed East blink's connected dark temple edge.
+Other blonde hair, lashes, eye details, ribbon, shirt, overalls and boots stay
+original. Timing, seated status, previous regions and target mappings are unchanged.
+Its numbered outputs use `generated/slice-154-review/` and `generated/slice-154-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
