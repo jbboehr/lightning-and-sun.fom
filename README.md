@@ -393,12 +393,13 @@ outfit, dark boots and mouth interiors. Her full Winter world set follows the
 palette too, including general actions, while preserving the scarf, cream
 coat, white cuffs, mint outfit, dark boots and mouth interiors.
 Dell’s Spring standing, walking, blinking, sitting, eating, drinking, general
-actions, shocked reaction, head scratching and yawning also follow her selected
-palette, including her face, eyelids, neck, hands and exposed ankles. Closed
+actions, shocked reaction, head scratching, yawning, stretching and swinging a
+stick complete her Spring sprites. They follow her selected palette, including
+her face, eyelids, neck, hands and exposed ankles. Closed
 side-facing eyes include their connected dark temple edges; mouth interiors
 retain their original colors.
-Her other blonde hair, hair ribbon, pink shirt, blue overalls and red boots
-retain their original colors.
+Her other blonde hair, hair ribbon, pink shirt, blue overalls, red boots, stick
+and motion trail retain their original colors.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

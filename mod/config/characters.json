@@ -4103,7 +4103,11 @@
       "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_scratch_head_end_south.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_yawn_start_south.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_yawn_loop_south.png": "Default",
-      "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_yawn_end_south.png": "Default"
+      "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_yawn_end_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_stretch_start_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_stretch_loop_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_stretch_end_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Spring/spr_npc_dell_specialanimation_spring_swing_stick_east.png": "Default"
     },
     "hotkey": "Y",
     "id": "dell",

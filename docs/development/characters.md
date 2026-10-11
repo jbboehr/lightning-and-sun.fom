@@ -1201,6 +1201,14 @@ approved the artwork on 2026-10-10. Faces, eyelids, exposed wrists and ankles fo
 palette. Blonde hair, eye details, red mouth interiors, clothing and boots
 stay original. Both native start/loop/end sequences and their timing are
 preserved. All previous regions, color roles and target mappings remain unchanged.
+The [Dell Spring stretching/stick batch](slice-158.md) adds four strips,
+bringing her total to 65 sources: 32 portraits and all 33 Spring world strips.
+Eleven source frames and seven native West mirrors give eighteen review cases;
+the user approved the artwork on 2026-10-10. Faces, eyelids, hands and exposed ankles follow
+the palette. Blonde hair, eye details, clothing, boots, stick and motion trail
+stay original. The stretch start/loop/end sequence and seven-frame swing retain
+native metadata and timing. All previous regions, color roles and target
+mappings remain unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -1439,13 +1447,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Dell's Spring head scratching and yawning.
-It is in `generated/build/package` (a shortcut to `generated/slice-157-build/package`).
-MOMI installation passed in the isolated `tmp/slice-157-playtest` lab.
+The latest combined package completes Dell's Spring sprites with stretching and swinging a stick.
+It is in `generated/build/package` (a shortcut to `generated/slice-158-build/package`).
+MOMI installation passed in the isolated `tmp/slice-158-playtest` lab.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline review](../../../generated/review/index.html) to inspect all eleven
+[complete offline review](../../../generated/review/index.html) to inspect all eighteen
 cases. This slice has one Dell gallery with full views and enlarged face,
-hand and clothing details. Every source frame is included; both cycles are South-facing.
+hand and clothing details. Every source frame and native West mirror is included.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,

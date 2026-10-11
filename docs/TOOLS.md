@@ -967,7 +967,14 @@ frame. Faces, eyelids, exposed wrists and ankles follow the palette; blonde
 hair, eye details, red mouth interiors, clothing and boots stay original.
 Both native start/loop/end sequences and their timing are preserved, with
 all previous regions and target mappings unchanged.
-Its numbered outputs use `generated/slice-157-review/` and `generated/slice-157-build/`;
+The [Dell Spring stretching/stick batch](development/slice-158.md) adds four
+strips, completing all 33 Spring world strips. Eleven source frames plus seven
+native West mirrors give eighteen review cases. Faces, eyelids, hands and
+exposed ankles follow the palette; blonde hair, eye details, clothing, boots,
+stick and motion trail stay original. The stretch start/loop/end sequence and
+seven-frame swing retain native metadata and timing. Previous regions and
+target mappings are unchanged.
+Its numbered outputs use `generated/slice-158-review/` and `generated/slice-158-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
