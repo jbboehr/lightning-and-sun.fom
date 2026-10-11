@@ -961,7 +961,13 @@ ankles follow the palette; blonde hair, eyebrow edges, eye details, mouth
 interiors, clothing and boots stay original. Native action timing and holds,
 and the shocked start/loop/end sequence, are preserved. Previous regions and
 target mappings are unchanged.
-Its numbered outputs use `generated/slice-156-review/` and `generated/slice-156-build/`;
+The [Dell Spring scratching/yawning batch](development/slice-157.md) adds six
+strips: eleven source frames, all South-facing. The full review includes every
+frame. Faces, eyelids, exposed wrists and ankles follow the palette; blonde
+hair, eye details, red mouth interiors, clothing and boots stay original.
+Both native start/loop/end sequences and their timing are preserved, with
+all previous regions and target mappings unchanged.
+Its numbered outputs use `generated/slice-157-review/` and `generated/slice-157-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
