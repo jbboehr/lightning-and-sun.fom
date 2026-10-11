@@ -1178,6 +1178,14 @@ the palette. Three dark temple/fringe pixels connected to the closed East
 eye follow its edge; other blonde hair, eye details, clothing and boots stay
 original. Native timing and seated status are preserved, with all prior
 regions and mappings unchanged.
+The [Dell Spring eating/drinking batch](slice-155.md) adds six strips,
+bringing her total to 49 sources: 32 portraits and seventeen world strips.
+Twenty-two source frames and eight native West mirrors give thirty review
+cases; the user approved the artwork on 2026-10-10. Faces, eyelids, moving hands and exposed
+ankles follow the palette. Closed-eye East poses include connected dark temple
+edges; other hair, eye details, mouth interiors, clothing and boots stay original.
+Native timing, seated status and final-frame holds are preserved, with all
+prior regions and mappings unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -1416,11 +1424,11 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Dell's Spring blinking and sitting animations.
-It is in `generated/build/package` (a shortcut to `generated/slice-154-build/package`).
-MOMI installation passed in the isolated `tmp/slice-154-playtest` lab.
+The latest combined package adds Dell's Spring eating and drinking animations.
+It is in `generated/build/package` (a shortcut to `generated/slice-155-build/package`).
+MOMI installation passed in the isolated `tmp/slice-155-playtest` lab.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline review](../../../generated/review/index.html) to inspect all thirteen
+[complete offline review](../../../generated/review/index.html) to inspect all thirty
 cases. This slice has one Dell gallery with full views and enlarged face,
 hand and clothing details. Every source frame and native West mirror is included.
 

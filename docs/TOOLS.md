@@ -948,7 +948,13 @@ includes all thirteen cases. Face, eyelids, hands and exposed ankles follow
 the palette, including the closed East blink's connected dark temple edge.
 Other blonde hair, lashes, eye details, ribbon, shirt, overalls and boots stay
 original. Timing, seated status, previous regions and target mappings are unchanged.
-Its numbered outputs use `generated/slice-154-review/` and `generated/slice-154-build/`;
+The [Dell Spring eating/drinking batch](development/slice-155.md) adds six
+strips: twenty-two source frames and eight native West mirrors. The full
+review includes all thirty cases. Moving faces, eyelids, hands and exposed
+ankles follow the palette, including connected dark temple edges in closed-eye
+East poses. Other hair, eye details, mouth interiors, clothing and boots stay
+original. Native timing, seated status and final-frame holds are preserved.
+Its numbered outputs use `generated/slice-155-review/` and `generated/slice-155-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
