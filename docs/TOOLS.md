@@ -979,7 +979,14 @@ strips: fifteen source frames plus five native West mirrors, giving twenty
 review cases. Faces, exposed arms, hands and legs follow the palette; blonde
 hair, eye details, ribbon, blue shirt, brown overalls, pale cuffs and red shoes
 stay original. All previous regions and target mappings are unchanged.
-Its numbered outputs use `generated/slice-159-review/` and `generated/slice-159-build/`;
+The [Dell Summer blinking/sitting batch](development/slice-160.md) adds five
+strips: nine source frames plus four native West mirrors, giving thirteen
+review cases. Faces, eyelids, arms, hands and exposed legs follow the palette.
+Two pixels connected to the closed East eyelid follow its edge; other hair,
+lashes, ribbon, eye details, clothing, pale cuffs and shoes stay original.
+Native blink timing and seated status are preserved, with previous regions
+and target mappings unchanged.
+Its numbered outputs use `generated/slice-160-review/` and `generated/slice-160-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
