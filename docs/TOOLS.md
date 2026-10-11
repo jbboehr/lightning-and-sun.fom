@@ -986,7 +986,14 @@ Two pixels connected to the closed East eyelid follow its edge; other hair,
 lashes, ribbon, eye details, clothing, pale cuffs and shoes stay original.
 Native blink timing and seated status are preserved, with previous regions
 and target mappings unchanged.
-Its numbered outputs use `generated/slice-160-review/` and `generated/slice-160-build/`;
+The [Dell Summer eating/drinking batch](development/slice-161.md) adds six
+strips: twenty-two source frames plus eight native West mirrors, giving thirty
+review cases. Moving faces, eyelids, hands, arms and legs follow the palette.
+The open-mouth eating frame uses its own taller face bounds; connected edges
+of closed eyes follow the skin. Other hair, mouth interiors, clothing, cuffs
+and shoes stay original. Native seated status, timing and final-frame holds
+are preserved. All previous regions and target mappings are unchanged.
+Its numbered outputs use `generated/slice-161-review/` and `generated/slice-161-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
