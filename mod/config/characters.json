@@ -4151,7 +4151,8 @@
       "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_eat_south.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_action_east.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_action_north.png": "Default",
-      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_action_south.png": "Default"
+      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_action_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_specialanimation_autumn_swing_stick_east.png": "Default"
     },
     "hotkey": "Y",
     "id": "dell",

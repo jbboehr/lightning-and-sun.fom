@@ -1030,7 +1030,13 @@ review cases. Faces and moving hands follow the palette; blonde hair, eyebrow
 edges, eye details, ribbon, blue coat, red outfit and brown boots stay original.
 Native durations, final-frame holds and speaking-pause configuration are preserved.
 All previous regions and target mappings are unchanged.
-Its numbered outputs use `generated/slice-167-review/` and `generated/slice-167-build/`;
+The [Dell Autumn stick-swing batch](development/slice-168.md) adds one strip,
+completing all 21 Autumn world strips. Seven source frames plus seven native
+West mirrors give fourteen review cases. Faces, eyelids and moving hands follow
+the palette; blonde hair, eye details, clothing, boots, stick and motion trail
+stay original. Native durations and speaking-pause configuration are preserved.
+All previous regions and target mappings are unchanged.
+Its numbered outputs use `generated/slice-168-review/` and `generated/slice-168-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
