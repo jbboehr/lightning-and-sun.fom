@@ -1289,6 +1289,13 @@ the palette. Blonde hair, eye details, ribbon, blue coat, red outfit, brown boot
 stick and motion trail stay original. Native timing and speaking-pause
 configuration are preserved. All previous regions, roles and mappings remain
 unchanged.
+The [Dell Winter standing/walking batch](slice-169.md) adds six strips,
+bringing her total to 116 sources: 32 portraits and 84 world strips. Fifteen
+source frames and five native West mirrors give twenty review cases; visual
+acceptance was given on 2026-10-12. Faces and exposed hands follow the palette. Blonde hair,
+eye details, blue coat, orange shirt and cuffs, trousers and brown boots stay
+original. Native frame metadata, walking duration and cycle configuration are
+preserved. All previous regions, roles and mappings remain unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -1527,11 +1534,11 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package completes Dell's Autumn sprites with swinging a stick.
-It is in `generated/build/package` (a shortcut to `generated/slice-168-build/package`).
-MOMI installation passed in the isolated `tmp/slice-168-playtest` lab.
+The latest combined package adds Dell's Winter standing and walking sprites.
+It is in `generated/build/package` (a shortcut to `generated/slice-169-build/package`).
+MOMI installation passed in the isolated `tmp/slice-169-playtest` lab.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline review](../../../generated/review/index.html) to inspect all fourteen
+[complete offline review](../../../generated/review/index.html) to inspect all twenty
 cases. This slice has one Dell gallery with full views and enlarged face,
 hand and clothing details. Every source frame and native West mirror is included.
 

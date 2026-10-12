@@ -1036,7 +1036,13 @@ West mirrors give fourteen review cases. Faces, eyelids and moving hands follow
 the palette; blonde hair, eye details, clothing, boots, stick and motion trail
 stay original. Native durations and speaking-pause configuration are preserved.
 All previous regions and target mappings are unchanged.
-Its numbered outputs use `generated/slice-168-review/` and `generated/slice-168-build/`;
+The [Dell Winter standing/walking batch](development/slice-169.md) adds six
+strips. Fifteen source frames plus five native West mirrors give twenty review
+cases. Faces and exposed hands follow the palette; blonde hair, eye details,
+blue coat, orange shirt and cuffs, trousers and brown boots stay original. Native
+frame metadata, walking duration and cycle configuration are preserved. All
+previous regions and target mappings are unchanged.
+Its numbered outputs use `generated/slice-169-review/` and `generated/slice-169-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
