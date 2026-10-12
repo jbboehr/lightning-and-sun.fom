@@ -1024,7 +1024,13 @@ review cases. Moving faces, eyelids and hands follow the palette, including
 connected dark edges of closed East eyes. Mouth interiors, other hair, ribbon,
 clothing and boots stay original. Native durations, seated status and final-frame
 holds are preserved. All previous regions and target mappings are unchanged.
-Its numbered outputs use `generated/slice-166-review/` and `generated/slice-166-build/`;
+The [Dell Autumn general-action batch](development/slice-167.md) adds three
+strips. Twenty-one source frames plus seven native West mirrors give twenty-eight
+review cases. Faces and moving hands follow the palette; blonde hair, eyebrow
+edges, eye details, ribbon, blue coat, red outfit and brown boots stay original.
+Native durations, final-frame holds and speaking-pause configuration are preserved.
+All previous regions and target mappings are unchanged.
+Its numbered outputs use `generated/slice-167-review/` and `generated/slice-167-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
