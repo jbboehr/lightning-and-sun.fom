@@ -4142,7 +4142,13 @@
       "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_blink_south.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_sit_east.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_sit_north.png": "Default",
-      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_sit_south.png": "Default"
+      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_sit_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_drink_east.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_drink_north.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_drink_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_eat_east.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_eat_north.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Autumn/spr_npc_dell_autumn_eat_south.png": "Default"
     },
     "hotkey": "Y",
     "id": "dell",

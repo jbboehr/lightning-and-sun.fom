@@ -1018,7 +1018,13 @@ cases. Faces, eyelids and exposed hands follow the palette, including three
 dark temple pixels connected to the closed East eye. Other hair, lashes,
 ribbon, clothing and boots stay original. Native blink durations and seated
 status are preserved. All previous regions and target mappings are unchanged.
-Its numbered outputs use `generated/slice-165-review/` and `generated/slice-165-build/`;
+The [Dell Autumn eating/drinking batch](development/slice-166.md) adds six
+strips. Twenty-two source frames plus eight native West mirrors give thirty
+review cases. Moving faces, eyelids and hands follow the palette, including
+connected dark edges of closed East eyes. Mouth interiors, other hair, ribbon,
+clothing and boots stay original. Native durations, seated status and final-frame
+holds are preserved. All previous regions and target mappings are unchanged.
+Its numbered outputs use `generated/slice-166-review/` and `generated/slice-166-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

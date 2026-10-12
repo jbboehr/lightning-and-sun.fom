@@ -1265,6 +1265,14 @@ including three dark temple pixels connected to the closed East eye. Other
 hair, lashes, ribbon, eye details, blue coat, red outfit and brown boots stay
 original. Native blink durations and seated status are preserved. All previous
 regions, roles and mappings remain unchanged.
+The [Dell Autumn eating/drinking batch](slice-166.md) adds six strips,
+bringing her total to 106 sources: 32 portraits and 74 world strips. Twenty-two
+source frames and eight native West mirrors give thirty review cases; visual
+acceptance was given on 2026-10-11. Moving faces, eyelids and hands follow the palette,
+including connected dark edges of closed East eyes. Other hair, lashes, ribbon,
+eye details, mouth interiors, blue coat, red outfit and brown boots stay original.
+Native durations, seated status and final-frame holds are preserved. All previous
+regions, roles and mappings remain unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -1503,11 +1511,11 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Dell's Autumn blinking and sitting sprites.
-It is in `generated/build/package` (a shortcut to `generated/slice-165-build/package`).
-MOMI installation passed in the isolated `tmp/slice-165-playtest` lab.
+The latest combined package adds Dell's Autumn eating and drinking sprites.
+It is in `generated/build/package` (a shortcut to `generated/slice-166-build/package`).
+MOMI installation passed in the isolated `tmp/slice-166-playtest` lab.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline review](../../../generated/review/index.html) to inspect all thirteen
+[complete offline review](../../../generated/review/index.html) to inspect all thirty
 cases. This slice has one Dell gallery with full views and enlarged face,
 hand and clothing details. Every source frame and native West mirror is included.
 
