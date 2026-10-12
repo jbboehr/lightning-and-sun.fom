@@ -4163,7 +4163,13 @@
       "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_blink_south.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_sit_east.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_sit_north.png": "Default",
-      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_sit_south.png": "Default"
+      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_sit_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_drink_east.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_drink_north.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_drink_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_eat_east.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_eat_north.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_eat_south.png": "Default"
     },
     "hotkey": "Y",
     "id": "dell",

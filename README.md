@@ -410,10 +410,11 @@ stick. Her face, eyelids and exposed hands change.
 Connected dark temple edges follow closed side-facing eyes; other blonde hair,
 lashes, ribbon, eye details, mouth interiors, blue coat, red outfit, brown
 boots, stick and motion trail stay original.
-Her Winter standing, walking, blinking and sitting sprites also follow the
-palette, including her face, eyelids and exposed hands. Connected dark temple
-edges follow closed side-facing eyes; other blonde hair, lashes, eye details,
-blue coat, orange shirt and cuffs, trousers and brown boots stay original.
+Her Winter standing, walking, blinking, sitting, eating and drinking sprites
+also follow the palette, including her face, eyelids and exposed hands.
+Connected dark temple edges follow side-facing eye expressions; other blonde
+hair, lashes, eye details, mouth interiors, blue coat, orange shirt and cuffs,
+trousers and brown boots stay original.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

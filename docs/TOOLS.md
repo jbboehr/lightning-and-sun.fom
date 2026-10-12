@@ -1048,7 +1048,14 @@ cases. Faces, eyelids, connected closed-eye temple edges and exposed hands
 follow the palette; other blonde hair, lashes, eye details, clothing and boots
 stay original. Native frame metadata, blinking timing and seated status are
 preserved. All previous regions and target mappings are unchanged.
-Its numbered outputs use `generated/slice-170-review/` and `generated/slice-170-build/`;
+The [Dell Winter eating/drinking batch](development/slice-171.md) adds six
+strips. Twenty-two source frames plus eight native West mirrors give thirty
+review cases. Faces, eyelids, connected eye edges and moving hands follow the
+palette; other blonde hair, lashes, eye details, mouth interiors, clothing and
+boots stay original. Native frame metadata, timing, seated status and
+final-frame holds are preserved. All previous regions and target mappings
+are unchanged.
+Its numbered outputs use `generated/slice-171-review/` and `generated/slice-171-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
