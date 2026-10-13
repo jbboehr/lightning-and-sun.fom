@@ -1119,7 +1119,13 @@ Forehead, face, neckline and both moving hands follow the palette; hair, eye
 details, mouth interiors, cosmetics, jewelry, gown, shoes and floating music
 notes stay original. Native timing, complex phases and the speech-pause idle
 setting are preserved. Prior regions, color roles and mappings are unchanged.
-Its numbered outputs use `generated/slice-181-review/` and `generated/slice-181-build/`;
+The [Elsie Summer standing/walking batch](development/slice-182.md) adds six
+strips with fifteen source frames and five native West mirrors. Forehead, face,
+neckline, exposed arms, hands and ankles follow the palette. Hair, eye details,
+earrings, gold scarf, blue shawl, dress and shoes stay original. Native timing,
+directions and pause settings are preserved. Prior regions, color roles and
+mappings are unchanged.
+Its numbered outputs use `generated/slice-182-review/` and `generated/slice-182-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

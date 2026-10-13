@@ -4251,7 +4251,13 @@
       "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_sit_end_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_sing_start_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_sing_loop_south.png": "Default",
-      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_sing_end_south.png": "Default"
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_sing_end_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_idle_north.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_idle_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_idle_east.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_walk_north.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_walk_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_walk_east.png": "Default"
     },
     "hotkey": "Z",
     "id": "elsie",
