@@ -416,10 +416,11 @@ stick. Her face, eyelids and exposed hands change.
 Connected dark temple edges follow side-facing eye expressions; other blonde
 hair, lashes, eye details, mouth interiors, blue coat, orange shirt and cuffs,
 trousers, brown boots, stick and motion trail stay original.
-Elsie's Spring standing and walking sprites follow her selected palette too.
-Her forehead, face, neckline and exposed hands change; gray hair, eyebrows,
-eye details, cosmetics, earrings, pink gown and shoes retain their original
-colors. Z switches her portraits and these world sprites together.
+Elsie's Spring standing, walking, blinking and sitting sprites follow her
+selected palette too. Her forehead, face, closed eyelids, neckline and exposed
+hands change; gray hair, eyebrows, lashes, eye details, cosmetics, earrings,
+pink gown and shoes retain their original colors. Z switches her portraits and
+these world sprites together.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character

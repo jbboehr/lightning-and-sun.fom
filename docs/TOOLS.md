@@ -1075,7 +1075,13 @@ eyebrows, eye details, cosmetics, earrings, pink gown and shoes stay original.
 Four world shades extend her eight portrait roles. Her existing portraits and
 their target mappings are preserved. Z keeps portraits and world sprites
 synchronized, with native timing and direction behavior.
-Its numbered outputs use `generated/slice-174-review/` and `generated/slice-174-build/`;
+The [Elsie Spring blinking/sitting batch](development/slice-175.md) adds five
+strips. Nine source frames and four native West mirrors give thirteen review
+cases. Forehead, face, closed eyelids, neckline and exposed hands follow the
+palette; hair, eyebrows, lashes, eye details, cosmetics, earrings, gown and shoes
+stay original. Native blink timing and seated status are preserved. All previous
+regions, color roles and target mappings remain unchanged.
+Its numbered outputs use `generated/slice-175-review/` and `generated/slice-175-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
