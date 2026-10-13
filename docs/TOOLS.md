@@ -1068,7 +1068,14 @@ follow the palette; blonde hair, eye details, clothing, boots, stick and motion
 trail stay original. Native frame metadata, timing and speaking-pause
 configuration are preserved. All previous regions and target mappings are
 unchanged.
-Its numbered outputs use `generated/slice-173-review/` and `generated/slice-173-build/`;
+The [Elsie Spring standing/walking batch](development/slice-174.md) adds six
+strips. Fifteen source frames and five native West mirrors give twenty review
+cases. Forehead, face, neckline and exposed hands follow the palette; gray hair,
+eyebrows, eye details, cosmetics, earrings, pink gown and shoes stay original.
+Four world shades extend her eight portrait roles. Her existing portraits and
+their target mappings are preserved. Z keeps portraits and world sprites
+synchronized, with native timing and direction behavior.
+Its numbered outputs use `generated/slice-174-review/` and `generated/slice-174-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
