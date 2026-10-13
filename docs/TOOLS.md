@@ -1094,7 +1094,13 @@ review cases. Forehead, face, neckline and moving hands follow the palette;
 hair, eyebrows, lashes, eye details, cosmetics, earrings, gown and shoes stay
 original. Native timing, final-frame holds and speaking-pause configuration are
 preserved. All previous regions, color roles and target mappings remain unchanged.
-Its numbered outputs use `generated/slice-177-review/` and `generated/slice-177-build/`;
+The [Elsie Spring shocked-reaction batch](development/slice-178.md) adds three
+single-frame strips: start, loop and end. All three South-facing poses appear
+in the summary and complete Vanilla/Debug Blue review. Forehead, face, neckline,
+raised hands and exposed ankles follow the palette; hair, eyes, mouth interiors, cosmetics,
+jewelry, gown and shoes stay original. Native complex phases and South-only
+direction are preserved. Prior regions, color roles and mappings are unchanged.
+Its numbered outputs use `generated/slice-178-review/` and `generated/slice-178-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

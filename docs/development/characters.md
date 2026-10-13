@@ -3,11 +3,11 @@
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
 Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 262,
 Valen's 257, Eiland's 277, Olric's 231, Landen's 119, Nora's 151, Holt's 143,
-Josephine's 167, Darcy's 92, Dell's 131, Elsie's 56, Errol's 36, Hemlock's 32,
+Josephine's 167, Darcy's 92, Dell's 131, Elsie's 59, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 19,228 variant strips from 4,807 sources. Caldarus's three
+variants per source give 19,240 variant strips from 4,810 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -1359,6 +1359,14 @@ follow the palette. Gray hair, eyebrows, lashes, eye details, cosmetics,
 earrings, pink gown and shoes stay original. Native timing, final-frame holds
 and speaking-pause configuration are preserved. All previous regions, roles
 and mappings remain unchanged.
+The [Elsie Spring shocked-reaction batch](slice-178.md) adds three single-frame
+strips: start, loop and end, bringing her total to 59 sources: 36 portraits and
+twenty-three world strips. All three South-facing cases appear in the summary
+and full review; the user approved the artwork on 2026-10-13. Forehead, face, neckline and
+raised hands and exposed ankles follow the palette. Gray hair, eyebrows, lashes,
+eye details, mouth interiors, cosmetics, earrings, pink gown and shoes stay original.
+Native complex phases and South-only direction are preserved. All previous
+regions, roles and mappings remain unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -1597,13 +1605,13 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Elsie's Spring general-action sprites.
-It is in `generated/build/package` (a shortcut to `generated/slice-177-build/package`).
-MOMI installation passed in the isolated `tmp/slice-177-playtest` lab.
+The latest combined package adds Elsie's Spring shocked-reaction sprites.
+It is in `generated/build/package` (a shortcut to `generated/slice-178-build/package`).
+MOMI installation passed in the isolated `tmp/slice-178-playtest` lab.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline review](../../../generated/review/index.html) to inspect all twenty-eight
+[complete offline review](../../../generated/review/index.html) to inspect all three
 cases. This slice has one Elsie gallery with full views and enlarged face,
-hand and clothing details. Every source frame and native West mirror is included.
+hand and clothing details. Every source frame is included; these poses face South only.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,
