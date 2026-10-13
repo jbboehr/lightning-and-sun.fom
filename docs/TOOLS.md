@@ -1100,7 +1100,13 @@ in the summary and complete Vanilla/Debug Blue review. Forehead, face, neckline,
 raised hands and exposed ankles follow the palette; hair, eyes, mouth interiors, cosmetics,
 jewelry, gown and shoes stay original. Native complex phases and South-only
 direction are preserved. Prior regions, color roles and mappings are unchanged.
-Its numbered outputs use `generated/slice-178-review/` and `generated/slice-178-build/`;
+The [Elsie Spring standing-writing batch](development/slice-179.md) adds three
+strips with eight source frames across start, loop and end. The full review
+includes all eight South-facing cases. Forehead, face, neckline and the moving
+writing hand follow the palette; hair, eyes, cosmetics, jewelry, gown, shoes,
+book and quill stay original. Native timing and complex phases are preserved.
+Prior regions, color roles and mappings are unchanged.
+Its numbered outputs use `generated/slice-179-review/` and `generated/slice-179-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
