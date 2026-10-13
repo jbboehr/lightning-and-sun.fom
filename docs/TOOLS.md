@@ -1113,7 +1113,13 @@ Forehead, face, visible neckline and the moving writing hand follow the palette;
 hair, eyes, cosmetics, jewelry, gown, shoes, book and quill stay original.
 Native timing, complex phases, seated status and West mirroring are preserved.
 Prior regions, color roles and mappings are unchanged.
-Its numbered outputs use `generated/slice-180-review/` and `generated/slice-180-build/`;
+The [Elsie Spring singing batch](development/slice-181.md) adds three strips
+with twenty-five South-facing frames, completing her Spring world folder.
+Forehead, face, neckline and both moving hands follow the palette; hair, eye
+details, mouth interiors, cosmetics, jewelry, gown, shoes and floating music
+notes stay original. Native timing, complex phases and the speech-pause idle
+setting are preserved. Prior regions, color roles and mappings are unchanged.
+Its numbered outputs use `generated/slice-181-review/` and `generated/slice-181-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
