@@ -1131,7 +1131,14 @@ closed eyelids, neckline, exposed arms, hands and ankles follow the palette.
 Hair, lashes, eye details, earrings, gold scarf, blue shawl, dress and shoes
 stay original. Native timing, directions and seated status are preserved.
 Prior regions, color roles and mappings are unchanged.
-Its numbered outputs use `generated/slice-183-review/` and `generated/slice-183-build/`;
+The [Elsie Summer eating/drinking batch](development/slice-184.md) adds six
+strips with twenty-two source frames and eight native West mirrors. Forehead,
+face, closed eyelids, neckline, exposed arms, moving hands and ankles follow
+the palette. Hair, lashes, eye details, mouth interiors, earrings, gold scarf,
+blue shawl, dress and shoes stay original. Native timing, directions, seated
+status and final-frame holds are preserved. Prior regions, color roles and
+mappings are unchanged.
+Its numbered outputs use `generated/slice-184-review/` and `generated/slice-184-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
