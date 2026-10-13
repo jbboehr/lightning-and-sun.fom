@@ -4233,7 +4233,10 @@
       "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_spring_eat_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_spring_drink_east.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_spring_drink_north.png": "Default",
-      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_spring_drink_south.png": "Default"
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_spring_drink_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_spring_action_east.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_spring_action_north.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_spring_action_south.png": "Default"
     },
     "hotkey": "Z",
     "id": "elsie",
