@@ -1106,7 +1106,14 @@ includes all eight South-facing cases. Forehead, face, neckline and the moving
 writing hand follow the palette; hair, eyes, cosmetics, jewelry, gown, shoes,
 book and quill stay original. Native timing and complex phases are preserved.
 Prior regions, color roles and mappings are unchanged.
-Its numbered outputs use `generated/slice-179-review/` and `generated/slice-179-build/`;
+The [Elsie Spring seated-writing batch](development/slice-180.md) adds six
+strips with sixteen source frames across East and South start, loop and end.
+The full review includes all twenty-four cases, including native West mirrors.
+Forehead, face, visible neckline and the moving writing hand follow the palette;
+hair, eyes, cosmetics, jewelry, gown, shoes, book and quill stay original.
+Native timing, complex phases, seated status and West mirroring are preserved.
+Prior regions, color roles and mappings are unchanged.
+Its numbered outputs use `generated/slice-180-review/` and `generated/slice-180-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

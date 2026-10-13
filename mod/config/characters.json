@@ -4242,7 +4242,13 @@
       "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_spring_shocked_end_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_start_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_loop_south.png": "Default",
-      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_end_south.png": "Default"
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_end_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_sit_start_east.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_sit_loop_east.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_sit_end_east.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_sit_start_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_sit_loop_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Spring/spr_npc_elsie_specialanimation_spring_write_sit_end_south.png": "Default"
     },
     "hotkey": "Z",
     "id": "elsie",

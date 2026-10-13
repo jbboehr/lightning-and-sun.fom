@@ -417,10 +417,11 @@ Connected dark temple edges follow side-facing eye expressions; other blonde
 hair, lashes, eye details, mouth interiors, blue coat, orange shirt and cuffs,
 trousers, brown boots, stick and motion trail stay original.
 Elsie's Spring standing, walking, blinking, sitting, eating, drinking, general
-action, shocked-reaction and standing-writing sprites follow her selected palette
-too. Her forehead, face, closed eyelids, neckline, moving hands and exposed ankles
-change; gray hair, eyebrows, lashes, eye details, mouth interiors, cosmetics,
-earrings, pink gown, shoes, book and quill retain their original colors.
+actions, shocked reactions and writing while standing or seated follow her
+selected palette too. Her forehead, face, closed eyelids, neckline, moving hands
+and exposed ankles change; gray hair, eyebrows, lashes, eye details, mouth
+interiors, cosmetics, earrings, pink gown, shoes, book and quill retain their
+original colors.
 Z switches her portraits and these world sprites together.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
