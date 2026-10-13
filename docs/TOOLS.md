@@ -1125,7 +1125,13 @@ neckline, exposed arms, hands and ankles follow the palette. Hair, eye details,
 earrings, gold scarf, blue shawl, dress and shoes stay original. Native timing,
 directions and pause settings are preserved. Prior regions, color roles and
 mappings are unchanged.
-Its numbered outputs use `generated/slice-182-review/` and `generated/slice-182-build/`;
+The [Elsie Summer blinking/sitting batch](development/slice-183.md) adds five
+strips with nine source frames and four native West mirrors. Forehead, face,
+closed eyelids, neckline, exposed arms, hands and ankles follow the palette.
+Hair, lashes, eye details, earrings, gold scarf, blue shawl, dress and shoes
+stay original. Native timing, directions and seated status are preserved.
+Prior regions, color roles and mappings are unchanged.
+Its numbered outputs use `generated/slice-183-review/` and `generated/slice-183-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
