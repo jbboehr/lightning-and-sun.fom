@@ -4172,7 +4172,8 @@
       "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_eat_south.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_action_east.png": "Default",
       "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_action_north.png": "Default",
-      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_action_south.png": "Default"
+      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_winter_action_south.png": "Default",
+      "assets/animations/NPCs/Dell/Sprites/Winter/spr_npc_dell_specialanimation_winter_swing_stick_east.png": "Default"
     },
     "hotkey": "Y",
     "id": "dell",

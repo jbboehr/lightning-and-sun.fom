@@ -1061,7 +1061,14 @@ review cases. Faces and moving hands follow the palette; blonde hair, eyebrow
 edges, eye details, blue coat, orange shirt and cuffs, trousers and brown boots
 stay original. Native timing, final-frame holds and speaking-pause configuration
 are preserved. All previous regions and target mappings are unchanged.
-Its numbered outputs use `generated/slice-172-review/` and `generated/slice-172-build/`;
+The [Dell Winter stick-swing batch](development/slice-173.md) adds one strip,
+completing her four seasonal sprite sets. Seven source frames and seven native
+West mirrors give fourteen review cases. Faces, closed eyelids and moving hands
+follow the palette; blonde hair, eye details, clothing, boots, stick and motion
+trail stay original. Native frame metadata, timing and speaking-pause
+configuration are preserved. All previous regions and target mappings are
+unchanged.
+Its numbered outputs use `generated/slice-173-review/` and `generated/slice-173-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
