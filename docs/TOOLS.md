@@ -1138,7 +1138,14 @@ the palette. Hair, lashes, eye details, mouth interiors, earrings, gold scarf,
 blue shawl, dress and shoes stay original. Native timing, directions, seated
 status and final-frame holds are preserved. Prior regions, color roles and
 mappings are unchanged.
-Its numbered outputs use `generated/slice-184-review/` and `generated/slice-184-build/`;
+The [Elsie Summer general-actions batch](development/slice-185.md) adds three
+strips with twenty-one source frames and seven native West mirrors. Forehead,
+face, neckline, exposed arms, moving hands and ankles follow the palette.
+Hair, lashes, eye details, earrings, gold scarf, blue shawl, dress and shoes
+stay original. Native timing, directions, standing status, speaking pause and
+final-frame holds are preserved. Prior regions, color roles and mappings are
+unchanged.
+Its numbered outputs use `generated/slice-185-review/` and `generated/slice-185-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.

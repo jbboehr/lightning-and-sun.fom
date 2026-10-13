@@ -421,10 +421,10 @@ singing and writing while standing or seated. Her forehead, face, closed eyelids
 neckline, moving hands and exposed ankles change; gray hair, eyebrows, lashes,
 eye details, mouth interiors, cosmetics, earrings, pink gown, shoes, book, quill
 and floating music notes retain their original colors.
-Her Summer standing, walking, blinking, sitting, eating and drinking sprites
-follow the palette too, including closed eyelids, exposed arms, moving hands
-and ankles. Mouth interiors, her blue shawl, dress, earrings, gold scarf and
-shoes keep their original colors.
+Her Summer standing, walking, blinking, sitting, eating, drinking and general
+action sprites follow the palette too, including closed eyelids, exposed arms,
+moving hands and ankles. Mouth interiors, her blue shawl, dress, earrings, gold
+scarf and shoes keep their original colors.
 Z switches her portraits and these world sprites together.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth

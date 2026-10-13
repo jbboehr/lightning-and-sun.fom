@@ -4268,7 +4268,10 @@
       "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_eat_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_drink_east.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_drink_north.png": "Default",
-      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_drink_south.png": "Default"
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_drink_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_action_east.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_action_north.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_summer_action_south.png": "Default"
     },
     "hotkey": "Z",
     "id": "elsie",
