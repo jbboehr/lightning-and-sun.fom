@@ -1180,6 +1180,13 @@ blue collar, burgundy gown, pink trim and shoes stay original. Native metadata,
 linear cycles and standing status are preserved. Current outputs use
 `generated/review/` and `generated/build/`; the fixed comparison baseline is
 `local/fixtures/slice-188-build/characters/elsie`.
+The [Elsie Autumn blinking/sitting batch](development/slice-190.md) adds five
+strips with nine source frames and four native West mirrors. Face, closed
+eyelids, neckline and hands follow the palette; hair, lashes, eye details,
+gold earrings, blue collar, burgundy gown, pink trim and shoes stay original.
+Native durations, linear cycles and seated status are preserved. Current outputs
+use `generated/review/` and `generated/build/`; the fixed comparison baseline is
+`local/fixtures/slice-189-build/characters/elsie`.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
