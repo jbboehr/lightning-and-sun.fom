@@ -4303,7 +4303,10 @@
       "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_drink_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_action_east.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_action_north.png": "Default",
-      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_action_south.png": "Default"
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_action_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_specialanimation_autumn_write_start_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_specialanimation_autumn_write_loop_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_specialanimation_autumn_write_end_south.png": "Default"
     },
     "hotkey": "Z",
     "id": "elsie",
