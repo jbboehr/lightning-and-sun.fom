@@ -431,9 +431,9 @@ blinking, sitting, eating, drinking, general actions, writing (standing and
 seated) and singing. Face, closed eyelids, neckline and moving hands change.
 Hair, lashes, eye details, mouth interiors, gold earrings, blue collar, burgundy
 gown, pink trim, shoes, book, quill and music notes keep their original colors.
-Her Winter standing, walking, blinking, sitting, eating and drinking sprites
-also follow the palette. Exposed facial skin and closed eyelids change;
-North-facing frames have no exposed skin and stay original. Mouth interiors,
+Her Winter standing, walking, blinking, sitting, eating, drinking and general
+action sprites also follow the palette. Exposed facial skin and closed eyelids
+change; North-facing frames have no exposed skin and stay original. Mouth interiors,
 gray hair, lashes, eye details, gold hood, cream fur trim, moving gloves,
 green dress, brooch and boots retain their colors.
 Z switches her portraits and these world sprites together.
