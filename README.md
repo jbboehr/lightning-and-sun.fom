@@ -426,8 +426,9 @@ walking, blinking, sitting, eating, drinking, general actions, writing and singi
 Closed eyelids, exposed arms, moving hands and ankles change. Mouth interiors,
 her blue shawl, dress, earrings, gold scarf, shoes, book, quill and music notes
 keep their original colors.
-Her Autumn standing, walking, blinking, sitting, eating and drinking sprites
-also follow the palette. Face, closed eyelids, neckline and moving hands change.
+Her Autumn standing, walking, blinking, sitting, eating, drinking and general
+action sprites also follow the palette. Face, closed eyelids, neckline and moving
+hands change.
 Hair, lashes, eye details, mouth interiors, gold earrings, blue collar, burgundy
 gown, pink trim and shoes keep their original colors.
 Z switches her portraits and these world sprites together.

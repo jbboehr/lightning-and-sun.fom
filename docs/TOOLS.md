@@ -1194,6 +1194,13 @@ hair, lashes, eye details, earrings, collar, gown, trim and shoes stay original.
 Native durations, seated status and final-frame holds are preserved. Current
 outputs use `generated/review/` and `generated/build/`; the fixed comparison
 baseline is `local/fixtures/slice-190-build/characters/elsie`.
+The [Elsie Autumn general-action batch](development/slice-192.md) adds three
+strips with twenty-one source frames and seven native West mirrors. Face,
+neckline and moving hands follow the palette; hair, lashes, eye details,
+earrings, collar, gown, trim and shoes stay original. Native durations, standing
+status and final-frame holds are preserved. Current outputs use
+`generated/review/` and `generated/build/`; the fixed comparison baseline is
+`local/fixtures/slice-191-build/characters/elsie`.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
