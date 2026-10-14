@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn olric_spring_actions_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/olric");
-    let baseline = root.join("generated/slice-016-build/characters/olric");
+    let baseline = root.join("local/fixtures/slice-016-build/characters/olric");
     let set = std::env::var_os("FOM_OLRIC_SPRING_ACTIONS_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/olric-world-trial.json"));

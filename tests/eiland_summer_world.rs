@@ -23,7 +23,7 @@ fn eiland_summer_world_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/eiland");
     let baseline = root.join(
-        "generated/characters-balor-valen-summer-eiland-spring-finish-trial/characters/eiland",
+        "local/fixtures/characters-balor-valen-summer-eiland-spring-finish-trial/characters/eiland",
     );
     let profile_path = std::env::var_os("FOM_EILAND_SUMMER_WORLD_PROFILE")
         .map(std::path::PathBuf::from)

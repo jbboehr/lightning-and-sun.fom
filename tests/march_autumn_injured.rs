@@ -54,7 +54,7 @@ fn color(value: &Value) -> u32 {
 fn march_autumn_injured_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/march");
-    let baseline = root.join("generated/characters-march-autumn-poses-trial/characters/march");
+    let baseline = root.join("local/fixtures/characters-march-autumn-poses-trial/characters/march");
     let profile_path = std::env::var_os("FOM_MARCH_AUTUMN_INJURED_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/march-world-trial.json"));

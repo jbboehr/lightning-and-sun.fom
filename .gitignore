@@ -3,6 +3,8 @@
 # Local game material and all derived images/packages.
 extracted/
 generated/
+# Durable local game sources, accepted test fixtures, and authoring tools.
+/local/
 .mistria-palette*
 backups/
 *.win

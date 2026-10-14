@@ -585,7 +585,7 @@ fn batch_reuse_reproduces_every_approved_adeline_mask() {
     let temp = tempfile::tempdir().unwrap();
     let output = temp.path().join("review");
     success(run(
-        &root.join("tmp/fields-of-mistria/assets.zip"),
+        &root.join("local/game/assets.zip"),
         &root.join("palettes/review/adeline.json"),
         &output,
     ));

@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn elsie_world_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/elsie");
-    let baseline = root.join("generated/slice-173-build/characters/elsie");
+    let baseline = root.join("local/fixtures/slice-173-build/characters/elsie");
     let set = std::env::var_os("FOM_ELSIE_WORLD_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/elsie-world-trial.json"));

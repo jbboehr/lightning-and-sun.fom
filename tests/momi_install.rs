@@ -100,7 +100,7 @@ fn check_frames(
 #[test]
 #[ignore = "requires local game archive, generated Rust package, and installed isolated MOMI lab"]
 fn installed_adeline_frames_and_metadata_match() -> Result<()> {
-    let original_file = fs::File::open("tmp/fields-of-mistria/assets.zip")?;
+    let original_file = fs::File::open("local/game/assets.zip")?;
     let installed_file = fs::File::open("tmp/momi-lab/assets.zip")?;
     let original = original_file.read_zip()?;
     let installed = installed_file.read_zip()?;
@@ -112,7 +112,7 @@ fn installed_adeline_frames_and_metadata_match() -> Result<()> {
     )?
     .to_rgba8();
     let expected = image::open(
-        "generated/momi-adeline-stylized/images/replace/spr_portrait_adeline_spring_neutral.png",
+        "local/fixtures/momi-adeline-stylized/images/replace/spr_portrait_adeline_spring_neutral.png",
     )?
     .to_rgba8();
     check_frames(&atlas, &new, UID, &expected)?;
@@ -171,7 +171,7 @@ fn installed_adeline_frames_and_metadata_match() -> Result<()> {
 #[test]
 #[ignore = "requires a locally generated toggle package installed in tmp/toggle-lab"]
 fn installed_toggle_preserves_vanilla_and_adds_both_blue_frames() -> Result<()> {
-    let original_file = fs::File::open("tmp/fields-of-mistria/assets.zip")?;
+    let original_file = fs::File::open("local/game/assets.zip")?;
     let installed_file = fs::File::open("tmp/toggle-lab/assets.zip")?;
     let original = original_file.read_zip()?;
     let installed = installed_file.read_zip()?;
@@ -205,7 +205,7 @@ fn installed_toggle_preserves_vanilla_and_adds_both_blue_frames() -> Result<()> 
         image::ImageFormat::Png,
     )?
     .to_rgba8();
-    let blue = image::open(format!("generated/momi-adeline-toggle/{variant}.png"))?.to_rgba8();
+    let blue = image::open(format!("local/fixtures/momi-adeline-toggle/{variant}.png"))?.to_rgba8();
     check_frames(&atlas, &atlas_meta, UID, &before)?;
     check_frames(&atlas, &atlas_meta, uid, &blue)?;
     ensure!(

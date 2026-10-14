@@ -23,7 +23,7 @@ fn eiland_spring_actions_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/eiland");
     let baseline =
-        root.join("generated/characters-balor-valen-eiland-world-trial/characters/eiland");
+        root.join("local/fixtures/characters-balor-valen-eiland-world-trial/characters/eiland");
     let profile_path = std::env::var_os("FOM_EILAND_SPRING_ACTIONS_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/eiland-world-trial.json"));

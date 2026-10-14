@@ -7,7 +7,7 @@ fn balor_spring_actions_cover_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/balor");
     let baseline =
-        root.join("generated/characters-balor-valen-eiland-world-trial/characters/balor");
+        root.join("local/fixtures/characters-balor-valen-eiland-world-trial/characters/balor");
     let set = std::env::var_os("FOM_BALOR_SPRING_ACTIONS_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/balor-world-trial.json"));

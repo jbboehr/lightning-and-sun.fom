@@ -6,7 +6,8 @@ use std::{fs, path::Path, process::Command};
 fn hayden_winter_masks_preserve_skin_colored_sleeves_and_cover_neckline() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/hayden");
-    let baseline = root.join("generated/characters-world-autumn-special-trial/characters/hayden");
+    let baseline =
+        root.join("local/fixtures/characters-world-autumn-special-trial/characters/hayden");
     let set = root.join("palettes/sets/hayden-world-trial.json");
     let presets: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
     let profile: Value = serde_json::from_slice(

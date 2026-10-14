@@ -6,8 +6,8 @@ use std::{fs, path::Path, process::Command};
 fn reina_beach_finish_covers_seated_skin_and_preserves_outfit_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/reina");
-    let baseline =
-        root.join("generated/characters-reina-juniper-march-beach-swim-trial/characters/reina");
+    let baseline = root
+        .join("local/fixtures/characters-reina-juniper-march-beach-swim-trial/characters/reina");
     let set = std::env::var_os("FOM_REINA_BEACH_FINISH_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/reina-world-trial.json"));

@@ -52,7 +52,7 @@ fn march_autumn_actions_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/march");
     let baseline =
-        root.join("generated/characters-reina-juniper-march-autumn-trial/characters/march");
+        root.join("local/fixtures/characters-reina-juniper-march-autumn-trial/characters/march");
     let profile_path = std::env::var_os("FOM_MARCH_AUTUMN_ACTIONS_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/march-world-trial.json"));

@@ -35,11 +35,11 @@ generation substantially faster.
    their assertions or ignore descriptions.
 
 Historical tests keep their literal sprite lists, per-frame pixel expectations,
-fixed slice boundaries, and accepted output paths. Never point their baseline
-at `generated/build` or update it to the candidate output. Those comparisons
-must continue checking against the previously accepted artwork. Tests may still
-build the full current profile; the stable corpus supplies its inputs without
-requiring edits to historical tests.
+fixed slice boundaries, and accepted output paths under `local/fixtures/`.
+Never point their baseline at `generated/build` or update it to the candidate
+output. Those comparisons must continue checking against the previously accepted
+artwork. Tests may still build the full current profile; the stable corpus
+supplies its inputs without requiring edits to historical tests.
 
 This migration covers the nine cumulative world corpora above. Older Adeline
 experiments and portrait-only tests retain their separate fixtures.
@@ -54,6 +54,26 @@ Local artwork tests remain explicit opt-ins because their source images and
 accepted generated baselines are intentionally absent from Git. Use `--test`
 to select the affected targets, followed by `-- --ignored`; do not run every
 ignored test indiscriminately, since some exercise local installation tools.
+
+With the retained fixtures, Fabricator and Chromium installed, run the artwork,
+GML, browser and local archive review tests together:
+
+```sh
+FOM_REVIEW_BROWSER="$(command -v chromium)" \
+  nix-shell --pure --keep FOM_REVIEW_BROWSER --run 'bash scripts/check-local-assets.sh'
+```
+
+This excludes MOMI installation tests, which need a separately prepared lab.
+The [local storage layout](local-storage.md) keeps required inputs outside
+the disposable `tmp/` and `generated/` directories. The one-time storage
+migration changes path prefixes and formatting only; existing assertions and
+accepted fixture bytes stay unchanged.
+
+The archive review test currently fails its historical Adeline count assertion
+(143 expected, 282 produced by the current profile). The same failure was
+reproduced using the unmodified committed test. The command reports that failure;
+it does not skip it or change the expectation. See the
+[storage migration verification](local-storage.md#verification) for results.
 
 ## Migration verification
 

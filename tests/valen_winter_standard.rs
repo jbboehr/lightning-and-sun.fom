@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn valen_winter_standard_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/valen");
-    let baseline = root.join("generated/slice-002-build/characters/valen");
+    let baseline = root.join("local/fixtures/slice-002-build/characters/valen");
     let set = std::env::var_os("FOM_VALEN_WINTER_STANDARD_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/valen-world-trial.json"));

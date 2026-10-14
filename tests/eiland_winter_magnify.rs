@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn eiland_winter_magnify_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/eiland");
-    let baseline = root.join("generated/slice-008-build/characters/eiland");
+    let baseline = root.join("local/fixtures/slice-008-build/characters/eiland");
     let set = std::env::var_os("FOM_EILAND_WINTER_MAGNIFY_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/eiland-world-trial.json"));

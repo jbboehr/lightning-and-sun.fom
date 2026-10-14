@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn dell_autumn_actions_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/dell");
-    let baseline = root.join("generated/slice-164-build/characters/dell");
+    let baseline = root.join("local/fixtures/slice-164-build/characters/dell");
     let set = std::env::var_os("FOM_DELL_AUTUMN_ACTIONS_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/dell-world-trial.json"));

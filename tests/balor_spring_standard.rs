@@ -6,8 +6,8 @@ use std::{fs, path::Path, process::Command};
 fn balor_spring_standard_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/balor");
-    let baseline =
-        root.join("generated/characters-balor-valen-eiland-spring-actions-trial/characters/balor");
+    let baseline = root
+        .join("local/fixtures/characters-balor-valen-eiland-spring-actions-trial/characters/balor");
     let set = std::env::var_os("FOM_BALOR_SPRING_STANDARD_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/balor-world-trial.json"));

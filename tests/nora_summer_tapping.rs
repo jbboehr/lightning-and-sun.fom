@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn nora_summer_tapping_cover_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/nora");
-    let baseline = root.join("generated/slice-070-build/characters/nora");
+    let baseline = root.join("local/fixtures/slice-070-build/characters/nora");
     let set = std::env::var_os("FOM_NORA_SUMMER_TAPPING_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/nora-world-trial.json"));

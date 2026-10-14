@@ -6,7 +6,8 @@ use std::{fs, path::Path, process::Command};
 fn reina_world_masks_cover_skin_and_preserve_shared_color_jacket_folds() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/reina");
-    let baseline = root.join("generated/characters-world-wedding-finish-trial/characters/reina");
+    let baseline =
+        root.join("local/fixtures/characters-world-wedding-finish-trial/characters/reina");
     let set = std::env::var_os("FOM_REINA_WORLD_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/reina-world-trial.json"));

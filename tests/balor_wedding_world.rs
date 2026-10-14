@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn balor_wedding_world_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/balor");
-    let baseline = root.join("generated/slice-005-build/characters/balor");
+    let baseline = root.join("local/fixtures/slice-005-build/characters/balor");
     let set = std::env::var_os("FOM_BALOR_WEDDING_WORLD_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/balor-world-trial.json"));

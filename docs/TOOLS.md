@@ -8,10 +8,11 @@ For authoring masks across characters and outfits, see the
 [batch review gallery workflow](development/batch-review.md).
 Use the [stable local test corpora](development/testing.md) when adding coverage;
 historical pixel tests keep their inputs at fixed paths and retain accepted baselines.
-The latest completed slice is available at
-[generated/review/index.html](../generated/review/index.html), with its compact
-[summary](../generated/review/summary.png). `generated/build/` points to the
-matching combined build. These are local shortcuts, updated after each slice.
+Generated galleries and packages are disposable. When present,
+[generated/review/index.html](../generated/review/index.html) and its
+[summary](../generated/review/summary.png) show the latest review. Required game
+sources, accepted baselines and tools live outside scratch storage; see the
+[local storage layout](development/local-storage.md) for paths and rebuilding.
 
 ## Build with Nix and Fenix
 
@@ -1153,8 +1154,8 @@ shoes, book and quill stay original. Native timing, standing status and phase
 transitions are preserved. This cycle has no West mirror or configured
 pause/final-frame-hold settings. Prior regions, color roles and mappings are
 unchanged.
-Its numbered outputs use `generated/slice-186-review/` and `generated/slice-186-build/`;
-the `generated/review/` and `generated/build/` shortcuts point to this slice.
+Its accepted fixtures are retained under `local/fixtures/slice-186-build/`.
+Numbered review/build outputs under `generated/` may be removed and rebuilt.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
@@ -1211,7 +1212,7 @@ The older replacement `package` command still permits at most two changed assets
 
 ```sh
 target/release/mistria-palette export \
-  --archive tmp/fields-of-mistria/assets.zip \
+  --archive local/game/assets.zip \
   --asset assets/animations/NPCs/Adeline/Portraits/Spring/spr_portrait_adeline_spring_neutral.png \
   --output extracted/adeline
 
@@ -1317,7 +1318,7 @@ updates a profile or persists into later commands. For example:
 
 ```sh
 target/release/mistria-palette build-characters \
-  --archive tmp/fields-of-mistria/assets.zip \
+  --archive local/game/assets.zip \
   --characters palettes/sets/characters-trial.json \
   --output generated/characters-update-review \
   --allow-source-hash-mismatch
@@ -1348,7 +1349,7 @@ Inventory the palettes and portrait colors from your own game archive:
 
 ```sh
 target/release/mistria-palette catalog \
-  --archive tmp/fields-of-mistria/assets.zip \
+  --archive local/game/assets.zip \
   --output generated/palette-catalog
 ```
 

@@ -7,7 +7,7 @@ fn balor_autumn_actions_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/balor");
     let baseline = root.join(
-        "generated/characters-balor-autumn-valen-writing-eiland-standard-trial/characters/balor",
+        "local/fixtures/characters-balor-autumn-valen-writing-eiland-standard-trial/characters/balor",
     );
     let set = std::env::var_os("FOM_BALOR_AUTUMN_ACTIONS_PRESETS")
         .map(std::path::PathBuf::from)

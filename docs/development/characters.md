@@ -1668,9 +1668,11 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The latest combined package adds Elsie's Summer standing-writing sprites.
-It is in `generated/build/package` (a shortcut to `generated/slice-186-build/package`).
-MOMI installation passed in the isolated `tmp/slice-186-playtest` lab.
+The latest accepted slice adds Elsie's Summer standing-writing sprites.
+Its fixtures are retained under `local/fixtures/slice-186-build/`.
+MOMI installation passed in the isolated `tmp/slice-186-playtest` lab before
+cleanup. That disposable lab and package have been removed; see the
+[local storage layout](local-storage.md) for rebuilding.
 It has no preview helper and does not replace the desktop launcher. Use the
 [complete offline review](../../../generated/review/index.html) to inspect all eight
 cases. This slice has one Elsie gallery with full views and enlarged face,

@@ -49,8 +49,8 @@ fn color(value: &Value) -> u32 {
 fn march_wedding_finish_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/march");
-    let baseline =
-        root.join("generated/characters-reina-juniper-march-wedding-pilot-trial/characters/march");
+    let baseline = root
+        .join("local/fixtures/characters-reina-juniper-march-wedding-pilot-trial/characters/march");
     let profile_path = std::env::var_os("FOM_MARCH_WEDDING_FINISH_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/march-world-trial.json"));

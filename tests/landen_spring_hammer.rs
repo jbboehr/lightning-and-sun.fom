@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn landen_spring_hammer_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/landen");
-    let baseline = root.join("generated/slice-050-build/characters/landen");
+    let baseline = root.join("local/fixtures/slice-050-build/characters/landen");
     let set = std::env::var_os("FOM_LANDEN_SPRING_HAMMER_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/landen-world-trial.json"));

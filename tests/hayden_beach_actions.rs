@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn hayden_beach_actions_cover_moving_skin_and_preserve_hat_and_swimwear() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/hayden");
-    let baseline = root.join("generated/characters-world-beach-pilot-trial/characters/hayden");
+    let baseline = root.join("local/fixtures/characters-world-beach-pilot-trial/characters/hayden");
     let set = std::env::var_os("FOM_HAYDEN_BEACH_ACTION_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/hayden-world-trial.json"));

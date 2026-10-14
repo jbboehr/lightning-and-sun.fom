@@ -7,7 +7,7 @@ fn eiland_autumn_standard_covers_skin_and_preserves_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/eiland");
     let baseline = root.join(
-        "generated/characters-balor-winter-actions-valen-finish-eiland-autumn-actions-trial/characters/eiland",
+        "local/fixtures/characters-balor-winter-actions-valen-finish-eiland-autumn-actions-trial/characters/eiland",
     );
     let set = std::env::var_os("FOM_EILAND_AUTUMN_STANDARD_PRESETS")
         .map(std::path::PathBuf::from)

@@ -22,8 +22,9 @@ fn color(value: &Value) -> u32 {
 fn eiland_spring_magnify_cover_moving_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/eiland");
-    let baseline = root
-        .join("generated/characters-balor-valen-eiland-spring-specials-trial/characters/eiland");
+    let baseline = root.join(
+        "local/fixtures/characters-balor-valen-eiland-spring-specials-trial/characters/eiland",
+    );
     let profile_path = std::env::var_os("FOM_EILAND_SPRING_MAGNIFY_PROFILE")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/profiles/eiland-world-trial.json"));

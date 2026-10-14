@@ -7,7 +7,7 @@ fn reina_wedding_pilot_covers_skin_and_preserves_outfit_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/reina");
     let baseline =
-        root.join("generated/characters-reina-juniper-beach-finish-trial/characters/reina");
+        root.join("local/fixtures/characters-reina-juniper-beach-finish-trial/characters/reina");
     let set = std::env::var_os("FOM_REINA_WEDDING_PILOT_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/reina-world-trial.json"));

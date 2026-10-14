@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn holt_summer_movement_cover_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/holt");
-    let baseline = root.join("generated/slice-090-build/characters/holt");
+    let baseline = root.join("local/fixtures/slice-090-build/characters/holt");
     let set = std::env::var_os("FOM_HOLT_SUMMER_MOVEMENT_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/holt-world-trial.json"));

@@ -6,7 +6,7 @@ use std::{fs, path::Path, process::Command};
 fn josephine_winter_actions_cover_skin_and_preserve_materials() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let original = root.join("extracted/test-corpus/josephine");
-    let baseline = root.join("generated/slice-133-build/characters/josephine");
+    let baseline = root.join("local/fixtures/slice-133-build/characters/josephine");
     let set = std::env::var_os("FOM_JOSEPHINE_WINTER_ACTIONS_PRESETS")
         .map(std::path::PathBuf::from)
         .unwrap_or_else(|| root.join("palettes/sets/josephine-world-trial.json"));
