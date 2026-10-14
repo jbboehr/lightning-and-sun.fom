@@ -1208,6 +1208,13 @@ earrings, collar, gown, trim, shoes, book and quill stay original. Native timing
 standing status and complex phases are preserved. Current outputs use
 `generated/review/` and `generated/build/`; the fixed comparison baseline is
 `local/fixtures/slice-192-build/characters/elsie`.
+The [Elsie Autumn seated-writing batch](development/slice-194.md) adds six
+strips with sixteen source frames and eight native West mirrors. Face, closed
+eyelids, neckline and the writing hand follow the palette; hair, eye details,
+earrings, collar, gown, trim, shoes, book and quill stay original. Native timing,
+seated status and complex phases are preserved. Current outputs use
+`generated/review/` and `generated/build/`; the fixed comparison baseline is
+`local/fixtures/slice-193-build/characters/elsie`.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
