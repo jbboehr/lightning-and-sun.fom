@@ -1156,6 +1156,15 @@ pause/final-frame-hold settings. Prior regions, color roles and mappings are
 unchanged.
 Its accepted fixtures are retained under `local/fixtures/slice-186-build/`.
 Numbered review/build outputs under `generated/` may be removed and rebuilt.
+The [Elsie Summer seated-writing batch](development/slice-187.md) adds six
+start/loop/end strips in East and South, with native West mirroring. Its complete
+review has sixteen source frames and eight mirrored cases. Forehead, face,
+closed eyelids, neckline and moving hands follow the palette; hair, eye details,
+earrings, gold scarf, blue shawl, dress, shoes, book and quill stay original.
+Native timing, seated status and phase transitions are preserved. Prior regions,
+color roles and mappings remain unchanged. Current outputs are available through
+`generated/review/` and `generated/build/`; the fixed comparison baseline is
+`local/fixtures/slice-186-build/characters/elsie`.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
