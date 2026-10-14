@@ -1234,6 +1234,12 @@ change; North-facing sitting remains identical. Lashes, hood, fur trim, gloves,
 dress, brooch and boots stay original. Native metadata and seated status are
 preserved. Outputs use `generated/review/` and `generated/build/`; the fixed
 baseline is `local/fixtures/slice-196-build/characters/elsie`.
+The [Elsie Winter eating/drinking batch](development/slice-198.md) adds six
+strips with twenty-two frames and eight native West mirrors. Face and closed
+eyelids change; North-facing frames remain identical. Mouth interiors, moving
+gloves and clothing stay original. Native metadata, seated status and final-frame
+holds are preserved. Outputs use `generated/review/` and `generated/build/`;
+the fixed baseline is `local/fixtures/slice-197-build/characters/elsie`.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
