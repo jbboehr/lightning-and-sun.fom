@@ -1187,6 +1187,13 @@ gold earrings, blue collar, burgundy gown, pink trim and shoes stay original.
 Native durations, linear cycles and seated status are preserved. Current outputs
 use `generated/review/` and `generated/build/`; the fixed comparison baseline is
 `local/fixtures/slice-189-build/characters/elsie`.
+The [Elsie Autumn eating/drinking batch](development/slice-191.md) adds six
+strips with twenty-two source frames and eight native West mirrors. Face,
+closed eyelids, neckline and moving hands follow the palette; mouth interiors,
+hair, lashes, eye details, earrings, collar, gown, trim and shoes stay original.
+Native durations, seated status and final-frame holds are preserved. Current
+outputs use `generated/review/` and `generated/build/`; the fixed comparison
+baseline is `local/fixtures/slice-190-build/characters/elsie`.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
