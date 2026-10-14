@@ -431,6 +431,10 @@ blinking, sitting, eating, drinking, general actions, writing (standing and
 seated) and singing. Face, closed eyelids, neckline and moving hands change.
 Hair, lashes, eye details, mouth interiors, gold earrings, blue collar, burgundy
 gown, pink trim, shoes, book, quill and music notes keep their original colors.
+Her Winter standing and walking sprites also follow the palette. Only exposed
+facial skin changes; North-facing frames have no exposed skin and stay original.
+Gray hair, eye details, gold hood, cream fur trim, gloves, green dress, brooch
+and boots retain their colors.
 Z switches her portraits and these world sprites together.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth

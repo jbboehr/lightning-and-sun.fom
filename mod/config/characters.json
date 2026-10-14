@@ -4315,7 +4315,13 @@
       "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_specialanimation_autumn_write_sit_end_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_specialanimation_autumn_sing_start_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_specialanimation_autumn_sing_loop_south.png": "Default",
-      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_specialanimation_autumn_sing_end_south.png": "Default"
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_specialanimation_autumn_sing_end_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Winter/spr_npc_elsie_winter_idle_north.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Winter/spr_npc_elsie_winter_idle_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Winter/spr_npc_elsie_winter_idle_east.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Winter/spr_npc_elsie_winter_walk_north.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Winter/spr_npc_elsie_winter_walk_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Winter/spr_npc_elsie_winter_walk_east.png": "Default"
     },
     "hotkey": "Z",
     "id": "elsie",

@@ -1222,6 +1222,12 @@ details, earrings, collar, gown, trim, shoes and music notes stay original.
 Native metadata, standing status and complex phases are preserved. Current
 outputs use `generated/review/` and `generated/build/`; the fixed comparison
 baseline is `local/fixtures/slice-194-build/characters/elsie`.
+The [Elsie Winter standing/walking batch](development/slice-196.md) adds six
+strips with fifteen frames and five native West mirrors. Only exposed facial
+skin changes; North-facing frames remain identical. Hood, fur trim, gloves,
+dress, brooch and boots retain their colors. Native metadata and linear cycles
+are preserved. Outputs use `generated/review/` and `generated/build/`; the
+fixed baseline is `local/fixtures/slice-195-build/characters/elsie`.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
