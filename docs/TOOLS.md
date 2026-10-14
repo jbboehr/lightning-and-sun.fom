@@ -1165,6 +1165,14 @@ Native timing, seated status and phase transitions are preserved. Prior regions,
 color roles and mappings remain unchanged. Current outputs are available through
 `generated/review/` and `generated/build/`; the fixed comparison baseline is
 `local/fixtures/slice-186-build/characters/elsie`.
+The [Elsie Summer singing batch](development/slice-188.md) adds three
+South-facing start/loop/end strips with twenty-five frames, completing all
+32 strips in her Summer world folder. Face, neckline, both moving hands and
+exposed ankles follow the palette. Hair, eye details, mouth interiors,
+earrings, scarf, shawl, dress, shoes and floating music notes stay original.
+Native metadata, standing status and complex phase transitions are preserved.
+Current outputs use `generated/review/` and `generated/build/`; the fixed
+comparison baseline is `local/fixtures/slice-187-build/characters/elsie`.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
