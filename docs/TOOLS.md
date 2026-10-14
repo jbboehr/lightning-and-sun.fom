@@ -1173,6 +1173,13 @@ earrings, scarf, shawl, dress, shoes and floating music notes stay original.
 Native metadata, standing status and complex phase transitions are preserved.
 Current outputs use `generated/review/` and `generated/build/`; the fixed
 comparison baseline is `local/fixtures/slice-187-build/characters/elsie`.
+The [Elsie Autumn standing/walking batch](development/slice-189.md) adds six
+North/South/East strips with fifteen source frames and five native West mirrors.
+Face, neckline and hands follow the palette; hair, eye details, gold earrings,
+blue collar, burgundy gown, pink trim and shoes stay original. Native metadata,
+linear cycles and standing status are preserved. Current outputs use
+`generated/review/` and `generated/build/`; the fixed comparison baseline is
+`local/fixtures/slice-188-build/characters/elsie`.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.

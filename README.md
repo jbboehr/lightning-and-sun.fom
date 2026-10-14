@@ -426,6 +426,9 @@ walking, blinking, sitting, eating, drinking, general actions, writing and singi
 Closed eyelids, exposed arms, moving hands and ankles change. Mouth interiors,
 her blue shawl, dress, earrings, gold scarf, shoes, book, quill and music notes
 keep their original colors.
+Her Autumn standing and walking sprites also follow the palette. Face, neckline
+and hands change; hair, eye details, gold earrings, blue collar, burgundy gown,
+pink trim and shoes keep their original colors.
 Z switches her portraits and these world sprites together.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth

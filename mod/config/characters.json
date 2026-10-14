@@ -4283,7 +4283,13 @@
       "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_specialanimation_summer_write_sit_end_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_specialanimation_summer_sing_start_south.png": "Default",
       "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_specialanimation_summer_sing_loop_south.png": "Default",
-      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_specialanimation_summer_sing_end_south.png": "Default"
+      "assets/animations/NPCs/Elsie/Sprites/Summer/spr_npc_elsie_specialanimation_summer_sing_end_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_idle_north.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_idle_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_idle_east.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_walk_north.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_walk_south.png": "Default",
+      "assets/animations/NPCs/Elsie/Sprites/Autumn/spr_npc_elsie_autumn_walk_east.png": "Default"
     },
     "hotkey": "Z",
     "id": "elsie",

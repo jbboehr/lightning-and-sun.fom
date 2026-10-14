@@ -3,11 +3,11 @@
 The combined trial includes Adeline's 282 reviewed animations, Hayden's 305,
 Ryis's 273, Reina's 278, Juniper's 305, Celine's 390, March's 398, Balor's 262,
 Valen's 257, Eiland's 277, Olric's 231, Landen's 119, Nora's 151, Holt's 143,
-Josephine's 167, Darcy's 92, Dell's 131, Elsie's 103, Errol's 36, Hemlock's 32,
+Josephine's 167, Darcy's 92, Dell's 131, Elsie's 109, Errol's 36, Hemlock's 32,
 Louis's 32, Luc's 32, Maple's 32, Merri's 32, Terithia's 32, Stillwell's 36,
 Taliferro's 36, Vera's 32, Wheedle's 32, Zorel's 32, and eight each for Darren,
 Linnet, Wiscar, and Wynne, plus Caldarus's 98 and Seridia's 164. Four generated
-variants per source give 19,416 variant strips from 4,854 sources. Caldarus's three
+variants per source give 19,440 variant strips from 4,860 sources. Caldarus's three
 dragon/statue strips and Seridia's 17 spectral Priestess strips and one dragon
 stay unchanged.
 All thirty-six characters start on
@@ -1446,6 +1446,13 @@ hands and exposed ankles follow the palette. Hair, eye details, mouth interiors,
 earrings, gold scarf, blue shawl, dress, shoes and floating music notes stay
 original. Native metadata, standing status and complex phase transitions are
 preserved. All previous regions, roles and mappings remain unchanged.
+The [Elsie Autumn standing/walking batch](slice-189.md) adds six strips.
+Her 109 sources comprise 36 portraits and seventy-three world strips. Fifteen
+source frames and five native West mirrors are in the complete offline review;
+user art approval is pending. Face, neckline and hands follow the palette.
+Hair, eye details, gold earrings, blue collar, burgundy gown, pink trim and shoes
+stay original. Native metadata, linear cycles and standing status are preserved.
+All previous regions, roles and mappings remain unchanged.
 Hayden's [Shadow folder audit](hayden-shadow-audit.md) confirms that its 29 strips
 are ground shadows/transparency and need no skin recoloring.
 The other portrait batches above still use their original overworld sprites.
@@ -1684,15 +1691,15 @@ dragon forms. The combined 36-character player package is installed separately
 in `tmp/seridia-playtest` without a preview helper. The desktop launcher still
 uses the earlier Zorel copy; native Seridia gameplay has not been exercised.
 
-The current slice adds Elsie's Summer singing sprites. The combined
-package is in `generated/build/package`; the previous accepted baseline is
-retained under `local/fixtures/slice-187-build/`. See the
+The current slice adds Elsie's Autumn standing and walking sprites. The combined
+package is in `generated/build/package`; the previous committed baseline is
+retained under `local/fixtures/slice-188-build/`. See the
 [local storage layout](local-storage.md) for rebuilding disposable outputs.
-MOMI installation passed in the isolated `tmp/slice-188-playtest` lab.
+MOMI installation passed in the isolated `tmp/slice-189-playtest` lab.
 It has no preview helper and does not replace the desktop launcher. Use the
-[complete offline review](../../../generated/review/index.html) to inspect all 25
+[complete offline review](../../../generated/review/index.html) to inspect all 20
 cases. This slice has one Elsie gallery with full views and enlarged face,
-hand and clothing details. Every source frame is included; this cycle has no West mirror.
+hand and clothing details. Every source frame and native West mirror is included.
 
 Shift+F5 skips outfit groups with no included portraits. Olric, Landen, Nora, Holt,
 Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis, Luc, Maple, Merri,
