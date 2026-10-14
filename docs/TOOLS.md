@@ -1145,7 +1145,15 @@ Hair, lashes, eye details, earrings, gold scarf, blue shawl, dress and shoes
 stay original. Native timing, directions, standing status, speaking pause and
 final-frame holds are preserved. Prior regions, color roles and mappings are
 unchanged.
-Its numbered outputs use `generated/slice-185-review/` and `generated/slice-185-build/`;
+The [Elsie Summer standing-writing batch](development/slice-186.md) adds three
+strips with eight South-facing frames across the start, loop and end phases.
+Forehead, face, closed eyelids, neckline, moving hands and ankles follow the
+palette. Hair, lashes, eye details, earrings, gold scarf, blue shawl, dress,
+shoes, book and quill stay original. Native timing, standing status and phase
+transitions are preserved. This cycle has no West mirror or configured
+pause/final-frame-hold settings. Prior regions, color roles and mappings are
+unchanged.
+Its numbered outputs use `generated/slice-186-review/` and `generated/slice-186-build/`;
 the `generated/review/` and `generated/build/` shortcuts point to this slice.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
