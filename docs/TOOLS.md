@@ -1215,6 +1215,13 @@ earrings, collar, gown, trim, shoes, book and quill stay original. Native timing
 seated status and complex phases are preserved. Current outputs use
 `generated/review/` and `generated/build/`; the fixed comparison baseline is
 `local/fixtures/slice-193-build/characters/elsie`.
+The [Elsie Autumn singing batch](development/slice-195.md) adds three strips
+with twenty-five South-facing frames, completing her Autumn world folder. Face,
+neckline and both moving hands follow the palette; mouth interiors, hair, eye
+details, earrings, collar, gown, trim, shoes and music notes stay original.
+Native metadata, standing status and complex phases are preserved. Current
+outputs use `generated/review/` and `generated/build/`; the fixed comparison
+baseline is `local/fixtures/slice-194-build/characters/elsie`.
 The combined collection uses their new `*-world-trial.json` sets; their
 portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
