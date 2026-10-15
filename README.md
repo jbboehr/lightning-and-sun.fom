@@ -436,6 +436,7 @@ action sprites also follow the palette. Exposed facial skin and closed eyelids
 change; North-facing frames have no exposed skin and stay original. Mouth interiors,
 gray hair, lashes, eye details, gold hood, cream fur trim, moving gloves,
 green dress, brooch and boots retain their colors.
+Winter standing writing also follows the palette; the book and quill stay original.
 Z switches her portraits and these world sprites together.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
