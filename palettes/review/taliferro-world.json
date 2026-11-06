@@ -1,0 +1,27 @@
+{
+  "label": "Taliferro all four seasonal world outfits and eating actions",
+  "prefixes": [
+    "assets/animations/NPCs/Taliferro/Sprites/"
+  ],
+  "source_colors": [
+    "#FFDBB8",
+    "#F2A174",
+    "#C4613B",
+    "#762E21",
+    "#FCC49A",
+    "#DE7E48",
+    "#EFA67A",
+    "#FCDEBE"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#91AFCB",
+    "#7393B5",
+    "#7CA4C3",
+    "#9ABCDA"
+  ],
+  "reference_profile": "../profiles/taliferro-world-trial.json"
+}

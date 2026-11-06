@@ -149,3 +149,8 @@ Local evidence includes `tmp/parallel-character-final-checks.log`,
 `tmp/reina-integration-audit-report.json`, and
 `tmp/parallel-art-review-final.md`. The individual author records contain their
 corpus, mask roundtrip, and mutation-check evidence.
+
+The 2026-11-05 [mouth follow-up audit](reina-juniper-mouth-followups.md)
+checked all 470 portrait frames. No concrete mask defect was isolated; the
+existing source-backed lip/interior treatment remains unchanged. The subjective
+appearance concern is not declared fixed or newly accepted.

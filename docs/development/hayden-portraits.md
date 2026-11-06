@@ -131,3 +131,8 @@ Known art follow-up: the user noticed a few pixels that still look wrong in the
 embarrassed expression. Their exact positions and source colors have not yet
 been isolated. The user accepted this checkpoint and deferred that cleanup;
 passing the recipe checks does not establish that every art detail is correct.
+
+The 2026-11-05 [embarrassed-expression audit](hayden-embarrassed-followup.md)
+covers both frames in all six outfits and all five choices. No concrete mask
+defect was isolated, so the source blush/mouth treatment remains unchanged; the
+unspecified historical appearance report still needs visual judgment.

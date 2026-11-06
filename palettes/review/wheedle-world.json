@@ -1,0 +1,39 @@
+{
+  "label": "Wheedle all four seasonal world outfits",
+  "prefixes": [
+    "assets/animations/NPCs/Wheedle/Sprites/"
+  ],
+  "source_colors": [
+    "#F6C38D",
+    "#D39876",
+    "#AF7456",
+    "#A56C54",
+    "#81503C",
+    "#553728",
+    "#D89D7A",
+    "#E5AC7E",
+    "#B57657",
+    "#7C5846",
+    "#F6C897",
+    "#DCA77C",
+    "#C18561",
+    "#7F523E"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#5C7FAB",
+    "#445F83",
+    "#2D3F57",
+    "#84A4C1",
+    "#8EACC9",
+    "#6C89AE",
+    "#3F678D",
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/wheedle-world-trial.json"
+}

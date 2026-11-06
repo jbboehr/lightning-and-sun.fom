@@ -246,3 +246,33 @@ and review rates plus verification time, with a separate allowance for new
 materials and P5/P6. Update the range after each wave. If complex forms or UI
 integration materially change scope, record that fact before widening the plan.
 Finishing a batch does not erase pending acceptance or authorize deferred features.
+
+## Second batch checkpoint — 2026-11-05
+
+Wheedle/Zorel authoring and combined checks are complete; paired/full-collection installation and
+exact removal pass. Named portrait details were audited without a concrete mask
+defect; the prior treatment is retained and subjective judgment remains pending.
+See [second-batch evidence](../development/second-finish-batch-2026-11-05.md).
+The user-approved batch used two character authors plus portrait follow-up work,
+required no local GPU and does not close the release rendering/input gate.
+
+The user subsequently reported Reina mouth issues and no other issues in the
+displayed second batch. Preserve displayed non-Reina acceptance without inferring
+inspection depth or gameplay acceptance. A focused Reina-only correction is
+authorized; retain the original review, prior art lineage and unrelated artwork.
+Authoring, material checks and CPU browser review require no local GPU.
+
+Reina's reported lower-mouth skin spikes are corrected in a new preserved
+lineage. Standard/material checks and targeted installation/removal pass;
+the user accepted the displayed correction, inspection depth unspecified. See the
+[correction evidence](../development/reina-mouth-correction.md).
+
+## Third batch — Taliferro and Vera
+
+All 120 world strips are authored and validated. Combined checks and full
+36-character install/verify/remove pass, including accepted Reina output.
+The user accepted the displayed Taliferro/Vera artwork with "looks good to me"
+and requested a commit and the next batch. Inspection depth is unspecified;
+live-game acceptance remains separate. See the
+[batch evidence](../development/third-finish-batch-2026-11-05.md). This approved
+P2 batch used two independent character authors and required no local GPU.

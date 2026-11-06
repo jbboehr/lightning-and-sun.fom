@@ -6,7 +6,8 @@ Updated 2026-11-05. This is the current project overview. The original
 The user approved the finish plan on 2026-11-05 with "let's do it".
 Implementation is authorized; inventory and Louis pilot validation are complete.
 Public publishing and art acceptance remain separate. The user explicitly authorized subagents later in the
-same session; character authors completed the active four-character batch in separate files.
+same session; character authors completed the first batch in separate files. The user approved the next
+Wheedle/Zorel and portrait follow-up batch with "go for it".
 The [finish plan](plans/finish.md) defines batches, dependencies and acceptance.
 
 ## Current position
@@ -20,11 +21,11 @@ and limits; raw asset coverage is not a measure of remaining effort.
 | --- | --- |
 | Core toolkit and runtime | Implemented; current standard checks pass |
 | Selected portrait inventory | All 2,201 strips for 36 characters included; some intentionally unchanged |
-| Selected world inventory | 2,841 of 4,159 strips included; current batch integrated |
-| Seasonal coverage | 20 characters complete, including Elsie, Louis and Merri |
-| Art acceptance | Elsie accepted; batch approval pending; Louis glasses treatment accepted with a reservation; portrait follow-ups remain |
+| Selected world inventory | 3,073 of 4,159 strips included; third batch integrated |
+| Seasonal coverage | 24 characters complete, including Taliferro and Vera |
+| Art acceptance | Elsie, displayed second-batch non-Reina art, corrected Reina and displayed Taliferro/Vera art accepted; first-batch approval limits preserved |
 | Release controls | Native Settings page and opt-in saved choices pass API/storage checks; rendered/input acceptance pending |
-| Integration confidence | Current full-collection install/verify/remove passes; native UI/storage probes pass; gameplay/render acceptance remains |
+| Integration confidence | Current full-collection install/verify/remove passes with accepted Reina correction; gameplay/render acceptance remains |
 
 ## Approved finish line
 
@@ -48,13 +49,13 @@ and known conflicts still need regression checks and clear documentation.
 
 ## Priority and dependencies
 
-P0 pilot validation is complete. Remaining implementation rows are approved; P1 and P5 are active.
+P0 pilot validation is complete. Remaining implementation rows are approved; P1 Reina mouth correction and the P2 Wheedle/Zorel and Taliferro/Vera batches are validated and accepted as displayed. The user requested a commit and the next Stillwell/cameo batch. P5 implementation is complete; rendered/input acceptance remains.
 
 | Order | Outcome | Dependency / state | Local GPU |
 | --- | --- | --- | --- |
 | P0 | Inventory/test repair and measured pilot validated | Louis measured and validated; artwork acceptance pending; see [pilot evidence](development/louis-world.md) and [inventory](development/finish-inventory.md) | No |
-| P1 | Finish existing-character world gaps and named portrait defects | All 45 baseline strip gaps covered; named portrait follow-ups remain; batch art review pending | No for authoring/tests |
-| P2 | Finish smaller inventories and four cameo characters | Louis/Merri validated; 345 raw strips remain | No for authoring/tests |
+| P1 | Finish existing-character world gaps and named portrait defects | All 45 baseline strip gaps covered; Hayden/Juniper displayed details accepted; Reina mouth correction accepted as displayed | No for authoring/tests |
+| P2 | Finish smaller inventories and four cameo characters | Louis/Merri/Wheedle/Zorel/Taliferro/Vera validated; 113 raw strips remain | No for authoring/tests |
 | P3 | Finish Errol, Hemlock, Luc, Maple and Terithia | Proven batching workflow; 558 raw strips | No for authoring/tests |
 | P4 | Finish Caldarus and Seridia, including an explicit special-form audit | 367 strips need authoring/review; 18 spectral strips audited unchanged | No for authoring/tests |
 | P5 | Add one selection menu and opt-in remembered choices using the existing runtime | Native menu/API and real storage/restart/failure phases pass; rendered/input acceptance remains | CPU development; GPU for live verification |
@@ -76,14 +77,21 @@ silently dropping assets. Rows reconcile the complete raw omission inventory.
 - Validate every changed asset and palette per batch. Run full collection and
   isolated installation checks at wave boundaries and after integration changes;
   do not repeat them for each individual action. Preserve historical assertions.
-- Finish the active batch (Louis, Merri, Adeline Beach/Wedding, Juniper Beach Accident and P5 controls) and its integrated checks before requesting one consolidated review, as requested by the user.
+- Finish each active batch and its integrated checks before requesting one consolidated review, as requested by the user.
 - Track authored, validated and user-accepted art separately. Batch reviews may
   be consolidated; silence and requests to continue do not count as art approval.
 - Keep one owner for shared registry/count/runtime integration. Two character
   authors are authorized; their file ownership is separate and integration stays
   with the parent. The menu/storage source probe and runtime review are complete.
 
-Current batch evidence: [integration record](development/finish-batch-2026-11-05.md). Combined checks and full installation/removal pass; the batch awaits consolidated art review.
+First batch evidence: [integration record](development/finish-batch-2026-11-05.md). Combined checks and full installation/removal pass; broader art acceptance remains pending.
+
+Second batch: combined checks and full-collection installation/removal pass. The user reported no issues outside Reina's mouth; record displayed non-Reina art acceptance, inspection depth unspecified. Reina's skin-spike correction is validated and accepted as displayed; see the [correction evidence](development/reina-mouth-correction.md) and [batch record](development/second-finish-batch-2026-11-05.md). No local GPU was required.
+
+Third batch complete: Taliferro and Vera world art is authored and validated.
+Combined checks and full-collection installation/removal pass, preserving accepted
+Reina and prior art. Displayed Taliferro/Vera art is accepted; see the
+[third-batch evidence](development/third-finish-batch-2026-11-05.md). No local GPU was required.
 
 ## Open decisions and limits
 
