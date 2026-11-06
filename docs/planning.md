@@ -14,18 +14,18 @@ The [finish plan](plans/finish.md) defines batches, dependencies and acceptance.
 
 The original investigation/proof of concept is complete. The Rust pipeline,
 per-character runtime and reversible CLI installation are implemented. The
-remaining work is primarily world artwork, art acceptance and release verification. See the dated [assessment](development/project-status.md) for evidence
+planned content authoring is complete. Remaining work is art acceptance and release verification. See the dated [assessment](development/project-status.md) for evidence
 and limits; raw asset coverage is not a measure of remaining effort.
 
 | Area | Status |
 | --- | --- |
 | Core toolkit and runtime | Implemented; current standard checks pass |
 | Selected portrait inventory | All 2,201 strips for 36 characters included; some intentionally unchanged |
-| Selected world inventory | 3,744 of 4,159 strips included; seventh batch integrated |
-| Complete world coverage | 34 characters, including Terithia |
-| Art acceptance | Elsie, displayed second-batch non-Reina art, corrected Reina, displayed Taliferro/Vera, Errol/Hemlock, Luc/Maple and Terithia art accepted; first/fourth-batch approval limits preserved |
+| Selected world inventory | All 4,111 recolorable strips included; remaining 30 shadows and 18 spectral strips audited unchanged |
+| Complete world coverage | All 36 recolorable inventories authored and validated |
+| Art acceptance | Elsie, displayed second-batch non-Reina art, corrected Reina, displayed Taliferro/Vera, Errol/Hemlock, Luc/Maple, Terithia and Caldarus/Seridia art accepted; first/fourth-batch approval limits preserved |
 | Release controls | Native Settings page and opt-in saved choices pass API/storage checks; rendered/input acceptance pending |
-| Integration confidence | Current full-collection install/verify/remove passes with accepted Reina correction; gameplay/render acceptance remains |
+| Integration confidence | Full 36-character / 25,248-variant install/verify/remove passes, including separate installed spectral checks; gameplay/render acceptance remains |
 
 ## Approved finish line
 
@@ -49,7 +49,7 @@ and known conflicts still need regression checks and clear documentation.
 
 ## Priority and dependencies
 
-P0 pilot validation is complete. P1 Reina mouth correction and the P2 Wheedle/Zorel and Taliferro/Vera batches are validated and accepted as displayed. P2 authoring is complete; Stillwell/cameo art acceptance and older first-batch acceptance limits remain. P3 authoring is validated and its displayed artwork accepted. P4 implementation is approved. P5 implementation is complete; rendered/input acceptance remains.
+P0 pilot validation is complete. P1 Reina mouth correction and the P2 Wheedle/Zorel and Taliferro/Vera batches are validated and accepted as displayed. P2 authoring is complete; Stillwell/cameo art acceptance and older first-batch acceptance limits remain. P3 and P4 authoring are validated and their displayed artwork accepted. P5 implementation is complete; rendered/input acceptance remains.
 
 | Order | Outcome | Dependency / state | Local GPU |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ P0 pilot validation is complete. P1 Reina mouth correction and the P2 Wheedle/Zo
 | P1 | Finish existing-character world gaps and named portrait defects | All 45 baseline strip gaps covered; Hayden/Juniper displayed details accepted; Reina mouth correction accepted as displayed | No for authoring/tests |
 | P2 | Finish smaller inventories and four cameo characters | All strips authored and validated; Stillwell/cameo artwork awaits review, earlier acceptance limits preserved | No for authoring/tests |
 | P3 | Finish Errol, Hemlock, Luc, Maple and Terithia | All strips authored, validated and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
-| P4 | Finish Caldarus and Seridia, including an explicit special-form audit | 367 strips need authoring/review; 18 spectral strips audited unchanged | No for authoring/tests |
+| P4 | Finish Caldarus and Seridia, including an explicit special-form audit | Complete and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
 | P5 | Add one selection menu and opt-in remembered choices using the existing runtime | Native menu/API and real storage/restart/failure phases pass; rendered/input acceptance remains | CPU development; GPU for live verification |
 | P6 | Validate complete artwork, package, installation/removal and natural gameplay; prepare supported Linux release | P1–P5 accepted | Yes for gameplay/rendering; CPU for other checks |
 
@@ -107,16 +107,36 @@ Sixth batch complete: Luc/Maple's 200 P3 world strips are authored, integrated
 and validated. Combined checks and full-collection installation/removal pass;
 displayed artwork is accepted, with inspection depth unspecified and no live-game
 acceptance inferred. See the
-[batch record](development/sixth-finish-batch-2026-11-06.md). Terithia follows,
-then Caldarus/Seridia. No local GPU is needed for authoring/tests.
+[batch record](development/sixth-finish-batch-2026-11-06.md). No local GPU was
+needed for authoring/tests.
 
 Seventh batch complete: Terithia's 131 world strips are authored, integrated and
 validated. Combined checks and full-collection installation/removal pass;
 displayed artwork is accepted, with inspection depth unspecified and no live-game
 acceptance inferred. See the
-[batch record](development/seventh-finish-batch-2026-11-06.md). Caldarus/Seridia's
-367 authoring/review strips are next. No local GPU or local model inference was
-required for this batch or is needed for P4 authoring/tests.
+[batch record](development/seventh-finish-batch-2026-11-06.md). No local GPU or
+local model inference was required.
+
+Eighth batch complete, 2026-11-06: Caldarus/Seridia world artwork is authored,
+integrated, validated and accepted as displayed. Earlier variants and accepted
+snapshots remain exact; audited spectral forms are preserved through installation.
+See the [batch record](development/eighth-finish-batch-2026-11-06.md). No local GPU
+was required. All planned world authoring is complete; intentional no-change
+assets and earlier approval limits remain recorded separately.
+
+The next work is acceptance and release verification, in this order:
+
+1. Close the recorded first/fourth art-acceptance gaps using their preserved
+   reviews. Keep any qualified approvals.
+2. Complete the CPU release checks for supported folder-mod handling, mismatch
+   refusal, clean Nix installation and package contents; prepare the Linux artifact
+   and end-user documentation.
+3. Check GPU availability and reserve it for visible menu, keyboard/controller,
+   persistence and natural-gameplay verification. Record the exercised matrix,
+   resolve concrete blockers and prepare release notes. Publishing remains separate.
+
+The content-complete alpha still requires the recorded art acceptance. The usable
+Linux release additionally requires the remaining P6 checks; neither is complete.
 
 ## Open decisions and limits
 
@@ -125,11 +145,11 @@ Source-backed menu/storage feasibility and actual engine IO/restart/failure chec
 Controller navigation and current gameplay behavior need live checks. No new runtime image loader or Rust/GML bridge
 is planned.
 
-The provisional allowance for remaining content is 12–24 combined author-hours
-(roughly 6–12 hours with two sustained authors), before user acceptance and release
-verification. Confidence is low: complex special forms and large action inventories
-are not represented by the repeated-pose pilot. This is a planning range rather
-than a delivery date; see [pilot measurements](development/louis-world.md).
+The provisional 12–24 combined author-hour content allowance is now historical;
+all planned authoring is finished. Character records retain measured work and
+verification evidence. Remaining effort depends on art acceptance, live GPU
+checks and clean Linux packaging, for which no delivery date is established.
+See [pilot measurements](development/louis-world.md) for the original estimate.
 
 ## Completed planning work
 

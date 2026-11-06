@@ -45,8 +45,8 @@ fn tracked_character_profiles_match_reviewed_coverage() {
         ("linnet", 20),
         ("wiscar", 19),
         ("wynne", 19),
-        ("caldarus", 98),
-        ("seridia", 164),
+        ("caldarus", 277),
+        ("seridia", 352),
     ]);
     let registry = read(root.join("mod/config/characters.json"));
     let registered: BTreeMap<_, _> = registry

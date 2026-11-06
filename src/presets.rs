@@ -40,9 +40,9 @@ pub fn load(path: &Path) -> Result<Set> {
     )?)?;
     ensure!(
         !profile.source_colors.is_empty()
-            && profile.source_colors.len() <= 32
+            && profile.source_colors.len() <= 64
             && !profile.regions.is_empty(),
-        "A profile needs source colors and reviewed regions"
+        "A profile needs 1–64 source colors and reviewed regions"
     );
     ensure!(
         profile.source_colors.iter().collect::<BTreeSet<_>>().len() == profile.source_colors.len(),

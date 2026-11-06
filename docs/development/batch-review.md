@@ -141,6 +141,11 @@ an optional `reference_profile` path relative to the configuration file. The
 reference profile must use the same normalized source-color set. References may
 be outside the selected directories; they are read and validated as evidence.
 
+Review configurations and preset profiles support 1–64 source colors. The bound
+allows separate tinted skin shades, such as Seridia's meditation glow, while
+retaining existing portrait roles and palette targets. Every source still needs
+one preview/target color; the source-color bound does not add palette choices.
+
 Optional `color_groups` partition the source colors for connected selections.
 For example, `[["#E8B271", "#CA9052"], ["#CE913B"]]` lets the first two skin
 shades connect while gold detail pixels form separate components. This lets a

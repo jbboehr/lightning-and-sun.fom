@@ -1,6 +1,6 @@
 # Plan to finish Lightning and Sun
 
-Updated 2026-11-06. **Approved by the user; content authoring through P3 validated. Recorded art and release acceptance gates remain.**
+Updated 2026-11-06. **Approved by the user; all planned content authoring through P4 validated. Recorded art and release acceptance gates remain.**
 The [planning overview](../planning.md) owns current status and priorities.
 The [assessment](../development/project-status.md) owns the starting evidence.
 
@@ -329,3 +329,31 @@ snapshots remain unchanged. Displayed Terithia artwork is accepted, with inspect
 depth unspecified and no live-game acceptance inferred. See the
 [batch record](../development/seventh-finish-batch-2026-11-06.md). No local GPU or
 local model inference is required. Caldarus/Seridia follow in P4.
+
+## Eighth batch — Caldarus and Seridia
+
+2026-11-06: Caldarus/Seridia world artwork is authored, integrated, validated and
+accepted as displayed, with inspection depth unspecified and no live-game
+acceptance inferred. Combined checks and full installation/removal pass,
+including unchanged spectral forms and earlier accepted outputs. All planned
+authoring is complete; intentional no-change assets, older art-acceptance limits
+and release gates remain. See the
+[batch record](../development/eighth-finish-batch-2026-11-06.md). No local GPU or
+local inference was required.
+
+## Remaining acceptance and release sequence
+
+1. Obtain acceptance of the recorded first/fourth-batch art gaps, preserving
+   earlier qualified approvals. Source
+   coverage and passing checks alone do not establish the content-complete alpha.
+2. Finish the CPU portion of P6: supported folder-mod and refusal-path regression,
+   clean pinned-Nix installation/removal, package-content inspection and updated
+   end-user instructions. Prepare the reproducible Linux artifact.
+3. Check and reserve a GPU, then exercise the P6 rendered menu/input and natural
+   gameplay matrix, including keyboard/controller and remembering/reset/restart.
+   Record actual coverage, fix release blockers and prepare release notes. The
+   usable Linux milestone requires this acceptance; publishing needs authorization.
+
+No further character-authoring batch is planned. New defects discovered during
+acceptance are bounded follow-ups with their own evidence, rather than a reason
+to widen the approved roster or palette choices.

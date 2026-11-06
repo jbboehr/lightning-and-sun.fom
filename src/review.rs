@@ -160,9 +160,9 @@ pub fn build(archive_path: &Path, config_path: &Path, output: &Path) -> Result<V
         "Review prefixes must be relative assets/ directories ending in /"
     );
     ensure!(
-        (1..=32).contains(&config.source_colors.len())
+        (1..=64).contains(&config.source_colors.len())
             && config.source_colors.len() == config.preview_colors.len(),
-        "Supply 1–32 source colors and one preview color per source"
+        "Supply 1–64 source colors and one preview color per source"
     );
     let mapping: BTreeMap<_, _> = config
         .source_colors

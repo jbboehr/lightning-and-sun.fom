@@ -34,7 +34,7 @@
     {"id": "linnet", "presets": "linnet-world-trial.json"},
     {"id": "wiscar", "presets": "wiscar-world-trial.json"},
     {"id": "wynne", "presets": "wynne-world-trial.json"},
-    {"id": "caldarus", "presets": "caldarus-portraits-trial.json"},
-    {"id": "seridia", "presets": "seridia-portraits-trial.json"}
+    {"id": "caldarus", "presets": "caldarus-world-trial.json"},
+    {"id": "seridia", "presets": "seridia-world-trial.json"}
   ]
 }
