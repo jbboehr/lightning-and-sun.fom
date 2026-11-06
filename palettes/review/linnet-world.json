@@ -1,0 +1,49 @@
+{
+  "label": "Linnet complete cameo world candidate",
+  "prefixes": [
+    "assets/animations/NPCs/Linnet/Sprites/"
+  ],
+  "source_colors": [
+    "#C7875C",
+    "#A36049",
+    "#6D3328",
+    "#4A1B16",
+    "#B16A52",
+    "#8F5042",
+    "#472721",
+    "#6A3126",
+    "#B9755A",
+    "#884636",
+    "#6C3327",
+    "#C87463",
+    "#BB6C5D",
+    "#5B241E",
+    "#9A5547",
+    "#9F5544",
+    "#A85E44",
+    "#7F3E30",
+    "#B97551"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#6687AD",
+    "#6687AD",
+    "#7F9FBD",
+    "#6687AD",
+    "#7F9FBD"
+  ],
+  "reference_profile": "../profiles/linnet-world-trial.json"
+}

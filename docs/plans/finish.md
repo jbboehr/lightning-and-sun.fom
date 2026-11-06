@@ -1,6 +1,6 @@
 # Plan to finish Lightning and Sun
 
-2026-11-05. **Approved by the user; first integration batch validated, artwork acceptance pending.**
+2026-11-05. **Approved by the user; content authoring through P2 validated. Recorded art and release acceptance gates remain.**
 The [planning overview](../planning.md) owns current status and priorities.
 The [assessment](../development/project-status.md) owns the starting evidence.
 
@@ -27,7 +27,7 @@ slices are authorized; public publishing and visual art acceptance remain separa
 actions. Parallel character authors were explicitly authorized later in the same
 session.
 
-The current execution batch includes the validated Louis and Merri pilots,
+The first execution batch included the validated Louis and Merri pilots,
 Adeline Beach/Wedding and Juniper Beach Accident authoring, and P5 controls.
 The user requested completion and integrated verification of this batch before
 one consolidated art-review request. The checkpoint is complete; see the
@@ -276,3 +276,17 @@ and requested a commit and the next batch. Inspection depth is unspecified;
 live-game acceptance remains separate. See the
 [batch evidence](../development/third-finish-batch-2026-11-05.md). This approved
 P2 batch used two independent character authors and required no local GPU.
+
+## Fourth batch — Stillwell and cameos
+
+The user explicitly requested this next batch after accepting Taliferro/Vera.
+Stillwell's 68 world strips and Darren/Linnet/Wiscar/Wynne's 45 root-level world
+strips are authored and validated with two author owners. Shared selection,
+coverage and registry integration, standard/material/GML checks and a full
+36-character install/verify/remove pass are complete. Existing variants remain
+unchanged. The user considers Linnet's preserved scar expected and authorized a
+commit after confirmation. Broader art and live-game acceptance remain separate;
+see the
+[batch evidence](../development/fourth-finish-batch-2026-11-05.md).
+No local GPU or local model inference was required. P3 begins with Errol/Hemlock
+after this batch; previously recorded approval limits remain in force.

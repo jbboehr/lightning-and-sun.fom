@@ -21,8 +21,8 @@ and limits; raw asset coverage is not a measure of remaining effort.
 | --- | --- |
 | Core toolkit and runtime | Implemented; current standard checks pass |
 | Selected portrait inventory | All 2,201 strips for 36 characters included; some intentionally unchanged |
-| Selected world inventory | 3,073 of 4,159 strips included; third batch integrated |
-| Seasonal coverage | 24 characters complete, including Taliferro and Vera |
+| Selected world inventory | 3,186 of 4,159 strips included; fourth batch integrated |
+| Complete world coverage | 29 characters, including Stillwell and all four cameos |
 | Art acceptance | Elsie, displayed second-batch non-Reina art, corrected Reina and displayed Taliferro/Vera art accepted; first-batch approval limits preserved |
 | Release controls | Native Settings page and opt-in saved choices pass API/storage checks; rendered/input acceptance pending |
 | Integration confidence | Current full-collection install/verify/remove passes with accepted Reina correction; gameplay/render acceptance remains |
@@ -49,13 +49,13 @@ and known conflicts still need regression checks and clear documentation.
 
 ## Priority and dependencies
 
-P0 pilot validation is complete. Remaining implementation rows are approved; P1 Reina mouth correction and the P2 Wheedle/Zorel and Taliferro/Vera batches are validated and accepted as displayed. The user requested a commit and the next Stillwell/cameo batch. P5 implementation is complete; rendered/input acceptance remains.
+P0 pilot validation is complete. P1 Reina mouth correction and the P2 Wheedle/Zorel and Taliferro/Vera batches are validated and accepted as displayed. P2 authoring is complete; Stillwell/cameo art acceptance and older first-batch acceptance limits remain. P3/P4 implementation is approved. P5 implementation is complete; rendered/input acceptance remains.
 
 | Order | Outcome | Dependency / state | Local GPU |
 | --- | --- | --- | --- |
 | P0 | Inventory/test repair and measured pilot validated | Louis measured and validated; artwork acceptance pending; see [pilot evidence](development/louis-world.md) and [inventory](development/finish-inventory.md) | No |
 | P1 | Finish existing-character world gaps and named portrait defects | All 45 baseline strip gaps covered; Hayden/Juniper displayed details accepted; Reina mouth correction accepted as displayed | No for authoring/tests |
-| P2 | Finish smaller inventories and four cameo characters | Louis/Merri/Wheedle/Zorel/Taliferro/Vera validated; 113 raw strips remain | No for authoring/tests |
+| P2 | Finish smaller inventories and four cameo characters | All strips authored and validated; Stillwell/cameo artwork awaits review, earlier acceptance limits preserved | No for authoring/tests |
 | P3 | Finish Errol, Hemlock, Luc, Maple and Terithia | Proven batching workflow; 558 raw strips | No for authoring/tests |
 | P4 | Finish Caldarus and Seridia, including an explicit special-form audit | 367 strips need authoring/review; 18 spectral strips audited unchanged | No for authoring/tests |
 | P5 | Add one selection menu and opt-in remembered choices using the existing runtime | Native menu/API and real storage/restart/failure phases pass; rendered/input acceptance remains | CPU development; GPU for live verification |
@@ -92,6 +92,12 @@ Third batch complete: Taliferro and Vera world art is authored and validated.
 Combined checks and full-collection installation/removal pass, preserving accepted
 Reina and prior art. Displayed Taliferro/Vera art is accepted; see the
 [third-batch evidence](development/third-finish-batch-2026-11-05.md). No local GPU was required.
+
+Fourth batch complete: Stillwell and the four cameo characters cover the final
+113 P2 strips. Combined checks and full-collection installation/removal pass;
+the user considers Linnet's preserved scar expected and authorized a commit.
+Broader art acceptance remains pending. See the [batch evidence](development/fourth-finish-batch-2026-11-05.md).
+The next content batch is Errol/Hemlock from P3. No local GPU is needed for authoring/tests.
 
 ## Open decisions and limits
 
