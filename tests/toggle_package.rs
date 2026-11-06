@@ -95,6 +95,7 @@ fn toggle_package_adds_a_variant_without_replacing_vanilla() {
             format!("{variant}.meta.toml"),
             format!("{variant}.png"),
             "gml/palette_assets.gml".into(),
+            "gml/palette_controls.gml".into(),
             "gml/palette_toggle.gml".into(),
             "manifest.toml".into()
         ]

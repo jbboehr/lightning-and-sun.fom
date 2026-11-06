@@ -202,7 +202,7 @@ fn toggle_package_preserves_each_expressions_frames_and_properties() {
     }
     let script = fs::read_to_string(output.join("gml/palette_assets.gml")).unwrap();
     let table = script
-        .strip_prefix("// Character rows: id, label, hotkey, preset names, animation groups.\nfunction lns_palette_definitions() { return ")
+        .strip_prefix("// Character rows: id, label, hotkey, preset names, animation groups, preset ids.\nfunction lns_palette_definitions() { return ")
         .and_then(|value| value.split_once("; }\n"))
         .map(|(table, _)| table)
         .expect("unexpected palette asset script wrapper");

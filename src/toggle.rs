@@ -100,6 +100,7 @@ pub struct RuntimeCharacter {
     pub character: &'static crate::characters::Character,
     pub groups: Vec<Vec<String>>,
     pub labels: Vec<String>,
+    pub ids: Vec<String>,
 }
 impl RuntimeCharacter {
     pub fn new(groups: Vec<Vec<String>>, variants: &[Variant]) -> Result<Self> {
@@ -114,10 +115,14 @@ impl RuntimeCharacter {
         let labels = std::iter::once("Vanilla".to_owned())
             .chain(variants.iter().map(|v| v.label.clone()))
             .collect();
+        let ids = std::iter::once("vanilla".to_owned())
+            .chain(variants.iter().map(|v| v.id.clone()))
+            .collect();
         Ok(Self {
             character,
             groups,
             labels,
+            ids,
         })
     }
 }
@@ -132,10 +137,11 @@ pub fn runtime_script(characters: &[RuntimeCharacter]) -> Result<Vec<u8>> {
                 &c.character.hotkey,
                 &c.labels,
                 &c.groups,
+                &c.ids,
             )
         })
         .collect();
-    Ok(format!("// Character rows: id, label, hotkey, preset names, animation groups.\nfunction lns_palette_definitions() {{ return {}; }}\n", serde_json::to_string(&table)?).into_bytes())
+    Ok(format!("// Character rows: id, label, hotkey, preset names, animation groups, preset ids.\nfunction lns_palette_definitions() {{ return {}; }}\n", serde_json::to_string(&table)?).into_bytes())
 }
 
 #[derive(Deserialize)]
@@ -263,6 +269,10 @@ pub fn package_characters(inputs: &[PackageInput<'_>], output: &Path) -> Result<
         include_bytes!("../mod/toggle/gml/palette_toggle.gml").to_vec(),
     );
     outputs.insert("gml/palette_assets.gml".into(), runtime_script(&runtime)?);
+    outputs.insert(
+        "gml/palette_controls.gml".into(),
+        include_bytes!("../mod/toggle/gml/palette_controls.gml").to_vec(),
+    );
     write_tree(&output, outputs)?;
     if character_reports.len() == 1 {
         Ok(character_reports.remove(0))

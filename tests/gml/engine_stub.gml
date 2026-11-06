@@ -1,8 +1,9 @@
 // Only the engine boundary is simulated. The test runs the shipped mod's GML.
-enum Menu { Textbox, Other, InfoToasts }
+enum Menu { Textbox, Other, InfoToasts, Settings }
 enum NpcId { Adeline, Hayden = 10 }
 globalvar ANCHOR;
 global.menu = undefined;
+global.__lns_palette_debug_hotkeys = true;
 global.missing_asset = false;
 global.missing_asset_name = undefined;
 global.missing_npc_id = false;
@@ -24,6 +25,8 @@ ANCHOR = {
     wrap_for_local: function(label) { return label; }
 };
 
+function mmapi_config_path(name) { return "missing-palette-config.json"; }
+function file_exists(path) { return false; }
 function mmapi_mod_declare(name, version) {}
 function mmapi_on(name, callback) {
     assert(name == "ui.menu_opened");
@@ -160,7 +163,12 @@ function TestTextbox() constructor {
     }
 }
 function lns_palette_definitions() {
-    var definitions = [["adeline", "Adeline", "F6", lns_palette_names(), lns_palette_assets()]];
-    if (global.characters) array_push(definitions, ["hayden", "Hayden", "F8", ["Vanilla","Debug Blue"], [["spr_portrait_hayden_spring_neutral","spr_lns_hayden_spring_neutral_blue"]]]);
+    var definitions = [["adeline", "Adeline", "F6", lns_palette_names(), lns_palette_assets(), lns_palette_ids()]];
+    if (global.characters) array_push(definitions, ["hayden", "Hayden", "F8", ["Vanilla","Debug Blue"], [["spr_portrait_hayden_spring_neutral","spr_lns_hayden_spring_neutral_blue"]], ["vanilla", "blue"]]);
     return definitions;
+}
+
+function lns_palette_ids() {
+    if (global.max_presets) return ["vanilla", "blue", "two", "three", "four", "five", "six", "seven", "eight"];
+    return global.third_preset ? ["vanilla", "blue", "warm"] : ["vanilla", "blue"];
 }

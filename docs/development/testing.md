@@ -69,11 +69,12 @@ the disposable `tmp/` and `generated/` directories. The one-time storage
 migration changes path prefixes and formatting only; existing assertions and
 accepted fixture bytes stay unchanged.
 
-The archive review test currently fails its historical Adeline count assertion
-(143 expected, 282 produced by the current profile). The same failure was
-reproduced using the unmodified committed test. The command reports that failure;
-it does not skip it or change the expectation. See the
-[storage migration verification](local-storage.md#verification) for results.
+The historical Adeline archive-review failure was repaired on 2026-11-05. The test
+preserves the original 143 asset identities, requires every current reviewed asset,
+and carries inherited color groups into its inline recipe before independent pixel
+validation. The 282-asset round trip passes. See the
+[repair evidence](finish-inventory.md#archive-review-test-contract); the earlier
+[storage migration verification](local-storage.md#verification) remains historical.
 
 ## Migration verification
 

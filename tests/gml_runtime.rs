@@ -12,6 +12,7 @@ fn toggle_preserves_frames_and_handles_menu_lifecycle() {
         [
             include_str!("gml/engine_stub.gml"),
             include_str!("../mod/toggle/gml/palette_toggle.gml"),
+            include_str!("../mod/toggle/gml/palette_controls.gml"),
             include_str!("gml/toggle_cases.gml"),
         ]
         .join("\n"),
@@ -41,6 +42,7 @@ fn world_palette_follows_selection_without_changing_animation_or_movement() {
         [
             include_str!("gml/engine_stub.gml"),
             include_str!("../mod/toggle/gml/palette_toggle.gml"),
+            include_str!("../mod/toggle/gml/palette_controls.gml"),
             include_str!("gml/world_cases.gml"),
         ]
         .join("\n"),
@@ -69,6 +71,7 @@ fn characters_switch_independently_and_restore_vanilla() {
         [
             include_str!("gml/engine_stub.gml"),
             include_str!("../mod/toggle/gml/palette_toggle.gml"),
+            include_str!("../mod/toggle/gml/palette_controls.gml"),
             include_str!("gml/character_cases.gml"),
         ]
         .join("\n"),

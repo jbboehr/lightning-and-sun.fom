@@ -1,3 +1,4 @@
+global.__lns_palette_debug_hotkeys = true;
 // Local test driver only: open a real textbox for the selected NPC.
 function lns_palette_smoke_open() {
     if (ANCHOR.get_menu(Menu.Textbox) != undefined) return;

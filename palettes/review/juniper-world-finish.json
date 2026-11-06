@@ -1,0 +1,45 @@
+{
+  "label": "Juniper Beach Accident and transformation candidate",
+  "prefixes": [
+    "assets/animations/NPCs/Juniper/Sprites/Beach Accident/"
+  ],
+  "source_colors": [
+    "#EFD89A",
+    "#E3BF7F",
+    "#D2AB66",
+    "#B87D4C",
+    "#763F21",
+    "#592323",
+    "#A16C3D",
+    "#E9CC8B",
+    "#D29C66",
+    "#965532",
+    "#DFAB68",
+    "#9D5A33",
+    "#BC8B43",
+    "#E8B171",
+    "#F1E791",
+    "#B58E45",
+    "#E0B572"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#445F83",
+    "#445F83",
+    "#445F83",
+    "#9DB9D4",
+    "#6687AD",
+    "#445F83",
+    "#6687AD",
+    "#445F83",
+    "#6687AD",
+    "#7F9FBD",
+    "#9DB9D4",
+    "#6687AD",
+    "#7F9FBD"
+  ],
+  "reference_profile": "../profiles/juniper-world-finish.json"
+}

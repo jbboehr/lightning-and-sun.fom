@@ -50,12 +50,12 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
   --presets palettes/sets/adeline-trial.json
 ```
 
-Press **F6** to cycle **Vanilla → Debug Blue → Player 01 → Player 18 → Player 33**.
+Open **Settings → Palettes** and select **Adeline** to cycle **Vanilla → Debug Blue → Player 01 → Player 18 → Player 33**.
 The three numbered palettes come from the game's player customization colors.
 They cover all 25 Adeline spring expressions and share the reviewed skin regions.
 Palette switching is silent so popups cannot obscure the portrait; the game log
 records the selected name.
-Every launch starts with Vanilla. Lips and blush remain provisional; these player
+Every launch starts with Vanilla unless you turn on **Remember choices**. Lips and blush remain provisional; these player
 colors have not yet had a full portrait art pass. See
 [palette options](docs/TOOLS.md#palette-catalog-and-preset-sets) to choose other ramps.
 
@@ -67,7 +67,7 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
   --presets palettes/sets/adeline-portraits-trial.json
 ```
 
-F6 cycles **Vanilla → Debug Blue → Hayden → Ryis → Seridia** across all 25
+The Adeline row cycles **Vanilla → Debug Blue → Hayden → Ryis → Seridia** across all 25
 expressions in each seasonal outfit, 19 beach strips (including the towel), and
 seven wedding strips: all 126 Adeline portrait strips in the reviewed game build.
 The selected palette carries across outfit changes for the current
@@ -82,7 +82,7 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
   --presets palettes/sets/adeline-world-trial.json
 ```
 
-F6 switches her portrait and supported overworld animations together, using the
+The Adeline row switches her portrait and supported overworld animations together, using the
 same five choices. This includes all four walking directions. Other overworld
 actions and outfits still show her original skin colors. All 126 portraits are
 included. Each launch starts with Vanilla.
@@ -90,7 +90,7 @@ included. Each launch starts with Vanilla.
 For all Spring animations, including sitting, eating, drinking, blinking,
 general actions, shocked poses, sleeping, kissing, writing, reading, working,
 thinking, finger snapping, and fainting, use
-`--presets palettes/sets/adeline-world-actions-trial.json` instead. F6 selects the
+`--presets palettes/sets/adeline-world-actions-trial.json` instead. The Adeline row selects the
 same palette across these animations and the included portraits. This also
 includes standing, walking, blinking, sitting, eating, drinking, general actions,
 sleeping, kissing, standing/seated writing, reading, working, thinking, and
@@ -109,25 +109,12 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
   --characters palettes/sets/characters-trial.json
 ```
 
-**F6** cycles Adeline's palettes, **F8** Hayden's, and **F10** Ryis's.
-**Home** cycles Reina's palettes; **Page Down** cycles Juniper's.
-**Insert** cycles Celine's palettes; **U** cycles March's.
-**I** cycles Balor's palettes; **O** cycles Valen's.
-**J** cycles Eiland's palettes; **K** cycles Olric's.
-**L** cycles Landen's palettes; **N** cycles Nora's.
-**H** cycles Holt's palettes; **P** cycles Josephine's.
-**B** cycles Darcy's palettes; **Y** cycles Dell's.
-**Z** cycles Elsie's palettes; **X** cycles Errol's.
-**F** cycles Hemlock's palettes; **V** cycles Louis's.
-**F11** cycles Luc's palettes; **F12** cycles Maple's.
-**F1** cycles Merri's palettes; **F3** cycles Terithia's.
-**F4** cycles Stillwell's palettes; **F5** cycles Taliferro's.
-**G** cycles Vera's palettes; **T** cycles Wheedle's.
-**R** cycles Zorel's palettes.
-**D** cycles Darren's palettes; **C** cycles Linnet's.
-**W** cycles Wiscar's palettes; **Q** cycles Wynne's.
-**Delete** cycles Caldarus's palettes.
-**S** cycles Seridia's palettes.
+Open **Settings → Palettes** and select a character to cycle their available
+palettes. Portraits and supported world sprites switch together. **Remember
+choices** starts Off; enable it to retain choices across launches. **Reset all to
+Vanilla** restores every included character. Back and close use the normal menu
+controls. If settings cannot be saved, session choices remain usable and a warning
+explains that persistence was not confirmed.
 Each character starts on **Vanilla** every launch, followed by **Debug Blue**
 and three sampled NPC palettes. Selections are independent.
 
@@ -170,6 +157,14 @@ and three sampled NPC palettes. Selections are independent.
 | Caldarus | Adeline, Hayden, Ryis |
 | Seridia | Adeline, Hayden, Ryis |
 
+The combined trial includes Adeline’s complete Beach and Wedding world sprites,
+and Juniper’s Beach Accident sprites and transformation. Native transformation
+colors and spell effects are preserved.
+
+Louis and Merri also include their complete Spring, Summer, Autumn and Winter
+world sprites. Their clothes, hair and accessories retain their original colors;
+Merri’s Winter gloves remain unchanged.
+
 These adapt the sampled colors to each character's reviewed shading and masks.
 The trial includes 133 Hayden, 109 Ryis, 103 Reina, 132 Juniper, 183 Celine,
 181 March, 110 Balor, 92 Valen, 78 Eiland, 36 Olric, 32 Landen, 32 Nora,
@@ -189,8 +184,7 @@ original effects and colors.
 The combined trial also includes Hayden's, Ryis's and Celine's Spring idle,
 walking, blinking, sitting, eating, drinking, general-action, sleeping, kissing,
 shocked reactions and seated reading, plus their farming, carpentry, writing and
-household actions. F8 switches Hayden, F10 switches Ryis and Insert switches
-Celine, keeping each character's portraits and these sprites together in their
+household actions. Each character’s palette row keeps portraits and these sprites together in their
 supported directions. Hayden's complete Spring riding animations and Celine's
 complete Spring gardening outfit are covered. All three complete Summer, Autumn
 and Winter sprite folders are covered, including Celine's seasonal garden
@@ -206,7 +200,7 @@ including swimming, Reina's seated poses and Juniper's special swimming/spell
 animations.
 Their complete Wedding sprite folders are also included: idle, walking,
 blinking, seated poses, general actions and kissing in their native directions.
-Home, Page Down and U cycle their palettes respectively.
+Their palette rows select their choices independently.
 Balor, Valen and Eiland's Spring idle, walking, blinking, sitting, eating,
 drinking, general-action, sleeping and kissing sprites are included in their
 native directions, along with Spring shocked reactions and seated reading.
@@ -240,13 +234,12 @@ and kissing. Swimwear, trim and water effects stay original. His complete Weddin
 sprite folder is included, with actions, blinking, sitting and kissing alongside
 standing and walking. Gold trim and gloves stay original; north-facing views
 have no exposed skin and remain unchanged.
-I, O and J cycle their
-palettes respectively, keeping their portraits and supported overworld sprites together.
+Their palette rows keep portraits and supported overworld sprites together.
 Olric's normal Spring standing, walking, blinking, sitting, eating, drinking,
 generic actions and shocked reaction are included too. His Spring hammer,
 pickaxe, tongs and polishing animations are also included, along with wiping
 his brow, drinking a potion, lifting weights, squatting, writing and sweeping.
-K keeps these sprites and his portraits on the same palette. Hair, eyes, gloves,
+His palette row keeps these sprites and his portraits together. Hair, eyes, gloves,
 clothing, held objects, dust and swing effects stay original.
 His Spring bunny-ear standing, walking and blinking sprites are included too;
 the ear accessory keeps its original colors. His normal Summer standing,
@@ -281,7 +274,7 @@ broom and dust. Winter bunny-ear standing, blinking and walking complete
 his seasonal sprites; the bunny-ear accessory keeps its original colors.
 Landen's Spring standing, walking, blinking, sitting, eating, drinking, general
 actions, shocked reaction and hammer animation are included too, completing
-his Spring sprites. L keeps them and his portraits on the same palette; hair,
+his Spring sprites. His palette row keeps world sprites and portraits together; hair,
 eyes, scarf, clothing, shoes, the apple, mouth interiors, hammer and swing
 effects retain their original colors. His complete Summer sprites also follow
 the palette, including exposed knees and moving hands in general actions and
@@ -294,8 +287,7 @@ the palette, including eyelids and moving hands in general actions and the
 hammer swing. The coat, scarf, trousers, shoes, apple, hammer and swing
 effects keep their original colors.
 Nora's complete Spring sprites are included too, including seated writing,
-tapping and sweeping. N keeps her world sprites and portraits on the same
-palette. Face, ears, neck, eyelids, moving hands and exposed ankles change;
+tapping and sweeping. Her palette row keeps world sprites and portraits together. Face, ears, neck, eyelids, moving hands and exposed ankles change;
 blonde hair, eyes, pale blouse, blue overalls, shoes, mouth interiors, writing
 tools, broom and dust retain their original colors.
 Her complete Summer sprites also follow the palette, including seated writing,
@@ -437,7 +429,9 @@ change; North-facing frames have no exposed skin and stay original. Mouth interi
 gray hair, lashes, eye details, gold hood, cream fur trim, moving gloves,
 green dress, brooch and boots retain their colors.
 Winter standing writing also follows the palette; the book and quill stay original.
-Z switches her portraits and these world sprites together.
+Winter seated writing is included too, completing all four seasonal sprite
+folders while preserving her gloves, clothing, book and quill.
+Elsie’s palette row switches her portraits and these world sprites together.
 Other unlisted overworld animations remain original.
 Hayden's embarrassed expression and possible Reina/Juniper mouth
 details await a later art pass. To try one character
@@ -465,11 +459,10 @@ and custom palette input.
 
 Follow [TOOLS.md](docs/TOOLS.md) to export the portrait, generate a preview, and build a
 local MOMI package. The experimental `package-toggle` mode keeps vanilla installed
-and adds blue variants. Press **F6** during play to switch the included Adeline
+and adds blue variants. Use **Settings → Palettes** to switch the included Adeline
 seasonal, beach, and wedding portraits, plus spring idle/walk sprites when selected
-by the recipe; each game launch starts with vanilla. Portraits
-outside the chosen recipe and other characters are unchanged. There is no preset menu or
-graphical installer yet.
+by the recipe; Vanilla is the default unless remembering is enabled. Portraits
+outside the chosen recipe and other characters are unchanged. Installation uses the CLI.
 See [INVESTIGATION.md](docs/INVESTIGATION.md) for compatibility and experiment limits.
 
 Game files, extracted PNGs, generated mods, and contact sheets stay local and are

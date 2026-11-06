@@ -171,7 +171,8 @@ fn hayden_can_be_built_alone_with_his_own_runtime_control() {
             [[
                 "spr_portrait_hayden_spring_neutral",
                 "spr_lns_hayden_spring_neutral_blue"
-            ]]
+            ]],
+            ["vanilla", "blue"]
         ]])
     );
 }
@@ -459,7 +460,8 @@ fn characters_can_be_built_alone_or_with_existing_characters() {
                 [[
                     format!("spr_portrait_{id}_spring_neutral"),
                     format!("spr_lns_{id}_spring_neutral_blue")
-                ]]
+                ]],
+                ["vanilla", "blue"]
             ])
         );
         let image = image::open(package.join(format!(
@@ -472,6 +474,8 @@ fn characters_can_be_built_alone_or_with_existing_characters() {
         if ids.len() > 1 {
             assert_eq!(characters[0][3], json!(["Vanilla", "Debug Blue", "Warm"]));
             assert_eq!(characters[1][3], json!(["Vanilla", "Debug Blue"]));
+            assert_eq!(characters[0][5], json!(["vanilla", "blue", "warm"]));
+            assert_eq!(characters[1][5], json!(["vanilla", "blue"]));
         }
     }
 }

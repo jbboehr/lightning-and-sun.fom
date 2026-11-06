@@ -2,6 +2,7 @@ use image::{DynamicImage, Rgba, RgbaImage};
 use serde_json::{Value, json};
 use sha2::{Digest, Sha256};
 use std::{
+    collections::BTreeSet,
     fs,
     io::{Cursor, Write},
     path::{Path, PathBuf},
@@ -579,7 +580,7 @@ fn browser_edits_masks_exports_only_reviewed_strips_and_roundtrips_progress() {
 }
 
 #[test]
-#[ignore = "requires the mounted game archive and the 143 local Adeline animations"]
+#[ignore = "requires the preserved game archive and current local Adeline corpus"]
 fn batch_reuse_reproduces_every_approved_adeline_mask() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
     let temp = tempfile::tempdir().unwrap();
@@ -620,12 +621,18 @@ fn batch_reuse_reproduces_every_approved_adeline_mask() {
         }
         regions.push(json!({"asset":asset["asset"],"source_sha256":asset["source_sha256"],"size":asset["size"],"seeds":seeds}));
     }
-    assert_eq!(regions.len(), 143);
+    let profile: Value = serde_json::from_slice(
+        &fs::read(root.join("palettes/profiles/adeline-world-actions.json")).unwrap(),
+    )
+    .unwrap();
+    assert_reused_inventory(&regions, &profile);
+    assert_eq!(report["color_groups"], profile["color_groups"]);
     let mut recipe: Value = serde_json::from_slice(
         &fs::read(root.join("palettes/stylized/adeline-world-actions.json")).unwrap(),
     )
     .unwrap();
     recipe.as_object_mut().unwrap().remove("profile");
+    recipe["color_groups"] = report["color_groups"].clone();
     recipe["regions"] = json!(regions);
     let path = temp.path().join("reused.json");
     fs::write(&path, serde_json::to_vec(&recipe).unwrap()).unwrap();
@@ -653,4 +660,55 @@ fn batch_reuse_reproduces_every_approved_adeline_mask() {
             .output()
             .unwrap(),
     );
+}
+
+fn assert_reused_inventory(regions: &[Value], profile: &Value) {
+    let assets = |regions: &[Value]| -> BTreeSet<String> {
+        regions
+            .iter()
+            .map(|region| region["asset"].as_str().unwrap().to_owned())
+            .collect()
+    };
+    let actual = assets(regions);
+    assert_eq!(actual.len(), regions.len(), "duplicate reconstructed asset");
+    let expected = assets(profile["regions"].as_array().unwrap());
+    assert_eq!(
+        actual, expected,
+        "every approved asset must be reconstructed"
+    );
+    let historical: Vec<String> =
+        serde_json::from_str(include_str!("fixtures/adeline-original-batch-assets.json")).unwrap();
+    assert_eq!(historical.len(), 143);
+    let historical: BTreeSet<_> = historical.into_iter().collect();
+    assert_eq!(historical.len(), 143, "duplicate historical asset");
+    assert!(
+        historical.is_subset(&actual),
+        "original batch membership must be retained"
+    );
+}
+
+#[test]
+fn reused_inventory_rejects_omissions_duplicates_and_lost_historical_assets() {
+    let historical: Vec<String> =
+        serde_json::from_str(include_str!("fixtures/adeline-original-batch-assets.json")).unwrap();
+    let mut regions: Vec<_> = historical
+        .iter()
+        .map(|asset| json!({"asset": asset}))
+        .collect();
+    regions.push(json!({"asset": "additional-reviewed-animation.png"}));
+    let profile = json!({"regions": regions});
+    assert_reused_inventory(&regions, &profile);
+
+    let mut omitted = regions.clone();
+    omitted.pop();
+    assert!(std::panic::catch_unwind(|| assert_reused_inventory(&omitted, &profile)).is_err());
+
+    let mut duplicate = regions.clone();
+    duplicate.push(regions[0].clone());
+    assert!(std::panic::catch_unwind(|| assert_reused_inventory(&duplicate, &profile)).is_err());
+
+    let mut lost = regions.clone();
+    lost.remove(0);
+    let reduced_profile = json!({"regions": lost});
+    assert!(std::panic::catch_unwind(|| assert_reused_inventory(&lost, &reduced_profile)).is_err());
 }

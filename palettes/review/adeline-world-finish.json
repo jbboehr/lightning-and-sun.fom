@@ -1,0 +1,28 @@
+{
+  "label": "Adeline Beach and Wedding world finish",
+  "prefixes": [
+    "assets/animations/NPCs/Adeline/Sprites/Beach/",
+    "assets/animations/NPCs/Adeline/Sprites/Wedding/"
+  ],
+  "source_colors": [
+    "#E3A17B",
+    "#D48363",
+    "#C47054",
+    "#9F5544",
+    "#E9A980",
+    "#DE8F5D",
+    "#BA6A4C",
+    "#7D3B14"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83"
+  ],
+  "reference_profile": "../profiles/adeline-world-finish.json"
+}

@@ -45,7 +45,7 @@ target/release/mistria-palette uninstall --game-dir '/path/to/Fields of Mistria'
 
 By default the first command exports the Adeline spring neutral portrait, applies
 the embedded blue palette, builds the toggle package, runs MOMI in isolation, and
-verifies the actual atlas frames before publishing. F6 selects vanilla/blue during play.
+verifies the actual atlas frames before publishing. Use Settings → Palettes to select Vanilla or Debug Blue.
 This currently supports x86_64 Linux with Nix. No game images are downloaded.
 Nix pins the MOMI binary, bubblewrap, dynamic loader, and runtime libraries.
 
@@ -71,9 +71,9 @@ Wedding portraits and overworld sprites remain original.
 Use `--presets palettes/sets/adeline-portraits-trial.json` to add all seven wedding
 strips, covering all 126 Adeline portrait strips in the reviewed archive. The
 blue-only recipe is `palettes/stylized/adeline-portraits.json`. Overworld sprites
-remain original; every launch starts with Vanilla.
+remain original; Vanilla starts each launch unless remembering is enabled.
 Use `--presets palettes/sets/adeline-world-trial.json` to include those 126 portraits
-and six spring overworld idle/walk strips. F6 switches both together. North, south,
+and six spring overworld idle/walk strips. The Adeline palette row switches both together. North, south,
 east, and mirrored west are covered; other actions and overworld outfits remain
 original. Its blue-only recipe is `palettes/stylized/adeline-world-trial.json`.
 Use `--presets palettes/sets/adeline-world-actions-trial.json` for all 42 Spring
@@ -90,12 +90,12 @@ verification details.
 The combined `palettes/sets/characters-trial.json` trial also selects
 `hayden-world-trial.json`: all 133 Hayden portraits plus 35 normal Spring idle, walk,
 blink, sit, eat, drink, general-action, sleep, kiss, shocked, seated-reading
-and farm-action strips. F8 switches both renderers together; West mirrors the
+and farm-action strips. The Hayden palette row switches both renderers together; West mirrors the
 East sources where available. Shocked reactions and seated reading face South only.
 The portrait-only Hayden set remains available. See
 [Hayden's first overworld batch](development/hayden-world.md) for masks and review.
 It also selects `ryis-world-trial.json`: all 109 Ryis portraits plus 36
-Spring animation strips, including carpentry and writing, sharing his F10 control.
+Spring animation strips, including carpentry and writing, sharing his palette selection.
 The portrait-only Ryis set remains available. See
 [Ryis's first overworld batch](development/ryis-world.md).
 The `celine-world-trial.json` set adds 36 normal Spring strips to her
@@ -1074,7 +1074,7 @@ strips. Fifteen source frames and five native West mirrors give twenty review
 cases. Forehead, face, neckline and exposed hands follow the palette; gray hair,
 eyebrows, eye details, cosmetics, earrings, pink gown and shoes stay original.
 Four world shades extend her eight portrait roles. Her existing portraits and
-their target mappings are preserved. Z keeps portraits and world sprites
+their target mappings are preserved. Elsie’s palette row keeps portraits and world sprites
 synchronized, with native timing and direction behavior.
 The [Elsie Spring blinking/sitting batch](development/slice-175.md) adds five
 strips. Nine source frames and four native West mirrors give thirteen review
@@ -1366,7 +1366,7 @@ target/release/mistria-palette package-toggle \
 
 Install that generated folder as `mods/lns_palette` through MOMI v0.16.4. Remove
 the earlier replacement study first so the base portrait is vanilla. This package
-adds separate animations and an F6 hotkey: press F6 again to restore vanilla.
+adds separate animations and a native Settings → Palettes page; select the character row to cycle back to Vanilla.
 It accepts one through 282 supported Adeline strips: portraits from the four
 seasons, beach, and wedding, plus spring overworld idle, walk, sit, eat, and drink
 and general actions in north, south, and east directions, blink in south/east,
@@ -1378,9 +1378,9 @@ north, south, east, and mirrored west; blink in south, east, and mirrored west;
 and sleep/kiss in east and mirrored west. Standing and seated writing, reading,
 working, and thinking also have start/loop/end strips in South for these three
 outfits; fainting faces South too.
-It generates the matching runtime sprite table. Keep both generated GML files
+It generates the matching runtime sprite table. Keep all three generated GML files
 in the package.
-The choice lasts for the running game session and is not saved. Rebuild and
+Choices reset to Vanilla each launch unless Remember choices is enabled in the Palettes page. Rebuild and
 reinstall after changing its palette. See [the developer procedure](development/portrait-toggle.md)
 and [complete portrait coverage](development/wedding-portraits.md) for verification details.
 The [spring overworld study](development/overworld-spring.md) describes the new
@@ -1519,8 +1519,8 @@ target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
   --presets palettes/sets/adeline-trial.json
 ```
 
-F6 cycles Vanilla, then each listed preset in order, and wraps. Switching creates
-no HUD popups; the game log records the selected name. The choice lasts for the session. Other
+The character’s Settings → Palettes row cycles Vanilla, then each listed preset in order, and wraps. Switching creates
+no HUD popups; the game log records the selected name. Remember choices is optional and starts Off. Other
 installation, existing-mod, and removal requirements above still apply.
 
 To generate a previewable tree and MOMI package without installing, first export

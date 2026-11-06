@@ -1,3 +1,7 @@
+For current status and the proposed completion sequence, see
+[project planning](planning.md). The original investigation brief below is
+historical and does not describe the remaining work.
+
 Investigation follow-up: see `INVESTIGATION.md`, `TOOLS.md`, and
 `development/verification.md` for the implemented proof of concept and verification
 record. The supplied build uses `assets.zip` and NPC Studio's internal engine.

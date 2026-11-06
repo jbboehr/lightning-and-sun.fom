@@ -33,11 +33,20 @@ fn asset_script(expressions: &[&str]) -> Vec<u8> {
 
 fn adeline_script(groups: serde_json::Value, labels: serde_json::Value) -> Vec<u8> {
     character_script(serde_json::json!([[
-        "adeline", "Adeline", "F6", labels, groups
+        "adeline",
+        "Adeline",
+        "F6",
+        labels,
+        groups,
+        if labels.as_array().unwrap().len() == 3 {
+            serde_json::json!(["vanilla", "blue", "warm"])
+        } else {
+            serde_json::json!(["vanilla", "blue"])
+        }
     ]]))
 }
 fn character_script(definitions: serde_json::Value) -> Vec<u8> {
-    format!("// Character rows: id, label, hotkey, preset names, animation groups.\nfunction lns_palette_definitions() {{ return {definitions}; }}\n").into_bytes()
+    format!("// Character rows: id, label, hotkey, preset names, animation groups, preset ids.\nfunction lns_palette_definitions() {{ return {definitions}; }}\n").into_bytes()
 }
 
 fn png(image: RgbaImage) -> Vec<u8> {
@@ -141,6 +150,10 @@ impl Lab {
             (
                 format!("{PALETTE_SCRIPTS}/palette_toggle.gml"),
                 include_bytes!("../mod/toggle/gml/palette_toggle.gml").to_vec(),
+            ),
+            (
+                format!("{PALETTE_SCRIPTS}/palette_controls.gml"),
+                include_bytes!("../mod/toggle/gml/palette_controls.gml").to_vec(),
             ),
             (
                 format!("{PALETTE_SCRIPTS}/palette_assets.gml"),
@@ -946,7 +959,11 @@ fn unsuccessful_or_incomplete_installer_output_leaves_live_files_unchanged() {
 
 #[test]
 fn palette_scripts_can_share_filenames_with_another_mod() {
-    for name in ["palette_assets.gml", "palette_toggle.gml"] {
+    for name in [
+        "palette_assets.gml",
+        "palette_toggle.gml",
+        "palette_controls.gml",
+    ] {
         let lab = Lab::new();
         let result = with_zip_entry(
             &fs::read(&lab.result).unwrap(),
@@ -974,6 +991,10 @@ fn palette_scripts_must_be_present_in_the_package_namespace() {
         (
             "palette_toggle.gml",
             include_bytes!("../mod/toggle/gml/palette_toggle.gml").to_vec(),
+        ),
+        (
+            "palette_controls.gml",
+            include_bytes!("../mod/toggle/gml/palette_controls.gml").to_vec(),
         ),
     ] {
         let lab = Lab::new();
@@ -1016,6 +1037,11 @@ fn corrupted_pixels_metadata_or_script_prevent_publication() {
         (
             &format!("{PALETTE_SCRIPTS}/palette_toggle.gml"),
             b"// wrong script\n".to_vec(),
+            "Installed palette script differs",
+        ),
+        (
+            &format!("{PALETTE_SCRIPTS}/palette_controls.gml"),
+            b"// wrong controls\n".to_vec(),
             "Installed palette script differs",
         ),
     ];
@@ -1379,7 +1405,8 @@ fn combined_install_verifies_hayden_and_restores_the_whole_archive() {
                     [[
                         "spr_portrait_adeline_spring_neutral",
                         "spr_lns_adeline_spring_neutral_blue"
-                    ]]
+                    ]],
+                    ["vanilla", "blue"]
                 ],
                 [
                     "hayden",
@@ -1389,7 +1416,8 @@ fn combined_install_verifies_hayden_and_restores_the_whole_archive() {
                     [[
                         "spr_portrait_hayden_spring_neutral",
                         "spr_lns_hayden_spring_neutral_blue"
-                    ]]
+                    ]],
+                    ["vanilla", "blue"]
                 ]
             ])),
         );

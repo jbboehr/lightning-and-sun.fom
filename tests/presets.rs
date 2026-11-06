@@ -124,6 +124,21 @@ fn shared_masks_generate_distinct_presets_and_one_runtime_package() {
     let script = fs::read_to_string(output.join("package/gml/palette_assets.gml")).unwrap();
     assert!(script.contains("spr_lns_adeline_spring_neutral_warm"));
     assert!(script.contains("Warm trial"));
+    let table: Value = serde_json::from_str(
+        script
+            .split_once("return ")
+            .unwrap()
+            .1
+            .split_once("; }")
+            .unwrap()
+            .0,
+    )
+    .unwrap();
+    assert_eq!(
+        table[0][3],
+        serde_json::json!(["Vanilla", "Debug Blue", "Warm trial"])
+    );
+    assert_eq!(table[0][5], serde_json::json!(["vanilla", "blue", "warm"]));
 }
 #[test]
 fn invalid_or_incomplete_preset_sets_leave_no_output() {

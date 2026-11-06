@@ -69,6 +69,10 @@ function lns_palette_set_speaker(speaker) {
     lns_palette_apply(self);
 }
 function lns_palette_menu_opened(ctx) {
+    if (ctx.kind == Menu.Settings) {
+        lns_palette_controls_menu_opened(ctx);
+        return;
+    }
     if (ctx.kind != Menu.Textbox) return;
     var menu = ctx.menu;
     if (menu[$ "__lns_palette_original_set_speaker"] == undefined) {
@@ -77,12 +81,19 @@ function lns_palette_menu_opened(ctx) {
     }
     lns_palette_apply(menu);
 }
-function lns_palette_toggle(character) {
-    if (!__lns_palette_runtime().ready) return;
-    character.selected = (character.selected + 1) % array_length(character.names);
+function lns_palette_select(character, index) {
+    if (!__lns_palette_runtime().ready || !is_struct(character)
+        || !is_real(index) || index != floor(index)
+        || index < 0 || index >= array_length(character.names)) return false;
+    character.selected = index;
     lns_palette_apply(ANCHOR.get_menu(Menu.Textbox));
     lns_palette_world_install(true);
     mmapi_log_info("lns_palette", character.label + " palette: " + character.names[character.selected]);
+    return true;
+}
+function lns_palette_toggle(character) {
+    if (!__lns_palette_runtime().ready) return;
+    lns_palette_select(character, (character.selected + 1) % array_length(character.names));
 }
 function lns_palette_initialize() {
     var state = __lns_palette_runtime();
@@ -101,11 +112,13 @@ function lns_palette_initialize() {
         var definition = definitions[c];
         var character = {
             id:definition[0], label:definition[1], hotkey:definition[2], object:undefined,
-            names:definition[3], selected:0, pairs:[], world_pairs:[]
+            names:definition[3], preset_ids:definition[5], selected:0, pairs:[], world_pairs:[]
         };
         array_push(state.characters, character);
         var names = definition[4];
-        if (array_length(character.names) < 2 || array_length(names) == 0) {
+        if (array_length(character.names) < 2 || array_length(names) == 0
+            || array_length(character.preset_ids) != array_length(character.names)
+            || character.preset_ids[0] != "vanilla") {
             mmapi_log_warn("lns_palette", "Palette study disabled: empty preset table.");
             return;
         }
@@ -136,9 +149,12 @@ function lns_palette_initialize() {
         }
     }
     state.ready = true;
-    for (var c = 0; c < array_length(state.characters); c++) {
-        var character = state.characters[c];
-        mmapi_hotkey_register(mmapi_hotkey_vk_from_name(character.hotkey), method(character, function() { lns_palette_toggle(self); }));
+    lns_palette_controls_initialize();
+    if (global[$ "__lns_palette_debug_hotkeys"] == true) {
+        for (var c = 0; c < array_length(state.characters); c++) {
+            var character = state.characters[c];
+            mmapi_hotkey_register(mmapi_hotkey_vk_from_name(character.hotkey), method(character, function() { lns_palette_toggle(self); }));
+        }
     }
     lns_palette_world_install(true);
 }

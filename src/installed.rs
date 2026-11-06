@@ -193,6 +193,10 @@ pub fn verify_characters(archive: &Path, inputs: &[toggle::PackageInput<'_>]) ->
             include_bytes!("../mod/toggle/gml/palette_toggle.gml").as_slice(),
         ),
         ("palette_assets.gml", asset_script.as_slice()),
+        (
+            "palette_controls.gml",
+            include_bytes!("../mod/toggle/gml/palette_controls.gml").as_slice(),
+        ),
     ] {
         ensure!(
             bytes(&archive, &format!("{PALETTE_SCRIPTS}/{name}"))? == expected,
