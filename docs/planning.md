@@ -21,9 +21,9 @@ and limits; raw asset coverage is not a measure of remaining effort.
 | --- | --- |
 | Core toolkit and runtime | Implemented; current standard checks pass |
 | Selected portrait inventory | All 2,201 strips for 36 characters included; some intentionally unchanged |
-| Selected world inventory | 3,413 of 4,159 strips included; fifth batch integrated |
-| Complete world coverage | 31 characters, including Errol and Hemlock |
-| Art acceptance | Elsie, displayed second-batch non-Reina art, corrected Reina, displayed Taliferro/Vera and Errol/Hemlock art accepted; first/fourth-batch approval limits preserved |
+| Selected world inventory | 3,613 of 4,159 strips included; sixth batch integrated |
+| Complete world coverage | 33 characters, including Luc and Maple |
+| Art acceptance | Elsie, displayed second-batch non-Reina art, corrected Reina, displayed Taliferro/Vera, Errol/Hemlock and Luc/Maple art accepted; first/fourth-batch approval limits preserved |
 | Release controls | Native Settings page and opt-in saved choices pass API/storage checks; rendered/input acceptance pending |
 | Integration confidence | Current full-collection install/verify/remove passes with accepted Reina correction; gameplay/render acceptance remains |
 
@@ -56,7 +56,7 @@ P0 pilot validation is complete. P1 Reina mouth correction and the P2 Wheedle/Zo
 | P0 | Inventory/test repair and measured pilot validated | Louis measured and validated; artwork acceptance pending; see [pilot evidence](development/louis-world.md) and [inventory](development/finish-inventory.md) | No |
 | P1 | Finish existing-character world gaps and named portrait defects | All 45 baseline strip gaps covered; Hayden/Juniper displayed details accepted; Reina mouth correction accepted as displayed | No for authoring/tests |
 | P2 | Finish smaller inventories and four cameo characters | All strips authored and validated; Stillwell/cameo artwork awaits review, earlier acceptance limits preserved | No for authoring/tests |
-| P3 | Finish Errol, Hemlock, Luc, Maple and Terithia | Errol/Hemlock validated and accepted as displayed; Luc/Maple/Terithia 331 strips remain | No for authoring/tests |
+| P3 | Finish Errol, Hemlock, Luc, Maple and Terithia | Errol/Hemlock and Luc/Maple validated and accepted as displayed; Terithia 131 strips remain | No for authoring/tests |
 | P4 | Finish Caldarus and Seridia, including an explicit special-form audit | 367 strips need authoring/review; 18 spectral strips audited unchanged | No for authoring/tests |
 | P5 | Add one selection menu and opt-in remembered choices using the existing runtime | Native menu/API and real storage/restart/failure phases pass; rendered/input acceptance remains | CPU development; GPU for live verification |
 | P6 | Validate complete artwork, package, installation/removal and natural gameplay; prepare supported Linux release | P1–P5 accepted | Yes for gameplay/rendering; CPU for other checks |
@@ -102,8 +102,13 @@ Fifth batch complete: Errol/Hemlock's 227 P3 world strips are authored,
 integrated and validated. Combined checks and full-collection installation/removal
 pass; displayed artwork is accepted, with inspection depth unspecified and no
 live-game acceptance inferred. See the [batch record](development/fifth-finish-batch-2026-11-06.md).
-The next content batch is Luc/Maple, followed by Terithia. No local GPU is needed
-for authoring/tests.
+
+Sixth batch complete: Luc/Maple's 200 P3 world strips are authored, integrated
+and validated. Combined checks and full-collection installation/removal pass;
+displayed artwork is accepted, with inspection depth unspecified and no live-game
+acceptance inferred. See the
+[batch record](development/sixth-finish-batch-2026-11-06.md). Terithia follows,
+then Caldarus/Seridia. No local GPU is needed for authoring/tests.
 
 ## Open decisions and limits
 

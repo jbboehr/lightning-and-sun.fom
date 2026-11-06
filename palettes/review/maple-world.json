@@ -1,0 +1,33 @@
+{
+  "label": "Maple complete four-season world candidate",
+  "prefixes": [
+    "assets/animations/NPCs/Maple/Sprites/"
+  ],
+  "source_colors": [
+    "#97623EFF",
+    "#89492AFF",
+    "#713527FF",
+    "#57271DFF",
+    "#83462E",
+    "#5D3228",
+    "#CE794E",
+    "#89502A",
+    "#392222",
+    "#BF5C70",
+    "#96623B"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#7F9FBD",
+    "#445F83",
+    "#9DB9D4",
+    "#7F9FBD",
+    "#445F83",
+    "#947FA7",
+    "#9DB9D4"
+  ],
+  "reference_profile": "../profiles/maple-world-trial.json"
+}
