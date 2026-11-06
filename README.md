@@ -1,474 +1,111 @@
-# Lightning and Sun palette study
+# Lightning and Sun
 
-An experimental Fields of Mistria palette toolkit. It exports selected assets from
-your own game copy, applies exact color replacements, and makes comparison sheets.
-Vanilla is the default. The optional Adeline study changes one portrait strip to
-a stylized blue palette within reviewed skin regions, preserving robe and jewelry
-details. It is unfinished test art.
-
-Build the Rust command-line tool with the pinned Nix environment:
-
-```sh
-nix-shell --run 'cargo build --locked --release'
-target/release/mistria-palette --help
-```
-
-The resulting binary runs without Python, Pillow, or a virtual environment.
-`nix develop` provides the same Fenix environment in a tracked checkout. On x86_64
-Linux, Nix also supplies MOMI v0.16.4 and its isolated runtime. The built binary
-uses those Nix store dependencies on this machine.
-
-Close the game, then install or remove the one-portrait toggle:
-
-```sh
-target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria'
-target/release/mistria-palette uninstall --game-dir '/path/to/Fields of Mistria'
-```
-
-Installation generates the blue study from your local assets and checks the
-installed portrait frames before changing the selected game archive. It keeps the
-exact previous archive in that game's `.mistria-palette/` directory. Keep that
-directory until removal. If another installer or a game update changes the archive,
-removal stops instead of overwriting those changes.
-
-To try all 25 Adeline spring expressions, remove any previous palette installation,
-then choose the larger study:
-
-```sh
-target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
-  --palette palettes/stylized/adeline-spring.json
-```
-
-This covers both frames of each spring expression. Other outfits and overworld
-sprites remain original. The colors are provisional, especially the lips. The
-default installation continues to use only the neutral portrait.
-
-For a trial with several skin palettes, uninstall the previous study, then use:
-
-```sh
-target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
-  --presets palettes/sets/adeline-trial.json
-```
-
-Open **Settings → Palettes** and select **Adeline** to cycle **Vanilla → Debug Blue → Player 01 → Player 18 → Player 33**.
-The three numbered palettes come from the game's player customization colors.
-They cover all 25 Adeline spring expressions and share the reviewed skin regions.
-Palette switching is silent so popups cannot obscure the portrait; the game log
-records the selected name.
-Every launch starts with Vanilla unless you turn on **Remember choices**. Lips and blush remain provisional; these player
-colors have not yet had a full portrait art pass. See
-[palette options](docs/TOOLS.md#palette-catalog-and-preset-sets) to choose other ramps.
-
-For all four seasonal outfits plus beach and wedding portraits, uninstall the previous study
-and use this trial:
-
-```sh
-target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
-  --presets palettes/sets/adeline-portraits-trial.json
-```
-
-The Adeline row cycles **Vanilla → Debug Blue → Hayden → Ryis → Seridia** across all 25
-expressions in each seasonal outfit, 19 beach strips (including the towel), and
-seven wedding strips: all 126 Adeline portrait strips in the reviewed game build.
-The selected palette carries across outfit changes for the current
-session. These colors are adapted from the named NPCs; only
-Adeline's portraits change. Overworld sprites remain original.
-
-To also recolor Adeline while she stands and walks in her spring outfit,
-uninstall the previous study and choose:
-
-```sh
-target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
-  --presets palettes/sets/adeline-world-trial.json
-```
-
-The Adeline row switches her portrait and supported overworld animations together, using the
-same five choices. This includes all four walking directions. Other overworld
-actions and outfits still show her original skin colors. All 126 portraits are
-included. Each launch starts with Vanilla.
-
-For all Spring animations, including sitting, eating, drinking, blinking,
-general actions, shocked poses, sleeping, kissing, writing, reading, working,
-thinking, finger snapping, and fainting, use
-`--presets palettes/sets/adeline-world-actions-trial.json` instead. The Adeline row selects the
-same palette across these animations and the included portraits. This also
-includes standing, walking, blinking, sitting, eating, drinking, general actions,
-sleeping, kissing, standing/seated writing, reading, working, thinking, and
-fainting in Summer, Autumn, and Winter. All 156 overworld strips in the four
-seasonal sprite folders are included. Other overworld outfits still use their
-original colors.
-
-To include Hayden, Ryis, Reina, Juniper, Celine, March, Balor, Valen, Eiland,
-Olric, Landen, Nora, Holt, Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis,
-Luc, Maple, Merri, Terithia, Stillwell, Taliferro, Vera, Wheedle, Zorel, Darren,
-Linnet, Wiscar, Wynne, Caldarus, and Seridia alongside Adeline, uninstall the
-previous study, then install the combined trial:
-
-```sh
-target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
-  --characters palettes/sets/characters-trial.json
-```
-
-Open **Settings → Palettes** and select a character to cycle their available
-palettes. Portraits and supported world sprites switch together. **Remember
-choices** starts Off; enable it to retain choices across launches. **Reset all to
-Vanilla** restores every included character. Back and close use the normal menu
-controls. If settings cannot be saved, session choices remain usable and a warning
-explains that persistence was not confirmed.
-Each character starts on **Vanilla** every launch, followed by **Debug Blue**
-and three sampled NPC palettes. Selections are independent.
-
-| Character | Additional palettes |
-| --- | --- |
-| Adeline | Hayden, Ryis, Seridia |
-| Hayden | Adeline, Ryis, Seridia |
-| Ryis | Adeline, Hayden, Seridia |
-| Reina | Hayden, Ryis, Seridia |
-| Juniper | Hayden, Ryis, Seridia |
-| Celine | Hayden, Ryis, Seridia |
-| March | Hayden, Ryis, Seridia |
-| Balor | Hayden, Ryis, Seridia |
-| Valen | Hayden, Ryis, Seridia |
-| Eiland | Hayden, Ryis, Seridia |
-| Olric | Hayden, Ryis, Seridia |
-| Landen | Hayden, Ryis, Seridia |
-| Nora | Hayden, Ryis, Seridia |
-| Holt | Hayden, Ryis, Seridia |
-| Josephine | Hayden, Ryis, Seridia |
-| Darcy | Hayden, Ryis, Seridia |
-| Dell | Hayden, Ryis, Seridia |
-| Elsie | Hayden, Ryis, Seridia |
-| Errol | Hayden, Ryis, Seridia |
-| Hemlock | Hayden, Ryis, Seridia |
-| Louis | Hayden, Ryis, Seridia |
-| Luc | Hayden, Ryis, Seridia |
-| Maple | Hayden, Ryis, Seridia |
-| Merri | Hayden, Ryis, Seridia |
-| Terithia | Hayden, Ryis, Seridia |
-| Stillwell | Hayden, Ryis, Seridia |
-| Taliferro | Hayden, Ryis, Seridia |
-| Vera | Hayden, Ryis, Seridia |
-| Wheedle | Hayden, Ryis, Seridia |
-| Zorel | Hayden, Ryis, Seridia |
-| Darren | Hayden, Ryis, Seridia |
-| Linnet | Hayden, Ryis, Seridia |
-| Wiscar | Hayden, Ryis, Seridia |
-| Wynne | Hayden, Ryis, Seridia |
-| Caldarus | Adeline, Hayden, Ryis |
-| Seridia | Adeline, Hayden, Ryis |
-
-The combined trial includes Adeline’s complete Beach and Wedding world sprites,
-and Juniper’s Beach Accident sprites and transformation. Native transformation
-colors and spell effects are preserved.
-
-Louis and Merri also include their complete Spring, Summer, Autumn and Winter
-world sprites. Their clothes, hair and accessories retain their original colors;
-Merri’s Winter gloves remain unchanged.
-
-These adapt the sampled colors to each character's reviewed shading and masks.
-The trial includes 133 Hayden, 109 Ryis, 103 Reina, 132 Juniper, 183 Celine,
-181 March, 110 Balor, 92 Valen, 78 Eiland, 36 Olric, 32 Landen, 32 Nora,
-32 Holt, 32 Josephine, 32 Darcy, 32 Dell, 36 Elsie, 36 Errol, 32 Hemlock,
-32 Louis, 32 Luc, 32 Maple, 32 Merri, 32 Terithia, 36 Stillwell, 36 Taliferro,
-32 Vera, 32 Wheedle, 32 Zorel, eight each for Darren, Linnet, Wiscar, and Wynne,
-98 Caldarus, and 164 Seridia portrait strips.
-These cover seasonal portraits plus beach, bath, and wedding artwork where
-available. Celine's gardening portraits, March's special expressions, and Olric's
-bunny-ears portraits are included. Darren, Linnet, Wiscar, and Wynne have
-Spring-only cameo portraits. Caldarus’s 95 human portraits recolor; his three
-dragon/statue portraits retain their original appearance. His natural skin ramp
-already matches Seridia, so his alternatives include Adeline instead.
-Seridia's 146 human portraits recolor, including her Flashback Priestess
-artwork. Her 17 spectral Priestess portraits and dragon portrait keep their
-original effects and colors.
-The combined trial also includes Hayden's, Ryis's and Celine's Spring idle,
-walking, blinking, sitting, eating, drinking, general-action, sleeping, kissing,
-shocked reactions and seated reading, plus their farming, carpentry, writing and
-household actions. Each character’s palette row keeps portraits and these sprites together in their
-supported directions. Hayden's complete Spring riding animations and Celine's
-complete Spring gardening outfit are covered. All three complete Summer, Autumn
-and Winter sprite folders are covered, including Celine's seasonal garden
-outfits and their reading, household and tool animations.
-Their complete Beach sprite folders are covered too, including swimming.
-Their complete Wedding sprite folders are also included.
-Reina, Juniper and March's complete Spring, Summer, Autumn and Winter sprite
-folders are covered. This includes Reina's kitchen work and writing, Juniper's spell
-casting and gestures, and March's smithing, standing poses and injured
-animations: idle, walking, seated poses, blinking and action.
-Their complete Beach sprite folders are also included in their native directions,
-including swimming, Reina's seated poses and Juniper's special swimming/spell
-animations.
-Their complete Wedding sprite folders are also included: idle, walking,
-blinking, seated poses, general actions and kissing in their native directions.
-Their palette rows select their choices independently.
-Balor, Valen and Eiland's Spring idle, walking, blinking, sitting, eating,
-drinking, general-action, sleeping and kissing sprites are included in their
-native directions, along with Spring shocked reactions and seated reading.
-Balor also includes his Spring coin, gem, hair-flip and jump animations,
-completing that sprite folder. Valen and Eiland also include standing and
-seated writing.
-Valen's healing and charm animations complete her Spring sprite folder.
-Eiland's magnifying-glass, princely-pose and tool animations complete his Spring
-sprite folder. Balor's complete Summer, Autumn and Winter sprite folders are
-included, with seated reading and gem inspection alongside standard movements
-and actions. His complete Beach sprite folder is also included, with swimming
-and hair flipping alongside the standard movements and actions. His complete
-Wedding sprite folder is included too.
-His Winter gloves stay original.
-Valen's complete Summer, Autumn and Winter sprite folders are included, with
-reading, writing and healing alongside the standard movements and actions.
-Her complete Beach sprite folder is also included, with swimming alongside
-the standard movements and actions. Her complete Wedding sprite folder is
-included as well, with blinking, sitting, general actions and kissing alongside
-idle and walking animations.
-Her covered north-facing seasonal idle, walk and sitting sprites remain original;
-eating and drinking recolor the tiny
-visible hand details. Her selected palette also covers the single exposed
-hand pixel in the first Winter north-facing action frame.
-Eiland's complete Summer, Autumn and Winter sprite folders are included, with
-reading, standing/seated writing, magnifying-glass, axe, pickaxe, brush and trowel
-animations alongside the standard movements and actions. His Winter gloves and
-gold clothing details stay original. His complete Beach sprite folder is also
-included, with swimming alongside standing, walking, blinking, general actions
-and kissing. Swimwear, trim and water effects stay original. His complete Wedding
-sprite folder is included, with actions, blinking, sitting and kissing alongside
-standing and walking. Gold trim and gloves stay original; north-facing views
-have no exposed skin and remain unchanged.
-Their palette rows keep portraits and supported overworld sprites together.
-Olric's normal Spring standing, walking, blinking, sitting, eating, drinking,
-generic actions and shocked reaction are included too. His Spring hammer,
-pickaxe, tongs and polishing animations are also included, along with wiping
-his brow, drinking a potion, lifting weights, squatting, writing and sweeping.
-His palette row keeps these sprites and his portraits together. Hair, eyes, gloves,
-clothing, held objects, dust and swing effects stay original.
-His Spring bunny-ear standing, walking and blinking sprites are included too;
-the ear accessory keeps its original colors. His normal Summer standing,
-walking, blinking, sitting, eating, drinking and general-action sprites are
-included, with the exposed arms and lower legs recolored. The extra arm shade in
-the drinking animation follows the selected palette too. Summer hammer,
-pickaxe, tongs and polishing animations are also included, along with wiping
-his brow, drinking a potion, lifting weights, squatting, writing and sweeping.
-Tools, weights, swing effects, dust, cloth, the potion bottle, clipboard and
-pencil retain their original colors.
-Summer bunny-ear standing, blinking and walking are also included, with the
-accessory retaining its original colors. Olric's Spring and Summer sprites are
-now covered. Autumn standing, walking, blinking, sitting, eating, drinking and
-general actions are also included, with the brown gloves, apple and clothing
-retaining their original colors.
-Autumn hammer, pickaxe and tongs are included too, along with polishing, wiping
-his brow, drinking a potion, lifting weights and squatting. Tools, weights,
-swing effects, cloth, the potion bottle, gloves and boots keep their original
+Skin palettes for the 36 supported Fields of Mistria characters, covering their
+portraits and recolorable world sprites. Each character keeps five choices:
+Vanilla, Debug Blue and three palettes adapted from other characters. Clothing,
+hair, equipment, markings and intentional spectral forms keep their original
 colors.
-Autumn writing and sweeping are included too, with the clipboard, pencil,
-broom and dust retaining their original colors.
-Autumn bunny-ear standing, blinking and walking complete the Autumn folder;
-the bunny-ear accessory keeps its original colors.
-Winter standing, walking, blinking, sitting, eating, drinking and general actions
-are also included. The red shirt, gray gloves, apple, trousers and boots keep their
-original colors. Winter hammer, pickaxe, tongs and polishing are also included,
-along with wiping his brow and drinking a potion. Tools, swing effects, cloth
-and the potion bottle retain their original colors. Winter lifting and squatting
-are also included; weights and mouth interiors keep their original colors.
-Winter writing and sweeping are included, preserving the clipboard, pencil,
-broom and dust. Winter bunny-ear standing, blinking and walking complete
-his seasonal sprites; the bunny-ear accessory keeps its original colors.
-Landen's Spring standing, walking, blinking, sitting, eating, drinking, general
-actions, shocked reaction and hammer animation are included too, completing
-his Spring sprites. His palette row keeps world sprites and portraits together; hair,
-eyes, scarf, clothing, shoes, the apple, mouth interiors, hammer and swing
-effects retain their original colors. His complete Summer sprites also follow
-the palette, including exposed knees and moving hands in general actions and
-the hammer swing. The shirt, shorts, socks, shoes, apple, hammer and swing
-effects keep their original colors. His complete Autumn sprites also follow
-the palette, including eyelids and moving hands in general actions and the
-hammer swing. The purple shirt, trousers, shoes, apple, hammer and swing
-effects keep their original colors. His complete Winter sprites also follow
-the palette, including eyelids and moving hands in general actions and the
-hammer swing. The coat, scarf, trousers, shoes, apple, hammer and swing
-effects keep their original colors.
-Nora's complete Spring sprites are included too, including seated writing,
-tapping and sweeping. Her palette row keeps world sprites and portraits together. Face, ears, neck, eyelids, moving hands and exposed ankles change;
-blonde hair, eyes, pale blouse, blue overalls, shoes, mouth interiors, writing
-tools, broom and dust retain their original colors.
-Her complete Summer sprites also follow the palette, including seated writing,
-tapping and sweeping. The blue shirt, purple apron, pale trousers, shoes,
-mouth interiors, writing tools, broom and dust retain their original colors.
-Her complete Autumn sprites also follow the palette, including seated writing,
-tapping and sweeping. The blue shirt, pale apron, purple trousers, shoes,
-blonde hair, mouth interiors, writing tools, broom and dust stay original.
-Her Winter standing, walking, blinking, sitting, eating and drinking sprites
-follow the palette too. Face, ears, neck, eyelids and hands change; blonde hair,
-eyes, blue scarf, pale coat, purple skirt, brown boots, pink earrings and mouth
-interiors stay original.
-Winter general actions, seated writing, tapping and sweeping follow the palette
-too, completing her four seasonal sprite folders. Moving hands change; hair,
-clothing, boots, earrings, board, pen, broom and dust keep their original colors.
-Holt’s Spring standing, walking, blinking, sitting, eating and drinking sprites
-now follow his selected palette too. Face, ears, neck, eyelids and hands change;
-ginger hair, moustache, eyes, orange scarf, green shirt, blue apron, boots and
-mouth interiors retain their original colors. His Spring general actions and
-shocked reaction now follow the palette as well, including raised fingers.
-Spring standing writing also follows the palette; his board and pen stay original.
-Spring whittling follows the palette too; the wood, chips and knife stay original.
-Sweeping completes his Spring sprites; the broom and dust stay original.
-His Summer standing, walking, blinking, sitting, eating, drinking and general
-action sprites also follow the palette, including raised hands and bare forearms;
-the pink shirt, green apron, footwear and mouth interiors stay original.
-Summer standing writing also follows the palette; his board and pen stay original.
-Summer whittling follows the palette too; the wood, flying chips and knife stay original.
-Sweeping completes his Summer sprites; the broom and dust stay original.
-His Autumn standing and walking sprites also follow the palette; the green shirt,
-brown apron, pink trim and boots retain their original colors.
-Autumn blinking, sitting, eating and drinking follow the palette too, including
-lowered hands beside the boots; mouth interiors remain original.
-Autumn general actions also follow the palette, including raised hands and fingers.
-Autumn standing writing follows the palette too; his board and pen stay original.
-Autumn whittling follows the palette too; the wood, flying chips and knife stay original.
-Sweeping completes his Autumn sprites; the broom and dust stay original.
-His Winter standing and walking sprites also follow the palette; the orange plaid
-shirt, scarf, apron, trousers and boots retain their original colors.
-Winter blinking, sitting, eating and drinking follow the palette too, including
-the lowered hand beside the boots; mouth interiors remain original.
-Winter general actions also follow the palette; moving hands change while the
-orange sleeves and moustache keep their original colors.
-Winter standing writing also follows the palette; his board and pen stay original.
-Winter whittling follows the palette too; wood, flying chips and the knife stay original.
-Sweeping completes his Winter sprites and all four seasonal sprite folders;
-his broom and dust stay original.
-Josephine’s Spring standing, walking, blinking, sitting, eating and drinking follow
-her selected palette, including eyelids, hands and exposed ankles. Her hair,
-earrings, clothing, shoes and mouth interiors stay original.
-Her Spring general actions and shocked reaction also follow the palette,
-including the raised hands and exposed ankles. Her Spring writing animations
-also follow the palette, while the writing board and pen stay original.
-Spring polishing, singing and chopping follow the palette too. Their cloth,
-blue glass, musical notes, knife and food stay original. Sweeping completes
-her Spring outfit, preserving the broom and dust. Summer standing, walking,
-blinking, sitting, eating, drinking and general actions also follow her palette.
-Cream and peach clothing, the pink flower, yellow shoes and mouth interiors
-stay original. Summer standing writing also follows the palette, preserving
-the writing board and pen. Summer polishing follows the palette too; the cloth
-and blue glass stay original. Summer singing also follows the palette, preserving
-mouth interiors and the floating musical notes. Summer chopping follows the
-palette too, preserving the knife and food particles. Sweeping completes her
-Summer outfit, preserving the broom and dust. Autumn standing and walking also
-follow her palette, preserving the orange outfit, shoes and blue earrings.
-Autumn blinking, sitting, eating and drinking also follow the palette, including
-eyelids and moving hands, while mouth interiors stay original.
-Her Autumn general-action gestures now follow the palette too, preserving the
-orange outfit, shoes and blue earrings.
-Autumn writing also follows the palette, including both hands and exposed
-ankles, while the board and pen stay original. Autumn polishing follows the
-palette too; the cloth and blue glass stay original. Autumn singing also follows
-the palette, preserving mouth interiors and the floating musical notes. Autumn
-chopping follows the palette too, including exposed neck, hands and ankles;
-the knife and food particles stay original. Sweeping completes her Autumn
-sprites, preserving the broom and dust. Winter standing and walking also follow
-her palette; the pink outfit, gold earrings, dark leggings and boots stay original.
-Winter blinking, sitting, eating and drinking also follow the palette, including
-eyelids and moving hands, while mouth interiors stay original. Winter general
-actions also follow her palette, including extended hands; the outfit stays original.
-Winter writing also follows the palette, preserving the board and pen. Winter
-polishing follows it too; the cloth and glass retain their original colors.
-Winter singing recolors her face and hands while preserving mouth interiors
-and floating musical notes. Winter chopping recolors exposed hands while
-preserving the knife, food particles and outfit. Winter sweeping also follows
-her palette, preserving the broom and dust. Her four seasonal world sets are
-now covered. Darcy’s full Spring world set also follows her palette: standing,
-walking, blinking, sitting, eating and general actions. Gray hair, eyes, red and
-teal clothing, boots and mouth interiors retain their original colors. Her
-full Summer world set follows the palette too, including general actions;
-the green blouse, coral outfit, cream footwear and mouth interiors retain
-their original colors. Her full Autumn world set follows the palette too,
-including general actions, while preserving the tan coat, white cuffs, teal
-outfit, dark boots and mouth interiors. Her full Winter world set follows the
-palette too, including general actions, while preserving the scarf, cream
-coat, white cuffs, mint outfit, dark boots and mouth interiors.
-Dell’s Spring standing, walking, blinking, sitting, eating, drinking, general
-actions, shocked reaction, head scratching, yawning, stretching and swinging a
-stick complete her Spring sprites. They follow her selected palette, including
-her face, eyelids, neck, hands and exposed ankles. Closed
-side-facing eyes include their connected dark temple edges; mouth interiors
-retain their original colors.
-Her other blonde hair, hair ribbon, pink shirt, blue overalls, red boots, stick
-and motion trail retain their original colors. Her full Summer sprite set also
-follows the selected palette, including head scratching and swinging a stick.
-Faces, eyelids, raised hands and exposed limbs change; connected edges of closed
-eyes follow the skin. Other blonde hair, mouth interiors, the blue shirt, brown
-overalls, pale rolled cuffs, red shoes, stick and motion trail stay original.
-Her full Autumn sprite set also follows the palette, including standing,
-walking, blinking, sitting, eating, drinking, general actions and swinging a
-stick. Her face, eyelids and exposed hands change.
-Connected dark temple edges follow closed side-facing eyes; other blonde hair,
-lashes, ribbon, eye details, mouth interiors, blue coat, red outfit, brown
-boots, stick and motion trail stay original.
-Her full Winter sprite set also follows the palette, including standing,
-walking, blinking, sitting, eating, drinking, general actions and swinging a
-stick. Her face, eyelids and exposed hands change.
-Connected dark temple edges follow side-facing eye expressions; other blonde
-hair, lashes, eye details, mouth interiors, blue coat, orange shirt and cuffs,
-trousers, brown boots, stick and motion trail stay original.
-All of Elsie's Spring world sprites follow her selected palette, including
-singing and writing while standing or seated. Her forehead, face, closed eyelids,
-neckline, moving hands and exposed ankles change; gray hair, eyebrows, lashes,
-eye details, mouth interiors, cosmetics, earrings, pink gown, shoes, book, quill
-and floating music notes retain their original colors.
-All her Summer world sprites now follow the palette too, including standing,
-walking, blinking, sitting, eating, drinking, general actions, writing and singing.
-Closed eyelids, exposed arms, moving hands and ankles change. Mouth interiors,
-her blue shawl, dress, earrings, gold scarf, shoes, book, quill and music notes
-keep their original colors.
-All her Autumn world sprites now follow the palette: standing, walking,
-blinking, sitting, eating, drinking, general actions, writing (standing and
-seated) and singing. Face, closed eyelids, neckline and moving hands change.
-Hair, lashes, eye details, mouth interiors, gold earrings, blue collar, burgundy
-gown, pink trim, shoes, book, quill and music notes keep their original colors.
-Her Winter standing, walking, blinking, sitting, eating, drinking and general
-action sprites also follow the palette. Exposed facial skin and closed eyelids
-change; North-facing frames have no exposed skin and stay original. Mouth interiors,
-gray hair, lashes, eye details, gold hood, cream fur trim, moving gloves,
-green dress, brooch and boots retain their colors.
-Winter standing writing also follows the palette; the book and quill stay original.
-Winter seated writing is included too, completing all four seasonal sprite
-folders while preserving her gloves, clothing, book and quill.
-Elsie’s palette row switches her portraits and these world sprites together.
-Other unlisted overworld animations remain original.
-Hayden's embarrassed expression and possible Reina/Juniper mouth
-details await a later art pass. To try one character
-alone, use its set instead; for example,
-`--presets palettes/sets/landen-world-trial.json` or
-`--presets palettes/sets/nora-world-trial.json`.
 
-Palettes check their reviewed source PNG hashes. If a game update changes them,
-generation and installation stop by default. Add `--allow-source-hash-mismatch`
-to try the existing masks against changed artwork. This leaves the recorded
-hashes unchanged, reports each mismatch, and still checks dimensions and seeds.
-Review the resulting recoloring before relying on it. See
-[palette and preview options](docs/TOOLS.md#export-recolor-and-compare) for custom
-colors, exact recipe validation, and changed-pixel previews.
+This is a Linux release candidate. The complete collection is authored and
+passes installation/removal checks. Displayed artwork is accepted. Native menus,
+keyboard/mouse, virtual gamepad, remembered choices and basic gameplay/save/load
+checks pass; physical controller and broader seasonal gameplay acceptance remain.
 
-Existing MOMI mods need their complete source folders in `mods/` or `Mods/`, plus
-the matching `assets.bak.zip`. Add `--installed-mods /path/to/mods/manifest.json`
-using the installed-mod list MOMI wrote in the game's config directory for that
-archive. Installation refuses a missing list or mismatched source selection.
-It also stops if MOMI would change the existing mod load order.
-This prototype supports unpacked folder mods with a manifest directly inside each
-folder. Uninstall this palette study before using MOMI separately or installing a
-different palette. See [CLI details](docs/TOOLS.md#cli-installation) for restrictions
-and custom palette input.
+## Build and install
 
-Follow [TOOLS.md](docs/TOOLS.md) to export the portrait, generate a preview, and build a
-local MOMI package. The experimental `package-toggle` mode keeps vanilla installed
-and adds blue variants. Use **Settings → Palettes** to switch the included Adeline
-seasonal, beach, and wedding portraits, plus spring idle/walk sprites when selected
-by the recipe; Vanilla is the default unless remembering is enabled. Portraits
-outside the chosen recipe and other characters are unchanged. Installation uses the CLI.
-See [INVESTIGATION.md](docs/INVESTIGATION.md) for compatibility and experiment limits.
+Requires **x86_64 Linux**, Nix with flakes enabled, and your own game installation
+containing `assets.zip` and `Maybe.toml`. Run from this repository:
 
-Game files, extracted PNGs, generated mods, and contact sheets stay local and are
-excluded from Git. Keep an untouched game copy and back up saves before installing
-any mod. Cycle the character's palette control back to Vanilla to restore their
-original colors; removing the mod entirely still
-uses the same installation method: CLI-installed studies use `uninstall` above;
-manually installed packages use MOMI. The older replacement package must be removed
-through MOMI too.
+```sh
+nix build
+result/bin/mistria-palette --help
+```
+
+Close the game and other mod installers, then install the complete collection:
+
+```sh
+result/bin/mistria-palette install \
+  --game-dir '/path/to/Fields of Mistria' \
+  --characters result/share/mistria-palette/palettes/sets/characters-trial.json
+```
+
+Keep the `result` link while using this build; it retains the packaged tool,
+recipes and runtime dependencies. No game files are downloaded or distributed.
+Replacement images are generated locally from your copy. Installation verifies
+the generated atlas pixels, metadata and scripts before publishing the archive.
+
+The `--characters` option selects the complete collection. Omitting it runs the
+older single-portrait Adeline study. To use a single character instead, supply
+its set, for example:
+
+```sh
+result/bin/mistria-palette install \
+  --game-dir '/path/to/Fields of Mistria' \
+  --presets result/share/mistria-palette/palettes/sets/caldarus-world-trial.json
+```
+
+Uninstall the current selection before installing another recipe.
+
+## Palette controls
+
+Open **Settings → Palettes**, select a character and cycle their palette.
+Portraits and world sprites use the same choice. Each character starts on
+**Vanilla** unless you enable **Remember choices**, which starts Off.
+**Reset all to Vanilla** resets the included characters. Use the normal menu
+back/close controls to leave the page. Default controls use **E** or the
+controller south button to select, and **Esc** or the east button to go back.
+
+Remembered choices use mod-owned settings. If saving fails, session choices
+remain usable and a warning indicates that persistence was not confirmed.
+Disable remembering to start future sessions on Vanilla. Resetting palettes
+does not change game saves.
+
+Most characters offer Hayden, Ryis and Seridia alongside Vanilla and Debug Blue.
+Hayden offers Adeline/Ryis/Seridia; Ryis offers Adeline/Hayden/Seridia;
+Caldarus and Seridia offer Adeline/Hayden/Ryis. Natural skin ramps, glow effects,
+scars and body markings can make results differ between characters.
+
+## Remove or change the mod
+
+Close the game, then run:
+
+```sh
+result/bin/mistria-palette uninstall --game-dir '/path/to/Fields of Mistria'
+```
+
+Removal restores the exact archive from before palette installation, including
+any earlier compatible mods. Selecting Vanilla restores appearance during play;
+uninstalling removes the installed palette package.
+
+Keep the `.mistria-palette/` recovery directory until removal succeeds. If the
+live archive changed after installation, removal refuses to overwrite it and
+retains recovery files. Restore the matching installed archive or investigate
+the other update before retrying; do not delete recovery state to bypass this
+check. Remove this palette installation before updating the game or using MOMI
+separately.
+
+## Compatibility
+
+Recipes check the reviewed source PNG hashes and reject changed source artwork
+by default. This does not promise compatibility with every game update. An
+advanced `--allow-source-hash-mismatch` option permits changed sources while
+retaining structural checks; inspect the output before relying on it.
+
+Existing MOMI mods require complete unpacked source folders under `mods/` or
+`Mods/`, the matching pristine `assets.bak.zip`, and the installed-mod list MOMI
+wrote for that archive. For example, add:
+
+```sh
+--installed-mods '/path/to/MOMI-config/mods/manifest.json'
+```
+
+The manifest must sit directly inside each mod folder. Installation rejects
+missing/mismatched selections, skipped mods or a rebuild that changes existing
+mod precedence. Custom order that MOMI's CLI cannot preserve is refused.
+Conflicting sprite/script replacements and arbitrary mod combinations are not
+guaranteed compatible. Windows, macOS, archive-packed mod inputs and automatic
+game-update recovery are outside the supported route.
+
+For exporting artwork, custom palettes and other toolkit commands, see
+[the tool guide](docs/TOOLS.md). Earlier individual study recipes remain
+available; their coverage is narrower than the complete collection.

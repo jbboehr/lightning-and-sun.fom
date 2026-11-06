@@ -1,8 +1,8 @@
 # Louis four-season world pilot
 
-2026-11-05: authored and automatically validated; **user art acceptance and live
-play remain pending**. This is the whole-character P0/P2 pilot in the
-[finish plan](../plans/finish.md).
+2026-11-05: authored and automatically validated. **Displayed world art was accepted
+with qualification on 2026-11-06; live play remains unverified.** This is the
+whole-character P0/P2 pilot in the [finish plan](../plans/finish.md).
 
 The new `louis-world-trial` profile covers all 44 native world strips, comprising
 168 frames, across Autumn, Spring, Summer and Winter. Each outfit has action,
@@ -58,8 +58,8 @@ shows the gold-rimmed glasses and reflected lenses. Surrounding normal skin
 changes; the stronger contrast makes the glasses more prominent in Debug Blue.
 The user subsequently described the glasses treatment as "looks a little weird
 but I guess that's okay." This records qualified acceptance of that specific
-treatment. Approval of the full Louis batch remains unrecorded. The candidate
-files are unchanged.
+treatment. At that point, approval of the full Louis batch remained unrecorded.
+The candidate files were unchanged.
 
 ## Candidate review
 
@@ -141,3 +141,14 @@ The candidate profile SHA-256 is
 the preset set SHA-256 is
 `16cb2c72281da19b419a092432eac3ba043157cfd5da508d14f2b14e3f8a58f1`.
 All game imagery and generated outputs remain ignored and local.
+
+## Displayed-art acceptance, 2026-11-06
+
+The user replied "looks okay to me" to the consolidated remaining-art review,
+including Louis's 44 world strips and 228 comparison cases. Record qualified
+acceptance of the displayed world artwork; inspection depth is unspecified.
+This closes the broader Louis art gate while preserving the earlier qualified
+glasses assessment. It does not establish live-game, menu or input acceptance.
+The accepted snapshot is frozen under `local/fixtures/finish-louis`. See the
+[release-candidate assessment](linux-release-candidate-2026-11-06.md) for shared
+review and snapshot/install binding evidence and overall limits. No artwork changed.

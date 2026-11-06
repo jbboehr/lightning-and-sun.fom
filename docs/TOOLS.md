@@ -1,5 +1,9 @@
 # Running the palette experiment
 
+For the complete collection and the supported Nix package route, start with the
+[installation guide](../README.md). The individual study recipes below describe
+their narrower historical scopes; they do not limit the complete collection.
+
 Run commands from the repository root. Use fresh output paths for each run.
 The tool refuses existing or overlapping outputs, so it cannot silently replace
 an earlier export or leave stale images from a previous preset.
@@ -10,7 +14,7 @@ Use the [stable local test corpora](development/testing.md) when adding coverage
 historical pixel tests keep their inputs at fixed paths and retain accepted baselines.
 Generated galleries and packages are disposable. When present,
 [generated/review/index.html](../generated/review/index.html) and its
-[summary](../generated/review/summary.png) show the latest review. Required game
+character galleries show the latest review. Required game
 sources, accepted baselines and tools live outside scratch storage; see the
 [local storage layout](development/local-storage.md) for paths and rebuilding.
 
@@ -23,7 +27,7 @@ target/release/mistria-palette --help
 
 [Fenix](https://github.com/nix-community/fenix) supplies Cargo, rustc, rustfmt,
 Clippy, rust-analyzer, and matching standard-library sources. `flake.lock` pins
-Rust 1.98.1 and the Nix inputs; `Cargo.lock` pins the Rust dependencies. No Python,
+the Rust toolchain and Nix inputs; `Cargo.lock` pins the Rust dependencies. No Python,
 Pillow, system font, or rustup installation is required. Contact-sheet labels use
 the embedded bitmap font from [font8x8](https://docs.rs/font8x8/0.3.1/font8x8/).
 

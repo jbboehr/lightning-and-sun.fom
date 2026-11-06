@@ -1,4 +1,3 @@
-// Called by the installer, where MMAPI file IO is available.
 function lns_palette_controls_initialize() {
     var state = __lns_palette_runtime();
     if (state[$ "controls"] != undefined) return;
@@ -60,7 +59,20 @@ function lns_palette_controls_notice(message, error) {
 
 function lns_palette_controls_show_notice() {
     var message = __lns_palette_runtime().controls.message;
-    if (message != "") ANCHOR.get_menu(Menu.InfoToasts).create_notification(ANCHOR.wrap_for_local("Palettes: " + message));
+    if (message == "") return;
+    var toasts = ANCHOR.get_menu(Menu.InfoToasts);
+    if (toasts == undefined) {
+        // Title Settings predates the gameplay HUD; keep its toast lifetime local.
+        toasts = ANCHOR.spawn_menu(Menu.InfoToasts);
+        var menu = ANCHOR.get_menu(Menu.Settings);
+        menu.__lns_palette_toasts = toasts;
+        menu.__lns_palette_original_on_close = menu.on_close;
+        menu.on_close = method(menu, function() {
+            self.__lns_palette_toasts.close();
+            self.__lns_palette_original_on_close();
+        });
+    }
+    toasts.create_notification(ANCHOR.wrap_for_local("Palettes: " + message));
 }
 
 function lns_palette_controls_save() {
@@ -158,7 +170,10 @@ function lns_palette_controls_open_page() {
 }
 
 function lns_palette_controls_menu_opened(ctx) {
-    if (ctx.kind != Menu.Settings || !__lns_palette_runtime().ready) return;
+    if (ctx.kind != Menu.Settings) return;
+    // The queued installer does not run while the title room is active.
+    lns_palette_initialize();
+    if (!__lns_palette_runtime().ready) return;
     var menu = ctx.menu;
     if (!is_struct(menu) || menu[$ "__lns_palette_category"] != undefined) return;
     menu.__lns_palette_category = menu.create_category("lns_palette", method(menu, lns_palette_controls_open_page), spr_ui_journal_settings_icon_gameplay);

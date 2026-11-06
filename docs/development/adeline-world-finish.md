@@ -1,8 +1,8 @@
 # Adeline Beach and Wedding finish
 
-2026-11-05: authored and automatically validated; **user art acceptance and live
-play remain pending**. This completes Adeline's remaining source inventory for
-P1 of the [finish plan](../plans/finish.md).
+2026-11-05: authored and automatically validated. **Displayed world art was accepted
+with qualification on 2026-11-06; live play remains unverified.** This completes
+Adeline's remaining source inventory for P1 of the [finish plan](../plans/finish.md).
 
 The candidate appends all 18 Beach and 15 Wedding world strips to the prior 282
 regions. Its 315 regions cover the archive's complete 126 portrait and 189 world
@@ -139,3 +139,14 @@ The candidate profile SHA-256 is
 `d77904757e9dbbeb87a2ee8cc41b1c135cab99ac4b87eb2c39dd8bdf62734c35`;
 the preset set SHA-256 is
 `3c12bc746f4a60d42c684e44f7cd6389a2592e99144e7239ea4c44b55129543b`.
+
+## Displayed-art acceptance, 2026-11-06
+
+The user replied "looks okay to me" to the consolidated remaining-art review,
+including Adeline's 33 Beach/Wedding world strips and 154 comparison cases.
+Record qualified acceptance of the displayed world artwork; inspection depth
+is unspecified. This closes the finish batch's Adeline art gate without
+establishing live-game, menu or input acceptance. The accepted snapshot is frozen
+under `local/fixtures/finish-adeline`. See the
+[release-candidate assessment](linux-release-candidate-2026-11-06.md) for shared
+review and snapshot/install binding evidence and overall limits. No artwork changed.

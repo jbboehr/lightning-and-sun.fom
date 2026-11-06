@@ -19,6 +19,14 @@ global.read_mode = "ok";
 global.disk = {};
 global.actors = [];
 global.free_count = 0;
+global.settings_menu = undefined;
+global.toast_spawn_count = 0;
+function InfoToastsProbe() constructor {
+ self.close_requested=false;
+ function create_notification(key) {array_push(global.notices,key);}
+ function close() {self.close_requested=true;}
+}
+global.toast_menu = new InfoToastsProbe();
 function local_get(key) { return key; }
 function num_display(x) { return string(x); }
 function warn(a,b,c) { assert(false); }
@@ -101,10 +109,19 @@ function ScrollerProbe() constructor {
 }
 function create_scroller(parent) {return new ScrollerProbe();}
 ANCHOR={get_menu:function(kind){
- if(kind==Menu.InfoToasts) return {create_notification:function(key){array_push(global.notices,key);}};
+ if(kind==Menu.InfoToasts) return global.toast_menu;
+ if(kind==Menu.Settings) return global.settings_menu;
  return global.menu;
+},spawn_menu:function(kind){
+ assert(kind==Menu.InfoToasts && global.toast_menu==undefined);
+ global.toast_spawn_count++;
+ global.toast_menu=new InfoToastsProbe();
+ return global.toast_menu;
 },sprite:function(element){return new NodeProbe();},set_active_pilot:function(p){self.active=p;},wrap_for_local:function(raw){return "RAW:"+raw;}};
 function SettingsProbe() constructor {
+ self.original_close_calls=0;
+ function on_close() {self.original_close_calls++;}
+ function close() {self.on_close();}
  self.active_page=undefined;self.option_scroller=undefined;self.category_scroller=new ScrollerProbe();
  self.option_pilot=new PilotProbe();self.category_pilot=new PilotProbe();self.journal={right_full_body:{}};
 function create_category(name_key, open_callback, icon_sprite) {

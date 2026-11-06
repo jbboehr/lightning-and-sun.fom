@@ -12,6 +12,7 @@ function test_boot() {
 }
 function test_settings() {
     var menu = new SettingsProbe();
+    global.settings_menu = menu;
     for (var i = 0; i < 7; i++) menu.create_category("native_"+string(i),method(menu,function(){}),1);
     global.menu_opened({kind:Menu.Settings,menu:menu});
     return menu;
@@ -37,7 +38,71 @@ function test_visible_error(menu) {
     assert(string_pos("RAW:Palettes: Not saved.",global.notices[array_length(global.notices)-1]) == 1);
 }
 
-if (global.controls_case == "menu") {
+if (global.controls_case == "title") {
+    assert(!__lns_palette_runtime().initialized);
+    var title = test_settings();
+    assert(__lns_palette_runtime().ready, "Title Settings must initialize without Game begin-step");
+    assert(array_length(title.category_pilot.nodes) == 8);
+    title.__lns_palette_category.tap();
+    assert(array_length(title.option_pilot.nodes) == 39);
+    assert(!__lns_palette_runtime().controls.remember && global.config_write_count == 0);
+    title.option_pilot.nodes[0].tap();
+    title.option_pilot.nodes[36].tap();
+    assert(__lns_palette_runtime().controls.remember && global.config_write_count == 1);
+    global.__lns_palette = undefined;
+    var restarted = test_settings();
+    restarted.__lns_palette_category.tap();
+    assert(__lns_palette_runtime().controls.remember);
+    assert(__lns_palette_runtime().characters[0].selected == 1);
+    assert(global.config_write_count == 1, "Title restore must not rewrite settings");
+    var state = __lns_palette_runtime();
+    global.initialize();
+    assert(__lns_palette_runtime() == state && state.characters[0].selected == 1);
+    assert(global.config_write_count == 1);
+    show_debug_message("PASS: fresh title Settings initializes, saves, restores before Game and tolerates later installer drain");
+} else if (global.controls_case == "title_notice") {
+    test_put(test_saved("candidate"));
+    global.toast_menu = undefined;
+    var menu = test_settings();
+    menu.__lns_palette_category.tap();
+    assert(global.toast_menu == undefined && global.toast_spawn_count == 0,
+        "Opening title Settings must not create an unused notification menu");
+    var scroller = menu.option_scroller;
+    var pilot = menu.option_pilot;
+    scroller.scroll = 0;
+    pilot.focus = 0;
+    global.write_mode = "noop";
+    menu.option_pilot.nodes[0].tap();
+    test_visible_error(menu);
+    assert(global.toast_spawn_count == 1, "Missing title toast menu must be created natively");
+    var toasts = global.toast_menu;
+    assert(!toasts.close_requested && array_length(global.notices) == 1);
+    menu.option_pilot.nodes[1].tap();
+    menu.option_pilot.nodes[38].tap();
+    assert(global.toast_menu == toasts && global.toast_spawn_count == 1);
+    assert(array_length(global.notices) == 3, "Subsequent failures and rereading must reuse the toast menu");
+    assert(menu.option_scroller == scroller && menu.option_pilot == pilot);
+    assert(scroller.scroll == 0 && pilot.focus == 0 && ANCHOR.active == pilot);
+    assert(__lns_palette_runtime().characters[0].selected == 2,
+        "A notification must not undo the session choice");
+    menu.close();
+    assert(menu.original_close_calls == 1 && toasts.close_requested,
+        "Title-created toast menu must close with Settings before Game creates its own");
+    // After returning from Settings, Game creates its own notification menu.
+    global.toast_menu = new InfoToastsProbe();
+    var gameplay_toasts = global.toast_menu;
+    test_boot();
+    menu = test_settings();
+    menu.__lns_palette_category.tap();
+    menu.option_pilot.nodes[0].tap();
+    test_visible_error(menu);
+    assert(global.toast_menu == gameplay_toasts && global.toast_spawn_count == 1);
+    menu.close();
+    assert(menu.original_close_calls == 1 && !gameplay_toasts.close_requested,
+        "Settings must not close the game's existing notification menu");
+    show_debug_message("PASS: title save failure creates/reuses native toast, preserves focus/scroll, closes owned menu and leaves gameplay toast alone");
+} else if (global.controls_case == "menu") {
+    __lns_palette_runtime().initialized = true;
     var early = test_settings();
     assert(array_length(early.category_pilot.nodes) == 7, "Unready runtime must not expose palette actions");
     test_boot();

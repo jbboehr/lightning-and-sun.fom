@@ -1,7 +1,10 @@
 # Palette controls and remembered choices
 
 Implemented on 2026-11-05 against the preserved game archive and pinned MOMI
-v0.16.4. CPU interpreter and native engine API/IO checks pass. **Rendered UI and physical input acceptance remain pending**; these checks do not establish artwork acceptance. See the [integrated batch record](finish-batch-2026-11-05.md) for native phase evidence and display limits.
+v0.16.4. CPU interpreter, native engine API/IO and rendered title/journal UI checks pass.
+Actual keyboard/mouse and virtual gamepad are exercised; **the displayed live
+review has qualified user acceptance; physical-controller acceptance remains pending**. These checks do not
+establish additional artwork acceptance. See the [integrated batch record](finish-batch-2026-11-05.md) for native phase evidence and display limits.
 
 ## User behavior
 
@@ -33,7 +36,10 @@ object whose keys are stable character IDs and whose values are stable preset ID
 Display labels and array positions are never persisted. Normal game settings and
 save files are untouched by palette actions.
 
-Loading runs once in the registered installer, after MMAPI permits IO. It does
+Loading runs once, either in the registered installer or lazily when the native
+Settings screen opens on the title screen. Native Setup has initialized registries,
+Anchor and file IO before interactive title input; this does not drain other mods'
+installer queues or change MMAPI lifecycle flags. It does
 not materialize a default configuration file. MMAPI's path helper can lazily
 create the mod directory. Missing configuration leaves Vanilla/off. Invalid
 roots, versions, required fields or known-character value types leave
@@ -85,7 +91,7 @@ its text to the available width and derives toast height from the reflowed text.
 The implementation uses that supported surface for immediate feedback instead of
 assuming the final scroller row is visible. The persistent status row has 99
 pixels of height and participates in the native pilot. The notification boundary
-is a delivery spy in interpreter tests; real toast rendering remains pending.
+is a delivery spy in interpreter tests; actual wrapped toast rendering passes on title and during gameplay; see the live record.
 
 Source/probe hashes, the pinned dependency checkout and the disposable initial
 probe are retained locally under `local/authoring/finish-ui/`. The implementation
@@ -131,7 +137,8 @@ valid backup while primary write fails, proving backup recovery cannot mask
 failure. Combined repository checks
 and the task reliability gate are owned by the integration task.
 
-Still required in a disposable game configuration/save directory: native Settings
+At the original implementation checkpoint, the remaining live matrix in a
+disposable game configuration/save directory included native Settings
 from title and journal, keyboard/controller navigation to the eighth category and
 through 36 rows, mouse/wheel input, long-label wrapping, back/cancel/close,
 language refresh, dialogue and room/save transitions, rendered portrait/world
@@ -139,3 +146,18 @@ animation. Actual `CONFIG_DIRECTORY` writes, restart and permission-failure chec
 Real user saves/settings must remain unexposed during these checks. A generic
 Fabricator buffer/file stub does not establish engine IO behavior. GPU availability
 and reservation requirements apply to live rendering work.
+
+## Live follow-up, 2026-11-06
+
+Hardware rendering is established. The first actual title/world runs exposed two
+integration gaps hidden by the earlier API fixtures: the title room does not drain
+MMAPI's gameplay installer queue, and the four cameo characters do not have
+regular `NpcId` objects. The current bounded corrections and fresh verification
+belong in the [live release record](live-release-verification-2026-11-06.md).
+The fresh-title interpreter regression failed before lazy initialization and all
+three controls cases pass after it. Fresh title/journal IO/input, all 36 rows, both native toast lifetimes, remembering/
+reset/restart and failed opt-out now pass through actual OS/SDL input in the final
+installed game. The four-cameo lookup and title initialization corrections are
+integrated. The user gave qualified acceptance of the displayed live review;
+physical-controller acceptance and broader gameplay limits remain recorded in
+the live release record. The earlier API fixtures remain historical evidence.

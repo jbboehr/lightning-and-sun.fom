@@ -1,6 +1,7 @@
 # Stillwell: complete four-season world candidate
 
-2026-11-05. **Authored and locally validated; artwork acceptance pending.**
+2026-11-05: authored and locally validated. **Displayed world art was accepted
+with qualification on 2026-11-06; live play remains unverified.**
 This approved [finish-plan](../plans/finish.md) candidate adds all 68 omitted world
 strips. It preserves the prior 36 portrait regions, six color roles/groups and
 preset mappings exactly. New world colors use the existing roles. Shared
@@ -138,4 +139,15 @@ Final profile SHA-256:
 `968ef5b12ca02bd0942e91905186807337519f8a2f6f82416dd5a1df5dadfd62`.
 Final preset set SHA-256:
 `03ff6ee83e36851e0b720fb4cd26361113a574414d64be414c8ad009ef7fe91e`.
-User artwork acceptance and live gameplay remain pending.
+Artwork acceptance was pending at the original authoring checkpoint; the later
+assessment below closes that gate. Live gameplay remains unverified.
+
+## Displayed-art acceptance, 2026-11-06
+
+The user replied "looks okay to me" to the consolidated remaining-art review,
+including Stillwell's 68 world strips and 316 comparison cases. Record qualified
+acceptance of the displayed world artwork; inspection depth is unspecified.
+This closes Stillwell's art gate without establishing live-game, menu or input
+acceptance. The accepted snapshot is frozen under `local/fixtures/finish-stillwell`.
+See the [release-candidate assessment](linux-release-candidate-2026-11-06.md) for
+shared review and snapshot/install binding evidence and overall limits. No artwork changed.

@@ -1,6 +1,7 @@
 // Only the engine boundary is simulated. The test runs the shipped mod's GML.
 enum Menu { Textbox, Other, InfoToasts, Settings }
 enum NpcId { Adeline, Hayden = 10 }
+enum CameoId { Linnet, Wiscar, GreatBird, Darren, Wynne }
 globalvar ANCHOR;
 global.menu = undefined;
 global.__lns_palette_debug_hotkeys = true;
@@ -15,6 +16,7 @@ global.max_presets = false;
 global.seasons = false;
 global.world = false;
 global.characters = false;
+global.cameos = false;
 global.notices = [];
 global.palette_log = undefined;
 ANCHOR = {
@@ -97,8 +99,26 @@ function npc_id_to_gm_obj_id(npc_id) {
     if (npc_id == NpcId.Hayden) return 1001;
     assert(false, "Unexpected NPC ID");
 }
+function try_string_to_cameo_id(name) {
+    if (name == "linnet") return CameoId.Linnet;
+    if (name == "wiscar") return CameoId.Wiscar;
+    if (name == "darren") return CameoId.Darren;
+    if (name == "wynne") return CameoId.Wynne;
+    return undefined;
+}
+function cameo_id_to_gm_obj_id(cameo_id) {
+    assert(cameo_id == CameoId.Linnet || cameo_id == CameoId.Wiscar
+        || cameo_id == CameoId.Darren || cameo_id == CameoId.Wynne,
+        "The native cameo mapping rejects unknown IDs, including GreatBird");
+    return 1100 + cameo_id;
+}
 function try_string_to_asset(name) {
     if (global.missing_asset || name == global.missing_asset_name) return undefined;
+    var cameos = ["linnet", "wiscar", "darren", "wynne"];
+    for (var i = 0; i < array_length(cameos); i++) {
+        if (name == "spr_npc_" + cameos[i] + "_spring_idle_south") return 500 + 10 * i;
+        if (name == "spr_lns_npc_" + cameos[i] + "_spring_idle_south_blue") return 501 + 10 * i;
+    }
     if (name == "spr_portrait_hayden_spring_neutral") return 400;
     if (name == "spr_lns_hayden_spring_neutral_blue") return 401;
     if (name == "spr_npc_adeline_spring_idle_south") return 300;
@@ -165,6 +185,15 @@ function TestTextbox() constructor {
 function lns_palette_definitions() {
     var definitions = [["adeline", "Adeline", "F6", lns_palette_names(), lns_palette_assets(), lns_palette_ids()]];
     if (global.characters) array_push(definitions, ["hayden", "Hayden", "F8", ["Vanilla","Debug Blue"], [["spr_portrait_hayden_spring_neutral","spr_lns_hayden_spring_neutral_blue"]], ["vanilla", "blue"]]);
+    if (global.cameos) {
+        var cameos = ["linnet", "wiscar", "darren", "wynne"];
+        for (var i = 0; i < array_length(cameos); i++) {
+            var id = cameos[i];
+            array_push(definitions, [id, id, "F8", ["Vanilla", "Debug Blue"],
+                [["spr_npc_" + id + "_spring_idle_south", "spr_lns_npc_" + id + "_spring_idle_south_blue"]],
+                ["vanilla", "blue"]]);
+        }
+    }
     return definitions;
 }
 

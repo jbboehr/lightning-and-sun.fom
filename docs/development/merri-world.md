@@ -1,6 +1,7 @@
 # Merri: complete four-season world candidate
 
-2026-11-05. **Authored and locally validated; user visual acceptance pending.**
+2026-11-05: authored and locally validated. **Displayed world art was accepted
+with qualification on 2026-11-06; live play remains unverified.**
 This approved finish-plan batch adds all 44 seasonal world strips to a new
 `merri-world-trial` profile/set. The prior 32 portraits, eight source-color roles,
 singleton groups and four preset mappings are preserved exactly. Shared registry,
@@ -111,9 +112,20 @@ pixel/bounds verification about 1.5s; first release test compilation 2.40s and t
 execution 0.66s. Source-export time was not measured. No local GPU/model inference
 was used. Human visual-review and live-gameplay time remain unmeasured.
 
-No user has accepted this candidate. No accepted baseline was written. Full
+At the original authoring checkpoint, no user had accepted this candidate and no
+accepted baseline had been written. Full
 collection checks, combined installation/removal, retained cross-character suites
 and natural gameplay are integration/release work and were not claimed here.
 All game images and generated packages remain ignored local artifacts. The local
 source/build/review directories retained for this batch total about 32 MiB, plus
 roughly 1.4 MiB of reusable authoring evidence and temporary inspection sheets.
+
+## Displayed-art acceptance, 2026-11-06
+
+The user replied "looks okay to me" to the consolidated remaining-art review,
+including Merri's 44 world strips and 228 comparison cases. Record qualified
+acceptance of the displayed world artwork; inspection depth is unspecified.
+This closes Merri's art gate without establishing live-game, menu or input
+acceptance. The accepted snapshot is frozen under `local/fixtures/finish-merri`.
+See the [release-candidate assessment](linux-release-candidate-2026-11-06.md) for
+shared review and snapshot/install binding evidence and overall limits. No artwork changed.

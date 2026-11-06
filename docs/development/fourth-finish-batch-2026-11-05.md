@@ -1,8 +1,9 @@
 # Stillwell and cameo world-art batch
 
-2026-11-05. **Authoring, integration and verification are complete. New art
-acceptance is pending.** The user requested this batch after accepting displayed Taliferro/Vera
-artwork and requesting the completed checkpoint commit, `cbebf4a`.
+2026-11-05. **Authoring, integration and verification are complete. Displayed
+world art was accepted with qualification on 2026-11-06.** The user requested
+this batch after accepting displayed Taliferro/Vera artwork and requesting the
+completed checkpoint commit, `cbebf4a`.
 
 ## Scope and source boundary
 
@@ -34,14 +35,15 @@ The prior review sources and galleries have 975 retained fingerprints, excluding
 the two shared files intentionally extended by this batch. Accepted Reina,
 Taliferro and Vera snapshots remain under `local/fixtures/`; Wheedle/Zorel
 snapshots were also frozen without changing their previously recorded acceptance
-scope. The user's inspection limits and earlier first-batch approval limits
-remain in force. Keeping all portrait/world outputs for regression does not
-extend the scope of the displayed-art approval.
+scope. At this checkpoint, the user's inspection limits and earlier first-batch
+approval limits remained in force. Keeping all portrait/world outputs for
+regression does not extend the scope of the displayed-art approval.
 
-Passing automated checks does not establish visual acceptance. New artwork is
+Passing automated checks does not establish visual acceptance. New artwork was
 pending one consolidated review after the complete batch and its integrated
-checks. No local GPU or local model inference is required. Visible menu,
-physical input, natural gameplay and release packaging remain P6 work.
+checks; the later user assessment is recorded below. No local GPU or local model
+inference was required for this batch. Visible menu, physical input, natural
+gameplay and release packaging belonged to P6.
 
 ## Material evidence
 
@@ -110,9 +112,9 @@ The [review](../../tmp/fourth-batch-review/index.html) and portable
 `tmp/fourth-batch-review.zip` include all 462 native/mirrored cases in small pages.
 The five-choice images are samples, ordered Vanilla, Debug Blue, Hayden, Ryis,
 Seridia. Complete comparisons put Vanilla left and Debug Blue right, with full
-sprites and enlarged details. No new candidate has been written to an accepted
-art fixture. The user's next assessment concerns Stillwell and the four cameos;
-prior displayed-art approvals remain unchanged.
+sprites and enlarged details. At this original checkpoint, no new candidate had
+been written to an accepted art fixture. The requested assessment concerned
+Stillwell and the four cameos; prior displayed-art approvals were unchanged.
 
 The user subsequently identified Linnet's apparently unrecolored scar, considered
 that treatment expected and requested a commit after confirmation. Original
@@ -121,6 +123,17 @@ peach/pink scar is preserved while surrounding skin changes. No art data changed
 evidence is `tmp/linnet-scar-confirmation.log` and the cameo record. This records
 the scar assessment and explicit commit authorization, without treating the
 commit request as broader fourth-batch or live-game acceptance.
+
+On 2026-11-06, the user replied "looks okay to me" to the consolidated
+remaining-art review, which included Stillwell, Darren, Linnet, Wiscar and
+Wynne's 113 world strips and all 462 comparison cases. Record qualified
+acceptance of that displayed world artwork, with inspection depth unspecified.
+This closes the broader fourth-batch art gate while preserving the earlier
+Linnet-scar assessment. It does not establish live-game, menu or input acceptance.
+Accepted snapshots are frozen under `local/fixtures/finish-<id>` for these five
+characters. The [release-candidate assessment](linux-release-candidate-2026-11-06.md)
+owns the review fingerprint, snapshot/install binding evidence and overall
+acceptance limits. No artwork changed for this assessment.
 
 The consolidated page and all five character indexes passed twelve additional
 CPU desktop/mobile browser loads: all images and links are available, with no
@@ -139,7 +152,9 @@ byte-identical. The builder now reads this owning record. This report correction
 does not change artwork or recorded acceptance.
 
 This batch used CPU tools. Rendered menu, physical input, natural gameplay and
-release packaging remain unverified P6 gates, including natural cameo cutscenes.
+release packaging were unverified P6 gates at its original checkpoint, including
+natural cameo cutscenes. The linked release-candidate assessment owns later CPU
+packaging evidence; live-game acceptance remains separate.
 The existing isolated 601 MiB archive lab was reused and is exactly restored;
 no extra source archive copies were created. Author evidence totals about 47
 MiB, plus the small consolidated review and reusable combined build. Accepted

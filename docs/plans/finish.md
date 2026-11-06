@@ -1,6 +1,9 @@
 # Plan to finish Lightning and Sun
 
-Updated 2026-11-06. **Approved by the user; all planned content authoring through P4 validated. Recorded art and release acceptance gates remain.**
+Updated 2026-11-06. **Content-complete alpha reached with all planned displayed
+artwork accepted, including recorded qualifications. Displayed basic live review
+also has qualified acceptance; broader live verification and final Linux release
+gates remain.**
 The [planning overview](../planning.md) owns current status and priorities.
 The [assessment](../development/project-status.md) owns the starting evidence.
 
@@ -343,16 +346,26 @@ local inference was required.
 
 ## Remaining acceptance and release sequence
 
-1. Obtain acceptance of the recorded first/fourth-batch art gaps, preserving
-   earlier qualified approvals. Source
-   coverage and passing checks alone do not establish the content-complete alpha.
-2. Finish the CPU portion of P6: supported folder-mod and refusal-path regression,
-   clean pinned-Nix installation/removal, package-content inspection and updated
-   end-user instructions. Prepare the reproducible Linux artifact.
-3. Check and reserve a GPU, then exercise the P6 rendered menu/input and natural
-   gameplay matrix, including keyboard/controller and remembering/reset/restart.
-   Record actual coverage, fix release blockers and prepare release notes. The
-   usable Linux milestone requires this acceptance; publishing needs authorization.
+The CPU release batch passes after accepted-content checkpoint `3751832`.
+Its package, standalone-source build, compatibility fixtures and evidence are owned by the
+[release-candidate record](../development/linux-release-candidate-2026-11-06.md).
+
+The user subsequently gave qualified acceptance of the consolidated remaining
+first/fourth artwork. Its scope, snapshots and milestone evidence are in the
+[release-candidate record](../development/linux-release-candidate-2026-11-06.md).
+All planned content is now accepted as displayed; earlier specific qualifications
+and the distinction from live-game acceptance remain in force.
+
+The completed live controls/persistence/basic gameplay review has qualified
+user acceptance. Its scope, frozen review artifact and remaining limits are in
+the [live record](../development/live-release-verification-2026-11-06.md).
+
+1. Resolve physical-controller and broader
+   seasonal/action acceptance without inferring it from virtual input or offline
+   frame coverage. Further live gameplay requires a checked/reserved GPU.
+2. Finalize the tested Linux candidate, compatibility notes and the owner's
+   licensing choice before public distribution. The usable Linux milestone
+   requires recorded art and live acceptance; publishing needs authorization.
 
 No further character-authoring batch is planned. New defects discovered during
 acceptance are bounded follow-ups with their own evidence, rather than a reason

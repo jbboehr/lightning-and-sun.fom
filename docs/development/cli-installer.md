@@ -1,5 +1,10 @@
 # CLI installer prototype
 
+This is historical prototype evidence. The current Nix package and MOMI 0.16.4
+compatibility checks are recorded in the
+[Linux release-candidate record](linux-release-candidate-2026-11-06.md). The
+older runner versions and local fixture paths below retain their original scope.
+
 This slice makes the existing one-portrait experiment repeatable. It does not
 expand recoloring coverage. The later [region-mask slice](portrait-regions.md)
 refines this portrait's recipe. The subsequent [spring coverage slice](spring-portraits.md)

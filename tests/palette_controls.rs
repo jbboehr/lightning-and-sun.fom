@@ -75,6 +75,18 @@ fn run_controls(case: &str) {
 
 #[test]
 #[ignore = "requires the pinned Fabricator interpreter in FOM_GML_INTERPRETER"]
+fn title_settings_initializes_palettes_before_game_begin_step() {
+    run_controls("title");
+}
+
+#[test]
+#[ignore = "requires the pinned Fabricator interpreter in FOM_GML_INTERPRETER"]
+fn title_save_failure_shows_a_native_notice_without_stealing_focus() {
+    run_controls("title_notice");
+}
+
+#[test]
+#[ignore = "requires the pinned Fabricator interpreter in FOM_GML_INTERPRETER"]
 fn native_palette_page_preserves_menu_and_animation_state() {
     run_controls("menu");
 }

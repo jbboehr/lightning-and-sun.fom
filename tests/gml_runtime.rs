@@ -90,3 +90,33 @@ fn characters_switch_independently_and_restore_vanilla() {
         String::from_utf8_lossy(&result.stderr)
     );
 }
+
+#[test]
+#[ignore = "requires the pinned Fabricator interpreter in FOM_GML_INTERPRETER"]
+fn cameo_world_palettes_use_native_cameo_objects_without_affecting_npcs() {
+    let temp = tempfile::tempdir().unwrap();
+    let script = temp.path().join("cameos.gml");
+    fs::write(
+        &script,
+        [
+            include_str!("gml/engine_stub.gml"),
+            include_str!("../mod/toggle/gml/palette_toggle.gml"),
+            include_str!("../mod/toggle/gml/palette_controls.gml"),
+            include_str!("gml/cameo_cases.gml"),
+        ]
+        .join("\n"),
+    )
+    .unwrap();
+    let result =
+        Command::new(std::env::var_os("FOM_GML_INTERPRETER").expect("Set FOM_GML_INTERPRETER"))
+            .arg("run")
+            .arg(script)
+            .output()
+            .unwrap();
+    assert!(
+        result.status.success(),
+        "{}\n{}",
+        String::from_utf8_lossy(&result.stdout),
+        String::from_utf8_lossy(&result.stderr)
+    );
+}

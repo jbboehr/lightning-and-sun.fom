@@ -1,8 +1,8 @@
 # First finish-plan integration batch
 
 2026-11-05. Authoring, integration and the combined verification checkpoint are complete.
-**New artwork acceptance remains pending.** The user requested one review after
-this batch's implementation and verification. The previously displayed Elsie
+**Displayed world artwork was accepted with qualification on 2026-11-06.** The
+user requested one review after this batch's implementation and verification. The previously displayed Elsie
 work remains accepted; it is not being submitted again.
 
 ## Content and preserved artwork
@@ -18,9 +18,9 @@ work remains accepted; it is not being submitted again.
 The [consolidated artwork review](../../tmp/finish-batch-review/index.html)
 links every case and sampled five-choice overviews. Its
 [candidate manifest](../../tmp/finish-batch-review/candidate-manifest.json)
-fingerprints all four profiles, preset sets and complete galleries. No candidate
-was written into an accepted fixture. The authors inspected all native and
-mirrored cases; that is separate from the user's judgment.
+fingerprints all four profiles, preset sets and complete galleries. At this
+original checkpoint, no candidate was written into an accepted fixture. The
+authors inspected all native and mirrored cases; that is separate from the user's judgment.
 
 Literal source landmarks and per-frame counts protect shared-color cuffs,
 clothing, bangles, crown and trim. All four variants validate, and omission/spill
@@ -30,8 +30,8 @@ negative controls fail at the intended source pixels. The author checks compare
 source pixel. Per-character evidence owns the detailed materials, no-skin
 frames, measurements and browser checks.
 
-Including the separately accepted six Elsie strips, 133 baseline omissions are
-now covered. The collection selects 5,042 strips: 2,201 portraits and 2,841 world
+At this integration checkpoint, including the separately accepted six Elsie strips,
+133 baseline omissions are covered. The collection selects 5,042 strips: 2,201 portraits and 2,841 world
 strips, generating 20,168 nonvanilla variants for 36 characters. Twenty characters
 have complete seasonal world coverage. Adeline has 315 selected regions, Juniper
 311, Louis/Merri 76 each and Elsie 164. Registry and selected-profile membership
@@ -102,7 +102,8 @@ archive also retains its original hash. No user game installation was modified.
 
 The consolidated review passed desktop/mobile Chromium checks: all four samples
 and every link load, with no horizontal overflow. Candidate fingerprints were
-rechecked after integration. New artwork is still awaiting the user's acceptance.
+rechecked after integration. Artwork acceptance was pending at that checkpoint;
+the later assessment below closes that gate.
 
 Reproduction commands and logs:
 
@@ -118,6 +119,21 @@ The original Adeline 143-asset identities and the preserved 282-strip action
 profile continue to have their separate archive-review contract. The new 315-strip
 finish profile additionally proves retention of all 282 earlier regions/outputs.
 Historical pixel and accepted-fixture assertions remain intact.
+
+## Displayed-art acceptance, 2026-11-06
+
+The user replied "looks okay to me" to the consolidated remaining-art review,
+which included Louis, Merri, Adeline and Juniper's 127 world strips and all 645
+comparison cases. Record qualified acceptance of that displayed world artwork;
+inspection depth is unspecified. This closes the broader first-batch art gate
+and preserves the earlier qualified Louis-glasses assessment. It does not
+establish live-game, menu or input acceptance.
+
+Accepted snapshots are frozen under `local/fixtures/finish-louis`,
+`finish-merri`, `finish-adeline` and `finish-juniper`. The
+[release-candidate assessment](linux-release-candidate-2026-11-06.md) owns the
+review fingerprint, snapshot/install binding evidence and overall acceptance
+limits. No artwork changed for this assessment.
 
 ## Local retention
 

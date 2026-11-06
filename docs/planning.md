@@ -14,7 +14,7 @@ The [finish plan](plans/finish.md) defines batches, dependencies and acceptance.
 
 The original investigation/proof of concept is complete. The Rust pipeline,
 per-character runtime and reversible CLI installation are implemented. The
-planned content authoring is complete. Remaining work is art acceptance and release verification. See the dated [assessment](development/project-status.md) for evidence
+planned content authoring is complete. Displayed artwork is accepted; release verification remains. See the dated [assessment](development/project-status.md) for evidence
 and limits; raw asset coverage is not a measure of remaining effort.
 
 | Area | Status |
@@ -23,9 +23,11 @@ and limits; raw asset coverage is not a measure of remaining effort.
 | Selected portrait inventory | All 2,201 strips for 36 characters included; some intentionally unchanged |
 | Selected world inventory | All 4,111 recolorable strips included; remaining 30 shadows and 18 spectral strips audited unchanged |
 | Complete world coverage | All 36 recolorable inventories authored and validated |
-| Art acceptance | Elsie, displayed second-batch non-Reina art, corrected Reina, displayed Taliferro/Vera, Errol/Hemlock, Luc/Maple, Terithia and Caldarus/Seridia art accepted; first/fourth-batch approval limits preserved |
-| Release controls | Native Settings page and opt-in saved choices pass API/storage checks; rendered/input acceptance pending |
-| Integration confidence | Full 36-character / 25,248-variant install/verify/remove passes, including separate installed spectral checks; gameplay/render acceptance remains |
+| Art acceptance | All planned displayed artwork accepted, including qualified first/fourth-batch acceptance; recorded inspection and glasses/scar qualifications preserved |
+| Content-complete alpha | Reached on 2026-11-06; live-game acceptance remains separate |
+| Release controls | Live title/journal keyboard, mouse, virtual-gamepad and persistence checks pass; displayed review has qualified user acceptance; physical-controller acceptance remains |
+| Integration confidence | Final package passes install/remove and basic rendered dialogue/movement/room/day/save/load checks; displayed review accepted with qualifications; broader live acceptance remains |
+| Linux packaging | Installable pinned-Nix candidate built and checked from standalone source; not published |
 
 ## Approved finish line
 
@@ -40,7 +42,8 @@ environment. This scope was approved on 2026-11-05.
 
 Use two milestones: **content-complete alpha**, then **usable Linux release**.
 Content authoring and menu work proceed independently; their acceptance gates remain separate.
-Neither milestone is complete until its specified checks and art acceptance pass.
+The content-complete alpha is reached. The usable Linux release still requires
+its live checks and remaining release gates.
 
 Windows/macOS support, a graphical installer, Workshop publishing, arbitrary new
 palette packs, new characters, and compatibility with every other mod are later
@@ -49,17 +52,20 @@ and known conflicts still need regression checks and clear documentation.
 
 ## Priority and dependencies
 
-P0 pilot validation is complete. P1 Reina mouth correction and the P2 Wheedle/Zorel and Taliferro/Vera batches are validated and accepted as displayed. P2 authoring is complete; Stillwell/cameo art acceptance and older first-batch acceptance limits remain. P3 and P4 authoring are validated and their displayed artwork accepted. P5 implementation is complete; rendered/input acceptance remains.
+P0 pilot validation and all P1–P4 authoring are complete. All planned artwork is
+accepted as displayed, including qualified first/fourth-batch approval. Earlier
+glasses/scar qualifications and unspecified inspection depth remain recorded.
+P5 title/journal menu, keyboard/mouse/virtual-gamepad input, saving/reset/restart and failure feedback pass live after three bounded initialization/notification fixes. Basic natural gameplay and actual save/load also pass; the displayed live review has qualified user acceptance. Physical-controller and broader seasonal/action acceptance remain. See the [live verification record](development/live-release-verification-2026-11-06.md).
 
 | Order | Outcome | Dependency / state | Local GPU |
 | --- | --- | --- | --- |
-| P0 | Inventory/test repair and measured pilot validated | Louis measured and validated; artwork acceptance pending; see [pilot evidence](development/louis-world.md) and [inventory](development/finish-inventory.md) | No |
+| P0 | Inventory/test repair and measured pilot validated | Complete; Louis artwork accepted with recorded qualifications; see [pilot evidence](development/louis-world.md) and [inventory](development/finish-inventory.md) | No |
 | P1 | Finish existing-character world gaps and named portrait defects | All 45 baseline strip gaps covered; Hayden/Juniper displayed details accepted; Reina mouth correction accepted as displayed | No for authoring/tests |
-| P2 | Finish smaller inventories and four cameo characters | All strips authored and validated; Stillwell/cameo artwork awaits review, earlier acceptance limits preserved | No for authoring/tests |
+| P2 | Finish smaller inventories and four cameo characters | Complete and accepted as displayed, with recorded qualifications | No for authoring/tests |
 | P3 | Finish Errol, Hemlock, Luc, Maple and Terithia | All strips authored, validated and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
 | P4 | Finish Caldarus and Seridia, including an explicit special-form audit | Complete and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
-| P5 | Add one selection menu and opt-in remembered choices using the existing runtime | Native menu/API and real storage/restart/failure phases pass; rendered/input acceptance remains | CPU development; GPU for live verification |
-| P6 | Validate complete artwork, package, installation/removal and natural gameplay; prepare supported Linux release | P1–P5 accepted | Yes for gameplay/rendering; CPU for other checks |
+| P5 | Add one selection menu and opt-in remembered choices using the existing runtime | Native menu/storage/input checks pass and displayed live review accepted with qualifications; physical-controller acceptance remains | CPU development; GPU for live verification |
+| P6 | Validate complete artwork, package, installation/removal and natural gameplay; prepare supported Linux release | Artwork and displayed basic live review accepted; broader live matrix and final release gates remain | Yes for gameplay/rendering; CPU for other checks |
 
 The remaining 30 strips outside P1–P4 are Hayden shadows (29, already audited)
 and Balor's shadow jump (1), both audited in P0. Other listed inventories may contain
@@ -84,7 +90,10 @@ silently dropping assets. Rows reconcile the complete raw omission inventory.
   authors are authorized; their file ownership is separate and integration stays
   with the parent. The menu/storage source probe and runtime review are complete.
 
-First batch evidence: [integration record](development/finish-batch-2026-11-05.md). Combined checks and full installation/removal pass; broader art acceptance remains pending.
+First batch complete: combined checks and full installation/removal pass;
+displayed artwork has qualified acceptance, with inspection depth unspecified
+and no live-game approval inferred. See the
+[integration record](development/finish-batch-2026-11-05.md).
 
 Second batch: combined checks and full-collection installation/removal pass. The user reported no issues outside Reina's mouth; record displayed non-Reina art acceptance, inspection depth unspecified. Reina's skin-spike correction is validated and accepted as displayed; see the [correction evidence](development/reina-mouth-correction.md) and [batch record](development/second-finish-batch-2026-11-05.md). No local GPU was required.
 
@@ -95,8 +104,9 @@ Reina and prior art. Displayed Taliferro/Vera art is accepted; see the
 
 Fourth batch complete: Stillwell and the four cameo characters cover the final
 113 P2 strips. Combined checks and full-collection installation/removal pass;
-the user considers Linnet's preserved scar expected and authorized a commit.
-Broader art acceptance remains pending. See the [batch evidence](development/fourth-finish-batch-2026-11-05.md).
+displayed artwork has qualified acceptance, retaining the earlier Linnet-scar
+assessment without inferring live-game approval. See the
+[batch evidence](development/fourth-finish-batch-2026-11-05.md).
 
 Fifth batch complete: Errol/Hemlock's 227 P3 world strips are authored,
 integrated and validated. Combined checks and full-collection installation/removal
@@ -124,31 +134,47 @@ See the [batch record](development/eighth-finish-batch-2026-11-06.md). No local 
 was required. All planned world authoring is complete; intentional no-change
 assets and earlier approval limits remain recorded separately.
 
-The next work is acceptance and release verification, in this order:
+The remaining work is live verification and final release preparation:
 
-1. Close the recorded first/fourth art-acceptance gaps using their preserved
-   reviews. Keep any qualified approvals.
-2. Complete the CPU release checks for supported folder-mod handling, mismatch
-   refusal, clean Nix installation and package contents; prepare the Linux artifact
-   and end-user documentation.
-3. Check GPU availability and reserve it for visible menu, keyboard/controller,
-   persistence and natural-gameplay verification. Record the exercised matrix,
-   resolve concrete blockers and prepare release notes. Publishing remains separate.
+1. Complete remaining physical-controller and broader seasonal/outfit/action
+   verification, recording any accepted limits. Further live work requires
+   checked GPU availability and a reservation. Prepare release notes from the
+   exercised matrix and resolve concrete blockers.
+2. Finalize the tested candidate and supported-platform/compatibility notes;
+   resolve the owner's licensing choice before any public distribution.
+   Publishing remains separate.
 
-The content-complete alpha still requires the recorded art acceptance. The usable
-Linux release additionally requires the remaining P6 checks; neither is complete.
+The content-complete alpha is reached following qualified acceptance of the final
+consolidated artwork review. The usable Linux release still requires the live
+P6 matrix and final release gates.
+
+Linux CPU release batch complete, 2026-11-06: the installable Nix candidate,
+standalone-source build, folder-mod/refusal and exact removal checks pass with
+the final collection. End-user instructions are current; the subsequent
+consolidated artwork review is accepted with qualifications. See the
+[release-candidate record](development/linux-release-candidate-2026-11-06.md).
+The subsequent live record owns rendered/input/gameplay results and limits;
+publishing remains separate.
+
+Live verification batch accepted as displayed with qualifications, 2026-11-06: hardware-rendered native
+menus, input, persistence/failures and basic dialogue/movement/room/day/save/load
+pass in an isolated lab. Three concrete integration defects are repaired; broader
+seasonal/action and physical-controller acceptance remain.
+See the [live verification record](development/live-release-verification-2026-11-06.md).
 
 ## Open decisions and limits
 
 Release scope, menu/remembering behavior and parallel authoring are approved.
-Source-backed menu/storage feasibility and actual engine IO/restart/failure checks passed; rendered UI and physical input remain unverified.
-Controller navigation and current gameplay behavior need live checks. No new runtime image loader or Rust/GML bridge
+Rendered title/journal UI, actual OS keyboard/mouse and SDL virtual-gamepad events,
+persistence/failures and basic game save/load pass; the displayed review has
+qualified user acceptance. Physical controller and broader
+seasonal/action playthrough acceptance remain. No new runtime image loader or Rust/GML bridge
 is planned.
 
 The provisional 12–24 combined author-hour content allowance is now historical;
 all planned authoring is finished. Character records retain measured work and
-verification evidence. Remaining effort depends on art acceptance, live GPU
-checks and clean Linux packaging, for which no delivery date is established.
+verification evidence. Remaining effort depends on live GPU checks and final
+release preparation; the CPU Linux candidate is prepared. No delivery date is established.
 See [pilot measurements](development/louis-world.md) for the original estimate.
 
 ## Completed planning work

@@ -1,6 +1,7 @@
 # Juniper Beach Accident candidate
 
-2026-11-05. **Authored and validated; user visual acceptance pending.**
+2026-11-05: authored and validated. **Displayed world art was accepted with
+qualification on 2026-11-06; live play remains unverified.**
 The approved P1 batch adds all six Beach Accident strips: blink East/South,
 idle East/North/South and the 22-frame South transformation. The new
 `juniper-world-finish` profile preserves all 305 prior region objects, source
@@ -53,8 +54,8 @@ The previously accepted bangle-edge exceptions in earlier assets are unchanged.
 | Transform South | 47, 47; fifteen zero-selection effect frames; 61, 72, 80, 82, 82 |
 
 The batch has 31 source frame occurrences, 28 exact unique frames, three duplicate
-occurrences and 847 selected skin pixels per preset. None of these new frame
-masks is recorded as user-accepted.
+occurrences and 847 selected skin pixels per preset. At the original authoring
+checkpoint, none of these new frame masks was recorded as user-accepted.
 
 ## Complete review and verification
 
@@ -115,9 +116,21 @@ one second. CPU Chromium took 44.367s. No local GPU or model inference was used.
 Detailed measurements remain in the retained authoring directory.
 
 User review, combined collection/install/remove checks and live transformation
-timing/dispatch remain integration/release work. No accepted fixture baseline was
-written and no source game pixels were tracked. All generated artifacts remain
-ignored. The new build is about 53 MiB; predecessor comparison bundles are about
+timing/dispatch belonged to integration/release work at this authoring checkpoint.
+No accepted fixture baseline was written then and no source game pixels were
+tracked. All generated artifacts remain ignored. The new build is about 53 MiB;
+predecessor comparison bundles are about
 52 MiB each, with 3.5 MiB of complete extracted source and 5.3 MiB of authoring
 evidence. One predecessor bundle was produced before a stdout-buffer limit was
 corrected; the subsequent recorded build completed successfully.
+
+## Displayed-art acceptance, 2026-11-06
+
+The user replied "looks okay to me" to the consolidated remaining-art review,
+including Juniper's six Beach Accident world strips and 35 comparison cases.
+Record qualified acceptance of the displayed world artwork; inspection depth
+is unspecified. This closes the Beach Accident art gate without establishing
+live transformation timing/dispatch, gameplay, menu or input acceptance.
+The accepted snapshot is frozen under `local/fixtures/finish-juniper`. See the
+[release-candidate assessment](linux-release-candidate-2026-11-06.md) for shared
+review and snapshot/install binding evidence and overall limits. No artwork changed.

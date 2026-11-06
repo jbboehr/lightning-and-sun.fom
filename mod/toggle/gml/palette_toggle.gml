@@ -142,6 +142,11 @@ function lns_palette_initialize() {
         if (array_length(character.world_pairs) > 0) {
             var npc_id = try_string_to_npc_id(character.id);
             if (npc_id != undefined) character.object = npc_id_to_gm_obj_id(npc_id);
+            else {
+                // Cutscene cameos share the NPC animator but have their own IDs.
+                var cameo_id = try_string_to_cameo_id(character.id);
+                if (cameo_id != undefined) character.object = cameo_id_to_gm_obj_id(cameo_id);
+            }
             if (character.object == undefined) {
                 mmapi_log_warn("lns_palette", "Palette study disabled: a world object is missing.");
                 return;

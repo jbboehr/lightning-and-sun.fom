@@ -1,6 +1,7 @@
 # Darren, Linnet, Wiscar and Wynne: complete world candidate
 
-2026-11-05. **Authored and locally validated; user visual acceptance pending.**
+2026-11-05: authored and locally validated. **Displayed world art was accepted
+with qualification on 2026-11-06; live play remains unverified.**
 This approved P2 batch covers all 45 omitted cameo world strips. Four new
 profiles/sets retain all eight portraits per character, previous source
 roles/groups and preset mappings. Shared registry, collection selection, counts
@@ -57,8 +58,8 @@ The user asked whether Linnet's apparently unrecolored patch is her scar, then
 said that treatment was expected and requested a commit if confirmed. Comparing
 the original portrait and world sprite confirms the peach/pink scar; fresh
 Linnet portrait/world material tests pass, including preserved `#FFA793` and
-`#EF977D` landmarks and recolored adjacent skin. No artwork changed. Record this
-assessment for the scar treatment without inferring broader batch acceptance.
+`#EF977D` landmarks and recolored adjacent skin. No artwork changed. That
+assessment covered the scar treatment without establishing broader batch acceptance.
 
 **Wiscar:** world skin uses existing light #E3A17B, deep #9F5544 and #6D3328,
 plus new medium #CC795D. The existing two-thirds-deep rule for #6D3328 is
@@ -170,9 +171,23 @@ six-test group took 0.22s. The separate 16-validations/eight-negatives/source
 audit/component-gallery pass took 16.35s. Human review time is unmeasured.
 No local GPU, local inference or Pillow was used.
 
-No new artwork is accepted and no accepted world baseline was written.
+At the original authoring checkpoint, no new artwork was accepted and no
+accepted world baseline had been written.
 Combined collection/install/remove checks belong to the parent batch. Native
 cameo cutscenes, natural gameplay and rendered/input acceptance remain
 unverified; other browsers are unverified. About 25 MiB of scoped source,
 build, review and authoring evidence is retained, plus small inspection
 sheets/helpers under project tmp/. No archive copies or tracked game imagery.
+
+## Displayed-art acceptance, 2026-11-06
+
+The user replied "looks okay to me" to the consolidated remaining-art review,
+including Darren, Linnet, Wiscar and Wynne's 45 world strips and 146 comparison
+cases. Record qualified acceptance of that displayed world artwork, with
+inspection depth unspecified. This closes the broader cameo art gate while
+preserving the earlier Linnet-scar assessment. It does not establish native
+cameo cutscenes, live gameplay, menu or input acceptance. Accepted snapshots are
+frozen under `local/fixtures/finish-darren`, `finish-linnet`, `finish-wiscar` and
+`finish-wynne`. See the
+[release-candidate assessment](linux-release-candidate-2026-11-06.md) for shared
+review and snapshot/install binding evidence and overall limits. No artwork changed.
