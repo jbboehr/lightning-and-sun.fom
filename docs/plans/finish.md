@@ -1,6 +1,6 @@
 # Plan to finish Lightning and Sun
 
-2026-11-05. **Approved by the user; content authoring through P2 validated. Recorded art and release acceptance gates remain.**
+Updated 2026-11-06. **Approved by the user; content authoring through P2 and Errol/Hemlock validated. Recorded art and release acceptance gates remain.**
 The [planning overview](../planning.md) owns current status and priorities.
 The [assessment](../development/project-status.md) owns the starting evidence.
 
@@ -290,3 +290,17 @@ see the
 [batch evidence](../development/fourth-finish-batch-2026-11-05.md).
 No local GPU or local model inference was required. P3 begins with Errol/Hemlock
 after this batch; previously recorded approval limits remain in force.
+
+## Fifth batch — Errol and Hemlock
+
+2026-11-06: the user approved the concrete next batch, Errol's 107 world strips
+and Hemlock's 120. Two authors own independent character candidates; the parent
+owns shared registry, collection selection/counts and full integration.
+All seasons/actions and focused tests, standard/material/GML checks and full
+collection install/verify/remove are complete; prior outputs and recorded
+approval limits are preserved. Displayed Errol/Hemlock artwork is accepted after
+the consolidated review, with inspection depth unspecified and no live-game
+acceptance inferred. See the [batch evidence](../development/fifth-finish-batch-2026-11-06.md).
+No local GPU or local model inference was required. Luc/Maple is the next P3
+batch (200 world strips), followed by Terithia. Remaining artwork and release
+acceptance gates stay open.

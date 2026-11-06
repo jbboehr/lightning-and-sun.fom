@@ -129,6 +129,15 @@ check summary and file fingerprints. `generated/review` and `generated/build`
 point to the completed fourth-batch review and combined build; historical review
 directories and accepted fixtures are retained separately.
 
+On 2026-11-06, fifth-batch preparation found a copied path in the review builder:
+the fourth ZIP's `validation.html` contained the third batch's development
+record. Artwork, recipes and the fourth-batch check summary were correct. The
+original ZIP is preserved as `tmp/fourth-batch-review-original.zip`; only the
+verification page and its portable-manifest hash are corrected in the current
+ZIP. Every other entry, including all images and candidate fingerprints, remains
+byte-identical. The builder now reads this owning record. This report correction
+does not change artwork or recorded acceptance.
+
 This batch used CPU tools. Rendered menu, physical input, natural gameplay and
 release packaging remain unverified P6 gates, including natural cameo cutscenes.
 The existing isolated 601 MiB archive lab was reused and is exactly restored;

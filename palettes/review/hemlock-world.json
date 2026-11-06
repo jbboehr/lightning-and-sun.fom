@@ -1,0 +1,29 @@
+{
+  "label": "Hemlock complete four-season world candidate",
+  "prefixes": [
+    "assets/animations/NPCs/Hemlock/Sprites/"
+  ],
+  "source_colors": [
+    "#C9906A",
+    "#B36844",
+    "#8A3F31",
+    "#712922",
+    "#A05748",
+    "#BF7B5A",
+    "#4C242C",
+    "#C48E68",
+    "#8E4538"
+  ],
+  "preview_colors": [
+    "#9DB9D4",
+    "#7F9FBD",
+    "#6687AD",
+    "#445F83",
+    "#6687AD",
+    "#7F9FBD",
+    "#445F83",
+    "#9DB9D4",
+    "#6687AD"
+  ],
+  "reference_profile": "../profiles/hemlock-world-trial.json"
+}
