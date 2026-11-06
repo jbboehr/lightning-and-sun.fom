@@ -35,7 +35,7 @@ fn tracked_character_profiles_match_reviewed_coverage() {
         ("luc", 131),
         ("maple", 133),
         ("merri", 76),
-        ("terithia", 32),
+        ("terithia", 163),
         ("stillwell", 104),
         ("taliferro", 96),
         ("vera", 92),

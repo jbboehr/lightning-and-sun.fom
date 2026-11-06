@@ -24,7 +24,7 @@
     {"id": "luc", "presets": "luc-world-trial.json"},
     {"id": "maple", "presets": "maple-world-trial.json"},
     {"id": "merri", "presets": "merri-world-trial.json"},
-    {"id": "terithia", "presets": "terithia-portraits-trial.json"},
+    {"id": "terithia", "presets": "terithia-world-trial.json"},
     {"id": "stillwell", "presets": "stillwell-world-trial.json"},
     {"id": "taliferro", "presets": "taliferro-world-trial.json"},
     {"id": "vera", "presets": "vera-world-trial.json"},

@@ -1,6 +1,6 @@
 # Plan to finish Lightning and Sun
 
-Updated 2026-11-06. **Approved by the user; content authoring through P2 and the Errol/Hemlock and Luc/Maple batches validated. Recorded art and release acceptance gates remain.**
+Updated 2026-11-06. **Approved by the user; content authoring through P3 validated. Recorded art and release acceptance gates remain.**
 The [planning overview](../planning.md) owns current status and priorities.
 The [assessment](../development/project-status.md) owns the starting evidence.
 
@@ -316,3 +316,16 @@ variants and accepted snapshots remain unchanged. Displayed Luc/Maple artwork is
 accepted, with inspection depth unspecified and no live-game acceptance inferred.
 See the [batch record](../development/sixth-finish-batch-2026-11-06.md).
 No local GPU or local model inference is required. Terithia follows this batch.
+
+## Seventh batch — Terithia
+
+2026-11-06: the user accepted displayed Luc/Maple artwork and requested a commit
+and the next batch. Terithia's 131 world strips are authored and validated. One
+character author owns masks, palette data, focused tests and complete galleries;
+the parent owns shared integration, full checks and one consolidated review.
+Combined standard/material/GML checks and full-collection installation,
+verification and exact removal pass; prior generated variants and accepted
+snapshots remain unchanged. Displayed Terithia artwork is accepted, with inspection
+depth unspecified and no live-game acceptance inferred. See the
+[batch record](../development/seventh-finish-batch-2026-11-06.md). No local GPU or
+local model inference is required. Caldarus/Seridia follow in P4.
