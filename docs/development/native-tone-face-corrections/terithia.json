@@ -1,0 +1,813 @@
+{
+  "character": "terithia",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/terithia-world-trial.json",
+  "base_profile_sha256": "570f4a546674f682e03ac643c8aaf3e74892237a6e9cbd654a8fdf421eae0360",
+  "profile": "palettes/profiles/terithia-native-tone-face.json",
+  "additional_source_colors": [
+    "#CB7C72",
+    "#A86252"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#FFDED0FF",
+      "#FFE4D6FF",
+      "#FFEEE1FF",
+      "#89452DFF",
+      "#EAA092FF",
+      "#D89387FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#F7E4B9FF",
+      "#FCEABFFF",
+      "#FFF4CAFF",
+      "#CC8155FF",
+      "#DCA07BFF",
+      "#CA9370FF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#ECA88FFF",
+      "#F1AE95FF",
+      "#F9B8A0FF",
+      "#9F5544FF",
+      "#C98476FF",
+      "#B7776BFF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#452019FF",
+      "#452019FF",
+      "#452019FF",
+      "#E78C6FFF",
+      "#EC9275FF",
+      "#F49C80FF",
+      "#452019FF",
+      "#B85F55FF",
+      "#A6524AFF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#321111FF",
+      "#321111FF",
+      "#321111FF",
+      "#97464CFF",
+      "#9C4C52FF",
+      "#A4565DFF",
+      "#321111FF",
+      "#A35353FF",
+      "#914648FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#190705FF",
+      "#190705FF",
+      "#190705FF",
+      "#531E30FF",
+      "#582436FF",
+      "#602E41FF",
+      "#190705FF",
+      "#84434DFF",
+      "#723642FF"
+    ]
+  },
+  "counts": {
+    "selected_strips": 163,
+    "portrait_strips": 32,
+    "world_strips": 131,
+    "audited_native_portrait_frames": 64,
+    "mouth_unique_crops_inspected": 6,
+    "affected_strips": 4,
+    "components": 40,
+    "selected_pixels": 160
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Terithia/Portraits/Autumn/spr_portrait_terithia_autumn_embarrassed.png",
+      "source_sha256": "9230a8d7c5e4d8f675358d261fb12b80d9c6b37a50833d2b147e5685ee5ed8b5",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            157,
+            74
+          ],
+          "color": "#CB7C72",
+          "pixels": 15,
+          "bounds": [
+            154,
+            74,
+            160,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            161,
+            74
+          ],
+          "color": "#A86252",
+          "pixels": 2,
+          "bounds": [
+            161,
+            74,
+            161,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            453,
+            74
+          ],
+          "color": "#CB7C72",
+          "pixels": 15,
+          "bounds": [
+            450,
+            74,
+            456,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            457,
+            74
+          ],
+          "color": "#A86252",
+          "pixels": 2,
+          "bounds": [
+            457,
+            74,
+            457,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            75
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            162,
+            75,
+            162,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            75
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            458,
+            75,
+            458,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            76
+          ],
+          "color": "#A86252",
+          "pixels": 1,
+          "bounds": [
+            162,
+            76,
+            162,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            163,
+            76
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            163,
+            76,
+            163,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            76
+          ],
+          "color": "#A86252",
+          "pixels": 1,
+          "bounds": [
+            458,
+            76,
+            458,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            459,
+            76
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            459,
+            76,
+            459,
+            76
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Terithia/Portraits/Spring/spr_portrait_terithia_spring_embarrassed.png",
+      "source_sha256": "a906f3e50aaee64138a06a32ba51c59533c6b58eb6953357a6df61fb4c0b3148",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            157,
+            74
+          ],
+          "color": "#CB7C72",
+          "pixels": 15,
+          "bounds": [
+            154,
+            74,
+            160,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            161,
+            74
+          ],
+          "color": "#A86252",
+          "pixels": 2,
+          "bounds": [
+            161,
+            74,
+            161,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            453,
+            74
+          ],
+          "color": "#CB7C72",
+          "pixels": 15,
+          "bounds": [
+            450,
+            74,
+            456,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            457,
+            74
+          ],
+          "color": "#A86252",
+          "pixels": 2,
+          "bounds": [
+            457,
+            74,
+            457,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            75
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            162,
+            75,
+            162,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            75
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            458,
+            75,
+            458,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            76
+          ],
+          "color": "#A86252",
+          "pixels": 1,
+          "bounds": [
+            162,
+            76,
+            162,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            163,
+            76
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            163,
+            76,
+            163,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            76
+          ],
+          "color": "#A86252",
+          "pixels": 1,
+          "bounds": [
+            458,
+            76,
+            458,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            459,
+            76
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            459,
+            76,
+            459,
+            76
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Terithia/Portraits/Summer/spr_portrait_terithia_summer_embarrassed.png",
+      "source_sha256": "bdad820a2476867d50a1940074f933af78413c9747c2c2a8561b5e1ff45abe8b",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            157,
+            74
+          ],
+          "color": "#CB7C72",
+          "pixels": 15,
+          "bounds": [
+            154,
+            74,
+            160,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            161,
+            74
+          ],
+          "color": "#A86252",
+          "pixels": 2,
+          "bounds": [
+            161,
+            74,
+            161,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            453,
+            74
+          ],
+          "color": "#CB7C72",
+          "pixels": 15,
+          "bounds": [
+            450,
+            74,
+            456,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            457,
+            74
+          ],
+          "color": "#A86252",
+          "pixels": 2,
+          "bounds": [
+            457,
+            74,
+            457,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            75
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            162,
+            75,
+            162,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            75
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            458,
+            75,
+            458,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            76
+          ],
+          "color": "#A86252",
+          "pixels": 1,
+          "bounds": [
+            162,
+            76,
+            162,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            163,
+            76
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            163,
+            76,
+            163,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            76
+          ],
+          "color": "#A86252",
+          "pixels": 1,
+          "bounds": [
+            458,
+            76,
+            458,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            459,
+            76
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            459,
+            76,
+            459,
+            76
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Terithia/Portraits/Winter/spr_portrait_terithia_winter_embarrassed.png",
+      "source_sha256": "ebc4640548672c51dc96e74b8b37e897833b2e3e0e7b48313566ecfdd7a216ec",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            157,
+            74
+          ],
+          "color": "#CB7C72",
+          "pixels": 15,
+          "bounds": [
+            154,
+            74,
+            160,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            161,
+            74
+          ],
+          "color": "#A86252",
+          "pixels": 2,
+          "bounds": [
+            161,
+            74,
+            161,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            453,
+            74
+          ],
+          "color": "#CB7C72",
+          "pixels": 15,
+          "bounds": [
+            450,
+            74,
+            456,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            457,
+            74
+          ],
+          "color": "#A86252",
+          "pixels": 2,
+          "bounds": [
+            457,
+            74,
+            457,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            75
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            162,
+            75,
+            162,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            75
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            458,
+            75,
+            458,
+            75
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            76
+          ],
+          "color": "#A86252",
+          "pixels": 1,
+          "bounds": [
+            162,
+            76,
+            162,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            163,
+            76
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            163,
+            76,
+            163,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            76
+          ],
+          "color": "#A86252",
+          "pixels": 1,
+          "bounds": [
+            458,
+            76,
+            458,
+            76
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            459,
+            76
+          ],
+          "color": "#CB7C72",
+          "pixels": 1,
+          "bounds": [
+            459,
+            76,
+            459,
+            76
+          ],
+          "role": "blush"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Terithia/Portraits/Autumn/spr_portrait_terithia_autumn_embarrassed.png",
+      "point": [
+        157,
+        74
+      ],
+      "source": "#CB7C72",
+      "expected": {
+        "player_04": "#EAA092",
+        "npc_march": "#DCA07B",
+        "npc_wiscar": "#C98476",
+        "player_16": "#B85F55",
+        "player_22": "#A35353",
+        "player_35": "#84434D"
+      },
+      "role": "blush"
+    },
+    {
+      "asset": "assets/animations/NPCs/Terithia/Portraits/Autumn/spr_portrait_terithia_autumn_embarrassed.png",
+      "point": [
+        161,
+        74
+      ],
+      "source": "#A86252",
+      "expected": {
+        "player_04": "#D89387",
+        "npc_march": "#CA9370",
+        "npc_wiscar": "#B7776B",
+        "player_16": "#A6524A",
+        "player_22": "#914648",
+        "player_35": "#723642"
+      },
+      "role": "blush"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Terithia/Portraits/Spring/spr_portrait_terithia_spring_embarrassed.png",
+      "point": [
+        451,
+        84
+      ],
+      "source": "#DF4868",
+      "role": "tongue"
+    },
+    {
+      "asset": "assets/animations/NPCs/Terithia/Portraits/Spring/spr_portrait_terithia_spring_embarrassed.png",
+      "point": [
+        433,
+        74
+      ],
+      "source": "#8D2B44",
+      "role": "earring"
+    }
+  ],
+  "audit": "Confirmed expression-only cheek/nose flush was absent from the donor mapping. Add its literal source components with the accepted Celine muted-rose depth ladder; retain all prior skin-role targets. Mouth frame crops and residual existing-skin-RGB inspection found no confirmed outer-mouth skin omissions. Preserve tongue/interior/lipstick, eyes, hair and source-specific markings.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4"
+}

@@ -1,0 +1,140 @@
+{
+  "character": "wheedle",
+  "status": "audited-no-change",
+  "base_profile": "palettes/profiles/wheedle-world-trial.json",
+  "base_profile_sha256": "565d82b8c21851b89ac91d8c2a4a2a3298124deb2c826c2a43271a5620d2fc8b",
+  "profile": "palettes/profiles/wheedle-world-trial.json",
+  "additional_source_colors": [],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#CB795DFF",
+      "#89452DFF",
+      "#5B2E1EFF",
+      "#F5B88DFF",
+      "#F6C5A3FF",
+      "#DB8360FF",
+      "#844D37FF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#D2A164FF",
+      "#CC8155FF",
+      "#885639FF",
+      "#EBC280FF",
+      "#EACD91FF",
+      "#E2AB67FF",
+      "#C7895FFF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#BA6852FF",
+      "#9F5544FF",
+      "#6A392DFF",
+      "#DE8868FF",
+      "#DE9270FF",
+      "#CA7255FF",
+      "#9A5D4EFF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#73302AFF",
+      "#452019FF",
+      "#2E1511FF",
+      "#B35E3EFF",
+      "#C66F4BFF",
+      "#833A2DFF",
+      "#402823FF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#3D1217FF",
+      "#321111FF",
+      "#210B0BFF",
+      "#72302AFF",
+      "#7E352FFF",
+      "#4D1C1AFF",
+      "#2D191BFF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#1A0108FF",
+      "#190705FF",
+      "#110503FF",
+      "#3A1516FF",
+      "#401417FF",
+      "#2A0B0BFF",
+      "#140F0FFF",
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF"
+    ]
+  },
+  "counts": {
+    "selected_strips": 88,
+    "portrait_strips": 32,
+    "world_strips": 56,
+    "audited_native_portrait_frames": 64,
+    "mouth_unique_crops_inspected": 12,
+    "affected_strips": 0,
+    "components": 0,
+    "selected_pixels": 0
+  },
+  "regions": [],
+  "landmarks": [],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Wheedle/Portraits/Spring/spr_portrait_wheedle_spring_embarrassed.png",
+      "point": [
+        442,
+        72
+      ],
+      "source": "#DF4868",
+      "role": "tongue"
+    },
+    {
+      "asset": "assets/animations/NPCs/Wheedle/Portraits/Spring/spr_portrait_wheedle_spring_embarrassed.png",
+      "point": [
+        449,
+        85
+      ],
+      "source": "#FAA26F",
+      "role": "shirt"
+    }
+  ],
+  "audit": "No separate cheek blush appears in the selected expressions. Peach shirt fabric, lens/eye highlights and tongue are distinct materials; the mouth contour skin already scales.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4"
+}

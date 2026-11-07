@@ -53,8 +53,18 @@ retain their existing validation rules. Inline region recipes remain supported.
 `build-presets` creates each variant and one MOMI package in a temporary tree,
 then publishes the complete bundle. `install --presets` uses the same generation
 path and checks every installed variant before publishing the game archive.
-The set format supports one through eight variants with unique safe IDs.
+The initial set format supported one through eight variants with unique safe IDs.
+The [native-tone expansion](../plans/native-tone-coverage.md) raises the current
+ceiling to ten generated variants plus Vanilla.
 `--palette` and `--presets` cannot be combined.
+
+A preset may supply its own `profile` path, resolved relative to the set file;
+omitting it uses the set's shared profile. Explicit `null` is rejected. Each
+profile keeps the same validation and must select the same asset inventory as
+the other presets. This allows the six new Celine tones to use reviewed facial
+components while preserving the four accepted variants. The
+[Celine follow-up](../plans/native-tone-coverage.md#celine-facial-follow-up-after-blush-review)
+records the bounded use and its preservation checks.
 
 The generated GML supplies a sprite table and labels in preset order. F6 cycles
 Vanilla, Debug Blue, Player 01, Player 18, and Player 33 for the trial. It preserves

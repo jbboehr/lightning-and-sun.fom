@@ -4,6 +4,10 @@ Updated 2026-11-06. **Content-complete alpha reached with all planned displayed
 artwork accepted, including recorded qualifications. Displayed basic live review
 also has qualified acceptance; broader live verification and final Linux release
 gates remain.**
+On 2026-11-06 the user requested broader native-tone planning as the next batch;
+then approved implementation with "let's do it". The
+[expansion plan](native-tone-coverage.md) is active, while
+this document retains the approved original finish scope and its acceptance.
 The [planning overview](../planning.md) owns current status and priorities.
 The [assessment](../development/project-status.md) owns the starting evidence.
 
@@ -19,10 +23,12 @@ Deliver two reviewable milestones:
    opt-in remembered choices, reproducible local installation, verified removal,
    complete automated checks and a recorded natural-gameplay acceptance pass.
 
-Keep the five existing choices per character and polish their existing mappings.
-Debug Blue remains available for QA. Do not add new tone packs, new NPCs, shader
+The original approved scope keeps five choices per character and polishes their
+existing mappings. The subsequent [native-tone proposal](native-tone-coverage.md)
+plans additional representative tones without reopening accepted masks or art.
+Debug Blue remains available for QA. Other new tone packs, new NPCs, shader
 recoloring, runtime asset loading, a native extension bridge, a graphical installer,
-Workshop publishing or other operating systems to this finish effort. Do not
+Workshop publishing and other operating systems remain outside this finish effort. Do not
 promise compatibility with untested game builds or arbitrary mods.
 
 The user approved this scope and release behavior on 2026-11-05. Its implementation
@@ -360,13 +366,30 @@ The completed live controls/persistence/basic gameplay review has qualified
 user acceptance. Its scope, frozen review artifact and remaining limits are in
 the [live record](../development/live-release-verification-2026-11-06.md).
 
-1. Resolve physical-controller and broader
+1. The [representative native-tone expansion](native-tone-coverage.md) is
+   implemented with integrated checks complete on 2026-11-06. One consolidated
+   new-art and approximate-coverage assessment remains after the bounded Celine
+   portrait-blush correction; that correction passes its focused integrated
+   checks and awaits review. Existing content and displayed-live approvals stand.
+2. Resolve physical-controller and broader
    seasonal/action acceptance without inferring it from virtual input or offline
    frame coverage. Further live gameplay requires a checked/reserved GPU.
-2. Finalize the tested Linux candidate, compatibility notes and the owner's
+3. Finalize the tested Linux candidate, compatibility notes and the owner's
    licensing choice before public distribution. The usable Linux milestone
    requires recorded art and live acceptance; publishing needs authorization.
 
-No further character-authoring batch is planned. New defects discovered during
-acceptance are bounded follow-ups with their own evidence, rather than a reason
-to widen the approved roster or palette choices.
+Original character-mask authoring is complete. The approved native-tone batch
+adds target mappings across the same roster and now awaits visual acceptance.
+New defects discovered during acceptance remain bounded follow-ups with their
+own evidence. Other palette or runtime expansion requires its own scope decision.
+
+## Native-tone checkpoint — 2026-11-06
+
+The approved expansion and reported portrait follow-ups pass their integrated
+checks. The final Holt revision received qualified "much better" feedback with
+no further issue reported. The
+[native-tone plan](native-tone-coverage.md#current-handoff-2026-11-06) records this
+checkpoint and the user's subsequent commit authorization. This closes the reported portrait
+correction loop; it does not infer exhaustive coverage, physical-controller or
+broader seasonal/action acceptance, or authorize publication. Those release
+gates retain their existing scope.

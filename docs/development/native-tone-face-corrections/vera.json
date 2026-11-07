@@ -1,0 +1,92 @@
+{
+  "character": "vera",
+  "status": "audited-no-change",
+  "base_profile": "palettes/profiles/vera-world-trial.json",
+  "base_profile_sha256": "1acb238a0a02d8c2c86055b1a14d478f9b224cd0e838958a9e91fe8e2931c267",
+  "profile": "palettes/profiles/vera-world-trial.json",
+  "additional_source_colors": [],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#F0B389FF",
+      "#89452DFF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#E6BD7CFF",
+      "#CC8155FF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#D98364FF",
+      "#9F5544FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#AE593AFF",
+      "#452019FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#6D2B26FF",
+      "#321111FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#351012FF",
+      "#190705FF"
+    ]
+  },
+  "counts": {
+    "selected_strips": 92,
+    "portrait_strips": 32,
+    "world_strips": 60,
+    "audited_native_portrait_frames": 64,
+    "mouth_unique_crops_inspected": 24,
+    "affected_strips": 0,
+    "components": 0,
+    "selected_pixels": 0
+  },
+  "regions": [],
+  "landmarks": [],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Vera/Portraits/Spring/spr_portrait_vera_spring_embarrassed.png",
+      "point": [
+        445,
+        83
+      ],
+      "source": "#AB4561",
+      "role": "lipstick"
+    },
+    {
+      "asset": "assets/animations/NPCs/Vera/Portraits/Spring/spr_portrait_vera_spring_embarrassed.png",
+      "point": [
+        445,
+        86
+      ],
+      "source": "#CA4D67",
+      "role": "lipstick_highlight"
+    }
+  ],
+  "audit": "No separate cheek blush appears in the selected source expressions. Berry lipstick and purple eye makeup remain separate cosmetic materials; surrounding skin and mouth contours already use donor tones.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4"
+}

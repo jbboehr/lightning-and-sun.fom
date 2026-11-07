@@ -1,0 +1,219 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#6687AD",
+        "#7F9FBD",
+        "#7F9FBD",
+        "#6687AD",
+        "#9D93CB",
+        "#8F5788",
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF",
+        "#B27146FF",
+        "#CA9052FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#E88D6C",
+        "#D45349",
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF",
+        "#63342AFF",
+        "#814A3AFF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#B05653",
+        "#A03338",
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF",
+        "#8E746DFF",
+        "#A69084FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#C18B9E",
+        "#B0526A",
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    },
+    {
+      "id": "player_04",
+      "label": "Light peach (Player 04)",
+      "colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF",
+        "#D5815FFF",
+        "#F0B389FF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#FBC7B8FF",
+        "#D68C86FF",
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#EAA092FF",
+        "#D5815FFF",
+        "#D68C86FF"
+      ],
+      "profile": "../profiles/nora-native-tone-face.json"
+    },
+    {
+      "id": "npc_march",
+      "label": "Light golden (March)",
+      "colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF",
+        "#DCA966FF",
+        "#E6BD7CFF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#EEC5A0FF",
+        "#CC8B77FF",
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#DCA07BFF",
+        "#DCA966FF",
+        "#CC8B77FF"
+      ],
+      "profile": "../profiles/nora-native-tone-face.json"
+    },
+    {
+      "id": "npc_wiscar",
+      "label": "Warm peach (Wiscar)",
+      "colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF",
+        "#C47054FF",
+        "#D98364FF",
+        "#D98364FF",
+        "#C47054FF",
+        "#DD9181FF",
+        "#BD6966FF",
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#C98476FF",
+        "#C47054FF",
+        "#BD6966FF"
+      ],
+      "profile": "../profiles/nora-native-tone-face.json"
+    },
+    {
+      "id": "player_16",
+      "label": "Warm brown (Player 16)",
+      "colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF",
+        "#7D382CFF",
+        "#AE593AFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#D27A73FF",
+        "#A6535AFF",
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#B85F55FF",
+        "#7D382CFF",
+        "#A6535AFF"
+      ],
+      "profile": "../profiles/nora-native-tone-face.json"
+    },
+    {
+      "id": "player_22",
+      "label": "Deep brown (Player 22)",
+      "colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF",
+        "#471A19FF",
+        "#6D2B26FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#8E4D4DFF",
+        "#6D303CFF",
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#A35353FF",
+        "#471A19FF",
+        "#6D303CFF"
+      ],
+      "profile": "../profiles/nora-native-tone-face.json"
+    },
+    {
+      "id": "player_35",
+      "label": "Very deep (Player 35)",
+      "colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF",
+        "#24090AFF",
+        "#351012FF",
+        "#351012FF",
+        "#24090AFF",
+        "#4A202AFF",
+        "#35141FFF",
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#84434DFF",
+        "#24090AFF",
+        "#35141FFF"
+      ],
+      "profile": "../profiles/nora-native-tone-face.json"
+    }
+  ],
+  "profile": "../profiles/nora-world-trial.json"
+}

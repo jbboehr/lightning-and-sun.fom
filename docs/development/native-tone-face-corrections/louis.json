@@ -1,0 +1,173 @@
+{
+  "character": "louis",
+  "status": "audited-no-change",
+  "base_profile": "palettes/profiles/louis-world-trial.json",
+  "base_profile_sha256": "91eee908265d6b04e265a224b5005480d8111900ee7154f41be9ab03137bf047",
+  "profile": "palettes/profiles/louis-world-trial.json",
+  "additional_source_colors": [],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#D5815FFF",
+      "#D5815FFF",
+      "#F0B389FF",
+      "#F0B389FF",
+      "#F0B389FF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#F0B389FF",
+      "#FBD7BCFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#FBD7BCFF",
+      "#D5815FFF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#DCA966FF",
+      "#DCA966FF",
+      "#E6BD7CFF",
+      "#E6BD7CFF",
+      "#E6BD7CFF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#E6BD7CFF",
+      "#EEDDA5FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#EEDDA5FF",
+      "#DCA966FF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#C47054FF",
+      "#C47054FF",
+      "#D98364FF",
+      "#D98364FF",
+      "#D98364FF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#D98364FF",
+      "#E3A17BFF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#E3A17BFF",
+      "#C47054FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#7D382CFF",
+      "#7D382CFF",
+      "#AE593AFF",
+      "#AE593AFF",
+      "#AE593AFF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#AE593AFF",
+      "#DE855BFF",
+      "#452019FF",
+      "#452019FF",
+      "#452019FF",
+      "#DE855BFF",
+      "#7D382CFF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#471A19FF",
+      "#471A19FF",
+      "#6D2B26FF",
+      "#6D2B26FF",
+      "#6D2B26FF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#6D2B26FF",
+      "#8E3F38FF",
+      "#321111FF",
+      "#321111FF",
+      "#321111FF",
+      "#8E3F38FF",
+      "#471A19FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#24090AFF",
+      "#24090AFF",
+      "#351012FF",
+      "#351012FF",
+      "#351012FF",
+      "#4A171CFF",
+      "#351012FF",
+      "#351012FF",
+      "#4A171CFF",
+      "#190705FF",
+      "#190705FF",
+      "#190705FF",
+      "#4A171CFF",
+      "#24090AFF"
+    ]
+  },
+  "counts": {
+    "selected_strips": 76,
+    "portrait_strips": 32,
+    "world_strips": 44,
+    "audited_native_portrait_frames": 64,
+    "mouth_unique_crops_inspected": 13,
+    "affected_strips": 0,
+    "components": 0,
+    "selected_pixels": 0
+  },
+  "regions": [],
+  "landmarks": [],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Louis/Portraits/Spring/spr_portrait_louis_spring_embarrassed.png",
+      "point": [
+        443,
+        68
+      ],
+      "source": "#699DE8",
+      "role": "glasses"
+    },
+    {
+      "asset": "assets/animations/NPCs/Louis/Portraits/Spring/spr_portrait_louis_spring_embarrassed.png",
+      "point": [
+        446,
+        65
+      ],
+      "source": "#6E380C",
+      "role": "eye_white"
+    },
+    {
+      "asset": "assets/animations/NPCs/Louis/Portraits/Spring/spr_portrait_louis_spring_embarrassed.png",
+      "point": [
+        448,
+        78
+      ],
+      "source": "#DF4868",
+      "role": "tongue"
+    }
+  ],
+  "audit": "The embarrassed expression has no added cheek flush. Its pale eye band and glass lens highlights are real source materials; mouth borders already use the donor skin ramp. Retain those previously accepted distinctions.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4"
+}

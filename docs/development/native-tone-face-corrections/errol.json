@@ -1,0 +1,2116 @@
+{
+  "character": "errol",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/errol-world-trial.json",
+  "profile": "palettes/profiles/errol-native-tone-face.json",
+  "additional_source_colors": [
+    "#EB967B"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#D5815FFF",
+      "#D5815FFF",
+      "#F0B389FF",
+      "#EAA092FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#DCA966FF",
+      "#DCA966FF",
+      "#E6BD7CFF",
+      "#DCA07BFF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#C47054FF",
+      "#C47054FF",
+      "#D98364FF",
+      "#C98476FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#452019FF",
+      "#452019FF",
+      "#7D382CFF",
+      "#7D382CFF",
+      "#AE593AFF",
+      "#B85F55FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#321111FF",
+      "#321111FF",
+      "#471A19FF",
+      "#471A19FF",
+      "#6D2B26FF",
+      "#A35353FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#190705FF",
+      "#190705FF",
+      "#24090AFF",
+      "#24090AFF",
+      "#351012FF",
+      "#84434DFF"
+    ]
+  },
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4",
+  "base_profile_sha256": "a79c7dd41e7356c862841b7a512048adae45666eae0100e455979be7ff7b3257",
+  "before_set_sha256": "a0c0b6bb5cda876766ba1bb34178d8ce695af638941b70d2d79eba904c652930",
+  "method": "Source-bound component seeds preserve all inherited skin target values/groups/regions. Muted rose cosmetics use the Celine visible-blush ladder; different source blush shades retain explicit main/highlight/deep treatments. New targets are artist-selected cosmetics or an existing reviewed skin/cosmetic role. Exact corpus proof owns preservation; automated checks are not visual acceptance.",
+  "counts": {
+    "selected_strips": 143,
+    "portrait_strips": 36,
+    "native_portrait_frames": 72,
+    "affected_strips": 4,
+    "added_components": 142,
+    "selected_pixels": 142,
+    "pixels_by_role": {
+      "blush": 142
+    }
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_embarrassed.png",
+      "source_sha256": "bd100966b8c1049d9e6b2d053527709c0e453a686105b4eec3fa305dec1c4c50",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            141,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            143,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            145,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            147,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            161,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            163,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            437,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            439,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            441,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            443,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            457,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            459,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            142,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            144,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            146,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            148,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            160,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            162,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            164,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            438,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            440,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            442,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            444,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            456,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            458,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            460,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            143,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            145,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            147,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            161,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            163,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            439,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            441,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            443,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            457,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            459,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_embarrassed.png",
+      "source_sha256": "ac3107e0a0c62267b1fae93e8f4f9179125b17766c4188f05741b699d4791ed0",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            141,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            143,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            145,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            147,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            161,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            163,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            437,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            439,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            441,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            443,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            457,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            459,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            142,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            144,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            146,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            148,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            160,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            162,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            164,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            438,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            440,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            442,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            444,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            456,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            458,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            460,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            143,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            145,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            147,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            161,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            163,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            439,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            441,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            443,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            457,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            459,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Summer/spr_portrait_errol_summer_embarrassed.png",
+      "source_sha256": "bd8904704f3f06707d173ec61195c7c2f494bf1a0e1f6adb93668018f86af121",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            141,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            143,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            145,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            147,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            161,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            163,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            437,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            439,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            441,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            443,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            457,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            459,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            144,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            146,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            148,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            160,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            162,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            164,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            440,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            442,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            444,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            456,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            458,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            460,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            143,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            145,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            147,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            161,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            163,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            439,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            441,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            443,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            457,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            459,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Winter/spr_portrait_errol_winter_embarrassed.png",
+      "source_sha256": "abf9c3e74c4e0fb9f913b26cb58c59805e9dcd5fd9ee7ac3bfd99ab4615506cf",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            141,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            143,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            145,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            147,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            161,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            163,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            437,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            439,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            441,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            443,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            457,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            459,
+            58
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            142,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            144,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            146,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            148,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            160,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            162,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            164,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            438,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            440,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            442,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            444,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            456,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            458,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            460,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            143,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            145,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            147,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            161,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            163,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            439,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            441,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            443,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            457,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        },
+        {
+          "seed": [
+            459,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB967B": 1
+          },
+          "color": "#EB967B"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_embarrassed.png",
+      "point": [
+        141,
+        58
+      ],
+      "source": "#EB967B",
+      "expected": {
+        "player_04": "#EAA092FF",
+        "npc_march": "#DCA07BFF",
+        "npc_wiscar": "#C98476FF",
+        "player_16": "#B85F55FF",
+        "player_22": "#A35353FF",
+        "player_35": "#84434DFF"
+      },
+      "role": "blush"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_embarrassed.png",
+      "point": [
+        137,
+        30
+      ],
+      "source": "#000000",
+      "role": "black_outline"
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_embarrassed.png",
+      "point": [
+        447,
+        67
+      ],
+      "source": "#F96F8C",
+      "role": "tongue"
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_embarrassed.png",
+      "point": [
+        451,
+        67
+      ],
+      "source": "#A1121D",
+      "role": "mouth_interior"
+    }
+  ],
+  "cosmetic_treatments": {
+    "#EB967B": {
+      "role": "blush",
+      "target": "main"
+    }
+  },
+  "audit": [
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_embarrassed.png",
+      "source_sha256": "bd100966b8c1049d9e6b2d053527709c0e453a686105b4eec3fa305dec1c4c50",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_happy.png",
+      "source_sha256": "1451b0e892fea4c4f343f2dba5f88e6cff36bc0f30622b5146922d8c023ef0a0",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_mad.png",
+      "source_sha256": "0b252d00dda18d0d19fba5cfdb0276cae4ab773b6d3f50fd783c68c5b5292fc9",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_neutral.png",
+      "source_sha256": "0bb3973050fba34be1d1be44519beba13ec2c57e9c93896819308628b582e6d8",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_neutral_closed.png",
+      "source_sha256": "9201a8fbf1656488de33f31238a06ece793fba4b8257f30eac36251357cffa5f",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_sad.png",
+      "source_sha256": "615fd205b79e0c62b09deabc19a7d0d6c96004ed19e3f7ffe38272645ec4f4d0",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_think.png",
+      "source_sha256": "45f81e701dea7431ff3e6c3155b2dd9956162c6c3fb03bf98e3dc13c3360279a",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_ugh.png",
+      "source_sha256": "1f0ee00caa609f4966c39059f2e0e06458dc6ad677c1822fc5b7a904ec2fa07b",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Autumn/spr_portrait_errol_autumn_wink.png",
+      "source_sha256": "e9cc4690c00c234355461b01d81e3fd6fc20bd9251f1449cf01de2ac888dc1e4",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_embarrassed.png",
+      "source_sha256": "ac3107e0a0c62267b1fae93e8f4f9179125b17766c4188f05741b699d4791ed0",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_happy.png",
+      "source_sha256": "09a26415e0a81679d34c09b1777459b0bde52a5e3ae9f9c4d37b02e86d127b6d",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_mad.png",
+      "source_sha256": "4d3b93bbfcc56441cb6611bb98aaa0848a0355b3d98ad570ee0d44bb3f239ba2",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_neutral.png",
+      "source_sha256": "fb8039f40883eab345993035659b1552ae91ac0acdd3bdc83d95fd314c41d3a6",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_neutral_closed.png",
+      "source_sha256": "e113a09210caa7de63db38579b87fef4a5949d8261ef90ca490669c5c8d8e088",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_sad.png",
+      "source_sha256": "db9c9aa2db422fbafcf79b165ce548bf301fe72c60cb5aa1fc0d9b5aaf2770e3",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_think.png",
+      "source_sha256": "75a6360336cecce7e53d4172b771d3027f15c5ed6a3c3fae449d78e46d3cbbdf",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_ugh.png",
+      "source_sha256": "af2e834ac66a14f7e89f0f9683983e8dc6882ad65e9312232ab896d5bc59cf33",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Spring/spr_portrait_errol_spring_wink.png",
+      "source_sha256": "93629264340e97b9f3e3b9b7ef3cc920f230616823dabc7eeec59b754be3b91f",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Summer/spr_portrait_errol_summer_embarrassed.png",
+      "source_sha256": "bd8904704f3f06707d173ec61195c7c2f494bf1a0e1f6adb93668018f86af121",
+      "native_frames": 2,
+      "new_components": 34
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Summer/spr_portrait_errol_summer_happy.png",
+      "source_sha256": "a731b1ebf5d1c4cd47b823aaf92ff60182a4b6cb2b96659f59848202d2486227",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Summer/spr_portrait_errol_summer_mad.png",
+      "source_sha256": "b5d8873d859c85bef7414296061b08d852f7e666263bebbc428676563cb06b75",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Summer/spr_portrait_errol_summer_neutral.png",
+      "source_sha256": "a72222a32694e3df78db3ff952c6cff5888aa92bc90983fc97716041f0193fd9",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Summer/spr_portrait_errol_summer_neutral_closed.png",
+      "source_sha256": "a0779f4d52d5435d11d6f9d97c49ea3b345da3abdf155ce303cdbe74a10ba852",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Summer/spr_portrait_errol_summer_sad.png",
+      "source_sha256": "50a6fa6f7931d6462a9f603e9174548aa12b8af947c8d15e7e5c0d90b9e76f50",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Summer/spr_portrait_errol_summer_think.png",
+      "source_sha256": "2774e9cb3a6bec1e20c87c70d7431966611150f7417ff21a4d563d72ca1a7fbd",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Summer/spr_portrait_errol_summer_ugh.png",
+      "source_sha256": "027c71121333bb64320eaebadf78517e556b6266aedbccf2d23d85c97b775226",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Summer/spr_portrait_errol_summer_wink.png",
+      "source_sha256": "16ba780ef2d257d1b2158976ce379bf2187453bf21610bf12c71d966da644b86",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Winter/spr_portrait_errol_winter_embarrassed.png",
+      "source_sha256": "abf9c3e74c4e0fb9f913b26cb58c59805e9dcd5fd9ee7ac3bfd99ab4615506cf",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Winter/spr_portrait_errol_winter_happy.png",
+      "source_sha256": "93ebee756f6c6b082dfec062a0cc792e45fb400d3430162608326504e95464a8",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Winter/spr_portrait_errol_winter_mad.png",
+      "source_sha256": "4eed7c48b21aed25694184e3ca4e43f3fa9a0054fb2ddea77fca981693a3c94a",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Winter/spr_portrait_errol_winter_neutral.png",
+      "source_sha256": "ca86d12c30d872f99f4ac85db8b232220b574963da1bedd67658a07fc5a346bb",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Winter/spr_portrait_errol_winter_neutral_closed.png",
+      "source_sha256": "11bac9c6f9dfbab71e2ac16dc9982cf8ae7bc01a972f7463827455f6defb65b9",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Winter/spr_portrait_errol_winter_sad.png",
+      "source_sha256": "50edebe97324cc3236d1c32b01bd2f355a514d55beb835dc3445eedc0dbd079d",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Winter/spr_portrait_errol_winter_think.png",
+      "source_sha256": "0434306f80e3d6126331cd7aa582c91af399625cc109a3b97aacd864f9262411",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Winter/spr_portrait_errol_winter_ugh.png",
+      "source_sha256": "8cf9f7249dc4536d269a11a29ef407511f31d4049e5b7c87a027906954b8ff0c",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Errol/Portraits/Winter/spr_portrait_errol_winter_wink.png",
+      "source_sha256": "c65e3a3e2cfedddb0a8c465334565461a7504acf1ae41e0f2c6c88fe5df71947",
+      "native_frames": 2,
+      "new_components": 0
+    }
+  ]
+}

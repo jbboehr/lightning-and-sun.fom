@@ -1,0 +1,8307 @@
+{
+  "character": "caldarus",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/caldarus-world-trial.json",
+  "base_profile_sha256": "1d2b5b7a792607bf1f77697cc01a8cf0cb359e3aa049ce650c7e18e95654677d",
+  "profile": "palettes/profiles/caldarus-native-tone-face.json",
+  "additional_source_colors": [
+    "#C79A97",
+    "#B28F8F"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#F2CBADFF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#EAA092FF",
+      "#D89387FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#E5D196FF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA07BFF",
+      "#CA9370FF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#DA956CFF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C98476FF",
+      "#B7776BFF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#452019FF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#D5794CFF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#B85F55FF",
+      "#A6524AFF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#321111FF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#853329FF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#A35353FF",
+      "#914648FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#190705FF",
+      "#4A171CFF",
+      "#351012FF",
+      "#410B0DFF",
+      "#4A171CFF",
+      "#351012FF",
+      "#84434DFF",
+      "#723642FF"
+    ]
+  },
+  "counts": {
+    "selected_strips": 277,
+    "portrait_strips": 98,
+    "world_strips": 179,
+    "audited_native_portrait_frames": 196,
+    "mouth_unique_crops_inspected": 26,
+    "affected_strips": 37,
+    "components": 518,
+    "selected_pixels": 1406
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Autumn/spr_portrait_caldarus_autumn_avoidant_special.png",
+      "source_sha256": "9ef9565bddc6c7ca77f3fce086d243b604b977a289f61c8f7361ce8d1b63bf6a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Autumn/spr_portrait_caldarus_autumn_caring_special.png",
+      "source_sha256": "36e4ea9d70f2877e907d6527dd10bb59633d6808926ca577e330ded1d216af6a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Autumn/spr_portrait_caldarus_autumn_embarrassed.png",
+      "source_sha256": "2b6c542a8b7b44b4474750731fbaf73112fac08cb782df74da22f5b823987158",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Autumn/spr_portrait_caldarus_autumn_laugh_special.png",
+      "source_sha256": "1e67f4a59c47e0d1751d84a66f1d4968b8cc0f8eb09f82e89793b88fce42b05d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Autumn/spr_portrait_caldarus_autumn_serious_blush.png",
+      "source_sha256": "0665c70fcc855caf125458e2bc415bf7d729f2e1ec30d258dcb458ef128e576e",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Autumn/spr_portrait_caldarus_autumn_think_special.png",
+      "source_sha256": "ca251963f1c8ce8488d6eede140baae0e73c4312be8afa93c136593325ad75a9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Autumn/spr_portrait_caldarus_autumn_unsure_special.png",
+      "source_sha256": "ef0d520930c96ba4575880e107926cb3f761217325e60c5dcc53aba3db38f3b3",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Beach/spr_portrait_caldarus_beach_bath_neutral.png",
+      "source_sha256": "b2548b793b059b720e5c4f365b8997e0053d719ee068f0949e323fbd0fb24ddb",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Beach/spr_portrait_caldarus_beach_embarrassed.png",
+      "source_sha256": "61669e7fa47b681f7371f37f6750f5f2bb50d65fecc09ea99e7bd8da44f804e7",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Spring/spr_portrait_caldarus_spring_avoidant_special.png",
+      "source_sha256": "4b744afc56e431e1b1ed85b7bcb9e4b7ed6304b8e8c2ea5d169076131b83d8de",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Spring/spr_portrait_caldarus_spring_caring_special.png",
+      "source_sha256": "e3d2a0072d76ede0b4edb8565d66247b40662a1102648a995c3e5d47a7173e2a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Spring/spr_portrait_caldarus_spring_embarrassed.png",
+      "source_sha256": "f183591c2baa51bcb5c827b698ce283ec43f89d85c15905a1f23b4b31246f896",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Spring/spr_portrait_caldarus_spring_laugh_special.png",
+      "source_sha256": "a618a1cee73333d195ca5cc3aa6c94989a3489981e066c3802ac36b838b0d904",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Spring/spr_portrait_caldarus_spring_serious_blush.png",
+      "source_sha256": "be3385342b2e615b5e956fc5033565a0efab7876f49d121ca135f92f6b05962f",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Spring/spr_portrait_caldarus_spring_think_special.png",
+      "source_sha256": "52d1ec053d115e912ce324c9104907c8306ac5f443e254cd0566025adc84f13a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Spring/spr_portrait_caldarus_spring_unsure_special.png",
+      "source_sha256": "895f3ba9bdfa07a11c1e41c73da5e9dadbcd147727798910c7145ffc84864161",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Summer/spr_portrait_caldarus_summer_avoidant_special.png",
+      "source_sha256": "e35e0cbb7af04f16bb987286cd5f96d54fb74d5aa4ade2dffe12fb3d5f06b2a1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Summer/spr_portrait_caldarus_summer_caring_special.png",
+      "source_sha256": "f465025dac4078109b7206d8af268a4ef34e4f7c177612f8cbb2c83ad58de6a6",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Summer/spr_portrait_caldarus_summer_embarrassed.png",
+      "source_sha256": "e9d2ce40d49904ce8d2ba204e52497afb4315d1adcf65bc8fd8f6c58a2987a69",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Summer/spr_portrait_caldarus_summer_laugh_special.png",
+      "source_sha256": "aa65cd61d1bd8c4bca465cd3051656503e4fbf2ef62b05bf646dab6ba99904ff",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Summer/spr_portrait_caldarus_summer_serious_blush.png",
+      "source_sha256": "46e1755d8363708f2c7cce933b1a86a5bbae081f03b696f12062b6d5b72a3c0d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Summer/spr_portrait_caldarus_summer_think_special.png",
+      "source_sha256": "db83d6873ff76f90d9bb643f4fe8c4a4f36bd931ea0a257128529003f15981ae",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Summer/spr_portrait_caldarus_summer_unsure_special.png",
+      "source_sha256": "adb54f8c5720c65a3bb4d04f6e38ec7c48ddc6c4d08c315b7e4426478b82eb41",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Wedding/spr_portrait_caldarus_wedding_embarrassed.png",
+      "source_sha256": "6e67051edf331130c96caec5b29258aa9f7fb9632f935f957faefc44d28be3cb",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Wedding/spr_portrait_caldarus_wedding_laugh_special.png",
+      "source_sha256": "5cb84d5aa6599d2c2eb7774d60fbf15116ca43a871e97fabad6d1055a92927ba",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Wedding/spr_portrait_caldarus_wedding_neutral.png",
+      "source_sha256": "a414751c95b137ac18efd5e3b8d97ad1c0fd9dac1f84c932d6385237508c0acc",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Wedding/spr_portrait_caldarus_wedding_sigh.png",
+      "source_sha256": "332536f305d6e55b1db2961009529a695ed45988931fc5b70dc1b66fb6ade18d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Wedding/spr_portrait_caldarus_wedding_smile.png",
+      "source_sha256": "62cacc7e0242f4f5eb9f7ae1c53d4650bd55bdea989e08fa99785857d5659165",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Wedding/spr_portrait_caldarus_wedding_think.png",
+      "source_sha256": "51daf43dfed9cd76e168207fedb559da611a8b637938516e119c76f6bdd001a2",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Wedding/spr_portrait_caldarus_wedding_unsure_special.png",
+      "source_sha256": "651b066ec076f2991a80f45104fc2b17824aaaaa94375ec8b72d2236f84ab782",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Winter/spr_portrait_caldarus_winter_avoidant_special.png",
+      "source_sha256": "566d00144abb3297aa9ffff48dcb919866ceb288d287ce8fae25000705ec2bd5",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Winter/spr_portrait_caldarus_winter_caring_special.png",
+      "source_sha256": "ddd61928ef8c84aae88570c824fc8f254839e9802fbb52b972f9c086291997ea",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Winter/spr_portrait_caldarus_winter_embarrassed.png",
+      "source_sha256": "67cb958c48f972ea03b50317c41b04c8031c91846dd434562fa5884594aaaf8d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Winter/spr_portrait_caldarus_winter_laugh_special.png",
+      "source_sha256": "df7b25f962b0ff443017e39a645d11f7eade7dce8ffbdb772e67ede2b0062242",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Winter/spr_portrait_caldarus_winter_serious_blush.png",
+      "source_sha256": "12d75a9c28f9e331e542592a53c6e0af01a6406f6d4977eaac51f7ed4a57a1ea",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Winter/spr_portrait_caldarus_winter_think_special.png",
+      "source_sha256": "c25b23ad41973f0887375dcaa8378ba6d93e4dd19f981408bb8f001a2d1f4299",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Winter/spr_portrait_caldarus_winter_unsure_special.png",
+      "source_sha256": "9044ba956d0eb918316e08e0d547a6ccc110dbab59705cdb1234e0f0787be0b5",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            127,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            127,
+            57,
+            127,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            128,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            123,
+            57,
+            129,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            423,
+            57
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            423,
+            57,
+            423,
+            57
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            424,
+            57
+          ],
+          "color": "#C79A97",
+          "pixels": 13,
+          "bounds": [
+            419,
+            57,
+            425,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            126,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            126,
+            58,
+            126,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            422,
+            58
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            422,
+            58,
+            422,
+            58
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            125,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            125,
+            59,
+            125,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            129,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            129,
+            59,
+            129,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            421,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            421,
+            59,
+            421,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            425,
+            59
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            425,
+            59,
+            425,
+            59
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            134,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            134,
+            60,
+            134,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            135,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            135,
+            60,
+            135,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            430,
+            60
+          ],
+          "color": "#B28F8F",
+          "pixels": 1,
+          "bounds": [
+            430,
+            60,
+            430,
+            60
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            431,
+            60
+          ],
+          "color": "#C79A97",
+          "pixels": 1,
+          "bounds": [
+            431,
+            60,
+            431,
+            60
+          ],
+          "role": "blush"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Autumn/spr_portrait_caldarus_autumn_avoidant_special.png",
+      "point": [
+        128,
+        57
+      ],
+      "source": "#C79A97",
+      "expected": {
+        "player_04": "#EAA092",
+        "npc_march": "#DCA07B",
+        "npc_wiscar": "#C98476",
+        "player_16": "#B85F55",
+        "player_22": "#A35353",
+        "player_35": "#84434D"
+      },
+      "role": "blush"
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Autumn/spr_portrait_caldarus_autumn_avoidant_special.png",
+      "point": [
+        127,
+        57
+      ],
+      "source": "#B28F8F",
+      "expected": {
+        "player_04": "#D89387",
+        "npc_march": "#CA9370",
+        "npc_wiscar": "#B7776B",
+        "player_16": "#A6524A",
+        "player_22": "#914648",
+        "player_35": "#723642"
+      },
+      "role": "blush"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Spring/spr_portrait_caldarus_spring_serious_blush.png",
+      "point": [
+        435,
+        60
+      ],
+      "source": "#E7D5D5",
+      "role": "white_under_eye_marking"
+    },
+    {
+      "asset": "assets/animations/NPCs/Caldarus/Portraits/Spring/spr_portrait_caldarus_spring_serious_blush.png",
+      "point": [
+        425,
+        48
+      ],
+      "source": "#35616F",
+      "role": "hair"
+    }
+  ],
+  "audit": "Confirmed expression-only cheek/nose flush was absent from the donor mapping. Add its literal source components with the accepted Celine muted-rose depth ladder; retain all prior skin-role targets. Mouth frame crops and residual existing-skin-RGB inspection found no confirmed outer-mouth skin omissions. Preserve tongue/interior/lipstick, eyes, hair and source-specific markings. The darker B28F8F flush dots use a darker rose; permanent E7D5D5 white under-eye markings, stone portraits, dragon and spectral world material stay exact.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4"
+}

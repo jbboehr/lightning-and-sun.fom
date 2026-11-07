@@ -1,0 +1,4197 @@
+{
+  "character": "nora",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/nora-world-trial.json",
+  "profile": "palettes/profiles/nora-native-tone-face.json",
+  "additional_source_colors": [
+    "#F4AEAE",
+    "#B45732",
+    "#DB6A5D"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#D5815FFF",
+      "#F0B389FF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#FBC7B8FF",
+      "#D68C86FF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#EAA092FF",
+      "#D5815FFF",
+      "#D68C86FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#DCA966FF",
+      "#E6BD7CFF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#EEC5A0FF",
+      "#CC8B77FF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#DCA07BFF",
+      "#DCA966FF",
+      "#CC8B77FF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#C47054FF",
+      "#D98364FF",
+      "#D98364FF",
+      "#C47054FF",
+      "#DD9181FF",
+      "#BD6966FF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#C98476FF",
+      "#C47054FF",
+      "#BD6966FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#7D382CFF",
+      "#AE593AFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#D27A73FF",
+      "#A6535AFF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#B85F55FF",
+      "#7D382CFF",
+      "#A6535AFF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#471A19FF",
+      "#6D2B26FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#8E4D4DFF",
+      "#6D303CFF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#A35353FF",
+      "#471A19FF",
+      "#6D303CFF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#24090AFF",
+      "#351012FF",
+      "#351012FF",
+      "#24090AFF",
+      "#4A202AFF",
+      "#35141FFF",
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#84434DFF",
+      "#24090AFF",
+      "#35141FFF"
+    ]
+  },
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4",
+  "base_profile_sha256": "4e5976ca10cb000fff50073479553f7a6c03bb91c8a0f70c00163c8e5de8566a",
+  "before_set_sha256": "20826c208ab1b73ce4f76e531166a7b007a942370c6fa7891be57c4580b588ce",
+  "method": "Source-bound component seeds preserve all inherited skin target values/groups/regions. Muted rose cosmetics use the Celine visible-blush ladder; different source blush shades retain explicit main/highlight/deep treatments. New targets are artist-selected cosmetics or an existing reviewed skin/cosmetic role. Exact corpus proof owns preservation; automated checks are not visual acceptance.",
+  "counts": {
+    "selected_strips": 151,
+    "portrait_strips": 32,
+    "native_portrait_frames": 64,
+    "affected_strips": 32,
+    "added_components": 288,
+    "selected_pixels": 288,
+    "pixels_by_role": {
+      "blush": 128,
+      "outer_lip": 160
+    }
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_embarrassed.png",
+      "source_sha256": "8de921a22ba4f2bb8bf37788cb45cc9c2116f41fae04d5c943bf6fba12d64b8a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            142,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            144,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            146,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            148,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            438,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            440,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            442,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            444,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            143,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            145,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            147,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            149,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            439,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            441,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            443,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            445,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            144,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            146,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            148,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            161,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            163,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            440,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            442,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            444,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            457,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            459,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            162,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            458,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            161,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            163,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            457,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            459,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_happy.png",
+      "source_sha256": "83ea716a129d7e3f02e40addd671af90ae4a32532bb65a2b3b99ce72dcff277c",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_mad.png",
+      "source_sha256": "593771c0386c9459d4a34b2a3c2196217b6f62283cbcb2dacc1df67b25ad42d2",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_neutral.png",
+      "source_sha256": "5a031aa9d62ab402803c3f12de6e13902c1cfc4b29f1654a574b29ac0d714ab2",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_sad.png",
+      "source_sha256": "7514eac9e1f9cd9dc3ad5e04c010cefd65230a120dadc06fa4ae15f0adad9434",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_think.png",
+      "source_sha256": "22b1bb367c00499b3b78f21ea34ca6963d4ba94a409cef9622ffedfbf1d25c75",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_ugh.png",
+      "source_sha256": "c5663c36c8531f749cfc1b8eb7bec7e91b22cb95ef2fd5e8ed3ae69675c4bf75",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_wink.png",
+      "source_sha256": "f8dafac21ed56a4a9bea312c3c0a3234bdfb1c88be23f40d3c3d941bce88954a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_embarrassed.png",
+      "source_sha256": "0662c81114ffbc58e12b57c467bacd21f1b9031c7e9d2ad78c54d3274cbc19df",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            142,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            144,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            146,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            148,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            438,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            440,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            442,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            444,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            143,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            145,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            147,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            149,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            439,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            441,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            443,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            445,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            144,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            146,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            148,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            161,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            163,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            440,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            442,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            444,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            457,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            459,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            162,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            458,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            161,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            163,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            457,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            459,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_happy.png",
+      "source_sha256": "d93648333983582d200a954ba68a227882693f9c3500f719719796071e468141",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_mad.png",
+      "source_sha256": "cefecb282b48ebcace49077f8bae550c062d3b5d1c93ce79c2ebbbd71b8d3b08",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_neutral.png",
+      "source_sha256": "89cb48012d09b7a420a2b32cfafb4073adf284d370cb3191aadf1bd2d90c498b",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_sad.png",
+      "source_sha256": "a63a4a08eea91fc2a797db0f6152f1f36e37a96d109a8b082ab6a680e54357b0",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_think.png",
+      "source_sha256": "38df54ab56d171fec64252d2e18a069bed0651ee48a9758ef4d0b8aad2e8bf84",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_ugh.png",
+      "source_sha256": "010f3406f794752137d26f51120fa4fe25b8da38c332c436d1ecf4923fba7d73",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_wink.png",
+      "source_sha256": "14d52496a4ce49de7873851615e886b50c0d0321194603ef870f9d2db31ae322",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_embarrassed.png",
+      "source_sha256": "7950bd46d859af2fe0a63e720472ce262bb4bfdacf9619f940591799e5d67579",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            142,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            144,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            146,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            148,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            438,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            440,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            442,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            444,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            143,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            145,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            147,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            149,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            439,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            441,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            443,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            445,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            144,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            146,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            148,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            161,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            163,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            440,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            442,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            444,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            457,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            459,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            162,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            458,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            161,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            163,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            457,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            459,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_happy.png",
+      "source_sha256": "8596f49868ba88803759e64a407d6447e2ee66827fce26dde4178eccb00b4a2e",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_mad.png",
+      "source_sha256": "67116737e7c7f5900b9dad87571b46ee7fb8b38c2dd2dd62c0fd71f195555147",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_neutral.png",
+      "source_sha256": "fc502ac1238f0daae8883f22a787290d027adfe75eefa3548f566c2256c8d1a7",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_sad.png",
+      "source_sha256": "afdd47acc3bbb26a96f91209765aec0364198aac88e94a2602f6ac458fbe02bd",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_think.png",
+      "source_sha256": "48a3a54867a57a165436769746d7ea24d738e0d8ef6375d2290b882edb6bd002",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_ugh.png",
+      "source_sha256": "9f96e12c68fcb67ff7b802e6c5640da3af491907d6575bc2200fc5d0ae92def9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_wink.png",
+      "source_sha256": "bafcd37208e6a5d27c2b33a6ba9e122a5d29500451a3ab5f882e3c028fbf3cbd",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_embarrassed.png",
+      "source_sha256": "b7e224c0f1d7dbac09955761e4627dab409f67eb7799de7c85c9b3c980fa15de",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            142,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            144,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            146,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            148,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            438,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            440,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            442,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            444,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            143,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            145,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            147,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            149,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            439,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            441,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            443,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            445,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            144,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            146,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            148,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            161,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            163,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            440,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            442,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            444,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            457,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            459,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            162,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            458,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            161,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            163,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            457,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            459,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F4AEAE": 1
+          },
+          "color": "#F4AEAE"
+        },
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_happy.png",
+      "source_sha256": "002567f7f8fc40ca1a950865c3e95c5074e002e1837347ba3bcf81349d8133bc",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_mad.png",
+      "source_sha256": "590de728937d7cf724573e543077c729bb709a857633077d0cdb333adf0fbfa0",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_neutral.png",
+      "source_sha256": "0771afb331839eb566e25a815857edfd56bdbd8d984bdd8db05ed317b9f01821",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_sad.png",
+      "source_sha256": "f0c83c6e5576559886c7ce7c51287092635eaf8f64afb63614ee65bc3f2d7cd8",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_think.png",
+      "source_sha256": "60f0e33ebf2a97e0487a2a6cbb513bca8e1b0be0314ac4ee95b0ddafc8720f8f",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_ugh.png",
+      "source_sha256": "080cf86a9eafdbe15da365651c4224d6589b98bdd956b3f234a2c0bce08fdcdb",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            451,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            447,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        },
+        {
+          "seed": [
+            450,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB6A5D": 1
+          },
+          "color": "#DB6A5D"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_wink.png",
+      "source_sha256": "e0496f3665751a831d4e2d7a0534bad2522e8cab4607a837892519c456406b50",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            448,
+            81
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        },
+        {
+          "seed": [
+            449,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#B45732": 1
+          },
+          "color": "#B45732"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_embarrassed.png",
+      "point": [
+        142,
+        74
+      ],
+      "source": "#F4AEAE",
+      "expected": {
+        "player_04": "#EAA092FF",
+        "npc_march": "#DCA07BFF",
+        "npc_wiscar": "#C98476FF",
+        "player_16": "#B85F55FF",
+        "player_22": "#A35353FF",
+        "player_35": "#84434DFF"
+      },
+      "role": "blush"
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_embarrassed.png",
+      "point": [
+        448,
+        81
+      ],
+      "source": "#B45732",
+      "expected": {
+        "player_04": "#D5815FFF",
+        "npc_march": "#DCA966FF",
+        "npc_wiscar": "#C47054FF",
+        "player_16": "#7D382CFF",
+        "player_22": "#471A19FF",
+        "player_35": "#24090AFF"
+      },
+      "role": "outer_lip"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_embarrassed.png",
+      "point": [
+        146,
+        43
+      ],
+      "source": "#000000",
+      "role": "black_outline"
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_embarrassed.png",
+      "point": [
+        144,
+        48
+      ],
+      "source": "#FFFFFF",
+      "role": "sclera"
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_embarrassed.png",
+      "point": [
+        447,
+        82
+      ],
+      "source": "#F96F8C",
+      "role": "tongue"
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_embarrassed.png",
+      "point": [
+        447,
+        81
+      ],
+      "source": "#A1121D",
+      "role": "mouth_interior"
+    }
+  ],
+  "cosmetic_treatments": {
+    "#F4AEAE": {
+      "role": "blush",
+      "target": "main"
+    },
+    "#B45732": {
+      "role": "outer_lip",
+      "target": 2
+    },
+    "#DB6A5D": {
+      "role": "outer_lip",
+      "target": 9
+    }
+  },
+  "audit": [
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_embarrassed.png",
+      "source_sha256": "8de921a22ba4f2bb8bf37788cb45cc9c2116f41fae04d5c943bf6fba12d64b8a",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_happy.png",
+      "source_sha256": "83ea716a129d7e3f02e40addd671af90ae4a32532bb65a2b3b99ce72dcff277c",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_mad.png",
+      "source_sha256": "593771c0386c9459d4a34b2a3c2196217b6f62283cbcb2dacc1df67b25ad42d2",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_neutral.png",
+      "source_sha256": "5a031aa9d62ab402803c3f12de6e13902c1cfc4b29f1654a574b29ac0d714ab2",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_sad.png",
+      "source_sha256": "7514eac9e1f9cd9dc3ad5e04c010cefd65230a120dadc06fa4ae15f0adad9434",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_think.png",
+      "source_sha256": "22b1bb367c00499b3b78f21ea34ca6963d4ba94a409cef9622ffedfbf1d25c75",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_ugh.png",
+      "source_sha256": "c5663c36c8531f749cfc1b8eb7bec7e91b22cb95ef2fd5e8ed3ae69675c4bf75",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Autumn/spr_portrait_nora_autumn_wink.png",
+      "source_sha256": "f8dafac21ed56a4a9bea312c3c0a3234bdfb1c88be23f40d3c3d941bce88954a",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_embarrassed.png",
+      "source_sha256": "0662c81114ffbc58e12b57c467bacd21f1b9031c7e9d2ad78c54d3274cbc19df",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_happy.png",
+      "source_sha256": "d93648333983582d200a954ba68a227882693f9c3500f719719796071e468141",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_mad.png",
+      "source_sha256": "cefecb282b48ebcace49077f8bae550c062d3b5d1c93ce79c2ebbbd71b8d3b08",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_neutral.png",
+      "source_sha256": "89cb48012d09b7a420a2b32cfafb4073adf284d370cb3191aadf1bd2d90c498b",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_sad.png",
+      "source_sha256": "a63a4a08eea91fc2a797db0f6152f1f36e37a96d109a8b082ab6a680e54357b0",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_think.png",
+      "source_sha256": "38df54ab56d171fec64252d2e18a069bed0651ee48a9758ef4d0b8aad2e8bf84",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_ugh.png",
+      "source_sha256": "010f3406f794752137d26f51120fa4fe25b8da38c332c436d1ecf4923fba7d73",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Spring/spr_portrait_nora_spring_wink.png",
+      "source_sha256": "14d52496a4ce49de7873851615e886b50c0d0321194603ef870f9d2db31ae322",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_embarrassed.png",
+      "source_sha256": "7950bd46d859af2fe0a63e720472ce262bb4bfdacf9619f940591799e5d67579",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_happy.png",
+      "source_sha256": "8596f49868ba88803759e64a407d6447e2ee66827fce26dde4178eccb00b4a2e",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_mad.png",
+      "source_sha256": "67116737e7c7f5900b9dad87571b46ee7fb8b38c2dd2dd62c0fd71f195555147",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_neutral.png",
+      "source_sha256": "fc502ac1238f0daae8883f22a787290d027adfe75eefa3548f566c2256c8d1a7",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_sad.png",
+      "source_sha256": "afdd47acc3bbb26a96f91209765aec0364198aac88e94a2602f6ac458fbe02bd",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_think.png",
+      "source_sha256": "48a3a54867a57a165436769746d7ea24d738e0d8ef6375d2290b882edb6bd002",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_ugh.png",
+      "source_sha256": "9f96e12c68fcb67ff7b802e6c5640da3af491907d6575bc2200fc5d0ae92def9",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Summer/spr_portrait_nora_summer_wink.png",
+      "source_sha256": "bafcd37208e6a5d27c2b33a6ba9e122a5d29500451a3ab5f882e3c028fbf3cbd",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_embarrassed.png",
+      "source_sha256": "b7e224c0f1d7dbac09955761e4627dab409f67eb7799de7c85c9b3c980fa15de",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_happy.png",
+      "source_sha256": "002567f7f8fc40ca1a950865c3e95c5074e002e1837347ba3bcf81349d8133bc",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_mad.png",
+      "source_sha256": "590de728937d7cf724573e543077c729bb709a857633077d0cdb333adf0fbfa0",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_neutral.png",
+      "source_sha256": "0771afb331839eb566e25a815857edfd56bdbd8d984bdd8db05ed317b9f01821",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_sad.png",
+      "source_sha256": "f0c83c6e5576559886c7ce7c51287092635eaf8f64afb63614ee65bc3f2d7cd8",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_think.png",
+      "source_sha256": "60f0e33ebf2a97e0487a2a6cbb513bca8e1b0be0314ac4ee95b0ddafc8720f8f",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_ugh.png",
+      "source_sha256": "080cf86a9eafdbe15da365651c4224d6589b98bdd956b3f234a2c0bce08fdcdb",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Nora/Portraits/Winter/spr_portrait_nora_winter_wink.png",
+      "source_sha256": "e0496f3665751a831d4e2d7a0534bad2522e8cab4607a837892519c456406b50",
+      "native_frames": 2,
+      "new_components": 4
+    }
+  ]
+}

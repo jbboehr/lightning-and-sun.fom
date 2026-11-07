@@ -26,8 +26,8 @@ impl Variant {
 
 pub fn validate_variants(variants: &[Variant]) -> Result<()> {
     ensure!(
-        (1..=8).contains(&variants.len()),
-        "Select between one and eight presets"
+        (1..=10).contains(&variants.len()),
+        "Select between one and ten presets"
     );
     let mut ids = BTreeSet::new();
     for variant in variants {
@@ -126,6 +126,27 @@ impl RuntimeCharacter {
         })
     }
 }
+
+fn runtime_constant_bound(characters: &[RuntimeCharacter]) -> usize {
+    let strings: usize = characters
+        .iter()
+        .map(|c| 3 + c.labels.len() + c.ids.len() + c.groups.iter().map(Vec::len).sum::<usize>())
+        .sum();
+    let indices = characters
+        .iter()
+        .flat_map(|c| {
+            [6, c.labels.len(), c.ids.len(), c.groups.len()]
+                .into_iter()
+                .chain(c.groups.iter().map(Vec::len))
+        })
+        .chain([characters.len()])
+        .max()
+        .unwrap_or(0);
+    // Fabricator pools constants per function, with u16 indexes. String
+    // occurrences overestimate distinct strings; array indexes span 0..max_len.
+    strings + indices
+}
+
 pub fn runtime_script(characters: &[RuntimeCharacter]) -> Result<Vec<u8>> {
     // Arrays are valid in both JSON and the game's GML dialect.
     let table: Vec<_> = characters
@@ -141,7 +162,42 @@ pub fn runtime_script(characters: &[RuntimeCharacter]) -> Result<Vec<u8>> {
             )
         })
         .collect();
-    Ok(format!("// Character rows: id, label, hotkey, preset names, animation groups, preset ids.\nfunction lns_palette_definitions() {{ return {}; }}\n", serde_json::to_string(&table)?).into_bytes())
+    let mut script =
+        "// Character rows: id, label, hotkey, preset names, animation groups, preset ids.\n"
+            .to_owned();
+    let constant_limit = usize::from(u16::MAX) + 1;
+    if runtime_constant_bound(characters) <= constant_limit {
+        script.push_str(&format!(
+            "function lns_palette_definitions() {{ return {}; }}\n",
+            serde_json::to_string(&table)?
+        ));
+    } else {
+        // Keep the runtime's ordered six-field rows intact while giving each
+        // character its own constant pool. The dispatcher needs at most one
+        // helper name and one array index per row.
+        ensure!(
+            characters.len() <= constant_limit / 2,
+            "Too many character definitions"
+        );
+        let mut calls = Vec::new();
+        for (index, (row, character)) in table.iter().zip(characters).enumerate() {
+            ensure!(
+                runtime_constant_bound(std::slice::from_ref(character)) <= constant_limit,
+                "{} palette definition exceeds the native compiler constant limit",
+                character.character.label
+            );
+            script.push_str(&format!(
+                "function __lns_palette_definition_{index}() {{ return {}; }}\n",
+                serde_json::to_string(row)?
+            ));
+            calls.push(format!("__lns_palette_definition_{index}()"));
+        }
+        script.push_str(&format!(
+            "function lns_palette_definitions() {{ return [{}]; }}\n",
+            calls.join(",")
+        ));
+    }
+    Ok(script.into_bytes())
 }
 
 #[derive(Deserialize)]
@@ -278,5 +334,171 @@ pub fn package_characters(inputs: &[PackageInput<'_>], output: &Path) -> Result<
         Ok(character_reports.remove(0))
     } else {
         Ok(json!({"characters":character_reports}))
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::process::Command;
+
+    fn full_runtime() -> Vec<RuntimeCharacter> {
+        crate::characters::Collection::load(
+            &Path::new(env!("CARGO_MANIFEST_DIR")).join("palettes/sets/characters-trial.json"),
+        )
+        .unwrap()
+        .selected
+        .into_iter()
+        .map(|selected| {
+            let groups = selected
+                .set
+                .assets()
+                .iter()
+                .map(|path| {
+                    let animation = animation(path).unwrap();
+                    std::iter::once(animation.source.to_owned())
+                        .chain(
+                            selected
+                                .set
+                                .variants
+                                .iter()
+                                .map(|variant| animation.variant_name(&variant.id)),
+                        )
+                        .collect()
+                })
+                .collect();
+            RuntimeCharacter::new(groups, &selected.set.variants).unwrap()
+        })
+        .collect()
+    }
+
+    fn row(character: &RuntimeCharacter) -> Value {
+        json!([
+            character.character.id,
+            character.character.label,
+            character.character.hotkey,
+            character.labels,
+            character.groups,
+            character.ids,
+        ])
+    }
+
+    #[test]
+    fn small_runtime_keeps_the_flat_json_byte_contract() {
+        let runtime = RuntimeCharacter {
+            character: crate::characters::get("adeline").unwrap(),
+            groups: vec![vec!["original".into(), "blue".into()]],
+            labels: vec!["Vanilla".into(), "Debug Blue".into()],
+            ids: vec!["vanilla".into(), "blue".into()],
+        };
+        let expected = format!(
+            "// Character rows: id, label, hotkey, preset names, animation groups, preset ids.\nfunction lns_palette_definitions() {{ return [{}]; }}\n",
+            row(&runtime)
+        );
+        assert_eq!(runtime_script(&[runtime]).unwrap(), expected.as_bytes());
+    }
+
+    #[test]
+    fn full_native_tone_runtime_splits_literals_without_changing_rows() {
+        let runtime = full_runtime();
+        assert_eq!(runtime.len(), 36);
+        assert!(runtime.iter().all(|character| character.ids.len() == 11));
+        assert_eq!(runtime.iter().map(|c| c.groups.len()).sum::<usize>(), 6312);
+        let script = String::from_utf8(runtime_script(&runtime).unwrap()).unwrap();
+        let functions: Vec<_> = script.lines().skip(1).collect();
+        assert_eq!(
+            functions.len(),
+            runtime.len() + 1,
+            "large table must use one literal helper per character"
+        );
+        let mut calls = Vec::new();
+        for (index, (definition, character)) in functions.iter().zip(&runtime).enumerate() {
+            let prefix = format!("function __lns_palette_definition_{index}() {{ return ");
+            let literal = definition
+                .strip_prefix(&prefix)
+                .unwrap()
+                .strip_suffix("; }")
+                .unwrap();
+            let emitted: Value = serde_json::from_str(literal).unwrap();
+            assert_eq!(
+                emitted,
+                row(character),
+                "{} row changed",
+                character.character.id
+            );
+            let strings = 3
+                + character.labels.len()
+                + character.ids.len()
+                + character.groups.iter().map(Vec::len).sum::<usize>();
+            let indices = [
+                6,
+                character.labels.len(),
+                character.ids.len(),
+                character.groups.len(),
+            ]
+            .into_iter()
+            .chain(character.groups.iter().map(Vec::len))
+            .max()
+            .unwrap();
+            assert!(strings + indices <= usize::from(u16::MAX) + 1);
+            calls.push(format!("__lns_palette_definition_{index}()"));
+        }
+        assert_eq!(
+            functions.last().unwrap(),
+            &format!(
+                "function lns_palette_definitions() {{ return [{}]; }}",
+                calls.join(",")
+            )
+        );
+    }
+
+    #[test]
+    #[ignore = "requires a Fabricator interpreter in FOM_GML_INTERPRETER"]
+    fn emitted_full_native_tone_table_compiles_and_evaluates_exact_rows() {
+        let runtime = full_runtime();
+        let mut script = String::from_utf8(runtime_script(&runtime).unwrap()).unwrap();
+        script.push_str(
+            r#"function assert_row(actual, expected) {
+assert(array_length(actual) == 6);
+for (var i = 0; i < 3; i++) assert(actual[i] == expected[i]);
+for (var i = 3; i < 6; i++) {
+assert(array_length(actual[i]) == array_length(expected[i]));
+for (var j = 0; j < array_length(expected[i]); j++) {
+if (i == 4) {
+assert(array_length(actual[i][j]) == array_length(expected[i][j]));
+for (var k = 0; k < array_length(expected[i][j]); k++) assert(actual[i][j][k] == expected[i][j][k]);
+} else assert(actual[i][j] == expected[i][j]);
+}
+}
+}
+"#,
+        );
+        for (index, character) in runtime.iter().enumerate() {
+            script.push_str(&format!(
+                "function test_row_{index}(actual) {{ assert_row(actual, {}); }}\n",
+                row(character)
+            ));
+        }
+        script.push_str(
+            "var table = lns_palette_definitions();\nassert(array_length(table) == 36);\n",
+        );
+        for index in 0..runtime.len() {
+            script.push_str(&format!("test_row_{index}(table[{index}]);\n"));
+        }
+        let temporary = tempfile::tempdir().unwrap();
+        let path = temporary.path().join("native_tone_table.gml");
+        fs::write(&path, script).unwrap();
+        let result =
+            Command::new(std::env::var_os("FOM_GML_INTERPRETER").expect("Set FOM_GML_INTERPRETER"))
+                .arg("run")
+                .arg(path)
+                .output()
+                .unwrap();
+        assert!(
+            result.status.success(),
+            "{}\n{}",
+            String::from_utf8_lossy(&result.stdout),
+            String::from_utf8_lossy(&result.stderr)
+        );
     }
 }

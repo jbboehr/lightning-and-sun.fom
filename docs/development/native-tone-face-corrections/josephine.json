@@ -1,0 +1,1966 @@
+{
+  "character": "josephine",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/josephine-world-trial.json",
+  "profile": "palettes/profiles/josephine-native-tone-face.json",
+  "additional_source_colors": [
+    "#9F3E31"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#F0B389FF",
+      "#F0B389FF",
+      "#89452DFF",
+      "#89452DFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#EAA092FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#E6BD7CFF",
+      "#E6BD7CFF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#DCA07BFF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#D98364FF",
+      "#D98364FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#C98476FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#452019FF",
+      "#AE593AFF",
+      "#AE593AFF",
+      "#452019FF",
+      "#452019FF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#B85F55FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#321111FF",
+      "#6D2B26FF",
+      "#6D2B26FF",
+      "#321111FF",
+      "#321111FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#A35353FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#190705FF",
+      "#351012FF",
+      "#351012FF",
+      "#190705FF",
+      "#190705FF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#84434DFF"
+    ]
+  },
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4",
+  "base_profile_sha256": "356e3d02ced4a67c80a2f2ed3522278aa812947761ab834d14b98d1edfc65a59",
+  "before_set_sha256": "e567aca46a900141cd2aa32ddf739ad27fc98dcf0d3f1ad9c18da2abdbd33cf5",
+  "method": "Source-bound component seeds preserve all inherited skin target values/groups/regions. Muted rose cosmetics use the Celine visible-blush ladder; different source blush shades retain explicit main/highlight/deep treatments. New targets are artist-selected cosmetics or an existing reviewed skin/cosmetic role. Exact corpus proof owns preservation; automated checks are not visual acceptance.",
+  "counts": {
+    "selected_strips": 167,
+    "portrait_strips": 32,
+    "native_portrait_frames": 64,
+    "affected_strips": 4,
+    "added_components": 130,
+    "selected_pixels": 130,
+    "pixels_by_role": {
+      "blush": 130
+    }
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_embarrassed.png",
+      "source_sha256": "0ba14608406c07a59a48297b5e5d271ba8b7a64cd39c94c31a1db3d56b6d9c33",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            164,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            166,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            460,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            462,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            163,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            165,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            167,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            459,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            461,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            463,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            146,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            148,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            150,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            162,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            164,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            166,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            442,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            444,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            446,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            458,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            460,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            462,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            145,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            147,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            149,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            441,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            443,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            445,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            144,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            146,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            148,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            440,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            442,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            444,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_spring_embarrassed.png",
+      "source_sha256": "3d154e3d99cc20653399c0bde5f29b48b238e344298a7ef0d4aa6d3ff52a7979",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            164,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            166,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            460,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            462,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            163,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            165,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            167,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            459,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            461,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            463,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            146,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            148,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            150,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            162,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            164,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            166,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            442,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            444,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            446,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            458,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            460,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            462,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            145,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            147,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            149,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            441,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            443,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            445,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            144,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            146,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            148,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            440,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            442,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            444,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_summer_embarrassed.png",
+      "source_sha256": "789d152e1b0b5c7fa324a4a1ffd4731e31159e9462a6497e508adc8003262e7c",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            164,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            166,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            460,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            462,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            163,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            165,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            167,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            459,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            461,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            463,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            146,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            148,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            150,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            162,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            164,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            166,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            442,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            444,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            446,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            458,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            460,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            462,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            145,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            147,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            149,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            441,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            443,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            445,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            144,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            146,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            148,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            440,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            442,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            444,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_embarrassed.png",
+      "source_sha256": "b6a561ca20fc17b531151811eb981d1bc9cf87d72577107960dffdf813919926",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            164,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            166,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            460,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            462,
+            74
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            163,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            165,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            459,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            461,
+            75
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            146,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            148,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            150,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            162,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            164,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            166,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            442,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            444,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            446,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            458,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            460,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            462,
+            76
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            145,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            147,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            149,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            441,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            443,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            445,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            148,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        },
+        {
+          "seed": [
+            444,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#9F3E31": 1
+          },
+          "color": "#9F3E31"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_embarrassed.png",
+      "point": [
+        164,
+        74
+      ],
+      "source": "#9F3E31",
+      "expected": {
+        "player_04": "#EAA092FF",
+        "npc_march": "#DCA07BFF",
+        "npc_wiscar": "#C98476FF",
+        "player_16": "#B85F55FF",
+        "player_22": "#A35353FF",
+        "player_35": "#84434DFF"
+      },
+      "role": "blush"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_embarrassed.png",
+      "point": [
+        146,
+        32
+      ],
+      "source": "#000000",
+      "role": "black_outline"
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_embarrassed.png",
+      "point": [
+        162,
+        69
+      ],
+      "source": "#FFFFFF",
+      "role": "sclera"
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_embarrassed.png",
+      "point": [
+        453,
+        81
+      ],
+      "source": "#F96F8C",
+      "role": "tongue"
+    }
+  ],
+  "cosmetic_treatments": {
+    "#9F3E31": {
+      "role": "blush",
+      "target": "main"
+    }
+  },
+  "audit": [
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_embarrassed.png",
+      "source_sha256": "0ba14608406c07a59a48297b5e5d271ba8b7a64cd39c94c31a1db3d56b6d9c33",
+      "native_frames": 2,
+      "new_components": 34
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_happy.png",
+      "source_sha256": "d8b7785b1e7c68a56a481cd975d1ff510bd29bf3eaf1eb3265fc4b03f3b85c48",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_mad.png",
+      "source_sha256": "de8006bfbb61489ac63d4eba0ba7dcdbd9bc866286726362232385cd837a5f3f",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_neutral.png",
+      "source_sha256": "d7f2705bcf39096618dc0463bcc847fde0ea628fed3a0dcebd3a43ba9fb63129",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_sad.png",
+      "source_sha256": "803df6383432f366dff169090bd4c62eda8e5ea35b41013ca3d7a2d75de2e5a4",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_think.png",
+      "source_sha256": "1e57eac1a95d04733c0907bb84261e37e8c92000d6b8c1c21c25d0fd9e10f4f8",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_ugh.png",
+      "source_sha256": "1c635cdf5fcaaf98533345ffca105ea85713a4f83d5f3e50b79036e351c746a4",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_autumn_wink.png",
+      "source_sha256": "178a4dca0f7baf6477b8283e41068cb0663551f83b1d92de9ec8713cc42f3f1a",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_spring_embarrassed.png",
+      "source_sha256": "3d154e3d99cc20653399c0bde5f29b48b238e344298a7ef0d4aa6d3ff52a7979",
+      "native_frames": 2,
+      "new_components": 34
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_spring_happy.png",
+      "source_sha256": "124444a9a8d49bb6ef3f602b9af0e17d06679a656214c14562a06f6a41b7360e",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_spring_mad.png",
+      "source_sha256": "1370361e4934ab701d2dc32bda81ae029c936516e0ae0f8ddcecd0b86b09ced3",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_spring_neutral.png",
+      "source_sha256": "34f74930a53cc5e7f89627c949a4e5fdd459f249fcb6e8f45c886df218d48b16",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_spring_sad.png",
+      "source_sha256": "3911a14dacb9aec392a6db4d2dc037796a27e8082f4f3bdb903dbc75c91b53bb",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_spring_think.png",
+      "source_sha256": "880ccfd854a892c1926b68dd5d00f56bca8942452b2ac449ce10d152fb750a2e",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_spring_ugh.png",
+      "source_sha256": "c6fb524afe2c9cb1f34c16f75ca239719b4106f7b6650c07738fef0be0c65558",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_spring_wink.png",
+      "source_sha256": "2364d2c2543bb2bb9f7b0fabfb36ae4c72f7b01d7a1f2ab7e65e965b7ace48af",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_summer_embarrassed.png",
+      "source_sha256": "789d152e1b0b5c7fa324a4a1ffd4731e31159e9462a6497e508adc8003262e7c",
+      "native_frames": 2,
+      "new_components": 34
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_summer_happy.png",
+      "source_sha256": "8163240883d119146f2bbc944208bbe0410573822e0f85fe04f162122e1943b9",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_summer_mad.png",
+      "source_sha256": "d6cd16a2164e24d2ea53520fa4ed1ad7da4f1ba9b3f385693e65d9bd0a090ece",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_summer_neutral.png",
+      "source_sha256": "7f06d8d5a7e367b40e39e14b1dff80637d3a90698750fe68c7f77ed6be7ffdd0",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_summer_sad.png",
+      "source_sha256": "29ef52fb326e079449f241a1886179153c44154cb7721937eb719cb89c8c29fb",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_summer_think.png",
+      "source_sha256": "fec6b234299cd968db65e5dc2d7b99e5e06c4df972fcf36ff737830a50895f50",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_summer_ugh.png",
+      "source_sha256": "5e75a0a906f96578dc89beb9588e4e9e58acf3730557a94c0f7d70b7af7298e0",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_summer_wink.png",
+      "source_sha256": "7d9fb53bd54b9ba3a90febaeb41cde45590b1138984e8d8a90686f060434aec7",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_embarrassed.png",
+      "source_sha256": "b6a561ca20fc17b531151811eb981d1bc9cf87d72577107960dffdf813919926",
+      "native_frames": 2,
+      "new_components": 28
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_happy.png",
+      "source_sha256": "4ab92ba5fc52418a2c74639b04ccaa86e3dc41ed135c8802c3e5dbab5c6ffdcd",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_mad.png",
+      "source_sha256": "1e5ef0f7e01edef6ff67c238a8a0dab91c9023e60bd60ab0fb086e3c0ba96382",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_neutral.png",
+      "source_sha256": "0e6316e95b524077d08d8eb5852552521bdc4c79fa83d850de4ba67995775f89",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_sad.png",
+      "source_sha256": "6b63d4a4159772f1422ccb797faf1a8f4d8a0eaeb4dfa451e3dc888deba70649",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_think.png",
+      "source_sha256": "af4a424cf9c104cb82edf590ccecd7a09124dd760ffb220206d48e2ce76b8e8e",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_ugh.png",
+      "source_sha256": "edb38385d5ec24ac1a9c4b49568fafc2abe97cfd511b56c75e891f52faddf3e6",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Josephine/Portraits/spr_portrait_josephine_winter_wink.png",
+      "source_sha256": "bab5fa742b1e923051bfe07e8f98f13cddfbe9edbdc89416523fdb367838a7e2",
+      "native_frames": 2,
+      "new_components": 0
+    }
+  ]
+}

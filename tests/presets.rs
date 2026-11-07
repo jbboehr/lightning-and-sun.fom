@@ -140,6 +140,168 @@ fn shared_masks_generate_distinct_presets_and_one_runtime_package() {
     );
     assert_eq!(table[0][5], serde_json::json!(["vanilla", "blue", "warm"]));
 }
+
+#[test]
+fn preset_profile_override_adds_same_color_components_without_changing_shared_outputs() {
+    let temp = tempfile::tempdir().unwrap();
+    let (original, set) = fixture(temp.path());
+    let baseline = temp.path().join("baseline");
+    let result = run(&[
+        Path::new("build-presets"),
+        Path::new("--original"),
+        &original,
+        Path::new("--presets"),
+        &set,
+        Path::new("--output"),
+        &baseline,
+    ]);
+    assert!(result.status.success());
+    let original_bytes = fs::read(original.join(format!("{NAME}.png"))).unwrap();
+    let mut profile: Value =
+        serde_json::from_slice(&fs::read(temp.path().join("profile.json")).unwrap()).unwrap();
+    profile["source_colors"] = json!(["#0A141E", "#000000"]);
+    profile["color_groups"] = json!([["#0A141E"], ["#000000"]]);
+    profile["regions"][0]["seeds"] = json!([[0, 0], [2, 0], [4, 0], [6, 0]]);
+    fs::create_dir(temp.path().join("overrides")).unwrap();
+    fs::write(
+        temp.path().join("overrides/face.json"),
+        serde_json::to_vec(&profile).unwrap(),
+    )
+    .unwrap();
+    let mut definition: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
+    definition["presets"][1]["profile"] = json!("overrides/face.json");
+    definition["presets"][1]["colors"] = json!(["#64503C", "#010203"]);
+    fs::write(&set, serde_json::to_vec(&definition).unwrap()).unwrap();
+
+    let output = temp.path().join("bundle");
+    let result = run(&[
+        Path::new("build-presets"),
+        Path::new("--original"),
+        &original,
+        Path::new("--presets"),
+        &set,
+        Path::new("--output"),
+        &output,
+    ]);
+    assert!(
+        result.status.success(),
+        "{}",
+        String::from_utf8_lossy(&result.stderr)
+    );
+    assert_eq!(
+        fs::read(output.join(format!("variants/blue/{NAME}.png"))).unwrap(),
+        fs::read(baseline.join(format!("variants/blue/{NAME}.png"))).unwrap()
+    );
+    let shared = image::open(output.join(format!("variants/blue/{NAME}.png")))
+        .unwrap()
+        .to_rgba8();
+    let expanded = image::open(output.join(format!("variants/warm/{NAME}.png")))
+        .unwrap()
+        .to_rgba8();
+    for x in [0, 2, 4, 6] {
+        assert_eq!(expanded.get_pixel(x, 0).0, [100, 80, 60, 255]);
+        assert_eq!(
+            shared.get_pixel(x, 0).0,
+            if x % 4 == 0 {
+                [40, 50, 60, 255]
+            } else {
+                [10, 20, 30, 255]
+            }
+        );
+    }
+    for x in [1, 3, 5, 7] {
+        assert_eq!(expanded.get_pixel(x, 0).0, [0, 0, 0, 255]);
+    }
+    let packaged = image::open(
+        output.join("package/animations/LightningAndSun/spr_lns_adeline_spring_neutral_warm.png"),
+    )
+    .unwrap()
+    .to_rgba8();
+    assert_eq!(packaged, expanded);
+    assert_eq!(
+        fs::read(original.join(format!("{NAME}.png"))).unwrap(),
+        original_bytes
+    );
+}
+
+#[test]
+fn invalid_preset_profile_overrides_leave_no_output() {
+    for (case, expected_error) in [
+        ("missing", "No such file"),
+        ("null", "invalid type: null"),
+        ("empty_colors", "1–64 source colors"),
+        ("too_many_colors", "1–64 source colors"),
+        ("duplicate_colors", "Duplicate profile source color"),
+        (
+            "normalized_duplicate_colors",
+            "Duplicate normalized source color",
+        ),
+        ("empty_regions", "1–64 source colors"),
+        (
+            "wrong_ramp_length",
+            "Preset ramp length differs from profile",
+        ),
+        ("different_assets", "same asset inventory"),
+        ("unknown_field", "unknown field"),
+        ("stale_hash", "Region source checksum mismatch"),
+        ("invalid_seed", "Region seed outside image"),
+    ] {
+        let temp = tempfile::tempdir().unwrap();
+        let (original, set) = fixture(temp.path());
+        let output = temp.path().join("bundle");
+        let mut definition: Value = serde_json::from_slice(&fs::read(&set).unwrap()).unwrap();
+        definition["presets"][1]["profile"] = json!("override.json");
+        let mut profile: Value =
+            serde_json::from_slice(&fs::read(temp.path().join("profile.json")).unwrap()).unwrap();
+        match case {
+            "missing" => definition["presets"][1]["profile"] = json!("missing.json"),
+            "null" => definition["presets"][1]["profile"] = Value::Null,
+            "empty_colors" => profile["source_colors"] = json!([]),
+            "too_many_colors" => {
+                profile["source_colors"] = json!(
+                    (0..65)
+                        .map(|index| format!("#{index:02X}141E"))
+                        .collect::<Vec<_>>()
+                );
+            }
+            "duplicate_colors" => profile["source_colors"] = json!(["#0A141E", "#0A141E"]),
+            "normalized_duplicate_colors" => {
+                profile["source_colors"] = json!(["#0A141E", "#0A141EFF"]);
+                definition["presets"][1]["colors"] = json!(["#64503C", "#64503C"]);
+            }
+            "empty_regions" => profile["regions"] = json!([]),
+            "wrong_ramp_length" => definition["presets"][1]["colors"] = json!([]),
+            "different_assets" => profile["regions"][0]["asset"] = json!("other.png"),
+            "unknown_field" => definition["presets"][1]["unexpected"] = json!(true),
+            "stale_hash" => profile["regions"][0]["source_sha256"] = json!("0".repeat(64)),
+            "invalid_seed" => profile["regions"][0]["seeds"] = json!([[8, 0]]),
+            _ => unreachable!(),
+        }
+        fs::write(
+            temp.path().join("override.json"),
+            serde_json::to_vec(&profile).unwrap(),
+        )
+        .unwrap();
+        fs::write(&set, serde_json::to_vec(&definition).unwrap()).unwrap();
+        let result = run(&[
+            Path::new("build-presets"),
+            Path::new("--original"),
+            &original,
+            Path::new("--presets"),
+            &set,
+            Path::new("--output"),
+            &output,
+        ]);
+        assert!(!result.status.success(), "accepted {case}");
+        assert!(!output.exists(), "published partial {case}");
+        assert!(
+            String::from_utf8_lossy(&result.stderr).contains(expected_error),
+            "wrong error for {case}: {}",
+            String::from_utf8_lossy(&result.stderr)
+        );
+    }
+}
+
 #[test]
 fn invalid_or_incomplete_preset_sets_leave_no_output() {
     for case in [
@@ -184,8 +346,8 @@ fn invalid_or_incomplete_preset_sets_leave_no_output() {
 }
 
 #[test]
-fn preset_count_boundaries_accept_one_and_eight_but_reject_zero_and_nine() {
-    for count in [0usize, 1, 8, 9] {
+fn preset_count_boundaries_accept_one_through_ten_but_reject_zero_and_eleven() {
+    for count in [0usize, 1, 8, 9, 10, 11] {
         let temp = tempfile::tempdir().unwrap();
         let (original, set) = fixture(temp.path());
         let output = temp.path().join("bundle");
@@ -210,7 +372,7 @@ fn preset_count_boundaries_accept_one_and_eight_but_reject_zero_and_nine() {
             Path::new("--output"),
             &output,
         ]);
-        if (1..=8).contains(&count) {
+        if (1..=10).contains(&count) {
             assert!(
                 result.status.success(),
                 "rejected {count} presets: {}",

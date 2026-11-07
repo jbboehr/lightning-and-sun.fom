@@ -1,40 +1,148 @@
 {
   "characters": [
-    {"id": "adeline", "presets": "adeline-world-finish-trial.json"},
-    {"id": "hayden", "presets": "hayden-world-trial.json"},
-    {"id": "ryis", "presets": "ryis-world-trial.json"},
-    {"id": "reina", "presets": "reina-mouth-corrected-trial.json"},
-    {"id": "juniper", "presets": "juniper-world-finish-trial.json"},
-    {"id": "celine", "presets": "celine-world-trial.json"},
-    {"id": "march", "presets": "march-world-trial.json"},
-    {"id": "balor", "presets": "balor-world-trial.json"},
-    {"id": "valen", "presets": "valen-world-trial.json"},
-    {"id": "eiland", "presets": "eiland-world-trial.json"},
-    {"id": "olric", "presets": "olric-world-trial.json"},
-    {"id": "landen", "presets": "landen-world-trial.json"},
-    {"id": "nora", "presets": "nora-world-trial.json"},
-    {"id": "holt", "presets": "holt-world-trial.json"},
-    {"id": "josephine", "presets": "josephine-world-trial.json"},
-    {"id": "darcy", "presets": "darcy-world-trial.json"},
-    {"id": "dell", "presets": "dell-world-trial.json"},
-    {"id": "elsie", "presets": "elsie-world-trial.json"},
-    {"id": "errol", "presets": "errol-world-trial.json"},
-    {"id": "hemlock", "presets": "hemlock-world-trial.json"},
-    {"id": "louis", "presets": "louis-world-trial.json"},
-    {"id": "luc", "presets": "luc-world-trial.json"},
-    {"id": "maple", "presets": "maple-world-trial.json"},
-    {"id": "merri", "presets": "merri-world-trial.json"},
-    {"id": "terithia", "presets": "terithia-world-trial.json"},
-    {"id": "stillwell", "presets": "stillwell-world-trial.json"},
-    {"id": "taliferro", "presets": "taliferro-world-trial.json"},
-    {"id": "vera", "presets": "vera-world-trial.json"},
-    {"id": "wheedle", "presets": "wheedle-world-trial.json"},
-    {"id": "zorel", "presets": "zorel-world-trial.json"},
-    {"id": "darren", "presets": "darren-world-trial.json"},
-    {"id": "linnet", "presets": "linnet-world-trial.json"},
-    {"id": "wiscar", "presets": "wiscar-world-trial.json"},
-    {"id": "wynne", "presets": "wynne-world-trial.json"},
-    {"id": "caldarus", "presets": "caldarus-world-trial.json"},
-    {"id": "seridia", "presets": "seridia-world-trial.json"}
+    {
+      "id": "adeline",
+      "presets": "adeline-native-tones.json"
+    },
+    {
+      "id": "hayden",
+      "presets": "hayden-native-tones.json"
+    },
+    {
+      "id": "ryis",
+      "presets": "ryis-native-tones.json"
+    },
+    {
+      "id": "reina",
+      "presets": "reina-native-tones.json"
+    },
+    {
+      "id": "juniper",
+      "presets": "juniper-native-tones.json"
+    },
+    {
+      "id": "celine",
+      "presets": "celine-native-tones.json"
+    },
+    {
+      "id": "march",
+      "presets": "march-native-tones.json"
+    },
+    {
+      "id": "balor",
+      "presets": "balor-native-tones.json"
+    },
+    {
+      "id": "valen",
+      "presets": "valen-native-tones.json"
+    },
+    {
+      "id": "eiland",
+      "presets": "eiland-native-tones.json"
+    },
+    {
+      "id": "olric",
+      "presets": "olric-native-tones.json"
+    },
+    {
+      "id": "landen",
+      "presets": "landen-native-tones.json"
+    },
+    {
+      "id": "nora",
+      "presets": "nora-native-tones.json"
+    },
+    {
+      "id": "holt",
+      "presets": "holt-native-tones.json"
+    },
+    {
+      "id": "josephine",
+      "presets": "josephine-native-tones.json"
+    },
+    {
+      "id": "darcy",
+      "presets": "darcy-native-tones.json"
+    },
+    {
+      "id": "dell",
+      "presets": "dell-native-tones.json"
+    },
+    {
+      "id": "elsie",
+      "presets": "elsie-native-tones.json"
+    },
+    {
+      "id": "errol",
+      "presets": "errol-native-tones.json"
+    },
+    {
+      "id": "hemlock",
+      "presets": "hemlock-native-tones.json"
+    },
+    {
+      "id": "louis",
+      "presets": "louis-native-tones.json"
+    },
+    {
+      "id": "luc",
+      "presets": "luc-native-tones.json"
+    },
+    {
+      "id": "maple",
+      "presets": "maple-native-tones.json"
+    },
+    {
+      "id": "merri",
+      "presets": "merri-native-tones.json"
+    },
+    {
+      "id": "terithia",
+      "presets": "terithia-native-tones.json"
+    },
+    {
+      "id": "stillwell",
+      "presets": "stillwell-native-tones.json"
+    },
+    {
+      "id": "taliferro",
+      "presets": "taliferro-native-tones.json"
+    },
+    {
+      "id": "vera",
+      "presets": "vera-native-tones.json"
+    },
+    {
+      "id": "wheedle",
+      "presets": "wheedle-native-tones.json"
+    },
+    {
+      "id": "zorel",
+      "presets": "zorel-native-tones.json"
+    },
+    {
+      "id": "darren",
+      "presets": "darren-native-tones.json"
+    },
+    {
+      "id": "linnet",
+      "presets": "linnet-native-tones.json"
+    },
+    {
+      "id": "wiscar",
+      "presets": "wiscar-native-tones.json"
+    },
+    {
+      "id": "wynne",
+      "presets": "wynne-native-tones.json"
+    },
+    {
+      "id": "caldarus",
+      "presets": "caldarus-native-tones.json"
+    },
+    {
+      "id": "seridia",
+      "presets": "seridia-native-tones.json"
+    }
   ]
 }

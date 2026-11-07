@@ -1,0 +1,358 @@
+{
+  "character": "holt",
+  "scope": "Only source-bound inherited moustache component seeds are removed; historical world profile remains frozen.",
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Autumn/spr_portrait_holt_autumn_embarrassed.png",
+      "source_sha256": "cbea43a1a0b0e90ab12329b06ee8d54f8904892bcdc709c30b8e585aed9f59c2",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Autumn/spr_portrait_holt_autumn_happy.png",
+      "source_sha256": "0f01350746f9fe793489e374811837a4f26c989bf779f079a1dbd459bee40f26",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Autumn/spr_portrait_holt_autumn_neutral.png",
+      "source_sha256": "88e26ece09711e27a0f03a26b9bfb5d7e96d3d8df6206bf07db80de96cf9cf4f",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Autumn/spr_portrait_holt_autumn_wink.png",
+      "source_sha256": "25c38834dbd9bf67b6cd3cc175d1978db3deffbefb77674e73b6630d58f065af",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Spring/spr_portrait_holt_spring_embarrassed.png",
+      "source_sha256": "8bdfddd4cbb1fc73780ad540a4b2f929ee0c17660d4437a3205ada4016c187e2",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Spring/spr_portrait_holt_spring_happy.png",
+      "source_sha256": "d92924d189d37882cfe2df232f1bde351c21712b19ad13464f3cd3cc219fc6d5",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Spring/spr_portrait_holt_spring_neutral.png",
+      "source_sha256": "a9dc7b67531d0387ab8dba4337dd01a7ec6253ca94a926e532bb7e6e2eac1e37",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Spring/spr_portrait_holt_spring_wink.png",
+      "source_sha256": "5dd6ea3288fbb5653bed9656618ade13afc9bd6a4c285eaf20ed500130cac7b6",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Summer/spr_portrait_holt_summer_embarrassed.png",
+      "source_sha256": "3d5e48cf65b828f55f6bfce3a7a40929f9f4994af5701c65a7595b28083d9ae2",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Summer/spr_portrait_holt_summer_happy.png",
+      "source_sha256": "676f1bef54ca77278379dd49f2bdcd7b41e057c45e3234d28e8960fef670503b",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Summer/spr_portrait_holt_summer_neutral.png",
+      "source_sha256": "79511c5706398ebf620ef23465649684b8fa5c51c11513b4005e94a6fdd6cca2",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Summer/spr_portrait_holt_summer_wink.png",
+      "source_sha256": "b4ff2770c0d7c3de804146f1cd9d14d10b3dd9e3527d7bd834398f25b8ff5b18",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Winter/spr_portrait_holt_winter_embarrassed.png",
+      "source_sha256": "9169db846b2a233161e880cdc0220d1ee3447739646f736f99686dfdb0c6416b",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Winter/spr_portrait_holt_winter_happy.png",
+      "source_sha256": "c3609b413017a507707e4b1e3448c0187a1e263ab4d993bf8635190f4e9fd1e2",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Winter/spr_portrait_holt_winter_neutral.png",
+      "source_sha256": "ea5a9fd6e82482c0f0852be30c460e19e8a0a7af7e30d4826c646a2611a96ef1",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Holt/Portraits/Winter/spr_portrait_holt_winter_wink.png",
+      "source_sha256": "b77386762916eea665df69c75057166812886042ca1088823fcbe9d500279a28",
+      "removed_seeds": [
+        [
+          439,
+          59
+        ],
+        [
+          438,
+          60
+        ],
+        [
+          439,
+          60
+        ],
+        [
+          444,
+          60
+        ]
+      ]
+    }
+  ]
+}

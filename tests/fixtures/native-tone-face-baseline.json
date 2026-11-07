@@ -1,0 +1,4054 @@
+{
+  "characters": {
+    "adeline": {
+      "profile": "../profiles/adeline-world-finish.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "balor": {
+      "profile": "../profiles/balor-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#452019FF",
+            "#452019FF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF",
+            "#190705FF",
+            "#190705FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "caldarus": {
+      "profile": "../profiles/caldarus-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#F2CBADFF",
+            "#FBD7BCFF",
+            "#F0B389FF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#E5D196FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#DA956CFF",
+            "#E3A17BFF",
+            "#D98364FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#D5794CFF",
+            "#DE855BFF",
+            "#AE593AFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#853329FF",
+            "#8E3F38FF",
+            "#6D2B26FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#410B0DFF",
+            "#4A171CFF",
+            "#351012FF"
+          ]
+        }
+      ]
+    },
+    "celine": {
+      "profile": "../profiles/celine-native-tone-blush.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#EAA092FF",
+            "#F1AAA2FF",
+            "#D05E67FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#FBD7BCFF",
+            "#D5815FFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#DCA07BFF",
+            "#E6AA8AFF",
+            "#BE6258FF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#EEDDA5FF",
+            "#DCA966FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#C98476FF",
+            "#D48E84FF",
+            "#B9575FFF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#E3A17BFF",
+            "#C47054FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#7D382CFF",
+            "#452019FF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#B85F55FF",
+            "#C66E65FF",
+            "#A2474AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#DE855BFF",
+            "#7D382CFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#471A19FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#471A19FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#A35353FF",
+            "#B26363FF",
+            "#84363FFF",
+            "#471A19FF",
+            "#321111FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#8E3F38FF",
+            "#471A19FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#24090AFF",
+            "#190705FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#190705FF",
+            "#24090AFF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#84434DFF",
+            "#96535FFF",
+            "#6E2F3DFF",
+            "#24090AFF",
+            "#190705FF",
+            "#24090AFF",
+            "#351012FF",
+            "#4A171CFF",
+            "#24090AFF"
+          ]
+        }
+      ]
+    },
+    "darcy": {
+      "profile": "../profiles/darcy-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#DE855BFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#4A171CFF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF"
+          ]
+        }
+      ]
+    },
+    "darren": {
+      "profile": "../profiles/darren-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF",
+            "#351012FF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "dell": {
+      "profile": "../profiles/dell-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#7D382CFF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#452019FF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#471A19FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#24090AFF",
+            "#24090AFF",
+            "#351012FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#351012FF",
+            "#190705FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "eiland": {
+      "profile": "../profiles/eiland-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF",
+            "#190705FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "elsie": {
+      "profile": "../profiles/elsie-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#7D382CFF",
+            "#452019FF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#471A19FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#24090AFF",
+            "#190705FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "errol": {
+      "profile": "../profiles/errol-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#D5815FFF",
+            "#F0B389FF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#DCA966FF",
+            "#E6BD7CFF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#C47054FF",
+            "#D98364FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#7D382CFF",
+            "#7D382CFF",
+            "#AE593AFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#471A19FF",
+            "#471A19FF",
+            "#6D2B26FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#24090AFF",
+            "#24090AFF",
+            "#351012FF"
+          ]
+        }
+      ]
+    },
+    "hayden": {
+      "profile": "../profiles/hayden-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#DE855BFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#4A171CFF",
+            "#4A171CFF",
+            "#351012FF",
+            "#351012FF",
+            "#351012FF",
+            "#351012FF",
+            "#24090AFF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "hemlock": {
+      "profile": "../profiles/hemlock-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#D5815FFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#DCA966FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#C47054FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#452019FF",
+            "#DE855BFF",
+            "#7D382CFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#471A19FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#24090AFF",
+            "#351012FF",
+            "#190705FF",
+            "#4A171CFF",
+            "#24090AFF"
+          ]
+        }
+      ]
+    },
+    "holt": {
+      "profile": "../profiles/holt-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#FBD7BCFF",
+            "#D5815FFF",
+            "#D5815FFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#EEDDA5FF",
+            "#DCA966FF",
+            "#DCA966FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#E3A17BFF",
+            "#C47054FF",
+            "#C47054FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#DE855BFF",
+            "#7D382CFF",
+            "#7D382CFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#471A19FF",
+            "#321111FF",
+            "#471A19FF",
+            "#8E3F38FF",
+            "#471A19FF",
+            "#471A19FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF",
+            "#24090AFF",
+            "#24090AFF",
+            "#190705FF",
+            "#24090AFF",
+            "#4A171CFF",
+            "#24090AFF",
+            "#24090AFF"
+          ]
+        }
+      ]
+    },
+    "josephine": {
+      "profile": "../profiles/josephine-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#452019FF",
+            "#452019FF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#351012FF",
+            "#351012FF",
+            "#190705FF",
+            "#190705FF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "juniper": {
+      "profile": "../profiles/juniper-world-finish.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#FBD7BCFF",
+            "#D5815FFF",
+            "#F0B389FF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#EEDDA5FF",
+            "#DCA966FF",
+            "#E6BD7CFF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#E3A17BFF",
+            "#C47054FF",
+            "#D98364FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#DE855BFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#DE855BFF",
+            "#7D382CFF",
+            "#AE593AFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#471A19FF",
+            "#321111FF",
+            "#471A19FF",
+            "#321111FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#8E3F38FF",
+            "#471A19FF",
+            "#6D2B26FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#4A171CFF",
+            "#24090AFF",
+            "#190705FF",
+            "#24090AFF",
+            "#190705FF",
+            "#24090AFF",
+            "#351012FF",
+            "#4A171CFF",
+            "#24090AFF",
+            "#351012FF"
+          ]
+        }
+      ]
+    },
+    "landen": {
+      "profile": "../profiles/landen-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "linnet": {
+      "profile": "../profiles/linnet-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#F0B389FF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#E6BD7CFF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#D98364FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#AE593AFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#471A19FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#6D2B26FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#24090AFF",
+            "#24090AFF",
+            "#351012FF",
+            "#24090AFF",
+            "#351012FF"
+          ]
+        }
+      ]
+    },
+    "louis": {
+      "profile": "../profiles/louis-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#FBD7BCFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#D5815FFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#EEDDA5FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#DCA966FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#D98364FF",
+            "#E3A17BFF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#C47054FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#DE855BFF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#DE855BFF",
+            "#7D382CFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#471A19FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#8E3F38FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#471A19FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#24090AFF",
+            "#24090AFF",
+            "#351012FF",
+            "#351012FF",
+            "#351012FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#351012FF",
+            "#4A171CFF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#4A171CFF",
+            "#24090AFF"
+          ]
+        }
+      ]
+    },
+    "luc": {
+      "profile": "../profiles/luc-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#D5815FFF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F9E3D3FF",
+            "#F8E6D9FF",
+            "#D5815FFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#DCA966FF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#F1E7C5FF",
+            "#F2E9CDFF",
+            "#DCA966FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#C47054FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#EAC3ACFF",
+            "#ECCBB8FF",
+            "#C47054FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#7D382CFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#E7B299FF",
+            "#EABDA8FF",
+            "#7D382CFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#471A19FF",
+            "#471A19FF",
+            "#471A19FF",
+            "#321111FF",
+            "#B78884FF",
+            "#C29A97FF",
+            "#471A19FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#190705FF",
+            "#24090AFF",
+            "#24090AFF",
+            "#24090AFF",
+            "#190705FF",
+            "#8E7073FF",
+            "#A08689FF",
+            "#24090AFF"
+          ]
+        }
+      ]
+    },
+    "maple": {
+      "profile": "../profiles/maple-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#D0A397FF",
+            "#FBD7BCFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#C9A586FF",
+            "#EEDDA5FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#BE7C73FF",
+            "#E3A17BFF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#452019FF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#452019FF",
+            "#975C59FF",
+            "#DE855BFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#673A40FF",
+            "#8E3F38FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF",
+            "#190705FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#190705FF",
+            "#331D27FF",
+            "#4A171CFF"
+          ]
+        }
+      ]
+    },
+    "march": {
+      "profile": "../profiles/march-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#F0B389FF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#E6BD7CFF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#D98364FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#452019FF",
+            "#452019FF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#AE593AFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#321111FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#6D2B26FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#24090AFF",
+            "#351012FF",
+            "#351012FF",
+            "#190705FF",
+            "#190705FF",
+            "#24090AFF",
+            "#351012FF",
+            "#24090AFF",
+            "#351012FF"
+          ]
+        }
+      ]
+    },
+    "merri": {
+      "profile": "../profiles/merri-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#FFEDD4FF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#FFF3BDFF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#F6B793FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#F19B73FF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#A15550FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#5D2D34FF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "nora": {
+      "profile": "../profiles/nora-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#FBC7B8FF",
+            "#D68C86FF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#EEC5A0FF",
+            "#CC8B77FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#DD9181FF",
+            "#BD6966FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#D27A73FF",
+            "#A6535AFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#8E4D4DFF",
+            "#6D303CFF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#24090AFF",
+            "#351012FF",
+            "#351012FF",
+            "#24090AFF",
+            "#4A202AFF",
+            "#35141FFF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF"
+          ]
+        }
+      ]
+    },
+    "olric": {
+      "profile": "../profiles/olric-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#FBD7BCFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#EEDDA5FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#E3A17BFF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#DE855BFF",
+            "#452019FF",
+            "#7D382CFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#8E3F38FF",
+            "#321111FF",
+            "#471A19FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#4A171CFF",
+            "#190705FF",
+            "#24090AFF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF"
+          ]
+        }
+      ]
+    },
+    "reina": {
+      "profile": "../profiles/reina-mouth-corrected.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#FBD7BCFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#FBD7BCFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#EEDDA5FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#EEDDA5FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#E3A17BFF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#E3A17BFF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#DE855BFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#DE855BFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#8E3F38FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#8E3F38FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF",
+            "#351012FF",
+            "#4A171CFF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#4A171CFF"
+          ]
+        }
+      ]
+    },
+    "ryis": {
+      "profile": "../profiles/ryis-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#F0B389FF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#D98364FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#AE593AFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#6D2B26FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF",
+            "#351012FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#351012FF"
+          ]
+        }
+      ]
+    },
+    "seridia": {
+      "profile": "../profiles/seridia-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#EEC8ACFF",
+            "#ECC6AAFF",
+            "#F7946AFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#D5815FFF",
+            "#FBD7BCFF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#EEA480FF",
+            "#FEDAC3FF",
+            "#89452DFF",
+            "#944B3BFF",
+            "#A2524FFF",
+            "#AC585CFF",
+            "#AF5960FF",
+            "#B35C66FF",
+            "#D5815FFF",
+            "#DC836AFF",
+            "#DB836AFF",
+            "#E58679FF",
+            "#E48579FF",
+            "#EC8884FF",
+            "#ED8987FF",
+            "#EB8783FF",
+            "#F08A8BFF",
+            "#EC8886FF",
+            "#EF898BFF",
+            "#F5B392FF",
+            "#FBB39FFF",
+            "#FFB3A7FF",
+            "#FFB3AAFF",
+            "#FFB3AEFF",
+            "#FDD5C3FF",
+            "#FFD2CCFF",
+            "#FFCFD2FF",
+            "#FFCFD4FF",
+            "#FFCED7FF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#FBD7BCFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E1CE95FF",
+            "#DFCC93FF",
+            "#ED9E5DFF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#DCA966FF",
+            "#EEDDA5FF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E4AE73FF",
+            "#F1E0ACFF",
+            "#CC8155FF",
+            "#D78763FF",
+            "#E58E77FF",
+            "#EF9484FF",
+            "#F29588FF",
+            "#F6988EFF",
+            "#DCA966FF",
+            "#E3AB71FF",
+            "#E2AB71FF",
+            "#ECAE80FF",
+            "#EBAD80FF",
+            "#F3B08BFF",
+            "#F4B18EFF",
+            "#F2AF8AFF",
+            "#F7B292FF",
+            "#F3B08DFF",
+            "#F6B192FF",
+            "#EBBD85FF",
+            "#F1BD92FF",
+            "#F6BD9AFF",
+            "#F7BD9DFF",
+            "#F9BDA1FF",
+            "#F0DBACFF",
+            "#F4D8B5FF",
+            "#F7D5BBFF",
+            "#F8D5BDFF",
+            "#F9D4C0FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#EEDDA5FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D6926BFF",
+            "#D49069FF",
+            "#E06445FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#C47054FF",
+            "#C47054FF",
+            "#E3A17BFF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D7745BFF",
+            "#E6A482FF",
+            "#9F5544FF",
+            "#AA5B52FF",
+            "#B86266FF",
+            "#C26873FF",
+            "#C56977FF",
+            "#C96C7DFF",
+            "#C47054FF",
+            "#CB725FFF",
+            "#CA725FFF",
+            "#D4756EFF",
+            "#D3746EFF",
+            "#DB7779FF",
+            "#DC787CFF",
+            "#DA7678FF",
+            "#DF7980FF",
+            "#DB777BFF",
+            "#DE7880FF",
+            "#DE836DFF",
+            "#E4837AFF",
+            "#E98382FF",
+            "#EA8385FF",
+            "#EC8389FF",
+            "#E59F82FF",
+            "#E99C8BFF",
+            "#EC9991FF",
+            "#ED9993FF",
+            "#EE9896FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#E3A17BFF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#D1764BFF",
+            "#CF7449FF",
+            "#B53A1BFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#7D382CFF",
+            "#DE855BFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AC4A31FF",
+            "#E18862FF",
+            "#452019FF",
+            "#502627FF",
+            "#5E2D3BFF",
+            "#683348FF",
+            "#6B344CFF",
+            "#6F3752FF",
+            "#7D382CFF",
+            "#843A37FF",
+            "#833A37FF",
+            "#8D3D46FF",
+            "#8C3C46FF",
+            "#943F51FF",
+            "#954054FF",
+            "#933E50FF",
+            "#984158FF",
+            "#943F53FF",
+            "#974058FF",
+            "#B35943FF",
+            "#B95950FF",
+            "#BE5958FF",
+            "#BF595BFF",
+            "#C1595FFF",
+            "#E08362FF",
+            "#E4806BFF",
+            "#E77D71FF",
+            "#E87D73FF",
+            "#E97C76FF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#DE855BFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#813028FF",
+            "#7F2E26FF",
+            "#740C07FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#471A19FF",
+            "#8E3F38FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6B1C1DFF",
+            "#91423FFF",
+            "#321111FF",
+            "#3D171FFF",
+            "#4B1E33FF",
+            "#552440FF",
+            "#582544FF",
+            "#5C284AFF",
+            "#471A19FF",
+            "#4E1C24FF",
+            "#4D1C24FF",
+            "#571F33FF",
+            "#561E33FF",
+            "#5E213EFF",
+            "#5F2241FF",
+            "#5D203DFF",
+            "#622345FF",
+            "#5E2140FF",
+            "#612245FF",
+            "#722B2FFF",
+            "#782B3CFF",
+            "#7D2B44FF",
+            "#7E2B47FF",
+            "#802B4BFF",
+            "#903D3FFF",
+            "#943A48FF",
+            "#97374EFF",
+            "#983750FF",
+            "#993653FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#8E3F38FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#3D080CFF",
+            "#3B060AFF",
+            "#3C0000FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#351012FF",
+            "#24090AFF",
+            "#24090AFF",
+            "#4A171CFF",
+            "#24090AFF",
+            "#190705FF",
+            "#330109FF",
+            "#4D1A23FF",
+            "#190705FF",
+            "#240D13FF",
+            "#321427FF",
+            "#3C1A34FF",
+            "#3F1B38FF",
+            "#431E3EFF",
+            "#24090AFF",
+            "#2B0B15FF",
+            "#2A0B15FF",
+            "#340E24FF",
+            "#330D24FF",
+            "#3B102FFF",
+            "#3C1132FF",
+            "#3A0F2EFF",
+            "#3F1236FF",
+            "#3B1031FF",
+            "#3E1136FF",
+            "#3A101BFF",
+            "#401028FF",
+            "#451030FF",
+            "#461033FF",
+            "#481037FF",
+            "#4C1523FF",
+            "#50122CFF",
+            "#530F32FF",
+            "#540F34FF",
+            "#550E37FF",
+            "#24090AFF",
+            "#351012FF",
+            "#4A171CFF"
+          ]
+        }
+      ]
+    },
+    "stillwell": {
+      "profile": "../profiles/stillwell-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#7D382CFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#471A19FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#24090AFF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "taliferro": {
+      "profile": "../profiles/taliferro-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F7C9A8FF",
+            "#E39A74FF",
+            "#EDB88FFF",
+            "#F8DAC2FF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#EBD095FF",
+            "#E1B371FF",
+            "#E3C282FF",
+            "#EBE0ABFF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#DF9572FF",
+            "#CF7A5CFF",
+            "#D6886AFF",
+            "#E0A481FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#CB734EFF",
+            "#964933FF",
+            "#AB5E40FF",
+            "#DB8861FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#813731FF",
+            "#5A2320FF",
+            "#6A302CFF",
+            "#8B423EFF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#421418FF",
+            "#2D0D0EFF",
+            "#321518FF",
+            "#471A22FF"
+          ]
+        }
+      ]
+    },
+    "terithia": {
+      "profile": "../profiles/terithia-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#FFDED0FF",
+            "#FFE4D6FF",
+            "#FFEEE1FF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#F7E4B9FF",
+            "#FCEABFFF",
+            "#FFF4CAFF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#ECA88FFF",
+            "#F1AE95FF",
+            "#F9B8A0FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#452019FF",
+            "#E78C6FFF",
+            "#EC9275FF",
+            "#F49C80FF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#321111FF",
+            "#97464CFF",
+            "#9C4C52FF",
+            "#A4565DFF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#190705FF",
+            "#531E30FF",
+            "#582436FF",
+            "#602E41FF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "valen": {
+      "profile": "../profiles/valen-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#D5815FFF",
+            "#F0B389FF",
+            "#F0B389FF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#DCA966FF",
+            "#E6BD7CFF",
+            "#E6BD7CFF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#C47054FF",
+            "#D98364FF",
+            "#D98364FF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#7D382CFF",
+            "#AE593AFF",
+            "#AE593AFF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#471A19FF",
+            "#6D2B26FF",
+            "#6D2B26FF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#24090AFF",
+            "#351012FF",
+            "#351012FF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF"
+          ]
+        }
+      ]
+    },
+    "vera": {
+      "profile": "../profiles/vera-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#351012FF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "wheedle": {
+      "profile": "../profiles/wheedle-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#CB795DFF",
+            "#89452DFF",
+            "#5B2E1EFF",
+            "#F5B88DFF",
+            "#F6C5A3FF",
+            "#DB8360FF",
+            "#844D37FF",
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#D2A164FF",
+            "#CC8155FF",
+            "#885639FF",
+            "#EBC280FF",
+            "#EACD91FF",
+            "#E2AB67FF",
+            "#C7895FFF",
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#BA6852FF",
+            "#9F5544FF",
+            "#6A392DFF",
+            "#DE8868FF",
+            "#DE9270FF",
+            "#CA7255FF",
+            "#9A5D4EFF",
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#73302AFF",
+            "#452019FF",
+            "#2E1511FF",
+            "#B35E3EFF",
+            "#C66F4BFF",
+            "#833A2DFF",
+            "#402823FF",
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#3D1217FF",
+            "#321111FF",
+            "#210B0BFF",
+            "#72302AFF",
+            "#7E352FFF",
+            "#4D1C1AFF",
+            "#2D191BFF",
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#1A0108FF",
+            "#190705FF",
+            "#110503FF",
+            "#3A1516FF",
+            "#401417FF",
+            "#2A0B0BFF",
+            "#140F0FFF",
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF"
+          ]
+        }
+      ]
+    },
+    "wiscar": {
+      "profile": "../profiles/wiscar-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#5B2E1EFF",
+            "#6E3724FF",
+            "#371C12FF",
+            "#FCE1CDFF",
+            "#F5E1C3FF",
+            "#F0B389FF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#885639FF",
+            "#A36744FF",
+            "#523422FF",
+            "#F2E6BCFF",
+            "#E8E7ACFF",
+            "#E6BD7CFF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#6A392DFF",
+            "#7F4436FF",
+            "#40221BFF",
+            "#EAB99CFF",
+            "#DDAB82FF",
+            "#D98364FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#2E1511FF",
+            "#371A14FF",
+            "#1C0D0AFF",
+            "#E6A484FF",
+            "#D88F62FF",
+            "#AE593AFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#210B0BFF",
+            "#280E0EFF",
+            "#140707FF",
+            "#AA6F6AFF",
+            "#88493FFF",
+            "#6D2B26FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#110503FF",
+            "#140604FF",
+            "#0A0302FF",
+            "#775155FF",
+            "#442123FF",
+            "#351012FF"
+          ]
+        }
+      ]
+    },
+    "wynne": {
+      "profile": "../profiles/wynne-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#FFC192FF",
+            "#FFE2C7FF",
+            "#FFEBD3FF",
+            "#FFFFE4FF",
+            "#D37659FF",
+            "#EDAF85FF",
+            "#D5815FFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#F8CB85FF",
+            "#F8E8B0FF",
+            "#FFF1BCFF",
+            "#FFFFCDFF",
+            "#DA9E60FF",
+            "#E3B978FF",
+            "#DCA966FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#EB916DFF",
+            "#EDAC86FF",
+            "#F6B592FF",
+            "#FFCAA3FF",
+            "#C2654EFF",
+            "#D67F60FF",
+            "#C47054FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#C06743FF",
+            "#E89066FF",
+            "#F19972FF",
+            "#FFAE83FF",
+            "#7B2D26FF",
+            "#AB5536FF",
+            "#7D382CFF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#7F392FFF",
+            "#984A43FF",
+            "#A1534FFF",
+            "#B36860FF",
+            "#450F13FF",
+            "#6A2722FF",
+            "#471A19FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#471E1BFF",
+            "#542227FF",
+            "#5D2B33FF",
+            "#6F4044FF",
+            "#220004FF",
+            "#320C0EFF",
+            "#24090AFF"
+          ]
+        }
+      ]
+    },
+    "zorel": {
+      "profile": "../profiles/zorel-world-trial.json",
+      "presets": [
+        {
+          "id": "player_04",
+          "colors": [
+            "#FBD7BCFF",
+            "#F0B389FF",
+            "#D5815FFF",
+            "#89452DFF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#FFF9DDFF",
+            "#F0B389FF",
+            "#89452DFF",
+            "#F0B389FF",
+            "#89452DFF"
+          ]
+        },
+        {
+          "id": "npc_march",
+          "colors": [
+            "#EEDDA5FF",
+            "#E6BD7CFF",
+            "#DCA966FF",
+            "#CC8155FF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#FFFFC6FF",
+            "#E6BD7CFF",
+            "#CC8155FF",
+            "#E6BD7CFF",
+            "#CC8155FF"
+          ]
+        },
+        {
+          "id": "npc_wiscar",
+          "colors": [
+            "#E3A17BFF",
+            "#D98364FF",
+            "#C47054FF",
+            "#9F5544FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#FFC39CFF",
+            "#D98364FF",
+            "#9F5544FF",
+            "#D98364FF",
+            "#9F5544FF"
+          ]
+        },
+        {
+          "id": "player_16",
+          "colors": [
+            "#DE855BFF",
+            "#AE593AFF",
+            "#7D382CFF",
+            "#452019FF",
+            "#452019FF",
+            "#AE593AFF",
+            "#452019FF",
+            "#FFA77CFF",
+            "#AE593AFF",
+            "#452019FF",
+            "#AE593AFF",
+            "#452019FF"
+          ]
+        },
+        {
+          "id": "player_22",
+          "colors": [
+            "#8E3F38FF",
+            "#6D2B26FF",
+            "#471A19FF",
+            "#321111FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#B86159FF",
+            "#6D2B26FF",
+            "#321111FF",
+            "#6D2B26FF",
+            "#321111FF"
+          ]
+        },
+        {
+          "id": "player_35",
+          "colors": [
+            "#4A171CFF",
+            "#351012FF",
+            "#24090AFF",
+            "#190705FF",
+            "#190705FF",
+            "#351012FF",
+            "#190705FF",
+            "#74393DFF",
+            "#351012FF",
+            "#190705FF",
+            "#351012FF",
+            "#190705FF"
+          ]
+        }
+      ]
+    }
+  }
+}

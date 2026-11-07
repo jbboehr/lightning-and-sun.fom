@@ -1,0 +1,543 @@
+{
+  "character": "luc",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/luc-world-trial.json",
+  "base_profile_sha256": "d2c59617688fd27cb162042bd159c0db50b81623e4394391e44e3c409bc62501",
+  "profile": "palettes/profiles/luc-native-tone-face.json",
+  "additional_source_colors": [
+    "#C16251"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#89452DFF",
+      "#D5815FFF",
+      "#D5815FFF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#F9E3D3FF",
+      "#F8E6D9FF",
+      "#D5815FFF",
+      "#EAA092FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#CC8155FF",
+      "#DCA966FF",
+      "#DCA966FF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#F1E7C5FF",
+      "#F2E9CDFF",
+      "#DCA966FF",
+      "#DCA07BFF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#9F5544FF",
+      "#C47054FF",
+      "#C47054FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#EAC3ACFF",
+      "#ECCBB8FF",
+      "#C47054FF",
+      "#C98476FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#452019FF",
+      "#7D382CFF",
+      "#7D382CFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#E7B299FF",
+      "#EABDA8FF",
+      "#7D382CFF",
+      "#B85F55FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#321111FF",
+      "#471A19FF",
+      "#471A19FF",
+      "#471A19FF",
+      "#321111FF",
+      "#B78884FF",
+      "#C29A97FF",
+      "#471A19FF",
+      "#A35353FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#190705FF",
+      "#24090AFF",
+      "#24090AFF",
+      "#24090AFF",
+      "#190705FF",
+      "#8E7073FF",
+      "#A08689FF",
+      "#24090AFF",
+      "#84434DFF"
+    ]
+  },
+  "counts": {
+    "selected_strips": 131,
+    "portrait_strips": 32,
+    "world_strips": 99,
+    "audited_native_portrait_frames": 64,
+    "mouth_unique_crops_inspected": 8,
+    "affected_strips": 4,
+    "components": 24,
+    "selected_pixels": 120
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Luc/Portraits/Autumn/spr_portrait_luc_autumn_embarrassed.png",
+      "source_sha256": "40f403c84da6ccadedc7379c59ee7ddc022181328eb4de49352c84d8243280a8",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            156,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 6,
+          "bounds": [
+            154,
+            97,
+            156,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            158,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 8,
+          "bounds": [
+            158,
+            97,
+            161,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            452,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 6,
+          "bounds": [
+            450,
+            97,
+            452,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            454,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 8,
+          "bounds": [
+            454,
+            97,
+            457,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            99
+          ],
+          "color": "#C16251",
+          "pixels": 1,
+          "bounds": [
+            164,
+            99,
+            164,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            99
+          ],
+          "color": "#C16251",
+          "pixels": 1,
+          "bounds": [
+            460,
+            99,
+            460,
+            99
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Luc/Portraits/Spring/spr_portrait_luc_spring_embarrassed.png",
+      "source_sha256": "6c15ee83ff6370b438d9b0a4f04fc018ddcbe966d8d4cd621b08f678fcdfb009",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            156,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 6,
+          "bounds": [
+            154,
+            97,
+            156,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            158,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 8,
+          "bounds": [
+            158,
+            97,
+            161,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            452,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 6,
+          "bounds": [
+            450,
+            97,
+            452,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            454,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 8,
+          "bounds": [
+            454,
+            97,
+            457,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            99
+          ],
+          "color": "#C16251",
+          "pixels": 1,
+          "bounds": [
+            164,
+            99,
+            164,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            99
+          ],
+          "color": "#C16251",
+          "pixels": 1,
+          "bounds": [
+            460,
+            99,
+            460,
+            99
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Luc/Portraits/Summer/spr_portrait_luc_summer_embarrassed.png",
+      "source_sha256": "80eaba84a1d728bc1797dac26bb7581557acf6d491c54ab07f8d125f30d2d80d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            156,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 6,
+          "bounds": [
+            154,
+            97,
+            156,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            158,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 8,
+          "bounds": [
+            158,
+            97,
+            161,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            452,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 6,
+          "bounds": [
+            450,
+            97,
+            452,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            454,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 8,
+          "bounds": [
+            454,
+            97,
+            457,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            99
+          ],
+          "color": "#C16251",
+          "pixels": 1,
+          "bounds": [
+            164,
+            99,
+            164,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            99
+          ],
+          "color": "#C16251",
+          "pixels": 1,
+          "bounds": [
+            460,
+            99,
+            460,
+            99
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Luc/Portraits/Winter/spr_portrait_luc_winter_embarrassed.png",
+      "source_sha256": "e45a7f376207acdfdf3daed4b351a2245d879e9463a18ffdb0d7d29455be883c",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            156,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 6,
+          "bounds": [
+            154,
+            97,
+            156,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            158,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 8,
+          "bounds": [
+            158,
+            97,
+            161,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            452,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 6,
+          "bounds": [
+            450,
+            97,
+            452,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            454,
+            97
+          ],
+          "color": "#C16251",
+          "pixels": 8,
+          "bounds": [
+            454,
+            97,
+            457,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            99
+          ],
+          "color": "#C16251",
+          "pixels": 1,
+          "bounds": [
+            164,
+            99,
+            164,
+            99
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            99
+          ],
+          "color": "#C16251",
+          "pixels": 1,
+          "bounds": [
+            460,
+            99,
+            460,
+            99
+          ],
+          "role": "blush"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Luc/Portraits/Autumn/spr_portrait_luc_autumn_embarrassed.png",
+      "point": [
+        156,
+        97
+      ],
+      "source": "#C16251",
+      "expected": {
+        "player_04": "#EAA092",
+        "npc_march": "#DCA07B",
+        "npc_wiscar": "#C98476",
+        "player_16": "#B85F55",
+        "player_22": "#A35353",
+        "player_35": "#84434D"
+      },
+      "role": "blush"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Luc/Portraits/Spring/spr_portrait_luc_spring_embarrassed.png",
+      "point": [
+        447,
+        102
+      ],
+      "source": "#B36844",
+      "role": "iris_contour"
+    },
+    {
+      "asset": "assets/animations/NPCs/Luc/Portraits/Spring/spr_portrait_luc_spring_embarrassed.png",
+      "point": [
+        453,
+        106
+      ],
+      "source": "#DF4868",
+      "role": "tongue"
+    }
+  ],
+  "audit": "Confirmed expression-only cheek/nose flush was absent from the donor mapping. Add its literal source components with the accepted Celine muted-rose depth ladder; retain all prior skin-role targets. Mouth frame crops and residual existing-skin-RGB inspection found no confirmed outer-mouth skin omissions. Preserve tongue/interior/lipstick, eyes, hair and source-specific markings.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4"
+}

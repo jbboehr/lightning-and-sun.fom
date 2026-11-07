@@ -1,0 +1,2017 @@
+{
+  "character": "landen",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/landen-world-trial.json",
+  "profile": "palettes/profiles/landen-native-tone-face.json",
+  "additional_source_colors": [
+    "#A33C43"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#89452DFF",
+      "#EAA092FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#CC8155FF",
+      "#DCA07BFF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#9F5544FF",
+      "#C98476FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#452019FF",
+      "#B85F55FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#321111FF",
+      "#A35353FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#4A171CFF",
+      "#351012FF",
+      "#190705FF",
+      "#84434DFF"
+    ]
+  },
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4",
+  "base_profile_sha256": "3bb273e1ef0e1493caf8875cc978d4459e62d0723a0d05f1c3945dbb58037b13",
+  "before_set_sha256": "75f067e55138f9b326f27a02b08e42fad86dcaaa226c3c0d67b2e34982a23e29",
+  "method": "Source-bound component seeds preserve all inherited skin target values/groups/regions. Muted rose cosmetics use the Celine visible-blush ladder; different source blush shades retain explicit main/highlight/deep treatments. New targets are artist-selected cosmetics or an existing reviewed skin/cosmetic role. Exact corpus proof owns preservation; automated checks are not visual acceptance.",
+  "counts": {
+    "selected_strips": 119,
+    "portrait_strips": 32,
+    "native_portrait_frames": 64,
+    "affected_strips": 4,
+    "added_components": 136,
+    "selected_pixels": 136,
+    "pixels_by_role": {
+      "blush": 136
+    }
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_embarrassed.png",
+      "source_sha256": "dce8ce7bc1857af6f2db90dafc78ac4dfd59aa5f16f46fe8fe9e24f3e0967112",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            152,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            154,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            156,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            448,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            450,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            452,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            151,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            153,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            155,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            157,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            171,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            173,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            447,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            449,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            451,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            453,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            467,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            469,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            152,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            154,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            156,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            158,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            170,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            172,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            448,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            450,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            452,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            454,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            466,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            468,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            171,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            173,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            467,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            469,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Spring/spr_portrait_landen_spring_embarrassed.png",
+      "source_sha256": "fabfc2ae2e80c37ad42bb775584585697b0e9715feec25a5b2d947121f0dc712",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            152,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            154,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            156,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            448,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            450,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            452,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            151,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            153,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            155,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            157,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            171,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            173,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            447,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            449,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            451,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            453,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            467,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            469,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            152,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            154,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            156,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            158,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            170,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            172,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            448,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            450,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            452,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            454,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            466,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            468,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            171,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            173,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            467,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            469,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Summer/spr_portrait_landen_summer_embarrassed.png",
+      "source_sha256": "05933c89dd9e56afdc890861a63f4385b57e5a20662402914476355f8c489e94",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            152,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            154,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            156,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            448,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            450,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            452,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            151,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            153,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            155,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            157,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            171,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            173,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            447,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            449,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            451,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            453,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            467,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            469,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            152,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            154,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            156,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            158,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            170,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            172,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            448,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            450,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            452,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            454,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            466,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            468,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            171,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            173,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            467,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            469,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Winter/spr_portrait_landen_winter_embarrassed.png",
+      "source_sha256": "7cd409f2e12393d3703f4e4ed6efd4ffc12e3ee269cc6b85bba798beea966691",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            152,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            154,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            156,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            448,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            450,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            452,
+            65
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            151,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            153,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            155,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            157,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            171,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            173,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            447,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            449,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            451,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            453,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            467,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            469,
+            66
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            152,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            154,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            156,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            158,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            170,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            172,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            448,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            450,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            452,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            454,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            466,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            468,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            171,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            173,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            467,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        },
+        {
+          "seed": [
+            469,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#A33C43": 1
+          },
+          "color": "#A33C43"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_embarrassed.png",
+      "point": [
+        152,
+        65
+      ],
+      "source": "#A33C43",
+      "expected": {
+        "player_04": "#EAA092FF",
+        "npc_march": "#DCA07BFF",
+        "npc_wiscar": "#C98476FF",
+        "player_16": "#B85F55FF",
+        "player_22": "#A35353FF",
+        "player_35": "#84434DFF"
+      },
+      "role": "blush"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_embarrassed.png",
+      "point": [
+        150,
+        33
+      ],
+      "source": "#000000",
+      "role": "black_outline"
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_embarrassed.png",
+      "point": [
+        155,
+        61
+      ],
+      "source": "#FFFFFF",
+      "role": "sclera"
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_embarrassed.png",
+      "point": [
+        458,
+        76
+      ],
+      "source": "#F96F8C",
+      "role": "tongue"
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_embarrassed.png",
+      "point": [
+        455,
+        74
+      ],
+      "source": "#A1121D",
+      "role": "mouth_interior"
+    }
+  ],
+  "cosmetic_treatments": {
+    "#A33C43": {
+      "role": "blush",
+      "target": "main"
+    }
+  },
+  "audit": [
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_embarrassed.png",
+      "source_sha256": "dce8ce7bc1857af6f2db90dafc78ac4dfd59aa5f16f46fe8fe9e24f3e0967112",
+      "native_frames": 2,
+      "new_components": 34
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_happy.png",
+      "source_sha256": "d902d767bbe26f1a7117847be2c0dd0cac7bf59a142c6b315e388b334580bbf9",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_mad.png",
+      "source_sha256": "5186bb502131b75be8d2005027f7238bb0dc0a01bab11bf27634461a0dba84b9",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_neutral.png",
+      "source_sha256": "d3038bdfb993f96bddaf6f6a8ae29fb4c3cd10dc0b43b9156b32cd0e90bb96bb",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_sad.png",
+      "source_sha256": "d2a041c61bc83c365cf0220482337d8120420d5ec62ad605b32d67091a8e26cd",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_think.png",
+      "source_sha256": "49975ad138bafe4f30819e669c1337f8b9cd80d3c0d3c2486e9c2bce146c4137",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_ugh.png",
+      "source_sha256": "ac63c7c1869a4044495f758ffb34ecc180e9486fb384934194f9d97339457cf4",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Autumn/spr_portrait_landen_autumn_wink.png",
+      "source_sha256": "b6f9c4e7cec5f9050ca998b23df2baced727a78046359201afbac69ddf788b91",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Spring/spr_portrait_landen_spring_embarrassed.png",
+      "source_sha256": "fabfc2ae2e80c37ad42bb775584585697b0e9715feec25a5b2d947121f0dc712",
+      "native_frames": 2,
+      "new_components": 34
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Spring/spr_portrait_landen_spring_happy.png",
+      "source_sha256": "999c1190834a934ddfd7eb1e9247c120b8ddf13f54cfa158b40e3f3c696305fd",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Spring/spr_portrait_landen_spring_mad.png",
+      "source_sha256": "0828953f411e51fefcb99db825a0e3889a03e94dc13cc06f88bf024b0fb44da4",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Spring/spr_portrait_landen_spring_neutral.png",
+      "source_sha256": "08a099db32b286c4b66c3c97e870d18d11ec313ced8a9dea456b9399e9c255ad",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Spring/spr_portrait_landen_spring_sad.png",
+      "source_sha256": "a0a125a405390ac0cab94607ffcaded1088afe70afeb66d43146bcaeec3f0dd1",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Spring/spr_portrait_landen_spring_think.png",
+      "source_sha256": "d068700f9f5a84774d549c08d3fe3bbf8338de1b5b62d2742b6bba027fe9dcd0",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Spring/spr_portrait_landen_spring_ugh.png",
+      "source_sha256": "bb5dbdb748b17ee71a0955ebac85b41ce001d0c34bdffd6a7ee430a8c0578d87",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Spring/spr_portrait_landen_spring_wink.png",
+      "source_sha256": "06227ac60f8edd883afd1b34ce7f1a28024595badb70881d3e9a9aacfb72c564",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Summer/spr_portrait_landen_summer_embarrassed.png",
+      "source_sha256": "05933c89dd9e56afdc890861a63f4385b57e5a20662402914476355f8c489e94",
+      "native_frames": 2,
+      "new_components": 34
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Summer/spr_portrait_landen_summer_happy.png",
+      "source_sha256": "da0266fcba5980a550433c337d2ea210751184ac3e06b03d94e207dc2abb2986",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Summer/spr_portrait_landen_summer_mad.png",
+      "source_sha256": "7884f3ebb98c834a210af0671484b332864e73fb2d537ba889dab4797c8de072",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Summer/spr_portrait_landen_summer_neutral.png",
+      "source_sha256": "57700aa80beace0e84e8081e28b9c90999f2b1f904d0c1d56631053cb605c7a2",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Summer/spr_portrait_landen_summer_sad.png",
+      "source_sha256": "a62337f9437e06d55d25d625d8fcaf9ada2dda0fea6e776839b84f3c5c101db1",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Summer/spr_portrait_landen_summer_think.png",
+      "source_sha256": "33abf3a8746af30f926e7819d8f8b338f2bca7db6866373d06b6597c579348f4",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Summer/spr_portrait_landen_summer_ugh.png",
+      "source_sha256": "34b6c2e59cfabd3cfa6ba01a0332dd0080bcf43f2a21568b4cce9feeb334b9a4",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Summer/spr_portrait_landen_summer_wink.png",
+      "source_sha256": "47d47833228ca8db21e50a474870ae38a41086436af9fe0081b576375fda1045",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Winter/spr_portrait_landen_winter_embarrassed.png",
+      "source_sha256": "7cd409f2e12393d3703f4e4ed6efd4ffc12e3ee269cc6b85bba798beea966691",
+      "native_frames": 2,
+      "new_components": 34
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Winter/spr_portrait_landen_winter_happy.png",
+      "source_sha256": "185784176f8cb76b2543ef608c952a21b43d93f004e395cd97960151f5296b47",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Winter/spr_portrait_landen_winter_mad.png",
+      "source_sha256": "ee89bf89db3fc21ccaf5a49a48526a11576561ba7f0e41fcde84f0eab746b460",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Winter/spr_portrait_landen_winter_neutral.png",
+      "source_sha256": "3249a3338c73f19443dcb0c1f5d6aecfa1a10691c657211764e9dbcd989ad429",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Winter/spr_portrait_landen_winter_sad.png",
+      "source_sha256": "f73bec750d1e6489779983e69afa5d9f7c2f9e5be2b3c0d29a5727fc16348266",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Winter/spr_portrait_landen_winter_think.png",
+      "source_sha256": "96c61fee8ee0de79f0b456b107199fa43bcc042a933b0027dcf6391ae13ac49a",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Winter/spr_portrait_landen_winter_ugh.png",
+      "source_sha256": "8c64e7c3e809511e71c861fd61a967d99cb224f4416eeca42171f3bd1c20496f",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Landen/Portraits/Winter/spr_portrait_landen_winter_wink.png",
+      "source_sha256": "cdd5e9d3d8f35205d6837eef216484ef19c5b07e0239b8322246380e14f94fd9",
+      "native_frames": 2,
+      "new_components": 0
+    }
+  ]
+}

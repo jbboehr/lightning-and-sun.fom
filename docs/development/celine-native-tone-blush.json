@@ -1,0 +1,5360 @@
+{
+  "base_profile": "palettes/profiles/celine-world-trial.json",
+  "profile": "palettes/profiles/celine-native-tone-blush.json",
+  "source_colors": [
+    "#F4AEAE",
+    "#FCB0B6",
+    "#E6687A"
+  ],
+  "targets": {
+    "player_04": [
+      "#F3A9ACFF",
+      "#FBAAB4FF",
+      "#E56579FF"
+    ],
+    "npc_march": [
+      "#E6AD97FF",
+      "#EEAF9EFF",
+      "#D9686AFF"
+    ],
+    "npc_wiscar": [
+      "#DC7E71FF",
+      "#E38076FF",
+      "#CF4B4FFF"
+    ],
+    "player_16": [
+      "#D76853FF",
+      "#DE6957FF",
+      "#CB3E3AFF"
+    ],
+    "player_22": [
+      "#893133FF",
+      "#8E3236FF",
+      "#821E24FF"
+    ],
+    "player_35": [
+      "#48121AFF",
+      "#4A121BFF",
+      "#440B12FF"
+    ]
+  },
+  "method": "For each RGB channel, round half up (source blush channel \u00d7 donor light channel / original Celine light channel). Original light is #FCDEBE. Alpha remains255. These authored cosmetic targets are candidates, not native donor colors.",
+  "scope": "Only source-bound cheek components. F4AEAE components on all affected expressions; FCB0B6 and E6687A only on the special-blush cheek patch. Single-color groups isolate shared lips, tongue, mouth, hair and clothes. All old skin slots and masks retained; old four presets append identity targets.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4",
+  "base_profile_sha256": "fbbc6a790cf2420e9530e3d1f8e90d60107c6e7510d5b08c0a86dc4091f84a60",
+  "counts": {
+    "selected_strips": 390,
+    "portrait_strips": 183,
+    "affected_portrait_strips": 63,
+    "new_components": 334,
+    "selected_blush_pixels": 2514
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/Garden/spr_portrait_celine_autumn_garden_angry_blush.png",
+      "source_sha256": "c4b7a174d1a4035bd34bd7840682511fdf6e5b11075eeace4b402b0f21691772",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            153,
+            77
+          ],
+          "bounds": [
+            149,
+            77,
+            156,
+            79
+          ],
+          "pixels": 15
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            449,
+            77
+          ],
+          "bounds": [
+            445,
+            77,
+            452,
+            79
+          ],
+          "pixels": 15
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/Garden/spr_portrait_celine_autumn_garden_blush.png",
+      "source_sha256": "1020e7d55223bbe4cd997247d19e6a8c8d7d82ab094cefa9d1c3f71a1ede7695",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/Garden/spr_portrait_celine_autumn_garden_blush_closed_eyes.png",
+      "source_sha256": "ba4f5a06129ef2f76c6167ee21e68f2965926f311c2ef20bb3745b34d7a2f4f3",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/Garden/spr_portrait_celine_autumn_garden_blush_special.png",
+      "source_sha256": "ab709eb176f7e99be7cabca7b89dc5ee5901bb810a1f4e9528a975accdd33cd7",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            150,
+            79
+          ],
+          "bounds": [
+            149,
+            79,
+            155,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            446,
+            79
+          ],
+          "bounds": [
+            445,
+            79,
+            451,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            147,
+            80
+          ],
+          "bounds": [
+            146,
+            80,
+            149,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            148,
+            80
+          ],
+          "bounds": [
+            148,
+            80,
+            148,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            151,
+            80
+          ],
+          "bounds": [
+            151,
+            80,
+            151,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            154,
+            80
+          ],
+          "bounds": [
+            154,
+            80,
+            154,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            155,
+            80
+          ],
+          "bounds": [
+            155,
+            80,
+            155,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            443,
+            80
+          ],
+          "bounds": [
+            442,
+            80,
+            445,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            444,
+            80
+          ],
+          "bounds": [
+            444,
+            80,
+            444,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            447,
+            80
+          ],
+          "bounds": [
+            447,
+            80,
+            447,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            450,
+            80
+          ],
+          "bounds": [
+            450,
+            80,
+            450,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            451,
+            80
+          ],
+          "bounds": [
+            451,
+            80,
+            451,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            149,
+            81
+          ],
+          "bounds": [
+            149,
+            81,
+            149,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            152,
+            81
+          ],
+          "bounds": [
+            152,
+            81,
+            152,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            155,
+            81
+          ],
+          "bounds": [
+            155,
+            81,
+            155,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            156,
+            81
+          ],
+          "bounds": [
+            156,
+            81,
+            156,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            445,
+            81
+          ],
+          "bounds": [
+            445,
+            81,
+            445,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            448,
+            81
+          ],
+          "bounds": [
+            448,
+            81,
+            448,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            451,
+            81
+          ],
+          "bounds": [
+            451,
+            81,
+            451,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            452,
+            81
+          ],
+          "bounds": [
+            452,
+            81,
+            452,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            150,
+            82
+          ],
+          "bounds": [
+            150,
+            82,
+            150,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            153,
+            82
+          ],
+          "bounds": [
+            153,
+            82,
+            153,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            156,
+            82
+          ],
+          "bounds": [
+            156,
+            82,
+            156,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            157,
+            82
+          ],
+          "bounds": [
+            157,
+            82,
+            157,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            446,
+            82
+          ],
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            449,
+            82
+          ],
+          "bounds": [
+            449,
+            82,
+            449,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            452,
+            82
+          ],
+          "bounds": [
+            452,
+            82,
+            452,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            453,
+            82
+          ],
+          "bounds": [
+            453,
+            82,
+            453,
+            82
+          ],
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/Garden/spr_portrait_celine_autumn_garden_embarrassed.png",
+      "source_sha256": "c9d6d74616d7700af3a31c78f312ca7e1932dd99d7fbf453851a261990e267c4",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/Garden/spr_portrait_celine_autumn_garden_shy_blush.png",
+      "source_sha256": "8b9e3dca57c795e97ff44b81e89d2dd7263c9062ddca98ff8fe82767bed1770b",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/Garden/spr_portrait_celine_autumn_garden_teary_special.png",
+      "source_sha256": "464c7c917aa3e35fe99d2d1717721f28783dd82bb52bd9ff4224253ac1d91cd1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/spr_portrait_celine_autumn_angry_blush.png",
+      "source_sha256": "e49322c6e05ec4628136fef4358e12d6b37ebafc907b46508c92599ab0f923c7",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            153,
+            77
+          ],
+          "bounds": [
+            149,
+            77,
+            156,
+            79
+          ],
+          "pixels": 15
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            449,
+            77
+          ],
+          "bounds": [
+            445,
+            77,
+            452,
+            79
+          ],
+          "pixels": 15
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/spr_portrait_celine_autumn_blush.png",
+      "source_sha256": "4dffc412acd0bb5ac4ab3abb343b336045d70d8a77d534c725ec1189831517b9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/spr_portrait_celine_autumn_blush_closed_eyes.png",
+      "source_sha256": "c00677ec7284d01f0f878f2a41a8d55b5d922f98f99c979ca3806c9dfbd7b2da",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/spr_portrait_celine_autumn_blush_special.png",
+      "source_sha256": "946f1a5efa0113b47001a1004f6f5e278f43db18184e918410c59be7178b0b3f",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            150,
+            79
+          ],
+          "bounds": [
+            149,
+            79,
+            155,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            446,
+            79
+          ],
+          "bounds": [
+            445,
+            79,
+            451,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            147,
+            80
+          ],
+          "bounds": [
+            146,
+            80,
+            149,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            148,
+            80
+          ],
+          "bounds": [
+            148,
+            80,
+            148,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            151,
+            80
+          ],
+          "bounds": [
+            151,
+            80,
+            151,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            154,
+            80
+          ],
+          "bounds": [
+            154,
+            80,
+            154,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            155,
+            80
+          ],
+          "bounds": [
+            155,
+            80,
+            155,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            443,
+            80
+          ],
+          "bounds": [
+            442,
+            80,
+            445,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            444,
+            80
+          ],
+          "bounds": [
+            444,
+            80,
+            444,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            447,
+            80
+          ],
+          "bounds": [
+            447,
+            80,
+            447,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            450,
+            80
+          ],
+          "bounds": [
+            450,
+            80,
+            450,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            451,
+            80
+          ],
+          "bounds": [
+            451,
+            80,
+            451,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            149,
+            81
+          ],
+          "bounds": [
+            149,
+            81,
+            149,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            152,
+            81
+          ],
+          "bounds": [
+            152,
+            81,
+            152,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            155,
+            81
+          ],
+          "bounds": [
+            155,
+            81,
+            155,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            156,
+            81
+          ],
+          "bounds": [
+            156,
+            81,
+            156,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            445,
+            81
+          ],
+          "bounds": [
+            445,
+            81,
+            445,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            448,
+            81
+          ],
+          "bounds": [
+            448,
+            81,
+            448,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            451,
+            81
+          ],
+          "bounds": [
+            451,
+            81,
+            451,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            452,
+            81
+          ],
+          "bounds": [
+            452,
+            81,
+            452,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            150,
+            82
+          ],
+          "bounds": [
+            150,
+            82,
+            150,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            153,
+            82
+          ],
+          "bounds": [
+            153,
+            82,
+            153,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            156,
+            82
+          ],
+          "bounds": [
+            156,
+            82,
+            156,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            157,
+            82
+          ],
+          "bounds": [
+            157,
+            82,
+            157,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            446,
+            82
+          ],
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            449,
+            82
+          ],
+          "bounds": [
+            449,
+            82,
+            449,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            452,
+            82
+          ],
+          "bounds": [
+            452,
+            82,
+            452,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            453,
+            82
+          ],
+          "bounds": [
+            453,
+            82,
+            453,
+            82
+          ],
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/spr_portrait_celine_autumn_embarrassed.png",
+      "source_sha256": "a755edd715dfd35f70ef44be3dc23854cee452e763b447e0a84fb393f2217cd1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/spr_portrait_celine_autumn_shy_blush.png",
+      "source_sha256": "e5aad7d68dcde7e0be4c5e925c2c76c9c065fb27af44879499bc9215cc77d021",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Autumn/spr_portrait_celine_autumn_teary_special.png",
+      "source_sha256": "06c2c6a2c6ea4371855f1228b91280929f194421725f5d61d65c50ea3746d3f3",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Beach/spr_portrait_celine_beach_angry_blush.png",
+      "source_sha256": "4d3dcb9f79d370620021640c00d812cfe9831dfd7d832e10db93f9792ff9b6d4",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            153,
+            77
+          ],
+          "bounds": [
+            149,
+            77,
+            156,
+            79
+          ],
+          "pixels": 15
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            449,
+            77
+          ],
+          "bounds": [
+            445,
+            77,
+            452,
+            79
+          ],
+          "pixels": 15
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Beach/spr_portrait_celine_beach_bath_neutral.png",
+      "source_sha256": "bf1394060014d75b494f04c7fa7016538df32559117f972d2b20abcbb81705c8",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            151,
+            75
+          ],
+          "bounds": [
+            148,
+            75,
+            155,
+            77
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            447,
+            75
+          ],
+          "bounds": [
+            444,
+            75,
+            451,
+            77
+          ],
+          "pixels": 16
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Beach/spr_portrait_celine_beach_blush.png",
+      "source_sha256": "90c241f95d6aa795878c786c895ee00ef9bb5cc75f74f7a37173c63aa7675f54",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Beach/spr_portrait_celine_beach_blush_closed_eyes.png",
+      "source_sha256": "193ddfb7912430d9a7adf7f6413441b8a1a6d50692f5116d806e1096cea8d5c3",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Beach/spr_portrait_celine_beach_blush_special.png",
+      "source_sha256": "44d3b8ab721c784c70067d18040127902736bffb177c98fb395dc845d8baec7b",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            150,
+            79
+          ],
+          "bounds": [
+            149,
+            79,
+            155,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            446,
+            79
+          ],
+          "bounds": [
+            445,
+            79,
+            451,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            147,
+            80
+          ],
+          "bounds": [
+            146,
+            80,
+            149,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            148,
+            80
+          ],
+          "bounds": [
+            148,
+            80,
+            148,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            151,
+            80
+          ],
+          "bounds": [
+            151,
+            80,
+            151,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            154,
+            80
+          ],
+          "bounds": [
+            154,
+            80,
+            154,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            155,
+            80
+          ],
+          "bounds": [
+            155,
+            80,
+            155,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            443,
+            80
+          ],
+          "bounds": [
+            442,
+            80,
+            445,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            444,
+            80
+          ],
+          "bounds": [
+            444,
+            80,
+            444,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            447,
+            80
+          ],
+          "bounds": [
+            447,
+            80,
+            447,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            450,
+            80
+          ],
+          "bounds": [
+            450,
+            80,
+            450,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            451,
+            80
+          ],
+          "bounds": [
+            451,
+            80,
+            451,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            149,
+            81
+          ],
+          "bounds": [
+            149,
+            81,
+            149,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            152,
+            81
+          ],
+          "bounds": [
+            152,
+            81,
+            152,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            155,
+            81
+          ],
+          "bounds": [
+            155,
+            81,
+            155,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            156,
+            81
+          ],
+          "bounds": [
+            156,
+            81,
+            156,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            445,
+            81
+          ],
+          "bounds": [
+            445,
+            81,
+            445,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            448,
+            81
+          ],
+          "bounds": [
+            448,
+            81,
+            448,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            451,
+            81
+          ],
+          "bounds": [
+            451,
+            81,
+            451,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            452,
+            81
+          ],
+          "bounds": [
+            452,
+            81,
+            452,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            150,
+            82
+          ],
+          "bounds": [
+            150,
+            82,
+            150,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            153,
+            82
+          ],
+          "bounds": [
+            153,
+            82,
+            153,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            156,
+            82
+          ],
+          "bounds": [
+            156,
+            82,
+            156,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            157,
+            82
+          ],
+          "bounds": [
+            157,
+            82,
+            157,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            446,
+            82
+          ],
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            449,
+            82
+          ],
+          "bounds": [
+            449,
+            82,
+            449,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            452,
+            82
+          ],
+          "bounds": [
+            452,
+            82,
+            452,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            453,
+            82
+          ],
+          "bounds": [
+            453,
+            82,
+            453,
+            82
+          ],
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Beach/spr_portrait_celine_beach_embarrassed.png",
+      "source_sha256": "04d873ac05d77e2b3cbda11baafbacc906141e9e6f80aa7a637b07a34e2249a1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Beach/spr_portrait_celine_beach_shy_blush.png",
+      "source_sha256": "37b302831af40d911494c10b2fa0b91f0242c20270a8fb3c937c9862d7812362",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Beach/spr_portrait_celine_beach_teary_special.png",
+      "source_sha256": "19a1594dff337ecb39436d13bf67464a322c94bf95ec7a8d42053c56ef54cb62",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/Garden/spr_portrait_celine_spring_garden_angry_blush.png",
+      "source_sha256": "55617957bb2fb847aedc6e34c65c13886af5c6e0feb2a227bd13bcdeb830d30a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            153,
+            77
+          ],
+          "bounds": [
+            149,
+            77,
+            156,
+            79
+          ],
+          "pixels": 15
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            449,
+            77
+          ],
+          "bounds": [
+            445,
+            77,
+            452,
+            79
+          ],
+          "pixels": 15
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/Garden/spr_portrait_celine_spring_garden_blush.png",
+      "source_sha256": "fce39310fa27ef5d65ea64cab1e994b2e69175075a19d20f069daca052a94151",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/Garden/spr_portrait_celine_spring_garden_blush_closed_eyes.png",
+      "source_sha256": "0ac8e7b4219c31a1d5503bd1ebcf1e1ebdad7d774f319de6bc5f0d302aff251a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/Garden/spr_portrait_celine_spring_garden_blush_special.png",
+      "source_sha256": "50d97ba638f79db5faa4b13e6b4cb89e98d9f8ad525a343c8a2128ad591640a5",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            150,
+            79
+          ],
+          "bounds": [
+            149,
+            79,
+            155,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            446,
+            79
+          ],
+          "bounds": [
+            445,
+            79,
+            451,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            147,
+            80
+          ],
+          "bounds": [
+            146,
+            80,
+            149,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            148,
+            80
+          ],
+          "bounds": [
+            148,
+            80,
+            148,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            151,
+            80
+          ],
+          "bounds": [
+            151,
+            80,
+            151,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            154,
+            80
+          ],
+          "bounds": [
+            154,
+            80,
+            154,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            155,
+            80
+          ],
+          "bounds": [
+            155,
+            80,
+            155,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            443,
+            80
+          ],
+          "bounds": [
+            442,
+            80,
+            445,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            444,
+            80
+          ],
+          "bounds": [
+            444,
+            80,
+            444,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            447,
+            80
+          ],
+          "bounds": [
+            447,
+            80,
+            447,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            450,
+            80
+          ],
+          "bounds": [
+            450,
+            80,
+            450,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            451,
+            80
+          ],
+          "bounds": [
+            451,
+            80,
+            451,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            149,
+            81
+          ],
+          "bounds": [
+            149,
+            81,
+            149,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            152,
+            81
+          ],
+          "bounds": [
+            152,
+            81,
+            152,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            155,
+            81
+          ],
+          "bounds": [
+            155,
+            81,
+            155,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            156,
+            81
+          ],
+          "bounds": [
+            156,
+            81,
+            156,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            445,
+            81
+          ],
+          "bounds": [
+            445,
+            81,
+            445,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            448,
+            81
+          ],
+          "bounds": [
+            448,
+            81,
+            448,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            451,
+            81
+          ],
+          "bounds": [
+            451,
+            81,
+            451,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            452,
+            81
+          ],
+          "bounds": [
+            452,
+            81,
+            452,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            150,
+            82
+          ],
+          "bounds": [
+            150,
+            82,
+            150,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            153,
+            82
+          ],
+          "bounds": [
+            153,
+            82,
+            153,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            156,
+            82
+          ],
+          "bounds": [
+            156,
+            82,
+            156,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            157,
+            82
+          ],
+          "bounds": [
+            157,
+            82,
+            157,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            446,
+            82
+          ],
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            449,
+            82
+          ],
+          "bounds": [
+            449,
+            82,
+            449,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            452,
+            82
+          ],
+          "bounds": [
+            452,
+            82,
+            452,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            453,
+            82
+          ],
+          "bounds": [
+            453,
+            82,
+            453,
+            82
+          ],
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/Garden/spr_portrait_celine_spring_garden_embarrassed.png",
+      "source_sha256": "922453822754d8bd00f2b51a10836657b28e09b810f391a743f28585b3168596",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/Garden/spr_portrait_celine_spring_garden_shy_blush.png",
+      "source_sha256": "349dce35b3c72b70414593f03f9a30a318ab027d675b1e78a5ae618dc83edc9f",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/Garden/spr_portrait_celine_spring_garden_teary_special.png",
+      "source_sha256": "4cf634369d60e3ed6c62ccbfc3f9689316c093f2a09a1bb6db0d9aa8a85a9d50",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/spr_portrait_celine_spring_angry_blush.png",
+      "source_sha256": "606878a2e34c045b5ebd8455205b50381dadb1b0984c291cfb6bb35881439b00",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            153,
+            77
+          ],
+          "bounds": [
+            149,
+            77,
+            156,
+            79
+          ],
+          "pixels": 15
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            449,
+            77
+          ],
+          "bounds": [
+            445,
+            77,
+            452,
+            79
+          ],
+          "pixels": 15
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/spr_portrait_celine_spring_blush.png",
+      "source_sha256": "3577d90bfc5757b56f940270f6502b4395ac0f5234ed66ac61d0abe667503820",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/spr_portrait_celine_spring_blush_closed_eyes.png",
+      "source_sha256": "18a9467bef6bf95e0762d91abb0a662a2804e4851089bcad47f5cf1a244bbf52",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/spr_portrait_celine_spring_blush_special.png",
+      "source_sha256": "c10d496192864c7949aaac2eace12659e0939b27300984e0638bca55700eb45b",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            150,
+            79
+          ],
+          "bounds": [
+            149,
+            79,
+            155,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            446,
+            79
+          ],
+          "bounds": [
+            445,
+            79,
+            451,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            147,
+            80
+          ],
+          "bounds": [
+            146,
+            80,
+            149,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            148,
+            80
+          ],
+          "bounds": [
+            148,
+            80,
+            148,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            151,
+            80
+          ],
+          "bounds": [
+            151,
+            80,
+            151,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            154,
+            80
+          ],
+          "bounds": [
+            154,
+            80,
+            154,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            155,
+            80
+          ],
+          "bounds": [
+            155,
+            80,
+            155,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            443,
+            80
+          ],
+          "bounds": [
+            442,
+            80,
+            445,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            444,
+            80
+          ],
+          "bounds": [
+            444,
+            80,
+            444,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            447,
+            80
+          ],
+          "bounds": [
+            447,
+            80,
+            447,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            450,
+            80
+          ],
+          "bounds": [
+            450,
+            80,
+            450,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            451,
+            80
+          ],
+          "bounds": [
+            451,
+            80,
+            451,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            149,
+            81
+          ],
+          "bounds": [
+            149,
+            81,
+            149,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            152,
+            81
+          ],
+          "bounds": [
+            152,
+            81,
+            152,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            155,
+            81
+          ],
+          "bounds": [
+            155,
+            81,
+            155,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            156,
+            81
+          ],
+          "bounds": [
+            156,
+            81,
+            156,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            445,
+            81
+          ],
+          "bounds": [
+            445,
+            81,
+            445,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            448,
+            81
+          ],
+          "bounds": [
+            448,
+            81,
+            448,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            451,
+            81
+          ],
+          "bounds": [
+            451,
+            81,
+            451,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            452,
+            81
+          ],
+          "bounds": [
+            452,
+            81,
+            452,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            150,
+            82
+          ],
+          "bounds": [
+            150,
+            82,
+            150,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            153,
+            82
+          ],
+          "bounds": [
+            153,
+            82,
+            153,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            156,
+            82
+          ],
+          "bounds": [
+            156,
+            82,
+            156,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            157,
+            82
+          ],
+          "bounds": [
+            157,
+            82,
+            157,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            446,
+            82
+          ],
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            449,
+            82
+          ],
+          "bounds": [
+            449,
+            82,
+            449,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            452,
+            82
+          ],
+          "bounds": [
+            452,
+            82,
+            452,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            453,
+            82
+          ],
+          "bounds": [
+            453,
+            82,
+            453,
+            82
+          ],
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/spr_portrait_celine_spring_embarrassed.png",
+      "source_sha256": "2c7a71f20e6a2f56b11cf99ee57053a29763518c84113b87d14570d4c1b68b34",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/spr_portrait_celine_spring_shy_blush.png",
+      "source_sha256": "37e0988730f3b20e8b0ab2278cbed9b2601a957eb588abf6b7e3e4b1de096b65",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Spring/spr_portrait_celine_spring_teary_special.png",
+      "source_sha256": "6e47d446f4ef0fd239e09fd0525d57e2aecab098bb81726cbda11dbcb90b117f",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/Garden/spr_portrait_celine_summer_garden_angry_blush.png",
+      "source_sha256": "0dd64bc8ac60d440436b6effd2548b047d532b30e3495556971942bb918bf083",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            153,
+            77
+          ],
+          "bounds": [
+            149,
+            77,
+            156,
+            79
+          ],
+          "pixels": 15
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            449,
+            77
+          ],
+          "bounds": [
+            445,
+            77,
+            452,
+            79
+          ],
+          "pixels": 15
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/Garden/spr_portrait_celine_summer_garden_blush.png",
+      "source_sha256": "1bc622923b96f0c0525cf4a7eed4c6e310bc5f3cb2f29325e098eaf2a68b1421",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/Garden/spr_portrait_celine_summer_garden_blush_closed_eyes.png",
+      "source_sha256": "db41931c8b5c5d5d060836b11aee4c2fec062fdc4e06d852f548622ffba3f96d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/Garden/spr_portrait_celine_summer_garden_blush_special.png",
+      "source_sha256": "74e01ed516a6846607d49fde7b8f6a62a836a2d84bce37c8389a495616519d72",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            150,
+            79
+          ],
+          "bounds": [
+            149,
+            79,
+            155,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            446,
+            79
+          ],
+          "bounds": [
+            445,
+            79,
+            451,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            147,
+            80
+          ],
+          "bounds": [
+            146,
+            80,
+            149,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            148,
+            80
+          ],
+          "bounds": [
+            148,
+            80,
+            148,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            151,
+            80
+          ],
+          "bounds": [
+            151,
+            80,
+            151,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            154,
+            80
+          ],
+          "bounds": [
+            154,
+            80,
+            154,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            155,
+            80
+          ],
+          "bounds": [
+            155,
+            80,
+            155,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            443,
+            80
+          ],
+          "bounds": [
+            442,
+            80,
+            445,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            444,
+            80
+          ],
+          "bounds": [
+            444,
+            80,
+            444,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            447,
+            80
+          ],
+          "bounds": [
+            447,
+            80,
+            447,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            450,
+            80
+          ],
+          "bounds": [
+            450,
+            80,
+            450,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            451,
+            80
+          ],
+          "bounds": [
+            451,
+            80,
+            451,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            149,
+            81
+          ],
+          "bounds": [
+            149,
+            81,
+            149,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            152,
+            81
+          ],
+          "bounds": [
+            152,
+            81,
+            152,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            155,
+            81
+          ],
+          "bounds": [
+            155,
+            81,
+            155,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            156,
+            81
+          ],
+          "bounds": [
+            156,
+            81,
+            156,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            445,
+            81
+          ],
+          "bounds": [
+            445,
+            81,
+            445,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            448,
+            81
+          ],
+          "bounds": [
+            448,
+            81,
+            448,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            451,
+            81
+          ],
+          "bounds": [
+            451,
+            81,
+            451,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            452,
+            81
+          ],
+          "bounds": [
+            452,
+            81,
+            452,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            150,
+            82
+          ],
+          "bounds": [
+            150,
+            82,
+            150,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            153,
+            82
+          ],
+          "bounds": [
+            153,
+            82,
+            153,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            156,
+            82
+          ],
+          "bounds": [
+            156,
+            82,
+            156,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            157,
+            82
+          ],
+          "bounds": [
+            157,
+            82,
+            157,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            446,
+            82
+          ],
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            449,
+            82
+          ],
+          "bounds": [
+            449,
+            82,
+            449,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            452,
+            82
+          ],
+          "bounds": [
+            452,
+            82,
+            452,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            453,
+            82
+          ],
+          "bounds": [
+            453,
+            82,
+            453,
+            82
+          ],
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/Garden/spr_portrait_celine_summer_garden_embarrassed.png",
+      "source_sha256": "57c511770ce759e8cdd096f8296e0a47203fd50519c512549ebdaf8338af6979",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/Garden/spr_portrait_celine_summer_garden_shy_blush.png",
+      "source_sha256": "7942a61c1023c42cab1729f770da09bb036e07d521b7700c4113e7157927deaa",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/Garden/spr_portrait_celine_summer_garden_teary_special.png",
+      "source_sha256": "8f7e3e267850cd56a09fe2c64535ce7133ccc52a403038cdfcc43a6889b2e92e",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/spr_portrait_celine_summer_angry_blush.png",
+      "source_sha256": "56bbf72de46eb6b8049e775f4cb7cb02a2dbef459279014b629b92ec9a351eee",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            153,
+            77
+          ],
+          "bounds": [
+            149,
+            77,
+            156,
+            79
+          ],
+          "pixels": 15
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            449,
+            77
+          ],
+          "bounds": [
+            445,
+            77,
+            452,
+            79
+          ],
+          "pixels": 15
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/spr_portrait_celine_summer_blush.png",
+      "source_sha256": "573900c6e68d2dc133cf1623e55a33d11ca0d84a3c5c3e671021b952131e85b5",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/spr_portrait_celine_summer_blush_closed_eyes.png",
+      "source_sha256": "3230214791f8a0df1e17d46fb3f09da29ee6f9b48d26ff14ac2fc88ce984c885",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/spr_portrait_celine_summer_blush_special.png",
+      "source_sha256": "407674ceeeea41777aee1f0d987f9e36a58cddf3061ae9f7e63a2491b613135a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            150,
+            79
+          ],
+          "bounds": [
+            149,
+            79,
+            155,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            446,
+            79
+          ],
+          "bounds": [
+            445,
+            79,
+            451,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            147,
+            80
+          ],
+          "bounds": [
+            146,
+            80,
+            149,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            148,
+            80
+          ],
+          "bounds": [
+            148,
+            80,
+            148,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            151,
+            80
+          ],
+          "bounds": [
+            151,
+            80,
+            151,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            154,
+            80
+          ],
+          "bounds": [
+            154,
+            80,
+            154,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            155,
+            80
+          ],
+          "bounds": [
+            155,
+            80,
+            155,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            443,
+            80
+          ],
+          "bounds": [
+            442,
+            80,
+            445,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            444,
+            80
+          ],
+          "bounds": [
+            444,
+            80,
+            444,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            447,
+            80
+          ],
+          "bounds": [
+            447,
+            80,
+            447,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            450,
+            80
+          ],
+          "bounds": [
+            450,
+            80,
+            450,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            451,
+            80
+          ],
+          "bounds": [
+            451,
+            80,
+            451,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            149,
+            81
+          ],
+          "bounds": [
+            149,
+            81,
+            149,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            152,
+            81
+          ],
+          "bounds": [
+            152,
+            81,
+            152,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            155,
+            81
+          ],
+          "bounds": [
+            155,
+            81,
+            155,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            156,
+            81
+          ],
+          "bounds": [
+            156,
+            81,
+            156,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            445,
+            81
+          ],
+          "bounds": [
+            445,
+            81,
+            445,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            448,
+            81
+          ],
+          "bounds": [
+            448,
+            81,
+            448,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            451,
+            81
+          ],
+          "bounds": [
+            451,
+            81,
+            451,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            452,
+            81
+          ],
+          "bounds": [
+            452,
+            81,
+            452,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            150,
+            82
+          ],
+          "bounds": [
+            150,
+            82,
+            150,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            153,
+            82
+          ],
+          "bounds": [
+            153,
+            82,
+            153,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            156,
+            82
+          ],
+          "bounds": [
+            156,
+            82,
+            156,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            157,
+            82
+          ],
+          "bounds": [
+            157,
+            82,
+            157,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            446,
+            82
+          ],
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            449,
+            82
+          ],
+          "bounds": [
+            449,
+            82,
+            449,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            452,
+            82
+          ],
+          "bounds": [
+            452,
+            82,
+            452,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            453,
+            82
+          ],
+          "bounds": [
+            453,
+            82,
+            453,
+            82
+          ],
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/spr_portrait_celine_summer_embarrassed.png",
+      "source_sha256": "c57d699ec0d103b81d1dd139fef602266163e7c11a3648b4b6a1343ded644c76",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/spr_portrait_celine_summer_shy_blush.png",
+      "source_sha256": "316dc163c81b494f0c9c4fe9f9d5d7d6b663ed56e60c784f34dd2a586108da69",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Summer/spr_portrait_celine_summer_teary_special.png",
+      "source_sha256": "44439a197fa285550ff2e6f77c1561cea679bcf0ba5eee583dad30b000f2aea1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Wedding/spr_portrait_celine_wedding_embarrassed.png",
+      "source_sha256": "ddbc073ff0a9014b44e2b27fafe92655fe6ae8b464b13f118d0258f00ef072d1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Wedding/spr_portrait_celine_wedding_happy.png",
+      "source_sha256": "5dd6843a9e015806f48953a8e75c6977ca5e561a7370d433e63caf3ade9b1dcc",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 18
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 18
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Wedding/spr_portrait_celine_wedding_neutral.png",
+      "source_sha256": "ac503e280fbe00708d15cb435f282a8ce3b55061ef9505544ddd4e9a7f25ad98",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Wedding/spr_portrait_celine_wedding_shy_blush.png",
+      "source_sha256": "d61421c853a1ce91257fa7ee3bbb9f5012e5714d7a1ccf90d1d065e30fe1bf23",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Wedding/spr_portrait_celine_wedding_teary_special.png",
+      "source_sha256": "1b850db4dc97912d295b73f50bd4898f75f1ea44612e53cfad54f192194597be",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Wedding/spr_portrait_celine_wedding_think.png",
+      "source_sha256": "1c44ac3609280e8ad5c8e300f2f0fb22d29356f303bd65f334de52e469953b59",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_angry_blush.png",
+      "source_sha256": "c3eb1a627b9f642a845e5a9733ea000c04390289de8db7abf20925303714e09d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            153,
+            77
+          ],
+          "bounds": [
+            149,
+            77,
+            156,
+            79
+          ],
+          "pixels": 15
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            449,
+            77
+          ],
+          "bounds": [
+            445,
+            77,
+            452,
+            79
+          ],
+          "pixels": 15
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_blush.png",
+      "source_sha256": "311664fe078ca48eb18a9b32c536c4eddb88b7d7c36355a3bde632456123f9bf",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_blush_closed_eyes.png",
+      "source_sha256": "dafc13dea9a23f77c43eb2e863d1b3a9487c85b912c79c4a6f4f149101a46a12",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_blush_special.png",
+      "source_sha256": "74ffdfc61963691e5660151dde2f1d16b08c78c5b844a669af04f373070ef735",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            150,
+            79
+          ],
+          "bounds": [
+            149,
+            79,
+            155,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            446,
+            79
+          ],
+          "bounds": [
+            445,
+            79,
+            451,
+            82
+          ],
+          "pixels": 16
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            147,
+            80
+          ],
+          "bounds": [
+            146,
+            80,
+            149,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            148,
+            80
+          ],
+          "bounds": [
+            148,
+            80,
+            148,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            151,
+            80
+          ],
+          "bounds": [
+            151,
+            80,
+            151,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            154,
+            80
+          ],
+          "bounds": [
+            154,
+            80,
+            154,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            155,
+            80
+          ],
+          "bounds": [
+            155,
+            80,
+            155,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            443,
+            80
+          ],
+          "bounds": [
+            442,
+            80,
+            445,
+            82
+          ],
+          "pixels": 8
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            444,
+            80
+          ],
+          "bounds": [
+            444,
+            80,
+            444,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            447,
+            80
+          ],
+          "bounds": [
+            447,
+            80,
+            447,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            450,
+            80
+          ],
+          "bounds": [
+            450,
+            80,
+            450,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            451,
+            80
+          ],
+          "bounds": [
+            451,
+            80,
+            451,
+            80
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            149,
+            81
+          ],
+          "bounds": [
+            149,
+            81,
+            149,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            152,
+            81
+          ],
+          "bounds": [
+            152,
+            81,
+            152,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            155,
+            81
+          ],
+          "bounds": [
+            155,
+            81,
+            155,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            156,
+            81
+          ],
+          "bounds": [
+            156,
+            81,
+            156,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            445,
+            81
+          ],
+          "bounds": [
+            445,
+            81,
+            445,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            448,
+            81
+          ],
+          "bounds": [
+            448,
+            81,
+            448,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            451,
+            81
+          ],
+          "bounds": [
+            451,
+            81,
+            451,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            452,
+            81
+          ],
+          "bounds": [
+            452,
+            81,
+            452,
+            81
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            150,
+            82
+          ],
+          "bounds": [
+            150,
+            82,
+            150,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            153,
+            82
+          ],
+          "bounds": [
+            153,
+            82,
+            153,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            156,
+            82
+          ],
+          "bounds": [
+            156,
+            82,
+            156,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            157,
+            82
+          ],
+          "bounds": [
+            157,
+            82,
+            157,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            446,
+            82
+          ],
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            449,
+            82
+          ],
+          "bounds": [
+            449,
+            82,
+            449,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#E6687A",
+          "seed": [
+            452,
+            82
+          ],
+          "bounds": [
+            452,
+            82,
+            452,
+            82
+          ],
+          "pixels": 1
+        },
+        {
+          "color": "#FCB0B6",
+          "seed": [
+            453,
+            82
+          ],
+          "bounds": [
+            453,
+            82,
+            453,
+            82
+          ],
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_embarrassed.png",
+      "source_sha256": "49e185cdbd112b4043df5d6a67be5687549f10a39b90437140f9a3559ddbd005",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_shy_blush.png",
+      "source_sha256": "16a3ac69e6de8031775318e3839ccfbe02239ba2103198b2308585eae8c9eec3",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            156,
+            78
+          ],
+          "pixels": 17
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            452,
+            78
+          ],
+          "pixels": 17
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Celine/Portraits/Winter/spr_portrait_celine_winter_teary_special.png",
+      "source_sha256": "96a3699f29d036b300c96e5c1b60c8fc8e866b9aea5229ce92ca96b0308982e7",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            152,
+            76
+          ],
+          "bounds": [
+            148,
+            76,
+            157,
+            78
+          ],
+          "pixels": 19
+        },
+        {
+          "color": "#F4AEAE",
+          "seed": [
+            448,
+            76
+          ],
+          "bounds": [
+            444,
+            76,
+            453,
+            78
+          ],
+          "pixels": 19
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#445F83",
+        "#445F83",
+        "#445F83",
+        "#A6C0E8",
+        "#ABC6EE",
+        "#B3D0F9",
+        "#445F83"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#6E4922",
+        "#6E4922",
+        "#6E4922",
+        "#6E4922",
+        "#F1B985",
+        "#F6BF8B",
+        "#FEC996",
+        "#6E4922"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#491F1B",
+        "#491F1B",
+        "#491F1B",
+        "#491F1B",
+        "#B9736B",
+        "#BE7971",
+        "#C6837C",
+        "#491F1B"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#624A48",
+        "#624A48",
+        "#624A48",
+        "#624A48",
+        "#CAB6B9",
+        "#CFBCBF",
+        "#D7C6CA",
+        "#624A48"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    },
+    {
+      "id": "player_04",
+      "label": "Light peach (Player 04)",
+      "colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF",
+        "#89452DFF",
+        "#89452DFF",
+        "#89452DFF",
+        "#FFDED0FF",
+        "#FFE4D6FF",
+        "#FFEEE1FF",
+        "#89452DFF",
+        "#EAA092FF",
+        "#D89387FF"
+      ],
+      "profile": "../profiles/terithia-native-tone-face.json"
+    },
+    {
+      "id": "npc_march",
+      "label": "Light golden (March)",
+      "colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF",
+        "#CC8155FF",
+        "#CC8155FF",
+        "#CC8155FF",
+        "#F7E4B9FF",
+        "#FCEABFFF",
+        "#FFF4CAFF",
+        "#CC8155FF",
+        "#DCA07BFF",
+        "#CA9370FF"
+      ],
+      "profile": "../profiles/terithia-native-tone-face.json"
+    },
+    {
+      "id": "npc_wiscar",
+      "label": "Warm peach (Wiscar)",
+      "colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF",
+        "#9F5544FF",
+        "#9F5544FF",
+        "#9F5544FF",
+        "#ECA88FFF",
+        "#F1AE95FF",
+        "#F9B8A0FF",
+        "#9F5544FF",
+        "#C98476FF",
+        "#B7776BFF"
+      ],
+      "profile": "../profiles/terithia-native-tone-face.json"
+    },
+    {
+      "id": "player_16",
+      "label": "Warm brown (Player 16)",
+      "colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF",
+        "#452019FF",
+        "#452019FF",
+        "#452019FF",
+        "#E78C6FFF",
+        "#EC9275FF",
+        "#F49C80FF",
+        "#452019FF",
+        "#B85F55FF",
+        "#A6524AFF"
+      ],
+      "profile": "../profiles/terithia-native-tone-face.json"
+    },
+    {
+      "id": "player_22",
+      "label": "Deep brown (Player 22)",
+      "colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF",
+        "#321111FF",
+        "#321111FF",
+        "#321111FF",
+        "#97464CFF",
+        "#9C4C52FF",
+        "#A4565DFF",
+        "#321111FF",
+        "#A35353FF",
+        "#914648FF"
+      ],
+      "profile": "../profiles/terithia-native-tone-face.json"
+    },
+    {
+      "id": "player_35",
+      "label": "Very deep (Player 35)",
+      "colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF",
+        "#190705FF",
+        "#190705FF",
+        "#190705FF",
+        "#531E30FF",
+        "#582436FF",
+        "#602E41FF",
+        "#190705FF",
+        "#84434DFF",
+        "#723642FF"
+      ],
+      "profile": "../profiles/terithia-native-tone-face.json"
+    }
+  ],
+  "profile": "../profiles/terithia-world-trial.json"
+}

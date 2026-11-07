@@ -12,10 +12,21 @@ The [finish plan](plans/finish.md) defines batches, dependencies and acceptance.
 
 ## Current position
 
-The original investigation/proof of concept is complete. The Rust pipeline,
-per-character runtime and reversible CLI installation are implemented. The
-planned content authoring is complete. Displayed artwork is accepted; release verification remains. See the dated [assessment](development/project-status.md) for evidence
-and limits; raw asset coverage is not a measure of remaining effort.
+The original investigation and finish-plan authoring are complete. Original
+artwork and displayed live controls/basic gameplay have recorded acceptance,
+including the qualifications in their owning records. Release verification and
+final release gates remain.
+
+The approved native-tone expansion adds six source families across all 36
+characters. Expansion and the complete portrait corrections pass integrated
+checks. The latest [Holt edge comparison](development/holt-moustache-edge-integration.md)
+received "much better" feedback with no further defect reported. Record this as
+qualified positive feedback on the displayed revision, with inspection depth
+unspecified. The user authorized this checkpoint commit; no reported
+portrait defect remains open. Broader approximate-coverage assessment and the
+remaining release gates stay separate. The
+[native-tone plan](plans/native-tone-coverage.md) owns scope and next steps;
+original approvals and their limits remain recorded.
 
 | Area | Status |
 | --- | --- |
@@ -23,11 +34,12 @@ and limits; raw asset coverage is not a measure of remaining effort.
 | Selected portrait inventory | All 2,201 strips for 36 characters included; some intentionally unchanged |
 | Selected world inventory | All 4,111 recolorable strips included; remaining 30 shadows and 18 spectral strips audited unchanged |
 | Complete world coverage | All 36 recolorable inventories authored and validated |
-| Art acceptance | All planned displayed artwork accepted, including qualified first/fourth-batch acceptance; recorded inspection and glasses/scar qualifications preserved |
+| Art acceptance | Original approvals and qualified Celine/roster/Adeline/Holt feedback recorded; no current reported portrait defect; broader coverage assessment remains |
 | Content-complete alpha | Reached on 2026-11-06; live-game acceptance remains separate |
 | Release controls | Live title/journal keyboard, mouse, virtual-gamepad and persistence checks pass; displayed review has qualified user acceptance; physical-controller acceptance remains |
 | Integration confidence | Final package passes install/remove and basic rendered dialogue/movement/room/day/save/load checks; displayed review accepted with qualifications; broader live acceptance remains |
 | Linux packaging | Installable pinned-Nix candidate built and checked from standalone source; not published |
+| Palette breadth | Six sourced additions integrated and verified across all 36 characters; checkpoint commit authorized; broader approximate-coverage assessment remains |
 
 ## Approved finish line
 
@@ -40,6 +52,12 @@ installation path and verified removal. New users start on Vanilla; remembering
 choices is opt-in. The first supported installation route uses the pinned Nix
 environment. This scope was approved on 2026-11-05.
 
+On 2026-11-06 the user requested planning broader palette coverage next. The
+[native-tone expansion plan](plans/native-tone-coverage.md) proposes representative
+NPC and creator tones across the existing roster, using the accepted masks.
+The user approved implementation with "let's do it" after reviewing that plan.
+This extends the original five-choice scope; new artwork still needs acceptance.
+
 Use two milestones: **content-complete alpha**, then **usable Linux release**.
 Content authoring and menu work proceed independently; their acceptance gates remain separate.
 The content-complete alpha is reached. The usable Linux release still requires
@@ -47,7 +65,8 @@ its live checks and remaining release gates.
 
 Windows/macOS support, a graphical installer, Workshop publishing, arbitrary new
 palette packs, new characters, and compatibility with every other mod are later
-proposals. They do not expand this finish line. Existing supported-mod behavior
+proposals. The bounded native-tone expansion above is approved; other proposals do not
+expand this finish line. Existing supported-mod behavior
 and known conflicts still need regression checks and clear documentation.
 
 ## Priority and dependencies
@@ -57,6 +76,12 @@ accepted as displayed, including qualified first/fourth-batch approval. Earlier
 glasses/scar qualifications and unspecified inspection depth remain recorded.
 P5 title/journal menu, keyboard/mouse/virtual-gamepad input, saving/reset/restart and failure feedback pass live after three bounded initialization/notification fixes. Basic natural gameplay and actual save/load also pass; the displayed live review has qualified user acceptance. Physical-controller and broader seasonal/action acceptance remain. See the [live verification record](development/live-release-verification-2026-11-06.md).
 
+The representative native-tone implementation and its reported portrait
+corrections form the authorized checkpoint commit before final release preparation. The [coverage assessment](development/palette-tone-coverage.md) owns
+the evidence; the [new plan](plans/native-tone-coverage.md) defines selection,
+pilot, full-roster integration and one consolidated review. Existing approvals
+and the reached original content-complete alpha remain valid.
+
 | Order | Outcome | Dependency / state | Local GPU |
 | --- | --- | --- | --- |
 | P0 | Inventory/test repair and measured pilot validated | Complete; Louis artwork accepted with recorded qualifications; see [pilot evidence](development/louis-world.md) and [inventory](development/finish-inventory.md) | No |
@@ -65,6 +90,7 @@ P5 title/journal menu, keyboard/mouse/virtual-gamepad input, saving/reset/restar
 | P3 | Finish Errol, Hemlock, Luc, Maple and Terithia | All strips authored, validated and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
 | P4 | Finish Caldarus and Seridia, including an explicit special-form audit | Complete and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
 | P5 | Add one selection menu and opt-in remembered choices using the existing runtime | Native menu/storage/input checks pass and displayed live review accepted with qualifications; physical-controller acceptance remains | CPU development; GPU for live verification |
+| Native-tone checkpoint | Broaden selectable tones across the existing roster | Implementation and reported corrections verified; checkpoint commit authorized; qualified displayed feedback and broader coverage assessment recorded separately in the [native-tone plan](plans/native-tone-coverage.md) | No for checkpoint; yes for further live rendering |
 | P6 | Validate complete artwork, package, installation/removal and natural gameplay; prepare supported Linux release | Artwork and displayed basic live review accepted; broader live matrix and final release gates remain | Yes for gameplay/rendering; CPU for other checks |
 
 The remaining 30 strips outside P1–P4 are Hayden shadows (29, already audited)
@@ -134,13 +160,15 @@ See the [batch record](development/eighth-finish-batch-2026-11-06.md). No local 
 was required. All planned world authoring is complete; intentional no-change
 assets and earlier approval limits remain recorded separately.
 
-The remaining work is live verification and final release preparation:
+The next planned batch and remaining release work are:
 
-1. Complete remaining physical-controller and broader seasonal/outfit/action
+1. Assess broader approximate native-tone coverage separately from the qualified
+   displayed feedback recorded with this checkpoint and its frozen review packet.
+2. Complete remaining physical-controller and broader seasonal/outfit/action
    verification, recording any accepted limits. Further live work requires
    checked GPU availability and a reservation. Prepare release notes from the
    exercised matrix and resolve concrete blockers.
-2. Finalize the tested candidate and supported-platform/compatibility notes;
+3. Finalize the tested candidate and supported-platform/compatibility notes;
    resolve the owner's licensing choice before any public distribution.
    Publishing remains separate.
 
@@ -165,6 +193,11 @@ See the [live verification record](development/live-release-verification-2026-11
 ## Open decisions and limits
 
 Release scope, menu/remembering behavior and parallel authoring are approved.
+Broader native-tone implementation is approved. Six additions are integrated across all 36 characters; full strict package checks
+and expanded native checks pass. Qualified positive displayed-art feedback is
+recorded through the final Holt correction; full inspection/approximate-coverage
+approval is not inferred. The bounded preset ceiling rises to ten generated variants plus Vanilla. The existing preset
+limit is a starting budget, not evidence of approximate tone coverage.
 Rendered title/journal UI, actual OS keyboard/mouse and SDL virtual-gamepad events,
 persistence/failures and basic game save/load pass; the displayed review has
 qualified user acceptance. Physical controller and broader
@@ -172,8 +205,10 @@ seasonal/action playthrough acceptance remain. No new runtime image loader or Ru
 is planned.
 
 The provisional 12–24 combined author-hour content allowance is now historical;
-all planned authoring is finished. Character records retain measured work and
-verification evidence. Remaining effort depends on live GPU checks and final
+all original-scope authoring is finished. Character records retain measured work and
+verification evidence. The active tone expansion has measured generation/package costs in its
+[coverage record](development/palette-tone-coverage.md).
+Remaining release effort also depends on live GPU checks and final
 release preparation; the CPU Linux candidate is prepared. No delivery date is established.
 See [pilot measurements](development/louis-world.md) for the original estimate.
 

@@ -1,0 +1,122 @@
+{
+  "character": "wynne",
+  "status": "audited-no-change",
+  "base_profile": "palettes/profiles/wynne-world-trial.json",
+  "base_profile_sha256": "460c54b37a50178affcbaf10f51d1d3fea166c3649caf878009604c9d8fd72f8",
+  "profile": "palettes/profiles/wynne-world-trial.json",
+  "additional_source_colors": [],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#FFC192FF",
+      "#FFE2C7FF",
+      "#FFEBD3FF",
+      "#FFFFE4FF",
+      "#D37659FF",
+      "#EDAF85FF",
+      "#D5815FFF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#F8CB85FF",
+      "#F8E8B0FF",
+      "#FFF1BCFF",
+      "#FFFFCDFF",
+      "#DA9E60FF",
+      "#E3B978FF",
+      "#DCA966FF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#EB916DFF",
+      "#EDAC86FF",
+      "#F6B592FF",
+      "#FFCAA3FF",
+      "#C2654EFF",
+      "#D67F60FF",
+      "#C47054FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#C06743FF",
+      "#E89066FF",
+      "#F19972FF",
+      "#FFAE83FF",
+      "#7B2D26FF",
+      "#AB5536FF",
+      "#7D382CFF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#7F392FFF",
+      "#984A43FF",
+      "#A1534FFF",
+      "#B36860FF",
+      "#450F13FF",
+      "#6A2722FF",
+      "#471A19FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#471E1BFF",
+      "#542227FF",
+      "#5D2B33FF",
+      "#6F4044FF",
+      "#220004FF",
+      "#320C0EFF",
+      "#24090AFF"
+    ]
+  },
+  "counts": {
+    "selected_strips": 19,
+    "portrait_strips": 8,
+    "world_strips": 11,
+    "audited_native_portrait_frames": 16,
+    "mouth_unique_crops_inspected": 6,
+    "affected_strips": 0,
+    "components": 0,
+    "selected_pixels": 0
+  },
+  "regions": [],
+  "landmarks": [],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_embarrassed.png",
+      "point": [
+        454,
+        78
+      ],
+      "source": "#925051",
+      "role": "lipstick"
+    },
+    {
+      "asset": "assets/animations/NPCs/Wynne/Portraits/spr_portrait_wynne_spring_embarrassed.png",
+      "point": [
+        443,
+        67
+      ],
+      "source": "#7F5D83",
+      "role": "eye_makeup"
+    }
+  ],
+  "audit": "No separate cheek blush appears in the selected expressions. Violet eye makeup and plum lipstick are source cosmetics; surrounding facial skin already scales.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4"
+}

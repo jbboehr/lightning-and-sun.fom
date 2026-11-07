@@ -1,0 +1,4530 @@
+{
+  "character": "seridia",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/seridia-world-trial.json",
+  "base_profile_sha256": "3ba9ba4ea10e91c8e8f0032717999bc25c6edebcf17e72cb558719f1989b5b4b",
+  "profile": "palettes/profiles/seridia-native-tone-face.json",
+  "additional_source_colors": [
+    "#C79A97",
+    "#E6687A",
+    "#F09DA3"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#EEC8ACFF",
+      "#ECC6AAFF",
+      "#F7946AFF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#D5815FFF",
+      "#FBD7BCFF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#EEA480FF",
+      "#FEDAC3FF",
+      "#89452DFF",
+      "#944B3BFF",
+      "#A2524FFF",
+      "#AC585CFF",
+      "#AF5960FF",
+      "#B35C66FF",
+      "#D5815FFF",
+      "#DC836AFF",
+      "#DB836AFF",
+      "#E58679FF",
+      "#E48579FF",
+      "#EC8884FF",
+      "#ED8987FF",
+      "#EB8783FF",
+      "#F08A8BFF",
+      "#EC8886FF",
+      "#EF898BFF",
+      "#F5B392FF",
+      "#FBB39FFF",
+      "#FFB3A7FF",
+      "#FFB3AAFF",
+      "#FFB3AEFF",
+      "#FDD5C3FF",
+      "#FFD2CCFF",
+      "#FFCFD2FF",
+      "#FFCFD4FF",
+      "#FFCED7FF",
+      "#D5815FFF",
+      "#F0B389FF",
+      "#FBD7BCFF",
+      "#EAA092FF",
+      "#D05E67FF",
+      "#F1AAA2FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#E1CE95FF",
+      "#DFCC93FF",
+      "#ED9E5DFF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#DCA966FF",
+      "#EEDDA5FF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#E4AE73FF",
+      "#F1E0ACFF",
+      "#CC8155FF",
+      "#D78763FF",
+      "#E58E77FF",
+      "#EF9484FF",
+      "#F29588FF",
+      "#F6988EFF",
+      "#DCA966FF",
+      "#E3AB71FF",
+      "#E2AB71FF",
+      "#ECAE80FF",
+      "#EBAD80FF",
+      "#F3B08BFF",
+      "#F4B18EFF",
+      "#F2AF8AFF",
+      "#F7B292FF",
+      "#F3B08DFF",
+      "#F6B192FF",
+      "#EBBD85FF",
+      "#F1BD92FF",
+      "#F6BD9AFF",
+      "#F7BD9DFF",
+      "#F9BDA1FF",
+      "#F0DBACFF",
+      "#F4D8B5FF",
+      "#F7D5BBFF",
+      "#F8D5BDFF",
+      "#F9D4C0FF",
+      "#DCA966FF",
+      "#E6BD7CFF",
+      "#EEDDA5FF",
+      "#DCA07BFF",
+      "#BE6258FF",
+      "#E6AA8AFF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#D6926BFF",
+      "#D49069FF",
+      "#E06445FF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#D98364FF",
+      "#C47054FF",
+      "#C47054FF",
+      "#E3A17BFF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#D7745BFF",
+      "#E6A482FF",
+      "#9F5544FF",
+      "#AA5B52FF",
+      "#B86266FF",
+      "#C26873FF",
+      "#C56977FF",
+      "#C96C7DFF",
+      "#C47054FF",
+      "#CB725FFF",
+      "#CA725FFF",
+      "#D4756EFF",
+      "#D3746EFF",
+      "#DB7779FF",
+      "#DC787CFF",
+      "#DA7678FF",
+      "#DF7980FF",
+      "#DB777BFF",
+      "#DE7880FF",
+      "#DE836DFF",
+      "#E4837AFF",
+      "#E98382FF",
+      "#EA8385FF",
+      "#EC8389FF",
+      "#E59F82FF",
+      "#E99C8BFF",
+      "#EC9991FF",
+      "#ED9993FF",
+      "#EE9896FF",
+      "#C47054FF",
+      "#D98364FF",
+      "#E3A17BFF",
+      "#C98476FF",
+      "#B9575FFF",
+      "#D48E84FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#D1764BFF",
+      "#CF7449FF",
+      "#B53A1BFF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#452019FF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#7D382CFF",
+      "#DE855BFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#AC4A31FF",
+      "#E18862FF",
+      "#452019FF",
+      "#502627FF",
+      "#5E2D3BFF",
+      "#683348FF",
+      "#6B344CFF",
+      "#6F3752FF",
+      "#7D382CFF",
+      "#843A37FF",
+      "#833A37FF",
+      "#8D3D46FF",
+      "#8C3C46FF",
+      "#943F51FF",
+      "#954054FF",
+      "#933E50FF",
+      "#984158FF",
+      "#943F53FF",
+      "#974058FF",
+      "#B35943FF",
+      "#B95950FF",
+      "#BE5958FF",
+      "#BF595BFF",
+      "#C1595FFF",
+      "#E08362FF",
+      "#E4806BFF",
+      "#E77D71FF",
+      "#E87D73FF",
+      "#E97C76FF",
+      "#7D382CFF",
+      "#AE593AFF",
+      "#DE855BFF",
+      "#B85F55FF",
+      "#A2474AFF",
+      "#C66E65FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#813028FF",
+      "#7F2E26FF",
+      "#740C07FF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#321111FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#471A19FF",
+      "#8E3F38FF",
+      "#471A19FF",
+      "#321111FF",
+      "#6B1C1DFF",
+      "#91423FFF",
+      "#321111FF",
+      "#3D171FFF",
+      "#4B1E33FF",
+      "#552440FF",
+      "#582544FF",
+      "#5C284AFF",
+      "#471A19FF",
+      "#4E1C24FF",
+      "#4D1C24FF",
+      "#571F33FF",
+      "#561E33FF",
+      "#5E213EFF",
+      "#5F2241FF",
+      "#5D203DFF",
+      "#622345FF",
+      "#5E2140FF",
+      "#612245FF",
+      "#722B2FFF",
+      "#782B3CFF",
+      "#7D2B44FF",
+      "#7E2B47FF",
+      "#802B4BFF",
+      "#903D3FFF",
+      "#943A48FF",
+      "#97374EFF",
+      "#983750FF",
+      "#993653FF",
+      "#471A19FF",
+      "#6D2B26FF",
+      "#8E3F38FF",
+      "#A35353FF",
+      "#84363FFF",
+      "#B26363FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#3D080CFF",
+      "#3B060AFF",
+      "#3C0000FF",
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#190705FF",
+      "#351012FF",
+      "#24090AFF",
+      "#24090AFF",
+      "#4A171CFF",
+      "#24090AFF",
+      "#190705FF",
+      "#330109FF",
+      "#4D1A23FF",
+      "#190705FF",
+      "#240D13FF",
+      "#321427FF",
+      "#3C1A34FF",
+      "#3F1B38FF",
+      "#431E3EFF",
+      "#24090AFF",
+      "#2B0B15FF",
+      "#2A0B15FF",
+      "#340E24FF",
+      "#330D24FF",
+      "#3B102FFF",
+      "#3C1132FF",
+      "#3A0F2EFF",
+      "#3F1236FF",
+      "#3B1031FF",
+      "#3E1136FF",
+      "#3A101BFF",
+      "#401028FF",
+      "#451030FF",
+      "#461033FF",
+      "#481037FF",
+      "#4C1523FF",
+      "#50122CFF",
+      "#530F32FF",
+      "#540F34FF",
+      "#550E37FF",
+      "#24090AFF",
+      "#351012FF",
+      "#4A171CFF",
+      "#84434DFF",
+      "#6E2F3DFF",
+      "#96535FFF"
+    ]
+  },
+  "counts": {
+    "selected_strips": 352,
+    "portrait_strips": 164,
+    "world_strips": 188,
+    "audited_native_portrait_frames": 328,
+    "mouth_unique_crops_inspected": 41,
+    "affected_strips": 56,
+    "components": 224,
+    "selected_pixels": 2027
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Autumn/spr_portrait_seridia_autumn_blush.png",
+      "source_sha256": "43400cb1b6376576b3ae27bd446c3614191b9b5a7cea458f300a48fbe5ac71e9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Autumn/spr_portrait_seridia_autumn_blush_think.png",
+      "source_sha256": "20703c84981a9895791aea9fe699c31d672e7835287a6032aa0a9e040f403a42",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Autumn/spr_portrait_seridia_autumn_closed_eyes_blush.png",
+      "source_sha256": "0b8a6e68afc72191be3fed08da6f558ad2b026f0fb513fde4376c7f40e426b9f",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            162,
+            62,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            458,
+            62,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Autumn/spr_portrait_seridia_autumn_embarrassed.png",
+      "source_sha256": "d1357fb25a77b83385a175ed7e90583dfdd334d7f9135b9a670b3f06d2c8e338",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Autumn/spr_portrait_seridia_autumn_happy_blush.png",
+      "source_sha256": "76c7bb30367c05d6284c513080c2f031dbeba59fc0b4d0a3ddbb0ba38edac369",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            162,
+            62,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            458,
+            62,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Autumn/spr_portrait_seridia_autumn_sinister_blush.png",
+      "source_sha256": "8c65e3d0a264205f85039c65f9f201763a0ea82f941566e1eb45cc17a207fafa",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Autumn/spr_portrait_seridia_autumn_surprise_blush.png",
+      "source_sha256": "3c897d79050cc4a90f8d280619f031aa67b50ab1cdcf974f58b11d35ca54a9be",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Autumn/spr_portrait_seridia_autumn_unsure_blush.png",
+      "source_sha256": "faf9d738764d5d7419c0ffac0b1ec5446eac0a5af45526cfec695eb8ee776e49",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Beach/spr_portrait_seridia_beach_bath_neutral.png",
+      "source_sha256": "b57dae1b057cd6bc88f48f839228006ca66e90071a6c6352e5e7141b3f1a7e60",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Beach/spr_portrait_seridia_beach_blush.png",
+      "source_sha256": "9e7a7502b8aa8242925c05326b22b6e480cbf5f701ae07d726807b2b6fc0a9c2",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Beach/spr_portrait_seridia_beach_blush_think.png",
+      "source_sha256": "df0e4622b498071d00f965458242fcbdb4609ef0c9dc8add4b77d005f26adbc3",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Beach/spr_portrait_seridia_beach_closed_eyes_blush.png",
+      "source_sha256": "7c76c9b3c0f0b1d39b672da98d11c88a3e0a4fc90f8f83fa1e0f7383c0c29e0f",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            162,
+            62,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            458,
+            62,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Beach/spr_portrait_seridia_beach_embarrassed.png",
+      "source_sha256": "f92ac79b1e479f9002d538881758c3cc8a90822b3be1342f4eb529839ba90e94",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Beach/spr_portrait_seridia_beach_happy_blush.png",
+      "source_sha256": "1061be292e7f3bf42b684e7ebee83c519335c2ba1d88641d8f609f2a3da1d64b",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            162,
+            62,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            458,
+            62,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Beach/spr_portrait_seridia_beach_sinister_blush.png",
+      "source_sha256": "c38c046638e292e34cd7992e56bacf36c6d6511408a3c5f3615aa0da0bcf6b71",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Beach/spr_portrait_seridia_beach_surprise_blush.png",
+      "source_sha256": "f156a75626db59febdd87d4353b9dfe272de963d9295c24897f8772219656692",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Beach/spr_portrait_seridia_beach_unsure_blush.png",
+      "source_sha256": "c97df6303c5210f2090397d1fc913d18e3ac494b36e6a487b0389db6730c619a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_blush.png",
+      "source_sha256": "e416eb01e16e92900bbf9e66fa645668d297a22cb6aa0c4c5d1f024b92ec83cd",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_blush_think.png",
+      "source_sha256": "ce386cdeffab7a83ad89a5684a61e6f13de15745db5354b286ff881cdbf5c55d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_closed_eyes_blush.png",
+      "source_sha256": "c19040bd11fe1b9b3ea5810748b1dbf9481724c31af1beac08a4701ff9772f26",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            162,
+            62,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            458,
+            62,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_embarrassed.png",
+      "source_sha256": "3c05dc4e73d3f1f936632a7fb4d0a3daf8d78663094dce3a201bd24f8a4268a6",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_happy_blush.png",
+      "source_sha256": "af09a6a4e4cb877fe8d1f56e06d7813e6678d7078d96fcf0a23cb768553a7d49",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            162,
+            62,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            458,
+            62,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_sinister_blush.png",
+      "source_sha256": "beb876497f58865c787abd47285ab82c5866188a056645da526e77a3e2cfe9f5",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_surprise_blush.png",
+      "source_sha256": "50e1f87518da9d912a66757cc00513711ff87e407f4908123de4fe24bc13f5e5",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_unsure_blush.png",
+      "source_sha256": "30eaadce039e69a67dae61fd49fc4ac9c8f40422ed37ed277dfa215639bf4c34",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Summer/spr_portrait_seridia_summer_blush.png",
+      "source_sha256": "6a246c34e0d4075390b3e7b58f20c69f55268f4da71b9df94a02a5db8734a9da",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Summer/spr_portrait_seridia_summer_blush_think.png",
+      "source_sha256": "fb6653b3d147d6ea35474eabaca64a4d4988f18b62e38c96a3820930d5219a0a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Summer/spr_portrait_seridia_summer_closed_eyes_blush.png",
+      "source_sha256": "1179577e4e4493cced9616b3bbbe6dbb7164d5249e84d98f069cbc7432b5e8c3",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            162,
+            62,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            458,
+            62,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Summer/spr_portrait_seridia_summer_embarrassed.png",
+      "source_sha256": "782b2269d0179c8b3db09397bdd242ee04b5b1d718d31ce8c2867db9edb86718",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Summer/spr_portrait_seridia_summer_happy_blush.png",
+      "source_sha256": "50a01a76217cd5a152e9483dc6ce1965dea809400082d08ce780eb1a86922023",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            162,
+            62,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            458,
+            62,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Summer/spr_portrait_seridia_summer_sinister_blush.png",
+      "source_sha256": "a1c9a2c665a78d00df579cd0afb9445e5ab4edb3b67f8216883e8cfc0033ff16",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Summer/spr_portrait_seridia_summer_surprise_blush.png",
+      "source_sha256": "660b55e9c5c77a31182451b58f97bd661d4177341453fb0321c2887312314777",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Summer/spr_portrait_seridia_summer_unsure_blush.png",
+      "source_sha256": "500c4900434b8bdaa6077687f4ffa0d319cdb349bd41ca241c0563914b39b910",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Wedding/spr_portrait_seridia_wedding_closed_eyes_blush.png",
+      "source_sha256": "05f15a587b04c87136a723941502c37edd1aa44fa086bc21c2cd219c1a096ff2",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Wedding/spr_portrait_seridia_wedding_closed_eyes_smile.png",
+      "source_sha256": "400b4cf048e5e941a21d4b67c8132c68b930765c6b1948741db00644fe3384d7",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Wedding/spr_portrait_seridia_wedding_embarrassed.png",
+      "source_sha256": "66e17592e8eda030cdcf7e745482b5f16483cd1487600c41e8060ec49b5f43d2",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Wedding/spr_portrait_seridia_wedding_happy.png",
+      "source_sha256": "7a54d998d9095021583646e7c6853738dc9e9c2c3df0d561ae62038859091204",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Wedding/spr_portrait_seridia_wedding_neutral.png",
+      "source_sha256": "4b328c9863782401b8561acd229602822f65a12062f754ab4258db7b3f4abfd5",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Wedding/spr_portrait_seridia_wedding_sly.png",
+      "source_sha256": "e860b037fc7b2e890557b29213338ff4d935eaff61edf388da624203ff7f1fb4",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Wedding/spr_portrait_seridia_wedding_sly_think.png",
+      "source_sha256": "6756f82575c34a320dbe12dcf749adfc96770ec955e09e3ec6fbebc8485679f9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            64
+          ],
+          "color": "#C79A97",
+          "pixels": 3,
+          "bounds": [
+            162,
+            64,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            64
+          ],
+          "color": "#C79A97",
+          "pixels": 3,
+          "bounds": [
+            458,
+            64,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Wedding/spr_portrait_seridia_wedding_think.png",
+      "source_sha256": "e0af2d388adccad8aa16b12db5957af7db35912f942d076a854e5d8735368f2a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Winter/spr_portrait_seridia_winter_blush.png",
+      "source_sha256": "93a2b486a140a5a622dc1b4bac34743e786f033250985afac326ca05e3c5482c",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Winter/spr_portrait_seridia_winter_blush_think.png",
+      "source_sha256": "5f8e439678b496f5bdf26ef07c96563530bd5a71382e35f17f6e32dd3e41f888",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Winter/spr_portrait_seridia_winter_closed_eyes_blush.png",
+      "source_sha256": "e713cbacc1de30eabfcf6cc97c75ada4301c1c77b06e8bd5c05d4790c1b94e65",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            162,
+            62,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            458,
+            62,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Winter/spr_portrait_seridia_winter_embarrassed.png",
+      "source_sha256": "ca3a3424e244705a5cc7c0082e1ab28f650ba725f772fbec26ee3100ee900b72",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Winter/spr_portrait_seridia_winter_happy_blush.png",
+      "source_sha256": "1b59d3b1a14ab454d5f2f7b08f81c9bf256181da5910253822942337dbe3ec83",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            162,
+            62,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            62
+          ],
+          "color": "#C79A97",
+          "pixels": 5,
+          "bounds": [
+            458,
+            62,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Winter/spr_portrait_seridia_winter_sinister_blush.png",
+      "source_sha256": "3d4589a76e0a808e84e69ae6ad1d1867a20c8ee59af4acfbf8e6972385b29a6d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Winter/spr_portrait_seridia_winter_surprise_blush.png",
+      "source_sha256": "5f7b67800cbf1ee0576ab31f9664b0dcb3ab8cff35962eed5d7524b1961200f5",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Winter/spr_portrait_seridia_winter_unsure_blush.png",
+      "source_sha256": "ca0c1f07ac07acbf04f53a4fc720396c377a3c82418a937ae53f0dfbc86d4be5",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            155,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            152,
+            61,
+            159,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            451,
+            61
+          ],
+          "color": "#C79A97",
+          "pixels": 16,
+          "bounds": [
+            448,
+            61,
+            455,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            162,
+            63,
+            164,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C79A97",
+          "pixels": 4,
+          "bounds": [
+            458,
+            63,
+            460,
+            64
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_closed_eyes.png",
+      "source_sha256": "2465f61d3edaa3cfd1c02dad72030ebc00315374d0ca29f8581b27037b4ee0da",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            81
+          ],
+          "color": "#E6687A",
+          "pixels": 2,
+          "bounds": [
+            151,
+            81,
+            152,
+            81
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            151,
+            82
+          ],
+          "color": "#F09DA3",
+          "pixels": 3,
+          "bounds": [
+            151,
+            82,
+            153,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            447,
+            83,
+            447,
+            83
+          ],
+          "role": "outer_lip"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_eyes_shine.png",
+      "source_sha256": "8a6f31920bcdbc201096bf6dac7616707f6c20f89c8dd96f22b41f8705dee7d3",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            81
+          ],
+          "color": "#E6687A",
+          "pixels": 2,
+          "bounds": [
+            151,
+            81,
+            152,
+            81
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            151,
+            82
+          ],
+          "color": "#F09DA3",
+          "pixels": 3,
+          "bounds": [
+            151,
+            82,
+            153,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            447,
+            83,
+            447,
+            83
+          ],
+          "role": "outer_lip"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_happy.png",
+      "source_sha256": "a861c6f56f3b0f0dc857a7ea11036718064f0acb31c61b8bda6249dee46169cc",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            81
+          ],
+          "color": "#E6687A",
+          "pixels": 2,
+          "bounds": [
+            151,
+            81,
+            152,
+            81
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            151,
+            82
+          ],
+          "color": "#F09DA3",
+          "pixels": 3,
+          "bounds": [
+            151,
+            82,
+            153,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            447,
+            83,
+            447,
+            83
+          ],
+          "role": "outer_lip"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_hurt.png",
+      "source_sha256": "a49c724bd43fdaa669cd9888eb311bb5ea465e6584f78dc7ce135032aa0b91ef",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            81
+          ],
+          "color": "#E6687A",
+          "pixels": 2,
+          "bounds": [
+            151,
+            81,
+            152,
+            81
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            151,
+            82
+          ],
+          "color": "#F09DA3",
+          "pixels": 3,
+          "bounds": [
+            151,
+            82,
+            153,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            447,
+            83,
+            447,
+            83
+          ],
+          "role": "outer_lip"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_neutral.png",
+      "source_sha256": "fcaa1ab5a6489f8b34f6ed0eb1d8438c7412b9c933a4f37f763bbc493ecf80bd",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            81
+          ],
+          "color": "#E6687A",
+          "pixels": 2,
+          "bounds": [
+            151,
+            81,
+            152,
+            81
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            151,
+            82
+          ],
+          "color": "#F09DA3",
+          "pixels": 3,
+          "bounds": [
+            151,
+            82,
+            153,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            447,
+            83,
+            447,
+            83
+          ],
+          "role": "outer_lip"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_sad.png",
+      "source_sha256": "3c4f5af9d532d58024d2cc6be6098324d0462855d72326648af1144e04f9097c",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            81
+          ],
+          "color": "#E6687A",
+          "pixels": 2,
+          "bounds": [
+            151,
+            81,
+            152,
+            81
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            151,
+            82
+          ],
+          "color": "#F09DA3",
+          "pixels": 3,
+          "bounds": [
+            151,
+            82,
+            153,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            447,
+            83,
+            447,
+            83
+          ],
+          "role": "outer_lip"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_think.png",
+      "source_sha256": "b97b80a17b90fd74604197d62165880b256a8b892c3878007504efe1d2de8997",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            81
+          ],
+          "color": "#E6687A",
+          "pixels": 2,
+          "bounds": [
+            151,
+            81,
+            152,
+            81
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            151,
+            82
+          ],
+          "color": "#F09DA3",
+          "pixels": 3,
+          "bounds": [
+            151,
+            82,
+            153,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            446,
+            82
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            446,
+            82,
+            446,
+            82
+          ],
+          "role": "outer_lip"
+        },
+        {
+          "seed": [
+            447,
+            83
+          ],
+          "color": "#E6687A",
+          "pixels": 1,
+          "bounds": [
+            447,
+            83,
+            447,
+            83
+          ],
+          "role": "outer_lip"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Autumn/spr_portrait_seridia_autumn_blush.png",
+      "point": [
+        155,
+        61
+      ],
+      "source": "#C79A97",
+      "expected": {
+        "player_04": "#EAA092",
+        "npc_march": "#DCA07B",
+        "npc_wiscar": "#C98476",
+        "player_16": "#B85F55",
+        "player_22": "#A35353",
+        "player_35": "#84434D"
+      },
+      "role": "blush"
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_closed_eyes.png",
+      "point": [
+        151,
+        81
+      ],
+      "source": "#E6687A",
+      "expected": {
+        "player_04": "#D05E67",
+        "npc_march": "#BE6258",
+        "npc_wiscar": "#B9575F",
+        "player_16": "#A2474A",
+        "player_22": "#84363F",
+        "player_35": "#6E2F3D"
+      },
+      "role": "outer_lip"
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_closed_eyes.png",
+      "point": [
+        151,
+        82
+      ],
+      "source": "#F09DA3",
+      "expected": {
+        "player_04": "#F1AAA2",
+        "npc_march": "#E6AA8A",
+        "npc_wiscar": "#D48E84",
+        "player_16": "#C66E65",
+        "player_22": "#B26363",
+        "player_35": "#96535F"
+      },
+      "role": "outer_lip"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_closed_eyes_blush.png",
+      "point": [
+        441,
+        57
+      ],
+      "source": "#E7D5D5",
+      "role": "white_under_eye_marking"
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_closed_eyes_blush.png",
+      "point": [
+        449,
+        67
+      ],
+      "source": "#861A4C",
+      "role": "lipstick"
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Spring/spr_portrait_seridia_spring_closed_eyes_blush.png",
+      "point": [
+        451,
+        68
+      ],
+      "source": "#51122F",
+      "role": "mouth_interior"
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_closed_eyes.png",
+      "point": [
+        169,
+        98
+      ],
+      "source": "#000000",
+      "role": "flower_same_rgb_as_outer_lip"
+    },
+    {
+      "asset": "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_closed_eyes.png",
+      "point": [
+        447,
+        81
+      ],
+      "source": "#FC708D",
+      "role": "tongue"
+    }
+  ],
+  "audit": "Confirmed expression-only cheek/nose flush was absent from the donor mapping. Add its literal source components with the accepted Celine muted-rose depth ladder; retain all prior skin-role targets. Mouth frame crops and residual existing-skin-RGB inspection found no confirmed outer-mouth skin omissions. Preserve tongue/interior/lipstick, eyes, hair and source-specific markings. Flashback Priestess E6687A outer lip and F09DA3 lower lip need depth scaling; explicit components use the accepted corresponding rose lip ladders. Its dedicated native-frame mouth audit corrects the fixed main-form ROI. Preserve permanent E7D5D5 white under-eye markings and berry lipstick; Wisp/spectral portraits, seasonal spectral composites and all glow/world material stay exact.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4",
+  "review_crops": {
+    "assets/animations/NPCs/Seridia/Portraits/Dragon/spr_portrait_seridia_dragon_neutral.png": [
+      80,
+      15,
+      136,
+      136
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_closed_eyes.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_eyes_shine.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_happy.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_hurt.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_neutral.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_sad.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Flashback Priestess/spr_portrait_seridia_flashback_priestess_think.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_closed_eyes.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_embarrassed.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_eyes_shine.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_happy.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_hurt.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_mad.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_neutral.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_neutral_closed.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_sad.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_serious_think.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_sigh.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_smirk.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_smirk_think.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_think.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_ugh.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_unmasking.png": [
+      108,
+      35,
+      80,
+      80
+    ],
+    "assets/animations/NPCs/Seridia/Portraits/Priestess/spr_portrait_seridia_priestess_wink.png": [
+      108,
+      35,
+      80,
+      80
+    ]
+  }
+}

@@ -12,27 +12,16 @@ fn rgba(text: &str) -> [u8; 4] {
 
 #[test]
 #[ignore = "requires the retained Reina and Juniper portrait corpora"]
-fn current_portrait_mouths_preserve_lips_and_recolor_adjacent_skin() {
+fn before_facial_correction_portrait_mouths_preserve_lips_and_recolor_adjacent_skin() {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));
-    let collection: Value = serde_json::from_slice(
-        &fs::read(root.join("palettes/sets/characters-trial.json")).unwrap(),
-    )
-    .unwrap();
     let mut protected_pixels = 0;
     let mut landmarks = 0;
     for (character, expected_strips) in [("reina", 103), ("juniper", 132)] {
-        let selected = collection["characters"]
-            .as_array()
-            .unwrap()
-            .iter()
-            .find(|row| row["id"] == character)
-            .unwrap();
         let selected_set =
             std::env::var_os(format!("FOM_{}_MOUTH_SET", character.to_ascii_uppercase()))
                 .map(std::path::PathBuf::from)
                 .unwrap_or_else(|| {
-                    root.join("palettes/sets")
-                        .join(selected["presets"].as_str().unwrap())
+                    root.join(format!("palettes/sets/{character}-native-face-before.json"))
                 });
         let mut set: Value = serde_json::from_slice(&fs::read(&selected_set).unwrap()).unwrap();
         let mut profile: Value = serde_json::from_slice(
@@ -82,7 +71,27 @@ fn current_portrait_mouths_preserve_lips_and_recolor_adjacent_skin() {
             .iter()
             .map(|v| rgba(v.as_str().unwrap()))
             .collect();
-        assert_eq!(set["presets"].as_array().unwrap().len(), 4);
+        let preset_ids: Vec<_> = set["presets"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|preset| preset["id"].as_str().unwrap())
+            .collect();
+        assert_eq!(
+            preset_ids,
+            [
+                "blue",
+                "npc_hayden",
+                "npc_ryis",
+                "npc_seridia",
+                "player_04",
+                "npc_march",
+                "npc_wiscar",
+                "player_16",
+                "player_22",
+                "player_35"
+            ]
+        );
         for preset in set["presets"].as_array().unwrap() {
             let id = preset["id"].as_str().unwrap();
             let targets: Vec<_> = preset["colors"]
@@ -191,6 +200,6 @@ fn current_portrait_mouths_preserve_lips_and_recolor_adjacent_skin() {
     assert!(protected_pixels > 1000);
     assert!(landmarks > 100);
     println!(
-        "235 strips / 470 frames / four target palettes: {protected_pixels} protected Reina mouth pixels and {landmarks} independent Juniper material landmarks"
+        "235 strips / 470 frames / ten target palettes: {protected_pixels} protected Reina mouth pixels and {landmarks} independent Juniper material landmarks"
     );
 }

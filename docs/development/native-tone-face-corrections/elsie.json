@@ -1,0 +1,5072 @@
+{
+  "character": "elsie",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/elsie-world-trial.json",
+  "profile": "palettes/profiles/elsie-native-tone-face.json",
+  "additional_source_colors": [
+    "#F6BFAF",
+    "#F2A19C"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#F1AAA2FF",
+      "#EAA092FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#E6AA8AFF",
+      "#DCA07BFF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#D48E84FF",
+      "#C98476FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#452019FF",
+      "#452019FF",
+      "#7D382CFF",
+      "#452019FF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#C66E65FF",
+      "#B85F55FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#321111FF",
+      "#321111FF",
+      "#471A19FF",
+      "#321111FF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#B26363FF",
+      "#A35353FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#190705FF",
+      "#190705FF",
+      "#24090AFF",
+      "#190705FF",
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#96535FFF",
+      "#84434DFF"
+    ]
+  },
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4",
+  "base_profile_sha256": "5637d5da92aae5e102dd379bcf61b404e514e80c6be86b15814242502399556e",
+  "before_set_sha256": "b5909cd6d655f0fb0756d5d49c1451b215367c1bca45accbf56ab51c42e1ee15",
+  "method": "Source-bound component seeds preserve all inherited skin target values/groups/regions. Muted rose cosmetics use the Celine visible-blush ladder; different source blush shades retain explicit main/highlight/deep treatments. New targets are artist-selected cosmetics or an existing reviewed skin/cosmetic role. Exact corpus proof owns preservation; automated checks are not visual acceptance.",
+  "counts": {
+    "selected_strips": 164,
+    "portrait_strips": 36,
+    "native_portrait_frames": 72,
+    "affected_strips": 36,
+    "added_components": 360,
+    "selected_pixels": 2376,
+    "pixels_by_role": {
+      "blush": 2376
+    }
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_closed_eyes.png",
+      "source_sha256": "260a1d908fc599b87cdcc73c115c0a94ed808ea6a63b1eda48a0a35f53be8389",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_embarrassed.png",
+      "source_sha256": "a44a261357c84dcfcbe5a6444aaa02c0dee2330b214982c77215e6e520400ce4",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 8,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 8
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 8,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 8
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            149,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            166,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            445,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            462,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            146,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            148,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            442,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            444,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            145,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            147,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            166,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            168,
+            69
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            443,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            462,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            464,
+            69
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            146,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            148,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            150,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            165,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            167,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            442,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            444,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            446,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            461,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            463,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            145,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            147,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            149,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            151,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            164,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            166,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            168,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            441,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            443,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            445,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            447,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            460,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            462,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            464,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            146,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            148,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            150,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            165,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            167,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            442,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            444,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            446,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            461,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            463,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_happy.png",
+      "source_sha256": "25657354146f813dfc7cf4cce219a238c5e4be72e7198f29c88227fd00138a26",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_mad.png",
+      "source_sha256": "3419fadcf61b5607f3c05da6908a38d490d89b4a0a92e6b356cf7aedf8832c37",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_neutral.png",
+      "source_sha256": "91fd68314e30d223a0486b4aa98ada48c610e066a94d56160af411da7ec308e1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_sad.png",
+      "source_sha256": "9332df6ee8573eb1b495d2a0eef1dc7c1f95615efb6bec07a82357a5e4ff8884",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_think.png",
+      "source_sha256": "7f79793e46076fe08a68642798a4f3bec9ed574b663cc7ac00876e541d2fdbf0",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_ugh.png",
+      "source_sha256": "5a96ebe7d7f79276604c5d9bf1ac8aefa040583924b47a1bc4731d9457097801",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 12,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 12
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 12,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 12
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            149,
+            67
+          ],
+          "pixels": 2,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 2
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            445,
+            67
+          ],
+          "pixels": 2,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 2
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_wink.png",
+      "source_sha256": "2ba3e6088511c09964144268fb26c6735b557b935fa384af35767721644ace3d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_closed_eyes.png",
+      "source_sha256": "e40b01ede8c155b8d92537ad5ef2eed17290c3f4115234d8e3179363a169250d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_embarrassed.png",
+      "source_sha256": "0486201d36306ee91e1ed046d51c02b02c07da9bd8b853e8470281e652008675",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 8,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 8
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 8,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 8
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            149,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            166,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            445,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            462,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            146,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            148,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            442,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            444,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            145,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            147,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            166,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            168,
+            69
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            443,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            462,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            464,
+            69
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            146,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            148,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            150,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            165,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            167,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            442,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            444,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            446,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            461,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            463,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            145,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            147,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            149,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            151,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            164,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            166,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            168,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            441,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            443,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            445,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            447,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            460,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            462,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            464,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            146,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            148,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            150,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            165,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            167,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            442,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            444,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            446,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            461,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            463,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_happy.png",
+      "source_sha256": "60ce5efad8964b9e9fae384e5ea31ab7976b126301d58c47193536f9bf1248a1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_mad.png",
+      "source_sha256": "242fcceaee504609b6cd73e7f63d69992131f18b0b0354f342c664b48102a3f9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_neutral.png",
+      "source_sha256": "021868dcb35db930736471ab451dce0fb7bb7a3a797e2f2475edb3cbed85926f",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_sad.png",
+      "source_sha256": "9b4c63745e56c0bba936c5899a327f6e105fb6a7129d6299107e9bcf20fde5e1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_think.png",
+      "source_sha256": "4b53670549c36cbdbf09dc25cae3914314ad1eb04f8b73f872983046787a07c3",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_ugh.png",
+      "source_sha256": "15f88e5977af7b7f983b3cdb981d2fa038ed17eb0d26f4f7199ba1f168e6b779",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 12,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 12
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 12,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 12
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            149,
+            67
+          ],
+          "pixels": 2,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 2
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            445,
+            67
+          ],
+          "pixels": 2,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 2
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_wink.png",
+      "source_sha256": "acb7489826ac03a3e2ed0535315d99083c49685a5b24e3afa9de000ea27df77f",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_closed_eyes.png",
+      "source_sha256": "7d78c65507e69ceba494d89a404181f4642934a3fd0d734e9e8db555b90e60f9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_embarrassed.png",
+      "source_sha256": "ce3d3f7972dad25f1d02041cacfa7fd6b16332640ec375270c26f490a43f105e",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 8,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 8
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 8,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 8
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            149,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            166,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            445,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            462,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            146,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            148,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            442,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            444,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            145,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            147,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            166,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            168,
+            69
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            443,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            462,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            464,
+            69
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            146,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            148,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            150,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            165,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            167,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            442,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            444,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            446,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            461,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            463,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            145,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            147,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            149,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            151,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            164,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            166,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            168,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            441,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            443,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            445,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            447,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            460,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            462,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            464,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            146,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            148,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            150,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            165,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            167,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            442,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            444,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            446,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            461,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            463,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_happy.png",
+      "source_sha256": "edbad5e94502f17d8a5ba6c5a138ce5bb3c3fd6484813f5e10b68f92cedba616",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_mad.png",
+      "source_sha256": "e10422fad6f116cb1379625945b105a54b7d7dbe459ccb443d77e2a7eab83cdf",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_neutral.png",
+      "source_sha256": "938dee59d651a17703d7133d4e598a26b15acc740f110640a2c4065ad77b1e37",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_sad.png",
+      "source_sha256": "612d6f6a6a5387b2b781cff569a5cbbdb1c21328052050501b54f5baa558be09",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_think.png",
+      "source_sha256": "57b9f6c8b5a45ba8ee9c6e9a9c89ccc783c28afe82a78d9c9612977a90523a32",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_ugh.png",
+      "source_sha256": "d9856ecf0c82e5cdd8f55574db17d02fafba2e4d460d0a749044edd835538115",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 12,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 12
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 12,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 12
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            149,
+            67
+          ],
+          "pixels": 2,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 2
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            445,
+            67
+          ],
+          "pixels": 2,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 2
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_wink.png",
+      "source_sha256": "37d5868a4850a61417e69686711773b0ebe68ba83556b3e457e75098656249ae",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_closed_eyes.png",
+      "source_sha256": "58f2c1e7eb6d8aee135a701cc6fc041115f8ae012650dd2a6f6b683b29dd76d0",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_embarrassed.png",
+      "source_sha256": "a3dd253d4cb06257337603c40943e4b479cf9bd7a3215c452ff09ca70b428a56",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 8,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 8
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 8,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 8
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            149,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            166,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            445,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            462,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            146,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            148,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            442,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            444,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            145,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            147,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            166,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            168,
+            69
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            443,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            462,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 1
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            464,
+            69
+          ],
+          "pixels": 3,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 3
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            146,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            148,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            150,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            165,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            167,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            442,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            444,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            446,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            461,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            463,
+            67
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            145,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            147,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            149,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            151,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            164,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            166,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            168,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            441,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            443,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            445,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            447,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            460,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            462,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            464,
+            68
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            146,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            148,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            150,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            165,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            167,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            442,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            444,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            446,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            461,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        },
+        {
+          "seed": [
+            463,
+            69
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#F2A19C": 1
+          },
+          "color": "#F2A19C"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_happy.png",
+      "source_sha256": "76033c3520391fd29556cc3000a4b93c55a91dc0ab0edcdc88bc9a2af4248f47",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_mad.png",
+      "source_sha256": "0610bf7d3365b79ccc452fea0f0b9cfdcaa9e64c0add0c40c9e941bdac0d1240",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_neutral.png",
+      "source_sha256": "fd9bca96fc9cc83fe8470490cccef2cf41c8df6ce7e3e0d7baf567ed8bff914d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_sad.png",
+      "source_sha256": "4eaaa75cc8f35e0c16129ec92b6363383cb4678afa7095b4fb0b34746e7855e9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_think.png",
+      "source_sha256": "9f73c426936e538cf110b4ce9bd05cd0b57735a0648506ce35e162c77d00feb7",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_ugh.png",
+      "source_sha256": "0e0fb0d3b9749b930a88fa57fed4911e3ed24afc98bc8be597ed6aacea8df229",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 12,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 12
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 12,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 12
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            149,
+            67
+          ],
+          "pixels": 2,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 2
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            445,
+            67
+          ],
+          "pixels": 2,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 2
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_wink.png",
+      "source_sha256": "b63178d41ac012dea4dae08526b72d24d15e45ca5abc111bd6318831f3d1adce",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            145,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            167,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            441,
+            66
+          ],
+          "pixels": 20,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 20
+          },
+          "color": "#F6BFAF"
+        },
+        {
+          "seed": [
+            463,
+            66
+          ],
+          "pixels": 13,
+          "role": "blush",
+          "colors": {
+            "#F6BFAF": 13
+          },
+          "color": "#F6BFAF"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_closed_eyes.png",
+      "point": [
+        145,
+        66
+      ],
+      "source": "#F6BFAF",
+      "expected": {
+        "player_04": "#F1AAA2FF",
+        "npc_march": "#E6AA8AFF",
+        "npc_wiscar": "#D48E84FF",
+        "player_16": "#C66E65FF",
+        "player_22": "#B26363FF",
+        "player_35": "#96535FFF"
+      },
+      "role": "blush"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_closed_eyes.png",
+      "point": [
+        154,
+        30
+      ],
+      "source": "#000000",
+      "role": "black_outline"
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_closed_eyes.png",
+      "point": [
+        140,
+        75
+      ],
+      "source": "#FFFFFF",
+      "role": "sclera"
+    }
+  ],
+  "cosmetic_treatments": {
+    "#F6BFAF": {
+      "role": "blush",
+      "target": "soft"
+    },
+    "#F2A19C": {
+      "role": "blush",
+      "target": "main"
+    }
+  },
+  "audit": [
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_closed_eyes.png",
+      "source_sha256": "260a1d908fc599b87cdcc73c115c0a94ed808ea6a63b1eda48a0a35f53be8389",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_embarrassed.png",
+      "source_sha256": "a44a261357c84dcfcbe5a6444aaa02c0dee2330b214982c77215e6e520400ce4",
+      "native_frames": 2,
+      "new_components": 56
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_happy.png",
+      "source_sha256": "25657354146f813dfc7cf4cce219a238c5e4be72e7198f29c88227fd00138a26",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_mad.png",
+      "source_sha256": "3419fadcf61b5607f3c05da6908a38d490d89b4a0a92e6b356cf7aedf8832c37",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_neutral.png",
+      "source_sha256": "91fd68314e30d223a0486b4aa98ada48c610e066a94d56160af411da7ec308e1",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_sad.png",
+      "source_sha256": "9332df6ee8573eb1b495d2a0eef1dc7c1f95615efb6bec07a82357a5e4ff8884",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_think.png",
+      "source_sha256": "7f79793e46076fe08a68642798a4f3bec9ed574b663cc7ac00876e541d2fdbf0",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_ugh.png",
+      "source_sha256": "5a96ebe7d7f79276604c5d9bf1ac8aefa040583924b47a1bc4731d9457097801",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Autumn/spr_portrait_elsie_autumn_wink.png",
+      "source_sha256": "2ba3e6088511c09964144268fb26c6735b557b935fa384af35767721644ace3d",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_closed_eyes.png",
+      "source_sha256": "e40b01ede8c155b8d92537ad5ef2eed17290c3f4115234d8e3179363a169250d",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_embarrassed.png",
+      "source_sha256": "0486201d36306ee91e1ed046d51c02b02c07da9bd8b853e8470281e652008675",
+      "native_frames": 2,
+      "new_components": 56
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_happy.png",
+      "source_sha256": "60ce5efad8964b9e9fae384e5ea31ab7976b126301d58c47193536f9bf1248a1",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_mad.png",
+      "source_sha256": "242fcceaee504609b6cd73e7f63d69992131f18b0b0354f342c664b48102a3f9",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_neutral.png",
+      "source_sha256": "021868dcb35db930736471ab451dce0fb7bb7a3a797e2f2475edb3cbed85926f",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_sad.png",
+      "source_sha256": "9b4c63745e56c0bba936c5899a327f6e105fb6a7129d6299107e9bcf20fde5e1",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_think.png",
+      "source_sha256": "4b53670549c36cbdbf09dc25cae3914314ad1eb04f8b73f872983046787a07c3",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_ugh.png",
+      "source_sha256": "15f88e5977af7b7f983b3cdb981d2fa038ed17eb0d26f4f7199ba1f168e6b779",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Spring/spr_portrait_elsie_spring_wink.png",
+      "source_sha256": "acb7489826ac03a3e2ed0535315d99083c49685a5b24e3afa9de000ea27df77f",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_closed_eyes.png",
+      "source_sha256": "7d78c65507e69ceba494d89a404181f4642934a3fd0d734e9e8db555b90e60f9",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_embarrassed.png",
+      "source_sha256": "ce3d3f7972dad25f1d02041cacfa7fd6b16332640ec375270c26f490a43f105e",
+      "native_frames": 2,
+      "new_components": 56
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_happy.png",
+      "source_sha256": "edbad5e94502f17d8a5ba6c5a138ce5bb3c3fd6484813f5e10b68f92cedba616",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_mad.png",
+      "source_sha256": "e10422fad6f116cb1379625945b105a54b7d7dbe459ccb443d77e2a7eab83cdf",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_neutral.png",
+      "source_sha256": "938dee59d651a17703d7133d4e598a26b15acc740f110640a2c4065ad77b1e37",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_sad.png",
+      "source_sha256": "612d6f6a6a5387b2b781cff569a5cbbdb1c21328052050501b54f5baa558be09",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_think.png",
+      "source_sha256": "57b9f6c8b5a45ba8ee9c6e9a9c89ccc783c28afe82a78d9c9612977a90523a32",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_ugh.png",
+      "source_sha256": "d9856ecf0c82e5cdd8f55574db17d02fafba2e4d460d0a749044edd835538115",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Summer/spr_portrait_elsie_summer_wink.png",
+      "source_sha256": "37d5868a4850a61417e69686711773b0ebe68ba83556b3e457e75098656249ae",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_closed_eyes.png",
+      "source_sha256": "58f2c1e7eb6d8aee135a701cc6fc041115f8ae012650dd2a6f6b683b29dd76d0",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_embarrassed.png",
+      "source_sha256": "a3dd253d4cb06257337603c40943e4b479cf9bd7a3215c452ff09ca70b428a56",
+      "native_frames": 2,
+      "new_components": 56
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_happy.png",
+      "source_sha256": "76033c3520391fd29556cc3000a4b93c55a91dc0ab0edcdc88bc9a2af4248f47",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_mad.png",
+      "source_sha256": "0610bf7d3365b79ccc452fea0f0b9cfdcaa9e64c0add0c40c9e941bdac0d1240",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_neutral.png",
+      "source_sha256": "fd9bca96fc9cc83fe8470490cccef2cf41c8df6ce7e3e0d7baf567ed8bff914d",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_sad.png",
+      "source_sha256": "4eaaa75cc8f35e0c16129ec92b6363383cb4678afa7095b4fb0b34746e7855e9",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_think.png",
+      "source_sha256": "9f73c426936e538cf110b4ce9bd05cd0b57735a0648506ce35e162c77d00feb7",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_ugh.png",
+      "source_sha256": "0e0fb0d3b9749b930a88fa57fed4911e3ed24afc98bc8be597ed6aacea8df229",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Elsie/Portraits/Winter/spr_portrait_elsie_winter_wink.png",
+      "source_sha256": "b63178d41ac012dea4dae08526b72d24d15e45ca5abc111bd6318831f3d1adce",
+      "native_frames": 2,
+      "new_components": 4
+    }
+  ]
+}

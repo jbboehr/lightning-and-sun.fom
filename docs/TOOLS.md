@@ -1486,8 +1486,8 @@ autumn and 25 winter strips. Use `palettes/sets/adeline-all-seasons-trial.json` 
 the complete seasonal set. The corresponding atlas families are `PortraitsSpring`,
 `PortraitsSummer`, `PortraitsAutumn`, and `PortraitsWinter`.
 
-A preset set references one profile and supplies target colors in the same order
-as its `source_colors`:
+A preset set references a shared profile and supplies target colors in the same
+order as its `source_colors`:
 
 ```json
 {
@@ -1502,11 +1502,17 @@ as its `source_colors`:
 }
 ```
 
+A preset can override that shared profile with its own `"profile"` path. Both
+paths are relative to the set file. The preset's colors must match the selected
+profile's source-color count; all profiles in a set must select identical asset
+inventories. Existing source hashes, seeds and color-group validation apply to
+each selected profile. Omit the field to use the shared profile; `null` is invalid.
+
 Use `palettes/sets/adeline-trial.json` as the editable starting point. It includes
 Debug Blue plus Player 01, 18, and 33. Copy other ramps from the numeric catalog;
 keep the four-color order. IDs must be unique lowercase ASCII letters, digits,
 or underscores, at most 32 characters. Labels must be nonblank, contain no control
-characters, and fit in 64 UTF-8 bytes. A set accepts one through eight variants;
+characters, and fit in 64 UTF-8 bytes. A set accepts one through ten variants;
 Vanilla is implicit and cannot be used as a variant ID. This limit keeps the
 prebuilt portrait count bounded while the prototype is evaluated.
 

@@ -1,0 +1,177 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#445F83",
+        "#6687AD",
+        "#6687AD",
+        "#6687AD",
+        "#445F83",
+        "#C0D1E1",
+        "#C9D7E5",
+        "#6687AD"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#6E4922FF",
+        "#B27146FF",
+        "#B27146FF",
+        "#B27146FF",
+        "#6E4922FF",
+        "#EDCDA6",
+        "#EFD4B3",
+        "#B27146FF"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#491F1BFF",
+        "#63342AFF",
+        "#63342AFF",
+        "#63342AFF",
+        "#491F1BFF",
+        "#CCA396",
+        "#D3B1A6",
+        "#63342AFF"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#624A48FF",
+        "#8E746DFF",
+        "#8E746DFF",
+        "#8E746DFF",
+        "#624A48FF",
+        "#D6CBC5",
+        "#DBD2CD",
+        "#8E746DFF"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    },
+    {
+      "id": "player_04",
+      "label": "Light peach (Player 04)",
+      "colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#89452DFF",
+        "#D5815FFF",
+        "#D5815FFF",
+        "#D5815FFF",
+        "#89452DFF",
+        "#F9E3D3FF",
+        "#F8E6D9FF",
+        "#D5815FFF",
+        "#EAA092FF"
+      ],
+      "profile": "../profiles/luc-native-tone-face.json"
+    },
+    {
+      "id": "npc_march",
+      "label": "Light golden (March)",
+      "colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#CC8155FF",
+        "#DCA966FF",
+        "#DCA966FF",
+        "#DCA966FF",
+        "#CC8155FF",
+        "#F1E7C5FF",
+        "#F2E9CDFF",
+        "#DCA966FF",
+        "#DCA07BFF"
+      ],
+      "profile": "../profiles/luc-native-tone-face.json"
+    },
+    {
+      "id": "npc_wiscar",
+      "label": "Warm peach (Wiscar)",
+      "colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#9F5544FF",
+        "#C47054FF",
+        "#C47054FF",
+        "#C47054FF",
+        "#9F5544FF",
+        "#EAC3ACFF",
+        "#ECCBB8FF",
+        "#C47054FF",
+        "#C98476FF"
+      ],
+      "profile": "../profiles/luc-native-tone-face.json"
+    },
+    {
+      "id": "player_16",
+      "label": "Warm brown (Player 16)",
+      "colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#452019FF",
+        "#7D382CFF",
+        "#7D382CFF",
+        "#7D382CFF",
+        "#452019FF",
+        "#E7B299FF",
+        "#EABDA8FF",
+        "#7D382CFF",
+        "#B85F55FF"
+      ],
+      "profile": "../profiles/luc-native-tone-face.json"
+    },
+    {
+      "id": "player_22",
+      "label": "Deep brown (Player 22)",
+      "colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#321111FF",
+        "#471A19FF",
+        "#471A19FF",
+        "#471A19FF",
+        "#321111FF",
+        "#B78884FF",
+        "#C29A97FF",
+        "#471A19FF",
+        "#A35353FF"
+      ],
+      "profile": "../profiles/luc-native-tone-face.json"
+    },
+    {
+      "id": "player_35",
+      "label": "Very deep (Player 35)",
+      "colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#190705FF",
+        "#24090AFF",
+        "#24090AFF",
+        "#24090AFF",
+        "#190705FF",
+        "#8E7073FF",
+        "#A08689FF",
+        "#24090AFF",
+        "#84434DFF"
+      ],
+      "profile": "../profiles/luc-native-tone-face.json"
+    }
+  ],
+  "profile": "../profiles/luc-world-trial.json"
+}

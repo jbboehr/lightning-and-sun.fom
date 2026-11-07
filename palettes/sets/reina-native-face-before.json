@@ -1,0 +1,185 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#7F9FBD",
+        "#7F9FBD",
+        "#9DB9D4",
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#9DB9D4"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF",
+        "#CA9052FF",
+        "#CA9052FF",
+        "#E8B271FF",
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF",
+        "#E8B271FF"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF",
+        "#814A3AFF",
+        "#814A3AFF",
+        "#B06C57FF",
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF",
+        "#B06C57FF"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF",
+        "#A69084FF",
+        "#A69084FF",
+        "#C1AFA5FF",
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF",
+        "#C1AFA5FF"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    },
+    {
+      "id": "player_04",
+      "label": "Light peach (Player 04)",
+      "colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF",
+        "#F0B389FF",
+        "#F0B389FF",
+        "#FBD7BCFF",
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF",
+        "#FBD7BCFF"
+      ]
+    },
+    {
+      "id": "npc_march",
+      "label": "Light golden (March)",
+      "colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF",
+        "#E6BD7CFF",
+        "#E6BD7CFF",
+        "#EEDDA5FF",
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF",
+        "#EEDDA5FF"
+      ]
+    },
+    {
+      "id": "npc_wiscar",
+      "label": "Warm peach (Wiscar)",
+      "colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF",
+        "#D98364FF",
+        "#D98364FF",
+        "#E3A17BFF",
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF",
+        "#E3A17BFF"
+      ]
+    },
+    {
+      "id": "player_16",
+      "label": "Warm brown (Player 16)",
+      "colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF",
+        "#AE593AFF",
+        "#AE593AFF",
+        "#DE855BFF",
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF",
+        "#DE855BFF"
+      ]
+    },
+    {
+      "id": "player_22",
+      "label": "Deep brown (Player 22)",
+      "colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF",
+        "#6D2B26FF",
+        "#6D2B26FF",
+        "#8E3F38FF",
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF",
+        "#8E3F38FF"
+      ]
+    },
+    {
+      "id": "player_35",
+      "label": "Very deep (Player 35)",
+      "colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF",
+        "#351012FF",
+        "#351012FF",
+        "#4A171CFF",
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF",
+        "#4A171CFF"
+      ]
+    }
+  ],
+  "profile": "../profiles/reina-mouth-corrected.json"
+}

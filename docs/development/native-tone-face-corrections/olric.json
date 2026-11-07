@@ -1,0 +1,2164 @@
+{
+  "character": "olric",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/olric-world-trial.json",
+  "profile": "palettes/profiles/olric-native-tone-face.json",
+  "additional_source_colors": [
+    "#EA8B77"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#FBD7BCFF",
+      "#89452DFF",
+      "#D5815FFF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#F0B389FF",
+      "#EAA092FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#EEDDA5FF",
+      "#CC8155FF",
+      "#DCA966FF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#E6BD7CFF",
+      "#DCA07BFF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#E3A17BFF",
+      "#9F5544FF",
+      "#C47054FF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#D98364FF",
+      "#C98476FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#452019FF",
+      "#DE855BFF",
+      "#452019FF",
+      "#7D382CFF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#AE593AFF",
+      "#B85F55FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#321111FF",
+      "#8E3F38FF",
+      "#321111FF",
+      "#471A19FF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#6D2B26FF",
+      "#A35353FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#190705FF",
+      "#4A171CFF",
+      "#190705FF",
+      "#24090AFF",
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#351012FF",
+      "#84434DFF"
+    ]
+  },
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4",
+  "base_profile_sha256": "b03cb5f2b056e7cab2fe3828a393a9ed597d89af4f0d14c6251ee9b0a61dac1e",
+  "before_set_sha256": "613d33f1461fa7910262b08b4698c57b09104f02fa87758a4df32d28a06ef267",
+  "method": "Source-bound component seeds preserve all inherited skin target values/groups/regions. Muted rose cosmetics use the Celine visible-blush ladder; different source blush shades retain explicit main/highlight/deep treatments. New targets are artist-selected cosmetics or an existing reviewed skin/cosmetic role. Exact corpus proof owns preservation; automated checks are not visual acceptance.",
+  "counts": {
+    "selected_strips": 231,
+    "portrait_strips": 36,
+    "native_portrait_frames": 72,
+    "affected_strips": 4,
+    "added_components": 144,
+    "selected_pixels": 144,
+    "pixels_by_role": {
+      "blush": 144
+    }
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_embarrassed.png",
+      "source_sha256": "33795a0c80b8bbefd3e638b3f32fee9e39a30284aadf8d2250df42726f6aee94",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            138,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            140,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            142,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            154,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            156,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            158,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            434,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            436,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            438,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            450,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            452,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            454,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            139,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            141,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            143,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            155,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            157,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            159,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            435,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            437,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            439,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            451,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            453,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            455,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            140,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            142,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            144,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            156,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            158,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            160,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            436,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            438,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            440,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            452,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            454,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            456,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_embarrassed.png",
+      "source_sha256": "3c99e75c2dee27d91a2770df78df9922c1fc93d75907f344b471d71a3b1a10d6",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            138,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            140,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            142,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            154,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            156,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            158,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            434,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            436,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            438,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            450,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            452,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            454,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            139,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            141,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            143,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            155,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            157,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            159,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            435,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            437,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            439,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            451,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            453,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            455,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            140,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            142,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            144,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            156,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            158,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            160,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            436,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            438,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            440,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            452,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            454,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            456,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Summer/spr_portrait_olric_summer_embarrassed.png",
+      "source_sha256": "0c01eec3dbe805b9d787b32dbe7b3f2febd4367d2a9428c532dd6293d1d30010",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            138,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            140,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            142,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            154,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            156,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            158,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            434,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            436,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            438,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            450,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            452,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            454,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            139,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            141,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            143,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            155,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            157,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            159,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            435,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            437,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            439,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            451,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            453,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            455,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            140,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            142,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            144,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            156,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            158,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            160,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            436,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            438,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            440,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            452,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            454,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            456,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_embarrassed.png",
+      "source_sha256": "42a4d9a13f1735155bace2024297e4924c897e8f21e771f0e3510d1cd2647bb2",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            138,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            140,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            142,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            154,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            156,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            158,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            434,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            436,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            438,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            450,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            452,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            454,
+            59
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            139,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            141,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            143,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            155,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            157,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            159,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            435,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            437,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            439,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            451,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            453,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            455,
+            60
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            140,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            142,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            144,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            156,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            158,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            160,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            436,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            438,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            440,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            452,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            454,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        },
+        {
+          "seed": [
+            456,
+            61
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EA8B77": 1
+          },
+          "color": "#EA8B77"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_embarrassed.png",
+      "point": [
+        138,
+        59
+      ],
+      "source": "#EA8B77",
+      "expected": {
+        "player_04": "#EAA092FF",
+        "npc_march": "#DCA07BFF",
+        "npc_wiscar": "#C98476FF",
+        "player_16": "#B85F55FF",
+        "player_22": "#A35353FF",
+        "player_35": "#84434DFF"
+      },
+      "role": "blush"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_bunny_ears_neutral.png",
+      "point": [
+        136,
+        30
+      ],
+      "source": "#000000",
+      "role": "black_outline"
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_bunny_ears_neutral.png",
+      "point": [
+        139,
+        55
+      ],
+      "source": "#FFFFFF",
+      "role": "sclera"
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_bunny_ears_neutral.png",
+      "point": [
+        444,
+        67
+      ],
+      "source": "#F96F8C",
+      "role": "tongue"
+    }
+  ],
+  "cosmetic_treatments": {
+    "#EA8B77": {
+      "role": "blush",
+      "target": "main"
+    }
+  },
+  "audit": [
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_bunny_ears_neutral.png",
+      "source_sha256": "328a9d1698f5ac9affb61bdeb03d78375888bc946b6fbbb1980e17967f138821",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_embarrassed.png",
+      "source_sha256": "33795a0c80b8bbefd3e638b3f32fee9e39a30284aadf8d2250df42726f6aee94",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_happy.png",
+      "source_sha256": "3754c21760ed86c80170e612c046eea1a3c3ed55a741cc071c65ac70060e8655",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_mad.png",
+      "source_sha256": "085c07f69583605410a0ade499cd4aad212d6151df8b00246413d8a6d30f1153",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_neutral.png",
+      "source_sha256": "ad5dcdea4559dfc7cefd233f066792362d6e24fbb8afbae01241ff363d5f2c03",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_sad.png",
+      "source_sha256": "4954aa5927fa6a90ab53c3adfa4f0578649a9a32f8587bcd83ed718edb195c7a",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_think.png",
+      "source_sha256": "1ba50d5610df7361707dc6400e953ef5703d60ca89e20d9a4016a3b7cb1c3c34",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_ugh.png",
+      "source_sha256": "9dbdac2502fca66039e657a5abfa6df451d7b76fe784f5b38268aba1614d51d5",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Autumn/spr_portrait_olric_autumn_wink.png",
+      "source_sha256": "975a5fa8b90e6f2a768ead35b2f66d801d934fc50ebaa1b10337764353e0a9de",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_bunny_ears_neutral.png",
+      "source_sha256": "4151d3b74d7e9e70bc17512d6f3c90ead25c40ef5d88b0b6b9c6547c68672aea",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_embarrassed.png",
+      "source_sha256": "3c99e75c2dee27d91a2770df78df9922c1fc93d75907f344b471d71a3b1a10d6",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_happy.png",
+      "source_sha256": "ce402f430ec6bce4a00a574a19f7162fcc86304652ba080b839449ce72feca5c",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_mad.png",
+      "source_sha256": "f85c63576a26190aa031754f6e150fe4cd0523bff2c8e6bb2b990513f5465ae9",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_neutral.png",
+      "source_sha256": "aaf07f5a101e79cff3cf3032279ea7a6ff83400eaad1c4cd421469134d36ba9b",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_sad.png",
+      "source_sha256": "b2c4fedbfa7123b89be577687bba20a6b63a23eb47479676dc5a9a3c54ab9cbd",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_think.png",
+      "source_sha256": "4d5cdcfa94b1f2fe7a9b7484b795aa17e162e0a908d58a5524dfe2f4019ea5fd",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_ugh.png",
+      "source_sha256": "e01931179fb617895cfa98b6e74de035b7ad184db68f785b231325ec5cf40ca7",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Spring/spr_portrait_olric_spring_wink.png",
+      "source_sha256": "77f78f7ab2764d17f67867c4da60407d0a8351f48705e7e747f29b4019f9acc7",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Summer/spr_portrait_olric_summer_bunny_ears_neutral.png",
+      "source_sha256": "b71ea5e214f59516206522ddd2847cf3526337d3a11713abea9bdba0f68ad871",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Summer/spr_portrait_olric_summer_embarrassed.png",
+      "source_sha256": "0c01eec3dbe805b9d787b32dbe7b3f2febd4367d2a9428c532dd6293d1d30010",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Summer/spr_portrait_olric_summer_happy.png",
+      "source_sha256": "5ede7d858a1bb9998fb45aa395a4ba99d15b0f34425cd3cdfa756e2c4da3529a",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Summer/spr_portrait_olric_summer_mad.png",
+      "source_sha256": "85e8af89e55fe064cf442ee063c7b302ba17614e0e41c1d50660b32bde26d843",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Summer/spr_portrait_olric_summer_neutral.png",
+      "source_sha256": "edf707d4c1ddfe44632b40b35714247728ea44d9d4b21386513eb716bbe2bb98",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Summer/spr_portrait_olric_summer_sad.png",
+      "source_sha256": "5fef7e68675b1bbdd4c0c8c508f77f910f147452d2c1e3e8ec3faffa10879f13",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Summer/spr_portrait_olric_summer_think.png",
+      "source_sha256": "21b179180882a203eda47b2d51af0a57c8693e0f04143e7d736e30a3fa98402f",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Summer/spr_portrait_olric_summer_ugh.png",
+      "source_sha256": "5056fe7fb365d64aff0a3d0f6f384ad52430cd6a0b8887f839d5c2c519c1d912",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Summer/spr_portrait_olric_summer_wink.png",
+      "source_sha256": "1c9f5727dd2818451d1475a99b49d2b8140a57fdd7df8e97d101946bfb6e50be",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_bunny_ears_neutral.png",
+      "source_sha256": "54642049f9cccfe8d83562e8e2de9fdfcbabca4a1ad2afc24fb9dbcca81bc0d3",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_embarrassed.png",
+      "source_sha256": "42a4d9a13f1735155bace2024297e4924c897e8f21e771f0e3510d1cd2647bb2",
+      "native_frames": 2,
+      "new_components": 36
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_happy.png",
+      "source_sha256": "2301311da323e301ecca36aeb69daf5a62d944c738fe4d42d4d0a7d4fc7c23c3",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_mad.png",
+      "source_sha256": "000b2e5abf031bd9f8ea6804bdb2703644da1e4afae5860ba2c3d92546e6f8fb",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_neutral.png",
+      "source_sha256": "eec86d72f830ddbeb0057f1fa7eb8888c7b4a4755b66dfbab97821c0cc96f4db",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_sad.png",
+      "source_sha256": "dbc5fc976c8ab2d11dfcc2ca7e431a9c2e3e65666cfbf4b09a8e400bb091cde8",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_think.png",
+      "source_sha256": "d891b6347662693b5a510b4595f75161ef574d94515407e333f883f2765a6a73",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_ugh.png",
+      "source_sha256": "9c609d0e309a57ef53d5749e3dfd150402544ec90f75eb6fdf8cc56ebc4c650f",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Olric/Portraits/Winter/spr_portrait_olric_winter_wink.png",
+      "source_sha256": "842fbd151c535d3d63afd1eaca03a0612d7502743e90e8f86da1c1b53e339447",
+      "native_frames": 2,
+      "new_components": 0
+    }
+  ]
+}

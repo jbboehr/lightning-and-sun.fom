@@ -1,0 +1,4382 @@
+{
+  "character": "darcy",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/darcy-world-trial.json",
+  "profile": "palettes/profiles/darcy-native-tone-face.json",
+  "additional_source_colors": [
+    "#EB9179",
+    "#DD716B",
+    "#FCB4B0",
+    "#ED7E77"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#FBD7BCFF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#EAA092FF",
+      "#D05E67FF",
+      "#EAA092FF",
+      "#D05E67FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#EEDDA5FF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#DCA07BFF",
+      "#BE6258FF",
+      "#DCA07BFF",
+      "#BE6258FF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#E3A17BFF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#C98476FF",
+      "#B9575FFF",
+      "#C98476FF",
+      "#B9575FFF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#DE855BFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#452019FF",
+      "#452019FF",
+      "#452019FF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#B85F55FF",
+      "#A2474AFF",
+      "#B85F55FF",
+      "#A2474AFF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#8E3F38FF",
+      "#471A19FF",
+      "#321111FF",
+      "#321111FF",
+      "#321111FF",
+      "#321111FF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#A35353FF",
+      "#84363FFF",
+      "#A35353FF",
+      "#84363FFF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#4A171CFF",
+      "#24090AFF",
+      "#190705FF",
+      "#190705FF",
+      "#190705FF",
+      "#190705FF",
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#84434DFF",
+      "#6E2F3DFF",
+      "#84434DFF",
+      "#6E2F3DFF"
+    ]
+  },
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4",
+  "base_profile_sha256": "e09126ff317b1e08e9d466dbeae4bedcfd2a441a45050c455a7a221992b7dade",
+  "before_set_sha256": "6dda499a8d272b7175104757a17e5794d4372f405a5ac254a1643d36aaa4f063",
+  "method": "Source-bound component seeds preserve all inherited skin target values/groups/regions. Muted rose cosmetics use the Celine visible-blush ladder; different source blush shades retain explicit main/highlight/deep treatments. New targets are artist-selected cosmetics or an existing reviewed skin/cosmetic role. Exact corpus proof owns preservation; automated checks are not visual acceptance.",
+  "counts": {
+    "selected_strips": 92,
+    "portrait_strips": 32,
+    "native_portrait_frames": 64,
+    "affected_strips": 32,
+    "added_components": 304,
+    "selected_pixels": 416,
+    "pixels_by_role": {
+      "blush": 160,
+      "outer_lip": 256
+    }
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_embarrassed.png",
+      "source_sha256": "4fdf0918391c27f83b336181c0f61577de6c46e2b6f06ef1c57453c76f764356",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            140,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            142,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            144,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            154,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            156,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            158,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            436,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            438,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            440,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            450,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            452,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            454,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            139,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            141,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            143,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            145,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            155,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            157,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            159,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            435,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            437,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            439,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            441,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            451,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            453,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            455,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            140,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            142,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            144,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            146,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            154,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            156,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            158,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            436,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            438,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            440,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            442,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            450,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            452,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            454,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_happy.png",
+      "source_sha256": "9271a2428d5cdef14150bbf181b04e7fc16ebe17b62a4f0f5e3d1a0401aa1eb4",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_mad.png",
+      "source_sha256": "7c3309bb966d48c59df617b02b61f7ca9e43f50033a3b31bf860071ee90ff966",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_neutral.png",
+      "source_sha256": "df70457d48cd517f7f9020366837c8e335e16bebf093a31bda9a18035f28d21e",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_sad.png",
+      "source_sha256": "93c84570d819dc8a2bb5fbc673ee04951cd0ebc303f64a2495f215b64426b8a6",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_think.png",
+      "source_sha256": "ba66293fefc4c23976125f1bdceb0a6917c40f8bac2950d5ac5f4aa1fbdf770c",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_ugh.png",
+      "source_sha256": "bacf9f9acb1041d8d9dd7ee91e7ad302cc698e5861201e070dde439eda5f0612",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            85
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            86
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_wink.png",
+      "source_sha256": "431ed0f6cac0a6d4f95172124752d2b1f171df729bcaf3c74aa54c6ac74a8068",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_embarrassed.png",
+      "source_sha256": "ac2a3f69c1ca67aec93a355d15d060685a95ce3643e161b89808221f373ff5eb",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            140,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            142,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            144,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            154,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            156,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            158,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            436,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            438,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            440,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            450,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            452,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            454,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            139,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            141,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            143,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            145,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            155,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            157,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            159,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            435,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            437,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            439,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            441,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            451,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            453,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            455,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            140,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            142,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            144,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            146,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            154,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            156,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            158,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            436,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            438,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            440,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            442,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            450,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            452,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            454,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_happy.png",
+      "source_sha256": "c3665dcbbe278bbab1fc12e2ab66af0f49fc9273efbbbcb7a1d343525eeb93e1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_mad.png",
+      "source_sha256": "d76ffbaadf3aaf76fdc27e76194fc84c1152bf74f21e70f63e46251179a9d4b1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_neutral.png",
+      "source_sha256": "eecd54aa1c15ae1571c2b67c194552d347ab22226eb09ca4c2cf9372ee1efcf1",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_sad.png",
+      "source_sha256": "83ac4e69a32ff4d8f6a9a99c043584ccaeea4ae496aacefc09596fdafacc3f6d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_think.png",
+      "source_sha256": "7aaa59f7eba652ed822247650a644f91e6598f25a21151cdae46695a07546d09",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_ugh.png",
+      "source_sha256": "4501fb27d4b180fb9dee8dc3dd9c6bc2b7a554e49d12787a093d7b3be2cb7cbd",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            85
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            86
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_wink.png",
+      "source_sha256": "69793bfdacb51655b3e5ae0d02ed0c2390773867b46f2066dd5cc1a90856f505",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_embarrassed.png",
+      "source_sha256": "c094aead8388c17ed00e881240129669a23c10b7f67d7b0ae969374a83089515",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            140,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            142,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            144,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            154,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            156,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            158,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            436,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            438,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            440,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            450,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            452,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            454,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            139,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            141,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            143,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            145,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            155,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            157,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            159,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            435,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            437,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            439,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            441,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            451,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            453,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            455,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            140,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            142,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            144,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            146,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            154,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            156,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            158,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            436,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            438,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            440,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            442,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            450,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            452,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            454,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_happy.png",
+      "source_sha256": "9710914982df60b73121518d2b2ee2d3a0e2ef3dead4e1ecb15dc58554f4d316",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_mad.png",
+      "source_sha256": "5dd643717198f0809c888969d5d0762f3a2a5193d7aa5f68775d68ac6223d59e",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_neutral.png",
+      "source_sha256": "898430791ad7923b5fed84e5d5bbb1a4f17fb37cab81f69f3e4a7fe15e010861",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_sad.png",
+      "source_sha256": "969182bbd2d66cbad70f0967022dd7eb549f4a7cdc2a055912a872e237747aab",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_think.png",
+      "source_sha256": "09c9c82806baa7ae490f37722230dc9af284c1e11b6cf7fd25c7ee9f260e33c2",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_ugh.png",
+      "source_sha256": "0ef4c57814ada4aabd69b05c1a580681dba0b07d52a29794d46e219b5504f6e4",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            85
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            86
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_wink.png",
+      "source_sha256": "4f58c28c97a6be29ae2950b294a13e79a2e9ba226a28de086c43e4fb7344a58a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_embarrassed.png",
+      "source_sha256": "5dea23531915fc0b70b8f3241fcee3fcb831fc00b07ed8a8ab07a88dcb787cf8",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            140,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            142,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            144,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            154,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            156,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            158,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            436,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            438,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            440,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            450,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            452,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            454,
+            77
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            139,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            141,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            143,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            145,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            155,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            157,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            159,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            435,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            437,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            439,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            441,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            451,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            453,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            455,
+            78
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            140,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            142,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            144,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            146,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            154,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            156,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            158,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            436,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            438,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            440,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            442,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            450,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            452,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            454,
+            79
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#EB9179": 1
+          },
+          "color": "#EB9179"
+        },
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_happy.png",
+      "source_sha256": "ba9c6345c51a83d298998745600f4a7064f15ba20307510e90bab4a4eae0fb85",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_mad.png",
+      "source_sha256": "6a1dc062d17737eb13c01c1c604bd5355899d94e8425c6b25afe27dca1343209",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_neutral.png",
+      "source_sha256": "a0b8fb2f7f0fd2e8169e60a31932f493cceb20fb5fae1d25c13dfc2ca6c4d2af",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_sad.png",
+      "source_sha256": "23d8625aa0daea45fed8a65b8b6e604d0a4654d5b4a9a54df2d04b5dcb8779d9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_think.png",
+      "source_sha256": "23c7a9b5048feb7331c1599911db1c09b3ced358cca87adc8984a4c5e6c642a9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            85
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_ugh.png",
+      "source_sha256": "6295be9aa2518c4917372e7c611cfe50a9c37d83bd2b46322b75e9274778364e",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            85
+          ],
+          "pixels": 4,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 4
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            445,
+            86
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 2
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            444,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        },
+        {
+          "seed": [
+            447,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#ED7E77": 1
+          },
+          "color": "#ED7E77"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_wink.png",
+      "source_sha256": "37f26fd4d0373ed8cc1169ab5634ecd784604c2ca749a72f1356ce90c5f5248d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            148,
+            82
+          ],
+          "pixels": 2,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 2
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            447,
+            84
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            446,
+            85
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DD716B": 1
+          },
+          "color": "#DD716B"
+        },
+        {
+          "seed": [
+            147,
+            83
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 1
+          },
+          "color": "#FCB4B0"
+        },
+        {
+          "seed": [
+            148,
+            84
+          ],
+          "pixels": 3,
+          "role": "outer_lip",
+          "colors": {
+            "#FCB4B0": 3
+          },
+          "color": "#FCB4B0"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_embarrassed.png",
+      "point": [
+        140,
+        77
+      ],
+      "source": "#EB9179",
+      "expected": {
+        "player_04": "#EAA092FF",
+        "npc_march": "#DCA07BFF",
+        "npc_wiscar": "#C98476FF",
+        "player_16": "#B85F55FF",
+        "player_22": "#A35353FF",
+        "player_35": "#84434DFF"
+      },
+      "role": "blush"
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_embarrassed.png",
+      "point": [
+        148,
+        82
+      ],
+      "source": "#DD716B",
+      "expected": {
+        "player_04": "#D05E67FF",
+        "npc_march": "#BE6258FF",
+        "npc_wiscar": "#B9575FFF",
+        "player_16": "#A2474AFF",
+        "player_22": "#84363FFF",
+        "player_35": "#6E2F3DFF"
+      },
+      "role": "outer_lip"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_embarrassed.png",
+      "point": [
+        139,
+        43
+      ],
+      "source": "#000000",
+      "role": "black_outline"
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_embarrassed.png",
+      "point": [
+        445,
+        83
+      ],
+      "source": "#F96F8C",
+      "role": "tongue"
+    }
+  ],
+  "cosmetic_treatments": {
+    "#EB9179": {
+      "role": "blush",
+      "target": "main"
+    },
+    "#DD716B": {
+      "role": "outer_lip",
+      "target": "deep"
+    },
+    "#FCB4B0": {
+      "role": "outer_lip",
+      "target": "main"
+    },
+    "#ED7E77": {
+      "role": "outer_lip",
+      "target": "deep"
+    }
+  },
+  "audit": [
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_embarrassed.png",
+      "source_sha256": "4fdf0918391c27f83b336181c0f61577de6c46e2b6f06ef1c57453c76f764356",
+      "native_frames": 2,
+      "new_components": 45
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_happy.png",
+      "source_sha256": "9271a2428d5cdef14150bbf181b04e7fc16ebe17b62a4f0f5e3d1a0401aa1eb4",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_mad.png",
+      "source_sha256": "7c3309bb966d48c59df617b02b61f7ca9e43f50033a3b31bf860071ee90ff966",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_neutral.png",
+      "source_sha256": "df70457d48cd517f7f9020366837c8e335e16bebf093a31bda9a18035f28d21e",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_sad.png",
+      "source_sha256": "93c84570d819dc8a2bb5fbc673ee04951cd0ebc303f64a2495f215b64426b8a6",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_think.png",
+      "source_sha256": "ba66293fefc4c23976125f1bdceb0a6917c40f8bac2950d5ac5f4aa1fbdf770c",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_ugh.png",
+      "source_sha256": "bacf9f9acb1041d8d9dd7ee91e7ad302cc698e5861201e070dde439eda5f0612",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Autumn/spr_portrait_darcy_autumn_wink.png",
+      "source_sha256": "431ed0f6cac0a6d4f95172124752d2b1f171df729bcaf3c74aa54c6ac74a8068",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_embarrassed.png",
+      "source_sha256": "ac2a3f69c1ca67aec93a355d15d060685a95ce3643e161b89808221f373ff5eb",
+      "native_frames": 2,
+      "new_components": 45
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_happy.png",
+      "source_sha256": "c3665dcbbe278bbab1fc12e2ab66af0f49fc9273efbbbcb7a1d343525eeb93e1",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_mad.png",
+      "source_sha256": "d76ffbaadf3aaf76fdc27e76194fc84c1152bf74f21e70f63e46251179a9d4b1",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_neutral.png",
+      "source_sha256": "eecd54aa1c15ae1571c2b67c194552d347ab22226eb09ca4c2cf9372ee1efcf1",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_sad.png",
+      "source_sha256": "83ac4e69a32ff4d8f6a9a99c043584ccaeea4ae496aacefc09596fdafacc3f6d",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_think.png",
+      "source_sha256": "7aaa59f7eba652ed822247650a644f91e6598f25a21151cdae46695a07546d09",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_ugh.png",
+      "source_sha256": "4501fb27d4b180fb9dee8dc3dd9c6bc2b7a554e49d12787a093d7b3be2cb7cbd",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Spring/spr_portrait_darcy_spring_wink.png",
+      "source_sha256": "69793bfdacb51655b3e5ae0d02ed0c2390773867b46f2066dd5cc1a90856f505",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_embarrassed.png",
+      "source_sha256": "c094aead8388c17ed00e881240129669a23c10b7f67d7b0ae969374a83089515",
+      "native_frames": 2,
+      "new_components": 45
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_happy.png",
+      "source_sha256": "9710914982df60b73121518d2b2ee2d3a0e2ef3dead4e1ecb15dc58554f4d316",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_mad.png",
+      "source_sha256": "5dd643717198f0809c888969d5d0762f3a2a5193d7aa5f68775d68ac6223d59e",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_neutral.png",
+      "source_sha256": "898430791ad7923b5fed84e5d5bbb1a4f17fb37cab81f69f3e4a7fe15e010861",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_sad.png",
+      "source_sha256": "969182bbd2d66cbad70f0967022dd7eb549f4a7cdc2a055912a872e237747aab",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_think.png",
+      "source_sha256": "09c9c82806baa7ae490f37722230dc9af284c1e11b6cf7fd25c7ee9f260e33c2",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_ugh.png",
+      "source_sha256": "0ef4c57814ada4aabd69b05c1a580681dba0b07d52a29794d46e219b5504f6e4",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Summer/spr_portrait_darcy_summer_wink.png",
+      "source_sha256": "4f58c28c97a6be29ae2950b294a13e79a2e9ba226a28de086c43e4fb7344a58a",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_embarrassed.png",
+      "source_sha256": "5dea23531915fc0b70b8f3241fcee3fcb831fc00b07ed8a8ab07a88dcb787cf8",
+      "native_frames": 2,
+      "new_components": 45
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_happy.png",
+      "source_sha256": "ba9c6345c51a83d298998745600f4a7064f15ba20307510e90bab4a4eae0fb85",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_mad.png",
+      "source_sha256": "6a1dc062d17737eb13c01c1c604bd5355899d94e8425c6b25afe27dca1343209",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_neutral.png",
+      "source_sha256": "a0b8fb2f7f0fd2e8169e60a31932f493cceb20fb5fae1d25c13dfc2ca6c4d2af",
+      "native_frames": 2,
+      "new_components": 5
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_sad.png",
+      "source_sha256": "23d8625aa0daea45fed8a65b8b6e604d0a4654d5b4a9a54df2d04b5dcb8779d9",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_think.png",
+      "source_sha256": "23c7a9b5048feb7331c1599911db1c09b3ced358cca87adc8984a4c5e6c642a9",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_ugh.png",
+      "source_sha256": "6295be9aa2518c4917372e7c611cfe50a9c37d83bd2b46322b75e9274778364e",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Darcy/Portraits/Winter/spr_portrait_darcy_winter_wink.png",
+      "source_sha256": "37f26fd4d0373ed8cc1169ab5634ecd784604c2ca749a72f1356ce90c5f5248d",
+      "native_frames": 2,
+      "new_components": 5
+    }
+  ]
+}

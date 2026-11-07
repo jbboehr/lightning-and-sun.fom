@@ -1,0 +1,205 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#5C7FAB",
+        "#445F83",
+        "#2D3F57",
+        "#84A4C1",
+        "#8EACC9",
+        "#6C89AE",
+        "#3F678D",
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#A86944",
+        "#6E4922",
+        "#493117",
+        "#CF9556",
+        "#D9A162",
+        "#B87347",
+        "#69512C",
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#6E4922"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#592C28",
+        "#491F1B",
+        "#311512",
+        "#864F3E",
+        "#995B49",
+        "#69362B",
+        "#442725",
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#491F1B"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#846C6B",
+        "#624A48",
+        "#413130",
+        "#AB9588",
+        "#B4A095",
+        "#94766E",
+        "#5D5252",
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#624A48"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    },
+    {
+      "id": "player_04",
+      "label": "Light peach (Player 04)",
+      "colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#CB795DFF",
+        "#89452DFF",
+        "#5B2E1EFF",
+        "#F5B88DFF",
+        "#F6C5A3FF",
+        "#DB8360FF",
+        "#844D37FF",
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ]
+    },
+    {
+      "id": "npc_march",
+      "label": "Light golden (March)",
+      "colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#D2A164FF",
+        "#CC8155FF",
+        "#885639FF",
+        "#EBC280FF",
+        "#EACD91FF",
+        "#E2AB67FF",
+        "#C7895FFF",
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF"
+      ]
+    },
+    {
+      "id": "npc_wiscar",
+      "label": "Warm peach (Wiscar)",
+      "colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#BA6852FF",
+        "#9F5544FF",
+        "#6A392DFF",
+        "#DE8868FF",
+        "#DE9270FF",
+        "#CA7255FF",
+        "#9A5D4EFF",
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ]
+    },
+    {
+      "id": "player_16",
+      "label": "Warm brown (Player 16)",
+      "colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#73302AFF",
+        "#452019FF",
+        "#2E1511FF",
+        "#B35E3EFF",
+        "#C66F4BFF",
+        "#833A2DFF",
+        "#402823FF",
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ]
+    },
+    {
+      "id": "player_22",
+      "label": "Deep brown (Player 22)",
+      "colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#3D1217FF",
+        "#321111FF",
+        "#210B0BFF",
+        "#72302AFF",
+        "#7E352FFF",
+        "#4D1C1AFF",
+        "#2D191BFF",
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF"
+      ]
+    },
+    {
+      "id": "player_35",
+      "label": "Very deep (Player 35)",
+      "colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#1A0108FF",
+        "#190705FF",
+        "#110503FF",
+        "#3A1516FF",
+        "#401417FF",
+        "#2A0B0BFF",
+        "#140F0FFF",
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ]
+    }
+  ],
+  "profile": "../profiles/wheedle-world-trial.json"
+}

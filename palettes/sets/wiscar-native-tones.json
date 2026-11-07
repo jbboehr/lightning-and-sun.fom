@@ -1,0 +1,177 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#2D3F57",
+        "#364C69",
+        "#1B2634",
+        "#B6CBDF",
+        "#97C3DB",
+        "#7F9FBD"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271",
+        "#CA9052",
+        "#B27146",
+        "#6E4922",
+        "#493117",
+        "#583A1B",
+        "#2C1D0E",
+        "#EEC595",
+        "#E2BC78",
+        "#CA9052"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57",
+        "#814A3A",
+        "#63342A",
+        "#491F1B",
+        "#311512",
+        "#3A1916",
+        "#1D0C0B",
+        "#C49181",
+        "#AA765E",
+        "#814A3A"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5",
+        "#A69084",
+        "#8E746D",
+        "#624A48",
+        "#413130",
+        "#4E3B3A",
+        "#271E1D",
+        "#D1C3BC",
+        "#BBB9AC",
+        "#A69084"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    },
+    {
+      "id": "player_04",
+      "label": "Light peach (Player 04)",
+      "colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF",
+        "#5B2E1EFF",
+        "#6E3724FF",
+        "#371C12FF",
+        "#FCE1CDFF",
+        "#F5E1C3FF",
+        "#F0B389FF",
+        "#EAA092FF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
+    },
+    {
+      "id": "npc_march",
+      "label": "Light golden (March)",
+      "colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF",
+        "#885639FF",
+        "#A36744FF",
+        "#523422FF",
+        "#F2E6BCFF",
+        "#E8E7ACFF",
+        "#E6BD7CFF",
+        "#DCA07BFF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
+    },
+    {
+      "id": "npc_wiscar",
+      "label": "Warm peach (Wiscar)",
+      "colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF",
+        "#6A392DFF",
+        "#7F4436FF",
+        "#40221BFF",
+        "#EAB99CFF",
+        "#DDAB82FF",
+        "#D98364FF",
+        "#C98476FF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
+    },
+    {
+      "id": "player_16",
+      "label": "Warm brown (Player 16)",
+      "colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF",
+        "#2E1511FF",
+        "#371A14FF",
+        "#1C0D0AFF",
+        "#E6A484FF",
+        "#D88F62FF",
+        "#AE593AFF",
+        "#B85F55FF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
+    },
+    {
+      "id": "player_22",
+      "label": "Deep brown (Player 22)",
+      "colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF",
+        "#210B0BFF",
+        "#280E0EFF",
+        "#140707FF",
+        "#AA6F6AFF",
+        "#88493FFF",
+        "#6D2B26FF",
+        "#A35353FF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
+    },
+    {
+      "id": "player_35",
+      "label": "Very deep (Player 35)",
+      "colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF",
+        "#110503FF",
+        "#140604FF",
+        "#0A0302FF",
+        "#775155FF",
+        "#442123FF",
+        "#351012FF",
+        "#84434DFF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
+    }
+  ],
+  "profile": "../profiles/wiscar-world-trial.json"
+}

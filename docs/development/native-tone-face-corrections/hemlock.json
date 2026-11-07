@@ -1,0 +1,2217 @@
+{
+  "character": "hemlock",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/hemlock-world-trial.json",
+  "base_profile_sha256": "2a54f4c488e49e9fd32e2707b7796de1a6be4017f121b6d6b13501067ac10013",
+  "profile": "palettes/profiles/hemlock-native-tone-face.json",
+  "additional_source_colors": [
+    "#C76054"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#D5815FFF",
+      "#F0B389FF",
+      "#89452DFF",
+      "#FBD7BCFF",
+      "#D5815FFF",
+      "#EAA092FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#DCA966FF",
+      "#E6BD7CFF",
+      "#CC8155FF",
+      "#EEDDA5FF",
+      "#DCA966FF",
+      "#DCA07BFF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#C47054FF",
+      "#D98364FF",
+      "#9F5544FF",
+      "#E3A17BFF",
+      "#C47054FF",
+      "#C98476FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#7D382CFF",
+      "#AE593AFF",
+      "#452019FF",
+      "#DE855BFF",
+      "#7D382CFF",
+      "#B85F55FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#471A19FF",
+      "#6D2B26FF",
+      "#321111FF",
+      "#8E3F38FF",
+      "#471A19FF",
+      "#A35353FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#24090AFF",
+      "#351012FF",
+      "#190705FF",
+      "#4A171CFF",
+      "#24090AFF",
+      "#84434DFF"
+    ]
+  },
+  "counts": {
+    "selected_strips": 152,
+    "portrait_strips": 32,
+    "world_strips": 120,
+    "audited_native_portrait_frames": 64,
+    "mouth_unique_crops_inspected": 6,
+    "affected_strips": 4,
+    "components": 136,
+    "selected_pixels": 136
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Hemlock/Portraits/Autumn/spr_portrait_hemlock_autumn_embarrassed.png",
+      "source_sha256": "40707d1e63d60fb2bc6a026a26288e7882a870876c9235960274b703546eefb8",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            160,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            160,
+            63,
+            160,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            162,
+            63,
+            162,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            164,
+            63,
+            164,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            456,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            456,
+            63,
+            456,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            458,
+            63,
+            458,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            460,
+            63,
+            460,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            161,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            161,
+            64,
+            161,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            163,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            163,
+            64,
+            163,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            165,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            165,
+            64,
+            165,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            457,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            457,
+            64,
+            457,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            459,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            459,
+            64,
+            459,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            461,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            461,
+            64,
+            461,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            162,
+            65,
+            162,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            164,
+            65,
+            164,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            166,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            166,
+            65,
+            166,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            458,
+            65,
+            458,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            460,
+            65,
+            460,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            462,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            462,
+            65,
+            462,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            176,
+            66
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            176,
+            66,
+            176,
+            66
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            472,
+            66
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            472,
+            66,
+            472,
+            66
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            177,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            177,
+            67,
+            177,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            179,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            179,
+            67,
+            179,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            473,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            473,
+            67,
+            473,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            475,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            475,
+            67,
+            475,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            176,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            176,
+            68,
+            176,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            178,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            178,
+            68,
+            178,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            180,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            180,
+            68,
+            180,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            472,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            472,
+            68,
+            472,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            474,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            474,
+            68,
+            474,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            476,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            476,
+            68,
+            476,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            177,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            177,
+            69,
+            177,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            179,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            179,
+            69,
+            179,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            473,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            473,
+            69,
+            473,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            475,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            475,
+            69,
+            475,
+            69
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Hemlock/Portraits/Spring/spr_portrait_hemlock_spring_embarrassed.png",
+      "source_sha256": "9ea744eda48b71411954fbec86257fbc02403a8504d330eb1b34be12f62fa22d",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            160,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            160,
+            63,
+            160,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            162,
+            63,
+            162,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            164,
+            63,
+            164,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            456,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            456,
+            63,
+            456,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            458,
+            63,
+            458,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            460,
+            63,
+            460,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            161,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            161,
+            64,
+            161,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            163,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            163,
+            64,
+            163,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            165,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            165,
+            64,
+            165,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            457,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            457,
+            64,
+            457,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            459,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            459,
+            64,
+            459,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            461,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            461,
+            64,
+            461,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            162,
+            65,
+            162,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            164,
+            65,
+            164,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            166,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            166,
+            65,
+            166,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            458,
+            65,
+            458,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            460,
+            65,
+            460,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            462,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            462,
+            65,
+            462,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            176,
+            66
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            176,
+            66,
+            176,
+            66
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            472,
+            66
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            472,
+            66,
+            472,
+            66
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            177,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            177,
+            67,
+            177,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            179,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            179,
+            67,
+            179,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            473,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            473,
+            67,
+            473,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            475,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            475,
+            67,
+            475,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            176,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            176,
+            68,
+            176,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            178,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            178,
+            68,
+            178,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            180,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            180,
+            68,
+            180,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            472,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            472,
+            68,
+            472,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            474,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            474,
+            68,
+            474,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            476,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            476,
+            68,
+            476,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            177,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            177,
+            69,
+            177,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            179,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            179,
+            69,
+            179,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            473,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            473,
+            69,
+            473,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            475,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            475,
+            69,
+            475,
+            69
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Hemlock/Portraits/Summer/spr_portrait_hemlock_summer_embarrassed.png",
+      "source_sha256": "3fa15a3544615632833b1515d6108b695468ae1ec540acb4619c3027a449a361",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            160,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            160,
+            63,
+            160,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            162,
+            63,
+            162,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            164,
+            63,
+            164,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            456,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            456,
+            63,
+            456,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            458,
+            63,
+            458,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            460,
+            63,
+            460,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            161,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            161,
+            64,
+            161,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            163,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            163,
+            64,
+            163,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            165,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            165,
+            64,
+            165,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            457,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            457,
+            64,
+            457,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            459,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            459,
+            64,
+            459,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            461,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            461,
+            64,
+            461,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            162,
+            65,
+            162,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            164,
+            65,
+            164,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            166,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            166,
+            65,
+            166,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            458,
+            65,
+            458,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            460,
+            65,
+            460,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            462,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            462,
+            65,
+            462,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            176,
+            66
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            176,
+            66,
+            176,
+            66
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            472,
+            66
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            472,
+            66,
+            472,
+            66
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            177,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            177,
+            67,
+            177,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            179,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            179,
+            67,
+            179,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            473,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            473,
+            67,
+            473,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            475,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            475,
+            67,
+            475,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            176,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            176,
+            68,
+            176,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            178,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            178,
+            68,
+            178,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            180,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            180,
+            68,
+            180,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            472,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            472,
+            68,
+            472,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            474,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            474,
+            68,
+            474,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            476,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            476,
+            68,
+            476,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            177,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            177,
+            69,
+            177,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            179,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            179,
+            69,
+            179,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            473,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            473,
+            69,
+            473,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            475,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            475,
+            69,
+            475,
+            69
+          ],
+          "role": "blush"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Hemlock/Portraits/Winter/spr_portrait_hemlock_winter_embarrassed.png",
+      "source_sha256": "f6fa1ec27cbdbb03e2b768373b70ca25f48655daffe696c73f01b4f5a0771ac4",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            160,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            160,
+            63,
+            160,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            162,
+            63,
+            162,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            164,
+            63,
+            164,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            456,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            456,
+            63,
+            456,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            458,
+            63,
+            458,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            63
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            460,
+            63,
+            460,
+            63
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            161,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            161,
+            64,
+            161,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            163,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            163,
+            64,
+            163,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            165,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            165,
+            64,
+            165,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            457,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            457,
+            64,
+            457,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            459,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            459,
+            64,
+            459,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            461,
+            64
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            461,
+            64,
+            461,
+            64
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            162,
+            65,
+            162,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            164,
+            65,
+            164,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            166,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            166,
+            65,
+            166,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            458,
+            65,
+            458,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            460,
+            65,
+            460,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            462,
+            65
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            462,
+            65,
+            462,
+            65
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            176,
+            66
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            176,
+            66,
+            176,
+            66
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            472,
+            66
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            472,
+            66,
+            472,
+            66
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            177,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            177,
+            67,
+            177,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            179,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            179,
+            67,
+            179,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            473,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            473,
+            67,
+            473,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            475,
+            67
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            475,
+            67,
+            475,
+            67
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            176,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            176,
+            68,
+            176,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            178,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            178,
+            68,
+            178,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            180,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            180,
+            68,
+            180,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            472,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            472,
+            68,
+            472,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            474,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            474,
+            68,
+            474,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            476,
+            68
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            476,
+            68,
+            476,
+            68
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            177,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            177,
+            69,
+            177,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            179,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            179,
+            69,
+            179,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            473,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            473,
+            69,
+            473,
+            69
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            475,
+            69
+          ],
+          "color": "#C76054",
+          "pixels": 1,
+          "bounds": [
+            475,
+            69,
+            475,
+            69
+          ],
+          "role": "blush"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Hemlock/Portraits/Autumn/spr_portrait_hemlock_autumn_embarrassed.png",
+      "point": [
+        160,
+        63
+      ],
+      "source": "#C76054",
+      "expected": {
+        "player_04": "#EAA092",
+        "npc_march": "#DCA07B",
+        "npc_wiscar": "#C98476",
+        "player_16": "#B85F55",
+        "player_22": "#A35353",
+        "player_35": "#84434D"
+      },
+      "role": "blush"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Hemlock/Portraits/Spring/spr_portrait_hemlock_spring_embarrassed.png",
+      "point": [
+        462,
+        73
+      ],
+      "source": "#DF4868",
+      "role": "tongue"
+    },
+    {
+      "asset": "assets/animations/NPCs/Hemlock/Portraits/Spring/spr_portrait_hemlock_spring_embarrassed.png",
+      "point": [
+        448,
+        54
+      ],
+      "source": "#7F7676",
+      "role": "hair"
+    }
+  ],
+  "audit": "Confirmed expression-only cheek/nose flush was absent from the donor mapping. Add its literal source components with the accepted Celine muted-rose depth ladder; retain all prior skin-role targets. Mouth frame crops and residual existing-skin-RGB inspection found no confirmed outer-mouth skin omissions. Preserve tongue/interior/lipstick, eyes, hair and source-specific markings.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4"
+}

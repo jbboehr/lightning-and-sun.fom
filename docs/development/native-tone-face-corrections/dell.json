@@ -1,0 +1,1672 @@
+{
+  "character": "dell",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/dell-world-trial.json",
+  "profile": "palettes/profiles/dell-native-tone-face.json",
+  "additional_source_colors": [
+    "#D98863"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#89452DFF",
+      "#D5815FFF",
+      "#D5815FFF",
+      "#F0B389FF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#F0B389FF",
+      "#89452DFF",
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#D05E67FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#CC8155FF",
+      "#DCA966FF",
+      "#DCA966FF",
+      "#E6BD7CFF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#E6BD7CFF",
+      "#CC8155FF",
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#BE6258FF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#9F5544FF",
+      "#C47054FF",
+      "#C47054FF",
+      "#D98364FF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#D98364FF",
+      "#9F5544FF",
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#B9575FFF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#452019FF",
+      "#7D382CFF",
+      "#7D382CFF",
+      "#AE593AFF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#AE593AFF",
+      "#452019FF",
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#A2474AFF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#321111FF",
+      "#471A19FF",
+      "#471A19FF",
+      "#6D2B26FF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#6D2B26FF",
+      "#321111FF",
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#84363FFF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#190705FF",
+      "#24090AFF",
+      "#24090AFF",
+      "#351012FF",
+      "#4A171CFF",
+      "#351012FF",
+      "#351012FF",
+      "#190705FF",
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#6E2F3DFF"
+    ]
+  },
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4",
+  "base_profile_sha256": "2fbeece22179143cbd4aa108b87211055bb9ab7b1969a6e0e37be56a7926593b",
+  "before_set_sha256": "cc6fd076219b7a7ad6c1e523297cc836e04fc19a82bf7ef7a3936570ef75e3b7",
+  "method": "Source-bound component seeds preserve all inherited skin target values/groups/regions. Muted rose cosmetics use the Celine visible-blush ladder; different source blush shades retain explicit main/highlight/deep treatments. New targets are artist-selected cosmetics or an existing reviewed skin/cosmetic role. Exact corpus proof owns preservation; automated checks are not visual acceptance.",
+  "counts": {
+    "selected_strips": 131,
+    "portrait_strips": 32,
+    "native_portrait_frames": 64,
+    "affected_strips": 20,
+    "added_components": 88,
+    "selected_pixels": 192,
+    "pixels_by_role": {
+      "blush": 128,
+      "outer_lip": 64
+    }
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_embarrassed.png",
+      "source_sha256": "873657069ddb8cae0b28dbf6a2e152ca1dd4cfbaa5554ad11f8c04d1303a5fa9",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            98
+          ],
+          "pixels": 14,
+          "role": "blush",
+          "colors": {
+            "#EC9871": 14
+          },
+          "color": "#EC9871"
+        },
+        {
+          "seed": [
+            447,
+            98
+          ],
+          "pixels": 14,
+          "role": "blush",
+          "colors": {
+            "#EC9871": 14
+          },
+          "color": "#EC9871"
+        },
+        {
+          "seed": [
+            152,
+            98
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            448,
+            98
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            151,
+            100
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            447,
+            100
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_mad.png",
+      "source_sha256": "4bea08841d7be5335273151e7c709e4044a0ba1724942dc291b31e5caf495a46",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_sad.png",
+      "source_sha256": "8dfa8c0170b5957c1fefdd50bea66397c394baa4f34388cd2d3f05f06b940c6a",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_think.png",
+      "source_sha256": "aee193d2dcefda8bb7668f801d3dc4503d407579d91d51d2d73ef04a365969ee",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_ugh.png",
+      "source_sha256": "fa19ceba696c469377fb95920e16fdd5b801183991b090042a54c8c3fa485255",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            105
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            105
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            107
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            107
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_embarrassed.png",
+      "source_sha256": "952be8e4f25f6bf19d4e267e13dc82346704d7956a73ad10ba09736b7b324964",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            98
+          ],
+          "pixels": 14,
+          "role": "blush",
+          "colors": {
+            "#EC9871": 14
+          },
+          "color": "#EC9871"
+        },
+        {
+          "seed": [
+            447,
+            98
+          ],
+          "pixels": 14,
+          "role": "blush",
+          "colors": {
+            "#EC9871": 14
+          },
+          "color": "#EC9871"
+        },
+        {
+          "seed": [
+            152,
+            98
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            448,
+            98
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            151,
+            100
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            447,
+            100
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_mad.png",
+      "source_sha256": "cd7069633a435641b432c6c18a624bf710d59590eed6ddb5f110e0d9bd66ce54",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_sad.png",
+      "source_sha256": "ae9ff137c985e30feec9ea3c8d6bc3ef1d68064fd267b9cae07fed9837807177",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_think.png",
+      "source_sha256": "2fae627f144924e223fedd721a8ea35fd58b67ac9b2700a66f0a7b242d731062",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_ugh.png",
+      "source_sha256": "08d957b10633038c15e33932f3d7a5e6328629a38a4bf2d89c86ef770e8a56ed",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            105
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            105
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            107
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            107
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_embarrassed.png",
+      "source_sha256": "5285e986e7a9ab40c72bca633f8f32b2b61770b2db9a4c087daac9d97dea528f",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            98
+          ],
+          "pixels": 14,
+          "role": "blush",
+          "colors": {
+            "#EC9871": 14
+          },
+          "color": "#EC9871"
+        },
+        {
+          "seed": [
+            447,
+            98
+          ],
+          "pixels": 14,
+          "role": "blush",
+          "colors": {
+            "#EC9871": 14
+          },
+          "color": "#EC9871"
+        },
+        {
+          "seed": [
+            152,
+            98
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            448,
+            98
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            151,
+            100
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            447,
+            100
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_mad.png",
+      "source_sha256": "67820494c3cea16cf1a3643ed6b97f74522647873a35bf9724c1f5c9eacf74fd",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_sad.png",
+      "source_sha256": "8b4c55f245d98626353f4397cc5cc75a80a32c6064dd1a6361a5e33123f58377",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_think.png",
+      "source_sha256": "e3066b2847fe5f98c62086356bde2fa18c67cb4f95d840051cd202aac6d88fea",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_ugh.png",
+      "source_sha256": "9fabee8da599d469e9566ecf549b49d64881888325566d12d98574d3af56cf02",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            105
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            105
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            107
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            107
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_embarrassed.png",
+      "source_sha256": "154fc5fec607f7c51bd289978b0ee5706c53fdc8f4376f30a7ce8eb4824f3dfb",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            151,
+            98
+          ],
+          "pixels": 14,
+          "role": "blush",
+          "colors": {
+            "#EC9871": 14
+          },
+          "color": "#EC9871"
+        },
+        {
+          "seed": [
+            447,
+            98
+          ],
+          "pixels": 14,
+          "role": "blush",
+          "colors": {
+            "#EC9871": 14
+          },
+          "color": "#EC9871"
+        },
+        {
+          "seed": [
+            152,
+            98
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            448,
+            98
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            151,
+            100
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        },
+        {
+          "seed": [
+            447,
+            100
+          ],
+          "pixels": 1,
+          "role": "blush",
+          "colors": {
+            "#D98863": 1
+          },
+          "color": "#D98863"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_mad.png",
+      "source_sha256": "a422773f60d05b88362f31e0d15cbb005adfadecc36c932c01130a38b76504f4",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_sad.png",
+      "source_sha256": "4fffa237cadbc7f7231ef34b63c2d35aec6e155111bbeab0c88249f637e9f0bd",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_think.png",
+      "source_sha256": "158c19d150c4b586d7a60080fc88b7dbcc9178192c1c25a2e5a4952c595f8b44",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            104
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            106
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_ugh.png",
+      "source_sha256": "0d2d86940af4f927bf251a6522ba9efca83aaa39ef87b2f47c43d8b83fee5620",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            445,
+            105
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            105
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            445,
+            107
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        },
+        {
+          "seed": [
+            447,
+            107
+          ],
+          "pixels": 1,
+          "role": "outer_lip",
+          "colors": {
+            "#DB9150": 1
+          },
+          "color": "#DB9150"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_embarrassed.png",
+      "point": [
+        151,
+        98
+      ],
+      "source": "#EC9871",
+      "expected": {
+        "player_04": "#F0B389FF",
+        "npc_march": "#E6BD7CFF",
+        "npc_wiscar": "#D98364FF",
+        "player_16": "#AE593AFF",
+        "player_22": "#6D2B26FF",
+        "player_35": "#351012FF"
+      },
+      "role": "blush"
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_mad.png",
+      "point": [
+        445,
+        104
+      ],
+      "source": "#DB9150",
+      "expected": {
+        "player_04": "#F0B389FF",
+        "npc_march": "#E6BD7CFF",
+        "npc_wiscar": "#D98364FF",
+        "player_16": "#AE593AFF",
+        "player_22": "#6D2B26FF",
+        "player_35": "#351012FF"
+      },
+      "role": "outer_lip"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_embarrassed.png",
+      "point": [
+        133,
+        61
+      ],
+      "source": "#000000",
+      "role": "black_outline"
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_embarrassed.png",
+      "point": [
+        133,
+        70
+      ],
+      "source": "#FFFFFF",
+      "role": "sclera"
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_embarrassed.png",
+      "point": [
+        134,
+        84
+      ],
+      "source": "#A1121D",
+      "role": "mouth_interior"
+    }
+  ],
+  "cosmetic_treatments": {
+    "#EC9871": {
+      "role": "blush",
+      "target": 9
+    },
+    "#D98863": {
+      "role": "blush",
+      "target": "deep"
+    },
+    "#DB9150": {
+      "role": "outer_lip",
+      "target": 10
+    }
+  },
+  "audit": [
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_embarrassed.png",
+      "source_sha256": "873657069ddb8cae0b28dbf6a2e152ca1dd4cfbaa5554ad11f8c04d1303a5fa9",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_happy.png",
+      "source_sha256": "b5c53cf39038a7bbe4b4e4bd2f935db840bad8e683f58b124725c27243c7796d",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_mad.png",
+      "source_sha256": "4bea08841d7be5335273151e7c709e4044a0ba1724942dc291b31e5caf495a46",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_neutral.png",
+      "source_sha256": "2c002f1ea33819b498b98faf73a778e91ef6f707e787ef86c5b5bb8a52edbc2f",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_sad.png",
+      "source_sha256": "8dfa8c0170b5957c1fefdd50bea66397c394baa4f34388cd2d3f05f06b940c6a",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_think.png",
+      "source_sha256": "aee193d2dcefda8bb7668f801d3dc4503d407579d91d51d2d73ef04a365969ee",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_ugh.png",
+      "source_sha256": "fa19ceba696c469377fb95920e16fdd5b801183991b090042a54c8c3fa485255",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Autumn/spr_portrait_dell_autumn_wink.png",
+      "source_sha256": "c5f9f3054cdb790ae0eeafbc748a0cab2ac749d074f3f88ed282d7bd6537678f",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_embarrassed.png",
+      "source_sha256": "952be8e4f25f6bf19d4e267e13dc82346704d7956a73ad10ba09736b7b324964",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_happy.png",
+      "source_sha256": "b8187592ddc70ce5ab4597e800698fc80d8bf5d12e254775edd604e658d113a2",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_mad.png",
+      "source_sha256": "cd7069633a435641b432c6c18a624bf710d59590eed6ddb5f110e0d9bd66ce54",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_neutral.png",
+      "source_sha256": "9b4279cc83b32eed6ab4bbf933351e3d7d86796eca55607b694ed44d6c5d70ce",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_sad.png",
+      "source_sha256": "ae9ff137c985e30feec9ea3c8d6bc3ef1d68064fd267b9cae07fed9837807177",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_think.png",
+      "source_sha256": "2fae627f144924e223fedd721a8ea35fd58b67ac9b2700a66f0a7b242d731062",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_ugh.png",
+      "source_sha256": "08d957b10633038c15e33932f3d7a5e6328629a38a4bf2d89c86ef770e8a56ed",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Spring/spr_portrait_dell_spring_wink.png",
+      "source_sha256": "3adc2f168817743c5f5f4dd654c547260f9c9b575ae9ce020ebeb6740a6016eb",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_embarrassed.png",
+      "source_sha256": "5285e986e7a9ab40c72bca633f8f32b2b61770b2db9a4c087daac9d97dea528f",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_happy.png",
+      "source_sha256": "4efa5694777539ce47d62f9b7e05a35f1399a5612b083b838f1093f574779671",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_mad.png",
+      "source_sha256": "67820494c3cea16cf1a3643ed6b97f74522647873a35bf9724c1f5c9eacf74fd",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_neutral.png",
+      "source_sha256": "6a6e8be661d84d3e43184c59f92ff69c334a669692e6939c5647febed4b964e4",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_sad.png",
+      "source_sha256": "8b4c55f245d98626353f4397cc5cc75a80a32c6064dd1a6361a5e33123f58377",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_think.png",
+      "source_sha256": "e3066b2847fe5f98c62086356bde2fa18c67cb4f95d840051cd202aac6d88fea",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_ugh.png",
+      "source_sha256": "9fabee8da599d469e9566ecf549b49d64881888325566d12d98574d3af56cf02",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Summer/spr_portrait_dell_summer_wink.png",
+      "source_sha256": "817036c315e3e01de6d981034b0d276198bf78077b86593c11a9e8d77c8b97b8",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_embarrassed.png",
+      "source_sha256": "154fc5fec607f7c51bd289978b0ee5706c53fdc8f4376f30a7ce8eb4824f3dfb",
+      "native_frames": 2,
+      "new_components": 6
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_happy.png",
+      "source_sha256": "da4444b78487985b7874a5afdd9c4eec642e6db2a13a886ebedf1fa1160402b0",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_mad.png",
+      "source_sha256": "a422773f60d05b88362f31e0d15cbb005adfadecc36c932c01130a38b76504f4",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_neutral.png",
+      "source_sha256": "ffd935d8eb5c9ea1a0f6bf181c5cbae48cabaf6d58c4cd6722b63059c9dc2302",
+      "native_frames": 2,
+      "new_components": 0
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_sad.png",
+      "source_sha256": "4fffa237cadbc7f7231ef34b63c2d35aec6e155111bbeab0c88249f637e9f0bd",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_think.png",
+      "source_sha256": "158c19d150c4b586d7a60080fc88b7dbcc9178192c1c25a2e5a4952c595f8b44",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_ugh.png",
+      "source_sha256": "0d2d86940af4f927bf251a6522ba9efca83aaa39ef87b2f47c43d8b83fee5620",
+      "native_frames": 2,
+      "new_components": 4
+    },
+    {
+      "asset": "assets/animations/NPCs/Dell/Portraits/Winter/spr_portrait_dell_winter_wink.png",
+      "source_sha256": "fe8072c1d2d018be73d83fd643087305d80376f95c466894eccd08dade1cba0a",
+      "native_frames": 2,
+      "new_components": 0
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "presets": [
+    {
+      "colors": [
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83",
+        "#9DB9D4",
+        "#7F9FBD",
+        "#6687AD",
+        "#445F83"
+      ],
+      "id": "blue",
+      "label": "Debug Blue"
+    },
+    {
+      "colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF",
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF"
+      ],
+      "id": "npc_hayden",
+      "label": "Hayden palette"
+    },
+    {
+      "colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF",
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "id": "npc_ryis",
+      "label": "Ryis palette"
+    },
+    {
+      "colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF",
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF"
+      ],
+      "id": "npc_seridia",
+      "label": "Seridia palette"
+    },
+    {
+      "id": "player_04",
+      "label": "Light peach (Player 04)",
+      "colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF",
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF",
+        "#EAA092FF",
+        "#D05E67FF",
+        "#EAA092FF",
+        "#D05E67FF",
+        "#F1AAA2FF",
+        "#D5815FFF",
+        "#FBD7BCFF"
+      ],
+      "profile": "../profiles/adeline-native-tone-face.json"
+    },
+    {
+      "id": "npc_march",
+      "label": "Light golden (March)",
+      "colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF",
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF",
+        "#DCA07BFF",
+        "#BE6258FF",
+        "#DCA07BFF",
+        "#BE6258FF",
+        "#E6AA8AFF",
+        "#DCA966FF",
+        "#EEDDA5FF"
+      ],
+      "profile": "../profiles/adeline-native-tone-face.json"
+    },
+    {
+      "id": "npc_wiscar",
+      "label": "Warm peach (Wiscar)",
+      "colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF",
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF",
+        "#C98476FF",
+        "#B9575FFF",
+        "#C98476FF",
+        "#B9575FFF",
+        "#D48E84FF",
+        "#C47054FF",
+        "#E3A17BFF"
+      ],
+      "profile": "../profiles/adeline-native-tone-face.json"
+    },
+    {
+      "id": "player_16",
+      "label": "Warm brown (Player 16)",
+      "colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF",
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF",
+        "#B85F55FF",
+        "#A2474AFF",
+        "#B85F55FF",
+        "#A2474AFF",
+        "#C66E65FF",
+        "#7D382CFF",
+        "#DE855BFF"
+      ],
+      "profile": "../profiles/adeline-native-tone-face.json"
+    },
+    {
+      "id": "player_22",
+      "label": "Deep brown (Player 22)",
+      "colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF",
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF",
+        "#A35353FF",
+        "#84363FFF",
+        "#A35353FF",
+        "#84363FFF",
+        "#B26363FF",
+        "#471A19FF",
+        "#8E3F38FF"
+      ],
+      "profile": "../profiles/adeline-native-tone-face.json"
+    },
+    {
+      "id": "player_35",
+      "label": "Very deep (Player 35)",
+      "colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF",
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF",
+        "#84434DFF",
+        "#6E2F3DFF",
+        "#84434DFF",
+        "#6E2F3DFF",
+        "#96535FFF",
+        "#24090AFF",
+        "#4A171CFF"
+      ],
+      "profile": "../profiles/adeline-native-tone-face.json"
+    }
+  ],
+  "profile": "../profiles/adeline-world-finish.json"
+}

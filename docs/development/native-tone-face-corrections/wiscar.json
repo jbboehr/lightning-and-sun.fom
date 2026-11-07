@@ -1,0 +1,603 @@
+{
+  "character": "wiscar",
+  "status": "corrected",
+  "base_profile": "palettes/profiles/wiscar-world-trial.json",
+  "base_profile_sha256": "0ea469b509d0eeae1ce7e7f95e9edf3bc58f3b7b9e862a79744e50bd5ea08008",
+  "profile": "palettes/profiles/wiscar-native-tone-face.json",
+  "additional_source_colors": [
+    "#E37B7B"
+  ],
+  "targets": {
+    "player_04": [
+      "#FBD7BCFF",
+      "#F0B389FF",
+      "#D5815FFF",
+      "#89452DFF",
+      "#5B2E1EFF",
+      "#6E3724FF",
+      "#371C12FF",
+      "#FCE1CDFF",
+      "#F5E1C3FF",
+      "#F0B389FF",
+      "#EAA092FF"
+    ],
+    "npc_march": [
+      "#EEDDA5FF",
+      "#E6BD7CFF",
+      "#DCA966FF",
+      "#CC8155FF",
+      "#885639FF",
+      "#A36744FF",
+      "#523422FF",
+      "#F2E6BCFF",
+      "#E8E7ACFF",
+      "#E6BD7CFF",
+      "#DCA07BFF"
+    ],
+    "npc_wiscar": [
+      "#E3A17BFF",
+      "#D98364FF",
+      "#C47054FF",
+      "#9F5544FF",
+      "#6A392DFF",
+      "#7F4436FF",
+      "#40221BFF",
+      "#EAB99CFF",
+      "#DDAB82FF",
+      "#D98364FF",
+      "#C98476FF"
+    ],
+    "player_16": [
+      "#DE855BFF",
+      "#AE593AFF",
+      "#7D382CFF",
+      "#452019FF",
+      "#2E1511FF",
+      "#371A14FF",
+      "#1C0D0AFF",
+      "#E6A484FF",
+      "#D88F62FF",
+      "#AE593AFF",
+      "#B85F55FF"
+    ],
+    "player_22": [
+      "#8E3F38FF",
+      "#6D2B26FF",
+      "#471A19FF",
+      "#321111FF",
+      "#210B0BFF",
+      "#280E0EFF",
+      "#140707FF",
+      "#AA6F6AFF",
+      "#88493FFF",
+      "#6D2B26FF",
+      "#A35353FF"
+    ],
+    "player_35": [
+      "#4A171CFF",
+      "#351012FF",
+      "#24090AFF",
+      "#190705FF",
+      "#110503FF",
+      "#140604FF",
+      "#0A0302FF",
+      "#775155FF",
+      "#442123FF",
+      "#351012FF",
+      "#84434DFF"
+    ]
+  },
+  "counts": {
+    "selected_strips": 19,
+    "portrait_strips": 8,
+    "world_strips": 11,
+    "audited_native_portrait_frames": 16,
+    "mouth_unique_crops_inspected": 6,
+    "affected_strips": 1,
+    "components": 30,
+    "selected_pixels": 30
+  },
+  "regions": [
+    {
+      "asset": "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_embarrassed.png",
+      "source_sha256": "3e22d5438a9af2e4589de74911d3f85c0ea5f4f8bc8b46e572e28fd0a01395cb",
+      "size": [
+        592,
+        180
+      ],
+      "components": [
+        {
+          "seed": [
+            142,
+            71
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            142,
+            71,
+            142,
+            71
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            144,
+            71
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            144,
+            71,
+            144,
+            71
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            146,
+            71
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            146,
+            71,
+            146,
+            71
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            161,
+            71
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            161,
+            71,
+            161,
+            71
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            163,
+            71
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            163,
+            71,
+            163,
+            71
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            438,
+            71
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            438,
+            71,
+            438,
+            71
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            440,
+            71
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            440,
+            71,
+            440,
+            71
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            442,
+            71
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            442,
+            71,
+            442,
+            71
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            457,
+            71
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            457,
+            71,
+            457,
+            71
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            459,
+            71
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            459,
+            71,
+            459,
+            71
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            143,
+            72
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            143,
+            72,
+            143,
+            72
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            145,
+            72
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            145,
+            72,
+            145,
+            72
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            147,
+            72
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            147,
+            72,
+            147,
+            72
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            162,
+            72
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            162,
+            72,
+            162,
+            72
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            164,
+            72
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            164,
+            72,
+            164,
+            72
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            439,
+            72
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            439,
+            72,
+            439,
+            72
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            441,
+            72
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            441,
+            72,
+            441,
+            72
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            443,
+            72
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            443,
+            72,
+            443,
+            72
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            458,
+            72
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            458,
+            72,
+            458,
+            72
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            460,
+            72
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            460,
+            72,
+            460,
+            72
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            144,
+            73
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            144,
+            73,
+            144,
+            73
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            146,
+            73
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            146,
+            73,
+            146,
+            73
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            148,
+            73
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            148,
+            73,
+            148,
+            73
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            161,
+            73
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            161,
+            73,
+            161,
+            73
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            163,
+            73
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            163,
+            73,
+            163,
+            73
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            440,
+            73
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            440,
+            73,
+            440,
+            73
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            442,
+            73
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            442,
+            73,
+            442,
+            73
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            444,
+            73
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            444,
+            73,
+            444,
+            73
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            457,
+            73
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            457,
+            73,
+            457,
+            73
+          ],
+          "role": "blush"
+        },
+        {
+          "seed": [
+            459,
+            73
+          ],
+          "color": "#E37B7B",
+          "pixels": 1,
+          "bounds": [
+            459,
+            73,
+            459,
+            73
+          ],
+          "role": "blush"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_embarrassed.png",
+      "point": [
+        142,
+        71
+      ],
+      "source": "#E37B7B",
+      "expected": {
+        "player_04": "#EAA092",
+        "npc_march": "#DCA07B",
+        "npc_wiscar": "#C98476",
+        "player_16": "#B85F55",
+        "player_22": "#A35353",
+        "player_35": "#84434D"
+      },
+      "role": "blush"
+    }
+  ],
+  "protected_landmarks": [
+    {
+      "asset": "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_embarrassed.png",
+      "point": [
+        431,
+        60
+      ],
+      "source": "#C57286",
+      "role": "hair"
+    },
+    {
+      "asset": "assets/animations/NPCs/Wiscar/Portraits/spr_portrait_wiscar_spring_embarrassed.png",
+      "point": [
+        447,
+        80
+      ],
+      "source": "#F96F8C",
+      "role": "tongue"
+    }
+  ],
+  "audit": "Confirmed expression-only cheek/nose flush was absent from the donor mapping. Add its literal source components with the accepted Celine muted-rose depth ladder; retain all prior skin-role targets. Mouth frame crops and residual existing-skin-RGB inspection found no confirmed outer-mouth skin omissions. Preserve tongue/interior/lipstick, eyes, hair and source-specific markings.",
+  "source_archive_sha256": "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4"
+}

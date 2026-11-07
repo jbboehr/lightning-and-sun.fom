@@ -5,7 +5,7 @@ use crate::{
     toggle::{self, Variant},
 };
 use anyhow::{Context, Result, ensure};
-use serde::Deserialize;
+use serde::{Deserialize, Deserializer};
 use serde_json::{Value, json};
 use std::{
     collections::{BTreeMap, BTreeSet},
@@ -25,19 +25,20 @@ struct Preset {
     id: String,
     label: String,
     colors: Vec<String>,
+    #[serde(default, deserialize_with = "profile_path")]
+    profile: Option<PathBuf>,
 }
 pub struct Set {
     pub variants: Vec<Variant>,
     pub palettes: Vec<Palette>,
 }
 
-pub fn load(path: &Path) -> Result<Set> {
-    let definition: Definition = serde_json::from_slice(&fs::read(path)?)?;
-    let profile: Profile = serde_json::from_slice(&fs::read(
-        path.parent()
-            .unwrap_or(Path::new("."))
-            .join(definition.profile),
-    )?)?;
+fn profile_path<'de, D: Deserializer<'de>>(de: D) -> Result<Option<PathBuf>, D::Error> {
+    PathBuf::deserialize(de).map(Some)
+}
+
+fn load_profile(path: &Path) -> Result<Profile> {
+    let profile: Profile = serde_json::from_slice(&fs::read(path)?)?;
     ensure!(
         !profile.source_colors.is_empty()
             && profile.source_colors.len() <= 64
@@ -48,9 +49,21 @@ pub fn load(path: &Path) -> Result<Set> {
         profile.source_colors.iter().collect::<BTreeSet<_>>().len() == profile.source_colors.len(),
         "Duplicate profile source color"
     );
+    Ok(profile)
+}
+
+pub fn load(path: &Path) -> Result<Set> {
+    let definition: Definition = serde_json::from_slice(&fs::read(path)?)?;
+    let parent = path.parent().unwrap_or(Path::new("."));
+    let shared_profile = load_profile(&parent.join(definition.profile))?;
     let mut variants = Vec::new();
-    let mut palettes = Vec::new();
+    let mut palettes: Vec<Palette> = Vec::new();
     for preset in definition.presets {
+        let override_profile = preset
+            .profile
+            .map(|profile| load_profile(&parent.join(profile)))
+            .transpose()?;
+        let profile = override_profile.as_ref().unwrap_or(&shared_profile);
         ensure!(
             preset.colors.len() == profile.source_colors.len(),
             "Preset ramp length differs from profile: {}",
@@ -60,6 +73,13 @@ pub fn load(path: &Path) -> Result<Set> {
         let p = palette::parse(&serde_json::to_vec(
             &json!({"rgba_map":mapping,"color_groups":profile.color_groups,"regions":profile.regions}),
         )?)?;
+        if let Some(first) = palettes.first() {
+            ensure!(
+                p.assets() == first.assets(),
+                "Preset profiles must select the same asset inventory: {}",
+                preset.id
+            );
+        }
         palettes.push(p);
         variants.push(Variant {
             id: preset.id,
