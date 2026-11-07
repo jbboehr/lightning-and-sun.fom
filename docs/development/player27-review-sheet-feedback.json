@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-07",
+  "owner_feedback": "looks okay to me",
+  "assessment": "qualified acceptance of the representative portraits as displayed",
+  "inspection_depth": "Unspecified; the owner did not identify a format, pages or individual samples inspected.",
+  "reported_defects": [],
+  "scope": {
+    "characters_in_packet": 36,
+    "pages": 6,
+    "displayed_tiles": 144,
+    "sample": "One neutral Spring portrait per character, native frame 2.",
+    "columns": [
+      "Vanilla",
+      "Player22",
+      "Player27 (highlighted)",
+      "Player35"
+    ],
+    "presentation": "Identical 112 x 112 crop across four choices for each character; 2x nearest-neighbor scale. Dell and Luc use lower crops.",
+    "source_bindings": "See the pinned selection.json for source IDs, hashes, frame dimensions, crops and sheet locations."
+  },
+  "delivered_artifacts": {
+    "tmp/player27-roster-sheet/index.html": {
+      "sha256": "d04be79691fc1812802df080ab7a3759240f845e5df1f87a6a5b5809747a77be",
+      "bytes": 983432
+    },
+    "tmp/player27-roster-sheet/review-sheet.pdf": {
+      "sha256": "1372912cd145a89eb847256401f424dc3fb8dc0c2bb1b3af9d29673fa4fdc4d8",
+      "bytes": 688287
+    },
+    "tmp/player27-roster-sheet/review-sheets.zip": {
+      "sha256": "cedb9b1c1f367c4c787791ec98c1afee3401da245851be95b43392aaa58c3f9a",
+      "bytes": 672586
+    },
+    "tmp/player27-roster-sheet/selection.json": {
+      "sha256": "731b20a992776deddfedca93b553c9e49f06ec5966829cff66ff089327e59c71",
+      "bytes": 111002
+    }
+  },
+  "accepted_presentation_snapshot": {
+    "local/fixtures/player27-representative-review/sheet-01.png": {
+      "sha256": "1918d08a3aa149d2c2def6cc142a499aa6770f875860422de386a171c22289ba",
+      "bytes": 120189
+    },
+    "local/fixtures/player27-representative-review/sheet-02.png": {
+      "sha256": "a9893036c9880bf788de97e76662a16d76e0aa8d98c47889523f56f6d5fcadae",
+      "bytes": 121634
+    },
+    "local/fixtures/player27-representative-review/sheet-03.png": {
+      "sha256": "a64597eb0c41c4a91af73b6fc8c5e24b1b480fd99b8c44ca38c6681edd19a590",
+      "bytes": 126045
+    },
+    "local/fixtures/player27-representative-review/sheet-04.png": {
+      "sha256": "fea8b02c3ba316f42ca04edc437ea1f1b0baec47ec547646c4afa3a0ab142ad1",
+      "bytes": 112439
+    },
+    "local/fixtures/player27-representative-review/sheet-05.png": {
+      "sha256": "0f994f29a17f812a9cec095898217afa0a6528b4cefc9a5d0ca272b6b13dd245",
+      "bytes": 126936
+    },
+    "local/fixtures/player27-representative-review/sheet-06.png": {
+      "sha256": "c7d6323aabc2218210f095422c3396be55bd64a0912414c73ae3e8a242370341",
+      "bytes": 127721
+    },
+    "local/fixtures/player27-representative-review/selection.json": {
+      "sha256": "731b20a992776deddfedca93b553c9e49f06ec5966829cff66ff089327e59c71",
+      "bytes": 111002
+    }
+  },
+  "technical_checks": {
+    "path": "tmp/player27-roster-sheet/checks.json",
+    "sha256": "b99ff01e4f01a181f6cdcfcb355c44d66913c3717072116d492a670dbf7374c1"
+  },
+  "prior_integration_receipt": {
+    "path": "tmp/player27-rollout/integration-checks.json",
+    "sha256": "587f109aec460521aabc9832e1a361d3e4b1f2f9457fd0f22ef95edda047dbc1"
+  },
+  "limits": [
+    "Acceptance is scoped to the displayed representative presentation; no exhaustive inspection is asserted.",
+    "No acceptance of unsampled expressions, outfits, world sprites or complete cosmetic coverage is inferred.",
+    "No new approximate-tone-coverage worksheet decisions or live-game acceptance is inferred.",
+    "No entire source strip or all 6,312 new outputs become an accepted artwork baseline.",
+    "Previous art approvals, technical receipts and release gates retain their recorded scope.",
+    "This feedback does not authorize a commit or publication."
+  ],
+  "verification": {
+    "delivered_file_hashes": 12,
+    "selected_source_png_hashes": 144,
+    "selection_input_hashes": 76,
+    "prior_reviewed_technical_hashes": 53,
+    "prior_artifact_hashes": 2,
+    "frozen_snapshot_files": 7
+  }
+}

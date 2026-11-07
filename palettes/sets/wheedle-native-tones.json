@@ -199,6 +199,26 @@
         "#24090AFF",
         "#190705FF"
       ]
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#39150FFF",
+        "#2D130AFF",
+        "#1E0D07FF",
+        "#5D2C1CFF",
+        "#6D2F1EFF",
+        "#491F12FF",
+        "#281B14FF",
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF"
+      ]
     }
   ],
   "profile": "../profiles/wheedle-world-trial.json"

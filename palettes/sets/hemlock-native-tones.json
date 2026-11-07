@@ -161,6 +161,23 @@
         "#84434DFF"
       ],
       "profile": "../profiles/hemlock-native-tone-face.json"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#431D11FF",
+        "#582718FF",
+        "#2D130AFF",
+        "#813723FF",
+        "#431D11FF",
+        "#964B3EFF"
+      ],
+      "profile": "../profiles/hemlock-native-tone-face.json"
     }
   ],
   "profile": "../profiles/hemlock-world-trial.json"

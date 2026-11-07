@@ -220,6 +220,30 @@
         "#6E2F3DFF"
       ],
       "profile": "../profiles/darcy-native-tone-face.json"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#813723FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#964B3EFF",
+        "#6F3231FF",
+        "#964B3EFF",
+        "#6F3231FF"
+      ],
+      "profile": "../profiles/darcy-native-tone-face.json"
     }
   ]
 }

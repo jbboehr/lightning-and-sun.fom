@@ -187,6 +187,26 @@
         "#723642FF"
       ],
       "profile": "../profiles/terithia-native-tone-face.json"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#8A3E37FF",
+        "#8F443DFF",
+        "#974E48FF",
+        "#2D130AFF",
+        "#964B3EFF",
+        "#843E33FF"
+      ],
+      "profile": "../profiles/terithia-native-tone-face.json"
     }
   ],
   "profile": "../profiles/terithia-world-trial.json"

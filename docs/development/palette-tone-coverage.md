@@ -568,3 +568,135 @@ release gates remain separate. The [plan](../plans/native-tone-coverage.md) now
 records the user's subsequent "do it" authorization for the checkpoint commit,
 including the expansion, corrections and planning updates. Publication remains
 separate.
+
+## Coverage review planning
+
+2026-11-06. The owner approved a bounded Astra planning pass with "go for it".
+The [review proposal](../plans/native-tone-coverage-review.md) recommends a compact
+source/representative worksheet and explicit decision record using current art.
+Preparation was subsequently approved and completed as recorded below. Owner
+coverage assessment remains pending; no palettes or artwork changed during
+planning or preparation.
+
+Astra's read-only investigation reproduced all 2,592 diagnostic assignments
+against current recipe IDs and reported that `append-presets.py --check`
+reproduces all 36 sets and 1,812 historical noncosmetic targets. Sol spot-checked
+the cited diagnostic and target-preservation contracts, independently verified
+all three catalog hashes against the matrix, and confirmed 72 entries, 70
+distinct ramps and 36 character records.
+
+The planner found 216 distinct source/reference pairs and 32 character-specific
+assignment patterns. Every character has eight common natural reference families
+plus special gray through a donor or Vanilla. Proposed common representatives
+would differ from 164 existing nearest assignments; preserve those alternatives,
+especially character-specific Vanilla matches. Debug Blue is excluded from the
+diagnostic, and no natural source is assigned to special gray. These observations
+support grouping the review, not declaring visual equivalence.
+
+Reference distances do not measure rendered output. Dell, Luc, Zorel and Olric
+have irregular sampled ramp lengths; Wheedle's four sampled colors have
+light/middle/shadow/shadow roles. These sampling limits are reasons to inspect
+current portrait/world output, not newly established mapping defects. Current
+images resolve through the final Holt composite report and candidate-source
+binding; world outputs are unchanged. Prior correction galleries and source
+swatches do not themselves record source-to-representative coverage decisions.
+
+No technical blocker was found. No new art or coverage acceptance is supplied by
+the planning checks. Assessment may identify a named gap; coverage stays open
+until it is addressed or explicitly accepted as a limitation. Physical input,
+broader gameplay, compatibility, licensing and publication gates retain scope.
+
+## Coverage worksheet prepared
+
+2026-11-06. The owner approved the proposed worksheet and decision-record slice
+with "go for it" after reviewing the Astra plan. Sol prepared one compact
+[worksheet](../../tmp/native-tone-coverage-review/index.html), its
+[download](../../tmp/native-tone-coverage-review.zip), and the
+[pending decision record](native-tone-coverage-review.json). No palettes,
+profiles, game images or runtime code changed. This records completion of
+preparation, not owner coverage acceptance.
+
+The worksheet starts with 17 priority comparisons. All 70 distinct ramps and
+all 72 source identities remain accessible; duplicate identities stay together,
+special gray is separate and Debug Blue is diagnostic context. Source swatches
+are on the left, with the selected reference on the right in the inspector.
+The range list keeps the common proposals visible. Each character's original
+nearest-reference alternative remains available, including the 164 assignments
+that differ from the common proposals. No diagnostic threshold or coverage
+percentage was introduced.
+
+Each of the 36 characters has a Spring neutral portrait and a suitable world
+strip. Enlarged face crops use the catalog's source-sample positions; the full
+portrait toggle and native frame controls retain context. Vanilla is left and
+the selected palette right. Images resolve through the final Holt composite
+report and its candidate-source binding, including current Adeline and Celine
+outputs. Every copied PNG and metadata file is byte-bound to its current source.
+Creator references are also checked against the original source LUT member.
+
+The [check packet](../../tmp/native-tone-coverage-review-checks/checks.json)
+records fingerprints, browser results and these completed checks:
+
+- All 2,592 source/character combinations resolve to available choices; all 72
+  source identities and duplicate provenance are accounted for. All decisions
+  remain pending and no owner feedback is invented.
+- All 872 input fingerprints and 864 image/metadata bindings agree. The 792 PNG
+  samples preserve original dimensions, and the 72 metadata files supply native
+  frame boundaries. Source catalogs and current selected recipes/profiles match.
+- CPU Chromium at 1440×1000 and 390×844 exercises all 36 characters and eleven
+  choices (792 portrait/world sample selections per run), all 72 last-frame
+  pairs, source filters, Inspect and nearest-alternative buttons, full portrait
+  and face-detail controls, and Caldarus's Vanilla gray resolution. Both layouts
+  pass without horizontal overflow. Direct file opening also passes.
+- An inspector regression was observed failing when choosing Vanilla changed
+  the artwork but left the proposed swatches visible. Swatches now follow the
+  selected palette, and the regression passes in both browser runs. Focused
+  negative checks reject unavailable representatives and stale image bindings.
+- All 874 worksheet/ZIP entries match their fingerprints and ZIP contents;
+  internal page links and all 36 complete portrait links resolve. Complete world
+  gallery links also resolve. The download includes all worksheet samples and
+  a decision snapshot; optional complete-gallery links need the project checkout.
+
+The local standard-library preparation and CPU check helpers are retained under
+`local/authoring/native-tone-coverage-review/`; the source manifest and check
+packet pin their contributing code. Retain the approximately 16 MiB worksheet,
+7.45 MiB download and small check/screenshot directory for owner review and
+reproduction. All earlier packets remain frozen. Full builds, install/remove and
+live checks were not rerun for this report-only slice; their recorded evidence
+and limits remain unchanged. No local GPU or local model inference was used.
+
+The next assessment is whether the displayed choices adequately span the sampled
+range, with specific approximations or gaps stated explicitly. Record the exact
+feedback, artifact fingerprint and inspection limits before changing decision
+statuses or freezing accepted evidence. Selected examples do not establish
+exhaustive expression, seasonal/outfit, physical-controller or live-game approval.
+
+## Deep umber comparison, 2026-11-07
+
+Sol reviewed all 70 source/reference swatch pairs and current neutral/world
+samples for 12 characters. The assistant assessment found a useful depth range,
+with a residual deep brown/umber undertone difference from the red/burgundy
+Player 22 and Player 35 families. Muted light/mid tones and some warm midpoint
+contrasts remain secondary approximations. This is not owner coverage acceptance.
+
+The user replied "sure" to a recommendation for a small CPU-only comparison of
+Player 27 and Player 30. The [pilot record](deep-umber-pilot.md) owns scope,
+provisional cosmetics, exact source colors, pixel/control preservation and browser
+evidence. The five-character comparison is prepared and technically verified;
+After Sol proposed one Player 27 addition while retaining every existing palette,
+the owner delegated the choice with "up to you". Sol selects Player 27 and
+proceeds with the [single-family rollout](../plans/player27-rollout.md). This
+records delegated selection and implementation authorization, without inferring
+an owner visual assessment or broader coverage acceptance.
+The pilot itself changed no live roster, preset ceiling or coverage decisions.
+The authorized rollout owns the subsequent changes and integrated verification;
+the old worksheet and its pending decision record remain frozen.
+
+The [Player27 rollout record](player27-rollout.md) now owns the fully verified
+69,432-PNG collection and complete four-column comparison. All 63,120 old PNGs
+remain exact; all 6,312 new PNGs pass literal reconstruction. Pinned package,
+strict full installation/removal and twelve-choice native controls/persistence
+pass. The separate supplement reproduces the old 2,592 assignments before adding
+Player27; its 108 improved rankings concern creator Player24/27/30, not an
+acceptance threshold or coverage percentage. The owner gave qualified acceptance
+of the [displayed representative portraits](player27-review-sheet.md#owner-feedback).
+Broader artwork/cosmetic and coverage assessment remain separate and pending.

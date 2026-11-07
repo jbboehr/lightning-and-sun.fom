@@ -1,14 +1,16 @@
 # Lightning and Sun
 
 Skin palettes for the 36 supported Fields of Mistria characters, covering their
-portraits and recolorable world sprites. Each character offers eleven choices:
-Vanilla, Debug Blue, three previous donor palettes and six additional tones
+portraits and recolorable world sprites. Each character offers twelve choices:
+Vanilla, Debug Blue, three previous donor palettes and seven additional tones
 adapted from the game's NPC and player-creator colors. Clothing,
 hair, equipment, markings and intentional spectral forms keep their original
 colors.
 
 This is a Linux release candidate. The complete collection is authored and
-passes installation/removal checks. Displayed artwork is accepted. Native menus,
+passes installation/removal checks. Representative Player 27 portraits have
+qualified visual acceptance; broader artwork review remains. Prior displayed
+artwork is accepted. Native menus,
 keyboard/mouse, virtual gamepad, remembered choices and basic gameplay/save/load
 checks pass; physical controller and broader seasonal gameplay acceptance remain.
 
@@ -72,8 +74,9 @@ Caldarus and Seridia offer Adeline/Hayden/Ryis. Every character also offers:
 - Warm brown (Player 16)
 - Deep brown (Player 22)
 - Very deep (Player 35)
+- Deep umber (Player 27)
 
-The six added tones are candidate artwork awaiting review. They approximate a
+These tones approximate a
 broader native range; they do not reproduce every original skin color exactly.
 Natural skin ramps, glow effects,
 scars and body markings can make results differ between characters.

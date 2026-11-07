@@ -141,6 +141,21 @@
         "#84434DFF"
       ],
       "profile": "../profiles/darren-native-tone-face.json"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#582718FF",
+        "#582718FF",
+        "#2D130AFF",
+        "#964B3EFF"
+      ],
+      "profile": "../profiles/darren-native-tone-face.json"
     }
   ],
   "profile": "../profiles/darren-world-trial.json"

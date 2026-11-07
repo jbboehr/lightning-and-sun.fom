@@ -119,6 +119,18 @@
         "#351012FF",
         "#190705FF"
       ]
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#582718FF",
+        "#2D130AFF"
+      ]
     }
   ],
   "profile": "../profiles/vera-world-trial.json"

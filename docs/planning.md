@@ -1,6 +1,6 @@
 # Project planning
 
-Updated 2026-11-06. This is the current project overview. The original
+Updated 2026-11-07. This is the current project overview. The original
 [handoff](HANDOFF.md) preserves the investigation brief; it is historical.
 
 The user approved the finish plan on 2026-11-05 with "let's do it".
@@ -26,7 +26,12 @@ unspecified. The user authorized this checkpoint commit; no reported
 portrait defect remains open. Broader approximate-coverage assessment and the
 remaining release gates stay separate. The
 [native-tone plan](plans/native-tone-coverage.md) owns scope and next steps;
-original approvals and their limits remain recorded.
+original approvals and their limits remain recorded. The subsequent delegated
+Player27 addition is implemented and passes full image, package, native control,
+persistence and removal checks. Its [rollout record](development/player27-rollout.md)
+owns the complete comparison; the [representative sheet record](development/player27-review-sheet.md#owner-feedback)
+records qualified acceptance of the displayed 36-character sample. Broader artwork
+and approximate-coverage assessment remain separate.
 
 | Area | Status |
 | --- | --- |
@@ -34,12 +39,12 @@ original approvals and their limits remain recorded.
 | Selected portrait inventory | All 2,201 strips for 36 characters included; some intentionally unchanged |
 | Selected world inventory | All 4,111 recolorable strips included; remaining 30 shadows and 18 spectral strips audited unchanged |
 | Complete world coverage | All 36 recolorable inventories authored and validated |
-| Art acceptance | Original approvals and qualified Celine/roster/Adeline/Holt feedback recorded; no current reported portrait defect; broader coverage assessment remains |
+| Art acceptance | Original approvals, qualified Celine/roster/Adeline/Holt feedback and qualified Player27 representative-portrait acceptance recorded; no current reported portrait defect; broader coverage assessment remains |
 | Content-complete alpha | Reached on 2026-11-06; live-game acceptance remains separate |
 | Release controls | Live title/journal keyboard, mouse, virtual-gamepad and persistence checks pass; displayed review has qualified user acceptance; physical-controller acceptance remains |
 | Integration confidence | Final package passes install/remove and basic rendered dialogue/movement/room/day/save/load checks; displayed review accepted with qualifications; broader live acceptance remains |
 | Linux packaging | Installable pinned-Nix candidate built and checked from standalone source; not published |
-| Palette breadth | Six sourced additions integrated and verified across all 36 characters; checkpoint commit authorized; broader approximate-coverage assessment remains |
+| Palette breadth | Six sourced additions committed; one delegated Player27 addition fully verified across all 36, retaining earlier choices; displayed representative portraits accepted with qualifications; broader artwork and coverage assessment remain |
 
 ## Approved finish line
 
@@ -76,11 +81,12 @@ accepted as displayed, including qualified first/fourth-batch approval. Earlier
 glasses/scar qualifications and unspecified inspection depth remain recorded.
 P5 title/journal menu, keyboard/mouse/virtual-gamepad input, saving/reset/restart and failure feedback pass live after three bounded initialization/notification fixes. Basic natural gameplay and actual save/load also pass; the displayed live review has qualified user acceptance. Physical-controller and broader seasonal/action acceptance remain. See the [live verification record](development/live-release-verification-2026-11-06.md).
 
-The representative native-tone implementation and its reported portrait
-corrections form the authorized checkpoint commit before final release preparation. The [coverage assessment](development/palette-tone-coverage.md) owns
-the evidence; the [new plan](plans/native-tone-coverage.md) defines selection,
-pilot, full-roster integration and one consolidated review. Existing approvals
-and the reached original content-complete alpha remain valid.
+The six-family native-tone implementation and reported portrait corrections
+are committed. The subsequent Player27 addition is verified and committed locally;
+its representative portrait review has qualified acceptance. The
+[coverage assessment](development/palette-tone-coverage.md) owns the evidence;
+the [native-tone plan](plans/native-tone-coverage.md) owns the remaining coverage
+work. Existing approvals and the original content-complete alpha remain valid.
 
 | Order | Outcome | Dependency / state | Local GPU |
 | --- | --- | --- | --- |
@@ -90,7 +96,7 @@ and the reached original content-complete alpha remain valid.
 | P3 | Finish Errol, Hemlock, Luc, Maple and Terithia | All strips authored, validated and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
 | P4 | Finish Caldarus and Seridia, including an explicit special-form audit | Complete and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
 | P5 | Add one selection menu and opt-in remembered choices using the existing runtime | Native menu/storage/input checks pass and displayed live review accepted with qualifications; physical-controller acceptance remains | CPU development; GPU for live verification |
-| Native-tone checkpoint | Broaden selectable tones across the existing roster | Implementation and reported corrections verified; checkpoint commit authorized; qualified displayed feedback and broader coverage assessment recorded separately in the [native-tone plan](plans/native-tone-coverage.md) | No for checkpoint; yes for further live rendering |
+| Native-tone checkpoint | Broaden selectable tones across the existing roster | Six-family checkpoint and Player27 follow-up committed; qualified representative-portrait acceptance recorded; broader coverage assessment remains in the [native-tone plan](plans/native-tone-coverage.md) | No for commit; yes for further live rendering |
 | P6 | Validate complete artwork, package, installation/removal and natural gameplay; prepare supported Linux release | Artwork and displayed basic live review accepted; broader live matrix and final release gates remain | Yes for gameplay/rendering; CPU for other checks |
 
 The remaining 30 strips outside P1–P4 are Hayden shadows (29, already audited)
@@ -164,6 +170,20 @@ The next planned batch and remaining release work are:
 
 1. Assess broader approximate native-tone coverage separately from the qualified
    displayed feedback recorded with this checkpoint and its frozen review packet.
+   The approved [compact coverage review](plans/native-tone-coverage-review.md)
+   is prepared and technically verified using existing diagnostics and current
+   artwork. Owner coverage assessment remains pending; no local GPU was required.
+   The user approved a bounded [deep-umber pilot](development/deep-umber-pilot.md)
+   comparing Player 27 and Player 30; it is prepared and technically verified.
+   After the one-addition proposal, the owner delegated the decision with
+   "up to you". Sol selects Player 27; the [single-family rollout](plans/player27-rollout.md)
+   is implemented and technically verified, retaining every existing choice.
+   Full image preservation, pinned package/install/remove and twelve-choice
+   native controls/persistence pass. The complete comparison remains available.
+   The subsequently requested [representative review sheet](development/player27-review-sheet.md)
+   has qualified owner acceptance of the displayed neutral portraits for all 36
+   characters. Its record owns the exact feedback and inspection limits; broader
+   artwork and coverage acceptance are not inferred.
 2. Complete remaining physical-controller and broader seasonal/outfit/action
    verification, recording any accepted limits. Further live work requires
    checked GPU availability and a reservation. Prepare release notes from the
@@ -196,7 +216,12 @@ Release scope, menu/remembering behavior and parallel authoring are approved.
 Broader native-tone implementation is approved. Six additions are integrated across all 36 characters; full strict package checks
 and expanded native checks pass. Qualified positive displayed-art feedback is
 recorded through the final Holt correction; full inspection/approximate-coverage
-approval is not inferred. The bounded preset ceiling rises to ten generated variants plus Vanilla. The existing preset
+approval is not inferred. The six-family checkpoint raised the bounded ceiling
+to ten generated variants; the authorized Player27 addition raises it to eleven
+plus Vanilla. Its complete verification and comparison packet are recorded in
+the [Player27 rollout](development/player27-rollout.md). Qualified acceptance of
+the displayed representative portraits is recorded separately from broader
+artwork and coverage assessment. The existing preset
 limit is a starting budget, not evidence of approximate tone coverage.
 Rendered title/journal UI, actual OS keyboard/mouse and SDL virtual-gamepad events,
 persistence/failures and basic game save/load pass; the displayed review has

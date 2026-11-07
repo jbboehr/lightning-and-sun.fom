@@ -213,6 +213,29 @@
         "#35141FFF"
       ],
       "profile": "../profiles/nora-native-tone-face.json"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#431D11FF",
+        "#582718FF",
+        "#582718FF",
+        "#431D11FF",
+        "#814538FF",
+        "#582C2EFF",
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#964B3EFF",
+        "#431D11FF",
+        "#582C2EFF"
+      ],
+      "profile": "../profiles/nora-native-tone-face.json"
     }
   ],
   "profile": "../profiles/nora-world-trial.json"

@@ -367,10 +367,20 @@ user acceptance. Its scope, frozen review artifact and remaining limits are in
 the [live record](../development/live-release-verification-2026-11-06.md).
 
 1. The [representative native-tone expansion](native-tone-coverage.md) is
-   implemented with integrated checks complete on 2026-11-06. One consolidated
-   new-art and approximate-coverage assessment remains after the bounded Celine
-   portrait-blush correction; that correction passes its focused integrated
-   checks and awaits review. Existing content and displayed-live approvals stand.
+   implemented with integrated checks complete on 2026-11-06. Reported portrait
+   defects are resolved with qualified displayed feedback through the final
+   Holt correction. Broader approximate-coverage assessment remains; the
+   approved [compact review](native-tone-coverage-review.md) is prepared and
+   technically verified, awaiting owner coverage assessment. Existing content
+   and displayed-live approvals stand.
+   A subsequently approved [deep-umber pilot](../development/deep-umber-pilot.md)
+   compares Player 27/30 on selected current masks and passes CPU checks. The owner
+   then delegated Sol's one-addition decision with "up to you". Player 27 is
+   selected; its [single-family rollout](player27-rollout.md) is implemented and
+   passes full image, package/install/remove and twelve-choice native checks.
+   The representative 36-character portrait sheet has
+   [qualified owner acceptance](../development/player27-review-sheet.md#owner-feedback);
+   broader artwork and complete coverage acceptance remain separate.
 2. Resolve physical-controller and broader
    seasonal/action acceptance without inferring it from virtual input or offline
    frame coverage. Further live gameplay requires a checked/reserved GPU.
@@ -379,7 +389,8 @@ the [live record](../development/live-release-verification-2026-11-06.md).
    requires recorded art and live acceptance; publishing needs authorization.
 
 Original character-mask authoring is complete. The approved native-tone batch
-adds target mappings across the same roster and now awaits visual acceptance.
+adds target mappings across the same roster. Qualified feedback on the displayed
+corrections is recorded; broader approximate-coverage assessment remains.
 New defects discovered during acceptance remain bounded follow-ups with their
 own evidence. Other palette or runtime expansion requires its own scope decision.
 

@@ -169,6 +169,23 @@
         "#320C0EFF",
         "#24090AFF"
       ]
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#6A3521FF",
+        "#8B422EFF",
+        "#944B3AFF",
+        "#A6604BFF",
+        "#41120BFF",
+        "#552314FF",
+        "#431D11FF"
+      ]
     }
   ],
   "profile": "../profiles/wynne-world-trial.json"

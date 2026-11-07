@@ -6,6 +6,28 @@ fn run_controls(case: &str) {
     let characters: Vec<Value> =
         serde_json::from_str(include_str!("../mod/config/characters.json")).unwrap();
     assert_eq!(characters.len(), 36);
+    let presets: &[(&str, &str)] = if case == "max_presets" {
+        &[
+            ("vanilla", "Vanilla"),
+            ("blue", "Debug Blue"),
+            ("npc_hayden", "Hayden palette"),
+            ("npc_ryis", "Ryis palette"),
+            ("npc_seridia", "Seridia palette"),
+            ("player_04", "Light peach (Player 04)"),
+            ("npc_march", "Light golden (March)"),
+            ("npc_wiscar", "Warm peach (Wiscar)"),
+            ("player_16", "Warm brown (Player 16)"),
+            ("player_22", "Deep brown (Player 22)"),
+            ("player_35", "Very deep (Player 35)"),
+            ("player_27", "Deep umber (Player 27)"),
+        ]
+    } else {
+        &[
+            ("vanilla", "Vanilla"),
+            ("candidate", "Candidate"),
+            ("other", "Other"),
+        ]
+    };
     let definitions: Vec<Value> = characters
         .iter()
         .enumerate()
@@ -15,20 +37,16 @@ fn run_controls(case: &str) {
                 character["id"],
                 character["label"],
                 character["hotkey"],
-                ["Vanilla", "Candidate", "Other"],
+                presets.iter().map(|(_, label)| label).collect::<Vec<_>>(),
                 [
-                    [
-                        format!("p{}", n + 10),
-                        format!("p{}", n + 20),
-                        format!("p{}", n + 30)
-                    ],
-                    [
-                        format!("spr_npc_{}", n + 300),
-                        format!("spr_npc_{}", n + 301),
-                        format!("spr_npc_{}", n + 302)
-                    ]
+                    (0..presets.len())
+                        .map(|index| format!("p{}", n + 10 * (index + 1)))
+                        .collect::<Vec<_>>(),
+                    (0..presets.len())
+                        .map(|index| format!("spr_npc_{}", n + 300 + index))
+                        .collect::<Vec<_>>()
                 ],
-                ["vanilla", "candidate", "other"]
+                presets.iter().map(|(id, _)| id).collect::<Vec<_>>()
             ])
         })
         .collect();
@@ -95,4 +113,10 @@ fn native_palette_page_preserves_menu_and_animation_state() {
 #[ignore = "requires the pinned Fabricator interpreter in FOM_GML_INTERPRETER"]
 fn palette_storage_uses_stable_ids_and_confirms_primary_writes() {
     run_controls("storage");
+}
+
+#[test]
+#[ignore = "requires the pinned Fabricator interpreter in FOM_GML_INTERPRETER"]
+fn twelve_choices_preserve_navigation_animation_and_version_one_storage() {
+    run_controls("max_presets");
 }

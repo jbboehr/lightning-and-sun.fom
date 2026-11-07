@@ -33,10 +33,12 @@ struct Case {
     profile: Value,
     before: PathBuf,
     after: PathBuf,
+    historical_ids: Vec<String>,
 }
 
 fn cases() -> Vec<Case> {
     let baseline = read("tests/fixtures/native-tone-face-baseline.json");
+    let ten_choice_baseline = read("tests/fixtures/player27-ten-choice-baseline.json");
     let result: Vec<_> = baseline["characters"]
         .as_object()
         .unwrap()
@@ -51,7 +53,7 @@ fn cases() -> Vec<Case> {
             assert!(matches!(status, "corrected" | "audited-no-change"));
             let set = read(format!("palettes/sets/{id}-native-tones.json"));
             let presets = set["presets"].as_array().unwrap();
-            assert_eq!(presets.len(), 10, "{id}");
+            assert_eq!(presets.len(), 11, "{id}");
             let selected = presets[4].get("profile").unwrap_or(&set["profile"]);
             for preset in &presets[4..] {
                 assert_eq!(preset.get("profile").unwrap_or(&set["profile"]), selected);
@@ -81,11 +83,32 @@ fn cases() -> Vec<Case> {
                 profile,
                 before,
                 after,
+                historical_ids: ten_choice_baseline["characters"][id]["presets"]
+                    .as_array()
+                    .unwrap()
+                    .iter()
+                    .map(|preset| preset["id"].as_str().unwrap().to_owned())
+                    .collect(),
             }
         })
         .collect();
     assert_eq!(result.len(), 35);
     result
+}
+
+fn historical_presets(case: &Case) -> Vec<&Value> {
+    assert_eq!(case.historical_ids.len(), 10);
+    case.historical_ids
+        .iter()
+        .map(|id| {
+            case.set["presets"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .find(|preset| preset["id"] == *id)
+                .unwrap()
+        })
+        .collect()
 }
 
 #[test]
@@ -141,7 +164,7 @@ fn reviewed_blush_mouth_and_protected_landmarks_match_all_six_native_tones() {
                     case.id
                 );
                 let role = point["role"].as_str().unwrap();
-                let presets = case.set["presets"].as_array().unwrap();
+                let presets = historical_presets(&case);
                 for preset in if all_choices {
                     presets.as_slice()
                 } else {
@@ -356,7 +379,7 @@ fn complete_roster_delta_is_confined_to_reviewed_facial_components() {
                     .with_extension("meta.toml"),
             )
             .unwrap();
-            for (index, preset) in case.set["presets"].as_array().unwrap().iter().enumerate() {
+            for (index, preset) in historical_presets(&case).into_iter().enumerate() {
                 let id = preset["id"].as_str().unwrap();
                 let before = case.before.join("variants").join(id).join(asset);
                 let after = case.after.join("variants").join(id).join(asset);
@@ -479,7 +502,7 @@ fn first_roster_correction_preserves_all_prior_four_choice_pngs() {
         let frozen = root()
             .join("generated/native-tone-roster-face")
             .join(&case.id);
-        for preset in &case.set["presets"].as_array().unwrap()[..4] {
+        for preset in &historical_presets(&case)[..4] {
             let id = preset["id"].as_str().unwrap();
             for region in case.profile["regions"].as_array().unwrap() {
                 let asset = region["asset"].as_str().unwrap();

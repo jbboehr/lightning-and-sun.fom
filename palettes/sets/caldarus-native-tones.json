@@ -177,6 +177,25 @@
         "#723642FF"
       ],
       "profile": "../profiles/caldarus-native-tone-face.json"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#813723FF",
+        "#582718FF",
+        "#782B14FF",
+        "#813723FF",
+        "#582718FF",
+        "#964B3EFF",
+        "#843E33FF"
+      ],
+      "profile": "../profiles/caldarus-native-tone-face.json"
     }
   ],
   "profile": "../profiles/caldarus-world-trial.json"

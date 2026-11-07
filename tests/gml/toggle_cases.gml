@@ -158,19 +158,22 @@ assert(global.menu.portrait.sprite == 40);
 assert(global.menu.portrait.index == 0.75);
 global.third_preset = false;
 
-// Vanilla plus the maximum ten presets must all be reachable before wrapping.
+// Vanilla plus the maximum eleven presets must all be reachable before wrapping.
 global.__lns_palette = undefined;
 global.max_presets = true;
 global.menu = new TestTextbox();
 lns_palette_initialize();
 lns_palette_menu_opened({kind: Menu.Textbox, menu: global.menu});
-var expected_max_sprites = [20, 61, 62, 63, 64, 65, 66, 67, 68, 69];
-for (var preset = 1; preset <= 10; preset++) {
+var expected_max_sprites = [20, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71];
+assert(array_length(__lns_palette_runtime().characters[0].names) == 12);
+for (var preset = 1; preset <= 11; preset++) {
     global.hotkey();
     assert(__lns_palette_runtime().characters[0].selected == preset);
     assert(global.menu.portrait.sprite == expected_max_sprites[preset - 1]);
     assert(global.menu.portrait.index == 1.25);
 }
+assert(__lns_palette_runtime().characters[0].preset_ids[11] == "player_27");
+assert(global.palette_log == "Adeline palette: Deep umber (Player 27)");
 global.hotkey();
 assert(__lns_palette_runtime().characters[0].selected == 0);
 assert(global.menu.portrait.sprite == 10);
@@ -180,7 +183,7 @@ assert(array_length(global.notices) == 0, "Cycling palettes queued HUD popups");
 
 // The final asset is as mandatory as the first; partial maximum tables stay disabled.
 global.__lns_palette = undefined;
-global.missing_asset_name = "spr_lns_adeline_spring_neutral_ten";
+global.missing_asset_name = "spr_lns_adeline_spring_neutral_player_27";
 global.hotkey_count = 0;
 global.warning_count = 0;
 lns_palette_initialize();

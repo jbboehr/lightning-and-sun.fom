@@ -346,8 +346,8 @@ fn invalid_or_incomplete_preset_sets_leave_no_output() {
 }
 
 #[test]
-fn preset_count_boundaries_accept_one_through_ten_but_reject_zero_and_eleven() {
-    for count in [0usize, 1, 8, 9, 10, 11] {
+fn preset_count_boundaries_accept_one_through_eleven_but_reject_zero_and_twelve() {
+    for count in [1usize, 8, 9, 10, 11, 0, 12] {
         let temp = tempfile::tempdir().unwrap();
         let (original, set) = fixture(temp.path());
         let output = temp.path().join("bundle");
@@ -372,7 +372,7 @@ fn preset_count_boundaries_accept_one_through_ten_but_reject_zero_and_eleven() {
             Path::new("--output"),
             &output,
         ]);
-        if (1..=10).contains(&count) {
+        if (1..=11).contains(&count) {
             assert!(
                 result.status.success(),
                 "rejected {count} presets: {}",
@@ -384,6 +384,23 @@ fn preset_count_boundaries_accept_one_through_ten_but_reject_zero_and_eleven() {
                 report["package"]["variants"].as_array().unwrap().len(),
                 count
             );
+            let script = fs::read_to_string(output.join("package/gml/palette_assets.gml")).unwrap();
+            let table: Value = serde_json::from_str(
+                script
+                    .split_once("return ")
+                    .unwrap()
+                    .1
+                    .split_once("; }")
+                    .unwrap()
+                    .0,
+            )
+            .unwrap();
+            let expected_ids: Vec<_> = std::iter::once("vanilla".to_owned())
+                .chain((0..count).map(|index| format!("variant_{index}")))
+                .collect();
+            assert_eq!(table[0][5], json!(expected_ids));
+            assert_eq!(table[0][3].as_array().unwrap().len(), count + 1);
+            assert_eq!(table[0][4][0].as_array().unwrap().len(), count + 1);
             for index in 0..count {
                 assert!(
                     output
@@ -398,6 +415,10 @@ fn preset_count_boundaries_accept_one_through_ten_but_reject_zero_and_eleven() {
         } else {
             assert!(!result.status.success(), "accepted {count} presets");
             assert!(!output.exists(), "published rejected {count}-preset set");
+            assert!(
+                String::from_utf8_lossy(&result.stderr)
+                    .contains("Select between one and eleven presets")
+            );
         }
     }
 }

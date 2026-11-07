@@ -1,5 +1,5 @@
 {
-  "description": "Six additional native donor families for the existing NPC roster; four ordered skin roles per ramp. Existing target palettes remain unchanged. New artwork acceptance is separate.",
+  "description": "Seven additional native donor families for the existing NPC roster; four ordered skin roles per ramp. Existing target palettes remain unchanged. New artwork acceptance is separate.",
   "presets": [
     {
       "id": "player_04",
@@ -72,6 +72,18 @@
       ],
       "source_catalog": "player.json",
       "source_id": "player_35"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF"
+      ],
+      "source_catalog": "player.json",
+      "source_id": "player_27"
     }
   ]
 }

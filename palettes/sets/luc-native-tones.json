@@ -171,6 +171,24 @@
         "#84434DFF"
       ],
       "profile": "../profiles/luc-native-tone-face.json"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#2D130AFF",
+        "#431D11FF",
+        "#431D11FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#AF8377FF",
+        "#BB968CFF",
+        "#431D11FF",
+        "#964B3EFF"
+      ],
+      "profile": "../profiles/luc-native-tone-face.json"
     }
   ],
   "profile": "../profiles/luc-world-trial.json"

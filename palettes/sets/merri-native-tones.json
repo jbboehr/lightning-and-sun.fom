@@ -151,6 +151,22 @@
         "#84434DFF"
       ],
       "profile": "../profiles/merri-native-tone-face.json"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#944D3BFF",
+        "#2D130AFF",
+        "#964B3EFF"
+      ],
+      "profile": "../profiles/merri-native-tone-face.json"
     }
   ],
   "profile": "../profiles/merri-world-trial.json"

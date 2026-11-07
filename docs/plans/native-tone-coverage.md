@@ -1,7 +1,7 @@
 # Broaden native skin-tone coverage
 
 2026-11-06. **Implementation and reported portrait corrections verified;
-checkpoint commit authorized. Qualified displayed-art feedback is recorded; broader
+checkpoint committed. Qualified displayed-art feedback is recorded; broader
 approximate-coverage assessment and release gates remain separate.**
 The user asked "can we plan to do that next?" after the
 [coverage assessment](../development/palette-tone-coverage.md). The user then approved execution with "let's do it". This authorizes the complete
@@ -215,7 +215,30 @@ reported corrections and planning updates; public distribution remains separate.
 
 ## Remaining work
 
-The checkpoint commit needs no local GPU or model inference. Broader
+2026-11-07: the owner approved a small CPU comparison of Player 27 and Player 30
+after Sol identified a residual deep umber undertone gap. The
+[five-character pilot](../development/deep-umber-pilot.md) is prepared and
+technically verified. Following Sol's proposal of one Player 27 addition, the
+owner delegated the decision with "up to you". Sol selects Player 27 and proceeds
+with the authorized [single-family rollout](player27-rollout.md), now implemented
+and technically verified. All 63,120 previous PNGs remain exact; 6,312 new PNGs,
+strict full installation/removal and twelve-choice native persistence checks
+pass. The complete comparison remains available. The requested
+[representative sheet](../development/player27-review-sheet.md#owner-feedback)
+has qualified acceptance of the displayed 36-character neutral portrait sample;
+broader artwork and coverage acceptance are not inferred.
+The pilot's isolated recipes remain unchanged. Earlier qualified
+feedback is preserved; delegated selection supplies no new coverage acceptance.
+
+The owner approved the [compact coverage review](native-tone-coverage-review.md)
+after its planning pass. The worksheet and pending decision record are prepared
+and technically verified using existing diagnostics and current artwork. Owner
+coverage assessment remains pending; no local GPU was required. The
+[coverage record](../development/palette-tone-coverage.md#coverage-worksheet-prepared)
+owns verification and inspection limits.
+
+The six-family checkpoint and verified Player27 follow-up are committed locally.
+The commits required no local GPU or model inference. Broader
 approximate-coverage assessment and any newly accepted baselines remain separate
 from qualified feedback on the displayed corrections. Remaining physical-controller,
 seasonal/action, compatibility and licensing/release work is owned by the

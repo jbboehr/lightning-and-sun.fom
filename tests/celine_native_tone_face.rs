@@ -125,9 +125,14 @@ fn celine_face_override_preserves_historical_choices_and_skin_roles() {
             {
                 assert_eq!(p["colors"][slot], donors["presets"][i - 4]["colors"][role]);
             }
+            let expected_cosmetics = if p["id"] == "player_27" {
+                ["#964B3EFF", "#A55B4EFF", "#6F3231FF"]
+            } else {
+                cosmetics[i - 4]
+            };
             assert_eq!(
                 &p["colors"].as_array().unwrap()[14..17],
-                &cosmetics[i - 4].map(|x| json!(x))
+                &expected_cosmetics.map(|x| json!(x))
             );
             assert_eq!(p["colors"][17], p["colors"][2]);
             assert_eq!(p["colors"][18], p["colors"][3]);
@@ -360,7 +365,25 @@ fn complete_celine_face_candidate_preserves_all_unrelated_pixels_and_historical_
                 assert_eq!(seen.len() as u64, c["pixels"].as_u64().unwrap());
             }
         }
-        for (i, preset) in set["presets"].as_array().unwrap().iter().enumerate() {
+        let historical_ids = [
+            "blue",
+            "npc_hayden",
+            "npc_ryis",
+            "npc_seridia",
+            "player_04",
+            "npc_march",
+            "npc_wiscar",
+            "player_16",
+            "player_22",
+            "player_35",
+        ];
+        for (i, id) in historical_ids.into_iter().enumerate() {
+            let preset = set["presets"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .find(|p| p["id"] == id)
+                .unwrap();
             let id = preset["id"].as_str().unwrap();
             let old_path = before.join("variants").join(id).join(asset);
             let new_path = after.join("variants").join(id).join(asset);

@@ -1,0 +1,4696 @@
+{
+  "id": "player_27",
+  "label": "Deep umber (Player 27)",
+  "colors": [
+    "#813723FF",
+    "#582718FF",
+    "#431D11FF",
+    "#2D130AFF"
+  ],
+  "source_catalog": "palettes/catalog/player.json",
+  "source_catalog_sha256": "869cbfc4b3c560d8044771d6314ebf18d171a13ff886174ad00c17191af97680",
+  "reference_id": "player_22",
+  "reference_colors": [
+    "#8E3F38FF",
+    "#6D2B26FF",
+    "#471A19FF",
+    "#321111FF"
+  ],
+  "historical_catalog": "tests/fixtures/player27-six-family-catalog.json",
+  "historical_catalog_sha256": "1cb71c3f49b88acb9540d0eb4a6658efb03aadddd555069a341cbc6e313b12be",
+  "historical_prefix": "tests/fixtures/player27-ten-choice-baseline.json",
+  "historical_prefix_sha256": "018a685e2361f90c5a3466783ce158149145296ce188be8a0f2d7068b32ccc89",
+  "historical_shade_mappings": "docs/development/native-tone-shade-mappings.json",
+  "historical_shade_mappings_sha256": "bd9c7a3d71b4cfb6fe8319ab3807f9986eb636f79ec7c7b812930077cc7e8b86",
+  "rounding": "Each RGB channel: nearest integer, positive half-up; clamp to 0..255.",
+  "cosmetics": {
+    "main": {
+      "kind": "role_offset",
+      "role": "light",
+      "offset": [
+        21,
+        20,
+        27
+      ]
+    },
+    "soft": {
+      "kind": "role_offset",
+      "role": "light",
+      "offset": [
+        36,
+        36,
+        43
+      ]
+    },
+    "deep": {
+      "kind": "role_offset",
+      "role": "middle",
+      "offset": [
+        23,
+        11,
+        25
+      ]
+    }
+  },
+  "darker_flush_from_main_offset": [
+    -18,
+    -13,
+    -11
+  ],
+  "baseline_slot_counts": {
+    "role": 394,
+    "cosmetic": 3,
+    "blend": 10,
+    "role_offset": 49
+  },
+  "additional_slot_counts": {
+    "main": 34,
+    "deep": 9,
+    "soft": 7,
+    "role": 15,
+    "lip_alias": 1,
+    "darker_flush": 2
+  },
+  "characters": [
+    {
+      "character": "adeline",
+      "set": "palettes/sets/adeline-native-tones.json",
+      "profile": "palettes/profiles/adeline-native-tone-face.json",
+      "profile_sha256": "ed0dd4ddba2bce35205c05e8b4dabf13cc403dac4ae882467b83d9082ba0d547",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#E3A17B",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#D48363",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#C47054",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#9F5544",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#E9A980",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#DE8F5D",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#BA6A4C",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#7D3B14",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#E37B7B",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#E6687A",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            23,
+            11,
+            25
+          ],
+          "material": "cosmetic",
+          "treatment": "deep",
+          "target": "#6F3231FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#DE8074",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#D07367",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            23,
+            11,
+            25
+          ],
+          "material": "cosmetic",
+          "treatment": "deep",
+          "target": "#6F3231FF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#DE9374",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            36,
+            36,
+            43
+          ],
+          "material": "cosmetic",
+          "treatment": "soft",
+          "target": "#A55B4EFF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#CB7A5D",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#F4C2A7",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        }
+      ]
+    },
+    {
+      "character": "hayden",
+      "set": "palettes/sets/hayden-native-tones.json",
+      "profile": "palettes/profiles/hayden-native-tone-face.json",
+      "profile_sha256": "280fb55a3a2a1092cecc771d83f8d387d00362527eef91d821cd2ef1cb63477f",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#E8B271",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#CA9052",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#B27146",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#6E4922",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#FAD8A8",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#F9C4A1",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#CBAD93",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#CA894D",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#C58A4A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#CE913B",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#9F7D6F",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#E7B172",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#AB7E3F",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#815A2E",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#523C26",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 15,
+          "source_color": "#E88671",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "ryis",
+      "set": "palettes/sets/ryis-native-tones.json",
+      "profile": "palettes/profiles/ryis-native-tone-face.json",
+      "profile_sha256": "4ee86c1c49fa901de168d9ab4ecfb296bad32a7fb99de4c3c81a892f321404aa",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#B06C57",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#814A3A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#63342A",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#491F1B",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#995B48",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#A5624E",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#D6906A",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#C27B55",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#854D3C",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#B44554",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "reina",
+      "set": "palettes/sets/reina-native-tones.json",
+      "profile": "palettes/profiles/reina-native-tone-face.json",
+      "profile_sha256": "3526a7c2780ad1fe9dc474a1943e5df8247a3e45357235d96e95c2291fe76b02",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#B36644",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#9E512F",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#7F382B",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#541C1E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#AD5F3C",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#A95835",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#CB815C",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#B36844",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#8E4538",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#712922",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#571D1F",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#B2684A",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#B44554",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "juniper",
+      "set": "palettes/sets/juniper-native-tones.json",
+      "profile": "palettes/profiles/juniper-native-tone-face.json",
+      "profile_sha256": "5064c7b47f9f469770d77480b6b37cb1d2bc46e9a2185f074277797c4da1c3a0",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#EFD89A",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#E3BF7F",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#D2AB66",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#B87D4C",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#763F21",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#592323",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#A16C3D",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#E9CC8B",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#D29C66",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#965532",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#DFAB68",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#9D5A33",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#BC8B43",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#E8B171",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#F1E791",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 15,
+          "source_color": "#B58E45",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 16,
+          "source_color": "#E0B572",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 17,
+          "source_color": "#EFAD9A",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 18,
+          "source_color": "#F2C596",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            36,
+            36,
+            43
+          ],
+          "material": "cosmetic",
+          "treatment": "soft",
+          "target": "#A55B4EFF"
+        },
+        {
+          "slot": 19,
+          "source_color": "#D98D78",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 20,
+          "source_color": "#D6795E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 21,
+          "source_color": "#D87862",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 22,
+          "source_color": "#E17A69",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        }
+      ]
+    },
+    {
+      "character": "celine",
+      "set": "palettes/sets/celine-native-tones.json",
+      "profile": "palettes/profiles/celine-native-tone-face.json",
+      "profile_sha256": "5f1deb409f57768a9fbb0bd7ee798a6fd1f5b639a1ba0ebbe3d318594033eb51",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#FCDEBE",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#F5BB90",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#EA9866",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#B35A35",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#9A4825",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#E28A55",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#954D24",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#FBDFC0",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#EDA77D",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#672115",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#D97C56",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#FCD9B3",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#F0B988",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#D37A57",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#F4AEAE",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 15,
+          "source_color": "#FCB0B6",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            36,
+            36,
+            43
+          ],
+          "material": "cosmetic",
+          "treatment": "soft",
+          "target": "#A55B4EFF"
+        },
+        {
+          "slot": 16,
+          "source_color": "#E6687A",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            23,
+            11,
+            25
+          ],
+          "material": "cosmetic",
+          "treatment": "deep",
+          "target": "#6F3231FF"
+        },
+        {
+          "slot": 17,
+          "source_color": "#C77146",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 18,
+          "source_color": "#742F23",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 19,
+          "source_color": "#DC8E4F",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 20,
+          "source_color": "#F3AC87",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 21,
+          "source_color": "#FFE1C5",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 22,
+          "source_color": "#BA5E3F",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        }
+      ]
+    },
+    {
+      "character": "march",
+      "set": "palettes/sets/march-native-tones.json",
+      "profile": "palettes/profiles/march-native-tone-face.json",
+      "profile_sha256": "e9cd2b967aca86697929d99a6b4a166827d8797311158ea1523d8cf33091e0f8",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#EEDDA5",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#E6BD7C",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#DCA966",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#CC8155",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#AE542E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#B36436",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#B4613E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#DFAB68",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#E9C487",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#EDCA92",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#7D3B14",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#B65932",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#D0A179",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#E8B271",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#D37A57",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 15,
+          "source_color": "#E8B171",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 16,
+          "source_color": "#FCA697",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 17,
+          "source_color": "#F18575",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 18,
+          "source_color": "#F79687",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            36,
+            36,
+            43
+          ],
+          "material": "cosmetic",
+          "treatment": "soft",
+          "target": "#A55B4EFF"
+        },
+        {
+          "slot": 19,
+          "source_color": "#EB6A57",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            23,
+            11,
+            25
+          ],
+          "material": "cosmetic",
+          "treatment": "deep",
+          "target": "#6F3231FF"
+        },
+        {
+          "slot": 20,
+          "source_color": "#FFBC95",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            36,
+            36,
+            43
+          ],
+          "material": "cosmetic",
+          "treatment": "soft",
+          "target": "#A55B4EFF"
+        },
+        {
+          "slot": 21,
+          "source_color": "#DC8E66",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            23,
+            11,
+            25
+          ],
+          "material": "cosmetic",
+          "treatment": "deep",
+          "target": "#6F3231FF"
+        }
+      ]
+    },
+    {
+      "character": "balor",
+      "set": "palettes/sets/balor-native-tones.json",
+      "profile": "palettes/profiles/balor-native-tone-face.json",
+      "profile_sha256": "97391a14e58600c3e31c5484d361dc6bd45371d299d221fa2f699f739d4b48e2",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#FCDEBE",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#EFA67A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#C16640",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#914A2C",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#F4BF98",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#A75939",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#612026",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#FCD9B3",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#F0B988",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#D37A57",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#672115",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#F7B4AC",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "valen",
+      "set": "palettes/sets/valen-native-tones.json",
+      "profile": "palettes/profiles/valen-native-tone-face.json",
+      "profile_sha256": "49dcd717a3c7fa69d37b5f6f8c66efaa69010b58dee911719e8f5a3a92d74dcf",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#F9CDA3",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#EDA27A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#CD825A",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#B65932",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#762E21",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#DC8662",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#EDA37B",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#E69A72",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#FBD3A7",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#EFA67A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#C37555",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#F69393",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#CD7753",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#DF8A67",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        }
+      ]
+    },
+    {
+      "character": "eiland",
+      "set": "palettes/sets/eiland-native-tones.json",
+      "profile": "palettes/profiles/eiland-native-tone-face.json",
+      "profile_sha256": "bba5a89b0dbba638ac8db7673d5981ece89bd061a31a4bb5d03c870d1ca1f126",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#E9A980FF",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#D98E72FF",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#C9785AFF",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#9C5241FF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#E18F71FF",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#6A3126FF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#C17A5BFF",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#955342FF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#653227FF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#DE8F5DFF",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#BA6A4CFF",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#7D3B14FF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#E47070",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "olric",
+      "set": "palettes/sets/olric-native-tones.json",
+      "profile": "palettes/profiles/olric-native-tone-face.json",
+      "profile_sha256": "19018750dc4e25be4c12da2f2baa505cd5ba346b47496962a17f62ee1cff94a9",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#F2DBA7",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#DDA966",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#C37B43",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#B7672F",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#813E16",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#E5C586",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#B65932",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#CB884E",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#F2D7A7",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#E4BD7C",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#C4854C",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#684810",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#E8B171",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#EA8B77",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "landen",
+      "set": "palettes/sets/landen-native-tones.json",
+      "profile": "palettes/profiles/landen-native-tone-face.json",
+      "profile_sha256": "6e16f8c8dd92b1885ff39ab1cfdb9103c42965f9ad3d15db982fbfed41736a55",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#9F6250",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#854D3C",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#63342A",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#491F1B",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#CF9887",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#C1816E",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#361714",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#A33C43",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "nora",
+      "set": "palettes/sets/nora-native-tones.json",
+      "profile": "palettes/profiles/nora-native-tone-face.json",
+      "profile_sha256": "5b7dba4c671e1aefb64f523a664559b699bd605d159a3e48d5a3390390b2c191",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#FCDEBE",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#EFA67A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#B65932",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#762E21",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#D37249",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#F4BF94",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#F5BB90",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#B35A35",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#FCB0B6",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            0,
+            14,
+            21
+          ],
+          "material": "lip",
+          "target": "#814538FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#E6687A",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            0,
+            5,
+            22
+          ],
+          "material": "lip",
+          "target": "#582C2EFF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#FCD9B3",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#F0B988",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#D37A57",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#F4AEAE",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#B45732",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 15,
+          "source_color": "#DB6A5D",
+          "kind": "slot_alias",
+          "slot_alias": 9,
+          "material": "lip",
+          "target": "#582C2EFF"
+        }
+      ]
+    },
+    {
+      "character": "holt",
+      "set": "palettes/sets/holt-native-tones.json",
+      "profile": "palettes/profiles/holt-native-tone-face.json",
+      "profile_sha256": "0dbae2536652c7047179a89204270cb7a7747da3e7b80b87d0071b9670b4bc22",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#F5C88E",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#CD9067",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#B45732",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#762E21",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#E5AF7E",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#C38358",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#A3593C",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#9A4929",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#A05F4C",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#F0CC8E",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#96523A",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#AD6945",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#F49A89",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "josephine",
+      "set": "palettes/sets/josephine-native-tones.json",
+      "profile": "palettes/profiles/josephine-native-tone-face.json",
+      "profile_sha256": "125933576d16d0635df4a890a291f282428872e4ef1200423d3d587bc29b7fdf",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#9B643A",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#814030",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#752F23",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#5B241E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#481518",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#8D5036",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#8E522F",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#46232B",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#3A1D24",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#7E442F",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#713222",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#57271D",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#9F3E31",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "darcy",
+      "set": "palettes/sets/darcy-native-tones.json",
+      "profile": "palettes/profiles/darcy-native-tone-face.json",
+      "profile_sha256": "8a9884f4069c2a3c7fe8b138a78e54e31d346759509e2b40e21ad4028bdbeacf",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#FCD8A9",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#EAB979",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#D99D60",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#B7672F",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#FFD8AC",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#DDA266",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#904522",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#6C3407",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#551D06",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#7B2806",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#FCD9B3",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#F6996C",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#C76539",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#EB9179",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#DD716B",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            23,
+            11,
+            25
+          ],
+          "material": "cosmetic",
+          "treatment": "deep",
+          "target": "#6F3231FF"
+        },
+        {
+          "slot": 15,
+          "source_color": "#FCB4B0",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 16,
+          "source_color": "#ED7E77",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            23,
+            11,
+            25
+          ],
+          "material": "cosmetic",
+          "treatment": "deep",
+          "target": "#6F3231FF"
+        }
+      ]
+    },
+    {
+      "character": "dell",
+      "set": "palettes/sets/dell-native-tones.json",
+      "profile": "palettes/profiles/dell-native-tone-face.json",
+      "profile_sha256": "6b6f6a3d4a4db14c4c9c24ced25594eb5c91524d2b1c372f656a3dfc26e3a59e",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#F5C88E",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#DD905B",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#A8571C",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#691B03",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#91390E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#9D4428",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#B15634",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#ECAA71",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#FFDEB4",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#EC9871",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#DB9150",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#770C1D",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#ECC889",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#DF8D4B",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#B65932",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 15,
+          "source_color": "#762E21",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 16,
+          "source_color": "#D98863",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            23,
+            11,
+            25
+          ],
+          "material": "cosmetic",
+          "treatment": "deep",
+          "target": "#6F3231FF"
+        }
+      ]
+    },
+    {
+      "character": "elsie",
+      "set": "palettes/sets/elsie-native-tones.json",
+      "profile": "palettes/profiles/elsie-native-tone-face.json",
+      "profile_sha256": "f54d1ee935388b2fed42fcd77b96c76c75d927932c9a17ab7e0c032fe76b0b18",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#F6D2AF",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#E3B598",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#CB9472",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#B46D5F",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#794035",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#4C0F1E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#CB9879",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#784B42",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#FBDCB9",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#F3C193",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#E08C6A",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#A45838",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#F6BFAF",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            36,
+            36,
+            43
+          ],
+          "material": "cosmetic",
+          "treatment": "soft",
+          "target": "#A55B4EFF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#F2A19C",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "errol",
+      "set": "palettes/sets/errol-native-tones.json",
+      "profile": "palettes/profiles/errol-native-tone-face.json",
+      "profile_sha256": "854511b84266cfe4220de2cb8209deb9e255c1d0071d48a13795e73394a1173e",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#F4C49CFF",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#DDAB82FF",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#C38C70FF",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#9B6656FF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#724A3E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#85584B",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#C9927B",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#A77E6A",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#D3B296",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#EB967B",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "hemlock",
+      "set": "palettes/sets/hemlock-native-tones.json",
+      "profile": "palettes/profiles/hemlock-native-tone-face.json",
+      "profile_sha256": "fd18bce65ea2483c62414548bd4fde2e98fabfe6b16c9dc97100cffb98caf16e",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#C9906A",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#B36844",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#8A3F31",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#712922",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#A05748",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#BF7B5A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#4C242C",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#C48E68",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#8E4538",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#C76054",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "louis",
+      "set": "palettes/sets/louis-native-tones.json",
+      "profile": "palettes/profiles/louis-world-trial.json",
+      "profile_sha256": "91eee908265d6b04e265a224b5005480d8111900ee7154f41be9ab03137bf047",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#F6D2AFFF",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#CB9879FF",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#AD6F5CFF",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#784B42FF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#AB6F5C",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#AC6F5C",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#C99679",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#CA9779",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#CA9879",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#F4D0AE",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#E3B590",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#E3BD97",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#F1CEAD",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#634040",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#40252A",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 15,
+          "source_color": "#491F1B",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 16,
+          "source_color": "#FFDBB8",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 17,
+          "source_color": "#B46D5F",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        }
+      ]
+    },
+    {
+      "character": "luc",
+      "set": "palettes/sets/luc-native-tones.json",
+      "profile": "palettes/profiles/luc-native-tone-face.json",
+      "profile_sha256": "3b30edb8d710e1acd6ad18410a8e726381c8eeab49e7e2e4e8281ccddd6e0da9",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#C48E68",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#B36844",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#712922",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#9B533C",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#83462E",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#965332",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#793D25",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#E8B896",
+          "kind": "blend",
+          "roles": {
+            "light": 3
+          },
+          "constant": 490,
+          "denominator": 5,
+          "target": "#AF8377FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#F0C09D",
+          "kind": "blend",
+          "roles": {
+            "light": 1
+          },
+          "constant": 245,
+          "denominator": 2,
+          "target": "#BB968CFF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#8E4538",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#C16251",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "maple",
+      "set": "palettes/sets/maple-native-tones.json",
+      "profile": "palettes/profiles/maple-native-tone-face.json",
+      "profile_sha256": "678ef1c169fbf7bd6e4f09d9688b609ea12b1d41f61301a4676578e48c622060",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#97623EFF",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#89492AFF",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#713527FF",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#57271DFF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#83462E",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#5D3228",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#CE794E",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#89502A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#392222",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#BF5C70",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            -6,
+            15,
+            26
+          ],
+          "material": "lip",
+          "target": "#523632FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#96623B",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#9F3E31",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "merri",
+      "set": "palettes/sets/merri-native-tones.json",
+      "profile": "palettes/profiles/merri-native-tone-face.json",
+      "profile_sha256": "6c82b20fb404e5ac274bf85d4a19f840465878b582aeb245e9db6878d1ae94fb",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#DD9266",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#CB7A56",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#B36644",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#7F382B",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#9E512F",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#7E4C3B",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#F0A87E",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            19,
+            22,
+            24
+          ],
+          "target": "#944D3BFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#482323",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#CB6654",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "terithia",
+      "set": "palettes/sets/terithia-native-tones.json",
+      "profile": "palettes/profiles/terithia-native-tone-face.json",
+      "profile_sha256": "a741b12d26cddba6abaaa81dc6aa032c01ae4d1cb783db3bcaab06058cc0973d",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#D29A7DFF",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#BA7E66FF",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#AD7465FF",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#7E4C3BFF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#724A3EFF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#583131FF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#482323FF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#DBA191FF",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            9,
+            7,
+            20
+          ],
+          "target": "#8A3E37FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#E0A797FF",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            14,
+            13,
+            26
+          ],
+          "target": "#8F443DFF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#E8B1A2FF",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            22,
+            23,
+            37
+          ],
+          "target": "#974E48FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#7A4D45FF",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#CB7C72",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#A86252",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            3,
+            7,
+            16
+          ],
+          "material": "cosmetic",
+          "treatment": "darker_flush",
+          "target": "#843E33FF"
+        }
+      ]
+    },
+    {
+      "character": "stillwell",
+      "set": "palettes/sets/stillwell-native-tones.json",
+      "profile": "palettes/profiles/stillwell-native-tone-face.json",
+      "profile_sha256": "6deb45db068ee39d477fedb8228566ac277bc05a72322a767af77d6b852c6346",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#E8C99E",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#CBA282",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#BD876C",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#8F564C",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#5A2F2F",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#AA6B60",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#E7CE9F",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#CAA17E",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#A06955",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#5A2F2C",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#DB8976",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "taliferro",
+      "set": "palettes/sets/taliferro-native-tones.json",
+      "profile": "palettes/profiles/taliferro-native-tone-face.json",
+      "profile_sha256": "d1a436c21f89cedaf74ebc0d2da5b271eec42dc4ded77e30c48586f1e2fa7fc3",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#FFDBB8",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#F2A174",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#C4613B",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#762E21",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#FCC49A",
+          "kind": "blend",
+          "roles": {
+            "light": 3,
+            "middle": 2
+          },
+          "denominator": 5,
+          "target": "#71311FFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#DE7E48",
+          "kind": "blend",
+          "roles": {
+            "middle": 1,
+            "shadow": 1
+          },
+          "denominator": 2,
+          "target": "#4E2215FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#EFA67A",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            -3,
+            5,
+            6
+          ],
+          "target": "#552C1EFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#FCDEBE",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            -3,
+            3,
+            6
+          ],
+          "target": "#7E3A29FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#FBAA93",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "vera",
+      "set": "palettes/sets/vera-native-tones.json",
+      "profile": "palettes/profiles/vera-world-trial.json",
+      "profile_sha256": "1acb238a0a02d8c2c86055b1a14d478f9b224cd0e838958a9e91fe8e2931c267",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#B68454",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#A15F3F",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#7F402B",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#541C1E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#B07342",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#762E21",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        }
+      ]
+    },
+    {
+      "character": "wheedle",
+      "set": "palettes/sets/wheedle-native-tones.json",
+      "profile": "palettes/profiles/wheedle-world-trial.json",
+      "profile_sha256": "565d82b8c21851b89ac91d8c2a4a2a3298124deb2c826c2a43271a5620d2fc8b",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#F6C38D",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#D39876",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#AF7456",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#A56C54",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            -10,
+            -8,
+            -2
+          ],
+          "target": "#39150FFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#81503C",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#553728",
+          "kind": "blend",
+          "roles": {
+            "deep": 2
+          },
+          "denominator": 3,
+          "target": "#1E0D07FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#D89D7A",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            5,
+            5,
+            4
+          ],
+          "target": "#5D2C1CFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#E5AC7E",
+          "kind": "blend",
+          "roles": {
+            "light": 1,
+            "middle": 1
+          },
+          "denominator": 2,
+          "target": "#6D2F1EFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#B57657",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            6,
+            2,
+            1
+          ],
+          "target": "#491F12FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#7C5846",
+          "kind": "role_offset",
+          "role": "deep",
+          "offset": [
+            -5,
+            8,
+            10
+          ],
+          "target": "#281B14FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#F6C897",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#DCA77C",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#C18561",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#7F523E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        }
+      ]
+    },
+    {
+      "character": "zorel",
+      "set": "palettes/sets/zorel-native-tones.json",
+      "profile": "palettes/profiles/zorel-native-tone-face.json",
+      "profile_sha256": "3911479063c341febf1a6c2f93ab8465cc6dacd27ac6c2a805579b3e4cb416fe",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#B0755D",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#985750",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#874048",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#642E3D",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#432234",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#A56553",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#7A354C",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#DA977E",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            42,
+            34,
+            33
+          ],
+          "target": "#AB5944FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#975250",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#7A3118",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#994A4C",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#3B1F29",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#B44554",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "darren",
+      "set": "palettes/sets/darren-native-tones.json",
+      "profile": "palettes/profiles/darren-native-tone-face.json",
+      "profile_sha256": "52d74cababfe3bc5fef101bac7d03d2c6d3d51dc4f849ff97dd0fcd047421874",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#A3614E",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#83453A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#63342A",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#491F1B",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#955343",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#87473B",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#392222",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#A33C43",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "linnet",
+      "set": "palettes/sets/linnet-native-tones.json",
+      "profile": "palettes/profiles/linnet-native-tone-face.json",
+      "profile_sha256": "004b277b2279ef67e6be373c1cfd8a764d4a92a8a8972d6defb3c0304265f72a",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#C7875C",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#A36049",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#6D3328",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#4A1B16",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#B16A52",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#8F5042",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#472721",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#6A3126",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#B9755A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#884636",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#6C3327",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#C87463",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#BB6C5D",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#5B241E",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#9A5547",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 15,
+          "source_color": "#9F5544",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 16,
+          "source_color": "#A85E44",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 17,
+          "source_color": "#7F3E30",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 18,
+          "source_color": "#B97551",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 19,
+          "source_color": "#C95C5C",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "wiscar",
+      "set": "palettes/sets/wiscar-native-tones.json",
+      "profile": "palettes/profiles/wiscar-native-tone-face.json",
+      "profile_sha256": "6eec1f890d044f7c8e1b7f363da83f355837397c6523515d4fe979b2a65e0d1b",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#E3A17B",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#D98364",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#C47054",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#9F5544",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#6D3328",
+          "kind": "blend",
+          "roles": {
+            "deep": 2
+          },
+          "denominator": 3,
+          "target": "#1E0D07FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#834132",
+          "kind": "blend",
+          "roles": {
+            "deep": 4
+          },
+          "denominator": 5,
+          "target": "#240F08FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#441B14",
+          "kind": "blend",
+          "roles": {
+            "deep": 2
+          },
+          "denominator": 5,
+          "target": "#120804FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#F4C2A7",
+          "kind": "blend",
+          "roles": {
+            "light": 3
+          },
+          "constant": 255,
+          "denominator": 4,
+          "target": "#A1695AFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#DDAB82",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            -6,
+            10,
+            7
+          ],
+          "target": "#7B412AFF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#CC795D",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#E37B7B",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        }
+      ]
+    },
+    {
+      "character": "wynne",
+      "set": "palettes/sets/wynne-native-tones.json",
+      "profile": "palettes/profiles/wynne-world-trial.json",
+      "profile_sha256": "460c54b37a50178affcbaf10f51d1d3fea166c3649caf878009604c9d8fd72f8",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#A3614E",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#83453A",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#63342A",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#491F1B",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#955343",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            18,
+            14,
+            9
+          ],
+          "target": "#6A3521FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#AD6C59",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            10,
+            11,
+            11
+          ],
+          "target": "#8B422EFF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#B67565",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            19,
+            20,
+            23
+          ],
+          "target": "#944B3AFF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#C88A76",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            37,
+            41,
+            40
+          ],
+          "target": "#A6604BFF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#612924",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            -2,
+            -11,
+            -6
+          ],
+          "target": "#41120BFF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#804136",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            -3,
+            -4,
+            -4
+          ],
+          "target": "#552314FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#68332C",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        }
+      ]
+    },
+    {
+      "character": "caldarus",
+      "set": "palettes/sets/caldarus-native-tones.json",
+      "profile": "palettes/profiles/caldarus-native-tone-face.json",
+      "profile_sha256": "d959d07acee14218a2659527966de4c7314446ab6e2fbe65ca968ec78f2e6743",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#C1AFA5",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#A69084",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#8E746D",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#624A48",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#755A54",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#C3AA9B",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#AA8E7E",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#B8A396",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            -9,
+            -12,
+            -15
+          ],
+          "target": "#782B14FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#BEABA0",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#AF8D81",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#C79A97",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#B28F8F",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            3,
+            7,
+            16
+          ],
+          "material": "cosmetic",
+          "treatment": "darker_flush",
+          "target": "#843E33FF"
+        }
+      ]
+    },
+    {
+      "character": "seridia",
+      "set": "palettes/sets/seridia-native-tones.json",
+      "profile": "palettes/profiles/seridia-native-tone-face.json",
+      "profile_sha256": "746d6b4ad12b3759ba44320dfc65e2f0f9bcbf91c0135f01c9c9d687fd08caa7",
+      "slots": [
+        {
+          "slot": 0,
+          "source_color": "#C1AFA5",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 1,
+          "source_color": "#A69084",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 2,
+          "source_color": "#8E746D",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 3,
+          "source_color": "#624A48",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 4,
+          "source_color": "#B4A095",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            -13,
+            -15,
+            -16
+          ],
+          "target": "#742813FF"
+        },
+        {
+          "slot": 5,
+          "source_color": "#B29E93",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            -15,
+            -17,
+            -18
+          ],
+          "target": "#722611FF"
+        },
+        {
+          "slot": 6,
+          "source_color": "#AD7165",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            7,
+            -31,
+            -31
+          ],
+          "target": "#5F0800FF"
+        },
+        {
+          "slot": 7,
+          "source_color": "#FCDEBE",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 8,
+          "source_color": "#F5BB90",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 9,
+          "source_color": "#EA9866",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 10,
+          "source_color": "#B35A35",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 11,
+          "source_color": "#9A4825",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 12,
+          "source_color": "#F7C49D",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 13,
+          "source_color": "#E28A55",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 14,
+          "source_color": "#DA8A52",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 15,
+          "source_color": "#C3AA9B",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 16,
+          "source_color": "#95726A",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 17,
+          "source_color": "#A5462C",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 18,
+          "source_color": "#F3AC87",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            -2,
+            -15,
+            -9
+          ],
+          "target": "#56180FFF"
+        },
+        {
+          "slot": 19,
+          "source_color": "#FFE1C5",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            3,
+            3,
+            7
+          ],
+          "target": "#843A2AFF"
+        },
+        {
+          "slot": 20,
+          "source_color": "#594240",
+          "kind": "role",
+          "role": "deep",
+          "target": "#2D130AFF"
+        },
+        {
+          "slot": 21,
+          "source_color": "#64484E",
+          "kind": "role_offset",
+          "role": "deep",
+          "offset": [
+            11,
+            6,
+            14
+          ],
+          "target": "#381918FF"
+        },
+        {
+          "slot": 22,
+          "source_color": "#724F62",
+          "kind": "role_offset",
+          "role": "deep",
+          "offset": [
+            25,
+            13,
+            34
+          ],
+          "target": "#46202CFF"
+        },
+        {
+          "slot": 23,
+          "source_color": "#7C556F",
+          "kind": "role_offset",
+          "role": "deep",
+          "offset": [
+            35,
+            19,
+            47
+          ],
+          "target": "#502639FF"
+        },
+        {
+          "slot": 24,
+          "source_color": "#7F5673",
+          "kind": "role_offset",
+          "role": "deep",
+          "offset": [
+            38,
+            20,
+            51
+          ],
+          "target": "#53273DFF"
+        },
+        {
+          "slot": 25,
+          "source_color": "#835979",
+          "kind": "role_offset",
+          "role": "deep",
+          "offset": [
+            42,
+            23,
+            57
+          ],
+          "target": "#572A43FF"
+        },
+        {
+          "slot": 26,
+          "source_color": "#8A716A",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 27,
+          "source_color": "#917375",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            7,
+            2,
+            11
+          ],
+          "target": "#4A1F1CFF"
+        },
+        {
+          "slot": 28,
+          "source_color": "#947678",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            6,
+            2,
+            11
+          ],
+          "target": "#491F1CFF"
+        },
+        {
+          "slot": 29,
+          "source_color": "#9A7684",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            16,
+            5,
+            26
+          ],
+          "target": "#53222BFF"
+        },
+        {
+          "slot": 30,
+          "source_color": "#9D7887",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            15,
+            4,
+            26
+          ],
+          "target": "#52212BFF"
+        },
+        {
+          "slot": 31,
+          "source_color": "#A1788F",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            23,
+            7,
+            37
+          ],
+          "target": "#5A2436FF"
+        },
+        {
+          "slot": 32,
+          "source_color": "#A27992",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            24,
+            8,
+            40
+          ],
+          "target": "#5B2539FF"
+        },
+        {
+          "slot": 33,
+          "source_color": "#A47A91",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            22,
+            6,
+            36
+          ],
+          "target": "#592335FF"
+        },
+        {
+          "slot": 34,
+          "source_color": "#A57A96",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            27,
+            9,
+            44
+          ],
+          "target": "#5E263DFF"
+        },
+        {
+          "slot": 35,
+          "source_color": "#A57B94",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            23,
+            7,
+            39
+          ],
+          "target": "#5A2438FF"
+        },
+        {
+          "slot": 36,
+          "source_color": "#A87C99",
+          "kind": "role_offset",
+          "role": "shadow",
+          "offset": [
+            26,
+            8,
+            44
+          ],
+          "target": "#5D253DFF"
+        },
+        {
+          "slot": 37,
+          "source_color": "#AB908D",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            5,
+            0,
+            9
+          ],
+          "target": "#5D2721FF"
+        },
+        {
+          "slot": 38,
+          "source_color": "#B1909A",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            11,
+            0,
+            22
+          ],
+          "target": "#63272EFF"
+        },
+        {
+          "slot": 39,
+          "source_color": "#B690A2",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            16,
+            0,
+            30
+          ],
+          "target": "#682736FF"
+        },
+        {
+          "slot": 40,
+          "source_color": "#B790A5",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            17,
+            0,
+            33
+          ],
+          "target": "#692739FF"
+        },
+        {
+          "slot": 41,
+          "source_color": "#B990A9",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            19,
+            0,
+            37
+          ],
+          "target": "#6B273DFF"
+        },
+        {
+          "slot": 42,
+          "source_color": "#C3ADAC",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            2,
+            -2,
+            7
+          ],
+          "target": "#83352AFF"
+        },
+        {
+          "slot": 43,
+          "source_color": "#C7AAB5",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            6,
+            -5,
+            16
+          ],
+          "target": "#873233FF"
+        },
+        {
+          "slot": 44,
+          "source_color": "#CAA7BB",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            9,
+            -8,
+            22
+          ],
+          "target": "#8A2F39FF"
+        },
+        {
+          "slot": 45,
+          "source_color": "#CBA7BD",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            10,
+            -8,
+            24
+          ],
+          "target": "#8B2F3BFF"
+        },
+        {
+          "slot": 46,
+          "source_color": "#CCA6C0",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            11,
+            -9,
+            27
+          ],
+          "target": "#8C2E3EFF"
+        },
+        {
+          "slot": 47,
+          "source_color": "#D37A57",
+          "kind": "role",
+          "role": "shadow",
+          "target": "#431D11FF"
+        },
+        {
+          "slot": 48,
+          "source_color": "#F0B988",
+          "kind": "role",
+          "role": "middle",
+          "target": "#582718FF"
+        },
+        {
+          "slot": 49,
+          "source_color": "#FCD9B3",
+          "kind": "role",
+          "role": "light",
+          "target": "#813723FF"
+        },
+        {
+          "slot": 50,
+          "source_color": "#C79A97",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            21,
+            20,
+            27
+          ],
+          "material": "cosmetic",
+          "treatment": "main",
+          "target": "#964B3EFF"
+        },
+        {
+          "slot": 51,
+          "source_color": "#E6687A",
+          "kind": "role_offset",
+          "role": "middle",
+          "offset": [
+            23,
+            11,
+            25
+          ],
+          "material": "cosmetic",
+          "treatment": "deep",
+          "target": "#6F3231FF"
+        },
+        {
+          "slot": 52,
+          "source_color": "#F09DA3",
+          "kind": "role_offset",
+          "role": "light",
+          "offset": [
+            36,
+            36,
+            43
+          ],
+          "material": "cosmetic",
+          "treatment": "soft",
+          "target": "#A55B4EFF"
+        }
+      ]
+    }
+  ]
+}

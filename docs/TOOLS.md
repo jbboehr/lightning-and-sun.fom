@@ -1512,7 +1512,7 @@ Use `palettes/sets/adeline-trial.json` as the editable starting point. It includ
 Debug Blue plus Player 01, 18, and 33. Copy other ramps from the numeric catalog;
 keep the four-color order. IDs must be unique lowercase ASCII letters, digits,
 or underscores, at most 32 characters. Labels must be nonblank, contain no control
-characters, and fit in 64 UTF-8 bytes. A set accepts one through ten variants;
+characters, and fit in 64 UTF-8 bytes. A set accepts one through eleven variants;
 Vanilla is implicit and cannot be used as a variant ID. This limit keeps the
 prebuilt portrait count bounded while the prototype is evaluated.
 

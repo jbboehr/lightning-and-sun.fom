@@ -1,13 +1,15 @@
 use serde_json::Value;
+use sha2::{Digest, Sha256};
 use std::{collections::BTreeSet, fs, path::Path};
 
-const ADDITIONS: [&str; 6] = [
+const ADDITIONS: [&str; 7] = [
     "player_04",
     "npc_march",
     "npc_wiscar",
     "player_16",
     "player_22",
     "player_35",
+    "player_27",
 ];
 
 const HISTORICAL: [(&str, &str); 36] = [
@@ -143,7 +145,7 @@ fn expanded_sets_preserve_all_historical_presets_and_source_bound_profiles() {
         let presets = expanded["presets"].as_array().unwrap();
         let old_presets = &expected_historical;
         assert_eq!(old_presets.len(), 4, "historical contract: {character}");
-        assert_eq!(presets.len(), 10, "{character}");
+        assert_eq!(presets.len(), 11, "{character}");
         assert_eq!(
             &presets[..4],
             old_presets,
@@ -220,7 +222,8 @@ fn facial_overrides_retain_pre_correction_skin_targets() {
         } else {
             assert_eq!(current["profile"], old["profile"]);
         }
-        for (preset, before) in current["presets"].as_array().unwrap()[4..]
+        assert_eq!(old["presets"].as_array().unwrap().len(), 6);
+        for (preset, before) in current["presets"].as_array().unwrap()[4..10]
             .iter()
             .zip(old["presets"].as_array().unwrap())
         {
@@ -358,6 +361,7 @@ fn new_lip_treatments_keep_muted_donor_specific_contrast() {
         ["#D27A73", "#A6535A", "#975C59"],
         ["#8E4D4D", "#6D303C", "#673A40"],
         ["#4A202A", "#35141F", "#331D27"],
+        ["#814538", "#582C2E", "#523632"],
     ];
     let brightness = |color: [i32; 4]| color[0] * 213 + color[1] * 715 + color[2] * 72;
     for (index, [highlight, middle, maple_lip]) in expected.into_iter().enumerate() {
@@ -371,6 +375,97 @@ fn new_lip_treatments_keep_muted_donor_specific_contrast() {
         assert!(
             (brightness(rgba(&maple_colors[9])) - brightness(rgba(&maple_colors[1]))).abs()
                 <= 30_000
+        );
+    }
+}
+
+#[test]
+fn player27_append_preserves_the_complete_current_prefix_and_effective_profiles() {
+    let frozen_catalog_path = "tests/fixtures/player27-six-family-catalog.json";
+    let frozen_catalog = read(frozen_catalog_path);
+    let bytes = fs::read(Path::new(env!("CARGO_MANIFEST_DIR")).join(frozen_catalog_path)).unwrap();
+    assert_eq!(
+        format!("{:x}", Sha256::digest(bytes)),
+        "1cb71c3f49b88acb9540d0eb4a6658efb03aadddd555069a341cbc6e313b12be"
+    );
+    let catalog = read("palettes/catalog/native-tones.json");
+    assert_eq!(
+        &catalog["presets"].as_array().unwrap()[..6],
+        frozen_catalog["presets"].as_array().unwrap()
+    );
+    assert_eq!(catalog["presets"][6]["id"], "player_27");
+    assert_eq!(catalog["presets"][6]["label"], "Deep umber (Player 27)");
+    let ramp = ["#813723FF", "#582718FF", "#431D11FF", "#2D130AFF"].map(Value::from);
+    assert_eq!(catalog["presets"][6]["colors"].as_array().unwrap(), &ramp);
+
+    let baseline = read("tests/fixtures/player27-ten-choice-baseline.json");
+    let expected_targets = read("tests/fixtures/player27-expected-targets.json");
+    let characters = baseline["characters"].as_object().unwrap();
+    assert_eq!(characters.len(), 36);
+    assert_eq!(expected_targets.as_object().unwrap().len(), 36);
+    let mut effective_profiles = BTreeSet::new();
+    let mut slots = 0;
+    for (character, before) in characters {
+        let mut current = native_set(character);
+        assert_eq!(current["presets"].as_array().unwrap().len(), 11);
+        let addition = current["presets"].as_array_mut().unwrap().pop().unwrap();
+        assert_eq!(current, *before, "complete prior recipe: {character}");
+        assert_eq!(addition["id"], "player_27");
+        assert_eq!(addition["label"], "Deep umber (Player 27)");
+        assert_eq!(
+            addition["colors"], expected_targets[character],
+            "{character}"
+        );
+        slots += addition["colors"].as_array().unwrap().len();
+        let reference = before["presets"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|preset| preset["id"] == "player_22")
+            .unwrap();
+        assert_eq!(
+            addition.get("profile"),
+            reference.get("profile"),
+            "{character}"
+        );
+        for preset in before["presets"].as_array().unwrap() {
+            let selected = preset.get("profile").unwrap_or(&before["profile"]);
+            let path = format!(
+                "palettes/{}",
+                selected.as_str().unwrap().strip_prefix("../").unwrap()
+            );
+            if effective_profiles.insert(path.clone()) {
+                let bytes = fs::read(Path::new(env!("CARGO_MANIFEST_DIR")).join(&path)).unwrap();
+                assert_eq!(
+                    format!("{:x}", Sha256::digest(bytes)),
+                    baseline["profiles_sha256"][&path].as_str().unwrap(),
+                    "effective profile: {character} {}",
+                    preset["id"]
+                );
+            }
+        }
+    }
+    assert_eq!(slots, 524);
+    assert_eq!(
+        effective_profiles,
+        baseline["profiles_sha256"]
+            .as_object()
+            .unwrap()
+            .keys()
+            .cloned()
+            .collect()
+    );
+    for (character, slot, expected) in [
+        ("nora", 8, "#814538FF"),
+        ("nora", 9, "#582C2EFF"),
+        ("nora", 15, "#582C2EFF"),
+        ("maple", 9, "#523632FF"),
+        ("terithia", 12, "#843E33FF"),
+        ("caldarus", 11, "#843E33FF"),
+    ] {
+        assert_eq!(
+            native_set(character)["presets"][10]["colors"][slot],
+            expected
         );
     }
 }

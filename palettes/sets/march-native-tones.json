@@ -261,6 +261,35 @@
         "#6E2F3DFF"
       ],
       "profile": "../profiles/march-native-tone-face.json"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#431D11FF",
+        "#582718FF",
+        "#582718FF",
+        "#2D130AFF",
+        "#2D130AFF",
+        "#431D11FF",
+        "#582718FF",
+        "#431D11FF",
+        "#582718FF",
+        "#964B3EFF",
+        "#964B3EFF",
+        "#A55B4EFF",
+        "#6F3231FF",
+        "#A55B4EFF",
+        "#6F3231FF"
+      ],
+      "profile": "../profiles/march-native-tone-face.json"
     }
   ],
   "profile": "../profiles/march-world-trial.json"

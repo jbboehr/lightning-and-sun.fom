@@ -26,8 +26,8 @@ impl Variant {
 
 pub fn validate_variants(variants: &[Variant]) -> Result<()> {
     ensure!(
-        (1..=10).contains(&variants.len()),
-        "Select between one and ten presets"
+        (1..=11).contains(&variants.len()),
+        "Select between one and eleven presets"
     );
     let mut ids = BTreeSet::new();
     for variant in variants {
@@ -402,7 +402,13 @@ mod tests {
     fn full_native_tone_runtime_splits_literals_without_changing_rows() {
         let runtime = full_runtime();
         assert_eq!(runtime.len(), 36);
-        assert!(runtime.iter().all(|character| character.ids.len() == 11));
+        for character in &runtime {
+            assert_eq!(character.ids.len(), 12);
+            assert_eq!(character.ids.last().unwrap(), "player_27");
+            assert_eq!(character.labels.len(), 12);
+            assert_eq!(character.labels.last().unwrap(), "Deep umber (Player 27)");
+            assert!(character.groups.iter().all(|group| group.len() == 12));
+        }
         assert_eq!(runtime.iter().map(|c| c.groups.len()).sum::<usize>(), 6312);
         let script = String::from_utf8(runtime_script(&runtime).unwrap()).unwrap();
         let functions: Vec<_> = script.lines().skip(1).collect();
@@ -450,6 +456,7 @@ mod tests {
                 calls.join(",")
             )
         );
+        assert!(runtime.len() * 2 <= usize::from(u16::MAX) + 1);
     }
 
     #[test]
