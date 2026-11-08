@@ -212,6 +212,12 @@ The next planned batch and remaining release work are:
    [completed plan](plans/linux-release-documentation.md). Finalize the tested
    candidate and resolve the owner's licensing choice before public distribution.
    Remaining acceptance gates and separate publication authorization still apply.
+   The approved [private candidate finalization](plans/linux-candidate-finalization.md)
+   has completed current twelve-choice CPU compatibility and standard checks,
+   restored the original lab and prepared the updated text-only source snapshot.
+   The [owning record](development/linux-candidate-finalization.md) links the
+   external sealed-artifact and standalone-build verdict. No local GPU or
+   inference was required; remaining release gates stay open.
 
 The content-complete alpha is reached following qualified acceptance of the final
 consolidated artwork review. The usable Linux release still requires the remaining

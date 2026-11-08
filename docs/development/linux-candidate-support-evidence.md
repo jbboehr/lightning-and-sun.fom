@@ -75,6 +75,13 @@ and its manifest were not rewritten. These notes are companion documentation,
 not content already inside that archive or proof that it snapshots current HEAD.
 Refreshing a distributable remains separate package-finalization work.
 
+2026-11-07 follow-up: the approved
+[private candidate finalization](linux-candidate-finalization.md) refreshes the
+text-only source snapshot and current twelve-choice synthetic-mod/refusal/removal
+evidence. Its owning record links the new artifact and final external validation
+receipt. The older candidate and this documentation-only batch retain their
+original fingerprints, dates and verification scope.
+
 ## Support claims and owning evidence
 
 | Claim | Evidence and qualification |

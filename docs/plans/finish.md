@@ -406,6 +406,12 @@ the [live record](../development/live-release-verification-2026-11-06.md).
    Finalize the tested Linux candidate and the owner's licensing choice before
    public distribution. The usable Linux milestone still requires its remaining
    acceptance gates; publishing needs separate authorization.
+   Approved [private candidate finalization](linux-candidate-finalization.md)
+   completes current twelve-choice CPU compatibility, refusal, exact removal and
+   standard checks, restores the original lab and prepares the updated text-only
+   source snapshot. The [owning record](../development/linux-candidate-finalization.md)
+   links the external sealed-artifact and standalone-build verdict. No local GPU
+   or inference was required; release gates remain open.
 
 Original character-mask authoring is complete. The approved native-tone batch
 adds target mappings across the same roster. Qualified feedback on the displayed

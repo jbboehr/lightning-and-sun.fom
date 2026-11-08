@@ -77,5 +77,9 @@ acceptance, distinct complex-animation end-stage dispatch, unsampled forms and
 actions, and broader approximate-tone coverage remain open. The usable Linux
 release milestone, licensing choice and publication authorization remain open.
 
-These notes accompany the candidate. The retained source archive predates later
-documentation updates and has not been regenerated to include them.
+The refreshed private source snapshot includes these notes and current
+verification documentation. Its [finalization record](../development/linux-candidate-finalization.md)
+links the archive, per-file manifest and external checksums/validation verdict.
+It records the current twelve-choice collection alongside two synthetic folder
+mods, bounded refusal checks and exact removal; arbitrary mod compatibility is
+not inferred. Older source snapshots remain preserved as historical evidence.
