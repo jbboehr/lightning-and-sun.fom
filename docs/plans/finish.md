@@ -1,6 +1,6 @@
 # Plan to finish Lightning and Sun
 
-Updated 2026-11-06. **Content-complete alpha reached with all planned displayed
+Updated 2026-11-07. **Content-complete alpha reached with all planned displayed
 artwork accepted, including recorded qualifications. Displayed basic live review
 also has qualified acceptance; broader live verification and final Linux release
 gates remain.**
@@ -381,9 +381,18 @@ the [live record](../development/live-release-verification-2026-11-06.md).
    The representative 36-character portrait sheet has
    [qualified owner acceptance](../development/player27-review-sheet.md#owner-feedback);
    broader artwork and complete coverage acceptance remain separate.
-2. Resolve physical-controller and broader
-   seasonal/action acceptance without inferring it from virtual input or offline
-   frame coverage. Further live gameplay requires a checked/reserved GPU.
+2. Resolve remaining live acceptance without inferring it from virtual input or
+   offline frame coverage. The approved [bounded live verification batch](remaining-live-verification.md)
+   has exercised seven representative cases and restored the original lab archive;
+   its [result record](../development/remaining-live-verification-2026-11-07.md)
+   owns the qualified acceptance of the displayed samples and verification limits.
+   Physical-controller acceptance, distinct complex-animation end dispatch and
+   unsampled forms/actions remain open. Debug-triggered special scenes do not
+   establish normal story eligibility. Further rendering requires a checked and
+   reserved GPU.
+   The [CPU end-route investigation](../development/animation-end-route-investigation-2026-11-07.md)
+   found no suitable bounded native caller. Its proposed instrumented alternative
+   is not authorized; the live end-stage criterion remains open.
 3. Finalize the tested Linux candidate, compatibility notes and the owner's
    licensing choice before public distribution. The usable Linux milestone
    requires recorded art and live acceptance; publishing needs authorization.

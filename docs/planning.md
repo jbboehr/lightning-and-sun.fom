@@ -42,7 +42,7 @@ and approximate-coverage assessment remain separate.
 | Art acceptance | Original approvals, qualified Celine/roster/Adeline/Holt feedback and qualified Player27 representative-portrait acceptance recorded; no current reported portrait defect; broader coverage assessment remains |
 | Content-complete alpha | Reached on 2026-11-06; live-game acceptance remains separate |
 | Release controls | Live title/journal keyboard, mouse, virtual-gamepad and persistence checks pass; displayed review has qualified user acceptance; physical-controller acceptance remains |
-| Integration confidence | Final package passes install/remove and basic rendered dialogue/movement/room/day/save/load checks; displayed review accepted with qualifications; broader live acceptance remains |
+| Integration confidence | Final package passes install/remove and basic gameplay checks; basic live review and seven further seasonal/action/scene samples accepted as displayed with qualifications; untested coverage remains open |
 | Linux packaging | Installable pinned-Nix candidate built and checked from standalone source; not published |
 | Palette breadth | Six sourced additions committed; one delegated Player27 addition fully verified across all 36, retaining earlier choices; displayed representative portraits accepted with qualifications; broader artwork and coverage assessment remain |
 
@@ -97,7 +97,7 @@ work. Existing approvals and the original content-complete alpha remain valid.
 | P4 | Finish Caldarus and Seridia, including an explicit special-form audit | Complete and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
 | P5 | Add one selection menu and opt-in remembered choices using the existing runtime | Native menu/storage/input checks pass and displayed live review accepted with qualifications; physical-controller acceptance remains | CPU development; GPU for live verification |
 | Native-tone checkpoint | Broaden selectable tones across the existing roster | Six-family checkpoint and Player27 follow-up committed; qualified representative-portrait acceptance recorded; broader coverage assessment remains in the [native-tone plan](plans/native-tone-coverage.md) | No for commit; yes for further live rendering |
-| P6 | Validate complete artwork, package, installation/removal and natural gameplay; prepare supported Linux release | Artwork and displayed basic live review accepted; broader live matrix and final release gates remain | Yes for gameplay/rendering; CPU for other checks |
+| P6 | Validate complete artwork, package, installation/removal and natural gameplay; prepare supported Linux release | Earlier artwork/basic live acceptance retained; seven-case follow-up accepted as displayed with qualifications; untested cases and final release gates remain | Yes for gameplay/rendering; CPU for other checks |
 
 The remaining 30 strips outside P1–P4 are Hayden shadows (29, already audited)
 and Balor's shadow jump (1), both audited in P0. Other listed inventories may contain
@@ -184,17 +184,26 @@ The next planned batch and remaining release work are:
    has qualified owner acceptance of the displayed neutral portraits for all 36
    characters. Its record owns the exact feedback and inspection limits; broader
    artwork and coverage acceptance are not inferred.
-2. Complete remaining physical-controller and broader seasonal/outfit/action
-   verification, recording any accepted limits. Further live work requires
-   checked GPU availability and a reservation. Prepare release notes from the
-   exercised matrix and resolve concrete blockers.
+2. Complete remaining live acceptance and record any accepted limits. The approved
+   [bounded live matrix](plans/remaining-live-verification.md) has exercised all
+   seven representative cases on the current candidate and restored the exact
+   original lab archive. Its [result record](development/remaining-live-verification-2026-11-07.md)
+   owns the review, setup failures, qualified displayed-sample acceptance and
+   verification limits. Physical-controller acceptance,
+   distinct complex-animation end-stage dispatch and unsampled forms/actions
+   remain open; debug scene access does not establish normal story progression.
+   Further live work requires checked GPU availability and a reservation.
+   Prepare release notes from the exercised matrix and resolve concrete blockers.
+   The approved [animation-end route investigation](development/animation-end-route-investigation-2026-11-07.md)
+   found no suitable bounded native caller; its CPU controls pass. The end-stage
+   live criterion remains open; an instrumented sample is a separate proposal.
 3. Finalize the tested candidate and supported-platform/compatibility notes;
    resolve the owner's licensing choice before any public distribution.
    Publishing remains separate.
 
 The content-complete alpha is reached following qualified acceptance of the final
-consolidated artwork review. The usable Linux release still requires the live
-P6 matrix and final release gates.
+consolidated artwork review. The usable Linux release still requires the remaining
+P6 acceptance and final release gates.
 
 Linux CPU release batch complete, 2026-11-06: the installable Nix candidate,
 standalone-source build, folder-mod/refusal and exact removal checks pass with
@@ -209,6 +218,13 @@ menus, input, persistence/failures and basic dialogue/movement/room/day/save/loa
 pass in an isolated lab. Three concrete integration defects are repaired; broader
 seasonal/action and physical-controller acceptance remain.
 See the [live verification record](development/live-release-verification-2026-11-06.md).
+
+Remaining live sample batch accepted as displayed with qualifications, 2026-11-07:
+all seven seasonal/action and special-scene cases have representative evidence;
+the exact original lab archive is restored. The
+[result record](development/remaining-live-verification-2026-11-07.md) owns the
+feedback, packet validation and remaining gaps. Physical hardware, distinct
+complex-animation end dispatch and unsampled forms/actions remain open.
 
 ## Open decisions and limits
 
