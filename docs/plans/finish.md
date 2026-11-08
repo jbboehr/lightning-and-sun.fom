@@ -393,8 +393,13 @@ the [live record](../development/live-release-verification-2026-11-06.md).
    establish normal story eligibility. Further rendering requires a checked and
    reserved GPU.
    The [CPU end-route investigation](../development/animation-end-route-investigation-2026-11-07.md)
-   found no suitable bounded native caller. Its proposed instrumented alternative
-   is not authorized; the live end-stage criterion remains open.
+   found no suitable bounded native caller. The owner approved planning for the
+   [isolated instrumented alternative](animation-end-live-check.md), then approved
+   its bounded execution and a corrected prepared-scene retry. The
+   [instrumented rendered result](../development/animation-end-prepared-retry-2026-11-07.md)
+   passes paired Summer horizontal stop-stage rendering and preservation.
+   The owner accepted the displayed comparison, with inspection depth unspecified.
+   Ordinary gameplay reachability and the original live criterion remain separate.
 3. Candidate release notes and support guidance prepared, 2026-11-07; the
    [documentation record](../development/linux-candidate-support-evidence.md)
    owns the outcome of the [completed plan](linux-release-documentation.md).

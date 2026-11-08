@@ -199,7 +199,14 @@ The next planned batch and remaining release work are:
    Prepare release notes from the exercised matrix and resolve concrete blockers.
    The approved [animation-end route investigation](development/animation-end-route-investigation-2026-11-07.md)
    found no suitable bounded native caller; its CPU controls pass. The end-stage
-   live criterion remains open; an instrumented sample is a separate proposal.
+   live criterion remains open. The owner approved planning for the
+   [isolated instrumented check](plans/animation-end-live-check.md), then approved
+   implementation/execution and a corrected prepared-scene retry. The
+   [instrumented result](development/animation-end-prepared-retry-2026-11-07.md)
+   passes paired Summer horizontal stop-stage rendering and preservation checks.
+   The owner accepted the displayed paired comparison; inspection depth is
+   unspecified. Ordinary gameplay reachability and the original live criterion
+   remain separate; no acceptance limit is waived.
 3. Candidate release notes and support guidance prepared, 2026-11-07; see the
    [documentation record](development/linux-candidate-support-evidence.md) and
    [completed plan](plans/linux-release-documentation.md). Finalize the tested

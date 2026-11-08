@@ -85,3 +85,63 @@ GPU. Label the finite request as instrumentation; it would test native rendering
 and recoloring at the end stage without establishing an ordinary gameplay caller.
 No instrumentation is approved or implemented by this investigation. The original
 live criterion and physical-controller acceptance remain open.
+
+## Instrumented follow-up planning
+
+2026-11-07: the owner replied "go for it" to Astra planning for the isolated
+instrumented check. This approved planning only. The
+[execution proposal](../plans/animation-end-live-check.md) records the bounded
+recommendation and next approval checkpoint; no probe, archive patch or live run
+has been implemented by this planning pass.
+
+Astra recommends a single copied `BuggerInitialize.gml` console extension that
+temporarily wraps Terithia's bound actor `animate` method, requests a finite count
+only after fresh native fish selection, and calls the original actor method
+exactly once per invocation. Native `par_NPC.gml:905–916,1602–1616` advances the
+handler, reads the production-wrapped sprite and assigns the rendered asset.
+This lets the proposed trace distinguish the original handler stop sprite from
+the actual selected render variant without changing handler or palette logic.
+
+Native `NpcAnimationHandler.gml:175–205` counts start completion toward the loop
+total. On stop completion it sets `animation_is_over`, resets `complex_index` to
+zero and calls `update_sprite`; fish has no reset-to-idle callback. Preserve the
+resulting first-start-frame hold as native finite-request behavior. A one-frame
+fish loop needs count/phase evidence rather than apparent movement. Astra's CPU
+source/image inspection reports six Summer horizontal start frames, one loop
+frame and five stop frames, with every visible stop pose distinct from every
+start/loop pose; these findings do not establish live rendering.
+
+Sol spot-checked the actual original handler against the prior receipt
+(`b0f5935b793afd165b23b7e90a187b4399eeea3584058884a1c69213c7e44646`),
+the native actor's animation/update call sites and the production
+`lns_palette_world_sprite`/bound-method attachment. The existing launcher accepts
+a separate archive override and copies seed state; the recorder captures
+lossless 30-fps video for at most 60 seconds. The explicit current package link
+still resolves to the package identified in the support record. These are
+read-only source/path checks, not a fresh package build, install or runtime test.
+
+Sol retains all five stop-subimage observations in the proposed trace but asks
+the 30-fps footage to corroborate the distinct rendered stop stage, with each
+actually observed pose identified. It cannot guarantee every native subimage
+appears in video. Existing exact offline/atlas evidence remains separate from
+screen colors under native lighting/compositing. No native speed change is
+proposed to obtain footage.
+
+Routing was verified from actual session metadata: parent
+`01a1b90b-e7a8-7490-88f9-ae36ff73ad10` uses `gpt-6.1-sol`/`xhigh`; child
+`01a1b90d-d2bb-7fb1-a0a9-6c7275197416` at `/root/animation_end_plan` uses
+`gpt-6-astra`/`xhigh`. Astra returned a read-only plan and finished. Sol owns
+planning-document updates and focused documentation validation. Planning used
+no GPU or local inference and supplied no new art/live acceptance.
+
+The [documentation receipt](../../tmp/animation-end-live-planning/documentation-checks.json)
+records local link/anchor checks, the five-document change boundary and that
+planning snapshot's document hashes. Whitespace checks and final diff inspection pass. No runtime,
+build, installation or game tests were run for this documentation-only change.
+
+The owner subsequently approved the bounded lab implementation and execution.
+The separate [execution record](animation-end-live-verification-2026-11-07.md)
+owns the implemented probe/CPU controls, fresh installation/removal and failed
+rendered attempts. No native finite request ran; the original criterion remains
+open. This follow-up does not change the earlier source investigation or art
+acceptance limits.

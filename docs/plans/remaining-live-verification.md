@@ -20,8 +20,17 @@ The owner subsequently approved a CPU investigation of the missing end-stage
 route, with live confirmation conditional on finding a suitable native caller.
 The [follow-up record](../development/animation-end-route-investigation-2026-11-07.md)
 finds no such bounded route and records passing native-handler CPU controls.
-No further rendering occurred; the criterion remains open. An instrumented live
-sample would require separate authorization.
+No further rendering occurred; the criterion remains open. The owner subsequently
+approved Astra planning for the [isolated instrumented sample](animation-end-live-check.md).
+The owner then separately approved implementation and the bounded rendered
+attempt. Its [result](../development/animation-end-live-verification-2026-11-07.md)
+records passing probe/CPU and strict install/remove checks, with no native finite
+request or completed paired capture in that first attempt. The subsequently
+approved [prepared-scene retry](../development/animation-end-prepared-retry-2026-11-07.md)
+passes paired Summer horizontal native stop rendering and preservation checks.
+The owner accepted that displayed paired comparison with inspection depth
+unspecified. Ordinary gameplay reachability and the original criterion remain
+separate; this instrumented result does not waive them.
 
 ## Outcome and boundaries
 

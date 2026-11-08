@@ -143,7 +143,12 @@ Physical-controller acceptance, the distinct complex-animation end-stage live
 criterion, broader approximate-tone assessment, unsampled artwork/forms/actions
 and retained visual qualifications remain open. The
 [CPU route investigation](animation-end-route-investigation-2026-11-07.md)
-found no suitable bounded native caller; its instrumented alternative remains
-unapproved. The owner's licensing choice, final distribution decisions and
+found no suitable bounded native caller. The subsequently approved
+[first instrumented attempt](animation-end-live-verification-2026-11-07.md) was
+incomplete. Its approved [prepared retry](animation-end-prepared-retry-2026-11-07.md)
+passes paired native stop rendering, with owner acceptance of the displayed
+comparison and inspection depth unspecified. Ordinary gameplay reachability and
+the original live criterion remain separate. The owner's
+licensing choice, final distribution decisions and
 publication authorization remain separate. Documentation preparation neither
 declares the usable Linux milestone complete nor closes those gates.

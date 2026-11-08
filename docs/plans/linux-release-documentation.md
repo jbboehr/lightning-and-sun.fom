@@ -29,7 +29,11 @@ owns that clarification and the read-only artifact checks.
 
 Physical-controller acceptance, distinct complex-animation end-stage live
 coverage, broader approximate-tone/unsampled-art assessment and retained visual
-qualifications remain open. The proposed instrumented animation check remains
-unapproved. Licensing, final distribution decisions and publication authorization
+qualifications remain open. The subsequently approved
+[prepared instrumented animation retry](../development/animation-end-prepared-retry-2026-11-07.md)
+passes paired native stop rendering with owner acceptance of the displayed
+comparison; ordinary reachability and the original live criterion remain
+separate. Licensing, final
+distribution decisions and publication authorization
 remain separate; see the [remaining gates](../development/linux-candidate-support-evidence.md#remaining-release-gates).
 Documentation completion does not declare the usable Linux milestone complete.
