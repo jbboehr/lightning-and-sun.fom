@@ -189,6 +189,42 @@
         "#964B3EFF"
       ],
       "profile": "../profiles/wiscar-native-tone-face.json"
+    },
+    {
+      "id": "npc_stillwell",
+      "label": "Muted light (Stillwell)",
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#5F3933FF",
+        "#72453DFF",
+        "#39221EFF",
+        "#EED7B6FF",
+        "#E2D3A5FF",
+        "#CBA282FF",
+        "#D79274FF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
+    },
+    {
+      "id": "npc_terithia",
+      "label": "Muted medium (Terithia)",
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#543327FF",
+        "#653D2FFF",
+        "#321E18FF",
+        "#DDB39EFF",
+        "#CCA484FF",
+        "#BA7E66FF",
+        "#B87D78FF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
     }
   ],
   "profile": "../profiles/wiscar-world-trial.json"

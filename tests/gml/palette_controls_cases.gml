@@ -182,10 +182,12 @@ if (global.controls_case == "title") {
     test_all_vanilla();
     var state = __lns_palette_runtime();
     for (var i = 0; i < 36; i++) {
-        assert(array_length(state.characters[i].names) == 12);
-        assert(array_length(state.characters[i].preset_ids) == 12);
+        assert(array_length(state.characters[i].names) == 14);
+        assert(array_length(state.characters[i].preset_ids) == 14);
         assert(state.characters[i].preset_ids[10] == "player_35");
         assert(state.characters[i].preset_ids[11] == "player_27");
+        assert(state.characters[i].preset_ids[12] == "npc_stillwell");
+        assert(state.characters[i].preset_ids[13] == "npc_terithia");
     }
     var menu = test_settings();
     menu.__lns_palette_category.tap();
@@ -194,7 +196,7 @@ if (global.controls_case == "title") {
     var pilot = menu.option_pilot;
     scroller.scroll = 127;
     pilot.focus = 18;
-    for (var preset = 1; preset <= 11; preset++) {
+    for (var preset = 1; preset <= 13; preset++) {
         menu.option_pilot.nodes[0].tap();
         assert(state.characters[0].selected == preset && state.characters[1].selected == 0);
         assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": "+state.characters[0].names[preset]);
@@ -204,9 +206,14 @@ if (global.controls_case == "title") {
         assert(global.actors[0].image_xscale == -1 && global.actors[0].x == 34 && global.actors[0].y == 72);
         assert(menu.option_scroller == scroller && menu.option_pilot == pilot);
         assert(scroller.scroll == 127 && pilot.focus == 18 && ANCHOR.active == pilot);
+        if (preset == 11) {
+            assert(state.characters[0].preset_ids[preset] == "player_27");
+            assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Deep umber (Player 27)");
+        }
+        if (preset == 12) assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Muted light (Stillwell)");
     }
-    assert(state.characters[0].preset_ids[state.characters[0].selected] == "player_27");
-    assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Deep umber (Player 27)");
+    assert(state.characters[0].preset_ids[state.characters[0].selected] == "npc_terithia");
+    assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Muted medium (Terithia)");
     menu.option_pilot.nodes[0].tap();
     assert(state.characters[0].selected == 0 && state.characters[1].selected == 0);
     assert(global.menu.portrait.sprite == 10 && global.menu.portrait.index == 1.75);
@@ -214,6 +221,29 @@ if (global.controls_case == "title") {
     menu.option_pilot.nodes[1].tap();
     assert(state.characters[0].selected == 0 && state.characters[1].selected == 1);
     assert(global.config_write_count == 0 && !state.controls.remember);
+
+    for (var preset = 13; preset >= 0; preset--) {
+        assert(lns_palette_select(state.characters[0], preset));
+        lns_palette_controls_refresh(menu);
+        assert(state.characters[0].selected == preset && state.characters[1].selected == 1);
+        assert(global.menu.portrait.sprite == 10 * (preset + 1) && global.menu.portrait.index == 1.75);
+        assert(global.actors[0].sprite_index == 300 + preset && global.actors[0].animator.current.frame == 7.75);
+        assert(global.actors[0].animator.current.index == 2 && global.actors[0].image_xscale == -1);
+        assert(menu.option_scroller == scroller && menu.option_pilot == pilot);
+        assert(scroller.scroll == 127 && pilot.focus == 18 && ANCHOR.active == pilot);
+    }
+    assert(global.config_write_count == 0);
+
+    var definitions = lns_palette_definitions();
+    for (var preset = 0; preset <= 13; preset++) {
+        test_put(test_saved(definitions[0][5][preset]));
+        var original_bytes = global.disk[$ mmapi_config_path("lns_palette")];
+        test_boot();
+        state = __lns_palette_runtime();
+        for (var i = 0; i < 36; i++) assert(state.characters[i].selected == preset);
+        assert(state.controls.remember && global.config_write_count == 0);
+        assert(global.disk[$ mmapi_config_path("lns_palette")] == original_bytes);
+    }
 
     test_put(test_saved("player_35"));
     test_boot();
@@ -240,11 +270,102 @@ if (global.controls_case == "title") {
     menu = test_settings();
     menu.__lns_palette_category.tap();
     menu.option_pilot.nodes[0].tap();
+    assert(state.characters[0].selected == 12 && state.characters[1].selected == 10);
+    saved = try_read_json_file(mmapi_config_path("lns_palette"), undefined, false);
+    assert(saved.__config_version == 1 && saved.remember);
+    assert(saved.selections[$ state.characters[0].id] == "npc_stillwell");
+    assert(saved.selections[$ state.characters[1].id] == "player_35");
+    test_boot();
+    state = __lns_palette_runtime();
+    assert(state.controls.remember && state.characters[0].selected == 12);
+    for (var i = 1; i < 36; i++) assert(state.characters[i].selected == 10);
+    assert(global.config_write_count == 2 && global.warning_count == 0);
+    assert(global.menu.portrait.sprite == 130 && global.menu.portrait.index == 1.75);
+    assert(global.actors[0].sprite_index == 312 && global.actors[0].animator.current.frame == 7.75);
+    menu = test_settings();
+    menu.__lns_palette_category.tap();
+    menu.option_pilot.nodes[0].tap();
+    assert(state.characters[0].selected == 13 && state.characters[1].selected == 10);
+    saved = try_read_json_file(mmapi_config_path("lns_palette"), undefined, false);
+    assert(saved.__config_version == 1 && saved.remember);
+    assert(saved.selections[$ state.characters[0].id] == "npc_terithia");
+    assert(saved.selections[$ state.characters[1].id] == "player_35");
+    test_boot();
+    state = __lns_palette_runtime();
+    assert(state.controls.remember && state.characters[0].selected == 13);
+    for (var i = 1; i < 36; i++) assert(state.characters[i].selected == 10);
+    assert(global.config_write_count == 3 && global.warning_count == 0);
+    assert(global.menu.portrait.sprite == 140 && global.menu.portrait.index == 1.75);
+    assert(global.actors[0].sprite_index == 313 && global.actors[0].animator.current.frame == 7.75);
+    menu = test_settings();
+    menu.__lns_palette_category.tap();
+    menu.option_pilot.nodes[0].tap();
     assert(state.characters[0].selected == 0 && state.characters[1].selected == 10);
     test_boot();
     assert(__lns_palette_runtime().characters[0].selected == 0 && __lns_palette_runtime().characters[1].selected == 10);
-    assert(global.config_write_count == 2 && global.native_settings_writes == 0);
-    show_debug_message("PASS: twelve choices, Player 27 final ID, independent rows, phase/focus preservation, Vanilla wrap, old version-1 restore and Player 27 restart");
+    assert(global.config_write_count == 4 && global.native_settings_writes == 0);
+
+    test_put(test_saved("npc_terithia"));
+    test_boot();
+    menu = test_settings();
+    menu.__lns_palette_category.tap();
+    var writes = global.config_write_count;
+    menu.option_pilot.nodes[37].tap();
+    test_all_vanilla();
+    assert(global.config_write_count == writes + 1);
+    saved = try_read_json_file(mmapi_config_path("lns_palette"), undefined, false);
+    assert(saved.__config_version == 1 && saved.remember);
+    for (var i = 0; i < 36; i++) assert(saved.selections[$ definitions[i][0]] == "vanilla");
+    test_boot();
+    test_all_vanilla();
+
+    test_put(test_saved("npc_stillwell"));
+    test_boot();
+    state = __lns_palette_runtime();
+    menu = test_settings();
+    menu.__lns_palette_category.tap();
+    menu.option_pilot.nodes[1].tap();
+    menu.option_pilot.nodes[36].tap();
+    assert(!state.controls.remember && state.characters[0].selected == 12 && state.characters[1].selected == 13);
+    original_bytes = global.disk[$ mmapi_config_path("lns_palette")];
+    writes = global.config_write_count;
+    test_boot();
+    test_all_vanilla();
+    assert(!__lns_palette_runtime().controls.remember && global.config_write_count == writes);
+    menu = test_settings();
+    menu.__lns_palette_category.tap();
+    for (var preset = 1; preset <= 13; preset++) menu.option_pilot.nodes[0].tap();
+    assert(__lns_palette_runtime().characters[0].selected == 13);
+    assert(global.config_write_count == writes && global.disk[$ mmapi_config_path("lns_palette")] == original_bytes);
+    test_boot();
+    test_all_vanilla();
+
+    for (var preset = 12; preset <= 13; preset++) {
+        test_put(test_saved(definitions[0][5][preset - 1]));
+        test_boot();
+        state = __lns_palette_runtime();
+        menu = test_settings();
+        menu.__lns_palette_category.tap();
+        scroller = menu.option_scroller;
+        pilot = menu.option_pilot;
+        scroller.scroll = 127;
+        pilot.focus = 18;
+        original_bytes = global.disk[$ mmapi_config_path("lns_palette")];
+        global.write_mode = "noop";
+        menu.option_pilot.nodes[0].tap();
+        assert(state.characters[0].selected == preset && state.characters[1].selected == preset - 1);
+        test_visible_error(menu);
+        assert(global.disk[$ mmapi_config_path("lns_palette")] == original_bytes);
+        assert(global.menu.portrait.sprite == 10 * (preset + 1) && global.menu.portrait.index == 1.75);
+        assert(global.actors[0].sprite_index == 300 + preset && global.actors[0].animator.current.frame == 7.75);
+        assert(menu.option_scroller == scroller && menu.option_pilot == pilot);
+        assert(scroller.scroll == 127 && pilot.focus == 18 && ANCHOR.active == pilot);
+        global.write_mode = "ok";
+        test_boot();
+        assert(__lns_palette_runtime().characters[0].selected == preset - 1);
+    }
+    assert(global.native_settings_writes == 0);
+    show_debug_message("PASS: fourteen choices, stable old IDs and new donor IDs, independent rows, phase/focus, forward wrap/reverse selections, version-1 restart/reset/opt-out and donor write failure");
 } else {
     var path = mmapi_config_path("lns_palette");
     test_boot();

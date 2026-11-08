@@ -215,6 +215,48 @@
         "#431D11FF"
       ],
       "profile": "../profiles/valen-native-tone-face.json"
+    },
+    {
+      "id": "npc_stillwell",
+      "label": "Muted light (Stillwell)",
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#8F564CFF",
+        "#BD876CFF",
+        "#CBA282FF",
+        "#CBA282FF",
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#D79274FF",
+        "#BD876CFF",
+        "#BD876CFF"
+      ],
+      "profile": "../profiles/valen-native-tone-face.json"
+    },
+    {
+      "id": "npc_terithia",
+      "label": "Muted medium (Terithia)",
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#7E4C3BFF",
+        "#AD7465FF",
+        "#BA7E66FF",
+        "#BA7E66FF",
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#B87D78FF",
+        "#AD7465FF",
+        "#AD7465FF"
+      ],
+      "profile": "../profiles/valen-native-tone-face.json"
     }
   ]
 }

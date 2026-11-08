@@ -18,11 +18,16 @@ let
       in
       if type == "directory" then
         builtins.elem top [ "src" "tests" "palettes" "mod" ]
+        || builtins.elem relative [ "docs" "docs/development" ]
       else type == "regular" && (
         builtins.elem relative [ "Cargo.toml" "Cargo.lock" ]
         || (top == "src" && hasExtension [ ".rs" ".html" ".js" ".css" ])
         || (top == "tests" && hasExtension [ ".rs" ".js" ".json" ".gml" ])
         || (top == "palettes" && hasExtension [ ".json" ])
+        || builtins.elem relative [
+          "docs/development/player27-mappings.json"
+          "docs/development/muted-tone-mappings.json"
+        ]
         || builtins.elem relative [
           "mod/config/characters.json"
           "mod/manifest.toml"

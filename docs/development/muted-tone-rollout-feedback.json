@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-08",
+  "owner_feedback": "looks fine for now",
+  "owner_message": "looks fine for now. are we in a good spot to commit? do we need to update any planning documentation first?",
+  "assessment": "Qualified provisional acceptance of the displayed Stillwell/Terithia full-roster review, retaining the explicit for-now qualification. No defect was reported.",
+  "inspection_depth": "Unspecified. The owner requested and received the direct index.html path; characters, pages, frames and inspection depth were not identified.",
+  "reported_defects": [],
+  "scope": {
+    "characters": 36,
+    "selected_strips_in_offered_packet": 6312,
+    "new_choice_ids": [
+      "npc_stillwell",
+      "npc_terithia"
+    ],
+    "columns": [
+      "Vanilla",
+      "Player04",
+      "Stillwell",
+      "Wiscar",
+      "Terithia"
+    ],
+    "presentation": "Gold outlines mark additions. Direct HTML and the byte-bound portable ZIP contain the same offered presentation.",
+    "nora_maple_lips": "Included in the offered packet and feedback question, but not individually assessed by the owner. Retain provisional authoring-policy status; no permanent cosmetic rule is inferred."
+  },
+  "delivered_artifacts": {
+    "tmp/muted-tone-rollout/review/index.html": {
+      "sha256": "7d50417b4b337bdcbad44855937018fabf437fae7d016d8c7862a526e1212d51",
+      "bytes": 188193
+    },
+    "tmp/muted-tone-rollout/review/roster.html": {
+      "sha256": "9dcdcf81d4989dc83509818acd2d57aecd85b0994f40368e93174ddff58b5205",
+      "bytes": 138395
+    },
+    "tmp/muted-tone-rollout/review/cosmetics.html": {
+      "sha256": "a43a7fbfec6c6f356b946f8b3f24b6664e2db0c73108788e4f91a227114262b1",
+      "bytes": 39118
+    },
+    "tmp/muted-tone-rollout/review/source-manifest.json": {
+      "sha256": "ff7b2fc2b2c453fba4e609a7d067086b15ac2af1dfa15478628f1f1f9b9709d3",
+      "bytes": 37555684
+    },
+    "tmp/muted-tone-rollout/review/portable-manifest.json": {
+      "sha256": "f460eb48c0f6557eaf1cc9641598124158b56dc80ad5430e614058660ab9546b",
+      "bytes": 4077133
+    },
+    "tmp/muted-tone-rollout/review.zip": {
+      "sha256": "5022c7b9c9d1e3bf455a07a478a47075cc0aa738f0946016939e0ebd511049a2",
+      "bytes": 245985400
+    }
+  },
+  "accepted_presentation_snapshot": {
+    "local/fixtures/muted-tone-rollout-presentation/review.zip": {
+      "sha256": "5022c7b9c9d1e3bf455a07a478a47075cc0aa738f0946016939e0ebd511049a2",
+      "bytes": 245985400,
+      "scope": "Exact complete offered presentation, including the new generated images, metadata, source and portable manifests. This freezes the current reviewed candidate without claiming that every contained case was inspected."
+    }
+  },
+  "limits": [
+    "Acceptance is provisional as displayed: for now. No exhaustive all-frame, all-outfit, all-action or per-character/cosmetic inspection is inferred.",
+    "All 70 broader approximate-tone coverage decisions remain pending and unchanged.",
+    "No new live-game, physical-controller, release, licensing or public-publication acceptance is inferred.",
+    "The commit-readiness question prompted documentation/checks; no commit or staging is performed by this assessment.",
+    "Earlier pilot, Player27 and other recorded approvals retain their original scope."
+  ]
+}

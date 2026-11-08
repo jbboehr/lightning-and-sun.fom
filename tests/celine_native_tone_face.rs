@@ -127,6 +127,10 @@ fn celine_face_override_preserves_historical_choices_and_skin_roles() {
             }
             let expected_cosmetics = if p["id"] == "player_27" {
                 ["#964B3EFF", "#A55B4EFF", "#6F3231FF"]
+            } else if p["id"] == "npc_stillwell" {
+                ["#D79274FF", "#DE9C84FF", "#AB4D60FF"]
+            } else if p["id"] == "npc_terithia" {
+                ["#B87D78FF", "#C38786FF", "#9A5261FF"]
             } else {
                 cosmetics[i - 4]
             };

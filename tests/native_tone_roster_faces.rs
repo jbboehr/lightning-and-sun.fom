@@ -53,7 +53,7 @@ fn cases() -> Vec<Case> {
             assert!(matches!(status, "corrected" | "audited-no-change"));
             let set = read(format!("palettes/sets/{id}-native-tones.json"));
             let presets = set["presets"].as_array().unwrap();
-            assert_eq!(presets.len(), 11, "{id}");
+            assert_eq!(presets.len(), 13, "{id}");
             let selected = presets[4].get("profile").unwrap_or(&set["profile"]);
             for preset in &presets[4..] {
                 assert_eq!(preset.get("profile").unwrap_or(&set["profile"]), selected);

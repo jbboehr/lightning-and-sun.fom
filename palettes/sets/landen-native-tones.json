@@ -157,6 +157,36 @@
         "#964B3EFF"
       ],
       "profile": "../profiles/landen-native-tone-face.json"
+    },
+    {
+      "id": "npc_stillwell",
+      "label": "Muted light (Stillwell)",
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#8F564CFF",
+        "#D79274FF"
+      ],
+      "profile": "../profiles/landen-native-tone-face.json"
+    },
+    {
+      "id": "npc_terithia",
+      "label": "Muted medium (Terithia)",
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#7E4C3BFF",
+        "#B87D78FF"
+      ],
+      "profile": "../profiles/landen-native-tone-face.json"
     }
   ]
 }

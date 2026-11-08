@@ -1,18 +1,21 @@
 # Lightning and Sun
 
 Skin palettes for the 36 supported Fields of Mistria characters, covering their
-portraits and recolorable world sprites. Each character offers twelve choices:
-Vanilla, Debug Blue, three previous donor palettes and seven additional tones
+portraits and recolorable world sprites. Each character offers fourteen choices:
+Vanilla, Debug Blue, three previous donor palettes and nine additional tones
 adapted from the game's NPC and player-creator colors. Clothing,
 hair, equipment, markings and intentional spectral forms keep their original
 colors.
 
-This is an unpublished Linux candidate. Installation/removal, native menus,
-keyboard/mouse, virtual-gamepad, remembered choices and representative gameplay
-checks pass. Displayed artwork and live samples have qualified acceptance;
-physical-controller, distinct complex-animation end-stage and broader artwork/tone
-coverage checks remain open. See the [candidate notes](docs/releases/linux-candidate.md)
-for included behavior and tested limits.
+This is an unpublished Linux candidate. The fourteen-choice build passes
+installation/removal, native title/journal menu, keyboard/mouse, virtual-gamepad
+and remembered-choice checks. Both new muted tones have rendered portrait/world
+samples; their displayed review has provisional "for now" acceptance, with
+inspection depth unspecified. Earlier displayed artwork and live samples retain
+qualified acceptance. Physical-controller, distinct complex-animation end-stage
+and broader artwork/tone coverage checks remain open. See the
+[candidate notes](docs/releases/linux-candidate.md) for included behavior and
+tested limits.
 
 ## Build and install
 
@@ -80,6 +83,8 @@ Caldarus and Seridia offer Adeline/Hayden/Ryis. Every character also offers:
 - Deep brown (Player 22)
 - Very deep (Player 35)
 - Deep umber (Player 27)
+- Muted light (Stillwell)
+- Muted medium (Terithia)
 
 These tones approximate a
 broader native range; they do not reproduce every original skin color exactly.

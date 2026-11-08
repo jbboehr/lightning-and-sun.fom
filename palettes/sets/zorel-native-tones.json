@@ -211,6 +211,46 @@
         "#964B3EFF"
       ],
       "profile": "../profiles/zorel-native-tone-face.json"
+    },
+    {
+      "id": "npc_stillwell",
+      "label": "Muted light (Stillwell)",
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#8F564CFF",
+        "#CBA282FF",
+        "#8F564CFF",
+        "#FFEBBFFF",
+        "#CBA282FF",
+        "#8F564CFF",
+        "#CBA282FF",
+        "#8F564CFF",
+        "#D79274FF"
+      ],
+      "profile": "../profiles/zorel-native-tone-face.json"
+    },
+    {
+      "id": "npc_terithia",
+      "label": "Muted medium (Terithia)",
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#7E4C3BFF",
+        "#BA7E66FF",
+        "#7E4C3BFF",
+        "#FCBC9EFF",
+        "#BA7E66FF",
+        "#7E4C3BFF",
+        "#BA7E66FF",
+        "#7E4C3BFF",
+        "#B87D78FF"
+      ],
+      "profile": "../profiles/zorel-native-tone-face.json"
     }
   ],
   "profile": "../profiles/zorel-world-trial.json"

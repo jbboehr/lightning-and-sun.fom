@@ -346,8 +346,8 @@ fn invalid_or_incomplete_preset_sets_leave_no_output() {
 }
 
 #[test]
-fn preset_count_boundaries_accept_one_through_eleven_but_reject_zero_and_twelve() {
-    for count in [1usize, 8, 9, 10, 11, 0, 12] {
+fn preset_count_boundaries_accept_one_through_thirteen_but_reject_zero_and_fourteen() {
+    for count in [1usize, 8, 9, 10, 11, 12, 13, 0, 14] {
         let temp = tempfile::tempdir().unwrap();
         let (original, set) = fixture(temp.path());
         let output = temp.path().join("bundle");
@@ -372,7 +372,7 @@ fn preset_count_boundaries_accept_one_through_eleven_but_reject_zero_and_twelve(
             Path::new("--output"),
             &output,
         ]);
-        if (1..=11).contains(&count) {
+        if (1..=13).contains(&count) {
             assert!(
                 result.status.success(),
                 "rejected {count} presets: {}",
@@ -417,7 +417,7 @@ fn preset_count_boundaries_accept_one_through_eleven_but_reject_zero_and_twelve(
             assert!(!output.exists(), "published rejected {count}-preset set");
             assert!(
                 String::from_utf8_lossy(&result.stderr)
-                    .contains("Select between one and eleven presets")
+                    .contains("Select between one and thirteen presets")
             );
         }
     }

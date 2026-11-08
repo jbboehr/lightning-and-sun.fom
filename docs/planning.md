@@ -1,6 +1,6 @@
 # Project planning
 
-Updated 2026-11-07. This is the current project overview. The original
+Updated 2026-11-08. This is the current project overview. The original
 [handoff](HANDOFF.md) preserves the investigation brief; it is historical.
 
 The user approved the finish plan on 2026-11-05 with "let's do it".
@@ -31,7 +31,14 @@ Player27 addition is implemented and passes full image, package, native control,
 persistence and removal checks. Its [rollout record](development/player27-rollout.md)
 owns the complete comparison; the [representative sheet record](development/player27-review-sheet.md#owner-feedback)
 records qualified acceptance of the displayed 36-character sample. Broader artwork
-and approximate-coverage assessment remain separate.
+and approximate-coverage assessment remain separate. The subsequently approved
+[Stillwell/Terithia rollout](development/muted-tone-rollout.md) is implemented and
+technically verified across all 36 characters: fourteen choices with previous
+artwork preserved, package/install/remove and native controls/persistence/rendered
+samples passing. The displayed rollout review received provisional acceptance
+with "looks fine for now"; inspection depth is unspecified. The
+[feedback record](development/muted-tone-rollout-feedback.json) binds the exact
+presentation and limits. All broader coverage decisions remain pending.
 
 | Area | Status |
 | --- | --- |
@@ -39,12 +46,12 @@ and approximate-coverage assessment remain separate.
 | Selected portrait inventory | All 2,201 strips for 36 characters included; some intentionally unchanged |
 | Selected world inventory | All 4,111 recolorable strips included; remaining 30 shadows and 18 spectral strips audited unchanged |
 | Complete world coverage | All 36 recolorable inventories authored and validated |
-| Art acceptance | Original approvals, qualified Celine/roster/Adeline/Holt feedback and qualified Player27 representative-portrait acceptance recorded; no current reported portrait defect; broader coverage assessment remains |
+| Art acceptance | Earlier qualified approvals retained; Stillwell/Terithia displayed review provisionally accepted "for now", inspection depth unspecified; no reported defect; broader coverage assessment remains |
 | Content-complete alpha | Reached on 2026-11-06; live-game acceptance remains separate |
 | Release controls | Live title/journal keyboard, mouse, virtual-gamepad and persistence checks pass; displayed review has qualified user acceptance; physical-controller acceptance remains |
 | Integration confidence | Final package passes install/remove and basic gameplay checks; basic live review and seven further seasonal/action/scene samples accepted as displayed with qualifications; untested coverage remains open |
 | Linux packaging | Installable pinned-Nix candidate built and checked from standalone source; not published |
-| Palette breadth | Six sourced additions committed; one delegated Player27 addition fully verified across all 36, retaining earlier choices; displayed representative portraits accepted with qualifications; broader artwork and coverage assessment remain |
+| Palette breadth | Six-family checkpoint and Player27 committed; two muted families technically verified across all 36 with prior choices/images exact; displayed review provisionally accepted; broader coverage assessment pending |
 
 ## Approved finish line
 
@@ -99,7 +106,7 @@ work. Existing approvals and the original content-complete alpha remain valid.
 | P3 | Finish Errol, Hemlock, Luc, Maple and Terithia | All strips authored, validated and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
 | P4 | Finish Caldarus and Seridia, including an explicit special-form audit | Complete and accepted as displayed; live-game acceptance remains separate | No for authoring/tests |
 | P5 | Add one selection menu and opt-in remembered choices using the existing runtime | Native menu/storage/input checks pass and displayed live review accepted with qualifications; physical-controller acceptance remains | CPU development; GPU for live verification |
-| Native-tone checkpoint | Broaden selectable tones across the existing roster | Six-family checkpoint and Player27 follow-up committed; qualified representative-portrait acceptance recorded; broader coverage assessment remains in the [native-tone plan](plans/native-tone-coverage.md) | No for commit; yes for further live rendering |
+| Native-tone checkpoint | Broaden selectable tones across the existing roster | Stillwell/Terithia implementation verified and displayed review provisionally accepted; local checkpoint authorized; broader coverage remains in the [native-tone plan](plans/native-tone-coverage.md) | No GPU needed for documentation or commit |
 | P6 | Validate complete artwork, package, installation/removal and natural gameplay; prepare supported Linux release | Earlier artwork/basic live acceptance retained; seven-case follow-up accepted as displayed with qualifications; untested cases and final release gates remain | Yes for gameplay/rendering; CPU for other checks |
 
 The remaining 30 strips outside P1–P4 are Hayden shadows (29, already audited)
@@ -187,6 +194,35 @@ The next planned batch and remaining release work are:
    has qualified owner acceptance of the displayed neutral portraits for all 36
    characters. Its record owns the exact feedback and inspection limits; broader
    artwork and coverage acceptance are not inferred.
+   On 2026-11-08 the owner approved planning a fresh
+   [twelve-choice coverage review](plans/current-tone-coverage-review.md) that
+   includes Player27 while preserving the historical worksheet and decisions.
+   The owner then approved implementation with "Go for it". The new worksheet
+   and portable download are prepared and technically verified; the
+   [owning record](development/current-tone-coverage-review.md) records their
+   fingerprints, preservation and inspection limits. Owner coverage assessment
+   remains pending. No local GPU or local model inference was needed.
+   The owner subsequently approved a bounded
+   [Stillwell/Terithia muted-tone pilot](development/muted-tone-pilot.md) after
+   Sol identified remaining muted light/medium approximations. Planning and
+   execution of the CPU-only comparison are authorized; the
+   [implementation plan](plans/muted-tone-pilot.md) is complete. The comparison
+   is prepared and technically verified; the owning record links its final
+   packet, preservation proof and inspection limits. The owner accepted both
+   displayed pilot candidates and provisional cosmetics with "looks good";
+   inspection depth is unspecified and the exact feedback is recorded there.
+   The owner then approved the proposed full-roster rollout with "go for it".
+   [Rollout implementation and technical checks](plans/muted-tone-rollout.md)
+   are complete across all 36 characters, preserving every previous choice and
+   image. The [owning record](development/muted-tone-rollout.md) links the full
+   comparison, strict package/install/remove and native title/journal,
+   persistence and sampled rendering results. All owned GPU sessions are stopped
+   and the exact lab is restored. The owner subsequently said "looks fine for
+   now" about the displayed review. This provisional acceptance and its frozen
+   presentation are recorded in the owning evidence; inspection depth is
+   unspecified. The owner then authorized the local checkpoint with "commit
+   please". Broader coverage and release gates remain open; documentation and
+   commit require no local GPU.
 2. Complete remaining live acceptance and record any accepted limits. The approved
    [bounded live matrix](plans/remaining-live-verification.md) has exercised all
    seven representative cases on the current candidate and restored the exact
@@ -252,7 +288,11 @@ and expanded native checks pass. Qualified positive displayed-art feedback is
 recorded through the final Holt correction; full inspection/approximate-coverage
 approval is not inferred. The six-family checkpoint raised the bounded ceiling
 to ten generated variants; the authorized Player27 addition raises it to eleven
-plus Vanilla. Its complete verification and comparison packet are recorded in
+plus Vanilla. Stillwell/Terithia now extend the verified ceiling to thirteen
+plus Vanilla, with earlier images/choices exact. Their displayed artwork has
+provisional "for now" acceptance, with unspecified inspection depth, in the
+[rollout record](development/muted-tone-rollout.md#owner-feedback).
+Player27 verification and its comparison are recorded in
 the [Player27 rollout](development/player27-rollout.md). Qualified acceptance of
 the displayed representative portraits is recorded separately from broader
 artwork and coverage assessment. The existing preset

@@ -20,6 +20,8 @@ fn run_controls(case: &str) {
             ("player_22", "Deep brown (Player 22)"),
             ("player_35", "Very deep (Player 35)"),
             ("player_27", "Deep umber (Player 27)"),
+            ("npc_stillwell", "Muted light (Stillwell)"),
+            ("npc_terithia", "Muted medium (Terithia)"),
         ]
     } else {
         &[
@@ -117,6 +119,6 @@ fn palette_storage_uses_stable_ids_and_confirms_primary_writes() {
 
 #[test]
 #[ignore = "requires the pinned Fabricator interpreter in FOM_GML_INTERPRETER"]
-fn twelve_choices_preserve_navigation_animation_and_version_one_storage() {
+fn fourteen_choices_preserve_navigation_animation_and_version_one_storage() {
     run_controls("max_presets");
 }

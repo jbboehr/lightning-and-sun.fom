@@ -1,0 +1,4936 @@
+{
+  "schema_version": 1,
+  "status": "awaiting_owner_review",
+  "scope": "Sampled NPC/creator tone range; source references and selected current portrait/world context. No exhaustive expression/outfit/frame/live acceptance.",
+  "diagnostic_matrix": {
+    "path": "docs/development/native-tone-coverage-matrix.json",
+    "sha256": "8a35c9369c152844c0febce2bd9913bdaebc091a6d7f72c4b871a2e255c2818d"
+  },
+  "worksheet": "tmp/current-tone-coverage-review/index.html",
+  "current_diagnostics": {
+    "path": "tmp/player27-rollout/reference-diagnostics.json",
+    "sha256": "a3cb76b015352c17fab219cd37c1296c4d9b6f7ac010d8e9499ffd3c35e2be84"
+  },
+  "changed_proposals": {
+    "player_24": {
+      "before": "player_22",
+      "after": "player_27"
+    },
+    "player_30": {
+      "before": "player_22",
+      "after": "player_27"
+    },
+    "player_27": {
+      "before": "player_22",
+      "after": "player_27"
+    }
+  },
+  "accepted_limitations": [],
+  "method": "Common representative proposed from existing nearest-reference assignments restricted to shared families. Original diagnostics remain unchanged; every character-specific nearer alternative remains available.",
+  "common_reference_ids": [
+    "player_04",
+    "npc_march",
+    "npc_wiscar",
+    "npc_hayden",
+    "npc_ryis",
+    "player_16",
+    "player_22",
+    "player_27",
+    "player_35",
+    "npc_seridia"
+  ],
+  "representatives": [
+    {
+      "id": "player_13",
+      "source_ids": [
+        "player_13"
+      ],
+      "labels": [
+        "Player 13"
+      ],
+      "colors": [
+        "#F0A36FFF",
+        "#D26F44FF",
+        "#A44D33FF",
+        "#592719FF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [
+        "Large diagnostic gap"
+      ],
+      "diagnostic_gap": 12.8109,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_20",
+      "source_ids": [
+        "player_20"
+      ],
+      "labels": [
+        "Player 20"
+      ],
+      "colors": [
+        "#C45B48FF",
+        "#A23D32FF",
+        "#7C2926FF",
+        "#4B1918FF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [
+        "Large diagnostic gap"
+      ],
+      "diagnostic_gap": 12.7691,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_stillwell",
+      "source_ids": [
+        "npc_stillwell"
+      ],
+      "labels": [
+        "Stillwell"
+      ],
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [
+        "Shade contrast"
+      ],
+      "diagnostic_gap": 12.4287,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_holt",
+      "source_ids": [
+        "npc_holt"
+      ],
+      "labels": [
+        "Holt"
+      ],
+      "colors": [
+        "#F5C88EFF",
+        "#CD9067FF",
+        "#B45732FF",
+        "#762E21FF"
+      ],
+      "reference_id": "npc_hayden",
+      "reference_label": "Golden tan (Hayden)",
+      "reference_colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF"
+      ],
+      "priority_reasons": [
+        "Muted intermediate tone"
+      ],
+      "diagnostic_gap": 12.2798,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_olric",
+      "source_ids": [
+        "npc_olric"
+      ],
+      "labels": [
+        "Olric"
+      ],
+      "colors": [
+        "#F2DBA7FF",
+        "#DDA966FF",
+        "#C37B43FF",
+        "#B7672FFF",
+        "#813E16FF"
+      ],
+      "reference_id": "npc_hayden",
+      "reference_label": "Golden tan (Hayden)",
+      "reference_colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF"
+      ],
+      "priority_reasons": [
+        "Five sampled shades; muted intermediate tone"
+      ],
+      "diagnostic_gap": 12.1506,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_wheedle",
+      "source_ids": [
+        "npc_wheedle"
+      ],
+      "labels": [
+        "Wheedle"
+      ],
+      "colors": [
+        "#F6C38DFF",
+        "#D39876FF",
+        "#AF7456FF",
+        "#A56C54FF"
+      ],
+      "reference_id": "npc_hayden",
+      "reference_label": "Golden tan (Hayden)",
+      "reference_colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF"
+      ],
+      "priority_reasons": [
+        "Sampled shades include two shadow roles"
+      ],
+      "diagnostic_gap": 12.0883,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_terithia",
+      "source_ids": [
+        "npc_terithia"
+      ],
+      "labels": [
+        "Terithia"
+      ],
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF"
+      ],
+      "reference_id": "npc_wiscar",
+      "reference_label": "Warm peach (Wiscar)",
+      "reference_colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "priority_reasons": [
+        "Muted intermediate tone"
+      ],
+      "diagnostic_gap": 11.8622,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_dell",
+      "source_ids": [
+        "npc_dell"
+      ],
+      "labels": [
+        "Dell"
+      ],
+      "colors": [
+        "#F5C88EFF",
+        "#DD905BFF",
+        "#A8571CFF"
+      ],
+      "reference_id": "npc_hayden",
+      "reference_label": "Golden tan (Hayden)",
+      "reference_colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF"
+      ],
+      "priority_reasons": [
+        "Three sampled shades"
+      ],
+      "diagnostic_gap": 11.4539,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_luc",
+      "source_ids": [
+        "npc_luc"
+      ],
+      "labels": [
+        "Luc"
+      ],
+      "colors": [
+        "#C48E68FF",
+        "#B36844FF",
+        "#712922FF"
+      ],
+      "reference_id": "npc_wiscar",
+      "reference_label": "Warm peach (Wiscar)",
+      "reference_colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "priority_reasons": [
+        "Three sampled shades"
+      ],
+      "diagnostic_gap": 11.2047,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_29",
+      "source_ids": [
+        "player_29"
+      ],
+      "labels": [
+        "Player 29"
+      ],
+      "colors": [
+        "#681F28FF",
+        "#50141BFF",
+        "#3C1013FF",
+        "#280C0CFF"
+      ],
+      "reference_id": "player_22",
+      "reference_label": "Deep brown (Player 22)",
+      "reference_colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF"
+      ],
+      "priority_reasons": [
+        "Deep undertone"
+      ],
+      "diagnostic_gap": 11.1419,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_02",
+      "source_ids": [
+        "player_02"
+      ],
+      "labels": [
+        "Player 02"
+      ],
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [
+        "Light undertone"
+      ],
+      "diagnostic_gap": 10.6811,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_03",
+      "source_ids": [
+        "player_03"
+      ],
+      "labels": [
+        "Player 03"
+      ],
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [
+        "Light undertone"
+      ],
+      "diagnostic_gap": 10.5587,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_zorel",
+      "source_ids": [
+        "npc_zorel"
+      ],
+      "labels": [
+        "Zorel"
+      ],
+      "colors": [
+        "#B0755DFF",
+        "#985750FF",
+        "#642E3DFF"
+      ],
+      "reference_id": "npc_ryis",
+      "reference_label": "Brown (Ryis)",
+      "reference_colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "priority_reasons": [
+        "Three sampled shades"
+      ],
+      "diagnostic_gap": 9.633,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_24",
+      "source_ids": [
+        "player_24"
+      ],
+      "labels": [
+        "Player 24"
+      ],
+      "colors": [
+        "#97492FFF",
+        "#743620FF",
+        "#542616FF",
+        "#36190EFF"
+      ],
+      "reference_id": "player_27",
+      "reference_label": "Deep umber (Player 27)",
+      "reference_colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF"
+      ],
+      "priority_reasons": [
+        "Deep umber comparison; proposal changed to Player27"
+      ],
+      "diagnostic_gap": 8.4971,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {},
+      "proposal_change": {
+        "before": "player_22",
+        "after": "player_27"
+      }
+    },
+    {
+      "id": "player_34",
+      "source_ids": [
+        "player_34"
+      ],
+      "labels": [
+        "Player 34"
+      ],
+      "colors": [
+        "#391D22FF",
+        "#2D161AFF",
+        "#220F13FF",
+        "#180A0DFF"
+      ],
+      "reference_id": "player_35",
+      "reference_label": "Very deep (Player 35)",
+      "reference_colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ],
+      "priority_reasons": [
+        "Very deep endpoint"
+      ],
+      "diagnostic_gap": 8.4243,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_31",
+      "source_ids": [
+        "player_31"
+      ],
+      "labels": [
+        "Player 31"
+      ],
+      "colors": [
+        "#452329FF",
+        "#31171BFF",
+        "#261014FF",
+        "#1E0C0FFF"
+      ],
+      "reference_id": "player_35",
+      "reference_label": "Very deep (Player 35)",
+      "reference_colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ],
+      "priority_reasons": [
+        "Very deep endpoint"
+      ],
+      "diagnostic_gap": 7.009,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_36",
+      "source_ids": [
+        "player_36"
+      ],
+      "labels": [
+        "Player 36"
+      ],
+      "colors": [
+        "#44190FFF",
+        "#2F1208FF",
+        "#200A03FF",
+        "#100602FF"
+      ],
+      "reference_id": "player_35",
+      "reference_label": "Very deep (Player 35)",
+      "reference_colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ],
+      "priority_reasons": [
+        "Very deep endpoint"
+      ],
+      "diagnostic_gap": 6.4563,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_30",
+      "source_ids": [
+        "player_30"
+      ],
+      "labels": [
+        "Player 30"
+      ],
+      "colors": [
+        "#6A2918FF",
+        "#50210FFF",
+        "#3A1809FF",
+        "#271003FF"
+      ],
+      "reference_id": "player_27",
+      "reference_label": "Deep umber (Player 27)",
+      "reference_colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF"
+      ],
+      "priority_reasons": [
+        "Deep undertone"
+      ],
+      "diagnostic_gap": 4.9567,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {},
+      "proposal_change": {
+        "before": "player_22",
+        "after": "player_27"
+      }
+    },
+    {
+      "id": "player_27",
+      "source_ids": [
+        "player_27"
+      ],
+      "labels": [
+        "Player 27"
+      ],
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF"
+      ],
+      "reference_id": "player_27",
+      "reference_label": "Deep umber (Player 27)",
+      "reference_colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF"
+      ],
+      "priority_reasons": [
+        "Deep umber source; proposal changed to Player27"
+      ],
+      "diagnostic_gap": 0.0,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {},
+      "proposal_change": {
+        "before": "player_22",
+        "after": "player_27"
+      }
+    },
+    {
+      "id": "player_19",
+      "source_ids": [
+        "player_19"
+      ],
+      "labels": [
+        "Player 19"
+      ],
+      "colors": [
+        "#B65C3FFF",
+        "#8A3B2CFF",
+        "#58211EFF",
+        "#3C1714FF"
+      ],
+      "reference_id": "npc_ryis",
+      "reference_label": "Brown (Ryis)",
+      "reference_colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 11.4877,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_vera",
+      "source_ids": [
+        "npc_vera"
+      ],
+      "labels": [
+        "Vera"
+      ],
+      "colors": [
+        "#B68454FF",
+        "#A15F3FFF",
+        "#7F402BFF",
+        "#541C1EFF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 11.4294,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_09",
+      "source_ids": [
+        "player_09"
+      ],
+      "labels": [
+        "Player 09"
+      ],
+      "colors": [
+        "#F7CD96FF",
+        "#E8AD72FF",
+        "#C56E46FF",
+        "#6C3516FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 11.3101,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_07",
+      "source_ids": [
+        "player_07"
+      ],
+      "labels": [
+        "Player 07"
+      ],
+      "colors": [
+        "#F7C39CFF",
+        "#EA996CFF",
+        "#D16C4AFF",
+        "#773826FF"
+      ],
+      "reference_id": "npc_wiscar",
+      "reference_label": "Warm peach (Wiscar)",
+      "reference_colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 11.2249,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_10",
+      "source_ids": [
+        "player_10"
+      ],
+      "labels": [
+        "Player 10"
+      ],
+      "colors": [
+        "#F6B183FF",
+        "#E08550FF",
+        "#C15C3CFF",
+        "#692F1EFF"
+      ],
+      "reference_id": "npc_wiscar",
+      "reference_label": "Warm peach (Wiscar)",
+      "reference_colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 10.9194,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_louis",
+      "source_ids": [
+        "npc_louis"
+      ],
+      "labels": [
+        "Louis"
+      ],
+      "colors": [
+        "#F6D2AFFF",
+        "#CB9879FF",
+        "#AD6F5CFF",
+        "#784B42FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 10.8973,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_14",
+      "source_ids": [
+        "player_14"
+      ],
+      "labels": [
+        "Player 14"
+      ],
+      "colors": [
+        "#F39566FF",
+        "#CE6648FF",
+        "#A8402EFF",
+        "#541F14FF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 10.8909,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_21",
+      "source_ids": [
+        "player_21"
+      ],
+      "labels": [
+        "Player 21"
+      ],
+      "colors": [
+        "#B5683EFF",
+        "#8E4925FF",
+        "#63331DFF",
+        "#3D1E12FF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 10.715,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_hemlock",
+      "source_ids": [
+        "npc_hemlock"
+      ],
+      "labels": [
+        "Hemlock"
+      ],
+      "colors": [
+        "#C9906AFF",
+        "#B36844FF",
+        "#8A3F31FF",
+        "#712922FF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 10.699,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_errol",
+      "source_ids": [
+        "npc_errol"
+      ],
+      "labels": [
+        "Errol"
+      ],
+      "colors": [
+        "#F4C49CFF",
+        "#DDAB82FF",
+        "#C38C70FF",
+        "#9B6656FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 10.4843,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_maple",
+      "source_ids": [
+        "npc_maple"
+      ],
+      "labels": [
+        "Maple"
+      ],
+      "colors": [
+        "#97623EFF",
+        "#89492AFF",
+        "#713527FF",
+        "#57271DFF"
+      ],
+      "reference_id": "npc_ryis",
+      "reference_label": "Brown (Ryis)",
+      "reference_colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 9.9723,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_josephine",
+      "source_ids": [
+        "npc_josephine"
+      ],
+      "labels": [
+        "Josephine"
+      ],
+      "colors": [
+        "#9B643AFF",
+        "#814030FF",
+        "#752F23FF",
+        "#5B241EFF"
+      ],
+      "reference_id": "npc_ryis",
+      "reference_label": "Brown (Ryis)",
+      "reference_colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 9.9309,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_08",
+      "source_ids": [
+        "player_08"
+      ],
+      "labels": [
+        "Player 08"
+      ],
+      "colors": [
+        "#F9BEA1FF",
+        "#EBA07EFF",
+        "#C56D50FF",
+        "#923A22FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 9.8747,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_elsie",
+      "source_ids": [
+        "npc_elsie"
+      ],
+      "labels": [
+        "Elsie"
+      ],
+      "colors": [
+        "#F6D2AFFF",
+        "#E3B598FF",
+        "#CB9472FF",
+        "#B46D5FFF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 9.7659,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_17",
+      "source_ids": [
+        "player_17"
+      ],
+      "labels": [
+        "Player 17"
+      ],
+      "colors": [
+        "#E57B60FF",
+        "#C2574AFF",
+        "#913836FF",
+        "#4F1D1BFF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 9.7474,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_linnet",
+      "source_ids": [
+        "npc_linnet"
+      ],
+      "labels": [
+        "Linnet"
+      ],
+      "colors": [
+        "#C7875CFF",
+        "#A36049FF",
+        "#6D3328FF",
+        "#4A1B16FF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 9.7281,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_11",
+      "source_ids": [
+        "player_11"
+      ],
+      "labels": [
+        "Player 11"
+      ],
+      "colors": [
+        "#F8A783FF",
+        "#DB7A58FF",
+        "#BD4F3EFF",
+        "#712A19FF"
+      ],
+      "reference_id": "npc_wiscar",
+      "reference_label": "Warm peach (Wiscar)",
+      "reference_colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 9.5982,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_23",
+      "source_ids": [
+        "player_23"
+      ],
+      "labels": [
+        "Player 23"
+      ],
+      "colors": [
+        "#A23C3AFF",
+        "#832829FF",
+        "#5C1E1FFF",
+        "#351311FF"
+      ],
+      "reference_id": "player_22",
+      "reference_label": "Deep brown (Player 22)",
+      "reference_colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 9.4383,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_taliferro",
+      "source_ids": [
+        "npc_taliferro"
+      ],
+      "labels": [
+        "Taliferro"
+      ],
+      "colors": [
+        "#FFDBB8FF",
+        "#F2A174FF",
+        "#C4613BFF",
+        "#762E21FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 9.1232,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_valen",
+      "source_ids": [
+        "npc_valen"
+      ],
+      "labels": [
+        "Valen"
+      ],
+      "colors": [
+        "#F9CDA3FF",
+        "#EDA27AFF",
+        "#CD825AFF",
+        "#B65932FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 8.8273,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_18",
+      "source_ids": [
+        "player_18"
+      ],
+      "labels": [
+        "Player 18"
+      ],
+      "colors": [
+        "#D58E57FF",
+        "#AE6433FF",
+        "#7B4228FF",
+        "#4A2616FF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 8.8138,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_33",
+      "source_ids": [
+        "player_33"
+      ],
+      "labels": [
+        "Player 33"
+      ],
+      "colors": [
+        "#521D11FF",
+        "#3C170AFF",
+        "#2D1006FF",
+        "#1E0A03FF"
+      ],
+      "reference_id": "player_35",
+      "reference_label": "Very deep (Player 35)",
+      "reference_colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 8.8048,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_01",
+      "source_ids": [
+        "player_01"
+      ],
+      "labels": [
+        "Player 01"
+      ],
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 8.1416,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_nora",
+      "source_ids": [
+        "npc_nora"
+      ],
+      "labels": [
+        "Nora"
+      ],
+      "colors": [
+        "#FCDEBEFF",
+        "#EFA67AFF",
+        "#B65932FF",
+        "#762E21FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 8.025,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_reina",
+      "source_ids": [
+        "npc_reina"
+      ],
+      "labels": [
+        "Reina"
+      ],
+      "colors": [
+        "#B36644FF",
+        "#9E512FFF",
+        "#7F382BFF",
+        "#541C1EFF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 7.9194,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_25",
+      "source_ids": [
+        "player_25"
+      ],
+      "labels": [
+        "Player 25"
+      ],
+      "colors": [
+        "#743435FF",
+        "#5C2624FF",
+        "#3E1817FF",
+        "#280F0EFF"
+      ],
+      "reference_id": "player_22",
+      "reference_label": "Deep brown (Player 22)",
+      "reference_colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 7.8855,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_15",
+      "source_ids": [
+        "player_15"
+      ],
+      "labels": [
+        "Player 15"
+      ],
+      "colors": [
+        "#F0B06AFF",
+        "#CC8348FF",
+        "#A05D36FF",
+        "#562E17FF"
+      ],
+      "reference_id": "npc_hayden",
+      "reference_label": "Golden tan (Hayden)",
+      "reference_colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 7.6264,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_05",
+      "source_ids": [
+        "player_05"
+      ],
+      "labels": [
+        "Player 05"
+      ],
+      "colors": [
+        "#FDD8C9FF",
+        "#F3B597FF",
+        "#D47B65FF",
+        "#AA3C32FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 7.453,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_merri",
+      "source_ids": [
+        "npc_merri"
+      ],
+      "labels": [
+        "Merri"
+      ],
+      "colors": [
+        "#DD9266FF",
+        "#CB7A56FF",
+        "#B36644FF",
+        "#7F382BFF"
+      ],
+      "reference_id": "npc_wiscar",
+      "reference_label": "Warm peach (Wiscar)",
+      "reference_colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 6.8852,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_32",
+      "source_ids": [
+        "player_32"
+      ],
+      "labels": [
+        "Player 32"
+      ],
+      "colors": [
+        "#581B21FF",
+        "#461417FF",
+        "#340E0FFF",
+        "#200A09FF"
+      ],
+      "reference_id": "player_35",
+      "reference_label": "Very deep (Player 35)",
+      "reference_colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 6.7893,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_darcy",
+      "source_ids": [
+        "npc_darcy"
+      ],
+      "labels": [
+        "Darcy"
+      ],
+      "colors": [
+        "#FCD8A9FF",
+        "#EAB979FF",
+        "#D99D60FF",
+        "#B7672FFF"
+      ],
+      "reference_id": "npc_march",
+      "reference_label": "Light golden (March)",
+      "reference_colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 6.7127,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_12",
+      "source_ids": [
+        "player_12"
+      ],
+      "labels": [
+        "Player 12"
+      ],
+      "colors": [
+        "#F6BD7CFF",
+        "#D99055FF",
+        "#B7653EFF",
+        "#623315FF"
+      ],
+      "reference_id": "npc_hayden",
+      "reference_label": "Golden tan (Hayden)",
+      "reference_colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 6.6675,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_balor",
+      "source_ids": [
+        "npc_balor"
+      ],
+      "labels": [
+        "Balor"
+      ],
+      "colors": [
+        "#FCDEBEFF",
+        "#EFA67AFF",
+        "#C16640FF",
+        "#914A2CFF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 6.4613,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_celine",
+      "source_ids": [
+        "npc_celine"
+      ],
+      "labels": [
+        "Celine"
+      ],
+      "colors": [
+        "#FCDEBEFF",
+        "#F5BB90FF",
+        "#EA9866FF",
+        "#B35A35FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 6.1599,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_26",
+      "source_ids": [
+        "player_26"
+      ],
+      "labels": [
+        "Player 26"
+      ],
+      "colors": [
+        "#802C31FF",
+        "#651C24FF",
+        "#461618FF",
+        "#321011FF"
+      ],
+      "reference_id": "player_22",
+      "reference_label": "Deep brown (Player 22)",
+      "reference_colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 6.0478,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_28",
+      "source_ids": [
+        "player_28"
+      ],
+      "labels": [
+        "Player 28"
+      ],
+      "colors": [
+        "#59272FFF",
+        "#441C1FFF",
+        "#2D1113FF",
+        "#1E0A0CFF"
+      ],
+      "reference_id": "player_35",
+      "reference_label": "Very deep (Player 35)",
+      "reference_colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 5.9232,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_06",
+      "source_ids": [
+        "player_06"
+      ],
+      "labels": [
+        "Player 06"
+      ],
+      "colors": [
+        "#FCD9B3FF",
+        "#F0B988FF",
+        "#D37A57FF",
+        "#7D3B14FF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 5.1171,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_eiland",
+      "source_ids": [
+        "npc_eiland"
+      ],
+      "labels": [
+        "Eiland"
+      ],
+      "colors": [
+        "#E9A980FF",
+        "#D98E72FF",
+        "#C9785AFF",
+        "#9C5241FF"
+      ],
+      "reference_id": "npc_wiscar",
+      "reference_label": "Warm peach (Wiscar)",
+      "reference_colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 4.2013,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_juniper",
+      "source_ids": [
+        "npc_juniper"
+      ],
+      "labels": [
+        "Juniper"
+      ],
+      "colors": [
+        "#EFD89AFF",
+        "#E3BF7FFF",
+        "#D2AB66FF",
+        "#B87D4CFF"
+      ],
+      "reference_id": "npc_march",
+      "reference_label": "Light golden (March)",
+      "reference_colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 4.1919,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_darren",
+      "source_ids": [
+        "npc_darren",
+        "npc_wynne"
+      ],
+      "labels": [
+        "Darren",
+        "Wynne"
+      ],
+      "colors": [
+        "#A3614EFF",
+        "#83453AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "reference_id": "npc_ryis",
+      "reference_label": "Brown (Ryis)",
+      "reference_colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 2.987,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_landen",
+      "source_ids": [
+        "npc_landen"
+      ],
+      "labels": [
+        "Landen"
+      ],
+      "colors": [
+        "#9F6250FF",
+        "#854D3CFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "reference_id": "npc_ryis",
+      "reference_label": "Brown (Ryis)",
+      "reference_colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 2.5222,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_adeline",
+      "source_ids": [
+        "npc_adeline"
+      ],
+      "labels": [
+        "Adeline"
+      ],
+      "colors": [
+        "#E3A17BFF",
+        "#D48363FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "reference_id": "npc_wiscar",
+      "reference_label": "Warm peach (Wiscar)",
+      "reference_colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 0.7744,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_hayden",
+      "source_ids": [
+        "npc_hayden"
+      ],
+      "labels": [
+        "Hayden"
+      ],
+      "colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF"
+      ],
+      "reference_id": "npc_hayden",
+      "reference_label": "Golden tan (Hayden)",
+      "reference_colors": [
+        "#E8B271FF",
+        "#CA9052FF",
+        "#B27146FF",
+        "#6E4922FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 0.0,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_march",
+      "source_ids": [
+        "npc_march"
+      ],
+      "labels": [
+        "March"
+      ],
+      "colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF"
+      ],
+      "reference_id": "npc_march",
+      "reference_label": "Light golden (March)",
+      "reference_colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 0.0,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_04",
+      "source_ids": [
+        "player_04"
+      ],
+      "labels": [
+        "Player 04"
+      ],
+      "colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "reference_id": "player_04",
+      "reference_label": "Light peach (Player 04)",
+      "reference_colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 0.0,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_16",
+      "source_ids": [
+        "player_16"
+      ],
+      "labels": [
+        "Player 16"
+      ],
+      "colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "reference_id": "player_16",
+      "reference_label": "Warm brown (Player 16)",
+      "reference_colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 0.0,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_22",
+      "source_ids": [
+        "player_22"
+      ],
+      "labels": [
+        "Player 22"
+      ],
+      "colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF"
+      ],
+      "reference_id": "player_22",
+      "reference_label": "Deep brown (Player 22)",
+      "reference_colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 0.0,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "player_35",
+      "source_ids": [
+        "player_35"
+      ],
+      "labels": [
+        "Player 35"
+      ],
+      "colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ],
+      "reference_id": "player_35",
+      "reference_label": "Very deep (Player 35)",
+      "reference_colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 0.0,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_ryis",
+      "source_ids": [
+        "npc_ryis"
+      ],
+      "labels": [
+        "Ryis"
+      ],
+      "colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "reference_id": "npc_ryis",
+      "reference_label": "Brown (Ryis)",
+      "reference_colors": [
+        "#B06C57FF",
+        "#814A3AFF",
+        "#63342AFF",
+        "#491F1BFF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 0.0,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_wiscar",
+      "source_ids": [
+        "npc_wiscar"
+      ],
+      "labels": [
+        "Wiscar"
+      ],
+      "colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "reference_id": "npc_wiscar",
+      "reference_label": "Warm peach (Wiscar)",
+      "reference_colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 0.0,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    },
+    {
+      "id": "npc_caldarus",
+      "source_ids": [
+        "npc_caldarus",
+        "npc_seridia"
+      ],
+      "labels": [
+        "Caldarus",
+        "Seridia"
+      ],
+      "colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF"
+      ],
+      "reference_id": "npc_seridia",
+      "reference_label": "Special gray (Seridia / Caldarus)",
+      "reference_colors": [
+        "#C1AFA5FF",
+        "#A69084FF",
+        "#8E746DFF",
+        "#624A48FF"
+      ],
+      "priority_reasons": [],
+      "diagnostic_gap": 0.0,
+      "review": {
+        "status": "pending",
+        "feedback": null
+      },
+      "character_exceptions": {}
+    }
+  ],
+  "characters": {
+    "adeline": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_adeline"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "hayden": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_adeline",
+          "label": "Adeline palette",
+          "reference_id": "npc_adeline"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "vanilla",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "ryis": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_adeline",
+          "label": "Adeline palette",
+          "reference_id": "npc_adeline"
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "vanilla",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "reina": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_reina"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "juniper": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_juniper"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "celine": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_celine"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "march": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "balor": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_balor"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "valen": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_valen"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "eiland": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_eiland"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "olric": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_olric"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "landen": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_landen"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "nora": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_nora"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "holt": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_holt"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "josephine": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_josephine"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "darcy": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_darcy"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "dell": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_dell"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "elsie": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_elsie"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "errol": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_errol"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "hemlock": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_hemlock"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "louis": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_louis"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "luc": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_luc"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "maple": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_maple"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "merri": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_merri"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "terithia": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_terithia"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "stillwell": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_stillwell"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "taliferro": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_taliferro"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "vera": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_vera"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "wheedle": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_wheedle"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "zorel": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_zorel"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "darren": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_darren"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "linnet": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_linnet"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "wiscar": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "wynne": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_wynne"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "npc_seridia",
+          "label": "Seridia palette",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "npc_seridia"
+      }
+    },
+    "caldarus": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_caldarus"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_adeline",
+          "label": "Adeline palette",
+          "reference_id": "npc_adeline"
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "vanilla"
+      }
+    },
+    "seridia": {
+      "choices": [
+        {
+          "id": "vanilla",
+          "label": "Vanilla (original)",
+          "reference_id": "npc_seridia"
+        },
+        {
+          "id": "blue",
+          "label": "Debug Blue",
+          "reference_id": null
+        },
+        {
+          "id": "npc_adeline",
+          "label": "Adeline palette",
+          "reference_id": "npc_adeline"
+        },
+        {
+          "id": "npc_hayden",
+          "label": "Hayden palette",
+          "reference_id": "npc_hayden"
+        },
+        {
+          "id": "npc_ryis",
+          "label": "Ryis palette",
+          "reference_id": "npc_ryis"
+        },
+        {
+          "id": "player_04",
+          "label": "Light peach (Player 04)",
+          "reference_id": "player_04"
+        },
+        {
+          "id": "npc_march",
+          "label": "Light golden (March)",
+          "reference_id": "npc_march"
+        },
+        {
+          "id": "npc_wiscar",
+          "label": "Warm peach (Wiscar)",
+          "reference_id": "npc_wiscar"
+        },
+        {
+          "id": "player_16",
+          "label": "Warm brown (Player 16)",
+          "reference_id": "player_16"
+        },
+        {
+          "id": "player_22",
+          "label": "Deep brown (Player 22)",
+          "reference_id": "player_22"
+        },
+        {
+          "id": "player_35",
+          "label": "Very deep (Player 35)",
+          "reference_id": "player_35"
+        },
+        {
+          "id": "player_27",
+          "label": "Deep umber (Player 27)",
+          "reference_id": "player_27"
+        }
+      ],
+      "common_reference_choices": {
+        "player_04": "player_04",
+        "npc_march": "npc_march",
+        "npc_wiscar": "npc_wiscar",
+        "npc_hayden": "npc_hayden",
+        "npc_ryis": "npc_ryis",
+        "player_16": "player_16",
+        "player_22": "player_22",
+        "player_27": "player_27",
+        "player_35": "player_35",
+        "npc_seridia": "vanilla"
+      }
+    }
+  },
+  "owner_feedback": [],
+  "reviewed_artifact": null
+}

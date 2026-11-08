@@ -131,6 +131,30 @@
         "#582718FF",
         "#2D130AFF"
       ]
+    },
+    {
+      "id": "npc_stillwell",
+      "label": "Muted light (Stillwell)",
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#CBA282FF",
+        "#8F564CFF"
+      ]
+    },
+    {
+      "id": "npc_terithia",
+      "label": "Muted medium (Terithia)",
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#BA7E66FF",
+        "#7E4C3BFF"
+      ]
     }
   ],
   "profile": "../profiles/vera-world-trial.json"

@@ -2,7 +2,7 @@ use serde_json::Value;
 use sha2::{Digest, Sha256};
 use std::{collections::BTreeSet, fs, path::Path};
 
-const ADDITIONS: [&str; 7] = [
+const ADDITIONS: [&str; 9] = [
     "player_04",
     "npc_march",
     "npc_wiscar",
@@ -10,6 +10,8 @@ const ADDITIONS: [&str; 7] = [
     "player_22",
     "player_35",
     "player_27",
+    "npc_stillwell",
+    "npc_terithia",
 ];
 
 const HISTORICAL: [(&str, &str); 36] = [
@@ -145,7 +147,7 @@ fn expanded_sets_preserve_all_historical_presets_and_source_bound_profiles() {
         let presets = expanded["presets"].as_array().unwrap();
         let old_presets = &expected_historical;
         assert_eq!(old_presets.len(), 4, "historical contract: {character}");
-        assert_eq!(presets.len(), 11, "{character}");
+        assert_eq!(presets.len(), 13, "{character}");
         assert_eq!(
             &presets[..4],
             old_presets,
@@ -362,6 +364,8 @@ fn new_lip_treatments_keep_muted_donor_specific_contrast() {
         ["#8E4D4D", "#6D303C", "#673A40"],
         ["#4A202A", "#35141F", "#331D27"],
         ["#814538", "#582C2E", "#523632"],
+        ["#E8B99A", "#B17B7F", "#AB9290"],
+        ["#CC8A83", "#9E6468", "#9F7775"],
     ];
     let brightness = |color: [i32; 4]| color[0] * 213 + color[1] * 715 + color[2] * 72;
     for (index, [highlight, middle, maple_lip]) in expected.into_iter().enumerate() {
@@ -407,7 +411,8 @@ fn player27_append_preserves_the_complete_current_prefix_and_effective_profiles(
     let mut slots = 0;
     for (character, before) in characters {
         let mut current = native_set(character);
-        assert_eq!(current["presets"].as_array().unwrap().len(), 11);
+        assert_eq!(current["presets"].as_array().unwrap().len(), 13);
+        current["presets"].as_array_mut().unwrap().truncate(11);
         let addition = current["presets"].as_array_mut().unwrap().pop().unwrap();
         assert_eq!(current, *before, "complete prior recipe: {character}");
         assert_eq!(addition["id"], "player_27");
@@ -467,5 +472,296 @@ fn player27_append_preserves_the_complete_current_prefix_and_effective_profiles(
             native_set(character)["presets"][10]["colors"][slot],
             expected
         );
+    }
+}
+
+fn file_sha(path: &str) -> String {
+    let bytes = fs::read(Path::new(env!("CARGO_MANIFEST_DIR")).join(path)).unwrap();
+    format!("{:x}", Sha256::digest(bytes))
+}
+
+fn evaluate_muted_mapping(mapping: &Value, ramp: &Value, previous: &[Value]) -> Value {
+    let roles = ["light", "middle", "shadow", "deep"];
+    let kind = mapping["kind"].as_str().unwrap();
+    if kind == "slot_alias" {
+        let alias = mapping["slot_alias"].as_u64().unwrap() as usize;
+        assert!(alias < previous.len());
+        return previous[alias].clone();
+    }
+    let mut channels = [0; 3];
+    if kind == "blend" {
+        let denominator = mapping["denominator"].as_i64().unwrap();
+        assert!(denominator > 0);
+        for (channel, target) in channels.iter_mut().enumerate() {
+            let mut numerator = mapping["constant"].as_i64().unwrap_or(0);
+            for (role, weight) in mapping["roles"].as_object().unwrap() {
+                let index = roles.iter().position(|r| r == role).unwrap();
+                numerator += i64::from(rgba(&ramp[index])[channel]) * weight.as_i64().unwrap();
+            }
+            *target = ((2 * numerator + denominator) / (2 * denominator)).clamp(0, 255);
+        }
+    } else {
+        assert!(matches!(kind, "role" | "role_offset"));
+        let index = roles.iter().position(|r| mapping["role"] == *r).unwrap();
+        let base = rgba(&ramp[index]);
+        for (channel, target) in channels.iter_mut().enumerate() {
+            let offset = if kind == "role_offset" {
+                mapping["offset"][channel].as_i64().unwrap()
+            } else {
+                0
+            };
+            *target = (i64::from(base[channel]) + offset).clamp(0, 255);
+        }
+    }
+    Value::from(format!(
+        "#{:02X}{:02X}{:02X}FF",
+        channels[0], channels[1], channels[2]
+    ))
+}
+
+#[test]
+fn muted_append_preserves_eleven_complete_recipes_and_all_effective_profiles() {
+    let baseline = read("tests/fixtures/muted-tone-eleven-preset-baseline.json");
+    let frozen_catalog = read("tests/fixtures/muted-tone-seven-family-catalog.json");
+    let catalog = read("palettes/catalog/native-tones.json");
+    let mapping = read("docs/development/muted-tone-mappings.json");
+    assert_eq!(
+        file_sha("tests/fixtures/muted-tone-eleven-preset-baseline.json"),
+        "6e465898e7b2e0285dfcf5e8262413dd84aaae5b1242e9ab11d39d6080794699"
+    );
+    assert_eq!(
+        file_sha("tests/fixtures/muted-tone-seven-family-catalog.json"),
+        "88523c297a87e092f18e72207f7ee017f51bef4a60cca7b341033d3530e4a240"
+    );
+    assert_eq!(baseline["characters"].as_object().unwrap().len(), 36);
+    assert_eq!(baseline["profiles_sha256"].as_object().unwrap().len(), 68);
+    assert_eq!(mapping["profiles_sha256"], baseline["profiles_sha256"]);
+    assert_eq!(
+        &catalog["presets"].as_array().unwrap()[..7],
+        frozen_catalog["presets"].as_array().unwrap()
+    );
+    let mut expected_catalog = frozen_catalog.clone();
+    expected_catalog["presets"] = catalog["presets"].clone();
+    expected_catalog["description"] = Value::from(
+        "Nine additional native donor families for the existing NPC roster; four ordered skin roles per ramp. Existing target palettes remain unchanged. New artwork acceptance is separate.",
+    );
+    assert_eq!(catalog, expected_catalog);
+    for field in [
+        "historical_prefix",
+        "historical_catalog",
+        "historical_mapping",
+        "source_catalog",
+    ] {
+        let path = mapping[field].as_str().unwrap();
+        assert_eq!(file_sha(path), mapping[format!("{field}_sha256")]);
+    }
+    assert_eq!(
+        mapping["historical_catalog_sha256"],
+        baseline["catalog_sha256"]
+    );
+    for (path, digest) in baseline["profiles_sha256"].as_object().unwrap() {
+        assert_eq!(file_sha(path), *digest, "{path}");
+    }
+    for (character, before) in baseline["characters"].as_object().unwrap() {
+        let mut current = native_set(character);
+        assert_eq!(current["presets"].as_array().unwrap().len(), 13);
+        for preset in &current["presets"].as_array().unwrap()[11..] {
+            assert_eq!(preset.get("profile"), before["presets"][4].get("profile"));
+        }
+        current["presets"].as_array_mut().unwrap().truncate(11);
+        assert_eq!(current, *before, "complete historical recipe {character}");
+    }
+}
+
+#[test]
+fn muted_targets_reproduce_all_noncosmetic_roles_offsets_blends_and_explicit_treatments() {
+    let record = read("docs/development/muted-tone-mappings.json");
+    let expected = read("tests/fixtures/muted-tone-expected-targets.json");
+    let old = read("tests/fixtures/muted-tone-eleven-preset-baseline.json");
+    let catalog = read("palettes/catalog/native-tones.json");
+    let donors = catalog["presets"].as_array().unwrap();
+    let (mut new_targets, mut historical_noncosmetic, mut cosmetic_signatures, mut lip_signatures) =
+        (0, 0, 0, 0);
+    let mut material_counts = std::collections::BTreeMap::new();
+    assert_eq!(record["characters"].as_array().unwrap().len(), 36);
+    let source = read("palettes/catalog/npc-spring.json");
+    for provenance in record["source_provenance"].as_array().unwrap() {
+        let ramp = source["ramps"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|r| r["id"] == provenance["id"])
+            .unwrap();
+        assert_eq!(
+            provenance["archive_sha256"],
+            "8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4"
+        );
+        assert_eq!(provenance["colors"], ramp["colors"]);
+        for field in ["asset", "frame", "samples", "size", "source_sha256"] {
+            assert_eq!(provenance[field], ramp["source"][field]);
+        }
+    }
+    assert_eq!(record["source_provenance"].as_array().unwrap().len(), 2);
+    for row in record["characters"].as_array().unwrap() {
+        let character = row["character"].as_str().unwrap();
+        assert_eq!(
+            file_sha(row["profile"].as_str().unwrap()),
+            row["profile_sha256"]
+        );
+        let profile = read(row["profile"].as_str().unwrap());
+        let current = native_set(character);
+        let slots = row["slots"].as_array().unwrap();
+        assert_eq!(
+            slots.len(),
+            profile["source_colors"].as_array().unwrap().len()
+        );
+        let mut evaluated = [Vec::new(), Vec::new()];
+        for (index, slot) in slots.iter().enumerate() {
+            assert_eq!(slot["slot"], index);
+            assert_eq!(slot["source_color"], profile["source_colors"][index]);
+            let historical = &slot["historical_mapping"];
+            let material = historical["material"].as_str();
+            *material_counts
+                .entry(material.unwrap_or("skin"))
+                .or_insert(0) += 1;
+            for (offset, donor) in donors[..7].iter().enumerate() {
+                let target = &old["characters"][character]["presets"][offset + 4]["colors"][index];
+                assert_eq!(rgba(target), rgba(&slot["historical_targets"][offset]));
+                if material.is_none() {
+                    assert_eq!(
+                        rgba(&evaluate_muted_mapping(historical, &donor["colors"], &[])),
+                        rgba(target)
+                    );
+                    historical_noncosmetic += 1;
+                } else if material == Some("cosmetic") {
+                    cosmetic_signatures += 1;
+                } else {
+                    assert_eq!(material, Some("lip"));
+                    lip_signatures += 1;
+                }
+            }
+            for (offset, donor) in donors[7..].iter().enumerate() {
+                let id = donor["id"].as_str().unwrap();
+                let derivation = &slot["derivations"][id];
+                let mapping = &derivation["mapping"];
+                let target = evaluate_muted_mapping(mapping, &donor["colors"], &evaluated[offset]);
+                assert_eq!(
+                    target, derivation["target"],
+                    "{character} {id} slot {index}"
+                );
+                assert_eq!(target, expected[character][id][index]);
+                assert_eq!(target, current["presets"][offset + 11]["colors"][index]);
+                if material.is_none() {
+                    assert_eq!(mapping, historical);
+                } else {
+                    assert!(
+                        derivation["status"]
+                            .as_str()
+                            .unwrap()
+                            .starts_with("provisional rollout")
+                    );
+                    let anchor_id = if offset == 0 {
+                        "player_04"
+                    } else {
+                        "npc_wiscar"
+                    };
+                    assert_eq!(derivation["anchor_id"], anchor_id);
+                    if mapping["kind"] != "slot_alias" {
+                        let anchor = donors.iter().find(|d| d["id"] == anchor_id).unwrap();
+                        let anchor_preset = old["characters"][character]["presets"]
+                            .as_array()
+                            .unwrap()
+                            .iter()
+                            .find(|p| p["id"] == anchor_id)
+                            .unwrap();
+                        assert_eq!(
+                            rgba(&evaluate_muted_mapping(mapping, &anchor["colors"], &[])),
+                            rgba(&anchor_preset["colors"][index])
+                        );
+                    }
+                }
+                evaluated[offset].push(target);
+                new_targets += 1;
+            }
+        }
+    }
+    assert_eq!(
+        (
+            new_targets,
+            historical_noncosmetic,
+            cosmetic_signatures,
+            lip_signatures
+        ),
+        (1048, 3276, 364, 28)
+    );
+    assert_eq!(
+        material_counts,
+        std::collections::BTreeMap::from([("skin", 468), ("cosmetic", 52), ("lip", 4)])
+    );
+}
+
+#[test]
+fn muted_cosmetics_lips_glasses_scars_and_stone_keep_literal_material_contracts() {
+    for (index, cosmetics, lips) in [
+        (
+            11,
+            ["#D79274FF", "#DE9C84FF", "#AB4D60FF", "#C58569FF"],
+            ["#E8B99AFF", "#B17B7FFF", "#AB9290FF"],
+        ),
+        (
+            12,
+            ["#B87D78FF", "#C38786FF", "#9A5261FF", "#A6706DFF"],
+            ["#CC8A83FF", "#9E6468FF", "#9F7775FF"],
+        ),
+    ] {
+        let celine = native_set("celine");
+        for (slot, target) in (14..17).zip(cosmetics) {
+            assert_eq!(celine["presets"][index]["colors"][slot], target);
+        }
+        assert_eq!(
+            native_set("terithia")["presets"][index]["colors"][12],
+            cosmetics[3]
+        );
+        assert_eq!(
+            native_set("caldarus")["presets"][index]["colors"][11],
+            cosmetics[3]
+        );
+        let nora = native_set("nora");
+        assert_eq!(nora["presets"][index]["colors"][8], lips[0]);
+        assert_eq!(nora["presets"][index]["colors"][9], lips[1]);
+        assert_eq!(nora["presets"][index]["colors"][15], lips[1]);
+        assert_eq!(native_set("maple")["presets"][index]["colors"][9], lips[2]);
+    }
+    let mapping = read("docs/development/muted-tone-mappings.json");
+    let seridia = mapping["characters"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|c| c["character"] == "seridia")
+        .unwrap();
+    assert_eq!(
+        seridia["slots"][25]["historical_mapping"]["offset"],
+        serde_json::json!([42, 23, 57])
+    );
+    let luc = mapping["characters"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|c| c["character"] == "luc")
+        .unwrap();
+    for slot in [7, 8] {
+        assert_eq!(luc["slots"][slot]["historical_mapping"]["kind"], "blend");
+    }
+    for (character, slot, stillwell, terithia) in [
+        ("luc", 7, "#EDDBC1FF", "#E0BEADFF"),
+        ("luc", 8, "#EFDFCAFF", "#E4C8B9FF"),
+        ("terithia", 7, "#F1D0B2FF", "#DBA191FF"),
+        ("terithia", 8, "#F6D6B8FF", "#E0A797FF"),
+        ("terithia", 9, "#FEE0C3FF", "#E8B1A2FF"),
+        ("caldarus", 7, "#DFBD8FFF", "#C98E6EFF"),
+    ] {
+        let set = native_set(character);
+        assert_eq!(set["presets"][11]["colors"][slot], stillwell);
+        assert_eq!(set["presets"][12]["colors"][slot], terithia);
     }
 }

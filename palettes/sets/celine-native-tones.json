@@ -302,6 +302,66 @@
         "#431D11FF"
       ],
       "profile": "../profiles/celine-native-tone-face.json"
+    },
+    {
+      "id": "npc_stillwell",
+      "label": "Muted light (Stillwell)",
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#8F564CFF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#8F564CFF",
+        "#BD876CFF",
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#D79274FF",
+        "#DE9C84FF",
+        "#AB4D60FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#BD876CFF",
+        "#CBA282FF",
+        "#E8C99EFF",
+        "#BD876CFF"
+      ],
+      "profile": "../profiles/celine-native-tone-face.json"
+    },
+    {
+      "id": "npc_terithia",
+      "label": "Muted medium (Terithia)",
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#7E4C3BFF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#7E4C3BFF",
+        "#AD7465FF",
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#B87D78FF",
+        "#C38786FF",
+        "#9A5261FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#AD7465FF",
+        "#BA7E66FF",
+        "#D29A7DFF",
+        "#AD7465FF"
+      ],
+      "profile": "../profiles/celine-native-tone-face.json"
     }
   ]
 }

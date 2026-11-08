@@ -196,6 +196,44 @@
         "#843E33FF"
       ],
       "profile": "../profiles/caldarus-native-tone-face.json"
+    },
+    {
+      "id": "npc_stillwell",
+      "label": "Muted light (Stillwell)",
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#8F564CFF",
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#DFBD8FFF",
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#D79274FF",
+        "#C58569FF"
+      ],
+      "profile": "../profiles/caldarus-native-tone-face.json"
+    },
+    {
+      "id": "npc_terithia",
+      "label": "Muted medium (Terithia)",
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#7E4C3BFF",
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#C98E6EFF",
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#B87D78FF",
+        "#A6706DFF"
+      ],
+      "profile": "../profiles/caldarus-native-tone-face.json"
     }
   ],
   "profile": "../profiles/caldarus-world-trial.json"

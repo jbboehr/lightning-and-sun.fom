@@ -26,8 +26,8 @@ impl Variant {
 
 pub fn validate_variants(variants: &[Variant]) -> Result<()> {
     ensure!(
-        (1..=11).contains(&variants.len()),
-        "Select between one and eleven presets"
+        (1..=13).contains(&variants.len()),
+        "Select between one and thirteen presets"
     );
     let mut ids = BTreeSet::new();
     for variant in variants {
@@ -401,13 +401,41 @@ mod tests {
     #[test]
     fn full_native_tone_runtime_splits_literals_without_changing_rows() {
         let runtime = full_runtime();
+        let baseline: Value = serde_json::from_str(include_str!(
+            "../tests/fixtures/muted-tone-eleven-preset-baseline.json"
+        ))
+        .unwrap();
         assert_eq!(runtime.len(), 36);
         for character in &runtime {
-            assert_eq!(character.ids.len(), 12);
-            assert_eq!(character.ids.last().unwrap(), "player_27");
-            assert_eq!(character.labels.len(), 12);
-            assert_eq!(character.labels.last().unwrap(), "Deep umber (Player 27)");
-            assert!(character.groups.iter().all(|group| group.len() == 12));
+            let old_presets = baseline["characters"][character.character.id.as_str()]["presets"]
+                .as_array()
+                .unwrap();
+            assert_eq!(old_presets.len(), 11);
+            assert_eq!(
+                character.ids,
+                std::iter::once("vanilla")
+                    .chain(
+                        old_presets
+                            .iter()
+                            .map(|preset| preset["id"].as_str().unwrap())
+                    )
+                    .chain(["npc_stillwell", "npc_terithia"])
+                    .collect::<Vec<_>>()
+            );
+            assert_eq!(
+                character.labels,
+                std::iter::once("Vanilla")
+                    .chain(
+                        old_presets
+                            .iter()
+                            .map(|preset| preset["label"].as_str().unwrap())
+                    )
+                    .chain(["Muted light (Stillwell)", "Muted medium (Terithia)"])
+                    .collect::<Vec<_>>()
+            );
+            assert_eq!(character.ids[11], "player_27");
+            assert_eq!(character.labels[11], "Deep umber (Player 27)");
+            assert!(character.groups.iter().all(|group| group.len() == 14));
         }
         assert_eq!(runtime.iter().map(|c| c.groups.len()).sum::<usize>(), 6312);
         let script = String::from_utf8(runtime_script(&runtime).unwrap()).unwrap();

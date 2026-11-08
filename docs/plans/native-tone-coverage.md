@@ -177,6 +177,8 @@ data-only target additions do not restart an already completed runtime review.
   publication still needs separate authorization.
 
 
+<a id="celine-facial-follow-up-after-blush-review"></a>
+
 ## Current handoff, 2026-11-06
 
 Implementation and all reported portrait defects are resolved and technically
@@ -236,6 +238,46 @@ and technically verified using existing diagnostics and current artwork. Owner
 coverage assessment remains pending; no local GPU was required. The
 [coverage record](../development/palette-tone-coverage.md#coverage-worksheet-prepared)
 owns verification and inspection limits.
+
+2026-11-08: the owner approved planning a fresh
+[current twelve-choice review](current-tone-coverage-review.md) incorporating
+Player27 into the compact comparison. The owner then approved implementation
+with "Go for it". The new worksheet and portable download are prepared and
+technically verified. The
+[execution record](../development/current-tone-coverage-review.md) owns the
+result, fingerprints, preservation verdict and inspection limits. Current
+artwork and diagnostics are reused; historical worksheets and pending decisions
+remain frozen. No local GPU or local model inference was needed. Owner coverage
+assessment remains pending; no new artwork or coverage acceptance is inferred.
+
+The owner then approved a bounded
+[Stillwell/Terithia muted-tone pilot](../development/muted-tone-pilot.md) with
+"go for it" after Sol's assessment of the source/reference range. Planning and
+execution of this isolated CPU comparison are authorized. The pilot tests muted
+light/medium candidates against current controls; it changes no production
+choice and does not authorize full-roster additions or supply visual acceptance.
+The pilot is now prepared and technically verified; its owning record links the
+final comparison, provisional cosmetics and material proof. The owner then
+accepted the displayed pilot candidates and their provisional cosmetics with
+"looks good". The record binds that feedback to the reviewed ZIP and preserves
+unspecified inspection depth. The owner subsequently approved the proposed
+[full-roster rollout](muted-tone-rollout.md) with "go for it": append both
+families across all 36 characters, retain every current choice and complete
+preservation and integration checks. Implementation and technical verification
+are complete. Full generation/image preservation, tests, standalone package,
+strict installation/refusals/exact removal and native fourteen-choice
+title/journal controls, persistence and sampled portraits/world rendering pass.
+The [rollout evidence](../development/muted-tone-rollout.md) owns results, fixture
+corrections and the complete portable comparison. The owner subsequently said
+"looks fine for now" after receiving its direct HTML path. The
+[feedback record](../development/muted-tone-rollout-feedback.json) preserves
+provisional acceptance of the displayed review, unspecified inspection depth and
+the frozen presentation. Nora/Maple lips were not individually assessed and
+their authoring policy remains provisional. The owner then authorized the local
+checkpoint with "commit please"; all 70 broader coverage decisions and public
+publication remain separate.
+The owner approved GPU use alongside the known workload; all owned sessions and
+reservations ended. No local GPU is needed for documentation or commit.
 
 The six-family checkpoint and verified Player27 follow-up are committed locally.
 The commits required no local GPU or model inference. Broader

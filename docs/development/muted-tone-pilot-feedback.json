@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-08",
+  "owner_feedback": "looks good",
+  "question": "do both candidates look like worthwhile additions, including their provisional blush and lip colors?",
+  "assessment": "Acceptance of the displayed Stillwell and Terithia pilot candidates and their provisional cosmetics.",
+  "inspection_depth": "Unspecified; the owner did not identify format, characters, samples or frames inspected.",
+  "reported_defects": [],
+  "scope": {
+    "principal_characters": [
+      "celine",
+      "ryis",
+      "holt",
+      "luc",
+      "terithia",
+      "seridia"
+    ],
+    "boundary_only": {
+      "character": "caldarus",
+      "sample": "Dragon Statue neutral; empty mask, unchanged output"
+    },
+    "packet_strips": 20,
+    "packet_native_frames": 41,
+    "packet_frame_choice_views": 205,
+    "columns": [
+      "Vanilla",
+      "current Player04",
+      "Stillwell candidate",
+      "current Wiscar",
+      "Terithia candidate"
+    ],
+    "candidate_ids": [
+      "pilot_stillwell",
+      "pilot_terithia"
+    ],
+    "presentation": "Adjacent current-control/candidate pairs; gold candidate outlines, same reading order when wrapped on mobile. Existing source-bound masks; neutral/expressive portraits, world sprites and special material examples.",
+    "cosmetics": "Acceptance applies to the displayed provisional Player04-anchored Stillwell and Wiscar-anchored Terithia cosmetics; no permanent roster-wide policy is inferred."
+  },
+  "delivered_artifacts": {
+    "tmp/muted-tone-pilot/review/index.html": {
+      "sha256": "962e24a663a39a2c86a29b1a0c3863987b660252900d77700af04833327c0631",
+      "bytes": 2892
+    },
+    "tmp/muted-tone-pilot/review.zip": {
+      "sha256": "cb3122c4539058c331ea4464c209fa91d8246b6880642a640dc3f36eea6f1a94",
+      "bytes": 1359831
+    },
+    "tmp/muted-tone-pilot/review/data.json": {
+      "sha256": "f1ea86a18e2bc5f34166e04e2c126783603e37dffd66da9dfb6f73ff3776798e",
+      "bytes": 204477
+    },
+    "tmp/muted-tone-pilot/review/source-manifest.json": {
+      "sha256": "762d51a4a423128663d20d04fae5055e79e370cf423e0eb88c67db0d7d4753f1",
+      "bytes": 147611
+    },
+    "tmp/muted-tone-pilot/review/portable-manifest.json": {
+      "sha256": "e0a73b99e353441444f5e3c084a1e0273a33f3e7ff08ce1b988559972b1dcb9a",
+      "bytes": 14135
+    },
+    "tmp/muted-tone-pilot/review/mapping-evidence.json": {
+      "sha256": "d9d1c37b0bbeba895c6e71f463b704a03fab98a90bd309e19e28e5a75143ab6d",
+      "bytes": 87517
+    },
+    "tmp/muted-tone-pilot/review/literal-pixel-checks.json": {
+      "sha256": "8aaebdc2de3b14f28ca48a84d6410b44b21425a5e6625e67dc026609e864d3a5",
+      "bytes": 38699
+    },
+    "tmp/muted-tone-pilot/checks/caption-final/checks.json": {
+      "sha256": "4150dd585056ceb0fd79f1f979eba843645c4eef40853d5d5812584ea0ef1663",
+      "bytes": 17107
+    },
+    "tmp/muted-tone-pilot/final-supplement.json": {
+      "sha256": "00121382f08729ebf15db2e88433f10983c3e1cbe18a2de94f4deb10b3e2f00d",
+      "bytes": 1646
+    }
+  },
+  "accepted_presentation_snapshot": {
+    "local/fixtures/muted-tone-pilot-presentation/review.zip": {
+      "sha256": "cb3122c4539058c331ea4464c209fa91d8246b6880642a640dc3f36eea6f1a94",
+      "bytes": 1359831,
+      "scope": "Exact delivered portable presentation, including selections and source/portable manifests. This preserves what was offered for review; it does not assert inspection of every contained image or frame."
+    }
+  },
+  "limits": [
+    "Inspection depth and reviewed format/characters/frames are unspecified.",
+    "No exhaustive acceptance of all strips, frames, cosmetics or unsampled characters/expressions/outfits is inferred.",
+    "No full-roster rollout, preset-count change or permanent cosmetic policy is authorized by this feedback.",
+    "All 70 broader coverage decisions remain pending; Player13/20 and other remaining approximations are separate.",
+    "No live-game, release, commit or publication authorization is inferred.",
+    "Existing reviews, technical receipts, source-only Linux candidate and current production choices remain unchanged."
+  ]
+}

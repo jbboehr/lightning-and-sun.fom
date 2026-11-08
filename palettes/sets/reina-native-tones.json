@@ -211,6 +211,46 @@
         "#964B3EFF"
       ],
       "profile": "../profiles/reina-native-tone-face.json"
+    },
+    {
+      "id": "npc_stillwell",
+      "label": "Muted light (Stillwell)",
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#CBA282FF",
+        "#CBA282FF",
+        "#E8C99EFF",
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#E8C99EFF",
+        "#D79274FF"
+      ],
+      "profile": "../profiles/reina-native-tone-face.json"
+    },
+    {
+      "id": "npc_terithia",
+      "label": "Muted medium (Terithia)",
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#BA7E66FF",
+        "#BA7E66FF",
+        "#D29A7DFF",
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#D29A7DFF",
+        "#B87D78FF"
+      ],
+      "profile": "../profiles/reina-native-tone-face.json"
     }
   ],
   "profile": "../profiles/reina-mouth-corrected.json"

@@ -21,8 +21,9 @@ describe assets processed locally from the user's copy, not images shipped.
 Thirty ground-shadow strips and eighteen spectral strips intentionally retain
 their original appearance.
 
-Each character has twelve choices: Vanilla, Debug Blue, three retained donor
-palettes and seven additional NPC/creator tones, including Deep umber (Player 27).
+Each character has fourteen choices: Vanilla, Debug Blue, three retained donor
+palettes and nine additional NPC/creator tones, including Deep umber (Player 27),
+Muted light (Stillwell) and Muted medium (Terithia).
 The [palette controls](../../README.md#palette-controls) list the additions and
 character-specific donors. These are representative tones; they do not reproduce
 every native skin color exactly.
@@ -42,9 +43,12 @@ Persistence failures display a warning while leaving session choices usable.
 
 The candidate includes fixes for title-screen palette initialization, palette
 application to native cameo actors, and the lifetime of menu notifications.
-Native keyboard/mouse and virtual-gamepad navigation, twelve-choice wrapping,
-remembering/restart/reset and basic movement, dialogue and save/load have been
-exercised. Virtual-gamepad results do not establish physical-controller behavior.
+The current fourteen-choice build passes native title/journal keyboard/mouse and
+virtual-gamepad navigation, wrapping, independent selections, remembering/restart,
+reset and save-failure feedback. Both additions have sampled portraits and world
+sprites rendered in the normal prologue. Earlier basic movement, dialogue and
+save/load results remain recorded separately. Virtual-gamepad results do not
+establish physical-controller behavior.
 
 Installation checks generated pixels, metadata and scripts before replacing
 the archive. Removal restores the exact pre-install archive, including earlier
@@ -83,3 +87,15 @@ links the archive, per-file manifest and external checksums/validation verdict.
 It records the current twelve-choice collection alongside two synthetic folder
 mods, bounded refusal checks and exact removal; arbitrary mod compatibility is
 not inferred. Older source snapshots remain preserved as historical evidence.
+
+The [Stillwell/Terithia rollout](../development/muted-tone-rollout.md) is
+implemented and technically verified across all 36 characters, preserving every
+previous choice and generated image. Its current private source snapshot passes
+standalone-build, strict installation, bounded compatibility/refusal, native
+input/persistence and exact-removal checks. The displayed rollout review has
+provisional owner acceptance with "looks fine for now"; inspection depth is
+unspecified. Broader tone coverage assessment remains pending, and the earlier
+finalized candidate above stays frozen. Live checks used a separately bound copy
+omitting exactly three synthetic CPU-test probe payloads; all palette assets and
+other entries match the installed
+archive. This supplies no live compatibility claim for those synthetic mods.

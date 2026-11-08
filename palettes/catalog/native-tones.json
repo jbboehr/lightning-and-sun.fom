@@ -1,5 +1,5 @@
 {
-  "description": "Seven additional native donor families for the existing NPC roster; four ordered skin roles per ramp. Existing target palettes remain unchanged. New artwork acceptance is separate.",
+  "description": "Nine additional native donor families for the existing NPC roster; four ordered skin roles per ramp. Existing target palettes remain unchanged. New artwork acceptance is separate.",
   "presets": [
     {
       "id": "player_04",
@@ -84,6 +84,30 @@
       ],
       "source_catalog": "player.json",
       "source_id": "player_27"
+    },
+    {
+      "id": "npc_stillwell",
+      "label": "Muted light (Stillwell)",
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF"
+      ],
+      "source_catalog": "npc-spring.json",
+      "source_id": "npc_stillwell"
+    },
+    {
+      "id": "npc_terithia",
+      "label": "Muted medium (Terithia)",
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF"
+      ],
+      "source_catalog": "npc-spring.json",
+      "source_id": "npc_terithia"
     }
   ]
 }

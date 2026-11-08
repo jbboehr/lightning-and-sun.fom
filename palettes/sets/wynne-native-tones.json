@@ -186,6 +186,40 @@
         "#552314FF",
         "#431D11FF"
       ]
+    },
+    {
+      "id": "npc_stillwell",
+      "label": "Muted light (Stillwell)",
+      "colors": [
+        "#E8C99EFF",
+        "#CBA282FF",
+        "#BD876CFF",
+        "#8F564CFF",
+        "#DDB08BFF",
+        "#F2D4A9FF",
+        "#FBDDB5FF",
+        "#FFF2C6FF",
+        "#BB7C66FF",
+        "#C89E7EFF",
+        "#BD876CFF"
+      ]
+    },
+    {
+      "id": "npc_terithia",
+      "label": "Muted medium (Terithia)",
+      "colors": [
+        "#D29A7DFF",
+        "#BA7E66FF",
+        "#AD7465FF",
+        "#7E4C3BFF",
+        "#CC8C6FFF",
+        "#DCA588FF",
+        "#E5AE94FF",
+        "#F7C3A5FF",
+        "#AB695FFF",
+        "#B77A62FF",
+        "#AD7465FF"
+      ]
     }
   ],
   "profile": "../profiles/wynne-world-trial.json"

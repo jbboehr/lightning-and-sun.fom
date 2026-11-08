@@ -1,0 +1,89 @@
+{
+  "description": "Seven additional native donor families for the existing NPC roster; four ordered skin roles per ramp. Existing target palettes remain unchanged. New artwork acceptance is separate.",
+  "presets": [
+    {
+      "id": "player_04",
+      "label": "Light peach (Player 04)",
+      "colors": [
+        "#FBD7BCFF",
+        "#F0B389FF",
+        "#D5815FFF",
+        "#89452DFF"
+      ],
+      "source_catalog": "player.json",
+      "source_id": "player_04"
+    },
+    {
+      "id": "npc_march",
+      "label": "Light golden (March)",
+      "colors": [
+        "#EEDDA5FF",
+        "#E6BD7CFF",
+        "#DCA966FF",
+        "#CC8155FF"
+      ],
+      "source_catalog": "npc-spring.json",
+      "source_id": "npc_march"
+    },
+    {
+      "id": "npc_wiscar",
+      "label": "Warm peach (Wiscar)",
+      "colors": [
+        "#E3A17BFF",
+        "#D98364FF",
+        "#C47054FF",
+        "#9F5544FF"
+      ],
+      "source_catalog": "npc-spring.json",
+      "source_id": "npc_wiscar"
+    },
+    {
+      "id": "player_16",
+      "label": "Warm brown (Player 16)",
+      "colors": [
+        "#DE855BFF",
+        "#AE593AFF",
+        "#7D382CFF",
+        "#452019FF"
+      ],
+      "source_catalog": "player.json",
+      "source_id": "player_16"
+    },
+    {
+      "id": "player_22",
+      "label": "Deep brown (Player 22)",
+      "colors": [
+        "#8E3F38FF",
+        "#6D2B26FF",
+        "#471A19FF",
+        "#321111FF"
+      ],
+      "source_catalog": "player.json",
+      "source_id": "player_22"
+    },
+    {
+      "id": "player_35",
+      "label": "Very deep (Player 35)",
+      "colors": [
+        "#4A171CFF",
+        "#351012FF",
+        "#24090AFF",
+        "#190705FF"
+      ],
+      "source_catalog": "player.json",
+      "source_id": "player_35"
+    },
+    {
+      "id": "player_27",
+      "label": "Deep umber (Player 27)",
+      "colors": [
+        "#813723FF",
+        "#582718FF",
+        "#431D11FF",
+        "#2D130AFF"
+      ],
+      "source_catalog": "player.json",
+      "source_id": "player_27"
+    }
+  ]
+}
