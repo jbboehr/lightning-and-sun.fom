@@ -49,8 +49,11 @@ and approximate-coverage assessment remain separate.
 ## Approved finish line
 
 Deliver a supported Linux release for the existing 36-character roster on the
-preserved, fingerprinted game archive. Include portraits and every world asset
-that needs recoloring, and explicitly account for intentional no-change assets.
+preserved, fingerprinted game archive. Provide recipes covering portraits and
+every world asset that needs recoloring, and account for intentional no-change
+assets. Distribute tooling, text recipes/masks and mod scripts only. Exclude
+original game assets and recolored, game-derived assets, including image review
+media. Users generate replacements locally from their own game copy.
 Keep the current palette choices and correct their known art defects. Provide a
 small character/palette menu, optional remembered choices, a reproducible CLI
 installation path and verified removal. New users start on Vanilla; remembering
@@ -197,9 +200,11 @@ The next planned batch and remaining release work are:
    The approved [animation-end route investigation](development/animation-end-route-investigation-2026-11-07.md)
    found no suitable bounded native caller; its CPU controls pass. The end-stage
    live criterion remains open; an instrumented sample is a separate proposal.
-3. Finalize the tested candidate and supported-platform/compatibility notes;
-   resolve the owner's licensing choice before any public distribution.
-   Publishing remains separate.
+3. Candidate release notes and support guidance prepared, 2026-11-07; see the
+   [documentation record](development/linux-candidate-support-evidence.md) and
+   [completed plan](plans/linux-release-documentation.md). Finalize the tested
+   candidate and resolve the owner's licensing choice before public distribution.
+   Remaining acceptance gates and separate publication authorization still apply.
 
 The content-complete alpha is reached following qualified acceptance of the final
 consolidated artwork review. The usable Linux release still requires the remaining

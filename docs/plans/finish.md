@@ -225,9 +225,11 @@ use the required GPU reservation for any high-demand workload. No local inferenc
   dependencies accounted for. Use the pinned Nix environment as the first supported
   installation route; a portable non-Nix bundle is outside this fast finish scope.
   Verify the documented route in a clean environment with no accidental dependence
-  on unretained Nix paths. Ship code/configuration/tooling only; users
-  generate assets from their own game copy. Verify package contents contain no
-  game images, archives, generated replacement assets or local fixtures.
+  on unretained Nix paths. Ship tooling, text recipes/masks and mod scripts only;
+  users generate assets locally from their own game copy. Exclude original game
+  assets and recolored, game-derived assets from release files and attachments,
+  including generated replacements, image galleries, screenshots and clips.
+  Verify package contents contain no game archives or local artwork fixtures.
 - Update end-user installation, palette controls, reset/removal and compatibility
   documentation. Keep build/release evidence in maintainer documents. A graphical
   installer and CI expansion are not prerequisites if reproducible release checks
@@ -393,9 +395,12 @@ the [live record](../development/live-release-verification-2026-11-06.md).
    The [CPU end-route investigation](../development/animation-end-route-investigation-2026-11-07.md)
    found no suitable bounded native caller. Its proposed instrumented alternative
    is not authorized; the live end-stage criterion remains open.
-3. Finalize the tested Linux candidate, compatibility notes and the owner's
-   licensing choice before public distribution. The usable Linux milestone
-   requires recorded art and live acceptance; publishing needs authorization.
+3. Candidate release notes and support guidance prepared, 2026-11-07; the
+   [documentation record](../development/linux-candidate-support-evidence.md)
+   owns the outcome of the [completed plan](linux-release-documentation.md).
+   Finalize the tested Linux candidate and the owner's licensing choice before
+   public distribution. The usable Linux milestone still requires its remaining
+   acceptance gates; publishing needs separate authorization.
 
 Original character-mask authoring is complete. The approved native-tone batch
 adds target mappings across the same roster. Qualified feedback on the displayed

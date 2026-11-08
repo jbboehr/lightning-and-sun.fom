@@ -1,8 +1,9 @@
 # Running the palette experiment
 
 For the complete collection and the supported Nix package route, start with the
-[installation guide](../README.md). The individual study recipes below describe
-their narrower historical scopes; they do not limit the complete collection.
+[installation guide](../README.md) and [candidate notes](releases/linux-candidate.md).
+The individual study recipes below describe their narrower historical scopes;
+they do not limit the complete collection.
 
 Run commands from the repository root. Use fresh output paths for each run.
 The tool refuses existing or overlapping outputs, so it cannot silently replace
@@ -1257,8 +1258,9 @@ Face and closed eyelids change; moving gloves, book, quill and clothing stay
 original. Native metadata, standing status and complex phase transitions are
 preserved. Outputs use `generated/review/` and `generated/build/`; the fixed
 baseline is `local/fixtures/slice-199-build/characters/elsie`.
-The combined collection uses their new `*-world-trial.json` sets; their
-portrait-only sets remain available.
+Those finish batches used their new `*-world-trial.json` sets. The current
+combined collection selects `*-native-tones.json` sets, retaining the authored
+profiles; the historical world and portrait-only sets remain available.
 Use `--momi /absolute/path/to/installer` to override the Nix-provided MOMI binary.
 Remove the installed study before rebuilding it with a changed recipe. The
 `MISTRIA_MOMI_RUNNER` environment override is a developer/test integration point;
@@ -1299,8 +1301,10 @@ If the game archive has since changed, the CLI refuses to restore the old one.
 Keep the recovery directory and reconcile that change through your mod workflow;
 do not force-copy an old backup over a game update.
 
-Allow roughly 3 GB of temporary free space for this build; the retained previous
-archive uses roughly 600 MB. A failed build leaves the live archive unchanged.
+The historical study estimate was roughly 3 GB of temporary free space, including
+roughly 600 MB for the retained previous archive. This is not a measured space
+requirement for the current complete collection. A failed build leaves the live
+archive unchanged.
 See [installer internals and verification](development/cli-installer.md).
 
 ## Export, recolor, and compare
@@ -1589,6 +1593,8 @@ Adeline, Hayden, Ryis, Reina, Juniper, Celine, March, Balor, Valen, Eiland,
 Olric, Landen, Nora, Holt, Josephine, Darcy, Dell, Elsie, Errol, Hemlock, Louis,
 Luc, Maple, Merri, Terithia, Stillwell, Taliferro, Vera, Wheedle, Zorel, Darren,
 Linnet, Wiscar, Wynne, Caldarus, and Seridia choices.
-The installer accepts the same `--characters` file.
+The installer accepts the same `--characters` file. Its current selected
+`*-native-tones.json` sets offer twelve choices per character, including Vanilla;
+earlier trial sets retain their narrower coverage and palette counts.
 See [character configuration and testing](development/characters.md) for the
 per-character workflow and coverage.
