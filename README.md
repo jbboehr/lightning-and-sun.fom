@@ -158,3 +158,13 @@ support for every distribution or hardware setup.
 For exporting artwork, custom palettes and other toolkit commands, see
 [the tool guide](docs/TOOLS.md). Earlier individual study recipes remain
 available; their coverage is narrower than the complete collection.
+
+## License
+
+Copyright (C) 2026 John Boehr.
+
+The tool, recipes, masks and mod scripts in this repository are licensed under
+the GNU Affero General Public License, version 3 only (AGPL-3.0-only); see
+[LICENSE](LICENSE). Fields of Mistria and its assets, including the images this
+tool generates from your copy of the game, are not covered by this license and
+remain the property of their owners.

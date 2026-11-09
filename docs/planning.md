@@ -31,6 +31,12 @@ arbitrary new palette packs, new characters and compatibility with every other
 mod are later proposals, not part of this finish line. Existing supported-mod
 behavior and known conflicts still need regression checks and documentation.
 
+2026-11-08 owner decisions: the first release ships the current thirteen
+generated choices plus Vanilla ("fine for now"; broader tone coverage becomes a
+later proposal). The project is licensed AGPL-3.0-only. Ordinary-gameplay
+coverage comes from an owner playthrough of the whole game with the mod active,
+started once the agent judges the project mostly done.
+
 ## Status
 
 "Accepted" below means accepted as displayed; several acceptances carry
@@ -42,21 +48,20 @@ qualifications or unspecified inspection depth, recorded in the linked record.
 | Portrait inventory | All 2,201 strips for 36 characters covered, some intentionally unchanged |
 | World inventory | All 4,111 recolorable strips covered; 30 shadow and 18 spectral strips audited as unchanged |
 | Original artwork | All batches accepted; see [Completed](#completed) |
-| Palette choices | Thirteen generated choices plus Vanilla for all 36 characters, technically verified; Stillwell/Terithia accepted provisionally ("for now"); broader coverage assessment pending |
+| Palette choices | Thirteen generated choices plus Vanilla for all 36 characters, technically verified; frozen for the first release; Stillwell/Terithia accepted provisionally ("for now") |
 | Menu, input, persistence | Title/journal menu, keyboard, mouse, virtual gamepad, saving/reset and failure feedback pass live and are accepted; physical controller untested |
 | Live gameplay | Basic gameplay, save/load and seven seasonal/action/scene samples accepted; gaps listed below |
-| Linux packaging | Private pinned-Nix candidate built from standalone source and verified; not published |
+| Linux packaging | Private AGPL-3.0-only pinned-Nix candidate built from standalone source and verified; not published |
 
 ## Remaining work
 
 | Item | State | Who acts | Record | Local GPU |
 | --- | --- | --- | --- | --- |
-| Broader skin-tone coverage assessment | Twelve-choice review prepared before Stillwell/Terithia; owner assessment pending | Owner | [coverage review](development/current-tone-coverage-review.md), [native-tone plan](plans/native-tone-coverage.md) | No |
-| Physical-controller acceptance | Not exercised | Owner hardware, then agent | [live verification](development/live-release-verification-2026-11-06.md) | Yes |
-| Animation end stage in ordinary gameplay | Instrumented prepared-scene check passes and is accepted; no bounded native caller found; original live criterion open | Agent, then owner | [prepared retry](development/animation-end-prepared-retry-2026-11-07.md), [route investigation](development/animation-end-route-investigation-2026-11-07.md) | Yes |
-| Unsampled forms and actions | Seven representative cases sampled; others untested; debug scenes do not establish normal story progression | Agent, then owner | [live samples](development/remaining-live-verification-2026-11-07.md) | Yes |
-| Unclassified Adeline pathfinding error | Seen once after a debug warp during EndDay; not reproduced on reload | Agent | [live samples](development/remaining-live-verification-2026-11-07.md#setup-failures-and-controls) | Yes |
-| Licensing choice | Required before public distribution | Owner | [release documentation](plans/linux-release-documentation.md) | No |
+| Physical-controller acceptance | Not exercised; covered if the playthrough uses a controller | Owner playthrough | [live verification](development/live-release-verification-2026-11-06.md) | Yes |
+| Animation end stage in ordinary gameplay | Instrumented prepared-scene check passes and is accepted; no bounded native caller found; original live criterion open | Owner playthrough | [prepared retry](development/animation-end-prepared-retry-2026-11-07.md), [route investigation](development/animation-end-route-investigation-2026-11-07.md) | Yes |
+| Unsampled forms and actions | Seven representative cases sampled; others untested; debug scenes do not establish normal story progression | Owner playthrough | [live samples](development/remaining-live-verification-2026-11-07.md) | Yes |
+| Unclassified Adeline pathfinding error | Seen once after a debug warp during EndDay; not reproduced on reload; watch for it in the playthrough | Owner playthrough | [live samples](development/remaining-live-verification-2026-11-07.md#setup-failures-and-controls) | Yes |
+| Owner playthrough | Ready to start; follow the [playthrough guide](development/owner-playthrough.md) and report problems | Owner | [playthrough guide](development/owner-playthrough.md) | Owner's own play |
 | Publication | Separate authorization; candidate notes and support guidance prepared | Owner | [candidate finalization](development/linux-candidate-finalization.md), [support evidence](development/linux-candidate-support-evidence.md) | No |
 
 Live work requires checked GPU availability and a reservation. No delivery date
@@ -109,3 +114,5 @@ is established.
 - 2026-11-08: [Twelve-choice coverage review](plans/current-tone-coverage-review.md)
   prepared; [muted-tone pilot](development/muted-tone-pilot.md) and
   [Stillwell/Terithia rollout](development/muted-tone-rollout.md#owner-feedback).
+- 2026-11-08: [AGPL-3.0-only applied and candidate resealed](development/licensed-candidate-2026-11-08.md);
+  [playthrough guide](development/owner-playthrough.md) prepared.

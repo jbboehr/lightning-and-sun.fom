@@ -20,7 +20,7 @@ let
         builtins.elem top [ "src" "tests" "palettes" "mod" ]
         || builtins.elem relative [ "docs" "docs/development" ]
       else type == "regular" && (
-        builtins.elem relative [ "Cargo.toml" "Cargo.lock" ]
+        builtins.elem relative [ "Cargo.toml" "Cargo.lock" "LICENSE" ]
         || (top == "src" && hasExtension [ ".rs" ".html" ".js" ".css" ])
         || (top == "tests" && hasExtension [ ".rs" ".js" ".json" ".gml" ])
         || (top == "palettes" && hasExtension [ ".json" ])
@@ -51,10 +51,12 @@ rustPlatform.buildRustPackage {
   postInstall = ''
     install -d "$out/share/mistria-palette"
     cp -r palettes "$out/share/mistria-palette/palettes"
+    install -Dm644 LICENSE "$out/share/licenses/mistria-palette/LICENSE"
   '';
 
   meta = {
     description = "Offline Fields of Mistria palette toolkit";
+    license = pkgs.lib.licenses.agpl3Only;
     mainProgram = "mistria-palette";
     platforms = [ "x86_64-linux" ];
   };

@@ -3,7 +3,8 @@
 **Unpublished candidate.** The supported installation route is x86_64 Linux
 with Nix and the packaged MOMI 0.16.4 sandbox. Start with the
 [build and installation instructions](../../README.md#build-and-install).
-No release tag, public download or licensing grant is assigned by these notes.
+The project is licensed AGPL-3.0-only; see the [license notice](../../README.md#license).
+No release tag or public download is assigned by these notes.
 
 ## Release contents
 
@@ -79,7 +80,7 @@ samples have qualified owner acceptance, with inspection depth unspecified.
 This is not an exhaustive artwork or gameplay review. Physical-controller
 acceptance, distinct complex-animation end-stage dispatch, unsampled forms and
 actions, and broader approximate-tone coverage remain open. The usable Linux
-release milestone, licensing choice and publication authorization remain open.
+release milestone and publication authorization remain open.
 
 The refreshed private source snapshot includes these notes and current
 verification documentation. Its [finalization record](../development/linux-candidate-finalization.md)
