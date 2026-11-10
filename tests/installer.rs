@@ -1655,3 +1655,62 @@ fn changed_source_reaches_study_install_and_keeps_installed_verification() {
     assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
     assert!(!lab.game.join(".mistria-palette").exists());
 }
+
+#[test]
+fn without_a_runner_momi_runs_in_the_build_copy_with_an_empty_home() {
+    let lab = Lab::new();
+    let shell = fs::read_to_string(&lab.runner).unwrap();
+    let momi = lab._temp.path().join("momi");
+    // Stands in for MOMI itself: it has only its working directory, HOME and
+    // environment to go on, and fails unless they point at the build copy.
+    fs::write(
+        &momi,
+        format!(
+            r#"{}
+set -eu
+test -f Maybe.toml
+test -f mods/lns_palette/gml/palette_toggle.gml
+test "$*" = "--strict-lints --fail-on-skip --compile-check require"
+test "$EXIT_ON_COMPLETE" = true
+test "$MOMI_GAME_CONFIG_DIR" = "$PWD/config"
+test -d "$HOME"
+test -z "$(ls -A "$HOME")"
+cp '{result}' assets.zip
+mkdir -p config/mods
+cp '{result}.mods' config/mods/manifest.json
+"#,
+            shell.lines().next().unwrap(),
+            result = lab.result.display()
+        ),
+    )
+    .unwrap();
+    fs::set_permissions(&momi, fs::Permissions::from_mode(0o755)).unwrap();
+    let installed = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
+        .arg("install")
+        .arg("--game-dir")
+        .arg(&lab.game)
+        .arg("--momi")
+        .arg(&momi)
+        .arg("--palette")
+        .arg(lab.result.with_extension("palette.json"))
+        .env("MISTRIA_MOMI_RUNNER", "")
+        .env("HOME", lab._temp.path())
+        .output()
+        .unwrap();
+    assert!(
+        installed.status.success(),
+        "{}",
+        String::from_utf8_lossy(&installed.stderr)
+    );
+    assert_eq!(
+        fs::read(lab.game.join("assets.zip")).unwrap(),
+        fs::read(&lab.result).unwrap()
+    );
+    let removed = lab.run("uninstall");
+    assert!(
+        removed.status.success(),
+        "{}",
+        String::from_utf8_lossy(&removed.stderr)
+    );
+    assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+}

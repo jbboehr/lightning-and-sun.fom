@@ -61,6 +61,60 @@ fn selected_mods(root: &Path) -> Result<Vec<ModSelection>> {
     Ok(selected)
 }
 
+// MOMI has no install-path option. It takes the first Steam library holding the
+// game, looking under HOME and at the root of every mounted filesystem, and only
+// then its working directory. Without a sandbox the libraries at mount roots
+// cannot be hidden, so the caller refuses to run when one holds the game.
+fn steam_copies(mounts: &str) -> Vec<PathBuf> {
+    const LIBRARIES: [&str; 6] = [
+        "SteamLibrary",
+        "Steam",
+        "Program Files/Steam",
+        "Program Files (x86)/Steam",
+        "Program Files/SteamLibrary",
+        "Program Files (x86)/SteamLibrary",
+    ];
+    mounts
+        .lines()
+        .filter_map(|line| line.split(' ').nth(1))
+        .map(unescape_mount)
+        .flat_map(|mount| {
+            LIBRARIES.map(|library| {
+                Path::new(&mount)
+                    .join(library)
+                    .join("steamapps/common/Fields of Mistria")
+            })
+        })
+        .filter(|game| game.join("Maybe.toml").is_file())
+        .collect()
+}
+
+// The kernel writes space, tab, newline and backslash in mount paths as \ooo.
+fn unescape_mount(field: &str) -> std::ffi::OsString {
+    use std::os::unix::ffi::OsStringExt;
+    let bytes = field.as_bytes();
+    let mut path = Vec::with_capacity(bytes.len());
+    let mut i = 0;
+    while i < bytes.len() {
+        let octal = bytes
+            .get(i + 1..i + 4)
+            .filter(|_| bytes[i] == b'\\')
+            .and_then(|digits| std::str::from_utf8(digits).ok())
+            .and_then(|digits| u8::from_str_radix(digits, 8).ok());
+        match octal {
+            Some(byte) => {
+                path.push(byte);
+                i += 4;
+            }
+            None => {
+                path.push(bytes[i]);
+                i += 1;
+            }
+        }
+    }
+    std::ffi::OsString::from_vec(path)
+}
+
 fn regular(path: &Path) -> Result<()> {
     ensure!(
         fs::symlink_metadata(path)?.file_type().is_file(),
@@ -168,7 +222,17 @@ pub fn install(
     );
     let runner = std::env::var_os("MISTRIA_MOMI_RUNNER")
         .or_else(|| option_env!("MISTRIA_MOMI_RUNNER").map(Into::into))
-        .context("Build in the Nix dev shell to provide the isolated MOMI runner")?;
+        .filter(|runner| !runner.is_empty());
+    if runner.is_none() {
+        let mounts = fs::read_to_string("/proc/self/mounts")
+            .context("Could not list mounted filesystems to look for Steam libraries")?;
+        if let Some(copy) = steam_copies(&mounts).first() {
+            anyhow::bail!(
+                "MOMI would modify the game at {} instead of the working copy; use the Nix build, which hides it",
+                copy.display()
+            );
+        }
+    }
     let momi = momi
         .map(PathBuf::from)
         .or_else(|| {
@@ -176,7 +240,7 @@ pub fn install(
                 .filter(|p| !p.is_empty())
                 .map(PathBuf::from)
         })
-        .context("Supply --momi or build in the x86_64 Linux Nix shell")?;
+        .context("Supply --momi with the MOMI command-line installer")?;
     let momi = fs::canonicalize(momi)?;
     regular(&momi)?;
     let source = pristine(&game, installed_mods)?;
@@ -273,11 +337,33 @@ pub fn install(
         );
     }
     eprintln!("Building an isolated MOMI archive...");
-    let result = Command::new(runner)
-        .arg(&momi)
-        .arg(&build)
-        .output()
-        .context("Could not start the isolated MOMI runner")?;
+    let mut command = match runner {
+        Some(runner) => {
+            let mut command = Command::new(runner);
+            command.arg(&momi).arg(&build);
+            command
+        }
+        None => {
+            // MOMI looks for the game under HOME before its working directory.
+            let home = build.join(".home");
+            fs::create_dir(&home)?;
+            let mut command = Command::new(&momi);
+            command
+                .args([
+                    "--strict-lints",
+                    "--fail-on-skip",
+                    "--compile-check",
+                    "require",
+                ])
+                .current_dir(&build)
+                .env("HOME", &home)
+                .env("DOTNET_BUNDLE_EXTRACT_BASE_DIR", build.join(".dotnet"))
+                .env("EXIT_ON_COMPLETE", "true")
+                .env("MOMI_GAME_CONFIG_DIR", build.join("config"));
+            command
+        }
+    };
+    let result = command.output().context("Could not start MOMI")?;
     ensure!(
         result.status.success(),
         "MOMI failed ({}):\n{}\n{}",
@@ -408,4 +494,23 @@ pub fn uninstall(path: &Path) -> Result<Value> {
     Ok(
         json!({"installed": false, "changed": true, "game_dir": game, "archive_sha256": receipt.previous_sha256}),
     )
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn steam_copies_finds_the_game_in_a_library_at_a_mount_root() {
+        let drive = tempfile::tempdir().unwrap();
+        let mount = drive.path().join("my games");
+        let game = mount.join("SteamLibrary/steamapps/common/Fields of Mistria");
+        fs::create_dir_all(&game).unwrap();
+        fs::create_dir_all(mount.join("Steam/steamapps/common/Fields of Mistria")).unwrap();
+        let escaped = mount.to_str().unwrap().replace(' ', "\\040");
+        let mounts = format!("proc /proc proc rw 0 0\n/dev/sdb1 {escaped} ext4 rw,relatime 0 0\n");
+        assert!(steam_copies(&mounts).is_empty());
+        fs::write(game.join("Maybe.toml"), "").unwrap();
+        assert_eq!(steam_copies(&mounts), [game]);
+    }
 }

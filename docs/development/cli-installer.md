@@ -23,6 +23,20 @@ built in this shell; these remain Nix store dependencies, not portable bundled
 executables. The installer is limited to x86_64 Linux. The other palette commands
 retain their existing platform scope.
 
+Since 2026-11-09 a binary with no runner, such as a plain `cargo build` outside
+the Nix shell or one run with an empty `MISTRIA_MOMI_RUNNER`, starts MOMI itself
+instead of failing. MOMI 0.16.4's `MistriaLocator` takes the first Steam library
+that holds the game, looking under the user profile and at the root of every
+mounted filesystem, and only then its working directory; 0.17.0 is the same and
+neither has an override. The installer therefore runs MOMI in the build copy
+with `HOME` set to an empty directory inside it, which hides the per-user
+libraries, and with the same flags and `MOMI_GAME_CONFIG_DIR` as the Nix runner.
+Libraries at a mount root cannot be hidden without a sandbox, so before
+generating anything it reads `/proc/self/mounts` and refuses if one of MOMI's six
+drive-relative library names holds the game. MOMI keeps network and filesystem
+access on this route. The installed-pixel, mod-selection and recovery checks are
+unchanged.
+
 MOMI runs with strict lints, fail-on-skip, and required compilation checks. Its
 CLI can nevertheless skip an invalid content mod before that stage and return
 success. The wrapper independently compares its selected folder manifests with

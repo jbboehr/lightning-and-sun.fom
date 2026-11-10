@@ -117,3 +117,7 @@ is established.
 - 2026-11-08: [AGPL-3.0-only applied and candidate resealed](development/licensed-candidate-2026-11-08.md);
   [playthrough guide](development/owner-playthrough.md) prepared.
 - 2026-11-09: [Bare install selects the complete collection; candidate resealed](development/default-collection-candidate-2026-11-09.md).
+- 2026-11-09: README rewritten for end users; `install` warns on
+  [changed artwork](development/source-hash-override.md) by default and
+  [runs without Nix](development/cli-installer.md#target-and-dependency-handling).
+  The sealed candidate predates these and is to be resealed before publication.
