@@ -1,6 +1,6 @@
 # Project planning
 
-Updated 2026-11-08. Current status, remaining work and standing decisions only.
+Updated 2026-11-09. Current status, remaining work and standing decisions only.
 Each linked record owns its evidence, exact owner feedback and acceptance limits.
 The original [handoff](HANDOFF.md) preserves the investigation brief; it is historical.
 
@@ -116,3 +116,4 @@ is established.
   [Stillwell/Terithia rollout](development/muted-tone-rollout.md#owner-feedback).
 - 2026-11-08: [AGPL-3.0-only applied and candidate resealed](development/licensed-candidate-2026-11-08.md);
   [playthrough guide](development/owner-playthrough.md) prepared.
+- 2026-11-09: [Bare install selects the complete collection; candidate resealed](development/default-collection-candidate-2026-11-09.md).
