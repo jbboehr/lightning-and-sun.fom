@@ -1,5 +1,13 @@
 # Explicit source PNG hash override
 
+Since 2026-11-09 `install` no longer takes this flag. It warns on a changed
+source PNG and continues by default, prints the number of changed images before
+building the archive, and stops only with `--strict-source-hashes`. End users on
+a newer game build were otherwise blocked by a check they could not act on; the
+installed-pixel and inventory checks below still apply. The authoring commands
+keep the behavior this record describes. Use `--strict-source-hashes` for
+verification installs that must match the reviewed artwork.
+
 `--allow-source-hash-mismatch` lets a user try existing region masks against
 changed PNG bytes without editing their tracked hashes. It is supported by
 `apply`, `build-presets`, `build-characters`, `install` and `validate --palette`.

@@ -600,7 +600,7 @@ animations = [{texture_ids = ["0000000000000002::1"], placement = [0,0,2,1,2,1,0
 }
 
 #[test]
-fn study_palette_refuses_an_unreviewed_portrait() {
+fn strict_study_palette_refuses_an_unreviewed_portrait() {
     let lab = Lab::new();
     let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
         .arg("install")
@@ -610,6 +610,7 @@ fn study_palette_refuses_an_unreviewed_portrait() {
         .arg(&lab.result)
         .arg("--palette")
         .arg(Path::new(env!("CARGO_MANIFEST_DIR")).join("palettes/stylized/adeline.json"))
+        .arg("--strict-source-hashes")
         .env("MISTRIA_MOMI_RUNNER", &lab.runner)
         .output()
         .unwrap();
@@ -1507,7 +1508,7 @@ fn combined_install_verifies_hayden_and_restores_the_whole_archive() {
 }
 
 #[test]
-fn source_hash_override_reaches_every_install_mode_and_keeps_atlas_verification() {
+fn changed_source_installs_with_a_warning_in_every_mode_and_keeps_atlas_verification() {
     for mode in ["palette", "presets", "characters"] {
         let lab = Lab::new();
         let root = lab._temp.path();
@@ -1536,7 +1537,7 @@ fn source_hash_override_reaches_every_install_mode_and_keeps_atlas_verification(
             _ => root.join("characters.json"),
         };
         let before_definition = fs::read(&definition).unwrap();
-        let run = |allow: bool| {
+        let run = |strict: bool| {
             let mut command = Command::new(env!("CARGO_BIN_EXE_mistria-palette"));
             command
                 .arg("install")
@@ -1547,19 +1548,19 @@ fn source_hash_override_reaches_every_install_mode_and_keeps_atlas_verification(
                 .arg(format!("--{mode}"))
                 .arg(&definition)
                 .env("MISTRIA_MOMI_RUNNER", &lab.runner);
-            if allow {
-                command.arg("--allow-source-hash-mismatch");
+            if strict {
+                command.arg("--strict-source-hashes");
             }
             command.output().unwrap()
         };
-        let strict = run(false);
+        let strict = run(true);
         assert!(!strict.status.success());
         assert!(
             String::from_utf8_lossy(&strict.stderr).contains("Region source checksum mismatch")
         );
         assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
         assert!(!lab.game.join(".mistria-palette").exists());
-        // Even with permission to reuse masks, the installer must reject bad atlas pixels.
+        // Reusing masks on changed artwork must not relax the installed-pixel check.
         let valid = fs::read(&lab.result).unwrap();
         let mut atlas = RgbaImage::from_pixel(4, 2, Rgba([227, 161, 123, 255]));
         image::imageops::replace(
@@ -1577,7 +1578,7 @@ fn source_hash_override_reaches_every_install_mode_and_keeps_atlas_verification(
             ),
         )
         .unwrap();
-        let bad = run(true);
+        let bad = run(false);
         assert!(
             !bad.status.success(),
             "accepted invalid installed pixels in {mode}"
@@ -1590,13 +1591,19 @@ fn source_hash_override_reaches_every_install_mode_and_keeps_atlas_verification(
         assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
         assert!(!lab.game.join(".mistria-palette").exists());
         fs::write(&lab.result, &valid).unwrap();
-        let allowed = run(true);
+        let allowed = run(false);
         assert!(
             allowed.status.success(),
             "{}",
             String::from_utf8_lossy(&allowed.stderr)
         );
-        assert!(String::from_utf8_lossy(&allowed.stderr).contains("allowing source hash mismatch"));
+        let stderr = String::from_utf8_lossy(&allowed.stderr);
+        assert!(stderr.contains("source hash mismatch for"), "{stderr}");
+        assert!(
+            stderr.contains("1 source image(s) differ")
+                && stderr.contains("--strict-source-hashes"),
+            "{stderr}"
+        );
         assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), valid);
         assert_eq!(fs::read(&definition).unwrap(), before_definition);
         assert!(lab.run("uninstall").status.success());
@@ -1605,7 +1612,7 @@ fn source_hash_override_reaches_every_install_mode_and_keeps_atlas_verification(
 }
 
 #[test]
-fn source_hash_override_reaches_study_install_and_keeps_installed_verification() {
+fn changed_source_reaches_study_install_and_keeps_installed_verification() {
     let mut lab = Lab::new();
     let changed = png(RgbaImage::from_pixel(592, 180, Rgba([227, 161, 123, 255])));
     let metadata = META.replace("frame_size = [2,1]", "frame_size = [296,180]");
@@ -1617,7 +1624,7 @@ fn source_hash_override_reaches_study_install_and_keeps_installed_verification()
     );
     fs::write(lab.game.join("assets.zip"), &lab.before).unwrap();
 
-    let run = |allow: bool| {
+    let run = |strict: bool| {
         let mut command = Command::new(env!("CARGO_BIN_EXE_mistria-palette"));
         command
             .arg("install")
@@ -1628,22 +1635,22 @@ fn source_hash_override_reaches_study_install_and_keeps_installed_verification()
             .arg("--palette")
             .arg(Path::new(env!("CARGO_MANIFEST_DIR")).join("palettes/stylized/adeline.json"))
             .env("MISTRIA_MOMI_RUNNER", &lab.runner);
-        if allow {
-            command.arg("--allow-source-hash-mismatch");
+        if strict {
+            command.arg("--strict-source-hashes");
         }
         command.output().unwrap()
     };
 
-    let strict = run(false);
+    let strict = run(true);
     assert!(!strict.status.success());
     assert!(String::from_utf8_lossy(&strict.stderr).contains("Region source checksum mismatch"));
 
-    // The synthetic MOMI result still contains the old 4x1 source. Permission
-    // to reuse the built-in mask must reach generation, then fail verification.
-    let allowed = run(true);
+    // The synthetic MOMI result still contains the old 4x1 source. The default
+    // must reuse the mask through generation, then fail verification.
+    let allowed = run(false);
     let stderr = String::from_utf8_lossy(&allowed.stderr);
     assert!(!allowed.status.success());
-    assert!(stderr.contains("allowing source hash mismatch"), "{stderr}");
+    assert!(stderr.contains("source hash mismatch for"), "{stderr}");
     assert!(stderr.contains("Vanilla PNG changed"), "{stderr}");
     assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
     assert!(!lab.game.join(".mistria-palette").exists());

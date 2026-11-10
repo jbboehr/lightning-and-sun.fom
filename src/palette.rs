@@ -6,9 +6,10 @@ use serde::{
     de::{self, MapAccess, Visitor},
 };
 use std::{
-    collections::BTreeMap,
+    collections::{BTreeMap, BTreeSet},
     fmt, fs,
     path::{Path, PathBuf},
+    sync::Mutex,
 };
 
 #[derive(Deserialize)]
@@ -51,6 +52,13 @@ fn regions<'de, D: Deserializer<'de>>(de: D) -> Result<Option<Vec<Region>>, D::E
 
 fn profile<'de, D: Deserializer<'de>>(de: D) -> Result<Option<PathBuf>, D::Error> {
     PathBuf::deserialize(de).map(Some)
+}
+
+// Presets reuse one mask per image, so a changed image is reported once.
+static MISMATCHED_SOURCES: Mutex<BTreeSet<String>> = Mutex::new(BTreeSet::new());
+
+pub fn mismatched_sources() -> usize {
+    MISMATCHED_SOURCES.lock().unwrap().len()
 }
 
 pub struct Palette {
@@ -107,10 +115,12 @@ impl Palette {
                 allow_source_hash_mismatch,
                 "Region source checksum mismatch: {name}; review the mask against this image"
             );
-            eprintln!(
-                "warning: allowing source hash mismatch for {name}: expected {}, actual {actual}; review the generated recoloring",
-                region.source_sha256
-            );
+            if MISMATCHED_SOURCES.lock().unwrap().insert(name.to_owned()) {
+                eprintln!(
+                    "warning: allowing source hash mismatch for {name}: expected {}, actual {actual}; review the generated recoloring",
+                    region.source_sha256
+                );
+            }
         }
         ensure!(
             region.size == [image.width(), image.height()],

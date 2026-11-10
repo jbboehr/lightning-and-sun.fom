@@ -1417,12 +1417,15 @@ region entries must cover the exact input PNG set; an empty list, null, duplicat
 assets, stale source hash, mismatched dimensions, or invalid seeds stop before
 output is written by default. Recipe and region field names are checked for typos.
 
-`apply`, `build-presets`, `build-characters`, `install`, and `validate --palette`
-accept `--allow-source-hash-mismatch` to reuse the existing masks after source PNG
-bytes change. Only the source hash comparison is bypassed. Inventory, dimensions,
+`install` reuses the existing masks when source PNG bytes have changed: it
+prints each mismatch and a final count, and continues. Pass
+`--strict-source-hashes` to make it stop at the first mismatch instead. The
+authoring commands `apply`, `build-presets`, `build-characters` and
+`validate --palette` stop by default and accept `--allow-source-hash-mismatch`.
+Either way only the source hash comparison is relaxed. Inventory, dimensions,
 seed colors/positions, alpha, metadata, packaging and installed-pixel checks still
-apply where relevant. Each overridden mismatch prints its asset path and expected
-and actual SHA-256 to stderr. Reports retain the actual input hash; the flag never
+apply where relevant. Each mismatched image prints its asset path and expected
+and actual SHA-256 to stderr once. Reports retain the actual input hash; nothing
 updates a profile or persists into later commands. For example:
 
 ```sh

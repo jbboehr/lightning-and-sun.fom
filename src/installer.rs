@@ -266,6 +266,12 @@ pub fn install(
         }
     };
     let expected_mods = selected_mods(&mods)?;
+    let mismatched = palette::mismatched_sources();
+    if mismatched > 0 {
+        eprintln!(
+            "warning: {mismatched} source image(s) differ from the artwork these recipes were made for, so their recoloring may be wrong; check those characters in game, or rerun with --strict-source-hashes to refuse"
+        );
+    }
     eprintln!("Building an isolated MOMI archive...");
     let result = Command::new(runner)
         .arg(&momi)

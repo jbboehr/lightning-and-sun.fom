@@ -85,9 +85,9 @@ enum Command {
         /// Current MOMI config/mods/manifest.json; required for a MOMI-modified archive.
         #[arg(long)]
         installed_mods: Option<PathBuf>,
-        /// Use existing masks despite changed source PNG hashes; keep other checks.
+        /// Refuse source PNGs whose hashes differ from the recipes instead of warning.
         #[arg(long)]
-        allow_source_hash_mismatch: bool,
+        strict_source_hashes: bool,
     },
     /// Restore the exact archive saved before this tool installed the toggle.
     Uninstall {
@@ -205,7 +205,7 @@ fn run() -> Result<()> {
             presets,
             characters,
             installed_mods,
-            allow_source_hash_mismatch,
+            strict_source_hashes,
         } => installer::install(
             &game_dir,
             momi.as_deref(),
@@ -217,7 +217,7 @@ fn run() -> Result<()> {
             }
             .as_deref(),
             installed_mods.as_deref(),
-            allow_source_hash_mismatch,
+            !strict_source_hashes,
         )?,
         Command::Uninstall { game_dir } => installer::uninstall(&game_dir)?,
         Command::Export {

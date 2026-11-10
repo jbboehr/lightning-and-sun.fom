@@ -18,8 +18,9 @@ isolated copy of the game archive, with no real saves.
    against anything unexpected.
 3. Confirm `sha256sum assets.zip` matches the fingerprint in the
    [compatibility section](../../README.md#compatibility). A different value
-   means a different game build than the one tested; stop and report it rather
-   than using `--allow-source-hash-mismatch`.
+   means a different game build than the one tested; stop and report it. The
+   installer would continue with warnings on changed artwork, which is not the
+   build this playthrough is meant to check.
 4. Build and install the complete collection, as in
    [Build and install](../../README.md#build-and-install). The install command
    should print `Installing the complete collection from` followed by a path
