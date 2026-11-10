@@ -127,5 +127,6 @@ is established.
 - 2026-11-09: README rewritten for end users; `install` warns on
   [changed artwork](development/source-hash-override.md) by default and
   [runs without Nix](development/cli-installer.md#target-and-dependency-handling).
-  The sealed candidate predates these and the preset rows and is to be resealed
-  before publication.
+- 2026-11-09: [Palette presets](development/menu-presets.md) added and checked
+  from the title screen; [candidate resealed](development/menu-presets-candidate-2026-11-09.md)
+  with them and the three changes above.
