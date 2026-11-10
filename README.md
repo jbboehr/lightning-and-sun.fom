@@ -7,15 +7,12 @@ adapted from the game's NPC and player-creator colors. Clothing,
 hair, equipment, markings and intentional spectral forms keep their original
 colors.
 
-This is an unpublished Linux candidate. The fourteen-choice build passes
-installation/removal, native title/journal menu, keyboard/mouse, virtual-gamepad
-and remembered-choice checks. Both new muted tones have rendered portrait/world
-samples; their displayed review has provisional "for now" acceptance, with
-inspection depth unspecified. Earlier displayed artwork and live samples retain
-qualified acceptance. Physical-controller, distinct complex-animation end-stage
-and broader artwork/tone coverage checks remain open. See the
-[candidate notes](docs/releases/linux-candidate.md) for included behavior and
-tested limits.
+This is an early Linux release. Installation, removal and the in-game palette
+menu are tested, and the artwork has been reviewed on representative portraits,
+sprites and scenes, but not every animation in a full playthrough. Physical
+controllers have not been tested yet. The
+[release notes](docs/releases/linux-candidate.md) list what was tested and the
+known limits.
 
 ## Build and install
 
@@ -32,9 +29,7 @@ result/bin/mistria-palette --help
 Close the game and other mod installers, then install the complete collection:
 
 ```sh
-result/bin/mistria-palette install \
-  --game-dir '/path/to/Fields of Mistria' \
-  --characters result/share/mistria-palette/palettes/sets/characters-trial.json
+result/bin/mistria-palette install --game-dir '/path/to/Fields of Mistria'
 ```
 
 Keep the `result` link while using this build; it retains the packaged tool,
@@ -45,9 +40,7 @@ from your own copy; image galleries, screenshots and clips are also excluded
 from the release. Installation verifies generated atlas pixels, metadata and
 scripts before publishing the local game archive.
 
-The `--characters` option selects the complete collection. Omitting it runs the
-older single-portrait Adeline study. To use a single character instead, supply
-its set, for example:
+To install a single character instead, supply its set, for example:
 
 ```sh
 result/bin/mistria-palette install \
@@ -112,7 +105,7 @@ separately.
 
 ## Compatibility
 
-This candidate was verified using the supplied Linux executable and the preserved
+This release was verified using the supplied Linux executable and the preserved
 `assets.zip` with SHA256:
 
 ```text

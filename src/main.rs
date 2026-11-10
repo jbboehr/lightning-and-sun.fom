@@ -10,9 +10,9 @@ mod presets;
 mod review;
 mod toggle;
 
-use anyhow::Result;
+use anyhow::{Context, Result};
 use clap::{Parser, Subcommand};
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 
 #[derive(Parser)]
 #[command(
@@ -73,13 +73,13 @@ enum Command {
         /// MOMI CLI executable; defaults to the release provided by the Nix shell.
         #[arg(long)]
         momi: Option<PathBuf>,
-        /// Exact-color palette; defaults to the embedded blue study.
+        /// Exact-color palette for the single-portrait blue study.
         #[arg(long)]
         palette: Option<PathBuf>,
         /// Named presets sharing a reviewed region profile.
         #[arg(long, conflicts_with = "palette")]
         presets: Option<PathBuf>,
-        /// Character selection and per-character preset sets.
+        /// Character selection and per-character preset sets; defaults to the packaged collection.
         #[arg(long, conflicts_with_all = ["palette", "presets"])]
         characters: Option<PathBuf>,
         /// Current MOMI config/mods/manifest.json; required for a MOMI-modified archive.
@@ -165,6 +165,19 @@ enum Command {
     },
 }
 
+fn packaged_collection() -> Result<PathBuf> {
+    let path = std::env::current_exe()?
+        .parent()
+        .and_then(Path::parent)
+        .map(|prefix| prefix.join("share/mistria-palette/palettes/sets/characters-trial.json"))
+        .filter(|path| path.is_file())
+        .context(
+            "No packaged collection beside this executable; pass --characters, --presets or --palette",
+        )?;
+    eprintln!("Installing the complete collection from {}", path.display());
+    Ok(path)
+}
+
 fn run() -> Result<()> {
     let report = match Cli::parse().command {
         Command::BuildCharacters {
@@ -198,7 +211,11 @@ fn run() -> Result<()> {
             momi.as_deref(),
             palette.as_deref(),
             presets.as_deref(),
-            characters.as_deref(),
+            match (&palette, &presets, characters) {
+                (None, None, None) => Some(packaged_collection()?),
+                (_, _, characters) => characters,
+            }
+            .as_deref(),
             installed_mods.as_deref(),
             allow_source_hash_mismatch,
         )?,

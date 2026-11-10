@@ -44,13 +44,17 @@ were evaluated; execution was tested on x86_64 Linux only.
 After building in the Nix shell, close the game and other mod installers:
 
 ```sh
-target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria'
+target/release/mistria-palette install --game-dir '/path/to/Fields of Mistria' \
+  --palette palettes/stylized/adeline.json
 target/release/mistria-palette uninstall --game-dir '/path/to/Fields of Mistria'
 ```
 
-By default the first command exports the Adeline spring neutral portrait, applies
-the embedded blue palette, builds the toggle package, runs MOMI in isolation, and
-verifies the actual atlas frames before publishing. Use Settings → Palettes to select Vanilla or Debug Blue.
+The first command exports the Adeline spring neutral portrait, applies the blue
+study palette, builds the toggle package, runs MOMI in isolation, and verifies the
+actual atlas frames before publishing. Use Settings → Palettes to select Vanilla or Debug Blue.
+Without `--palette`, `--presets` or `--characters`, the packaged `nix build`
+installs its complete collection; a development build has no packaged collection
+and asks for one of those options.
 This currently supports x86_64 Linux with Nix. No game images are downloaded.
 Nix pins the MOMI binary, bubblewrap, dynamic loader, and runtime libraries.
 

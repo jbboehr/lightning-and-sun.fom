@@ -1,10 +1,9 @@
-# Linux candidate notes
+# Linux release notes
 
-**Unpublished candidate.** The supported installation route is x86_64 Linux
-with Nix and the packaged MOMI 0.16.4 sandbox. Start with the
+**Early release.** The supported installation route is x86_64 Linux with Nix and
+the packaged MOMI 0.16.4 sandbox. Start with the
 [build and installation instructions](../../README.md#build-and-install).
 The project is licensed AGPL-3.0-only; see the [license notice](../../README.md#license).
-No release tag or public download is assigned by these notes.
 
 ## Release contents
 
@@ -42,61 +41,35 @@ Vanilla. **Remember choices** starts Off; enabling it restores saved selections
 in later sessions. **Reset all to Vanilla** resets the included characters.
 Persistence failures display a warning while leaving session choices usable.
 
-The candidate includes fixes for title-screen palette initialization, palette
-application to native cameo actors, and the lifetime of menu notifications.
-The current fourteen-choice build passes native title/journal keyboard/mouse and
-virtual-gamepad navigation, wrapping, independent selections, remembering/restart,
-reset and save-failure feedback. Both additions have sampled portraits and world
-sprites rendered in the normal prologue. Earlier basic movement, dialogue and
-save/load results remain recorded separately. Virtual-gamepad results do not
-establish physical-controller behavior.
-
-Installation checks generated pixels, metadata and scripts before replacing
-the archive. Removal restores the exact pre-install archive, including earlier
-compatible mods. See [removal and recovery](../../README.md#remove-or-change-the-mod)
+Installing without a selection installs the complete collection. Installation
+checks generated pixels, metadata and scripts before replacing the archive.
+Removal restores the exact pre-install archive, including earlier compatible
+mods. See [removal and recovery](../../README.md#remove-or-change-the-mod)
 and [compatibility requirements](../../README.md#compatibility) before changing
 recipes, updating the game or managing other mods.
 
-## Tested scope and remaining limits
+## Tested scope and known limits
 
-Verification used the preserved game archive identified in the
-[compatibility instructions](../../README.md#compatibility) and supplied Linux
-executable. Other game builds, arbitrary mod combinations, ARM installation,
-Windows, macOS and portable non-Nix bundles have no supported route here.
-Same-machine Nix builds do not establish a fresh operating-system test or
-compatibility with every Linux distribution and hardware configuration.
+Testing used one game build, identified in the
+[compatibility instructions](../../README.md#compatibility), on one Linux
+machine. Other game builds, arbitrary mod combinations, ARM installation,
+Windows, macOS and portable non-Nix bundles are not supported.
 
-Representative live samples exercised a season boundary, seasonal portraits and
-world actors, Juniper's Beach→Summer change, Elsie's Winter writing, Terithia's
-fishing and native West-facing rendering, and special-scene actors. Calendar,
-clock and travel preparation used built-in debug tools. Normal controls performed
-the observed gameplay after preparation; special scenes used debug-triggered
-access, which does not establish ordinary story eligibility or progression.
-The live Priestess sample was intentionally unchanged spectral art, not
-recolorable Flashback Priestess.
+Tested in the running game:
 
-Displayed artwork, representative Player 27 portraits and the displayed live
-samples have qualified owner acceptance, with inspection depth unspecified.
-This is not an exhaustive artwork or gameplay review. Physical-controller
-acceptance, distinct complex-animation end-stage dispatch, unsampled forms and
-actions, and broader approximate-tone coverage remain open. The usable Linux
-release milestone and publication authorization remain open.
+- the palette menu from the title screen and journal, with keyboard, mouse and
+  a virtual gamepad, including remembered choices, reset and save-failure
+  warnings;
+- basic movement, dialogue, room changes, day changes and save/load;
+- representative samples of a season change, seasonal portraits and sprites,
+  Juniper's Beach to Summer change, Elsie's Winter writing, Terithia's fishing
+  and special-scene characters.
 
-The refreshed private source snapshot includes these notes and current
-verification documentation. Its [finalization record](../development/linux-candidate-finalization.md)
-links the archive, per-file manifest and external checksums/validation verdict.
-It records the current twelve-choice collection alongside two synthetic folder
-mods, bounded refusal checks and exact removal; arbitrary mod compatibility is
-not inferred. Older source snapshots remain preserved as historical evidence.
+Known limits:
 
-The [Stillwell/Terithia rollout](../development/muted-tone-rollout.md) is
-implemented and technically verified across all 36 characters, preserving every
-previous choice and generated image. Its current private source snapshot passes
-standalone-build, strict installation, bounded compatibility/refusal, native
-input/persistence and exact-removal checks. The displayed rollout review has
-provisional owner acceptance with "looks fine for now"; inspection depth is
-unspecified. Broader tone coverage assessment remains pending, and the earlier
-finalized candidate above stays frozen. Live checks used a separately bound copy
-omitting exactly three synthetic CPU-test probe payloads; all palette assets and
-other entries match the installed
-archive. This supplies no live compatibility claim for those synthetic mods.
+- Physical controllers are untested.
+- Not every form, action and story scene has been seen in play. Some sampled
+  scenes were reached with debug tools rather than normal story progression.
+- The final frames of some complex animations were checked only in a prepared
+  test scene.
+- Compatibility with other mods was tested only with simple folder mods.

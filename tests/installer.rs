@@ -600,7 +600,7 @@ animations = [{texture_ids = ["0000000000000002::1"], placement = [0,0,2,1,2,1,0
 }
 
 #[test]
-fn default_palette_refuses_an_unreviewed_portrait() {
+fn study_palette_refuses_an_unreviewed_portrait() {
     let lab = Lab::new();
     let result = Command::new(env!("CARGO_BIN_EXE_mistria-palette"))
         .arg("install")
@@ -608,14 +608,61 @@ fn default_palette_refuses_an_unreviewed_portrait() {
         .arg(&lab.game)
         .arg("--momi")
         .arg(&lab.result)
+        .arg("--palette")
+        .arg(Path::new(env!("CARGO_MANIFEST_DIR")).join("palettes/stylized/adeline.json"))
         .env("MISTRIA_MOMI_RUNNER", &lab.runner)
         .output()
         .unwrap();
     assert!(
         !result.status.success(),
-        "default palette accepted an unreviewed portrait"
+        "study palette accepted an unreviewed portrait"
     );
     assert!(String::from_utf8_lossy(&result.stderr).contains("Region source checksum mismatch"));
+    assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+    assert!(!lab.game.join(".mistria-palette").exists());
+}
+
+fn install_without_selection(binary: &Path, lab: &Lab) -> Output {
+    Command::new(binary)
+        .arg("install")
+        .arg("--game-dir")
+        .arg(&lab.game)
+        .arg("--momi")
+        .arg(&lab.result)
+        .env("MISTRIA_MOMI_RUNNER", &lab.runner)
+        .output()
+        .unwrap()
+}
+
+#[test]
+fn default_install_requires_a_packaged_collection() {
+    let lab = Lab::new();
+    let result = install_without_selection(Path::new(env!("CARGO_BIN_EXE_mistria-palette")), &lab);
+    assert!(!result.status.success());
+    assert!(String::from_utf8_lossy(&result.stderr).contains("--characters"));
+    assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
+    assert!(!lab.game.join(".mistria-palette").exists());
+}
+
+#[test]
+fn default_install_uses_the_collection_packaged_beside_the_binary() {
+    let lab = Lab::new();
+    let prefix = tempfile::tempdir().unwrap();
+    let binary = prefix.path().join("bin/mistria-palette");
+    fs::create_dir_all(binary.parent().unwrap()).unwrap();
+    fs::copy(env!("CARGO_BIN_EXE_mistria-palette"), &binary).unwrap();
+    let collection = prefix
+        .path()
+        .join("share/mistria-palette/palettes/sets/characters-trial.json");
+    fs::create_dir_all(collection.parent().unwrap()).unwrap();
+    fs::write(&collection, b"not a collection").unwrap();
+    let result = install_without_selection(&binary, &lab);
+    let stderr = String::from_utf8_lossy(&result.stderr);
+    assert!(!result.status.success());
+    assert!(
+        stderr.contains(&collection.display().to_string()),
+        "{stderr}"
+    );
     assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
     assert!(!lab.game.join(".mistria-palette").exists());
 }
@@ -1558,7 +1605,7 @@ fn source_hash_override_reaches_every_install_mode_and_keeps_atlas_verification(
 }
 
 #[test]
-fn source_hash_override_reaches_default_install_and_keeps_installed_verification() {
+fn source_hash_override_reaches_study_install_and_keeps_installed_verification() {
     let mut lab = Lab::new();
     let changed = png(RgbaImage::from_pixel(592, 180, Rgba([227, 161, 123, 255])));
     let metadata = META.replace("frame_size = [2,1]", "frame_size = [296,180]");
@@ -1578,6 +1625,8 @@ fn source_hash_override_reaches_default_install_and_keeps_installed_verification
             .arg(&lab.game)
             .arg("--momi")
             .arg(&lab.result)
+            .arg("--palette")
+            .arg(Path::new(env!("CARGO_MANIFEST_DIR")).join("palettes/stylized/adeline.json"))
             .env("MISTRIA_MOMI_RUNNER", &lab.runner);
         if allow {
             command.arg("--allow-source-hash-mismatch");
