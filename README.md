@@ -1,46 +1,64 @@
 # Lightning and Sun
 
-Skin palettes for the 36 supported Fields of Mistria characters, covering their
-portraits and recolorable world sprites. Each character offers fourteen choices:
-Vanilla, Debug Blue, three previous donor palettes and nine additional tones
-adapted from the game's NPC and player-creator colors. Clothing,
-hair, equipment, markings and intentional spectral forms keep their original
-colors.
+A skin-tone mod for [Fields of Mistria](https://www.fieldsofmistria.com/). It
+adds a **Settings → Palettes** page where you choose a skin tone for each of 36
+characters. The choice applies to that character's portraits and world sprites
+together, and you can change it at any time while playing.
 
-This is an early Linux release. Installation, removal and the in-game palette
-menu are tested, and the artwork has been reviewed on representative portraits,
-sprites and scenes, but not every animation in a full playthrough. Physical
-controllers have not been tested yet. The
+Only skin changes. Clothing, hair, equipment, scars and markings keep their
+original colors, and every character starts on the game's own look until you
+pick something else.
+
+The mod ships no images. The installer recolors the artwork in your own copy of
+the game on your machine, and uninstalling puts your game files back exactly as
+they were.
+
+## Status
+
+This is an early release for **Linux only**. Installing, uninstalling and the
+palette menu are tested. The artwork has been reviewed on a sample of portraits,
+sprites and scenes, but nobody has yet played the whole game with the mod on,
+so you may find a frame that was missed. Physical controllers are untested. The
 [release notes](docs/releases/linux-candidate.md) list what was tested and the
 known limits.
 
+## Requirements
+
+- x86_64 Linux.
+- Either [Nix](https://nixos.org/download/) with flakes enabled, which provides
+  everything else the installer needs, or a Rust toolchain and a downloaded copy
+  of the [MOMI](https://github.com/Garethp/Mods-of-Mistria-Installer) mod
+  installer; see [Without Nix](#without-nix).
+- Your own installation of the game: the folder containing `assets.zip` and
+  `Maybe.toml`.
+- About 6 GB of free space in the game folder while installing. Afterwards the
+  mod uses roughly 1 GB there, most of it the backup of your original archive.
+
+Back up your save files before you start. The mod does not edit saves, but this
+is an early release.
+
 ## Build and install
 
-Requires **x86_64 Linux**, Nix with flakes enabled, and your own game installation
-containing `assets.zip` and `Maybe.toml`. Nix supplies pinned MOMI 0.16.4 and its
-runtime dependencies; the host must allow its Bubblewrap sandbox to run.
-Run from this repository:
+From a checkout of this repository:
 
 ```sh
 nix build
-result/bin/mistria-palette --help
 ```
 
-Close the game and other mod installers, then install the complete collection:
+Close the game and any other mod installer, then run:
 
 ```sh
 result/bin/mistria-palette install --game-dir '/path/to/Fields of Mistria'
 ```
 
-Keep the `result` link while using this build; it retains the packaged tool,
-recipes and runtime dependencies. Release contents are the tool, text recipes
-and masks, and mod scripts. Neither original game assets nor recolored,
-game-derived assets are distributed. Replacement images are generated locally
-from your own copy; image galleries, screenshots and clips are also excluded
-from the release. Installation verifies generated atlas pixels, metadata and
-scripts before publishing the local game archive.
+This takes ten to twenty minutes. The installer generates the recolored artwork,
+checks it, and only then replaces the game's archive. If anything fails, your
+game is left untouched.
 
-To install a single character instead, supply its set, for example:
+Keep the `result` link and the `.mistria-palette/` folder that appears in the
+game directory. You need both to uninstall.
+
+To install one character instead of all 36, name that character's set:
 
 ```sh
 result/bin/mistria-palette install \
@@ -48,41 +66,63 @@ result/bin/mistria-palette install \
   --presets result/share/mistria-palette/palettes/sets/caldarus-native-tones.json
 ```
 
-Uninstall the current selection before installing another recipe.
+Uninstall before installing a different selection.
+
+### Without Nix
+
+The Nix build is the tested route. This one works on the development machine
+but has not been tried on other distributions.
+
+You need a recent stable Rust toolchain (the project is built with Rust 1.99)
+and the MOMI 0.16.4 command-line installer, `ModsOfMistriaInstaller-cli-linux`,
+from its
+[release page](https://github.com/Garethp/Mods-of-Mistria-Installer/releases/tag/v0.16.4).
+Make it executable with `chmod +x`. MOMI needs the system's C++ runtime, zlib,
+OpenSSL and ICU libraries, which most desktop distributions already have.
+
+```sh
+cargo build --locked --release
+target/release/mistria-palette install \
+  --game-dir '/path/to/Fields of Mistria' \
+  --momi /path/to/ModsOfMistriaInstaller-cli-linux \
+  --characters palettes/sets/characters-trial.json
+```
+
+Use `target/release/mistria-palette` in place of `result/bin/mistria-palette` in
+the other commands on this page, and keep the checkout until you uninstall.
+
+One case is refused. MOMI cannot be told which game folder to use, and it
+prefers any Steam copy of the game it can find over the working copy this
+installer prepares. The installer hides the Steam libraries in your home
+directory from it. It cannot hide a library at the top of a mounted drive, such
+as `/mnt/games/SteamLibrary`, so if the game is installed in one the installer
+stops before changing anything. The Nix build runs MOMI in a sandbox and has no
+such limit.
 
 ## Palette controls
 
-Open **Settings → Palettes**, select a character and cycle their palette.
-Portraits and world sprites use the same choice. Each character starts on
-**Vanilla** unless you enable **Remember choices**, which starts Off.
-**Reset all to Vanilla** resets the included characters. Use the normal menu
-back/close controls to leave the page. Default controls use **E** or the
-controller south button to select, and **Esc** or the east button to go back.
+Open **Settings → Palettes** from the title screen or the journal, select a
+character and cycle through their choices. By default **E** or the controller's
+south button selects, and **Esc** or the east button goes back.
 
-Remembered choices use mod-owned settings. If saving fails, session choices
-remain usable and a warning indicates that persistence was not confirmed.
-Disable remembering to start future sessions on Vanilla. Resetting palettes
-does not change game saves.
+Every character offers fourteen choices:
 
-The previous donor choices remain: most characters offer Hayden, Ryis and Seridia
-alongside Vanilla and Debug Blue.
-Hayden offers Adeline/Ryis/Seridia; Ryis offers Adeline/Hayden/Seridia;
-Caldarus and Seridia offer Adeline/Hayden/Ryis. Every character also offers:
+- **Vanilla**, the game's original colors.
+- Nine tones adapted from the game's own characters and character creator:
+  Light peach, Light golden, Warm peach, Warm brown, Deep brown, Very deep,
+  Deep umber, Muted light and Muted medium.
+- Three tones borrowed from other characters, usually Hayden, Ryis and Seridia.
+- **Debug Blue**, a bright blue test palette that makes any missed pixels
+  obvious.
 
-- Light peach (Player 04)
-- Light golden (March)
-- Warm peach (Wiscar)
-- Warm brown (Player 16)
-- Deep brown (Player 22)
-- Very deep (Player 35)
-- Deep umber (Player 27)
-- Muted light (Stillwell)
-- Muted medium (Terithia)
+The tones are approximations of the game's range, and a character's natural
+shading, glow effects and markings can make the same tone look a little
+different from one character to the next.
 
-These tones approximate a
-broader native range; they do not reproduce every original skin color exactly.
-Natural skin ramps, glow effects,
-scars and body markings can make results differ between characters.
+Choices last for the current session. Turn on **Remember choices** to keep them
+between sessions; if saving fails you get a warning and your choices still work
+until you quit. **Reset all to Vanilla** returns every character to the original
+look. None of this changes your game saves.
 
 ## Remove or change the mod
 
@@ -92,69 +132,61 @@ Close the game, then run:
 result/bin/mistria-palette uninstall --game-dir '/path/to/Fields of Mistria'
 ```
 
-Removal restores the exact archive from before palette installation, including
-any earlier compatible mods. Selecting Vanilla restores appearance during play;
-uninstalling removes the installed palette package.
+This restores the exact archive you had before installing, including any mods
+that were already in it.
 
-Keep the `.mistria-palette/` recovery directory until removal succeeds. If the
-live archive changed after installation, removal refuses to overwrite it and
-retains recovery files. Restore the matching installed archive or investigate
-the other update before retrying; do not delete recovery state to bypass this
-check. Remove this palette installation before updating the game or using MOMI
-separately.
+Uninstall before you update the game or manage other mods. If the game's archive
+has changed since you installed, for example after a game update, the uninstaller
+refuses to overwrite it and keeps its recovery files. Do not delete
+`.mistria-palette/` to get past this; it holds the only copy of your earlier
+archive.
 
 ## Compatibility
 
-This release was verified using the supplied Linux executable and the preserved
-`assets.zip` with SHA256:
+The mod was tested against one build of the game, on one Linux machine. That
+build's `assets.zip` has this SHA-256:
 
 ```text
 8354ff03cab354e9d12903694efac6075219034d7b7b8fd8ded24e4a04fbe0b4
 ```
 
-The fingerprint identifies the tested source; installation does not require the
-entire archive to match it. Recipes reject changed reviewed source PNGs by
-default and retain inventory, dimension, mask and installed-output checks.
-Passing these checks on another archive does not establish support for another
-game build. No supported game-version range has been established.
+You can compare yours with `sha256sum assets.zip` before installing any mods.
+On a different build the installer still runs. If artwork it recolors has
+changed, it prints a warning naming each changed image and continues; those
+images may be recolored incorrectly, so check the affected characters in game.
+Add `--strict-source-hashes` to make the installer stop instead. No range of
+supported game versions has been established.
 
-The advanced `--allow-source-hash-mismatch` option bypasses only source PNG hash
-equality. Other checks remain, but changed artwork can still recolor incorrectly;
-inspect the output before relying on it. The override does not establish support
-for another game build.
+Windows, macOS and ARM are not supported.
 
-Existing MOMI mods require complete unpacked source folders under `mods/` or
-`Mods/`, the matching pristine `assets.bak.zip`, and the installed-mod list MOMI
-wrote for that archive. For example, add:
+### Other mods
+
+If the game already has mods installed through MOMI, the installer rebuilds the
+archive with them included. It needs each mod's unpacked folder under `mods/` or `Mods/`,
+MOMI's `assets.bak.zip` backup, and the list of installed mods that MOMI keeps
+in the game's configuration directory:
 
 ```sh
---installed-mods '/path/to/MOMI-config/mods/manifest.json'
+result/bin/mistria-palette install \
+  --game-dir '/path/to/Fields of Mistria' \
+  --installed-mods '/path/to/MOMI-config/mods/manifest.json'
 ```
 
-Each source mod needs its own manifest directly inside its folder.
-The `--installed-mods` file is MOMI's installed-mod list from the game
-configuration directory, separate from those per-mod manifests.
-Use the list from the last MOMI installation of that archive: it has no archive
-checksum, so matching names and versions cannot prove its provenance. If the
-correct list is unavailable, restore a known setup through MOMI first.
-A modded live archive normally differs from the pristine backup's fingerprint.
+The installer stops, without changing anything, if a mod is missing or would
+load in a different order than before. This was tested only with simple mods;
+mods that replace the same character artwork or scripts may conflict. The
+[tool guide](docs/TOOLS.md#cli-installation) has the full rules.
 
-Installation rejects missing/mismatched selections, skipped mods or a rebuild
-that changes existing mod precedence. Custom order that MOMI's CLI cannot preserve
-is refused.
-Conflicting sprite/script replacements and arbitrary mod combinations are not
-guaranteed compatible. Windows, macOS, ARM installation, portable non-Nix bundles,
-archive-packed mod inputs and automatic game-update recovery are outside the
-supported route. Verification on one Linux configuration does not establish
-support for every distribution or hardware setup.
+## More documentation
 
-For exporting artwork, custom palettes and other toolkit commands, see
-[the tool guide](docs/TOOLS.md). Earlier individual study recipes remain
-available; their coverage is narrower than the complete collection.
+- [Release notes](docs/releases/linux-candidate.md): what is included, what was
+  tested and known limits.
+- [Tool guide](docs/TOOLS.md): exporting artwork, custom palettes, advanced
+  installer options and the other commands.
+- [Development documentation](docs/planning.md): project status and the records
+  behind each piece of artwork.
 
 ## License
-
-Copyright (C) 2026 John Boehr.
 
 The tool, recipes, masks and mod scripts in this repository are licensed under
 the GNU Affero General Public License, version 3 only (AGPL-3.0-only); see

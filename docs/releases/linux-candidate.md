@@ -24,9 +24,14 @@ their original appearance.
 Each character has fourteen choices: Vanilla, Debug Blue, three retained donor
 palettes and nine additional NPC/creator tones, including Deep umber (Player 27),
 Muted light (Stillwell) and Muted medium (Terithia).
-The [palette controls](../../README.md#palette-controls) list the additions and
-character-specific donors. These are representative tones; they do not reproduce
-every native skin color exactly.
+The nine added tones and their sources are Light peach (Player 04), Light golden
+(March), Warm peach (Wiscar), Warm brown (Player 16), Deep brown (Player 22),
+Very deep (Player 35), Deep umber (Player 27), Muted light (Stillwell) and Muted
+medium (Terithia). The retained donors are Hayden, Ryis and Seridia for most
+characters; Hayden offers Adeline, Ryis and Seridia, Ryis offers Adeline, Hayden
+and Seridia, and Caldarus and Seridia offer Adeline, Hayden and Ryis. These are
+representative tones; they do not reproduce every native skin color exactly.
+See [palette controls](../../README.md#palette-controls) for the menu.
 
 Portrait refinements address skin transitions around Reina's mouth and facial
 boundaries on Adeline, Celine and Holt. Existing material rules preserve clothing,
