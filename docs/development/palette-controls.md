@@ -27,6 +27,10 @@ sprites therefore use the same selected index, including a refresh while paused,
 without advancing fractional portrait or animator phase. Debug selection calls
 remain session-only; persistence belongs to explicit palette-menu actions.
 
+Six [preset rows](menu-presets.md), added 2026-11-09, follow Reset and set
+every character at once through the same selection and saving path. The status
+row is now the 45th focusable row.
+
 ## Storage contract
 
 MMAPI owns the location:

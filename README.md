@@ -119,6 +119,21 @@ The tones are approximations of the game's range, and a character's natural
 shading, glow effects and markings can make the same tone look a little
 different from one character to the next.
 
+Six rows after **Reset all to Vanilla** change every character at once:
+
+- **Everyone** gives all characters the same tone and steps to the next tone
+  each time you select it.
+- **Tanning Bed** shows each character one step darker than their original
+  look.
+- **Mirror** swaps light and dark: the lightest characters become the darkest
+  and the reverse.
+- **Milk & Honey** puts everyone on one of two light tones, and **Grayscale
+  Agenda** puts everyone on either the lightest or the darkest tone.
+- **Randomize all** gives each character a random tone.
+
+A character whose original look already matches what a preset asks for goes
+back to Vanilla.
+
 Choices last for the current session. Turn on **Remember choices** to keep them
 between sessions; if saving fails you get a warning and your choices still work
 until you quit. **Reset all to Vanilla** returns every character to the original

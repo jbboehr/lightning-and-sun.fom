@@ -32,7 +32,10 @@ isolated copy of the game archive, with no real saves.
 Turn on **Remember choices** so selections survive restarts; a long run is the
 first real test of that storage. Give characters non-Vanilla palettes, ideally
 contrasting ones such as Debug Blue or Very deep, so a missed frame stands out.
-Changing choices partway through also exercises the menu.
+Changing choices partway through also exercises the menu. The six
+[preset rows](menu-presets.md) after **Reset all to Vanilla** have only been
+checked from the title screen; try each one during play and say whether the
+result looks right.
 
 Watch for:
 

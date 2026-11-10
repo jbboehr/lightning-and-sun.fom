@@ -6,7 +6,7 @@ fn run_controls(case: &str) {
     let characters: Vec<Value> =
         serde_json::from_str(include_str!("../mod/config/characters.json")).unwrap();
     assert_eq!(characters.len(), 36);
-    let presets: &[(&str, &str)] = if case == "max_presets" {
+    let presets: &[(&str, &str)] = if matches!(case, "max_presets" | "presets") {
         &[
             ("vanilla", "Vanilla"),
             ("blue", "Debug Blue"),
@@ -121,4 +121,16 @@ fn palette_storage_uses_stable_ids_and_confirms_primary_writes() {
 #[ignore = "requires the pinned Fabricator interpreter in FOM_GML_INTERPRETER"]
 fn fourteen_choices_preserve_navigation_animation_and_version_one_storage() {
     run_controls("max_presets");
+}
+
+#[test]
+#[ignore = "requires the pinned Fabricator interpreter in FOM_GML_INTERPRETER"]
+fn presets_set_every_character_and_save_once() {
+    run_controls("presets");
+}
+
+#[test]
+#[ignore = "requires the pinned Fabricator interpreter in FOM_GML_INTERPRETER"]
+fn presets_fall_back_to_vanilla_without_the_shared_tones() {
+    run_controls("presets_unavailable");
 }

@@ -37,6 +37,11 @@ later proposal). The project is licensed AGPL-3.0-only. Ordinary-gameplay
 coverage comes from an owner playthrough of the whole game with the mod active,
 started once the agent judges the project mostly done.
 
+2026-11-09 owner decision: [palette presets](development/menu-presets.md),
+menu rows that set every character at once as in the Oxygen Not Included sibling
+mod, are part of the first release, in all three kinds: one tone for everyone and
+random, step and mirror, and fixed mixes.
+
 ## Status
 
 "Accepted" below means accepted as displayed; several acceptances carry
@@ -50,6 +55,7 @@ qualifications or unspecified inspection depth, recorded in the linked record.
 | Original artwork | All batches accepted; see [Completed](#completed) |
 | Palette choices | Thirteen generated choices plus Vanilla for all 36 characters, technically verified; frozen for the first release; Stillwell/Terithia accepted provisionally ("for now") |
 | Menu, input, persistence | Title/journal menu, keyboard, mouse, virtual gamepad, saving/reset and failure feedback pass live and are accepted; physical controller untested |
+| Palette presets | Six rows implemented; interpreter tests and a title-screen live run pass; results not yet seen by the owner; tone order and character table accepted provisionally ("close enough for now") |
 | Live gameplay | Basic gameplay, save/load and seven seasonal/action/scene samples accepted; gaps listed below |
 | Linux packaging | Private AGPL-3.0-only pinned-Nix candidate built from standalone source and verified; not published |
 
@@ -61,6 +67,7 @@ qualifications or unspecified inspection depth, recorded in the linked record.
 | Animation end stage in ordinary gameplay | Instrumented prepared-scene check passes and is accepted; no bounded native caller found; original live criterion open | Owner playthrough | [prepared retry](development/animation-end-prepared-retry-2026-11-07.md), [route investigation](development/animation-end-route-investigation-2026-11-07.md) | Yes |
 | Unsampled forms and actions | Seven representative cases sampled; others untested; debug scenes do not establish normal story progression | Owner playthrough | [live samples](development/remaining-live-verification-2026-11-07.md) | Yes |
 | Unclassified Adeline pathfinding error | Seen once after a debug warp during EndDay; not reproduced on reload; watch for it in the playthrough | Owner playthrough | [live samples](development/remaining-live-verification-2026-11-07.md#setup-failures-and-controls) | Yes |
+| Preset rows during play | Title-screen run passes; journal, on-screen characters, controller and appearance not exercised | Owner playthrough | [palette presets](development/menu-presets.md#live-run-2026-11-09) | Owner's own play |
 | Owner playthrough | Ready to start; follow the [playthrough guide](development/owner-playthrough.md) and report problems | Owner | [playthrough guide](development/owner-playthrough.md) | Owner's own play |
 | Publication | Separate authorization; candidate notes and support guidance prepared | Owner | [candidate finalization](development/linux-candidate-finalization.md), [support evidence](development/linux-candidate-support-evidence.md) | No |
 
@@ -120,4 +127,5 @@ is established.
 - 2026-11-09: README rewritten for end users; `install` warns on
   [changed artwork](development/source-hash-override.md) by default and
   [runs without Nix](development/cli-installer.md#target-and-dependency-handling).
-  The sealed candidate predates these and is to be resealed before publication.
+  The sealed candidate predates these and the preset rows and is to be resealed
+  before publication.

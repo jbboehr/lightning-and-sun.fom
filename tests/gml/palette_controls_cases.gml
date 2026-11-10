@@ -38,13 +38,28 @@ function test_visible_error(menu) {
     assert(string_pos("RAW:Palettes: Not saved.",global.notices[array_length(global.notices)-1]) == 1);
 }
 
+function test_index(character, id) {
+    for (var j = 0; j < array_length(character.preset_ids); j++) if (character.preset_ids[j] == id) return j;
+    return -1;
+}
+function test_expect(character_id, preset_id) {
+    var characters = __lns_palette_runtime().characters;
+    for (var i = 0; i < array_length(characters); i++) {
+        if (characters[i].id != character_id) continue;
+        assert(characters[i].preset_ids[characters[i].selected] == preset_id,
+            character_id + " should be " + preset_id + ", not " + characters[i].preset_ids[characters[i].selected]);
+        return;
+    }
+    assert(false, "Unknown character " + character_id);
+}
+
 if (global.controls_case == "title") {
     assert(!__lns_palette_runtime().initialized);
     var title = test_settings();
     assert(__lns_palette_runtime().ready, "Title Settings must initialize without Game begin-step");
     assert(array_length(title.category_pilot.nodes) == 8);
     title.__lns_palette_category.tap();
-    assert(array_length(title.option_pilot.nodes) == 39);
+    assert(array_length(title.option_pilot.nodes) == 45);
     assert(!__lns_palette_runtime().controls.remember && global.config_write_count == 0);
     title.option_pilot.nodes[0].tap();
     title.option_pilot.nodes[36].tap();
@@ -78,7 +93,7 @@ if (global.controls_case == "title") {
     var toasts = global.toast_menu;
     assert(!toasts.close_requested && array_length(global.notices) == 1);
     menu.option_pilot.nodes[1].tap();
-    menu.option_pilot.nodes[38].tap();
+    menu.option_pilot.nodes[44].tap();
     assert(global.toast_menu == toasts && global.toast_spawn_count == 1);
     assert(array_length(global.notices) == 3, "Subsequent failures and rereading must reuse the toast menu");
     assert(menu.option_scroller == scroller && menu.option_pilot == pilot);
@@ -123,12 +138,12 @@ if (global.controls_case == "title") {
     menu.__lns_palette_category.tap();
     assert(menu.active_page == "lns_palette" && menu.__lns_palette_category.is_selected());
     assert(ANCHOR.active == menu.option_pilot);
-    assert(array_length(menu.option_pilot.nodes) == 39, "36 characters, remember, reset, rereadable status");
-    assert(array_length(menu.option_scroller.nodes) == 40, "Only help is noninteractive");
+    assert(array_length(menu.option_pilot.nodes) == 45, "36 characters, remember, reset, six presets, rereadable status");
+    assert(array_length(menu.option_scroller.nodes) == 46, "Only help is noninteractive");
     assert(menu.option_scroller.subscribed == menu.option_pilot);
-    assert(menu.option_pilot.nodes[38] == menu.__lns_palette_status);
+    assert(menu.option_pilot.nodes[44] == menu.__lns_palette_status);
     var status_writes = global.config_write_count;
-    menu.option_pilot.nodes[38].tap();
+    menu.option_pilot.nodes[44].tap();
     assert(global.config_write_count == status_writes && array_length(global.notices) == 0);
     for (var i = 0; i < 36; i++) {
         assert(menu.option_pilot.nodes[i] == menu.__lns_palette_rows[i].row);
@@ -168,7 +183,7 @@ if (global.controls_case == "title") {
     var frees = global.free_count;
     menu.__lns_palette_category.tap();
     assert(global.free_count == frees+1 && menu.option_pilot.reset_count == 2);
-    assert(array_length(menu.option_pilot.nodes) == 39);
+    assert(array_length(menu.option_pilot.nodes) == 45);
     assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Candidate");
     var reopened = test_settings();
     reopened.__lns_palette_category.tap();
@@ -191,7 +206,7 @@ if (global.controls_case == "title") {
     }
     var menu = test_settings();
     menu.__lns_palette_category.tap();
-    assert(array_length(menu.option_pilot.nodes) == 39);
+    assert(array_length(menu.option_pilot.nodes) == 45);
     var scroller = menu.option_scroller;
     var pilot = menu.option_pilot;
     scroller.scroll = 127;
@@ -366,6 +381,114 @@ if (global.controls_case == "title") {
     }
     assert(global.native_settings_writes == 0);
     show_debug_message("PASS: fourteen choices, stable old IDs and new donor IDs, independent rows, phase/focus, forward wrap/reverse selections, version-1 restart/reset/opt-out and donor write failure");
+} else if (global.controls_case == "presets") {
+    test_boot();
+    var state = __lns_palette_runtime();
+    var natural = lns_palette_preset_natural();
+    var ladder = lns_palette_preset_ladder();
+    assert(array_length(ladder) == 7);
+    for (var i = 0; i < 36; i++) {
+        var position = natural[$ state.characters[i].id];
+        assert(is_real(position) && position == floor(position) && position >= 0 && position < 7,
+            "Every character needs a place in the light-to-dark order: " + state.characters[i].id);
+        for (var j = 0; j < 7; j++) assert(test_index(state.characters[i], ladder[j]) > 0);
+    }
+    var menu = test_settings();
+    menu.__lns_palette_category.tap();
+    var nodes = menu.option_pilot.nodes;
+    assert(array_length(nodes) == 45, "36 characters, remember, reset, six presets, status");
+    assert(nodes[44] == menu.__lns_palette_status);
+    assert(nodes[38].text_label.local_key == "RAW:Everyone: Vanilla");
+    assert(nodes[39].text_label.local_key == "RAW:Tanning Bed: one step darker");
+    assert(nodes[40].text_label.local_key == "RAW:Mirror: swap light and dark");
+    assert(nodes[41].text_label.local_key == "RAW:Milk & Honey: two light tones");
+    assert(nodes[42].text_label.local_key == "RAW:Grayscale Agenda: lightest or darkest");
+    assert(nodes[43].text_label.local_key == "RAW:Randomize all");
+    var scroller = menu.option_scroller;
+    var pilot = menu.option_pilot;
+    scroller.scroll = 127;
+    pilot.focus = 38;
+
+    var everyone = ["npc_march","player_04","npc_wiscar","player_16","player_22","player_27","player_35","npc_stillwell","npc_terithia"];
+    for (var lap = 0; lap < 10; lap++) {
+        nodes[38].tap();
+        var id = everyone[lap % 9];
+        for (var i = 0; i < 36; i++) {
+            var character = state.characters[i];
+            assert(character.preset_ids[character.selected] == id);
+            assert(nodes[i].text_label.local_key == "RAW:"+character.label+": "+character.names[character.selected]);
+        }
+        assert(nodes[38].text_label.local_key == "RAW:Everyone: "+state.characters[0].names[state.characters[0].selected]);
+    }
+    assert(global.menu.portrait.sprite == 70 && global.menu.portrait.index == 1.75);
+    assert(global.actors[0].sprite_index == 306 && global.actors[0].animator.current.frame == 7.75);
+    nodes[0].tap();
+    assert(nodes[38].text_label.local_key == "RAW:Everyone: Mixed");
+    nodes[38].tap();
+    for (var i = 0; i < 36; i++) assert(state.characters[i].selected == 6, "A mixed roster starts the cycle at the lightest tone");
+
+    // adeline 2, celine 1, march 0, ryis 3, darren 4 in the light-to-dark order.
+    nodes[39].tap();
+    nodes[39].tap();
+    test_expect("adeline","player_16"); test_expect("celine","npc_wiscar"); test_expect("march","player_04");
+    test_expect("ryis","player_22"); test_expect("darren","player_27");
+    assert(nodes[38].text_label.local_key == "RAW:Everyone: Mixed");
+    nodes[40].tap();
+    test_expect("adeline","player_22"); test_expect("celine","player_27"); test_expect("march","player_35");
+    test_expect("ryis","vanilla"); test_expect("darren","npc_wiscar");
+    nodes[41].tap();
+    test_expect("adeline","vanilla"); test_expect("celine","vanilla"); test_expect("march","player_04");
+    test_expect("ryis","npc_wiscar"); test_expect("darren","npc_wiscar");
+    nodes[42].tap();
+    test_expect("adeline","npc_march"); test_expect("celine","npc_march"); test_expect("march","vanilla");
+    test_expect("ryis","player_35"); test_expect("darren","player_35");
+    for (var lap = 0; lap < 20; lap++) {
+        nodes[43].tap();
+        for (var i = 0; i < 36; i++) {
+            var character = state.characters[i];
+            assert(array_get_index(everyone, character.preset_ids[character.selected]) >= 0,
+                "Randomize must stay within the shared tones");
+            assert(nodes[i].text_label.local_key == "RAW:"+character.label+": "+character.names[character.selected]);
+        }
+    }
+    assert(global.config_write_count == 0 && !state.controls.remember, "Presets must not write while remembering is off");
+    assert(menu.option_scroller == scroller && menu.option_pilot == pilot);
+    assert(scroller.scroll == 127 && pilot.focus == 38 && ANCHOR.active == pilot);
+
+    nodes[36].tap();
+    var writes = global.config_write_count;
+    nodes[39].tap();
+    assert(global.config_write_count == writes + 1, "A preset must save once, not once per character");
+    var saved = try_read_json_file(mmapi_config_path("lns_palette"), undefined, false);
+    assert(saved.__config_version == 1 && saved.remember);
+    assert(saved.selections.adeline == "player_16" && saved.selections.march == "player_04");
+    test_boot();
+    test_expect("adeline","player_16"); test_expect("darren","player_27");
+    menu = test_settings();
+    menu.__lns_palette_category.tap();
+    nodes = menu.option_pilot.nodes;
+    assert(nodes[38].text_label.local_key == "RAW:Everyone: Mixed");
+    global.write_mode = "noop";
+    nodes[40].tap();
+    test_visible_error(menu);
+    test_expect("adeline","player_22");
+    global.write_mode = "ok";
+    assert(global.native_settings_writes == 0);
+    show_debug_message("PASS: everyone cycle, step, mirror, two mixes, randomize, single save, restart and write failure");
+} else if (global.controls_case == "presets_unavailable") {
+    test_boot();
+    var menu = test_settings();
+    menu.__lns_palette_category.tap();
+    var nodes = menu.option_pilot.nodes;
+    nodes[0].tap();
+    for (var preset = 38; preset <= 43; preset++) {
+        nodes[1].tap();
+        nodes[preset].tap();
+        test_all_vanilla();
+        assert(nodes[38].text_label.local_key == "RAW:Everyone: Vanilla");
+    }
+    assert(global.config_write_count == 0 && global.warning_count == 0);
+    show_debug_message("PASS: presets fall back to Vanilla when an install lacks the shared tones");
 } else {
     var path = mmapi_config_path("lns_palette");
     test_boot();
@@ -433,7 +556,7 @@ if (global.controls_case == "title") {
     assert(array_length(global.notices)==notices+1, "Load warning must notify as soon as the palette page opens");
     assert(string_pos("RAW:Palettes: Saved palette settings were invalid",global.notices[array_length(global.notices)-1])==1);
     var status_writes = global.config_write_count;
-    load_menu.option_pilot.nodes[38].tap();
+    load_menu.option_pilot.nodes[44].tap();
     assert(array_length(global.notices)==notices+2, "Status must be focusable and replay its diagnostic");
     assert(global.config_write_count == status_writes, "Rereading status must never save");
     saved = test_saved("candidate");
@@ -486,7 +609,7 @@ if (global.controls_case == "title") {
         assert(array_length(global.notices)==notices+1, "Failed top-row write must notify without scrolling to status");
         assert(menu.option_scroller==scroller && menu.option_pilot==pilot && scroller.scroll==0 && pilot.focus==0);
         var status_writes = global.config_write_count;
-        menu.option_pilot.nodes[38].tap();
+        menu.option_pilot.nodes[44].tap();
         assert(array_length(global.notices)==notices+2 && global.config_write_count==status_writes);
         assert(__lns_palette_runtime().characters[0].selected == 2, "Write failure lost session choice");
         assert(global.menu.portrait.sprite == 30 && global.actors[0].sprite_index == 302);
