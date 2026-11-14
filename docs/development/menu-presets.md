@@ -27,9 +27,11 @@ character rows, Remember and Reset do not move.
 | **Mirror: swap light and dark** | Each character's place in the order is flipped end to end. |
 | **Milk & Honey: two light tones** | Everyone ends on Light peach or Warm peach. |
 | **Grayscale Agenda: lightest or darkest** | Everyone ends on Light golden or Very deep. |
+| **Agartha: everyone lightest** | Everyone ends on Light golden. |
+| **Wakanda: everyone darkest** | Everyone ends on Very deep. |
 | **Randomize all** | Each character gets a random one of the nine tones. |
 
-The last five do not depend on the current choices, so selecting one twice
+The last seven do not depend on the current choices, so selecting one twice
 changes nothing further. A preset uses the same selection path as a character
 row, saves once when **Remember choices** is on and writes nothing when it is
 off. Storage is unchanged: version 1, one stable choice ID per character.
@@ -93,6 +95,8 @@ Each preset is one array from original position to displayed position.
 | Mirror | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | Milk & Honey | 1 | 1 | 2 | 2 | 2 | 2 | 2 |
 | Grayscale Agenda | 0 | 0 | 0 | 6 | 6 | 6 | 6 |
+| Agartha | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Wakanda | 6 | 6 | 6 | 6 | 6 | 6 | 6 |
 
 The sibling mod's two mixes assign each duplicant by hand. These two are rules
 instead: Milk & Honey moves each character to the nearer of Light peach and Warm

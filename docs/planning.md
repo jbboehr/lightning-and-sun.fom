@@ -55,7 +55,7 @@ qualifications or unspecified inspection depth, recorded in the linked record.
 | Original artwork | All batches accepted; see [Completed](#completed) |
 | Palette choices | Thirteen generated choices plus Vanilla for all 36 characters, technically verified; frozen for the first release; Stillwell/Terithia accepted provisionally ("for now") |
 | Menu, input, persistence | Title/journal menu, keyboard, mouse, virtual gamepad, saving/reset and failure feedback pass live and are accepted; physical controller untested |
-| Palette presets | Six rows implemented; interpreter tests and a title-screen live run pass; results not yet seen by the owner; tone order and character table accepted provisionally ("close enough for now") |
+| Palette presets | Eight rows implemented; interpreter tests pass; a title-screen live run passed for the original six (Agartha and Wakanda, added 2026-11-13, not yet run live); results not yet seen by the owner; tone order and character table accepted provisionally ("close enough for now") |
 | Live gameplay | Basic gameplay, save/load and seven seasonal/action/scene samples accepted; gaps listed below |
 | Linux packaging | Private AGPL-3.0-only pinned-Nix candidate built from standalone source and verified; not published |
 

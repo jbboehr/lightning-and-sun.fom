@@ -44,8 +44,9 @@ Open **Settings → Palettes** from the title screen or journal. One character's
 choice applies to both portraits and world sprites. All characters default to
 Vanilla. **Remember choices** starts Off; enabling it restores saved selections
 in later sessions. **Reset all to Vanilla** resets the included characters.
-Six preset rows set every character at once: one tone for everyone, one step
-darker, light and dark swapped, two fixed mixes, and random.
+Eight preset rows set every character at once: one tone for everyone, one step
+darker, light and dark swapped, two fixed mixes, everyone lightest, everyone
+darkest, and random.
 Persistence failures display a warning while leaving session choices usable.
 
 Installing without a selection installs the complete collection. Installation
@@ -66,8 +67,9 @@ Tested in the running game:
 
 - the palette menu from the title screen and journal, with keyboard, mouse and
   a virtual gamepad, including remembered choices, reset and save-failure
-  warnings; the six preset rows from the title screen with mouse and keyboard
-  only;
+  warnings; the original six preset rows from the title screen with mouse and
+  keyboard only (the everyone-lightest and everyone-darkest rows have not been
+  checked in the running game);
 - basic movement, dialogue, room changes, day changes and save/load;
 - representative samples of a season change, seasonal portraits and sprites,
   Juniper's Beach to Summer change, Elsie's Winter writing, Terithia's fishing

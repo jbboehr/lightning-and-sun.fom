@@ -172,7 +172,9 @@ function lns_palette_preset_maps() {
         { label:"Tanning Bed: one step darker", map:[1,2,3,4,5,6,6] },
         { label:"Mirror: swap light and dark", map:[6,5,4,3,2,1,0] },
         { label:"Milk & Honey: two light tones", map:[1,1,2,2,2,2,2] },
-        { label:"Grayscale Agenda: lightest or darkest", map:[0,0,0,6,6,6,6] }
+        { label:"Grayscale Agenda: lightest or darkest", map:[0,0,0,6,6,6,6] },
+        { label:"Agartha: everyone lightest", map:[0,0,0,0,0,0,0] },
+        { label:"Wakanda: everyone darkest", map:[6,6,6,6,6,6,6] }
     ];
 }
 

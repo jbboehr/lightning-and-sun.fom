@@ -59,7 +59,7 @@ if (global.controls_case == "title") {
     assert(__lns_palette_runtime().ready, "Title Settings must initialize without Game begin-step");
     assert(array_length(title.category_pilot.nodes) == 8);
     title.__lns_palette_category.tap();
-    assert(array_length(title.option_pilot.nodes) == 45);
+    assert(array_length(title.option_pilot.nodes) == 47);
     assert(!__lns_palette_runtime().controls.remember && global.config_write_count == 0);
     title.option_pilot.nodes[0].tap();
     title.option_pilot.nodes[36].tap();
@@ -93,7 +93,7 @@ if (global.controls_case == "title") {
     var toasts = global.toast_menu;
     assert(!toasts.close_requested && array_length(global.notices) == 1);
     menu.option_pilot.nodes[1].tap();
-    menu.option_pilot.nodes[44].tap();
+    menu.option_pilot.nodes[46].tap();
     assert(global.toast_menu == toasts && global.toast_spawn_count == 1);
     assert(array_length(global.notices) == 3, "Subsequent failures and rereading must reuse the toast menu");
     assert(menu.option_scroller == scroller && menu.option_pilot == pilot);
@@ -138,12 +138,12 @@ if (global.controls_case == "title") {
     menu.__lns_palette_category.tap();
     assert(menu.active_page == "lns_palette" && menu.__lns_palette_category.is_selected());
     assert(ANCHOR.active == menu.option_pilot);
-    assert(array_length(menu.option_pilot.nodes) == 45, "36 characters, remember, reset, six presets, rereadable status");
-    assert(array_length(menu.option_scroller.nodes) == 46, "Only help is noninteractive");
+    assert(array_length(menu.option_pilot.nodes) == 47, "36 characters, remember, reset, eight presets, rereadable status");
+    assert(array_length(menu.option_scroller.nodes) == 48, "Only help is noninteractive");
     assert(menu.option_scroller.subscribed == menu.option_pilot);
-    assert(menu.option_pilot.nodes[44] == menu.__lns_palette_status);
+    assert(menu.option_pilot.nodes[46] == menu.__lns_palette_status);
     var status_writes = global.config_write_count;
-    menu.option_pilot.nodes[44].tap();
+    menu.option_pilot.nodes[46].tap();
     assert(global.config_write_count == status_writes && array_length(global.notices) == 0);
     for (var i = 0; i < 36; i++) {
         assert(menu.option_pilot.nodes[i] == menu.__lns_palette_rows[i].row);
@@ -183,7 +183,7 @@ if (global.controls_case == "title") {
     var frees = global.free_count;
     menu.__lns_palette_category.tap();
     assert(global.free_count == frees+1 && menu.option_pilot.reset_count == 2);
-    assert(array_length(menu.option_pilot.nodes) == 45);
+    assert(array_length(menu.option_pilot.nodes) == 47);
     assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Candidate");
     var reopened = test_settings();
     reopened.__lns_palette_category.tap();
@@ -206,7 +206,7 @@ if (global.controls_case == "title") {
     }
     var menu = test_settings();
     menu.__lns_palette_category.tap();
-    assert(array_length(menu.option_pilot.nodes) == 45);
+    assert(array_length(menu.option_pilot.nodes) == 47);
     var scroller = menu.option_scroller;
     var pilot = menu.option_pilot;
     scroller.scroll = 127;
@@ -396,14 +396,16 @@ if (global.controls_case == "title") {
     var menu = test_settings();
     menu.__lns_palette_category.tap();
     var nodes = menu.option_pilot.nodes;
-    assert(array_length(nodes) == 45, "36 characters, remember, reset, six presets, status");
-    assert(nodes[44] == menu.__lns_palette_status);
+    assert(array_length(nodes) == 47, "36 characters, remember, reset, eight presets, status");
+    assert(nodes[46] == menu.__lns_palette_status);
     assert(nodes[38].text_label.local_key == "RAW:Everyone: Vanilla");
     assert(nodes[39].text_label.local_key == "RAW:Tanning Bed: one step darker");
     assert(nodes[40].text_label.local_key == "RAW:Mirror: swap light and dark");
     assert(nodes[41].text_label.local_key == "RAW:Milk & Honey: two light tones");
     assert(nodes[42].text_label.local_key == "RAW:Grayscale Agenda: lightest or darkest");
-    assert(nodes[43].text_label.local_key == "RAW:Randomize all");
+    assert(nodes[43].text_label.local_key == "RAW:Agartha: everyone lightest");
+    assert(nodes[44].text_label.local_key == "RAW:Wakanda: everyone darkest");
+    assert(nodes[45].text_label.local_key == "RAW:Randomize all");
     var scroller = menu.option_scroller;
     var pilot = menu.option_pilot;
     scroller.scroll = 127;
@@ -442,8 +444,16 @@ if (global.controls_case == "title") {
     nodes[42].tap();
     test_expect("adeline","npc_march"); test_expect("celine","npc_march"); test_expect("march","vanilla");
     test_expect("ryis","player_35"); test_expect("darren","player_35");
+    // Characters already nearest the lightest tone keep their original art.
+    nodes[43].tap();
+    for (var i = 0; i < 36; i++) {
+        var id = state.characters[i].id;
+        test_expect(id, natural[$ id] == 0 ? "vanilla" : "npc_march");
+    }
+    nodes[44].tap();
+    for (var i = 0; i < 36; i++) test_expect(state.characters[i].id, "player_35");
     for (var lap = 0; lap < 20; lap++) {
-        nodes[43].tap();
+        nodes[45].tap();
         for (var i = 0; i < 36; i++) {
             var character = state.characters[i];
             assert(array_get_index(everyone, character.preset_ids[character.selected]) >= 0,
@@ -481,7 +491,7 @@ if (global.controls_case == "title") {
     menu.__lns_palette_category.tap();
     var nodes = menu.option_pilot.nodes;
     nodes[0].tap();
-    for (var preset = 38; preset <= 43; preset++) {
+    for (var preset = 38; preset <= 45; preset++) {
         nodes[1].tap();
         nodes[preset].tap();
         test_all_vanilla();
@@ -556,7 +566,7 @@ if (global.controls_case == "title") {
     assert(array_length(global.notices)==notices+1, "Load warning must notify as soon as the palette page opens");
     assert(string_pos("RAW:Palettes: Saved palette settings were invalid",global.notices[array_length(global.notices)-1])==1);
     var status_writes = global.config_write_count;
-    load_menu.option_pilot.nodes[44].tap();
+    load_menu.option_pilot.nodes[46].tap();
     assert(array_length(global.notices)==notices+2, "Status must be focusable and replay its diagnostic");
     assert(global.config_write_count == status_writes, "Rereading status must never save");
     saved = test_saved("candidate");
@@ -609,7 +619,7 @@ if (global.controls_case == "title") {
         assert(array_length(global.notices)==notices+1, "Failed top-row write must notify without scrolling to status");
         assert(menu.option_scroller==scroller && menu.option_pilot==pilot && scroller.scroll==0 && pilot.focus==0);
         var status_writes = global.config_write_count;
-        menu.option_pilot.nodes[44].tap();
+        menu.option_pilot.nodes[46].tap();
         assert(array_length(global.notices)==notices+2 && global.config_write_count==status_writes);
         assert(__lns_palette_runtime().characters[0].selected == 2, "Write failure lost session choice");
         assert(global.menu.portrait.sprite == 30 && global.actors[0].sprite_index == 302);
