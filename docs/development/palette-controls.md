@@ -27,6 +27,33 @@ sprites therefore use the same selected index, including a refresh while paused,
 without advancing fractional portrait or animator phase. Debug selection calls
 remain session-only; persistence belongs to explicit palette-menu actions.
 
+Portraits outside the dialogue box follow the same selection since 2026-11-14.
+The Journal → Villagers photo, Gossip cards and date photos, like the dialogue
+box, read a portrait through `outfit.portraits.get(...)` on the villager's
+outfit. The game builds those maps once during setup, every copy of a villager
+(including cutscene copies and the Linnet, Wiscar, Darren and Wynne cameos)
+shares them, and saves store only the outfit name. `lns_palette_portrait_install`
+therefore replaces `get` on each of the 36 characters' maps with a wrapper that
+returns the selected variant of the stored sprite; the stored sprites are not
+changed. Variant portraits keep the source atlas, so the date photo's
+other-season atlas loading still applies. An interpreter test fails with the
+install disabled and passes with it. A 2026-11-14 live run from a Spring 2 save
+showed Adeline's and Eiland's Villagers photos in Fair rosy after Agartha
+(`tmp/live-release/portraits-live/`). Later runs from the same save reached the
+other two screens with debug tools. Elsie's Gossip page, opened after
+`quest progress gossip_for_elsie`, showed the Valen, Adeline and Eiland cards and
+Adeline's reveal portrait in Fair rosy (`tmp/live-release/portraits-live3/`). An
+Inn Meal date with Adeline, reached by `t2 write adeline_status dating`, the Inn
+Menu unlock and `manana saturday`, ended on a date photo whose skin uses the
+Muted medium (Terithia) colors, about 10,500 pixels of #D29A7D
+(`tmp/live-release/portraits-live4/date-photo.png`). The gossip tutorial
+picture is fixed artwork and keeps original colors. A frame spawned with
+`add_item date_photo_inn` carries no photo; viewing it with no partner halts
+the unmodified game at `Dates.gml:420`, so live checks need a real date. The
+small villager icons in the journal list, map and
+other menus are vector shape assets, not portraits, and keep their original
+colors.
+
 Six [preset rows](menu-presets.md), added 2026-11-09, follow Reset and set
 every character at once through the same selection and saving path. The status
 row is now the 45th focusable row.

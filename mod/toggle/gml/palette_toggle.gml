@@ -1,7 +1,7 @@
 // Locally packaged animations, with vanilla as each character's session default.
 function __lns_palette_runtime() {
     if (global[$ "__lns_palette"] == undefined) {
-        global.__lns_palette = { registered:false, initialized:false, ready:false, characters:[] };
+        global.__lns_palette = { registered:false, initialized:false, ready:false, portraits_installed:false, characters:[] };
     }
     return global.__lns_palette;
 }
@@ -64,6 +64,47 @@ function lns_palette_apply(menu) {
     }
 }
 
+// The dialogue box, journal photo, gossip cards and date photos all read
+// portraits through the outfit's portrait map. Every copy of a villager shares
+// those maps and saves store only the outfit name, so wrapping each map's lookup
+// covers every screen without touching the stored sprites.
+function lns_palette_portrait_get(key) {
+    var sprite = self.__lns_palette_original_get(key);
+    var character = self.__lns_palette_character;
+    if (sprite == undefined || !__lns_palette_runtime().ready) return sprite;
+    for (var i = 0; i < array_length(character.pairs); i++) {
+        if (character.pairs[i][0] == sprite) return character.pairs[i][character.selected];
+    }
+    return sprite;
+}
+
+function lns_palette_portrait_install() {
+    var state = __lns_palette_runtime();
+    // The game builds both prototype tables once, before the title screen.
+    if (!state.ready || state.portraits_installed || NPC_PROTOTYPES == undefined) return;
+    state.portraits_installed = true;
+    for (var c = 0; c < array_length(state.characters); c++) {
+        var character = state.characters[c];
+        var prototypes = [];
+        var npc_id = try_string_to_npc_id(character.id);
+        if (npc_id != undefined) array_push(prototypes, NPC_PROTOTYPES[npc_id]);
+        // Cutscene cameos have their own prototypes with the same portrait sprites.
+        var cameo_id = try_string_to_cameo_id(character.id);
+        if (cameo_id != undefined && CAMEO_PROTOTYPES != undefined) array_push(prototypes, CAMEO_PROTOTYPES[cameo_id]);
+        for (var p = 0; p < array_length(prototypes); p++) {
+            var outfits = prototypes[p].wardrobe_outfits;
+            var keys = outfits.keys();
+            for (var k = 0; k < array_length(keys); k++) {
+                var portraits = outfits.get(keys[k]).portraits;
+                if (portraits[$ "__lns_palette_character"] != undefined) continue;
+                portraits.__lns_palette_original_get = portraits.get;
+                portraits.__lns_palette_character = character;
+                portraits.get = method(portraits, lns_palette_portrait_get);
+            }
+        }
+    }
+}
+
 function lns_palette_set_speaker(speaker) {
     self.__lns_palette_original_set_speaker(speaker);
     lns_palette_apply(self);
@@ -100,6 +141,7 @@ function lns_palette_initialize() {
     if (state.initialized) {
         // MMAPI reruns installers each begin-step, including after room changes.
         lns_palette_world_install(false);
+        lns_palette_portrait_install();
         return;
     }
     state.initialized = true;
@@ -154,6 +196,7 @@ function lns_palette_initialize() {
         }
     }
     state.ready = true;
+    lns_palette_portrait_install();
     lns_palette_controls_initialize();
     if (global[$ "__lns_palette_debug_hotkeys"] == true) {
         for (var c = 0; c < array_length(state.characters); c++) {

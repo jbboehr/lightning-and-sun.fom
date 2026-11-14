@@ -2,6 +2,11 @@
 enum Menu { Textbox, Other, InfoToasts, Settings }
 enum NpcId { Adeline, Hayden = 10 }
 enum CameoId { Linnet, Wiscar, GreatBird, Darren, Wynne }
+// The game builds both prototype tables once during setup.
+#macro NPC_PROTOTYPES global.__npc_prototypes
+#macro CAMEO_PROTOTYPES global.__cameo_prototypes
+NPC_PROTOTYPES = undefined;
+CAMEO_PROTOTYPES = undefined;
 globalvar ANCHOR;
 global.menu = undefined;
 global.__lns_palette_debug_hotkeys = true;

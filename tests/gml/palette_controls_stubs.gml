@@ -5,6 +5,11 @@ enum AnchorTextInputMode { LocalKey, Raw }
 globalvar ANCHOR;
 enum Menu { Textbox, Settings, InfoToasts }
 #macro spr_ui_journal_settings_icon_gameplay 100
+// The game builds both prototype tables once during setup.
+#macro NPC_PROTOTYPES global.__npc_prototypes
+#macro CAMEO_PROTOTYPES global.__cameo_prototypes
+NPC_PROTOTYPES = undefined;
+CAMEO_PROTOTYPES = undefined;
 global.menu = undefined;
 global.warning_count = 0;
 global.warnings = [];

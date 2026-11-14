@@ -75,6 +75,8 @@ Tested in the running game:
   in the running game);
 - the three Fair choices in the menu, and on dialogue portraits and world
   sprites in the opening scene;
+- the Journal → Villagers photo, Elsie's Gossip cards and a date photo
+  following the chosen palette (the last two reached with debug tools);
 - basic movement, dialogue, room changes, day changes and save/load;
 - representative samples of a season change, seasonal portraits and sprites,
   Juniper's Beach to Summer change, Elsie's Winter writing, Terithia's fishing
@@ -88,3 +90,5 @@ Known limits:
 - The final frames of some complex animations were checked only in a prepared
   test scene.
 - Compatibility with other mods was tested only with simple folder mods.
+- The small character icons in the journal list, on the map and in other menus
+  keep their original colors.

@@ -121,7 +121,10 @@ Every character offers seventeen choices:
 
 The tones are approximations of the game's range, and a character's natural
 shading, glow effects and markings can make the same tone look a little
-different from one character to the next.
+different from one character to the next. A choice applies to the character's
+portraits everywhere they appear, including the journal photo, and to their
+sprites in the world. The small character icons in the journal list and on the
+map keep their original colors.
 
 Eight rows after **Reset all to Vanilla** change every character at once:
 
