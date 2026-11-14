@@ -1,6 +1,6 @@
 # Project planning
 
-Updated 2026-11-09. Current status, remaining work and standing decisions only.
+Updated 2026-11-13. Current status, remaining work and standing decisions only.
 Each linked record owns its evidence, exact owner feedback and acceptance limits.
 The original [handoff](HANDOFF.md) preserves the investigation brief; it is historical.
 
@@ -42,6 +42,12 @@ menu rows that set every character at once as in the Oxygen Not Included sibling
 mod, are part of the first release, in all three kinds: one tone for everyone and
 random, step and mirror, and fixed mixes.
 
+2026-11-13 owner decisions: add the character creator's three palest skins,
+Player 01, 02 and 03, as palette choices for every character, and recolor
+portraits on every screen that shows them, not only the dialogue box. The first
+reopens the 2026-11-08 freeze on palette choices; whether either ships in the
+first release is not decided.
+
 ## Status
 
 "Accepted" below means accepted as displayed; several acceptances carry
@@ -53,7 +59,7 @@ qualifications or unspecified inspection depth, recorded in the linked record.
 | Portrait inventory | All 2,201 strips for 36 characters covered, some intentionally unchanged |
 | World inventory | All 4,111 recolorable strips covered; 30 shadow and 18 spectral strips audited as unchanged |
 | Original artwork | All batches accepted; see [Completed](#completed) |
-| Palette choices | Thirteen generated choices plus Vanilla for all 36 characters, technically verified; frozen for the first release; Stillwell/Terithia accepted provisionally ("for now") |
+| Palette choices | Thirteen generated choices plus Vanilla for all 36 characters, technically verified; Stillwell/Terithia accepted provisionally ("for now"); freeze reopened 2026-11-13 for Player 01–03 |
 | Menu, input, persistence | Title/journal menu, keyboard, mouse, virtual gamepad, saving/reset and failure feedback pass live and are accepted; physical controller untested |
 | Palette presets | Eight rows implemented; interpreter tests pass; a title-screen live run passed for the original six (Agartha and Wakanda, added 2026-11-13, not yet run live); results not yet seen by the owner; tone order and character table accepted provisionally ("close enough for now") |
 | Live gameplay | Basic gameplay, save/load and seven seasonal/action/scene samples accepted; gaps listed below |
@@ -68,6 +74,8 @@ qualifications or unspecified inspection depth, recorded in the linked record.
 | Unsampled forms and actions | Seven representative cases sampled; others untested; debug scenes do not establish normal story progression | Owner playthrough | [live samples](development/remaining-live-verification-2026-11-07.md) | Yes |
 | Unclassified Adeline pathfinding error | Seen once after a debug warp during EndDay; not reproduced on reload; watch for it in the playthrough | Owner playthrough | [live samples](development/remaining-live-verification-2026-11-07.md#setup-failures-and-controls) | Yes |
 | Preset rows during play | Title-screen run passes; journal, on-screen characters, controller and appearance not exercised | Owner playthrough | [palette presets](development/menu-presets.md#live-run-2026-11-09) | Owner's own play |
+| Player 01–03 palette choices | Approved 2026-11-13, not started. The creator's palest skins (lightest shade 93–94 on the CIELAB scale, against 88 for the palest current choices) become three appended choices for all 36 characters. Open: whether the preset tone order and **Everyone** cycle include them | Agent authors and validates; owner reviews the art | [player skin catalog](../palettes/catalog/player.json) | Review images no; live check yes |
+| Portraits outside the dialogue box | Approved 2026-11-13, not started. The Journal → Villagers photo, Gossip page and date scenes read each villager's portrait directly and show the original art. Hook each screen as the dialogue box is hooked, leaving the portrait lists and saves untouched | Agent implements; owner confirms in game | Game scripts `RelationshipsMenu.gml`/`npc_polaroid_ui`, `GossipMenu.gml`, `Dates.gml`; [palette controls](development/palette-controls.md) | Live check yes |
 | Owner playthrough | Ready to start; follow the [playthrough guide](development/owner-playthrough.md) and report problems | Owner | [playthrough guide](development/owner-playthrough.md) | Owner's own play |
 | Publication | Separate authorization; candidate notes and support guidance prepared | Owner | [candidate finalization](development/linux-candidate-finalization.md), [support evidence](development/linux-candidate-support-evidence.md) | No |
 
