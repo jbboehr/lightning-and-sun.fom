@@ -5,10 +5,10 @@ use crate::{
 };
 use anyhow::{Context, Result, ensure};
 use image::{GenericImageView, RgbaImage};
-use rc_zip_sync::{ArchiveHandle, ReadZip};
+use rc_zip_sync::{ArchiveHandle, EntryHandle, ReadZip};
 use serde::Deserialize;
 use std::{
-    collections::{BTreeMap, BTreeSet},
+    collections::{BTreeMap, BTreeSet, HashMap},
     fs,
     path::Path,
 };
@@ -26,11 +26,6 @@ pub fn bytes(archive: &ArchiveHandle<'_, fs::File>, name: &str) -> Result<Vec<u8
     ensure!(matches.next().is_none(), "Duplicate archive member: {name}");
     Ok(entry.bytes()?)
 }
-fn document(archive: &ArchiveHandle<'_, fs::File>, name: &str) -> Result<toml::Value> {
-    Ok(toml::from_str(std::str::from_utf8(&bytes(
-        archive, name,
-    )?)?)?)
-}
 #[derive(Deserialize)]
 struct Atlas {
     asset_properties: Placements,
@@ -44,18 +39,50 @@ struct Placement {
     texture_ids: Vec<String>,
     placement: [u32; 8],
 }
-struct AtlasPage {
-    image: RgbaImage,
-    placements: Vec<Placement>,
+/// Name lookups into an installed archive, which has hundreds of thousands of
+/// members; `None` marks a name that occurs more than once.
+struct Members<'a>(HashMap<String, Option<EntryHandle<'a, fs::File>>>);
+
+impl<'a> Members<'a> {
+    fn new(archive: &'a ArchiveHandle<'_, fs::File>) -> Self {
+        let mut members = HashMap::new();
+        for entry in archive.entries() {
+            members
+                .entry(entry.name.clone())
+                .and_modify(|seen| *seen = None)
+                .or_insert(Some(entry));
+        }
+        Self(members)
+    }
+    fn bytes(&self, name: &str) -> Result<Vec<u8>> {
+        let entry = self
+            .0
+            .get(name)
+            .with_context(|| format!("Missing archive member: {name}"))?
+            .as_ref()
+            .with_context(|| format!("Duplicate archive member: {name}"))?;
+        Ok(entry.bytes()?)
+    }
+    fn document(&self, name: &str) -> Result<toml::Value> {
+        Ok(toml::from_str(std::str::from_utf8(&self.bytes(name)?)?)?)
+    }
 }
 
-fn atlas_pages(archive: &ArchiveHandle<'_, fs::File>, atlas: &str) -> Result<Vec<AtlasPage>> {
+struct AtlasPages {
+    images: Vec<RgbaImage>,
+    /// Every placement of each frame name, as (page, placement).
+    frames: HashMap<String, Vec<(usize, [u32; 8])>>,
+}
+
+fn atlas_pages(archive: &Members<'_>, atlas: &str) -> Result<AtlasPages> {
     // MOMI adds atlas frames and metadata; it does not add loose variant PNGs.
-    let mut pages = Vec::new();
+    let mut pages = AtlasPages {
+        images: Vec::new(),
+        frames: HashMap::new(),
+    };
     let prefix = format!("assets/atlases/{atlas}Atlas");
-    for entry in archive.entries() {
-        let Some(suffix) = entry
-            .name
+    for name in archive.0.keys() {
+        let Some(suffix) = name
             .strip_prefix(&prefix)
             .and_then(|s| s.strip_suffix(".meta.toml"))
         else {
@@ -68,15 +95,21 @@ fn atlas_pages(archive: &ArchiveHandle<'_, fs::File>, atlas: &str) -> Result<Vec
         {
             continue;
         }
-        let placements: Atlas =
-            toml::from_str(std::str::from_utf8(&bytes(archive, &entry.name)?)?)?;
-        let png = format!("{}.png", entry.name.strip_suffix(".meta.toml").unwrap());
-        pages.push(AtlasPage {
-            image: rgba(&bytes(archive, &png)?)?,
-            placements: placements.asset_properties.animations,
-        });
+        let placements: Atlas = toml::from_str(std::str::from_utf8(&archive.bytes(name)?)?)?;
+        let png = format!("{}.png", name.strip_suffix(".meta.toml").unwrap());
+        let page = pages.images.len();
+        pages.images.push(rgba(&archive.bytes(&png)?)?);
+        for placement in placements.asset_properties.animations {
+            for id in placement.texture_ids {
+                pages
+                    .frames
+                    .entry(id)
+                    .or_default()
+                    .push((page, placement.placement));
+            }
+        }
     }
-    ensure!(!pages.is_empty(), "Missing {atlas} atlas pages");
+    ensure!(!pages.images.is_empty(), "Missing {atlas} atlas pages");
     Ok(pages)
 }
 
@@ -94,8 +127,9 @@ pub fn verify_variants(
 
 pub fn verify_characters(archive: &Path, inputs: &[toggle::PackageInput<'_>]) -> Result<()> {
     let file = fs::File::open(archive)?;
-    let archive = file.read_zip()?;
-    bytes(&archive, "manifest.toml")?;
+    let handle = file.read_zip()?;
+    let archive = Members::new(&handle);
+    archive.bytes("manifest.toml")?;
     let mut ids = BTreeSet::new();
     let mut atlases = BTreeMap::new();
     let mut runtime = Vec::new();
@@ -118,12 +152,12 @@ pub fn verify_characters(archive: &Path, inputs: &[toggle::PackageInput<'_>]) ->
                 .strip_suffix(".png")
                 .context("Expected a PNG portrait")?;
             let before = fs::read(path)?;
-            ensure!(bytes(&archive, &name)? == before, "Vanilla PNG changed");
+            ensure!(archive.bytes(&name)? == before, "Vanilla PNG changed");
             let meta: toml::Value = toml::from_str(&fs::read_to_string(
                 original.join(format!("{metadata_path}.meta.toml")),
             )?)?;
             ensure!(
-                document(&archive, &format!("{metadata_path}.meta.toml"))? == meta,
+                archive.document(&format!("{metadata_path}.meta.toml"))? == meta,
                 "Vanilla metadata changed"
             );
             let uid = |v: &toml::Value| -> Result<String> {
@@ -160,10 +194,9 @@ pub fn verify_characters(archive: &Path, inputs: &[toggle::PackageInput<'_>]) ->
             let mut group = vec![portrait.source.to_owned()];
             for variant in variants {
                 let sprite = portrait.variant_name(&variant.id);
-                let installed = document(
-                    &archive,
-                    &format!("assets/animations/LightningAndSun/{sprite}.meta.toml"),
-                )?;
+                let installed = archive.document(&format!(
+                    "assets/animations/LightningAndSun/{sprite}.meta.toml"
+                ))?;
                 ensure!(
                     installed
                         .get("meta_properties")
@@ -199,7 +232,7 @@ pub fn verify_characters(archive: &Path, inputs: &[toggle::PackageInput<'_>]) ->
         ),
     ] {
         ensure!(
-            bytes(&archive, &format!("{PALETTE_SCRIPTS}/{name}"))? == expected,
+            archive.bytes(&format!("{PALETTE_SCRIPTS}/{name}"))? == expected,
             "Installed palette script differs: {name}"
         );
     }
@@ -207,7 +240,7 @@ pub fn verify_characters(archive: &Path, inputs: &[toggle::PackageInput<'_>]) ->
 }
 
 fn check_frames(
-    pages: &[AtlasPage],
+    pages: &AtlasPages,
     id: &str,
     expected: &RgbaImage,
     [width, height]: [u32; 2],
@@ -223,21 +256,13 @@ fn check_frames(
     );
     for frame in 0..count {
         let name = format!("{id}::{frame}");
-        let matches: Vec<_> = pages
-            .iter()
-            .flat_map(|page| {
-                page.placements
-                    .iter()
-                    .map(move |placement| (&page.image, placement))
-            })
-            .filter(|(_, p)| p.texture_ids.contains(&name))
-            .collect();
+        let matches = pages.frames.get(&name).map_or(&[][..], Vec::as_slice);
         ensure!(
             matches.len() == 1,
             "Missing or duplicate atlas frame: {name}"
         );
-        let (atlas, placement) = matches[0];
-        let [x, y, w, h, ow, oh, tx, ty] = placement.placement;
+        let (page, [x, y, w, h, ow, oh, tx, ty]) = matches[0];
+        let atlas = &pages.images[page];
         ensure!(
             [ow, oh] == [width, height],
             "Frame dimensions changed: {name}"

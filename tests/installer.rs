@@ -636,11 +636,20 @@ fn install_without_selection(binary: &Path, lab: &Lab) -> Output {
 }
 
 #[test]
-fn default_install_requires_a_packaged_collection() {
+fn default_install_without_a_package_uses_the_checkout_collection() {
     let lab = Lab::new();
     let result = install_without_selection(Path::new(env!("CARGO_BIN_EXE_mistria-palette")), &lab);
+    let stderr = String::from_utf8_lossy(&result.stderr);
+    let collection =
+        Path::new(env!("CARGO_MANIFEST_DIR")).join("palettes/sets/characters-trial.json");
     assert!(!result.status.success());
-    assert!(String::from_utf8_lossy(&result.stderr).contains("--characters"));
+    assert!(
+        stderr.contains(&format!(
+            "Installing the complete collection from {}",
+            collection.display()
+        )),
+        "{stderr}"
+    );
     assert_eq!(fs::read(lab.game.join("assets.zip")).unwrap(), lab.before);
     assert!(!lab.game.join(".mistria-palette").exists());
 }

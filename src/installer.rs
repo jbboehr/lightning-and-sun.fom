@@ -11,6 +11,8 @@ use std::{
 };
 
 const STATE: &str = ".mistria-palette";
+// Outlives a failed or interrupted install so a rerun can reuse the recolored art.
+const RESUME: &str = ".mistria-palette.resume";
 #[derive(Serialize, Deserialize)]
 struct Receipt {
     version: u32,
@@ -276,17 +278,23 @@ pub fn install(
     let mut preset_set = presets.map(presets::load).transpose()?;
     let mut collection = characters.map(characters::Collection::load).transpose()?;
     let mut hotkeys = BTreeMap::new();
-    let report = if let Some(collection) = &mut collection {
+    if let Some(collection) = &mut collection {
         for selected in &collection.selected {
             hotkeys.insert(&selected.character.label, &selected.character.hotkey);
         }
-        let report = collection.generate(
-            &build.join("assets.zip"),
-            &build.join("characters"),
-            allow_source_hash_mismatch,
-        )?;
+        let resume = game.join(RESUME);
+        let root = resume.join(collection.fingerprint()?);
+        if resume.exists() {
+            // Work from another binary or recipe selection can never be reused.
+            for entry in fs::read_dir(&resume)? {
+                let path = entry?.path();
+                if path != root {
+                    fs::remove_dir_all(path)?;
+                }
+            }
+        }
+        collection.generate(&build.join("assets.zip"), &root, allow_source_hash_mismatch)?;
         toggle::package_characters(&collection.inputs(), &mods.join("lns_palette"))?;
-        report
     } else {
         let single_palette = match palette {
             Some(path) => palette::load(path)?,
@@ -313,22 +321,20 @@ pub fn install(
         commands::export(&build.join("assets.zip"), &assets, &original)?;
         match &mut preset_set {
             Some(set) => {
-                let reports = set.generate(&original, &modified, allow_source_hash_mismatch)?;
+                set.generate(&original, &modified, allow_source_hash_mismatch, &|_| ())?;
                 toggle::package_variants(&original, &set.variants, &mods.join("lns_palette"))?;
-                json!({"presets": reports})
             }
             None => {
-                let report = commands::apply_palette(
+                commands::apply_palette(
                     &original,
                     &single_palette,
                     &modified,
                     allow_source_hash_mismatch,
                 )?;
                 toggle::package(&original, &modified, &mods.join("lns_palette"))?;
-                report
             }
         }
-    };
+    }
     let expected_mods = selected_mods(&mods)?;
     let mismatched = palette::mismatched_sources();
     if mismatched > 0 {
@@ -431,8 +437,18 @@ pub fn install(
         .context("Could not publish archive; run uninstall to clear the prepared installation")?;
     sync(&game)?;
     sync(&state)?;
+    let resume = game.join(RESUME);
+    if resume.exists()
+        && let Err(error) = fs::remove_dir_all(&resume)
+    {
+        eprintln!("warning: could not remove {}: {error}", resume.display());
+    }
+    eprintln!(
+        "Installed and verified palettes for {} character(s); open Settings → Palettes in game.",
+        hotkeys.len()
+    );
     Ok(
-        json!({"installed": true, "game_dir": game, "archive_sha256": installed_sha256, "palette": report, "hotkeys": hotkeys}),
+        json!({"installed": true, "game_dir": game, "archive_sha256": installed_sha256, "hotkeys": hotkeys}),
     )
 }
 

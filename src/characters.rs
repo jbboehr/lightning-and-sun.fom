@@ -1,12 +1,17 @@
 use crate::{assets::*, commands, presets, toggle};
 use anyhow::{Context, Result, ensure};
+use rayon::prelude::*;
 use serde::Deserialize;
 use serde_json::{Value, json};
 use std::{
     collections::{BTreeMap, BTreeSet},
     fs,
     path::{Path, PathBuf},
-    sync::OnceLock,
+    sync::{
+        OnceLock,
+        atomic::{AtomicUsize, Ordering},
+    },
+    time::Instant,
 };
 
 #[derive(Deserialize)]
@@ -89,25 +94,59 @@ impl Collection {
         root: &Path,
         allow_source_hash_mismatch: bool,
     ) -> Result<Value> {
-        let mut reports = Vec::new();
-        for selected in &mut self.selected {
-            let directory = root.join(&selected.character.id);
-            selected.original = directory.join("original");
-            let assets = selected.set.assets();
-            eprintln!(
-                "Generating {} animations for {} from local game assets...",
-                assets.len(),
-                selected.character.label
-            );
-            commands::export(archive, &assets, &selected.original)?;
-            let presets = selected.set.generate(
-                &selected.original,
-                &directory.join("variants"),
-                allow_source_hash_mismatch,
-            )?;
-            reports.push(json!({"id":selected.character.id,"hotkey":selected.character.hotkey,"presets":presets}));
-        }
+        let total: usize = self.selected.iter().map(|s| s.set.variants.len()).sum();
+        eprintln!(
+            "Generating {total} recolored variants for {} characters from local game assets on {} threads...",
+            self.selected.len(),
+            rayon::current_num_threads()
+        );
+        let started = Instant::now();
+        let (finished, reused) = (AtomicUsize::new(0), AtomicUsize::new(0));
+        // Characters run concurrently and finish together, so progress is counted per variant.
+        let variant_done = |was_reused| {
+            if was_reused {
+                reused.fetch_add(1, Ordering::Relaxed);
+            }
+            let done = finished.fetch_add(1, Ordering::Relaxed) + 1;
+            if done * 10 / total > (done - 1) * 10 / total {
+                eprintln!(
+                    "  {}% ({done}/{total}, {} reused from an earlier run) after {:.0?}",
+                    done * 100 / total,
+                    reused.load(Ordering::Relaxed),
+                    started.elapsed()
+                );
+            }
+        };
+        let reports = self
+            .selected
+            .par_iter_mut()
+            .map(|selected| {
+                let directory = root.join(&selected.character.id);
+                selected.original = directory.join("original");
+                if selected.original.exists() {
+                    fs::remove_dir_all(&selected.original)?;
+                }
+                let assets = selected.set.assets();
+                commands::export(archive, &assets, &selected.original)?;
+                let presets = selected.set.generate(
+                    &selected.original,
+                    &directory.join("variants"),
+                    allow_source_hash_mismatch,
+                    &variant_done,
+                )?;
+                Ok(json!({"id":selected.character.id,"hotkey":selected.character.hotkey,"presets":presets}))
+            })
+            .collect::<Result<Vec<_>>>()?;
         Ok(json!({"characters":reports}))
+    }
+    /// Identifies everything that determines generated output except the source images.
+    pub fn fingerprint(&self) -> Result<String> {
+        let mut key = file_digest(&std::env::current_exe()?)?;
+        for selected in &self.selected {
+            key.push_str(&selected.character.id);
+            key.push_str(&selected.set.fingerprint());
+        }
+        Ok(digest(key.as_bytes())[..16].to_owned())
     }
     pub fn inputs(&self) -> Vec<toggle::PackageInput<'_>> {
         self.selected

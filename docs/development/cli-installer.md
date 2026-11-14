@@ -35,7 +35,18 @@ Libraries at a mount root cannot be hidden without a sandbox, so before
 generating anything it reads `/proc/self/mounts` and refuses if one of MOMI's six
 drive-relative library names holds the game. MOMI keeps network and filesystem
 access on this route. The installed-pixel, mod-selection and recovery checks are
-unchanged.
+unchanged. With no `--characters`, `--presets` or `--palette`, such a binary
+installs the complete collection from the checkout it was built from, since
+nothing is packaged beside it; a collection packaged beside the binary still
+takes precedence.
+
+Collection installs generate variants in parallel into
+`.mistria-palette.resume/<fingerprint>/` in the game directory, where the
+fingerprint covers the binary's own SHA-256 and every selected recipe. A rerun
+after a failed or interrupted install reuses a variant only when its folder was
+completed (each is generated under a `.partial` name and then renamed) and every
+source and output file still matches the hashes in its `palette-report.json`;
+anything else is regenerated. A successful install deletes the folder.
 
 MOMI runs with strict lints, fail-on-skip, and required compilation checks. Its
 CLI can nevertheless skip an invalid content mod before that stage and return

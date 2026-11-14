@@ -166,13 +166,20 @@ enum Command {
 }
 
 fn packaged_collection() -> Result<PathBuf> {
-    let path = std::env::current_exe()?
+    const COLLECTION: &str = "palettes/sets/characters-trial.json";
+    let packaged = std::env::current_exe()?
         .parent()
         .and_then(Path::parent)
-        .map(|prefix| prefix.join("share/mistria-palette/palettes/sets/characters-trial.json"))
-        .filter(|path| path.is_file())
+        .map(|prefix| prefix.join("share/mistria-palette").join(COLLECTION));
+    // A cargo build has nothing packaged beside it, but its checkout still holds the recipes.
+    let checkout = Path::new(env!("CARGO_MANIFEST_DIR")).join(COLLECTION);
+    let path = packaged
+        .into_iter()
+        .chain([checkout])
+        .find(|path| path.is_file())
         .context(
-            "No packaged collection beside this executable; pass --characters, --presets or --palette",
+            "No collection beside this executable or in the checkout it was built from; \
+             pass --characters, --presets or --palette",
         )?;
     eprintln!("Installing the complete collection from {}", path.display());
     Ok(path)

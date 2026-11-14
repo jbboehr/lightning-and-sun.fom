@@ -36,7 +36,7 @@ pub struct Profile {
     pub regions: Vec<serde_json::Value>,
 }
 
-#[derive(Deserialize)]
+#[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
 struct Region {
     asset: String,
@@ -61,6 +61,7 @@ pub fn mismatched_sources() -> usize {
     MISMATCHED_SOURCES.lock().unwrap().len()
 }
 
+#[derive(Debug)]
 pub struct Palette {
     pub mapping: BTreeMap<[u8; 4], [u8; 4]>,
     color_groups: BTreeMap<[u8; 4], usize>,
@@ -96,19 +97,19 @@ impl Palette {
         Ok(())
     }
 
-    pub fn mask(
+    pub fn check_source(
         &self,
         name: &str,
         bytes: &[u8],
-        image: &RgbaImage,
         allow_source_hash_mismatch: bool,
-    ) -> Result<Option<Vec<bool>>> {
-        let Some(regions) = &self.regions else {
-            return Ok(None);
+    ) -> Result<()> {
+        let Some(region) = self
+            .regions
+            .as_ref()
+            .and_then(|regions| regions.get(&name.replace('\\', "/")))
+        else {
+            return Ok(());
         };
-        let region = regions
-            .get(&name.replace('\\', "/"))
-            .context("Missing region definition")?;
         let actual = digest(bytes);
         if actual != region.source_sha256 {
             ensure!(
@@ -122,6 +123,23 @@ impl Palette {
                 );
             }
         }
+        Ok(())
+    }
+
+    pub fn mask(
+        &self,
+        name: &str,
+        bytes: &[u8],
+        image: &RgbaImage,
+        allow_source_hash_mismatch: bool,
+    ) -> Result<Option<Vec<bool>>> {
+        let Some(regions) = &self.regions else {
+            return Ok(None);
+        };
+        let region = regions
+            .get(&name.replace('\\', "/"))
+            .context("Missing region definition")?;
+        self.check_source(name, bytes, allow_source_hash_mismatch)?;
         ensure!(
             region.size == [image.width(), image.height()],
             "Region dimensions differ: {name}"

@@ -55,6 +55,11 @@ This takes ten to twenty minutes. The installer generates the recolored artwork,
 checks it, and only then replaces the game's archive. If anything fails, your
 game is left untouched.
 
+If the install fails or you stop it, run the same command again. It reuses the
+recolored artwork it already made, which it keeps in a
+`.mistria-palette.resume/` folder in the game directory until an install
+succeeds. Delete that folder if you would rather start over.
+
 Keep the `result` link and the `.mistria-palette/` folder that appears in the
 game directory. You need both to uninstall.
 
@@ -84,8 +89,7 @@ OpenSSL and ICU libraries, which most desktop distributions already have.
 cargo build --locked --release
 target/release/mistria-palette install \
   --game-dir '/path/to/Fields of Mistria' \
-  --momi /path/to/ModsOfMistriaInstaller-cli-linux \
-  --characters palettes/sets/characters-trial.json
+  --momi /path/to/ModsOfMistriaInstaller-cli-linux
 ```
 
 Use `target/release/mistria-palette` in place of `result/bin/mistria-palette` in
