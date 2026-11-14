@@ -158,15 +158,15 @@ assert(global.menu.portrait.sprite == 40);
 assert(global.menu.portrait.index == 0.75);
 global.third_preset = false;
 
-// Vanilla plus the maximum thirteen presets must all be reachable before wrapping.
+// Vanilla plus the maximum sixteen presets must all be reachable before wrapping.
 global.__lns_palette = undefined;
 global.max_presets = true;
 global.menu = new TestTextbox();
 lns_palette_initialize();
 lns_palette_menu_opened({kind: Menu.Textbox, menu: global.menu});
-var expected_max_sprites = [20, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 72, 73];
-assert(array_length(__lns_palette_runtime().characters[0].names) == 14);
-for (var preset = 1; preset <= 13; preset++) {
+var expected_max_sprites = [20, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 72, 73, 74, 75, 76];
+assert(array_length(__lns_palette_runtime().characters[0].names) == 17);
+for (var preset = 1; preset <= 16; preset++) {
     global.hotkey();
     assert(__lns_palette_runtime().characters[0].selected == preset);
     assert(global.menu.portrait.sprite == expected_max_sprites[preset - 1]);
@@ -177,7 +177,8 @@ for (var preset = 1; preset <= 13; preset++) {
 assert(__lns_palette_runtime().characters[0].preset_ids[11] == "player_27");
 assert(__lns_palette_runtime().characters[0].preset_ids[12] == "npc_stillwell");
 assert(__lns_palette_runtime().characters[0].preset_ids[13] == "npc_terithia");
-assert(global.palette_log == "Adeline palette: Muted medium (Terithia)");
+assert(__lns_palette_runtime().characters[0].preset_ids[16] == "player_03");
+assert(global.palette_log == "Adeline palette: Fair golden (Player 03)");
 global.hotkey();
 assert(__lns_palette_runtime().characters[0].selected == 0);
 assert(global.menu.portrait.sprite == 10);

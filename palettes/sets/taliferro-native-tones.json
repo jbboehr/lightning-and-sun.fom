@@ -199,6 +199,54 @@
         "#B87D78FF"
       ],
       "profile": "../profiles/taliferro-native-tone-face.json"
+    },
+    {
+      "id": "player_01",
+      "label": "Fair neutral (Player 01)",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#FAD9BEFF",
+        "#E7A887FF",
+        "#F0C4A5FF",
+        "#FCEDD9FF",
+        "#EEB3A9FF"
+      ],
+      "profile": "../profiles/taliferro-native-tone-face.json"
+    },
+    {
+      "id": "player_02",
+      "label": "Fair rosy (Player 02)",
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#FCDAC8FF",
+        "#E8A58DFF",
+        "#F4C9B0FF",
+        "#FCEBE2FF",
+        "#EEB1B2FF"
+      ],
+      "profile": "../profiles/taliferro-native-tone-face.json"
+    },
+    {
+      "id": "player_03",
+      "label": "Fair golden (Player 03)",
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#F9DDBBFF",
+        "#E9AF8DFF",
+        "#F2D2ADFF",
+        "#F8EBCFFF",
+        "#EAB19FFF"
+      ],
+      "profile": "../profiles/taliferro-native-tone-face.json"
     }
   ],
   "profile": "../profiles/taliferro-world-trial.json"

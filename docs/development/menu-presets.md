@@ -22,14 +22,14 @@ character rows, Remember and Reset do not move.
 
 | Row | Effect |
 | --- | --- |
-| **Everyone: …** | Shows the choice all characters share, or `Mixed`. Selecting it gives every character the next of nine tones: the seven in the order below, then Muted light and Muted medium. From `Mixed`, Vanilla or any other shared choice it starts at Light golden. |
+| **Everyone: …** | Shows the choice all characters share, or `Mixed`. Selecting it gives every character the next of twelve tones: Fair neutral, Fair rosy and Fair golden, the seven in the order below, then Muted light and Muted medium. From `Mixed`, Vanilla or any other shared choice it starts at Fair neutral. |
 | **Tanning Bed: one step darker** | Each character gets the tone one step darker than their original look. |
 | **Mirror: swap light and dark** | Each character's place in the order is flipped end to end. |
 | **Milk & Honey: two light tones** | Everyone ends on Light peach or Warm peach. |
 | **Grayscale Agenda: lightest or darkest** | Everyone ends on Light golden or Very deep. |
-| **Agartha: everyone lightest** | Everyone ends on Light golden. |
+| **Agartha: everyone lightest** | Everyone ends on Fair rosy. |
 | **Wakanda: everyone darkest** | Everyone ends on Very deep. |
-| **Randomize all** | Each character gets a random one of the nine tones. |
+| **Randomize all** | Each character gets a random one of the twelve tones. |
 
 The last seven do not depend on the current choices, so selecting one twice
 changes nothing further. A preset uses the same selection path as a character
@@ -38,7 +38,8 @@ off. Storage is unchanged: version 1, one stable choice ID per character.
 
 Whenever a preset would leave a character at their own place in the order, that
 character returns to Vanilla, so the original art is shown instead of its
-approximation. **Everyone** is the exception and applies the tone literally.
+approximation. **Everyone** and **Agartha** are the exceptions and apply their
+tone literally.
 
 A character without the requested choice goes to Vanilla. That happens only in
 an installation built from selected recipes that omit the shared tones.
@@ -62,6 +63,13 @@ averaged over the 36 characters:
 Deep brown and Deep umber are close; their order is the weakest call. Muted light
 (63.1) and Muted medium (54.2) are left out because they differ from their
 neighbors in saturation, not depth.
+
+The three fair tones (Fair neutral 70.6, Fair rosy 70.4, Fair golden 70.9) are
+also left out. On 2026-11-14 the owner asked that Tanning Bed and Mirror keep
+coarse steps, and that Agartha and **Everyone** include the fair tones, with
+Agartha on the rosy one ("pale/rosy, rather than pale/white"). On this measure
+they sit just below Light golden because their deepest shade is darker, while
+their highlights are paler (CIELAB 93–94 against 88).
 
 ## Character table
 
@@ -95,7 +103,6 @@ Each preset is one array from original position to displayed position.
 | Mirror | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | Milk & Honey | 1 | 1 | 2 | 2 | 2 | 2 | 2 |
 | Grayscale Agenda | 0 | 0 | 0 | 6 | 6 | 6 | 6 |
-| Agartha | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wakanda | 6 | 6 | 6 | 6 | 6 | 6 | 6 |
 
 The sibling mod's two mixes assign each duplicant by hand. These two are rules
@@ -121,6 +128,9 @@ off, one write per preset with it on, restart, a failed write, and unchanged
 focus and scroll. `presets_unavailable` uses choices that lack the shared tones.
 The five earlier cases changed only where they index the status row (38 to 44)
 and count rows (39 to 45, 40 to 46).
+
+A 2026-11-14 live run with the fair tones checked Agartha and one **Everyone**
+step from the title screen; see the [Player 01–03 plan](../plans/player-01-03-tones.md).
 
 ## Live run, 2026-11-09
 

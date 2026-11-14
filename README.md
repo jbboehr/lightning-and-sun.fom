@@ -109,12 +109,12 @@ Open **Settings → Palettes** from the title screen or the journal, select a
 character and cycle through their choices. By default **E** or the controller's
 south button selects, and **Esc** or the east button goes back.
 
-Every character offers fourteen choices:
+Every character offers seventeen choices:
 
 - **Vanilla**, the game's original colors.
-- Nine tones adapted from the game's own characters and character creator:
-  Light peach, Light golden, Warm peach, Warm brown, Deep brown, Very deep,
-  Deep umber, Muted light and Muted medium.
+- Twelve tones adapted from the game's own characters and character creator:
+  Fair neutral, Fair rosy, Fair golden, Light peach, Light golden, Warm peach,
+  Warm brown, Deep brown, Very deep, Deep umber, Muted light and Muted medium.
 - Three tones borrowed from other characters, usually Hayden, Ryis and Seridia.
 - **Debug Blue**, a bright blue test palette that makes any missed pixels
   obvious.
@@ -132,9 +132,9 @@ Eight rows after **Reset all to Vanilla** change every character at once:
 - **Mirror** swaps light and dark: the lightest characters become the darkest
   and the reverse.
 - **Milk & Honey** puts everyone on one of two light tones, and **Grayscale
-  Agenda** puts everyone on either the lightest or the darkest tone.
-- **Agartha** puts everyone on the lightest tone, and **Wakanda** puts everyone
-  on the darkest.
+  Agenda** puts everyone on either Light golden or Very deep.
+- **Agartha** puts everyone on Fair rosy, a pale pinkish tone, and **Wakanda**
+  puts everyone on the darkest.
 - **Randomize all** gives each character a random tone.
 
 A character whose original look already matches what a preset asks for goes

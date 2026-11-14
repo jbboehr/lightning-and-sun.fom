@@ -21,10 +21,12 @@ describe assets processed locally from the user's copy, not images shipped.
 Thirty ground-shadow strips and eighteen spectral strips intentionally retain
 their original appearance.
 
-Each character has fourteen choices: Vanilla, Debug Blue, three retained donor
-palettes and nine additional NPC/creator tones, including Deep umber (Player 27),
-Muted light (Stillwell) and Muted medium (Terithia).
-The nine added tones and their sources are Light peach (Player 04), Light golden
+Each character has seventeen choices: Vanilla, Debug Blue, three retained donor
+palettes and twelve additional NPC/creator tones, including Deep umber (Player 27),
+Muted light (Stillwell), Muted medium (Terithia) and the creator's three palest
+skins.
+The twelve added tones and their sources are Fair neutral (Player 01), Fair rosy
+(Player 02), Fair golden (Player 03), Light peach (Player 04), Light golden
 (March), Warm peach (Wiscar), Warm brown (Player 16), Deep brown (Player 22),
 Very deep (Player 35), Deep umber (Player 27), Muted light (Stillwell) and Muted
 medium (Terithia). The retained donors are Hayden, Ryis and Seridia for most
@@ -45,7 +47,7 @@ choice applies to both portraits and world sprites. All characters default to
 Vanilla. **Remember choices** starts Off; enabling it restores saved selections
 in later sessions. **Reset all to Vanilla** resets the included characters.
 Eight preset rows set every character at once: one tone for everyone, one step
-darker, light and dark swapped, two fixed mixes, everyone lightest, everyone
+darker, light and dark swapped, two fixed mixes, everyone on Fair rosy, everyone
 darkest, and random.
 Persistence failures display a warning while leaving session choices usable.
 
@@ -68,8 +70,11 @@ Tested in the running game:
 - the palette menu from the title screen and journal, with keyboard, mouse and
   a virtual gamepad, including remembered choices, reset and save-failure
   warnings; the original six preset rows from the title screen with mouse and
-  keyboard only (the everyone-lightest and everyone-darkest rows have not been
-  checked in the running game);
+  keyboard only, and later the everyone-on-Fair-rosy row and one step of the
+  everyone row with the keyboard (the everyone-darkest row has not been checked
+  in the running game);
+- the three Fair choices in the menu, and on dialogue portraits and world
+  sprites in the opening scene;
 - basic movement, dialogue, room changes, day changes and save/load;
 - representative samples of a season change, seasonal portraits and sprites,
   Juniper's Beach to Summer change, Elsie's Winter writing, Terithia's fishing

@@ -259,6 +259,66 @@
         "#AD7465FF",
         "#7E4C3BFF"
       ]
+    },
+    {
+      "id": "player_01",
+      "label": "Fair neutral (Player 01)",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#D0896CFF",
+        "#995531FF",
+        "#663921FF",
+        "#F8C4A3FF",
+        "#F9D5B9FF",
+        "#E0936FFF",
+        "#945D3BFF",
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF"
+      ]
+    },
+    {
+      "id": "player_02",
+      "label": "Fair rosy (Player 02)",
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#CE7D6EFF",
+        "#A94B3AFF",
+        "#713227FF",
+        "#FCC9AEFF",
+        "#FBD6C3FF",
+        "#DE8771FF",
+        "#A45344FF",
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF"
+      ]
+    },
+    {
+      "id": "player_03",
+      "label": "Fair golden (Player 03)",
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#D28970FF",
+        "#9E4B17FF",
+        "#69320FFF",
+        "#FAD2ABFF",
+        "#F8DBB8FF",
+        "#E29373FF",
+        "#995321FF",
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF"
+      ]
     }
   ],
   "profile": "../profiles/wheedle-world-trial.json"

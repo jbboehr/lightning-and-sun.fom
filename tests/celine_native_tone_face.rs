@@ -131,6 +131,12 @@ fn celine_face_override_preserves_historical_choices_and_skin_roles() {
                 ["#D79274FF", "#DE9C84FF", "#AB4D60FF"]
             } else if p["id"] == "npc_terithia" {
                 ["#B87D78FF", "#C38786FF", "#9A5261FF"]
+            } else if p["id"] == "player_01" {
+                ["#EEB3A9FF", "#F5BDB9FF", "#D36A7DFF"]
+            } else if p["id"] == "player_02" {
+                ["#EEB1B2FF", "#F5BBC2FF", "#D76F88FF"]
+            } else if p["id"] == "player_03" {
+                ["#EAB19FFF", "#F1BBAFFF", "#D57885FF"]
             } else {
                 cosmetics[i - 4]
             };

@@ -74,7 +74,10 @@ function lns_palette_assets() {
         "spr_lns_adeline_spring_neutral_ten",
         "spr_lns_adeline_spring_neutral_player_27",
         "spr_lns_adeline_spring_neutral_npc_stillwell",
-        "spr_lns_adeline_spring_neutral_npc_terithia"
+        "spr_lns_adeline_spring_neutral_npc_terithia",
+        "spr_lns_adeline_spring_neutral_player_01",
+        "spr_lns_adeline_spring_neutral_player_02",
+        "spr_lns_adeline_spring_neutral_player_03"
     ]];
     if (global.third_preset) return [
         ["spr_portrait_adeline_spring_neutral", "spr_lns_adeline_spring_neutral_blue", "spr_lns_adeline_spring_neutral_warm"],
@@ -87,7 +90,7 @@ function lns_palette_assets() {
 }
 function lns_palette_names() {
     if (global.max_presets) return [
-        "Vanilla", "Debug Blue", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Deep umber (Player 27)", "Muted light (Stillwell)", "Muted medium (Terithia)"
+        "Vanilla", "Debug Blue", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Deep umber (Player 27)", "Muted light (Stillwell)", "Muted medium (Terithia)", "Fair neutral (Player 01)", "Fair rosy (Player 02)", "Fair golden (Player 03)"
     ];
     return global.third_preset ? ["Vanilla", "Debug Blue", "Warm trial"] : ["Vanilla", "Debug Blue"];
 }
@@ -166,6 +169,9 @@ function try_string_to_asset(name) {
     if (name == "spr_lns_adeline_spring_neutral_player_27") return 71;
     if (name == "spr_lns_adeline_spring_neutral_npc_stillwell") return 72;
     if (name == "spr_lns_adeline_spring_neutral_npc_terithia") return 73;
+    if (name == "spr_lns_adeline_spring_neutral_player_01") return 74;
+    if (name == "spr_lns_adeline_spring_neutral_player_02") return 75;
+    if (name == "spr_lns_adeline_spring_neutral_player_03") return 76;
     return undefined;
 }
 function TestPortrait() constructor {
@@ -208,6 +214,6 @@ function lns_palette_definitions() {
 }
 
 function lns_palette_ids() {
-    if (global.max_presets) return ["vanilla", "blue", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "player_27", "npc_stillwell", "npc_terithia"];
+    if (global.max_presets) return ["vanilla", "blue", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "player_27", "npc_stillwell", "npc_terithia", "player_01", "player_02", "player_03"];
     return global.third_preset ? ["vanilla", "blue", "warm"] : ["vanilla", "blue"];
 }

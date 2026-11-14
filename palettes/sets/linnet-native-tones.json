@@ -342,6 +342,87 @@
         "#B87D78FF"
       ],
       "profile": "../profiles/linnet-native-tone-face.json"
+    },
+    {
+      "id": "player_01",
+      "label": "Fair neutral (Player 01)",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#995531FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#DA916EFF",
+        "#DA916EFF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#F3BF9FFF",
+        "#EEB3A9FF"
+      ],
+      "profile": "../profiles/linnet-native-tone-face.json"
+    },
+    {
+      "id": "player_02",
+      "label": "Fair rosy (Player 02)",
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#A94B3AFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#D88570FF",
+        "#D88570FF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#F7C4AAFF",
+        "#EEB1B2FF"
+      ],
+      "profile": "../profiles/linnet-native-tone-face.json"
+    },
+    {
+      "id": "player_03",
+      "label": "Fair golden (Player 03)",
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#9E4B17FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#DC9172FF",
+        "#DC9172FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#F5CDA7FF",
+        "#EAB19FFF"
+      ],
+      "profile": "../profiles/linnet-native-tone-face.json"
     }
   ],
   "profile": "../profiles/linnet-world-trial.json"

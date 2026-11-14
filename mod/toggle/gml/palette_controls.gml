@@ -150,7 +150,8 @@ function lns_palette_controls_reset(menu) {
     lns_palette_controls_refresh(menu);
 }
 
-// Light to dark. The two muted tones sit outside this order.
+// Light to dark, in coarse steps for the relative presets. The fair and muted
+// tones sit outside this order.
 function lns_palette_preset_ladder() {
     return ["npc_march","player_04","npc_wiscar","player_16","player_22","player_27","player_35"];
 }
@@ -166,20 +167,23 @@ function lns_palette_preset_natural() {
     };
 }
 
-// Each map sends a vanilla ladder position to the position to display.
+// Each map sends a vanilla ladder position to the position to display; a tone
+// instead gives everyone that choice.
 function lns_palette_preset_maps() {
     return [
         { label:"Tanning Bed: one step darker", map:[1,2,3,4,5,6,6] },
         { label:"Mirror: swap light and dark", map:[6,5,4,3,2,1,0] },
         { label:"Milk & Honey: two light tones", map:[1,1,2,2,2,2,2] },
         { label:"Grayscale Agenda: lightest or darkest", map:[0,0,0,6,6,6,6] },
-        { label:"Agartha: everyone lightest", map:[0,0,0,0,0,0,0] },
+        { label:"Agartha: everyone lightest", tone:"player_02" },
         { label:"Wakanda: everyone darkest", map:[6,6,6,6,6,6,6] }
     ];
 }
 
 function lns_palette_preset_everyone_ids() {
-    var ids = lns_palette_preset_ladder();
+    var ids = ["player_01","player_02","player_03"];
+    var ladder = lns_palette_preset_ladder();
+    for (var i = 0; i < array_length(ladder); i++) array_push(ids, ladder[i]);
     array_push(ids, "npc_stillwell", "npc_terithia");
     return ids;
 }
@@ -216,7 +220,11 @@ function lns_palette_preset_everyone(menu) {
     for (var i = 0; i < array_length(choices); i++) {
         if (choices[i] == common) next = (i + 1) % array_length(choices);
     }
-    lns_palette_preset_apply(menu, array_create(array_length(__lns_palette_runtime().characters), choices[next]));
+    lns_palette_preset_tone(menu, choices[next]);
+}
+
+function lns_palette_preset_tone(menu, id) {
+    lns_palette_preset_apply(menu, array_create(array_length(__lns_palette_runtime().characters), id));
 }
 
 function lns_palette_preset_map(menu, map) {
@@ -266,8 +274,9 @@ function lns_palette_controls_open_page() {
         .set_tap_callback(lns_palette_preset_everyone, [self]);
     var maps = lns_palette_preset_maps();
     for (var i = 0; i < array_length(maps); i++) {
-        self.element(ANCHOR.wrap_for_local(maps[i].label))
-            .set_tap_callback(lns_palette_preset_map, [self, maps[i].map]);
+        var row = self.element(ANCHOR.wrap_for_local(maps[i].label));
+        if (maps[i][$ "tone"] != undefined) row.set_tap_callback(lns_palette_preset_tone, [self, maps[i].tone]);
+        else row.set_tap_callback(lns_palette_preset_map, [self, maps[i].map]);
     }
     self.element(ANCHOR.wrap_for_local("Randomize all"))
         .set_tap_callback(lns_palette_preset_random, [self]);

@@ -187,6 +187,51 @@
         "#B87D78FF"
       ],
       "profile": "../profiles/landen-native-tone-face.json"
+    },
+    {
+      "id": "player_01",
+      "label": "Fair neutral (Player 01)",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#995531FF",
+        "#EEB3A9FF"
+      ],
+      "profile": "../profiles/landen-native-tone-face.json"
+    },
+    {
+      "id": "player_02",
+      "label": "Fair rosy (Player 02)",
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#A94B3AFF",
+        "#EEB1B2FF"
+      ],
+      "profile": "../profiles/landen-native-tone-face.json"
+    },
+    {
+      "id": "player_03",
+      "label": "Fair golden (Player 03)",
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#9E4B17FF",
+        "#EAB19FFF"
+      ],
+      "profile": "../profiles/landen-native-tone-face.json"
     }
   ]
 }

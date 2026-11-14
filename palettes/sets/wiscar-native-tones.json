@@ -225,6 +225,60 @@
         "#B87D78FF"
       ],
       "profile": "../profiles/wiscar-native-tone-face.json"
+    },
+    {
+      "id": "player_01",
+      "label": "Fair neutral (Player 01)",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#663921FF",
+        "#7A4427FF",
+        "#3D2214FF",
+        "#FFEFDEFF",
+        "#F9F4DAFF",
+        "#F3BF9FFF",
+        "#EEB3A9FF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
+    },
+    {
+      "id": "player_02",
+      "label": "Fair rosy (Player 02)",
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#713227FF",
+        "#873C2EFF",
+        "#441E17FF",
+        "#FFEEE5FF",
+        "#F9F2E3FF",
+        "#F7C4AAFF",
+        "#EEB1B2FF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
+    },
+    {
+      "id": "player_03",
+      "label": "Fair golden (Player 03)",
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#69320FFF",
+        "#7E3C12FF",
+        "#3F1E09FF",
+        "#FCEED7FF",
+        "#F5F2D0FF",
+        "#F5CDA7FF",
+        "#EAB19FFF"
+      ],
+      "profile": "../profiles/wiscar-native-tone-face.json"
     }
   ],
   "profile": "../profiles/wiscar-world-trial.json"

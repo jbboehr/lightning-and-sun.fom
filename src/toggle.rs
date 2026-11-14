@@ -26,8 +26,8 @@ impl Variant {
 
 pub fn validate_variants(variants: &[Variant]) -> Result<()> {
     ensure!(
-        (1..=13).contains(&variants.len()),
-        "Select between one and thirteen presets"
+        (1..=16).contains(&variants.len()),
+        "Select between one and sixteen presets"
     );
     let mut ids = BTreeSet::new();
     for variant in variants {
@@ -419,7 +419,13 @@ mod tests {
                             .iter()
                             .map(|preset| preset["id"].as_str().unwrap())
                     )
-                    .chain(["npc_stillwell", "npc_terithia"])
+                    .chain([
+                        "npc_stillwell",
+                        "npc_terithia",
+                        "player_01",
+                        "player_02",
+                        "player_03",
+                    ])
                     .collect::<Vec<_>>()
             );
             assert_eq!(
@@ -430,12 +436,18 @@ mod tests {
                             .iter()
                             .map(|preset| preset["label"].as_str().unwrap())
                     )
-                    .chain(["Muted light (Stillwell)", "Muted medium (Terithia)"])
+                    .chain([
+                        "Muted light (Stillwell)",
+                        "Muted medium (Terithia)",
+                        "Fair neutral (Player 01)",
+                        "Fair rosy (Player 02)",
+                        "Fair golden (Player 03)",
+                    ])
                     .collect::<Vec<_>>()
             );
             assert_eq!(character.ids[11], "player_27");
             assert_eq!(character.labels[11], "Deep umber (Player 27)");
-            assert!(character.groups.iter().all(|group| group.len() == 14));
+            assert!(character.groups.iter().all(|group| group.len() == 17));
         }
         assert_eq!(runtime.iter().map(|c| c.groups.len()).sum::<usize>(), 6312);
         let script = String::from_utf8(runtime_script(&runtime).unwrap()).unwrap();

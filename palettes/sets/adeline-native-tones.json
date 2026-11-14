@@ -253,6 +253,72 @@
         "#D29A7DFF"
       ],
       "profile": "../profiles/adeline-native-tone-face.json"
+    },
+    {
+      "id": "player_01",
+      "label": "Fair neutral (Player 01)",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#EEB3A9FF",
+        "#D36A7DFF",
+        "#EEB3A9FF",
+        "#D36A7DFF",
+        "#F5BDB9FF",
+        "#DA916EFF",
+        "#FFEAD3FF"
+      ],
+      "profile": "../profiles/adeline-native-tone-face.json"
+    },
+    {
+      "id": "player_02",
+      "label": "Fair rosy (Player 02)",
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#EEB1B2FF",
+        "#D76F88FF",
+        "#EEB1B2FF",
+        "#D76F88FF",
+        "#F5BBC2FF",
+        "#D88570FF",
+        "#FFE8DCFF"
+      ],
+      "profile": "../profiles/adeline-native-tone-face.json"
+    },
+    {
+      "id": "player_03",
+      "label": "Fair golden (Player 03)",
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#EAB19FFF",
+        "#D57885FF",
+        "#EAB19FFF",
+        "#D57885FF",
+        "#F1BBAFFF",
+        "#DC9172FF",
+        "#FBE8C9FF"
+      ],
+      "profile": "../profiles/adeline-native-tone-face.json"
     }
   ],
   "profile": "../profiles/adeline-world-finish.json"

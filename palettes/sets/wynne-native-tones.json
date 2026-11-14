@@ -220,6 +220,57 @@
         "#B77A62FF",
         "#AD7465FF"
       ]
+    },
+    {
+      "id": "player_01",
+      "label": "Fair neutral (Player 01)",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#FFCDA8FF",
+        "#FFF5DEFF",
+        "#FFFEEAFF",
+        "#FFFFFBFF",
+        "#D88668FF",
+        "#F0BB9BFF",
+        "#DA916EFF"
+      ]
+    },
+    {
+      "id": "player_02",
+      "label": "Fair rosy (Player 02)",
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#FFD2B3FF",
+        "#FFF3E7FF",
+        "#FFFCF3FF",
+        "#FFFFFFFF",
+        "#D67A6AFF",
+        "#F4C0A6FF",
+        "#D88570FF"
+      ]
+    },
+    {
+      "id": "player_03",
+      "label": "Fair golden (Player 03)",
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#FFDBB0FF",
+        "#FFF3D4FF",
+        "#FFFCE0FF",
+        "#FFFFF1FF",
+        "#DA866CFF",
+        "#F2C9A3FF",
+        "#DC9172FF"
+      ]
     }
   ],
   "profile": "../profiles/wynne-world-trial.json"

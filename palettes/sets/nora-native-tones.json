@@ -282,6 +282,75 @@
         "#9E6468FF"
       ],
       "profile": "../profiles/nora-native-tone-face.json"
+    },
+    {
+      "id": "player_01",
+      "label": "Fair neutral (Player 01)",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF",
+        "#DA916EFF",
+        "#F3BF9FFF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#FFDACFFF",
+        "#D9989CFF",
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#EEB3A9FF",
+        "#DA916EFF",
+        "#D9989CFF"
+      ],
+      "profile": "../profiles/nora-native-tone-face.json"
+    },
+    {
+      "id": "player_02",
+      "label": "Fair rosy (Player 02)",
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF",
+        "#D88570FF",
+        "#F7C4AAFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#FFD8D8FF",
+        "#DD9DA7FF",
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#EEB1B2FF",
+        "#D88570FF",
+        "#DD9DA7FF"
+      ],
+      "profile": "../profiles/nora-native-tone-face.json"
+    },
+    {
+      "id": "player_03",
+      "label": "Fair golden (Player 03)",
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF",
+        "#DC9172FF",
+        "#F5CDA7FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#FBD8C5FF",
+        "#DBA6A4FF",
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#EAB19FFF",
+        "#DC9172FF",
+        "#DBA6A4FF"
+      ],
+      "profile": "../profiles/nora-native-tone-face.json"
     }
   ],
   "profile": "../profiles/nora-world-trial.json"

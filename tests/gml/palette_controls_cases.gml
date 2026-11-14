@@ -197,12 +197,15 @@ if (global.controls_case == "title") {
     test_all_vanilla();
     var state = __lns_palette_runtime();
     for (var i = 0; i < 36; i++) {
-        assert(array_length(state.characters[i].names) == 14);
-        assert(array_length(state.characters[i].preset_ids) == 14);
+        assert(array_length(state.characters[i].names) == 17);
+        assert(array_length(state.characters[i].preset_ids) == 17);
         assert(state.characters[i].preset_ids[10] == "player_35");
         assert(state.characters[i].preset_ids[11] == "player_27");
         assert(state.characters[i].preset_ids[12] == "npc_stillwell");
         assert(state.characters[i].preset_ids[13] == "npc_terithia");
+        assert(state.characters[i].preset_ids[14] == "player_01");
+        assert(state.characters[i].preset_ids[15] == "player_02");
+        assert(state.characters[i].preset_ids[16] == "player_03");
     }
     var menu = test_settings();
     menu.__lns_palette_category.tap();
@@ -211,7 +214,7 @@ if (global.controls_case == "title") {
     var pilot = menu.option_pilot;
     scroller.scroll = 127;
     pilot.focus = 18;
-    for (var preset = 1; preset <= 13; preset++) {
+    for (var preset = 1; preset <= 16; preset++) {
         menu.option_pilot.nodes[0].tap();
         assert(state.characters[0].selected == preset && state.characters[1].selected == 0);
         assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": "+state.characters[0].names[preset]);
@@ -226,9 +229,12 @@ if (global.controls_case == "title") {
             assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Deep umber (Player 27)");
         }
         if (preset == 12) assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Muted light (Stillwell)");
+        if (preset == 13) assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Muted medium (Terithia)");
+        if (preset == 14) assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Fair neutral (Player 01)");
+        if (preset == 15) assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Fair rosy (Player 02)");
     }
-    assert(state.characters[0].preset_ids[state.characters[0].selected] == "npc_terithia");
-    assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Muted medium (Terithia)");
+    assert(state.characters[0].preset_ids[state.characters[0].selected] == "player_03");
+    assert(menu.option_pilot.nodes[0].text_label.local_key == "RAW:"+state.characters[0].label+": Fair golden (Player 03)");
     menu.option_pilot.nodes[0].tap();
     assert(state.characters[0].selected == 0 && state.characters[1].selected == 0);
     assert(global.menu.portrait.sprite == 10 && global.menu.portrait.index == 1.75);
@@ -237,7 +243,7 @@ if (global.controls_case == "title") {
     assert(state.characters[0].selected == 0 && state.characters[1].selected == 1);
     assert(global.config_write_count == 0 && !state.controls.remember);
 
-    for (var preset = 13; preset >= 0; preset--) {
+    for (var preset = 16; preset >= 0; preset--) {
         assert(lns_palette_select(state.characters[0], preset));
         lns_palette_controls_refresh(menu);
         assert(state.characters[0].selected == preset && state.characters[1].selected == 1);
@@ -250,7 +256,7 @@ if (global.controls_case == "title") {
     assert(global.config_write_count == 0);
 
     var definitions = lns_palette_definitions();
-    for (var preset = 0; preset <= 13; preset++) {
+    for (var preset = 0; preset <= 16; preset++) {
         test_put(test_saved(definitions[0][5][preset]));
         var original_bytes = global.disk[$ mmapi_config_path("lns_palette")];
         test_boot();
@@ -315,9 +321,11 @@ if (global.controls_case == "title") {
     menu = test_settings();
     menu.__lns_palette_category.tap();
     menu.option_pilot.nodes[0].tap();
-    assert(state.characters[0].selected == 0 && state.characters[1].selected == 10);
+    assert(state.characters[0].selected == 14 && state.characters[1].selected == 10);
+    saved = try_read_json_file(mmapi_config_path("lns_palette"), undefined, false);
+    assert(saved.selections[$ state.characters[0].id] == "player_01");
     test_boot();
-    assert(__lns_palette_runtime().characters[0].selected == 0 && __lns_palette_runtime().characters[1].selected == 10);
+    assert(__lns_palette_runtime().characters[0].selected == 14 && __lns_palette_runtime().characters[1].selected == 10);
     assert(global.config_write_count == 4 && global.native_settings_writes == 0);
 
     test_put(test_saved("npc_terithia"));
@@ -349,13 +357,13 @@ if (global.controls_case == "title") {
     assert(!__lns_palette_runtime().controls.remember && global.config_write_count == writes);
     menu = test_settings();
     menu.__lns_palette_category.tap();
-    for (var preset = 1; preset <= 13; preset++) menu.option_pilot.nodes[0].tap();
-    assert(__lns_palette_runtime().characters[0].selected == 13);
+    for (var preset = 1; preset <= 16; preset++) menu.option_pilot.nodes[0].tap();
+    assert(__lns_palette_runtime().characters[0].selected == 16);
     assert(global.config_write_count == writes && global.disk[$ mmapi_config_path("lns_palette")] == original_bytes);
     test_boot();
     test_all_vanilla();
 
-    for (var preset = 12; preset <= 13; preset++) {
+    for (var preset = 12; preset <= 16; preset++) {
         test_put(test_saved(definitions[0][5][preset - 1]));
         test_boot();
         state = __lns_palette_runtime();
@@ -380,7 +388,7 @@ if (global.controls_case == "title") {
         assert(__lns_palette_runtime().characters[0].selected == preset - 1);
     }
     assert(global.native_settings_writes == 0);
-    show_debug_message("PASS: fourteen choices, stable old IDs and new donor IDs, independent rows, phase/focus, forward wrap/reverse selections, version-1 restart/reset/opt-out and donor write failure");
+    show_debug_message("PASS: seventeen choices, stable old IDs and new donor IDs, independent rows, phase/focus, forward wrap/reverse selections, version-1 restart/reset/opt-out and donor write failure");
 } else if (global.controls_case == "presets") {
     test_boot();
     var state = __lns_palette_runtime();
@@ -411,10 +419,10 @@ if (global.controls_case == "title") {
     scroller.scroll = 127;
     pilot.focus = 38;
 
-    var everyone = ["npc_march","player_04","npc_wiscar","player_16","player_22","player_27","player_35","npc_stillwell","npc_terithia"];
-    for (var lap = 0; lap < 10; lap++) {
+    var everyone = ["player_01","player_02","player_03","npc_march","player_04","npc_wiscar","player_16","player_22","player_27","player_35","npc_stillwell","npc_terithia"];
+    for (var lap = 0; lap < 13; lap++) {
         nodes[38].tap();
-        var id = everyone[lap % 9];
+        var id = everyone[lap % 12];
         for (var i = 0; i < 36; i++) {
             var character = state.characters[i];
             assert(character.preset_ids[character.selected] == id);
@@ -422,12 +430,12 @@ if (global.controls_case == "title") {
         }
         assert(nodes[38].text_label.local_key == "RAW:Everyone: "+state.characters[0].names[state.characters[0].selected]);
     }
-    assert(global.menu.portrait.sprite == 70 && global.menu.portrait.index == 1.75);
-    assert(global.actors[0].sprite_index == 306 && global.actors[0].animator.current.frame == 7.75);
+    assert(global.menu.portrait.sprite == 150 && global.menu.portrait.index == 1.75);
+    assert(global.actors[0].sprite_index == 314 && global.actors[0].animator.current.frame == 7.75);
     nodes[0].tap();
     assert(nodes[38].text_label.local_key == "RAW:Everyone: Mixed");
     nodes[38].tap();
-    for (var i = 0; i < 36; i++) assert(state.characters[i].selected == 6, "A mixed roster starts the cycle at the lightest tone");
+    for (var i = 0; i < 36; i++) assert(state.characters[i].selected == 14, "A mixed roster starts the cycle at the first fair tone");
 
     // adeline 2, celine 1, march 0, ryis 3, darren 4 in the light-to-dark order.
     nodes[39].tap();
@@ -444,12 +452,9 @@ if (global.controls_case == "title") {
     nodes[42].tap();
     test_expect("adeline","npc_march"); test_expect("celine","npc_march"); test_expect("march","vanilla");
     test_expect("ryis","player_35"); test_expect("darren","player_35");
-    // Characters already nearest the lightest tone keep their original art.
+    // Agartha applies Fair rosy literally; no character starts there.
     nodes[43].tap();
-    for (var i = 0; i < 36; i++) {
-        var id = state.characters[i].id;
-        test_expect(id, natural[$ id] == 0 ? "vanilla" : "npc_march");
-    }
+    for (var i = 0; i < 36; i++) test_expect(state.characters[i].id, "player_02");
     nodes[44].tap();
     for (var i = 0; i < 36; i++) test_expect(state.characters[i].id, "player_35");
     for (var lap = 0; lap < 20; lap++) {

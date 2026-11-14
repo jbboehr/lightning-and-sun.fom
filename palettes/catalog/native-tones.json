@@ -1,5 +1,5 @@
 {
-  "description": "Nine additional native donor families for the existing NPC roster; four ordered skin roles per ramp. Existing target palettes remain unchanged. New artwork acceptance is separate.",
+  "description": "Twelve additional native donor families for the existing NPC roster; four ordered skin roles per ramp. Existing target palettes remain unchanged. New artwork acceptance is separate.",
   "presets": [
     {
       "id": "player_04",
@@ -108,6 +108,42 @@
       ],
       "source_catalog": "npc-spring.json",
       "source_id": "npc_terithia"
+    },
+    {
+      "id": "player_01",
+      "label": "Fair neutral (Player 01)",
+      "colors": [
+        "#FFEAD3FF",
+        "#F3BF9FFF",
+        "#DA916EFF",
+        "#995531FF"
+      ],
+      "source_catalog": "player.json",
+      "source_id": "player_01"
+    },
+    {
+      "id": "player_02",
+      "label": "Fair rosy (Player 02)",
+      "colors": [
+        "#FFE8DCFF",
+        "#F7C4AAFF",
+        "#D88570FF",
+        "#A94B3AFF"
+      ],
+      "source_catalog": "player.json",
+      "source_id": "player_02"
+    },
+    {
+      "id": "player_03",
+      "label": "Fair golden (Player 03)",
+      "colors": [
+        "#FBE8C9FF",
+        "#F5CDA7FF",
+        "#DC9172FF",
+        "#9E4B17FF"
+      ],
+      "source_catalog": "player.json",
+      "source_id": "player_03"
     }
   ]
 }
